@@ -1,0 +1,15 @@
+# --- Obsidian ---
+# 提交 .obsidian 让插件/设置/主题跨设备同步，但排除每台设备独有、易冲突的缓存
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+.obsidian/plugins/**/data.json
+
+# 回收站
+.trash/
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
