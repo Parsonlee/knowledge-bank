@@ -8,6 +8,14 @@
 # 回收站
 .trash/
 
+# --- 临时/导入暂存 ---
+tmp/
+_import/
+
+# --- Claude Code ---
+# 覆盖全局 ~/.config/git/ignore，让本仓库保留提交本地权限配置
+!**/.claude/settings.local.json
+
 # --- OS ---
 .DS_Store
 Thumbs.db
