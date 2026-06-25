@@ -3,9 +3,7 @@ id: "7359469340527169085"
 cubox_url: https://cubox.pro/web/card/7359469340527169085
 url: https://www.jiqizhixin.com/articles/2025-08-18-7
 tags:
-  - LLM
-  - 架构
-
+  - LLM/arch
 ---
 # 从GPT-2到gpt-oss，深度详解OpenAI开放模型的进化之路 ｜ 机器之心
 

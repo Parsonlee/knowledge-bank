@@ -4,8 +4,6 @@ cubox_url: https://cubox.pro/web/card/7396073589679591143
 url: https://mp.weixin.qq.com/s/j6a8GvlaU5rpz1GWkewYig
 tags:
   - VLM
-  - MLLM
-
 ---
 # 从LLaVA到Qwen3-VL，多模态大模型主流架构的演进之路
 
