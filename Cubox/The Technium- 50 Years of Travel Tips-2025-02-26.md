@@ -3,8 +3,7 @@ id: "7294315218044192235"
 cubox_url: https://cubox.pro/web/card/7294315218044192235
 url: https://kk.org/thetechnium/50-years-of-travel-tips/
 tags:
-  - LifeStyle
-
+  - Life
 ---
 # The Technium: 50 Years of Travel Tips
 

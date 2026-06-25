@@ -3,9 +3,8 @@ id: "7398619984923987075"
 cubox_url: https://cubox.pro/web/card/7398619984923987075
 url: https://research.google/blog/generative-ui-a-rich-custom-visual-interactive-user-experience-for-any-prompt/
 tags:
-  - Agent
-  - Agent UI
-
+  - AI-Agent/coding
+  - AI-Agent/coding UI
 ---
 # Generative UI: A rich, custom, visual interactive user experience for any prompt
 

@@ -2,8 +2,8 @@
 id: "7395057715027905119"
 cubox_url: https://cubox.pro/web/card/7395057715027905119
 url: https://mp.weixin.qq.com/s?__biz=MzIyMDE5OTYyMw==&mid=2651051342&idx=1&sn=07f78e8659b364d4e3c2d5758c77174e&poc_token=HPMyLWmjZ2BTUgpzC9PxWgcL_WMwFqiWIZ5t6JxK
-tags: []
-
+tags:
+  - 创业
 ---
 # 把世界拆成最小单元，然后重新拼装 | 42章经 AI Newsletter
 

@@ -3,9 +3,8 @@ id: "7381208276165199846"
 cubox_url: https://cubox.pro/web/card/7381208276165199846
 url: https://mp.weixin.qq.com/s/KbviOJ6q-K4ik_wzsUs2dw
 tags:
-  - Agent
+  - AI-Agent/coding
   - ContextEngineering
-
 ---
 # 浅谈上下文工程｜从 Claude Code 、Manus 和 Kiro 看提示工程到上下文工程的转变
 

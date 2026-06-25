@@ -3,9 +3,8 @@ id: "7336040171676110270"
 cubox_url: https://cubox.pro/web/card/7336040171676110270
 url: https://www.anthropic.com/engineering/built-multi-agent-research-system?ref=blog.langchain.com
 tags:
-  - Agent
+  - AI-Agent/coding
   - Multi-Agent
-
 ---
 # How we built our multi-agent research system \ Anthropic
 

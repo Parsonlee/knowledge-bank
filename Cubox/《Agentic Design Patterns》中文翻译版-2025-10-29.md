@@ -3,8 +3,7 @@ id: "7383115459266085437"
 cubox_url: https://cubox.pro/web/card/7383115459266085437
 url: https://github.com/ginobefun/agentic-design-patterns-cn
 tags:
-  - Agent
-
+  - AI-Agent
 ---
 # 《Agentic Design Patterns》中文翻译版
 
