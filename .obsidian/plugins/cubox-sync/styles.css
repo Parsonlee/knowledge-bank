@@ -1,0 +1,130 @@
+/*
+
+This CSS file will be included with your plugin, and
+available in the app when your plugin is enabled.
+
+If your plugin does not need CSS, delete this file.
+
+*/
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 16px;
+    border-top: 1px solid var(--background-modifier-border);
+}
+
+.modal-footer button {
+    margin-left: 8px;
+}
+
+.modal-footer button.mod-cta {
+    background-color: var(--interactive-accent);
+    color: var(--text-on-accent);
+}
+
+/* 变量列表样式优化 */
+.cubox-variables-container {
+    margin: 20px 0;
+    color: var(--text-muted);
+}
+
+.cubox-variables-title {
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: var(--text-normal);
+}
+
+.cubox-variables-list {
+    margin: 0;
+    padding-left: 15px;
+    list-style-type: disc;
+}
+
+.cubox-variables-list li {
+    margin-bottom: 4px;
+    line-height: 1.2;
+}
+
+.highlight-sublist {
+    margin-top: 4px;
+    padding-left: 15px;
+    list-style-type: disc;
+}
+
+.cubox-reference {
+    margin-top: 10px;
+    font-size: 1.0em;
+}
+
+.reference-link {
+    color: var(--text-accent);
+    text-decoration: none;
+}
+
+.reference-link:hover {
+    text-decoration: underline;
+}
+
+/* Modal Dialog Styles */
+.cubox-modal {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.cubox-list-container {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-top: 20px;
+    padding-right: 10px;
+    padding-bottom: 12px;
+    overflow-anchor: none;
+    scroll-behavior: auto;
+    height: 100%;
+    max-height: 65vh;
+}
+
+/* Modal lists use Obsidian Setting + ToggleComponent; keep light row chrome only */
+.cubox-list-container .setting-item {
+    border-radius: 4px;
+    transition: background-color 0.1s ease;
+    /* Extra vertical room so text/toggle don’t sit flush on the row dividers */
+    padding-top: 10px;
+    padding-bottom: 12px;
+}
+
+.cubox-list-container .setting-item:hover {
+    background-color: var(--background-modifier-hover);
+}
+
+.cubox-list-container .setting-item.is-disabled {
+    opacity: 0.45;
+}
+
+.cubox-list-container .setting-item:first-child .setting-item-name {
+    font-weight: 600;
+}
+
+.type-list-container .setting-item:first-child .setting-item-name {
+    font-weight: normal;
+}
+
+.cubox-others-info-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 6px;
+    vertical-align: middle;
+    cursor: var(--cursor);
+    color: var(--text-muted);
+}
+
+.cubox-others-info-icon:hover {
+    color: var(--text-accent);
+}
+
+.cubox-others-info-icon svg {
+    width: 14px;
+    height: 14px;
+}
