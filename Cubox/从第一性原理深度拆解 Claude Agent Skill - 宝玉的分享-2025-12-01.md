@@ -4,7 +4,6 @@ cubox_url: https://cubox.pro/web/card/7395002192941286835
 url: https://baoyu.io/translations/claude-skills-deep-dive
 tags:
   - AI-Agent/context-engineering
-  - Claude
   - AI-Agent/skill
 ---
 # 从第一性原理深度拆解 Claude Agent Skill | 宝玉的分享
