@@ -20,7 +20,7 @@
    - 已安装插件：`obsidian-git`、`calendar`、`dataview`、`obsidian-excalidraw-plugin`、`obsidian-outliner`、`obsidian-paste-image-rename`、`tag-wrangler`、`templater-obsidian`
    - `app.json` 设置：附件路径 `assets/`，始终更新内部链接 ✅
    - Obsidian Git 设置：autoPullOnBoot=true, autoPullInterval=10min, pullBeforePush=true, commitMessage=`vault backup: {{date}}`
-   - ⚠️ **注意**：`autoSaveInterval` 仍为 `0`（=关闭自动提交推送），需改为 `10`（在 Obsidian Git 设置面板里把 "Vault backup interval (minutes)" 改成 10）
+ 
 
 4. **MCP 接入 Claude Code**
    - 插件：Local REST API with MCP v4.1.3（coddingtonbear）
