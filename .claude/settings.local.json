@@ -10,5 +10,9 @@
       "WebFetch(domain:doc.wucai.site)",
       "WebFetch(domain:help.cubox.pro)"
     ]
-  }
+  },
+  "enabledMcpjsonServers": [
+    "obsidian"
+  ],
+  "enableAllProjectMcpServers": true
 }
