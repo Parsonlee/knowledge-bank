@@ -3,8 +3,7 @@ id: "7321436519405718623"
 cubox_url: https://cubox.pro/web/card/7321436519405718623
 url: https://mp.weixin.qq.com/s?__biz=MzI1MzYzMjE0MQ==&mid=2247514365&idx=1&sn=dd898cc5dfe8ab4fe7c48442a2d7fc35&subscene=0
 tags:
-  - AI-Agent/coding
-  - AI-Agent/coding with Tools
+  - AI-Agent/tools
 ---
 # 基于 MCP 的 AI Agent 应用开发实践
 

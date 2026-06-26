@@ -3,7 +3,7 @@ id: "7348357819483030999"
 cubox_url: https://cubox.pro/web/card/7348357819483030999
 url: https://mp.weixin.qq.com/s?__biz=MjM5NDk5MTA0MQ==&mid=2652326648&idx=1&sn=658231f328ed42e0a16b404d0aba42c8&poc_token=HJhQg2ij6yBS-iCa3wBV0brf6ocsMPbj9oOLcczW
 tags:
-  - AI-Agent/coding
+  - AI-Agent/context-engineering
 ---
 # Manus 创始人手把手拆解：如何系统性打造 AI Agent 的上下文工程？
 

@@ -3,9 +3,7 @@ id: "7395715492368878501"
 cubox_url: https://cubox.pro/web/card/7395715492368878501
 url: https://mp.weixin.qq.com/s/lEWh_QNOwNRFcjYKVjxTEg
 tags:
-  - AI-Agent/coding
-  - AI-Agent/coding
-  - Claude
+  - Skill/claude-code
 ---
 # Claude Code 2.0.40版本后的一些实用更新
 

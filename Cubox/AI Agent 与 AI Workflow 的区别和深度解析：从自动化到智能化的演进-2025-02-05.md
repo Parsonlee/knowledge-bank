@@ -3,7 +3,7 @@ id: "7286747547903723941"
 cubox_url: https://cubox.pro/web/card/7286747547903723941
 url: https://mp.weixin.qq.com/s/GCifbH9wGdPysu1z-n3KDA?from=industrynews&nwr_flag=1
 tags:
-  - AI-Agent/coding
+  - AI-Agent
 ---
 # AI Agent 与 AI Workflow 的区别和深度解析：从自动化到智能化的演进
 

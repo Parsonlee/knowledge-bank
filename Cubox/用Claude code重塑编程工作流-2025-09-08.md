@@ -3,8 +3,7 @@ id: "7364572208015869762"
 cubox_url: https://cubox.pro/web/card/7364572208015869762
 url: https://mp.weixin.qq.com/s?__biz=MzI2NDU4OTExOQ==&mid=2247692023&idx=1&sn=d0a7dd0c17c8f16c60e98b39e24b0e4b&poc_token=HBROvmijYX4X6aQFu6WYb5fXHovbLXTQNBZp2Fch
 tags:
-  - AI-Agent/coding
-  - Claude
+  - Skill/claude-code
 ---
 # 用Claude code重塑编程工作流
 

@@ -3,8 +3,7 @@ id: "7362026800915939626"
 cubox_url: https://cubox.pro/web/card/7362026800915939626
 url: https://mp.weixin.qq.com/s?__biz=Mzg4MTYwMzY1Mw==&mid=2247516637&idx=1&sn=ed1e4415348c930d617322ab96934aef&poc_token=HAALtWijBvRbMRvx7H8AKKwQM-v1LQsWRBOorafe
 tags:
-  - AI-Agent/coding
-  - Claude
+  - Skill/claude-code
 ---
 # Claude Code 完全指南
 
