@@ -2,8 +2,9 @@
 id: "7286698454040970358"
 cubox_url: https://cubox.pro/web/card/7286698454040970358
 url: https://mp.weixin.qq.com/s?__biz=MzI2ODUyMTQyNA==&mid=2247495567&idx=1&sn=3c2f6d114a792093f28e8a2b95851de6&chksm=eaecf530dd9b7c26842e80ac68098094bc0f39f911cb8861f32727cea4e858e83bb472189a50&cur_album_id=3689450339863740420&scene=190
-tags: []
-
+tags:
+  - RAG
+  - RAG/chunking
 ---
 # RAG从入门到精通系列5：Indexing（索引）
 

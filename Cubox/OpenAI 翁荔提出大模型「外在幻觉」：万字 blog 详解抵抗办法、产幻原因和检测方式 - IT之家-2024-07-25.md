@@ -2,8 +2,8 @@
 id: "7215970289979491622"
 cubox_url: https://cubox.pro/web/card/7215970289979491622
 url: https://www.ithome.com/0/781/633.htm
-tags: []
-
+tags:
+  - LLM/hallucination
 ---
 # OpenAI 翁荔提出大模型「外在幻觉」：万字 blog 详解抵抗办法、产幻原因和检测方式 - IT之家
 

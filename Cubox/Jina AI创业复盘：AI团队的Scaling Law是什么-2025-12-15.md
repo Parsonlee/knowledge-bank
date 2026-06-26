@@ -2,8 +2,9 @@
 id: "7400068059831993259"
 cubox_url: https://cubox.pro/web/card/7400068059831993259
 url: https://mp.weixin.qq.com/s/tXAUF0dZBdGhszoda3rz3A
-tags: []
-
+tags:
+  - 创业
+  - LLM
 ---
 # Jina AI创业复盘：AI团队的Scaling Law是什么
 

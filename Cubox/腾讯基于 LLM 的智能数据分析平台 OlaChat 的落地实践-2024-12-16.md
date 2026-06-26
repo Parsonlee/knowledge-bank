@@ -3,8 +3,7 @@ id: "7268160114224270585"
 cubox_url: https://cubox.pro/web/card/7268160114224270585
 url: https://mp.weixin.qq.com/s/0Bm_7COAATll5gVBTsz_hA
 tags:
-  - AI Product
-
+  - AI-Agent/AI-BI
 ---
 # 腾讯基于 LLM 的智能数据分析平台 OlaChat 的落地实践
 

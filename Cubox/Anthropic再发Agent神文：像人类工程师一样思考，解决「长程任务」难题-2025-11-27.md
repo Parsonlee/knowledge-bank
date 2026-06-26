@@ -4,6 +4,7 @@ cubox_url: https://cubox.pro/web/card/7393599330126398303
 url: https://mp.weixin.qq.com/s/tmXg0tguoZZplDZMaJWlJQ
 tags:
   - AI-Agent/coding
+  - Claude
 ---
 # Anthropic再发Agent神文：像人类工程师一样思考，解决「长程任务」难题
 
