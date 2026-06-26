@@ -3,7 +3,7 @@ title: Macbook换新机，怎么做到无缝切换？
 source: https://www.superlinear.academy/c/notes/macbook
 author:
   - superlinear.academy
-published:
+published: null
 created: 2026-06-26
 description: 新旧MacBook迁移
 tags:

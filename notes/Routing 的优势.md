@@ -1,10 +1,9 @@
 ---
-title: "Routing 的优势"
+title: Routing 的优势
 source: https://mp.weixin.qq.com/s?__biz=MzI2ODUyMTQyNA==&mid=2247495664&idx=1&sn=2f7fa8ccdbe147b073b5516c00803461&chksm=eaecf54fdd9b7c592002a858b8e7b0d973f31eb69d3132e820b7e7518ba86b68d2c561df9441&cur_album_id=3689450339863740420&scene=189
 created: 2026-06-25
 tags:
-  - clipping
-  - cubox
+  - RAG
 ---
 
 # Routing 的优势

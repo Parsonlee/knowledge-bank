@@ -56,9 +56,19 @@
 
 在 Obsidian Git 设置面板里把 **Vault backup interval (minutes)** 从 `0` 改成 `10`。
 
-### 2. 执行 Tag 合并清单（Tag Wrangler 操作）
+### 2. ✅ Tag 整理（已完成）
 
-在 Obsidian 右侧 Tags 面板，右键 → Rename tag，按以下顺序：
+全部 tag 已整理完毕（53 个 tag，层级清晰）。已清除的问题 tag：`clipping`、`cubox`、`clippings`、`RL`(裸)、`AI+BI`、`Claude`、`AI Product`、`MachineLearning`、`Skill`(裸)、`LLM/training/post-train/SFT`、`Infra/gpu/gpu`、`AI-Agent/coding with Tools`、`Agent with Tools`、`Agent UI`、`AI-Agent/coding UI`。
+
+已处理：补空 tag 文章(10篇)、修重复 tag(9篇)、修非标准 tag(12篇)、修错误分类(12篇)、Claude tag 拆分为 Skill/claude-code + AI-Agent 子 tag。
+
+### 3. ✅ inbox/ 重复文章清理（已完成）
+
+inbox/ 中 39 篇与 Cubox/ 内容重复的文件已删除。4 篇独有文章已移到 notes/ 并打好 tag。inbox/ 现为空目录，保留作速记收件箱。
+
+### 4. 原有 Phase 操作清单（归档，已完成）
+
+以下为已执行完的操作记录，保留用于参考：
 
 **Phase 1 — 消除重复**
 | 操作 | 原 tag | → 目标 tag |
@@ -129,7 +139,7 @@
 
 ### 3. 大 tag 细分（后续慢慢做）
 
-`LLM`(46) 和 `AI-Agent`(39) 笔记需逐条加子 tag。
+`LLM`(69) 和 `AI-Agent`(47) 父级 tag 下仍有大量笔记只打了父级没有细分到子 tag。需逐条检查加子 tag。
 
 ### 4. iOS 移动端同步（待配置）
 
@@ -137,3 +147,46 @@
 - 在 GitHub 生成 PAT（fine-grained，只给 knowledge-bank 仓库读写权限）
 - iOS Obsidian 装 Obsidian Git 插件，填入用户名 + PAT
 - 或用 Working Copy 作为 Git 客户端
+
+### 5. 当前 Tag 体系参考（53 个 tag）
+
+```
+LLM (69)
+├── LLM/arch (15): Mamba(6), MoE(4), VLM(3), attention(1)
+├── LLM/training (17): post-train(6), RL(6), pre-train(1)
+├── LLM/inference (3): kv-cache(1)
+├── LLM/reasoning (5)
+├── LLM/hallucination (2)
+└── LLM/tokenization (1)
+
+AI-Agent (47)
+├── AI-Agent/coding (10)
+├── AI-Agent/tools (7)
+├── AI-Agent/context-engineering (6)
+├── AI-Agent/deep-research (4)
+├── AI-Agent/AI-BI (4)
+├── AI-Agent/skill (3)
+├── AI-Agent/prompt-engineering (2)
+├── AI-Agent/multi-agent (2)
+├── AI-Agent/memory (2)
+└── AI-Agent/UI (2)
+
+RAG (63)
+├── RAG/embedding (9)
+├── RAG/query (7)
+├── RAG/chunking (7)
+├── RAG/retrieval (3)
+└── RAG/eval (1)
+
+Skill (24)
+├── Skill/python (10): pytorch(2), web(1)
+├── Skill/data-analysis (7)
+├── Skill/claude-code (6)
+└── Skill/linux (1)
+
+CV (12): detection(4), data-augmentation(2), arch(1)
+Infra (6): AI(4), gpu(2)
+DeepLearning (8) | AIGC (8) | 创业 (8)
+面试 (7) | Life (7) | Recommendation (2) | TTS (1)
+```
+

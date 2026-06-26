@@ -7,7 +7,7 @@ published: 2026-06-11
 created: 2026-06-24
 description: 当样本量积累到足够多时，面试其实是一场有迹可循的推理小游戏。
 tags:
-  - Life
+  - 面试
 ---
 **Matrix 首页推荐**
 
