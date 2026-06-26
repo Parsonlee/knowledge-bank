@@ -3,8 +3,7 @@ id: "7338195548794523053"
 cubox_url: https://cubox.pro/web/card/7338195548794523053
 url: https://fastapi.tiangolo.com/zh/async/
 tags:
-  - Python
-
+  - Skill/python
 ---
 # Py中的并发 async / await - FastAPI
 

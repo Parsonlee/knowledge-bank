@@ -3,8 +3,7 @@ id: "7282379762964629528"
 cubox_url: https://cubox.pro/web/card/7282379762964629528
 url: https://mp.weixin.qq.com/s/MPTXRhLtL6g5rtS7Hju3SA
 tags:
-  - Embedding
-
+  - RAG/embedding
 ---
 # 一文详尽之Embedding（向量表示）！
 

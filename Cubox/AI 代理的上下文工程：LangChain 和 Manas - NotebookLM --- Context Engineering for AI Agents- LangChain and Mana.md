@@ -4,7 +4,7 @@ cubox_url: https://cubox.pro/web/card/7383111332934979442
 url: https://notebooklm.google.com/notebook/317f5e39-3a3c-4bb6-a0f2-85f842c2f385
 tags:
   - AI-Agent/coding
-  - ContextEngineering
+  - AI-Agent/context-engineering
 ---
 # AI 代理的上下文工程：LangChain 和 Manas - NotebookLM --- Context Engineering for AI Agents: LangChain and Manas - NotebookLM
 

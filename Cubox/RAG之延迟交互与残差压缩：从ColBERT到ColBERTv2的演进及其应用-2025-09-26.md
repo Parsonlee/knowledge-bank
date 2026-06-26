@@ -3,9 +3,8 @@ id: "7371088814812430418"
 cubox_url: https://cubox.pro/web/card/7371088814812430418
 url: https://mp.weixin.qq.com/s/2-9FqIFxgWM10X9lnora4A
 tags:
-  - Embedding
+  - RAG/embedding
   - RAG
-
 ---
 # RAG之延迟交互与残差压缩：从ColBERT到ColBERTv2的演进及其应用
 

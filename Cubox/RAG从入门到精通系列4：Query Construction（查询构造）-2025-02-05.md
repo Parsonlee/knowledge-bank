@@ -4,8 +4,7 @@ cubox_url: https://cubox.pro/web/card/7286690657786136595
 url: https://mp.weixin.qq.com/s/qG02XjSV9nuRIonGy_VOwQ
 tags:
   - RAG
-  - QueryProcessing
-
+  - RAG/query
 ---
 # RAG从入门到精通系列4：Query Construction（查询构造）
 

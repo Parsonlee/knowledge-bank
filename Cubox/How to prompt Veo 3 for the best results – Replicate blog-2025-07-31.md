@@ -3,8 +3,7 @@ id: "7350507002675594556"
 cubox_url: https://cubox.pro/web/card/7350507002675594556
 url: https://replicate.com/blog/using-and-prompting-veo-3
 tags:
-  - AIGC-video
-
+  - AIGC
 ---
 # How to prompt Veo 3 for the best results – Replicate blog
 

@@ -3,9 +3,8 @@ id: "7337179436820728245"
 cubox_url: https://cubox.pro/web/card/7337179436820728245
 url: https://mp.weixin.qq.com/s/hmJ1H9gTBmHV_dOGM7UeWg
 tags:
-  - Embedding
+  - RAG/embedding
   - RAG
-
 ---
 # 为什么用Qwen3 embedding和rerank
 

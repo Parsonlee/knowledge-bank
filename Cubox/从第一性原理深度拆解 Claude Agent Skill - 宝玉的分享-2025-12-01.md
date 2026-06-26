@@ -3,7 +3,7 @@ id: "7395002192941286835"
 cubox_url: https://cubox.pro/web/card/7395002192941286835
 url: https://baoyu.io/translations/claude-skills-deep-dive
 tags:
-  - ContextEngineering
+  - AI-Agent/context-engineering
   - Claude
   - AI-Agent/skill
 ---

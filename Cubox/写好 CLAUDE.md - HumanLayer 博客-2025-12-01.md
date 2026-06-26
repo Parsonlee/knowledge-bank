@@ -4,7 +4,7 @@ cubox_url: https://cubox.pro/web/card/7395013776770073311
 url: https://www.humanlayer.dev/blog/writing-a-good-claude-md
 tags:
   - AI-Agent/coding
-  - CodingAgent
+  - AI-Agent/coding
   - Claude
 ---
 # 写好 CLAUDE.md | HumanLayer 博客

@@ -4,8 +4,7 @@ cubox_url: https://cubox.pro/web/card/7250874518892187132
 url: https://mp.weixin.qq.com/s?__biz=Mzk0NTcyNTMzNw==&mid=2247484218&idx=1&sn=656549e48f411b94ebe72ecd61259324&chksm=c31049ccf467c0da37cde363ea3183eb2598c2a1fcdc50e582cbf29271fb13b69cf57df989d8&cur_album_id=3621348003472015367&scene=189
 tags:
   - RAG
-  - Retrieval
-
+  - RAG/retrieval
 ---
 # RAG高级优化：检索策略探讨Fusion, HyDE安排上(含代码)
 
