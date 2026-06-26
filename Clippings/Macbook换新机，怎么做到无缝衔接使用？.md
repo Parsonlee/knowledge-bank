@@ -7,7 +7,6 @@ published:
 created: 2026-06-26
 description: 新旧MacBook迁移
 tags:
-  - clippings
   - Life
 ---
 ## 【经验总结】Macbook换新机，怎么做到无缝衔接使用？
