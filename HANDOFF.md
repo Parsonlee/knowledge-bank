@@ -65,52 +65,67 @@
 |---|---|---|
 | 1 | `CodingAgent` | `AI-Agent/coding` |
 | 2 | `Python` | `Skill/python` |
-| 3 | `Hardware` | `Hardware/gpu` |
-| 4 | `machine-learning` | `DeepLearning` |
-| 5 | `RL/reward` | `RL` |
+| 3 | `Hardware` | `Infra/gpu` |
+| 4 | `Hardware/gpu` | `Infra/gpu` |
+| 5 | `machine-learning` | `DeepLearning` |
+| 6 | `RL/reward` | `LLM/training/RL` |
 
 **Phase 2 — LLM 训练体系**
 | 操作 | 原 tag | → 目标 tag |
 |---|---|---|
-| 6 | `Training` | `LLM/training` |
-| 7 | `Post-training` | `LLM/training/post-train` |
-| 8 | `SFT` | `LLM/training/post-train` |
-| 9 | `RL` | `LLM/training/RL` |
-| 10 | `Reasoning` | `LLM/reasoning` |
-| 11 | `Test-TimeCompute` | `LLM/reasoning` |
+| 7 | `Training` | `LLM/training` |
+| 8 | `Post-training` | `LLM/training/post-train` |
+| 9 | `SFT` | `LLM/training/post-train` |
+| 10 | `RL` | `LLM/training/RL` |
+| 11 | `Reasoning` | `LLM/reasoning` |
+| 12 | `Test-TimeCompute` | `LLM/reasoning` |
 
 **Phase 3 — RAG 体系**
 | 操作 | 原 tag | → 目标 tag |
 |---|---|---|
-| 12 | `QueryProcessing` | `RAG/query` |
-| 13 | `ChunkingDocs` | `RAG/chunking` |
-| 14 | `Retrieval` | `RAG/retrieval` |
-| 15 | `Embedding` | `RAG/embedding` |
+| 13 | `QueryProcessing` | `RAG/query` |
+| 14 | `ChunkingDocs` | `RAG/chunking` |
+| 15 | `Retrieval` | `RAG/retrieval` |
+| 16 | `Embedding` | `RAG/embedding` |
 
 **Phase 4 — AI Agent 体系**
 | 操作 | 原 tag | → 目标 tag |
 |---|---|---|
-| 16 | `MCP` | `AI-Agent/MCP` |
-| 17 | `ContextEngineering` | `AI-Agent/context-engineering` |
-| 18 | `DeepResearch` | `AI-Agent/deep-research` |
+| 17 | `MCP` | `AI-Agent/MCP` |
+| 18 | `ContextEngineering` | `AI-Agent/context-engineering` |
+| 19 | `DeepResearch` | `AI-Agent/deep-research` |
 
 **Phase 5 — 架构与其他**
 | 操作 | 原 tag | → 目标 tag |
 |---|---|---|
-| 19 | `LLM/arch/MOE` | `LLM/arch/MoE` |
-| 20 | `ObjectDetection` | `CV/detection` |
-| 21 | `AIGC-video` | `AIGC/video` |
-| 22 | `Hardware/gpu` | `Infra/gpu` |
+| 20 | `LLM/arch/MOE` | `LLM/arch/MoE` |
+| 21 | `ObjectDetection` | `CV/detection` |
+| 22 | `AIGC-video` | `AIGC/video` |
 | 23 | `AI-infra` | `Infra/AI` |
 | 24 | `visualize` | `Skill/data-analysis` |
 | 25 | `DataAnalysis` | `Skill/data-analysis` |
 
-**Phase 6 — 用户需自行判断**
-- `Claude`(9)：保留 or → `AI-Agent/coding`
-- `VLM`(3)：保留 or → `LLM/arch/VLM`
-- `AI+BI`(3)：保留 or → `Business/AI-BI`
-- `创业`(4)：保留中文 or → `Business/startup`
-- `面试`(7)：保留中文 or → `Career`
+**Phase 6 — 已确认的归属**
+| 操作 | 原 tag | → 目标 tag | 说明 |
+|---|---|---|---|
+| 26 | `AI+BI` | `AI-Agent/AI-BI` | Agent 应用场景 |
+| 27 | `VLM` | `LLM/arch/VLM` | 视觉语言模型归入架构 |
+| 28 | `创业` | `创业`（保留顶层） | 不动 |
+| 29 | `面试` | `面试`（保留顶层） | 不动 |
+
+**Phase 6 补充 — `Claude`(9) 需逐条拆分**
+- Claude Code 使用技巧/工作流分享 → 改 tag 为 `Skill/claude-code`
+- Agent 技术文 → 改为对应 Agent 子 tag
+- 具体拆分对照（进笔记 → 编辑 frontmatter tags，把 `Claude` 替换为目标 tag）：
+  - `Claude Code 完全指南` → `Skill/claude-code`
+  - `Claude Code 2.0.40版本后的一些实用更新` → `Skill/claude-code`
+  - `用Claude code重塑编程工作流` → `Skill/claude-code`
+  - `一个半月高强度Claude Code使用后感受` → `Skill/claude-code`
+  - `写好 CLAUDE.md - HumanLayer 博客` → `Skill/claude-code`
+  - `awesome-claude-code-subagents` → `Skill/claude-code`
+  - `私域知识工程实战：如何让AI一次性写出高质量代码？` → `Skill/claude-code`
+  - `Anthropic再发Agent神文：像人类工程师一样思考` → 去掉 `Claude`，加 `AI-Agent`
+  - `从第一性原理深度拆解 Claude Agent Skill - 宝玉的分享` → 去掉 `Claude`，加 `AI-Agent/skill`
 
 ### 3. 大 tag 细分（后续慢慢做）
 
