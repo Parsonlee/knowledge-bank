@@ -3,9 +3,7 @@ id: "7311397260774870486"
 cubox_url: https://cubox.pro/web/card/7311397260774870486
 url: https://zhuanlan.zhihu.com/p/1888290264377976190
 tags:
-  - LLM
-  - Transformer
-
+  - LLM/arch/attention
 ---
 # deepseek MLA 矩阵吸收浅谈 - 知乎
 

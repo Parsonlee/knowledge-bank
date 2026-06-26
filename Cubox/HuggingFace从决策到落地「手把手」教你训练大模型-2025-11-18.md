@@ -4,9 +4,7 @@ cubox_url: https://cubox.pro/web/card/7390291325532245163
 url: https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651000674&idx=2&sn=39634c52d4546d5bb9ab0f8b039f1252&poc_token=HHW7Gmmjvpge58KdOAVjkmYQhBd-LFpfSiM4pTPB
 tags:
   - LLM/training/pre-train
-  - Post-training
-  - Training
-  - Pre-training
+  - LLM/training/post-train
 ---
 # HuggingFace从决策到落地「手把手」教你训练大模型
 
