@@ -3,9 +3,7 @@ id: "7339910235936523629"
 cubox_url: https://cubox.pro/web/card/7339910235936523629
 url: https://zhuanlan.zhihu.com/p/705138777
 tags:
-  - LLM
-  - Mamba
-
+  - LLM/arch/Mamba
 ---
 # Mamba2: SSM和Transformer的大一统 - 知乎
 

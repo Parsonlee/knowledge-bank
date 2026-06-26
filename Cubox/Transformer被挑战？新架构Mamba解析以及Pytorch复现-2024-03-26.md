@@ -3,9 +3,7 @@ id: "7172125240313513096"
 cubox_url: https://cubox.pro/web/card/7172125240313513096
 url: https://mp.weixin.qq.com/s/BdT1qI4lXrA7JsFDoq5dQA
 tags:
-  - LLM
-  - Mamba
-
+  - LLM/arch/Mamba
 ---
 # Transformer被挑战？新架构Mamba解析以及Pytorch复现
 

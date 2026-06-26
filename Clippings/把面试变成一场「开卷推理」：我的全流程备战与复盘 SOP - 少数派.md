@@ -1,14 +1,14 @@
 ---
-title: "把面试变成一场「开卷推理」：我的全流程备战与复盘 SOP - 少数派"
-source: "https://sspai.com/post/110947"
+title: 把面试变成一场「开卷推理」：我的全流程备战与复盘 SOP - 少数派
+source: https://sspai.com/post/110947
 author:
   - "[[鸿苓]]"
 published: 2026-06-11
 created: 2026-06-24
-description: "当样本量积累到足够多时，面试其实是一场有迹可循的推理小游戏。"
+description: 当样本量积累到足够多时，面试其实是一场有迹可循的推理小游戏。
 tags:
-  - "clippings"
-  - "life"
+  - clippings
+  - Life
 ---
 **Matrix 首页推荐**
 

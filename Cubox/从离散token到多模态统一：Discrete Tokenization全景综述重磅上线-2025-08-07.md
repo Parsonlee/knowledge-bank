@@ -3,9 +3,7 @@ id: "7352954012318043642"
 cubox_url: https://cubox.pro/web/card/7352954012318043642
 url: https://mp.weixin.qq.com/s/_R6enntOYBcBF8eKTMBzwA
 tags:
-  - LLM
-  - Tokenization
-
+  - LLM/tokenization
 ---
 # 从离散token到多模态统一：Discrete Tokenization全景综述重磅上线
 

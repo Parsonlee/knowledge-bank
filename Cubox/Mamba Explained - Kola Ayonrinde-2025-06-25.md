@@ -3,9 +3,7 @@ id: "7337459284281658876"
 cubox_url: https://cubox.pro/web/card/7337459284281658876
 url: https://www.kolaayonrinde.com/blog/2024/02/11/mamba.html
 tags:
-  - LLM
-  - Mamba
-
+  - LLM/arch/Mamba
 ---
 # Mamba Explained | Kola Ayonrinde
 

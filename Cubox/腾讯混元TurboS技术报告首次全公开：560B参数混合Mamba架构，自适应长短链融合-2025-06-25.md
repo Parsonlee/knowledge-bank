@@ -3,9 +3,7 @@ id: "7337463620671899066"
 cubox_url: https://cubox.pro/web/card/7337463620671899066
 url: https://mp.weixin.qq.com/s/AsdREeEoqkY4XnEJkrZEFg
 tags:
-  - LLM
-  - Mamba
-
+  - LLM/arch/Mamba
 ---
 # 腾讯混元TurboS技术报告首次全公开：560B参数混合Mamba架构，自适应长短链融合
 
