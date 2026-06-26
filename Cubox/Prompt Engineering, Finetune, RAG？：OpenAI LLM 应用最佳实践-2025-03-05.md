@@ -4,7 +4,8 @@ cubox_url: https://cubox.pro/web/card/7296844151134357370
 url: https://www.53ai.com/news/qianyanjishu/493.html
 tags:
   - LLM
-
+  - RAG
+  - AI-Agent/prompt-engineering
 ---
 # Prompt Engineering, Finetune, RAG？：OpenAI LLM 应用最佳实践
 

@@ -3,8 +3,7 @@ id: "7299064431609120505"
 cubox_url: https://cubox.pro/web/card/7299064431609120505
 url: https://www.bestblogs.dev/article/b0c6dc
 tags:
-  - LLM
-
+  - LLM/hallucination
 ---
 # 万字解构“幻觉陷阱”：大模型犯的错，会摧毁互联网吗？丨 AGI 之路 04 期 | BestBlogs.dev
 

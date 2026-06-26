@@ -3,8 +3,7 @@ id: "7387381961167212077"
 cubox_url: https://cubox.pro/web/card/7387381961167212077
 url: https://mp.weixin.qq.com/s?__biz=MzkyNjU2ODM2NQ==&mid=2247619925&idx=1&sn=375f3d4c9dfae099424769ecd31c9ddf&poc_token=HLFJEWmjOjKhclaNoe8QweFOQ3k4Rfpj1MU8HpYN
 tags:
-  - LLM
-
+  - LLM/arch/attention
 ---
 # MiniMax和Kimi为了“注意力”，隔空交手
 

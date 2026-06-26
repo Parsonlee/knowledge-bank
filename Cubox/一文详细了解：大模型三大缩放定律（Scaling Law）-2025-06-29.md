@@ -3,8 +3,7 @@ id: "7338895617151729795"
 cubox_url: https://cubox.pro/web/card/7338895617151729795
 url: https://mp.weixin.qq.com/s/TmANwuqCawcq1Zr3vfNgFg
 tags:
-  - LLM
-
+  - LLM/training
 ---
 # 一文详细了解：大模型三大缩放定律（Scaling Law）
 
