@@ -29,5 +29,5 @@ Query Translation（查询翻译）是 RAG 高阶技巧，针对用户 Query 模
 
 ## 关联
 
-- 相关概念：[[概念_RAG_Fusion]]、[[概念_HyDE]]、[[概念_RAG基础流程]]、[[概念_DMQR-RAG]]
-- 来源：[[RAG查询翻译_Query_Translation]]、[[DMQR-RAG_多样查询改写]]、[[RAG_12痛点与解决方案]]、[[提升RAG问答质量的技术路线]]
+- 相关概念：[[概念_RAG_Fusion]]、[[概念_HyDE]]、[[概念_RAG基础流程]]、[[概念_DMQR-RAG]]、[[概念_查询扩展]]、[[概念_查询消歧]]、[[概念_查询抽象]]、[[概念_子查询分解]]、[[概念_RAG五类提升方法]]
+- 来源：[[RAG查询翻译_Query_Translation]]、[[DMQR-RAG_多样查询改写]]、[[RAG_12痛点与解决方案]]、[[提升RAG问答质量的技术路线]]、[[腾讯查询优化四大类综述]]、[[RAG综述_北大AIGC2024]]

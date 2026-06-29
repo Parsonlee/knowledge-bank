@@ -2,7 +2,20 @@
 
 > 操作日志，每次 ingest / query / lint 后追加记录。
 
-## 2026-06-29 ingest | 批次8 RAG检索/系统设计/TableRAG/跨模态RAG/RAGAS评估（5 篇，基于全文）
+## 2026-06-29 ingest | Phase2 收尾批次：腾讯QO/北大RAG综述/OpenAI最佳实践（3 篇）
+- 本批次 3 篇文章，全文均来自 tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/，Cubox 文件均为 stub 无 Annotations 高亮
+- 文章 1「腾讯 Query 改写不是唯一方案」：**已在前批次完整处理**（source: 腾讯查询优化四大类综述.md + 4 概念页），跳过（非失败），本次仅补录 index
+- 文章 2「最新RAG综述来了！北京大学发布AIGC的检索增强技术综述」：
+  - 新建来源页：RAG综述_北大AIGC2024.md (high) — 四大基础范式+五类提升方法+评估+局限
+  - 新建概念页 4 个：RAG四大基础范式、RAG五类提升方法、自适应检索、迭代RAG
+  - 更新概念页 3 个：RAG基础流程（追加通用架构+来源）、知识整合（追加四范式呼应+来源）、Query_Translation（追加来源+关联四大类）
+- 文章 3「Prompt Engineering, Finetune, RAG？：OpenAI LLM 应用最佳实践」：**source+主概念已在前批次处理**（source: OpenAI_LLM应用最佳实践.md + 概念_LLM应用优化两轴.md），本次补建：
+  - 新建概念页 1 个：Fine-tuning
+  - 更新概念页 2 个：Prompt工程方法（追加 OpenAI 视角+来源）、RAG评估框架RAGAS（追加 OpenAI 四指标+来源）
+  - 更新实体页 1 个：RAGAS（追加来源）
+- 已更新 wiki/index.md（Sources 追加 3 条、Concepts 追加 10 条新分组）
+- 全部内容基于全文，未使用模型自身知识补全
+- 跳过：文章 1（已处理，非失败）
 - 本批次 5 篇文章，全文均来自 tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/，高亮参考对应 Cubox 文件 Annotations
 - 新建来源页（sources/）5 个：
   - RAG检索_Retrieval入门到精通.md (high) — Re-Rank/CRAG/Self-RAG 检索优化（Cubox 无高亮）
