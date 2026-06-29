@@ -1,7 +1,6 @@
 # 个人知识库 (Personal KB)
 
 基于 Obsidian 的个人知识库，通过 Git + GitHub 实现跨平台多端同步。
-
 ## 同步方案
 
 - **桌面端 (Mac/Linux/Windows)**：Obsidian + [Obsidian Git](https://github.com/Vinzent03/obsidian-git) 插件，定时自动 commit & push/pull。

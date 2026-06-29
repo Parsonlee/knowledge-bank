@@ -1,5 +1,141 @@
 # Wiki Log
 
+## 2026-06-29 verify | Phase 4 AI-Agent 集群验收
+- 死链：严重 0 个，笔误类 2 个（概念_FlattenedRAG_StructuredRAG / 概念_DataOps），forward-ref 23 个
+- 抽查 5 篇：全部 PASS（MCP遇上代码执行 / Anthropic多智能体研究系统构建 / 从第一性原理深度拆解_Claude_Agent_Skill_宝玉 / AI智能体8种Memory策略与技术实现 / 万字长文深入浅出教你优雅开发复杂AI_Agent）
+- fail.md：0 条记录，格式正确
+- 结论：**PASS**，详见 `wiki/verify-phase4.md`
+
+## 2026-06-29 ingest | Phase 4 Batch 9：AI-Agent 综合 + AI-BI（5篇，基于全文）
+
+- 本批次 5 篇文章，全文均来自 `tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/`，Cubox highlights 参考对应文件
+- 新建来源页（sources/）5 个：
+  - `AI_Agent与AI_Workflow的区别和深度解析.md` (high) — 今何夕/乾以墨：系统对比 Agent 自主决策 vs Workflow 预定义流程，四类 Agent 分类，Workflow 五步生命周期；Cubox 无高亮（stub）
+  - `Agent系统开发经验.md` (high) — 周至（阿里云）：三种复杂性幻觉、三层复杂度（可运行/可复现/可进化）、LLM 放大效应数学模型、Level 0-4 认知演化、六种设计模式；Cubox 无高亮（stub）
+  - `人工智能体AI_Agent开发与应用全面调研.md` (high) — 张长旺/旺知识（2023）：大脑/感知/行动三框架，8 大开源框架综述（AutoGPT/LangChain/AutoGen/MetaGPT/ChatDev 等），应用场景与挑战；Cubox 无高亮（stub）
+  - `聊聊AI应用架构演进.md` (high) — 江丹阳（阿里云）：以《AI Engineering》为蓝本，七步演进路线（基础→RAG→Guardrails→路由→网关→缓存→Agent），推理性能 TTFT/TPOT/Prefill-Decode 分离；Cubox 无高亮（stub）
+  - `企业落地NL2SQL_AI-ready_data与小模型.md` (high) — 矩阵起源（InfoQ）：AI-ready data 第一性原则，M-Schema+约束池，BM25→SIC 两级 Schema Linking，Qwen2.5-Coder 3B/7B LoRA，结构幻觉率 7.9%→1.3%；Cubox 无高亮（stub）
+- 新建概念页（concepts/）8 个：
+  - `概念_AI_Workflow与Agent对比.md` — 核心区别对比表、Workflow 工作生命周期、选型原则
+  - `概念_AI_Agent四种类型.md` — 反应型/目标导向型/学习型/协作型，各类适用场景
+  - `概念_Agent系统化工程.md` — 三层复杂度模型、系统化方法论、Level 0-4 认知路径
+  - `概念_LLM不确定性放大.md` — 指数级放大数学模型（p^n），三类放大维度，工程应对策略
+  - `概念_AI应用架构演进.md` — 七步演进路线图、各层关键技术、TTFT/TPOT/Prefill-Decode 分离
+  - `概念_AI-ready_data.md` — NL2SQL 落地第一性问题：五类组成要素，无 AI-ready data 的三大失灵根因
+  - `概念_M-Schema.md` — 增强 Schema 表示格式：vs 传统 Schema 对比，约束池自动注入，推理时字段映射
+  - `概念_Schema_Linking.md` — BM25 粗排 + SIC 精排两级方案，工程要点，幻觉率 7.9%→1.3%
+- 新建实体页（entities/）7 个：
+  - `实体_AutoGPT.md` — 2023 年早期 Agent 代表，典型"能跑不可靠"案例
+  - `实体_AutoGen.md` — 微软多 Agent 对话框架，支持 HITL
+  - `实体_MetaGPT.md` — 软件公司角色多 Agent 框架，vs ChatDev 对比
+  - `实体_ChatDev.md` — 清华/面壁虚拟软件公司，七种角色协作
+  - `实体_LangSmith.md` — LangChain 可观测性平台，Agent 可复现性关键工具，局限性说明
+  - `实体_Qwen2.5-Coder.md` — 阿里代码专用模型，NL2SQL LoRA 精调基座，EX +6.4%
+  - `实体_矩阵起源.md` — MatrixOne HTAP + Matrix Intelligence，AI-ready data 基础设施
+- index.md 已更新（Sources 追加 5 条，Concepts 新增 Batch 9 专区 8 条，Entities 追加 7 条）
+- 全部内容基于全文，未使用模型自身知识补全
+
+## 2026-06-29 ingest | Phase 4 Batch 8：AI-Agent/prompt-engineering + AI-BI（4篇，基于全文）
+
+- 本批次 4 篇文章（第 5 篇 OpenAI_LLM应用最佳实践 已在 index.md 存在，跳过），全文均来自 `tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/`
+- 新建来源页（sources/）4 个：
+  - `用系统架构思维告别意大利面条式系统提示词.md` (high) — 灵变（阿里云）：以 Dia 浏览器系统提示词为案例，提出四层架构（核心定义/交互接口/内部处理/全局约束）取代扁平规则堆砌；Cubox 无高亮（stub）
+  - `腾讯OlaChat_LLM智能数据分析平台实践.md` (high) — 谭云志（腾讯 PCG）：OlaChat 算法侧，FlattenedRAG/StructuredRAG 元数据检索 + Text2SQL 微调+Agent 方案；Cubox 有 2 处高亮已标注
+  - `腾讯ABI工程架构探索与实践.md` (high) — 霍琦（腾讯 PCG）：OlaChat 工程架构侧，原子 Agent + DAG 编排 + 统一协议 + Text2DSL 中间层方案；Cubox 无高亮（stub）
+  - `腾讯欧拉数据自治系统.md` (high) — 虎兴龙（腾讯）：欧拉数据治理平台，生产即治理耗散结构理念 + 资产工场/tMetric/数据发现三产品 + Headless BI；Cubox 无高亮（stub）
+- 新建概念页（concepts/）5 个：
+  - `概念_系统提示词四层架构.md` — 核心定义/交互接口/内部处理/全局约束四层，角色是最高仲裁者，输入输出分离，模块化维护
+  - `概念_生产即治理.md` — 耗散结构理念：数据生产过程内置规范，对抗熵增，对比事后治理
+  - `概念_FlattenedRAG与StructuredRAG.md` — 元数据检索两种方案：打平法（组合爆炸风险）vs 分层检索法（长尾场景更优）
+  - `概念_HeadlessBI指标中台.md` — 前后端分离指标服务：统一指标库+API，三种物化加速策略选型
+  - `概念_Text2DSL中间层方案.md` — NL→SQL→DSL→前端指令，引入中间层解决直接转换困难，关键是无损转换
+  - `概念_DataOps数据工程化.md` — DevOps 应用于数据开发，四类代码化要素，Python+SQL 结合
+- 新建实体页（entities/）2 个：
+  - `实体_腾讯OlaChat.md` — 腾讯 PCG 智能数据分析平台，多任务对话+DAG编排+Text2SQL
+  - `实体_腾讯欧拉平台.md` — 腾讯数据治理平台，三大子产品，生产即治理
+- index.md 已更新（Sources 追加 4 条，Concepts 新增 AI-BI 专区共 5+1 条，Entities 追加 2 条）
+- 跳过：`OpenAI_LLM应用最佳实践`（已存在于 index.md）
+- 全部内容基于全文，未使用模型自身知识补全
+
+
+
+- 本批次 5 篇文章，全文均来自 `tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/`，Cubox highlights 参考对应文件
+- 新建来源页（sources/）5 个：
+  - `AI智能体8种Memory策略与技术实现.md` (high) — Datawhale 秋山墨客：8 种记忆策略原理+模拟代码（全量/滑动窗口/相关性过滤/摘要/向量DB/知识图谱/分层/类OS）；Cubox 无高亮（stub）
+  - `Agent记忆模块前沿研究简述.md` (high) — 机器之心：LLM 记忆分类体系+翁荔框架+五类记忆形式+ChatGPT/Claude/Gemini实现+MemGPT/MemOS/MIRIX/G-Memory/M3-Agent前沿系统+五大挑战趋势；Cubox 无高亮（stub）
+  - `OpenAI_构建AI智能体实用指南.md` (high) — 宝玉译 OpenAI 官方指南：三大基石（模型/工具/指令）/编排三模式（单一/主管/去中心化）/分层安全护栏/HITL升级触发器；Cubox 1处摘要高亮已标注
+  - `阿里云服务领域Agent构建方法论.md` (high) — 阿里云飞樰：广义/狭义Agent定义之争+吴恩达光谱观/四大落地挑战/提示词调优方法/Workflow vs LLM自主规划选型原则/三代Workflow演化/Multi-Agent架构/领域数据集成三方法/调优路径图；Cubox 无高亮（stub）
+  - `程序员的提示工程实战手册.md` (high) — 宝玉译 @addyosmani：10种技巧速查表/7条基础原则/调试/重构/功能实现三场景好坏提示对比示例/7种常见反模式及修复方法；Cubox 1处摘要高亮已标注
+- 新建概念页（concepts/）3 个：
+  - `概念_AI_Agent记忆策略.md` — 8 种策略速览表 + 翁荔五类记忆框架 + 前沿系统列表
+  - `概念_Agent调优路径.md` — 阿里云实战四级调优路径：提示词→Workflow→Multi-Agent→模型训练，选型原则表
+  - `概念_编程提示工程实战.md` — 10 种技巧+7 条原则+三场景策略+常见反模式汇总
+- 新建实体页（entities/）1 个：
+  - `实体_MemGPT.md` — Letta AI，OS 分页机制启发，专用记忆 LLM 架构，函数链多步检索
+- index.md 已更新（Sources 追加 5 条，Concepts 新增 AI-Agent/memory 和 AI-Agent/prompt-engineering 专区共 3 条，Entities 追加 1 条）
+- 全部内容基于全文，未使用模型自身知识补全
+- 跳过：无（5 篇全文均超 500 字符，内容充实）
+
+
+
+- 本批次 4 篇文章，全文均来自 `tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/`，Cubox highlights 参考对应文件
+- 新建来源页（sources/）4 个：
+  - `DeepResearch的概念、核心挑战与进化路径.md` (high) — ully AI工程化：解读华为/利物浦/牛津综述（arxiv:2506.18096），DR Agent 定义/四大挑战/未来方向；Cubox 无高亮（stub）
+  - `Tongyi DeepResearch的技术报告探秘.md` (high) — 罗智凌（浙大）/魔搭：三阶段训练流程/IterResearch 范式/WebFrontier 数据合成/六大研发问题；Cubox 1 处高亮已标注 [重点/高亮]
+  - `一篇95页最新80种Deep Research系统全面综述.md` (high) — 浙大 PaperAgent：80+ 系统 4 维分类法，单体/流水线/多智能体/混合四种架构；Cubox 无高亮（stub）
+  - `通义 DeepResearch：开源 AI 智能体的新纪元.md` (high) — 通义官方博客：完整技术全貌，Agentic CPT+SFT+RL，IterResearch+Research-Synthesis 框架；Cubox 2 处高亮已标注
+- 新建概念页（concepts/）5 个：
+  - `概念_Deep-Research-Agent定义与分类.md` — DR Agent 精确定义、与 RAG/Tool Use 的边界、规划策略三模式（Planning-Only/Intent-to-Planning/Unified）、4 维分类法
+  - `概念_Deep-Research四大挑战.md` — 信息窄门/幻觉不可靠/线性效率瓶颈/评测错位，及对应未来方向
+  - `概念_Deep-Research实现架构四类.md` — 单体/流水线/多智能体/混合架构对比表，代表系统与选型建议
+  - `概念_IterResearch范式.md` — 精简工作空间+核心报告迭代重构，与 ReAct 对比，Research-Synthesis 并行框架，训练数据支撑
+  - `概念_WebFrontier数据合成.md` — 种子-扩展-评估三步流程，知识图谱随机游走+原子操作难度建模，学术数据合成路线，优势与局限
+- 新建实体页（entities/）1 个：
+  - `实体_通义DeepResearch.md` — 阿里通义实验室，30B MoE，HLE 32.9，IterResearch+ReAct 双模式，高德/法睿落地
+- index.md 已更新（Sources 追加 4 条，Concepts 新增 AI-Agent/deep-research 专区 5 条，Entities 追加 1 条）
+- 全部内容基于全文，未使用模型自身知识补全
+- 跳过：无（4 篇全文均有实质内容）
+
+
+
+- 本批次 5 篇文章，全文均来自 `tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/`，Cubox highlights 参考对应文件
+- 新建来源页（sources/）5 个：
+  - `六位一线AI工程师总结_大模型应用一年心得.md` (high) — 量子位：六位工程师一年实战心得，Prompt/RAG/微调/Agent/评估全链路，实习生测试/LLM裁判/古德哈特定律；Cubox 无高亮（stub）
+  - `私域知识工程实战_让AI一次性写出高质量代码.md` (high) — 阿里云修染：三板斧解决 AI 编程信息不对称，代码解构 Prompt + 开发专家 Prompt + 文档自动维护 Prompt；Cubox 无高亮（stub）
+  - `Claude_Agent_Skills_从第一性原理深入剖析.md` (high) — PaperAgent：Skills 元工具架构速览，SKILL.md 结构、Frontmatter 字段、四种技能模式；Cubox 无高亮（stub）
+  - `Agentic_Design_Patterns_中文翻译版.md` (high) — Antonio Gulli 著作 GitHub 中文翻译项目：21种模式目录结构，CC BY-NC 4.0；Cubox 无高亮（stub）
+  - `从第一性原理深度拆解_Claude_Agent_Skill_宝玉.md` (high) — Han Lee/宝玉译：源码级解构 Skills 双消息注入机制、isMeta 标志、contextModifier、渐进式披露、完整执行生命周期；Cubox 1 处高亮已标注
+- 新建概念页（concepts/）4 个：
+  - `概念_私域知识工程.md` — 三板斧：入职培训/知识驱动编程/自动维护，AI 编程信息不对称的根本解法
+  - `概念_LLM应用评估体系.md` — 断言式单元测试/LLM裁判最佳实践/实习生测试/古德哈特定律/幻觉双层应对
+  - `概念_Agent_Skills元工具架构.md` — Skill = 提示词模板+上下文注入+执行上下文修改，双消息 isMeta 机制，渐进式披露，四种模式
+  - `概念_Agentic设计模式分类.md` — 21种 Agent 设计模式四大类全景（核心/高级/集成/生产）
+- 新建实体页（entities/）2 个：
+  - `实体_Antonio_Gulli.md` — 《Agentic Design Patterns》作者，Springer 出版，版税捐赠救助儿童会
+  - `实体_Han_Lee.md` — AI 工程师，Claude Agent Skills 源码级深度解析文章作者，宝玉中译
+- index.md 已更新（Sources 追加 6 条，Concepts 追加 4 条，Entities 追加 2 条）
+
+## 2026-06-29 ingest | Phase 4 Batch 4：AI-Agent/coding（5篇，基于全文）
+
+- 本批次 5 篇文章，全文均来自 `tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/`，Cubox highlights 参考对应文件
+- 新建来源页（sources/）5 个：
+  - `Agent工程能力思考记录.md` (high) — 大淘宝：LLM 时代核心业务资产重定义、多 Agent 协作机制（任务分配/协作/冲突解决）、MCP 工程补充（权限/接入/长列表优化）
+  - `Anthropic再发Agent神文_像人类工程师一样思考解决长程任务难题.md` (high) — Anthropic：双 Agent 架构（初始化 Agent + 编码 Agent），功能列表/增量进展/端到端测试三支柱；Cubox 1 处高亮已标注
+  - `万字长文深入浅出教你优雅开发复杂AI_Agent.md` (high) — 腾讯：Agent 三级进化/MCP vs A2A 协议全景/CoT+ReAct+Plan-and-Execute 框架/Eino+tRPC-A2A-Go Golang 生产实践；Cubox 无高亮（stub）
+  - `从Copilot到通用Agent_阿里在AI_Coding上的应用和挑战.md` (high) — 阿里代码平台负责人：两年 Copilot 演进瓶颈、IDE Agent + Aone Agent 双产品架构、通用 Agent 工程/模型/战略挑战；Cubox 无高亮（stub）
+  - `从代码生成到自主决策_Coding驱动的自我编程Agent.md` (high) — 阿里云：Coding 驱动（Py4j 泛化调用/FIM 格式）+ 仿脑区五功能区架构 + Segment 上下文工程 + 三层记忆体系；Cubox 无高亮（stub）
+- 新建概念页（concepts/）6 个：
+  - `概念_Agent开发范式三级进化.md` — Level 1 LLM/Level 2 AI Agent/Level 3 Multi-Agent，Human in the Loop
+  - `概念_A2A协议.md` — Google 2025 发布，Agent Card/任务管理/消息交换，与 MCP 分层互补，ANP 先驱
+  - `概念_长程Agent双Agent架构.md` — Anthropic 双 Agent 架构，三支柱环境管理，故障模式对照表
+  - `概念_Coding驱动Agent.md` — LLM 生成 Python 代码控制 Agent，Py4j 泛化调用，FIM 格式
+  - `概念_Agent仿脑区功能分区架构.md` — 五功能区（感知/认知/运动/表达/自我评估），TaskExecutor 多轮循环
+  - `概念_Agent三层记忆体系.md` — 感知记忆（标签页）/短期记忆（Session+ES）/长期记忆（知识点+用户画像+经验图谱）
+- 新建实体页（entities/）2 个：
+  - `实体_Aone_Agent.md` — 阿里通用 Agent，类 Devin，Leader + 子 Agent 容器架构
+  - `实体_Eino框架.md` — CloudWego Golang LLM 框架，泛型/有向图/Callbacks/Checkpoint HITL
+- index.md 已更新（Sources 追加 5 条，Concepts 追加 6 条，Entities 追加 2 条）
+
 ## 2026-06-29 ingest | Phase 4 Batch 3：AI-Agent/context-engineering（5篇，基于全文）
 
 - 本批次 5 篇文章，全文均来自 `tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/`，Cubox highlights 参考对应文件

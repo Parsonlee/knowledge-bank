@@ -123,6 +123,34 @@
 - [[Manus创始人手把手拆解上下文工程]] — Peak 亲写：KV缓存/工具掩码/文件系统记忆/注意力复述/错误保留/Few-Shot多样性六大原则（AI-Agent/context-engineering）
 - [[浅谈上下文工程_Claude_Code_Manus_Kiro]] — 提示工程→上下文工程→环境工程演进，Claude Code/Manus/Kiro三产品实践对比（AI-Agent/context-engineering）
 - [[也许当前最好的上下文工程讲解_LangChain联合Manus]] — Lance Martin × Peak Ji 对话实录：压缩/总结两模式、隔离两模式、三层行动空间、避免过度工程化（AI-Agent/context-engineering）
+- [[Agent工程能力思考记录]] — 大淘宝：LLM 时代核心业务资产重定义、多 Agent 协作机制、MCP 工程补充（权限/接入/长列表优化）（AI-Agent/coding）
+- [[Anthropic再发Agent神文_像人类工程师一样思考解决长程任务难题]] — Anthropic 双 Agent 架构解决长程 Coding 任务：初始化 Agent + 编码 Agent + 功能列表/增量进展/端到端测试三支柱（AI-Agent/coding）
+- [[万字长文深入浅出教你优雅开发复杂AI_Agent]] — 腾讯：Agent 三级进化/MCP+A2A 协议对比/CoT+ReAct+Plan-and-Execute 框架/Golang Eino+tRPC-A2A-Go 生产实践（AI-Agent/coding）
+- [[从Copilot到通用Agent_阿里在AI_Coding上的应用和挑战]] — 阿里代码平台负责人：Copilot 两年演进瓶颈、IDE Agent + Aone Agent 双产品架构、通用 Agent 工程与模型挑战（AI-Agent/coding）
+- [[从代码生成到自主决策_Coding驱动的自我编程Agent]] — 阿里云：Coding 驱动（Py4j 泛化调用）+ 仿脑区五功能区架构 + Segment 上下文工程 + 三层记忆体系（AI-Agent/coding）
+- [[六位一线AI工程师总结_大模型应用一年心得]] — 六位工程师一年实战：Prompt/RAG/微调/Agent/评估全链路经验，实习生测试+LLM裁判+古德哈特定律（AI-Agent/coding）
+- [[私域知识工程实战_让AI一次性写出高质量代码]] — 阿里云：三板斧（入职培训/知识驱动编程/自动维护）解决 AI 编程信息不对称，一次性输出符合项目规范代码（AI-Agent/coding）
+- [[Claude_Agent_Skills_从第一性原理深入剖析]] — PaperAgent：Skills 元工具架构速览，SKILL.md 结构、四种模式、纯 LLM 推理技能选择（AI-Agent/skill）
+- [[Agentic_Design_Patterns_中文翻译版]] — Antonio Gulli 著作中文翻译：21种 Agent 设计模式，核心/高级/集成/生产四类全景（AI-Agent/skill）
+- [[从第一性原理深度拆解_Claude_Agent_Skill_宝玉]] — Han Lee/宝玉：源码级解构 Skills 双消息注入、isMeta 机制、contextModifier 执行上下文修改全生命周期（AI-Agent/skill）
+- [[DeepResearch的概念、核心挑战与进化路径]] — 华为/利物浦/牛津综述：DR Agent 定义、四大核心挑战与未来进化路径（AI-Agent/deep-research）
+- [[Tongyi DeepResearch的技术报告探秘]] — 魔搭社区解读：通义 DeepResearch 三阶段训练、IterResearch 范式、WebFrontier 数据合成与六大研发问题（AI-Agent/deep-research）
+- [[一篇95页最新80种Deep Research系统全面综述]] — 浙大综述 80+ 系统，4 维分类法与单体/流水线/多智能体/混合四种架构（AI-Agent/deep-research）
+- [[通义 DeepResearch：开源 AI 智能体的新纪元]] — 通义官方博客：全开源 Web Agent 完整技术全貌，Agentic CPT+SFT+RL 端到端训练与 Research-Synthesis 框架（AI-Agent/deep-research）
+- [[AI智能体8种Memory策略与技术实现]] — 8 种记忆策略原理+模拟代码：全量/滑动窗口/相关性过滤/摘要/向量DB/知识图谱/分层/类OS内存管理（AI-Agent/memory）
+- [[Agent记忆模块前沿研究简述]] — 机器之心综述：记忆分类体系+MemGPT/MemOS/MIRIX/G-Memory/M3-Agent前沿系统+五大挑战（AI-Agent/memory）
+- [[OpenAI_构建AI智能体实用指南]] — OpenAI 官方指南（宝玉译）：Agent 三大基石/单一+主管+去中心化编排/分层安全护栏/HITL（AI-Agent/multi-agent）
+- [[阿里云服务领域Agent构建方法论]] — 阿里云一年实战：广义/狭义定义之争/四大挑战/Workflow三代演化/Multi-Agent权衡/调优路径图（AI-Agent/prompt-engineering）
+- [[程序员的提示工程实战手册]] — 10种提示技巧速查+调试/重构/功能实现三场景好坏提示对比+常见反模式修复（AI-Agent/prompt-engineering）
+- [[用系统架构思维告别意大利面条式系统提示词]] — 系统提示词四层架构（核心定义/交互接口/内部处理/全局约束）替代扁平规则堆砌（AI-Agent/prompt-engineering）
+- [[腾讯OlaChat_LLM智能数据分析平台实践]] — 腾讯 OlaChat：FlattenedRAG/StructuredRAG 元数据检索 + Text2SQL 微调+Agent + 多任务对话编排（AI-Agent/AI-BI）
+- [[腾讯ABI工程架构探索与实践]] — OlaChat 工程架构：原子 Agent + DAG 编排 + 统一协议 + Text2DSL 中间层方案（AI-Agent/AI-BI）
+- [[腾讯欧拉数据自治系统]] — 腾讯欧拉：生产即治理（耗散结构）+ 资产工场/tMetric/数据发现三产品 + Headless BI（AI-Agent/AI-BI）
+- [[AI_Agent与AI_Workflow的区别和深度解析]] — AI Agent 自主决策 vs AI Workflow 预定义流程：四类 Agent + 五大 Workflow 优势（AI-Agent）
+- [[Agent系统开发经验]] — 三种复杂性幻觉+三层复杂度（可运行/可复现/可进化）+LLM放大效应+系统化工程原则（AI-Agent）
+- [[人工智能体AI_Agent开发与应用全面调研]] — 2023年全面调研：大脑/感知/行动框架 + 8大开源框架（AutoGPT/LangChain/AutoGen）+ 应用与挑战（AI-Agent）
+- [[聊聊AI应用架构演进]] — 七步演进：基础调用→RAG→Guardrails→意图路由→模型网关→缓存→Agent模式，含推理优化（AI-Agent, 创业）
+- [[企业落地NL2SQL_AI-ready_data与小模型]] — NL2SQL生产落地：AI-ready data + 小模型（3B/7B LoRA）+ 两级Schema Linking，幻觉率7.9%→1.3%（AI-Agent/AI-BI）
 
 ## Concepts
 
@@ -486,6 +514,52 @@
 - [[概念_上下文隔离两种模式]] — 通信模式（干净上下文）vs 共享上下文模式，借鉴Go语言哲学（AI-Agent/context-engineering）
 - [[概念_Spec_Driven_Development]] — 规范驱动开发：Prompt→Requirements→Design→Tasks→Code，Kiro 实现（AI-Agent/context-engineering）
 
+### AI-Agent/coding（Phase 4 Batch 4）
+- [[概念_Agent开发范式三级进化]] — Level 1 LLM/Level 2 AI Agent/Level 3 Multi-Agent 三阶段演进，Human in the Loop 作为特殊 Agent（AI-Agent/coding）
+- [[概念_A2A协议]] — Google 2025 年发布的 Agent 间协作开放协议：Agent Card 能力发现/任务管理/消息交换，与 MCP 分层互补（AI-Agent/coding）
+- [[概念_长程Agent双Agent架构]] — Anthropic：初始化 Agent + 编码 Agent 解决跨会话长程 Coding 任务，功能列表/增量进展/端到端测试三支柱（AI-Agent/coding）
+- [[概念_Coding驱动Agent]] — LLM 直接生成 Python 代码控制 Agent 行为（Py4j 泛化调用），FIM 格式续写，支持分支/循环复杂控制流（AI-Agent/coding）
+- [[概念_Agent仿脑区功能分区架构]] — 感知区/认知区/运动区/表达区/自我评估区五功能区，运动区（TaskExecutor）多轮循环执行复杂任务（AI-Agent/coding）
+- [[概念_Agent三层记忆体系]] — 感知记忆（标签页级）/短期记忆（Session+ES）/长期记忆（知识点+用户画像+经验图谱）（AI-Agent/coding）
+
+### AI-Agent/coding+skill（Phase 4 Batch 5）
+- [[概念_私域知识工程]] — 将项目专属知识系统化文档化，解决 AI 与真实项目信息不对称，三板斧：入职培训/知识驱动编程/自动维护（AI-Agent/coding）
+- [[概念_LLM应用评估体系]] — LLM 应用评估方法论：断言式单元测试/LLM 裁判最佳实践/实习生测试/古德哈特定律（AI-Agent/coding）
+- [[概念_Agent_Skills元工具架构]] — Skills = 提示词模板+上下文注入+执行上下文修改，纯 LLM 推理选择，双消息 isMeta 机制，渐进式披露（AI-Agent/skill）
+- [[概念_Agentic设计模式分类]] — 21种 Agent 设计模式四大类：核心（提示链/路由/并行化/反思/工具/规划/多智能体）/高级/集成/生产（AI-Agent/skill）
+
+### AI-Agent/memory（Phase 4 Batch 7）
+- [[概念_AI_Agent记忆策略]] — 8 种主要策略原理（全量/滑动窗口/相关性过滤/摘要/向量DB/知识图谱/分层/类OS），翁荔学术分类框架与前沿系统（AI-Agent/memory）
+
+### AI-Agent/prompt-engineering（Phase 4 Batch 7）
+- [[概念_Agent调优路径]] — 阿里云实战四级调优路径：提示词原型→Workflow→Multi-Agent→模型训练，选型原则表（AI-Agent/prompt-engineering）
+- [[概念_编程提示工程实战]] — 程序员向 10 种技巧+7 条基础原则+调试/重构/功能三场景策略+常见反模式（AI-Agent/prompt-engineering）
+- [[概念_系统提示词四层架构]] — 核心定义/交互接口/内部处理/全局约束四层，解决规则冲突/维护困难/行为不可预测（AI-Agent/prompt-engineering）
+
+### AI-Agent/AI-BI（Phase 4 Batch 8）
+- [[概念_生产即治理]] — 耗散结构理念：数据生产过程内置规范和自调节，对抗信息熵增（AI-Agent/AI-BI）
+- [[概念_FlattenedRAG与StructuredRAG]] — 元数据检索两种方案：打平为自然语言 vs 保留层次结构分步检索（AI-Agent/AI-BI）
+- [[概念_HeadlessBI指标中台]] — 前后端分离指标服务：统一指标库+API，保障多平台口径一致（AI-Agent/AI-BI）
+- [[概念_Text2DSL中间层方案]] — NL→SQL→DSL→前端指令，引入中间层解决直接转换困难，关键是无损转换（AI-Agent/AI-BI）
+- [[概念_DataOps数据工程化]] — 将 DevOps 应用于数据开发：代码化/版本/CI/CD，实现生产即治理（AI-Agent/AI-BI）
+
+### AI-Agent 综合 + AI-BI（Phase 4 Batch 9）
+- [[概念_AI_Workflow与Agent对比]] — AI Workflow 预定义流程 vs AI Agent 自主决策：选型原则与核心区别（AI-Agent）
+- [[概念_AI_Agent四种类型]] — 反应型/目标导向型/学习型/协作型四种 Agent 分类与适用场景（AI-Agent）
+- [[概念_Agent系统化工程]] — 三层复杂度+LLM放大效应+Level 0-4认知演化+系统化方法论（AI-Agent）
+- [[概念_LLM不确定性放大]] — 多步调用的指数级错误放大数学模型及三类放大维度（AI-Agent）
+- [[概念_AI应用架构演进]] — 七步演进路线：基础调用→RAG→Guardrails→路由→网关→缓存→Agent，含TTFT/TPOT优化（AI-Agent）
+- [[概念_AI-ready_data]] — NL2SQL落地第一性问题：元数据/业务语义/权限/样例SQL的系统化准备（AI-Agent/AI-BI）
+- [[概念_M-Schema]] — NL2SQL增强Schema表示：补充类型/中文释义/真实值示例+约束池（AI-Agent/AI-BI）
+- [[概念_Schema_Linking]] — BM25粗排+SIC精排两级联接，从全量Schema筛选相关表列，幻觉率-78%（AI-Agent/AI-BI）
+
+### AI-Agent/deep-research（Phase 4 Batch 6）
+- [[概念_Deep-Research-Agent定义与分类]] — DR Agent 定义、与 RAG/Tool Use 的边界、规划策略三模式（Planning-Only/Intent-to-Planning/Unified）（AI-Agent/deep-research）
+- [[概念_Deep-Research四大挑战]] — 信息窄门/幻觉不可靠/线性效率瓶颈/评测错位，及对应未来方向（AI-Agent/deep-research）
+- [[概念_Deep-Research实现架构四类]] — 单体/流水线/多智能体/混合四种架构对比与代表系统（AI-Agent/deep-research）
+- [[概念_IterResearch范式]] — 通义 DeepResearch 创新范式：精简工作空间+核心报告迭代重构，解决上下文认知瓶颈（AI-Agent/deep-research）
+- [[概念_WebFrontier数据合成]] — 种子-扩展-评估三步数据合成，知识图谱随机游走+原子操作难度建模（AI-Agent/deep-research）
+
 ### AI-Agent/tools MCP系列（Phase 4 Batch 1）
 - [[实体_Agent_TARS]] — 字节跳动开源多模态 Agent，内置 Function Call + 用户自定义 MCP Server 双轨设计（AI-Agent/tools）
 - [[实体_David_Soria_Parra]] — Anthropic 工程师，MCP 协议联合创建者，五大原语与 Web 化主导者（AI-Agent/tools）
@@ -498,6 +572,33 @@
 ### AI-Agent/context-engineering（Phase 4 Batch 3）
 - [[实体_Peak_Ji_季逸超]] — Manus 联合创始人，MIT TR35 2025，上下文工程六大原则提出者（AI-Agent/context-engineering）
 - [[实体_Manus]] — 通用AI Agent，上下文工程实践标杆，KV缓存/分层行动空间/文件系统记忆（AI-Agent/context-engineering）
+
+### AI-Agent/coding（Phase 4 Batch 4）
+- [[实体_Aone_Agent]] — 阿里巴巴通用 Agent 产品，类 Devin，Leader Agent + 子 Agent 容器架构，全研发生命周期提效（AI-Agent/coding）
+- [[实体_Eino框架]] — CloudWego 开源 Golang LLM 框架，泛型强类型/有向图编排/Callbacks 切面/Checkpoint HITL（AI-Agent/coding）
+
+### AI-Agent/skill（Phase 4 Batch 5）
+- [[实体_Antonio_Gulli]] — 《Agentic Design Patterns》作者，21种 Agent 设计模式实践指南，版税捐赠救助儿童会（AI-Agent/skill）
+- [[实体_Han_Lee]] — AI 工程师/技术博主，Claude Agent Skills 源码级深度解析文章作者（AI-Agent/skill）
+
+### AI-Agent/deep-research（Phase 4 Batch 6）
+- [[实体_通义DeepResearch]] — 阿里通义实验室开源 Web Agent，30B MoE，HLE 32.9/BrowseComp-EN 43.4，IterResearch+ReAct 双模式（AI-Agent/deep-research）
+
+### AI-Agent/memory（Phase 4 Batch 7）
+- [[实体_MemGPT]] — Letta AI，专用记忆 LLM 管理工作 LLM 上下文窗口，受 OS 分页机制启发，函数链多步检索（AI-Agent/memory）
+
+### AI-Agent/AI-BI（Phase 4 Batch 8）
+- [[实体_腾讯OlaChat]] — 腾讯 PCG 智能数据分析平台，多任务对话+DAG编排+Text2SQL(70B)+元数据RAG（AI-Agent/AI-BI）
+- [[实体_腾讯欧拉平台]] — 腾讯数据治理平台，生产即治理理念，资产工场+tMetric指标中台+数据发现三产品（AI-Agent/AI-BI）
+
+### AI-Agent 综合 + AI-BI（Phase 4 Batch 9）
+- [[实体_AutoGPT]] — 2023年早期 Agent 代表，GitHub 最受欢迎项目，典型"能跑但不可靠"案例（AI-Agent）
+- [[实体_AutoGen]] — 微软多 Agent 对话框架，可定制/可对话/支持 Human-in-the-loop（AI-Agent）
+- [[实体_MetaGPT]] — 模仿软件公司结构的多 Agent 框架：产品经理/PM/工程师角色协作（AI-Agent）
+- [[实体_ChatDev]] — 清华/面壁开源虚拟软件公司，CEO/CTO/程序员多角色 Agent 协作（AI-Agent）
+- [[实体_LangSmith]] — LangChain 可观测性平台：可视化 Trace/调试/测试评估，Agent 复现性关键工具（AI-Agent）
+- [[实体_Qwen2.5-Coder]] — 阿里代码专用模型3B/7B，NL2SQL LoRA 精调基座，实测EX提升+6.4%（AI-Agent/AI-BI）
+- [[实体_矩阵起源]] — MatrixOne HTAP数据库 + Matrix Intelligence 平台，AI-ready data 基础设施（AI-Agent/AI-BI）
 
 ## Comparisons
 
