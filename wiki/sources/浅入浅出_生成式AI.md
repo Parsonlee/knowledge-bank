@@ -1,3 +1,15 @@
+---
+type: source
+tags:
+  - DeepLearning
+summary: 基于李宏毅《生成式 AI 导论》的入门综述，从机器学习基础到 Transformer 架构、Prompt 工程、大模型三阶段训练和 Agent 构建的全面讲解。
+sources:
+  - "Cubox/浅入浅出生成式AI.md"
+created: "2026-06-29"
+updated: "2026-06-29"
+confidence: high
+---
+
 # 浅入浅出——生成式 AI
 
 > 来源：浅入浅出—生成式 AI（阿里云开发者/虚一）

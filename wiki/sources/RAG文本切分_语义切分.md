@@ -1,3 +1,16 @@
+---
+type: source
+tags:
+  - RAG
+  - RAG/chunking
+summary: 文本切分系列第4篇，介绍 Level 4 基于向量模型的语义切分，通过计算句子间向量差异决定切分点，并比较四种阈值控制方法。
+sources:
+  - "Cubox/RAG文本切分的第四个层次：语义切分.md"
+created: "2026-06-29"
+updated: "2026-06-29"
+confidence: high
+---
+
 # RAG文本切分_语义切分
 
 > 来源：哎呀AIYA 微信公众号《RAG文本切分的第四个层次，基于向量模型的语义切分》

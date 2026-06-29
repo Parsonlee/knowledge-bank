@@ -2,6 +2,12 @@
 
 > 操作日志，每次 ingest / query / lint 后追加记录。
 
+
+## 2026-06-29 verify | Phase 2 验收（RAG 集群）
+- 结论：**PASS（小修已完成）**，详见 `wiki/verify-phase2.md`
+- 死链扫描：0 真实死链
+- 重复删除：北大RAG综述_AIGC检索增强.md（重复，已删）
+- frontmatter 补齐：15 个早期 source 页补标准 YAML frontmatter
 ## 2026-06-29 ingest | Phase2 收尾批次：腾讯QO/北大RAG综述/OpenAI最佳实践（3 篇）
 - 本批次 3 篇文章，全文均来自 tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/，Cubox 文件均为 stub 无 Annotations 高亮
 - 文章 1「腾讯 Query 改写不是唯一方案」：**已在前批次完整处理**（source: 腾讯查询优化四大类综述.md + 4 概念页），跳过（非失败），本次仅补录 index

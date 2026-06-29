@@ -1,3 +1,16 @@
+---
+type: source
+tags:
+  - RAG
+  - RAG/chunking
+summary: 介绍 RAG 进阶索引技术：Multi-representation（命题索引）、RAPTOR（树状分层检索）和 ColBERT（token 级细粒度嵌入）三种方法。
+sources:
+  - "Cubox/RAG从入门到精通系列5：进阶索引.md"
+created: "2026-06-29"
+updated: "2026-06-29"
+confidence: high
+---
+
 # RAG索引进阶：Indexing
 
 > 来源：PyTorch研习社（南七无名式）系列教程第5篇

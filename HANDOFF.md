@@ -61,17 +61,20 @@
 - `wiki/` 子目录：sources/concepts/entities/comparisons/overview + index.md + log.md + fail.md
 - 单篇 ingest 流程验证：确认"全文 + highlight 加权"策略产出高质量可追溯内容
 - 关键突破：用户导出 205 篇全文到 `tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/`，解决反爬问题
+- ✅ **Phase 1（Infra+CV+DeepLearning）**：21篇完成，验收 PASS（详见 `wiki/verify-phase1.md`）
+- ✅ **Phase 2（RAG）**：~43篇完成，验收 PASS（详见 `wiki/verify-phase2.md`）
 
-**进行中**：全量批量 ingest（详见 `wiki/ingest-strategy.md`）
+**当前产出**：63 source + 155 concept + 43 entity，0 failures
+
+**下一步（明日继续）**：Phase 3（LLM 集群，~66篇，13批）
 - 按 tag 集群分批，每批 5 篇，串行执行
-- 每集群完成后 opus subagent 验收
+- 每集群完成后验收（可在主对话直接做或派 agent）
 - 不可读文章跳过记入 `wiki/fail.md`
-- Phase 1-6：Infra+CV+DL → RAG → LLM → AI-Agent → Skill+AIGC → 其它
+- Phase 3-6：LLM → AI-Agent → Skill+AIGC → 其它
 
-**关键约束**：
-- 只用全文真实内容，不用模型知识补全
-- highlight（Cubox Annotations）作为加权信号
-- confidence 如实标注
+**已知问题**：
+- 外部 API 中转服务额度不足（$0.27 remain），批次 6/9 各中断一次。**明天继续前需检查/充值**
+- 全文导出中有 2 个空文件（50B）：`AI时代的快速研发小队分享.md`、技术演进相关 —— 遇到时跳过记 fail
 
 ### 1. 修复自动推送（1 分钟）
 

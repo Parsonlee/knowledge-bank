@@ -1,3 +1,16 @@
+---
+type: source
+tags:
+  - RAG
+  - RAG/query
+summary: 介绍 RAG 高阶查询翻译技巧，覆盖 Multi-Query、RAG Fusion、Sub-question 分解、Step-back Question 和 HyDE 五种改写方法。
+sources:
+  - "Cubox/RAG从入门到精通系列2：查询翻译.md"
+created: "2026-06-29"
+updated: "2026-06-29"
+confidence: high
+---
+
 # RAG查询翻译：Query Translation
 
 > 来源：PyTorch研习社（南七无名式）系列教程第2篇
