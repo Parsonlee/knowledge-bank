@@ -26,4 +26,4 @@ HyDE（Hypothetical Document Embedding，假设文档嵌入）是一种 Query Tr
 
 - 相关概念：[[概念_Query_Translation]]、[[概念_混合检索]]、[[概念_Agentic_RAG]]
 - 实体：[[实体_Elasticsearch]]
-- 来源：[[RAG查询翻译_Query_Translation]]、[[RAG高级优化_检索策略Fusion_HyDE]]、[[RAG综述_中科院2025]]、[[ES企业AI搜索实践]]
+- 来源：[[RAG查询翻译_Query_Translation]]、[[RAG高级优化_检索策略Fusion_HyDE]]、[[RAG综述_中科院2025]]、[[ES企业AI搜索实践]]、[[RAG_12痛点与解决方案]]、[[DMQR-RAG_多样查询改写]]、[[提升RAG问答质量的技术路线]]

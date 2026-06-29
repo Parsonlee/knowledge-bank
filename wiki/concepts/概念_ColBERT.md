@@ -35,4 +35,4 @@ ColBERT（Contextualized Late Interaction over BERT）是一种基于细粒度 t
 
 - 相关概念：[[概念_Embedding与向量检索]]、[[概念_RAPTOR索引]]、[[概念_Multi-representation_Indexing]]、[[概念_Dense_Embedding]]、[[概念_ColBERTv2残差压缩]]
 - 实体：[[实体_ColBERT]]、[[实体_BGE-M3]]
-- 来源：[[RAG索引进阶_Indexing]]、[[从BM25到Multi-Vector_6种Embedding演进路线]]、[[ColBERT原理与延迟交互机制]]、[[ColBERTv2残差压缩演进]]
+- 来源：[[RAG索引进阶_Indexing]]、[[从BM25到Multi-Vector_6种Embedding演进路线]]、[[ColBERT原理与延迟交互机制]]、[[ColBERTv2残差压缩演进]]、[[提升RAG问答质量的技术路线]]

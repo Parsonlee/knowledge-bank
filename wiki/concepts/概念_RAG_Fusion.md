@@ -21,5 +21,5 @@ RAG Fusion 是一种在生成阶段融合检索结果的策略，关注如何从
 
 ## 关联
 
-- 相关概念：[[概念_Query_Translation]]
-- 来源：[[RAG查询翻译_Query_Translation]]
+- 相关概念：[[概念_Query_Translation]]、[[概念_Reciprocal_Rank_Fusion]]、[[概念_DMQR-RAG]]
+- 来源：[[RAG查询翻译_Query_Translation]]、[[DMQR-RAG_多样查询改写]]、[[提升RAG问答质量的技术路线]]

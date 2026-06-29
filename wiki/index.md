@@ -50,6 +50,11 @@
 - [[RAG综述_中科院2025]] — RAG 万字综述：核心组件/八步流程/高级 RAG(训练/多模态/记忆/Agentic)（RAG）
 - [[ES企业AI搜索实践]] — Elasticsearch 向量搜索/混合检索/RRF/量化/Serverless 构建企业 RAG（RAG）
 - [[向量数据库原理与应用全解析]] — 向量化演进、索引方法、相似度度量、主流向量数据库对比（RAG/embedding）
+- [[RAG_12痛点与解决方案]] — 12 个 RAG 痛点及解决方案：重排序/Prompt压缩/查询转换/PDF提取/安全（RAG）
+- [[斯坦福RAG新基线_DOS_RAG]] — DOS RAG：检索后按原文顺序排列，持平或超越 RAPTOR/ReadAgent（RAG）
+- [[DMQR-RAG_多样查询改写]] — DMQR-RAG 四种改写策略 + 自适应选择，P@5 提升 14.46%（RAG, RAG/query）
+- [[RAG挑战赛冠军方案]] — 企业年报 RAG 冠军：Docling 解析/FAISS/LLM重排序/多路由器/CoT+SO（RAG）
+- [[提升RAG问答质量的技术路线]] — RAG 技术路线总览：Query Translation/Routing/Construction/Indexing/CRAG/Self-RAG（RAG）
 
 ## Concepts
 
@@ -163,6 +168,17 @@
 - [[概念_Agentic_RAG]] — 智能体+RAG：查询规划/工具利用/推理优化
 - [[概念_Memory_RAG]] — 显式记忆增强 RAG：Memory3/MemoRAG/CAG
 - [[概念_知识整合]] — 输入层/中间层/输出层三种外部知识整合方式
+- [[概念_DOS_RAG]] — 保留文档原始结构：检索后按原文顺序排列片段
+- [[概念_DMQR-RAG]] — 多样化多查询改写：GQR/KWR/PAR/CCE 四策略 + 自适应选择
+- [[概念_LLM重排序]] — 让 LLM 给文本相关性打分(0~1)的精排方法
+- [[概念_父页面检索]] — 小块检索定位、完整父页面入上下文
+- [[概念_表格序列化]] — 大表格转一系列上下文独立字符串
+- [[概念_多查询路由]] — 路由到数据库/提示词/复合查询拆解
+- [[概念_结构化输出]] — 强制 LLM 按 schema 输出 JSON，与 CoT 结合
+- [[概念_Prompt_Compression]] — 检索后压缩上下文，LongLLMLingua（medium）
+- [[概念_CRAG]] — 纠正型 RAG：评估文档相关性触发额外检索（medium）
+- [[概念_Self-RAG]] — 自我反思 RAG：生成后自检决定是否补检索（medium）
+- [[概念_Adaptive-RAG]] — 自适应 RAG：按查询复杂度选择检索生成策略（medium）
 
 ## Entities
 
@@ -201,6 +217,8 @@
 - [[实体_Elasticsearch]] — 全文+原生向量搜索引擎，混合检索/RRF/量化/Serverless
 - [[实体_Faiss]] — Facebook 开源向量检索库，丰富索引算法+GPU 加速
 - [[实体_HNSW]] — 分层可导航小世界图，毫秒级 ANN 业界主流
+- [[实体_Docling]] — IBM 开源 PDF 解析库，RAG 挑战赛最佳解析器
+- [[实体_Cohere_Rerank]] — Cohere 重排序 API，CohereRerank top-k 精排（medium）
 
 ## Comparisons
 

@@ -2,6 +2,22 @@
 
 > 操作日志，每次 ingest / query / lint 后追加记录。
 
+## 2026-06-26 ingest | RAG 痛点/基线/查询改写/挑战赛/技术路线（5 篇，基于全文）
+- 本批次 5 篇文章，全文均来自 tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/，高亮参考对应 Cubox 文件 Annotations
+- 来源页（sources/）：
+  - RAG_12痛点与解决方案.md (high) — 12 个 RAG 痛点及解决方案（Cubox 无高亮）
+  - 斯坦福RAG新基线_DOS_RAG.md (high) — DOS RAG 按原文顺序排列检索结果（Cubox 1 处高亮：DOS RAG 流程，已标重点）
+  - DMQR-RAG_多样查询改写.md (high) — ICLR2025 多样化多查询改写框架（Cubox 1 处高亮：四种改写策略，已标重点）
+  - RAG挑战赛冠军方案.md (high) — 企业年报 RAG 冠军方案全流程解析（Cubox 无高亮）
+  - 提升RAG问答质量的技术路线.md (high) — RAG 技术路线总览（Cubox 1 处高亮：RAPTOR，已标重点）
+- 概念页（concepts/）新建 11 个：DOS_RAG、DMQR-RAG、LLM重排序、父页面检索、表格序列化、多查询路由、结构化输出、Prompt_Compression(medium)、CRAG(medium)、Self-RAG(medium)、Adaptive-RAG(medium)
+- 概念页（concepts/）更新 10 个：重排序Rerank（追加来源+实体）、RAPTOR索引（追加来源+关联DOS_RAG）、检索后处理（追加来源+关联）、Query_Translation（追加来源+关联DMQR-RAG）、RAG_Fusion（追加来源+关联）、HyDE（追加来源）、RAG_Routing（追加来源+关联）、Multi-representation_Indexing（追加来源）、Query_Construction（追加来源）、ColBERT（追加来源）、混合检索（追加来源）、Long-text_Reorder（追加来源+关联）
+- 实体页（entities/）新建 2 个：Docling、Cohere_Rerank(medium)
+- 实体页（entities/）更新 4 个：LlamaIndex（追加来源+关联）、LangChain（追加来源）、Faiss（追加来源）
+- 已更新 wiki/index.md
+- 全部内容基于全文，未使用模型自身知识补全
+- 跳过：无（5 篇全文均有实质内容）
+
 ## 2026-06-26 ingest | RAG/Embedding 专题（5 篇，基于全文）
 - 本批次 5 篇文章，全文均来自 tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/，高亮参考对应 Cubox 文件 Annotations
 - 来源页（sources/）：

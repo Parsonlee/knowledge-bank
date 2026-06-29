@@ -20,5 +20,5 @@ LangChain `_litm_reordering` 算法：
 
 ## 关联
 
-- 相关概念：[[概念_检索后处理]]、[[概念_Contextual_Compression]]
-- 来源：[[RAG高级优化_检索后处理]]
+- 相关概念：[[概念_检索后处理]]、[[概念_Contextual_Compression]]、[[概念_Prompt_Compression]]
+- 来源：[[RAG高级优化_检索后处理]]、[[RAG_12痛点与解决方案]]

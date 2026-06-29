@@ -26,6 +26,6 @@
 
 ## 关联
 
-- 相关概念：[[概念_检索后处理]]、[[概念_Instruct_Embedding]]
-- 实体：[[实体_Qwen3_Embedding]]
-- 来源：[[为什么用Qwen3_embedding和rerank]]
+- 相关概念：[[概念_检索后处理]]、[[概念_Instruct_Embedding]]、[[概念_LLM重排序]]
+- 实体：[[实体_Qwen3_Embedding]]、[[实体_Cohere_Rerank]]
+- 来源：[[为什么用Qwen3_embedding和rerank]]、[[RAG_12痛点与解决方案]]、[[RAG挑战赛冠军方案]]、[[提升RAG问答质量的技术路线]]
