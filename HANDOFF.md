@@ -52,6 +52,27 @@
 
 ## Next Steps
 
+### 0. 🚧 LLM Wiki 改造（进行中）
+
+将知识库改造为 Karpathy LLM Wiki 模式（三层架构）。
+
+**已完成**：
+- 三层架构脚手架：`Cubox/`(原始层) + `wiki/`(知识层) + `TheSchema.md`(规则层，复用 BlinkLLMWiki 模板)
+- `wiki/` 子目录：sources/concepts/entities/comparisons/overview + index.md + log.md + fail.md
+- 单篇 ingest 流程验证：确认"全文 + highlight 加权"策略产出高质量可追溯内容
+- 关键突破：用户导出 205 篇全文到 `tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/`，解决反爬问题
+
+**进行中**：全量批量 ingest（详见 `wiki/ingest-strategy.md`）
+- 按 tag 集群分批，每批 5 篇，串行执行
+- 每集群完成后 opus subagent 验收
+- 不可读文章跳过记入 `wiki/fail.md`
+- Phase 1-6：Infra+CV+DL → RAG → LLM → AI-Agent → Skill+AIGC → 其它
+
+**关键约束**：
+- 只用全文真实内容，不用模型知识补全
+- highlight（Cubox Annotations）作为加权信号
+- confidence 如实标注
+
 ### 1. 修复自动推送（1 分钟）
 
 在 Obsidian Git 设置面板里把 **Vault backup interval (minutes)** 从 `0` 改成 `10`。
