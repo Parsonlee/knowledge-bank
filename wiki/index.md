@@ -30,6 +30,11 @@
 - [[RAG路由_Routing]] — Routing：Logical/Semantic 路由智能选择检索路径（RAG）
 - [[RAG查询构造_Query_Construction]] — Query Construction：自然语言转元数据结构化查询（RAG, RAG/query）
 - [[RAG索引进阶_Indexing]] — 进阶索引：Multi-representation/RAPTOR/ColBERT（RAG, RAG/chunking）
+- [[RAG文本切分_字符切分]] — 文本切分系列1：Level 1 字符切分基础 + 五层级框架（RAG, RAG/chunking）
+- [[RAG文本切分_递归字符切分]] — 文本切分系列2：Level 2 递归字符分割（RAG, RAG/chunking）
+- [[RAG文本切分_token优化]] — 文本切分系列2.5：递归切分的 token 优化（RAG, RAG/chunking）
+- [[RAG文本切分_JSON文档切分]] — 文本切分系列3：Level 3 JSON 文档结构切分（RAG, RAG/chunking）
+- [[RAG文本切分_语义切分]] — 文本切分系列4：Level 4 基于向量模型的语义切分（RAG, RAG/chunking）
 
 ## Concepts
 
@@ -105,6 +110,13 @@
 - [[概念_Multi-representation_Indexing]] — 摘要+原文多表示索引（Proposition Indexing）
 - [[概念_RAPTOR索引]] — 树状分层索引：GMM/UMAP/多尺度聚类递归摘要
 - [[概念_ColBERT]] — token 级嵌入 late interaction 细粒度检索
+- [[概念_文本切分五层级]] — 文本切分 Level 1-5 框架：字符/递归/文档/语义/Agentic
+- [[概念_字符切分]] — Level 1 简单字符长度切分
+- [[概念_Chunk_Size与Overlap]] — 块大小与块重叠两个基础参数
+- [[概念_递归字符切分]] — Level 2 分隔符递归合并，实践首选
+- [[概念_Token切分优化]] — 按 token 而非字符计长度，对齐模型处理
+- [[概念_文档结构切分]] — Level 3 适配 JSON/Markdown/代码等格式
+- [[概念_语义切分]] — Level 4 向量差异超阈值切分，四种阈值方法
 
 ## Entities
 
@@ -135,6 +147,7 @@
 - [[实体_LangChain]] — LLM/RAG 应用框架，链式串联检索与生成（medium）
 - [[实体_Qdrant]] — Rust 编写的开源向量数据库/向量搜索引擎（medium）
 - [[实体_ColBERT]] — 斯坦福 token 级细粒度检索模型，MaxSim late interaction
+- [[实体_LlamaIndex]] — LLM/RAG 应用框架，文档加载与切分（medium）
 
 ## Comparisons
 

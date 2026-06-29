@@ -14,13 +14,11 @@ confidence: medium
 
 ## 简介
 
-ViT（Vision Transformer）由 Google（Dosovitskiy et al.）提出，将图像分割为 patch，作为序列 token 输入标准 Transformer 编码器，借自注意力获取全局上下文。
+ViT（Vision Transformer）将图像分割为 patch，作为序列 token 输入标准 Transformer 编码器，借自注意力获取全局上下文。
 
 ## 在 SAM 中的应用
 
 - SAM 图像编码器使用 ViT-H/16（Huge，16×16 patch）
-- 采用 MAE（Masked Autoencoder, Kaiming He 等）预训练
-- 三种规模对应 SAM 三个版本：ViT-B/L/H
 
 ## 备注
 

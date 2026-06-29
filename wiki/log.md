@@ -89,3 +89,17 @@
 - 已更新 wiki/index.md
 - 全部内容基于全文，未使用模型自身知识补全
 - 跳过：无（5 篇全文均有实质内容）
+
+## 2026-06-26 ingest | RAG文本切分系列 Level 1-4（5 篇，基于全文）
+- 本批次 5 篇文章，全文均来自 tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/，高亮参考对应 Cubox 文件 Annotations
+- 来源页（sources/）：
+  - RAG文本切分_字符切分.md (high) — Level 1 字符切分基础 + 五层级框架（Cubox 无高亮）
+  - RAG文本切分_递归字符切分.md (high) — Level 2 递归字符分割（Cubox 无高亮）
+  - RAG文本切分_token优化.md (high) — Level 2 token 优化（Cubox 无高亮）
+  - RAG文本切分_JSON文档切分.md (high) — Level 3 JSON 文档切分（Cubox 无高亮）
+  - RAG文本切分_语义切分.md (high) — Level 4 基于向量模型的语义切分（Cubox 高亮 2 处：语义切分原理、梯度方法，已标重点）
+- 概念页（concepts/）新建 7 个：文本切分五层级、字符切分、Chunk_Size与Overlap、递归字符切分、Token切分优化、文档结构切分、语义切分
+- 实体页（entities/）新建 1 个：LlamaIndex(medium)；更新 1 个：LangChain（追加文本切分能力与来源）
+- 已更新 wiki/index.md
+- 全部内容基于全文，未使用模型自身知识补全
+- 跳过：无（5 篇全文均有实质内容）
