@@ -24,8 +24,13 @@
 - 通过"LLM 化"/"对话化"充分释放基础模型的理解和推理能力
 - 支持自定义 Instruct，实现细粒度任务控制
 
+## LLM Reranker 与分层蒸馏（优图）
+
+- 传统 Reranker（BERT/RoBERTa，110M~400M，512 token）→ LLM Reranker（8k+ token，理解能力更强）
+- 分层知识蒸馏：约束多个 Transformer 层输出一致，支持层级输出能力（详见 [[概念_分层知识蒸馏]]）
+
 ## 关联
 
-- 相关概念：[[概念_检索后处理]]、[[概念_Instruct_Embedding]]、[[概念_LLM重排序]]
+- 相关概念：[[概念_检索后处理]]、[[概念_Instruct_Embedding]]、[[概念_LLM重排序]]、[[概念_分层知识蒸馏]]
 - 实体：[[实体_Qwen3_Embedding]]、[[实体_Cohere_Rerank]]
-- 来源：[[为什么用Qwen3_embedding和rerank]]、[[RAG_12痛点与解决方案]]、[[RAG挑战赛冠军方案]]、[[提升RAG问答质量的技术路线]]
+- 来源：[[为什么用Qwen3_embedding和rerank]]、[[RAG_12痛点与解决方案]]、[[RAG挑战赛冠军方案]]、[[提升RAG问答质量的技术路线]]、[[优图RAG技术详解]]

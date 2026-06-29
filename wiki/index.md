@@ -55,6 +55,9 @@
 - [[DMQR-RAG_多样查询改写]] — DMQR-RAG 四种改写策略 + 自适应选择，P@5 提升 14.46%（RAG, RAG/query）
 - [[RAG挑战赛冠军方案]] — 企业年报 RAG 冠军：Docling 解析/FAISS/LLM重排序/多路由器/CoT+SO（RAG）
 - [[提升RAG问答质量的技术路线]] — RAG 技术路线总览：Query Translation/Routing/Construction/Indexing/CRAG/Self-RAG（RAG）
+- [[阿里RAG技术演进]] — 阿里云服务 RAG 四大命题：数据价值/异构检索/生成控制/评估体系（RAG）
+- [[美团搜索查询改写实践]] — 美团查询改写全栈：离线挖掘/BERT判别/SMT/NMT强化学习/向量化召回（RAG/query）
+- [[优图RAG技术详解]] — 腾讯优图RAG全栈：2B Embedding/Reranker蒸馏/Text2SQL/GraphRAG知识树（RAG）
 
 ## Concepts
 
@@ -180,6 +183,22 @@
 - [[概念_Self-RAG]] — 自我反思 RAG：生成后自检决定是否补检索（medium）
 - [[概念_Adaptive-RAG]] — 自适应 RAG：按查询复杂度选择检索生成策略（medium）
 
+#### 阿里/美团/优图实践概念（批次7）
+- [[概念_知识图谱RAG]] — 图结构组织知识，多跳推理跨文档关联检索
+- [[概念_RAR相关性过滤]] — 检索增强相关性，赋予 LLM 判断"不相关"能力
+- [[概念_RAG_Diagnoser]] — 原子事实粒度的细粒度 RAG 评估体系
+- [[概念_迭代式检索]] — 首次无效时分层递进查询，避免一次性检索污染
+- [[概念_SMT查询改写]] — 统计翻译模型查询改写，噪声信道+BeamSearch+XGBoost
+- [[概念_强化学习NMT改写]] — NMT 改写以搜索系统为环境强化学习优化
+- [[概念_向量化召回改写]] — 双塔向量从候选池 ANN 召回改写词（模糊改写）
+- [[概念_协同训练]] — NMT-BERT 半监督互训提升数据和模型质量
+- [[概念_分层知识蒸馏]] — Reranker 多层输出约束，支持层级输出能力
+- [[概念_Embedding训练管线]] — 多阶段对比学习+精细数据工程+多任务均衡
+- [[概念_Text2SQL]] — 自然语言转 SQL，MAC-SQL 多智能体框架
+- [[概念_GraphRAG]] — 图/树结构组织知识的检索增强生成
+- [[概念_知识树结构]] — 融合图与树优点的四级知识粒度树型图谱
+- [[概念_S2Dual社区检测]] — Structure+Semantics 双感知社区检测，超越 Leiden
+
 ## Entities
 
 - [[实体_DeepSpeed]] — 分布式训练框架，ZeRO 系列策略来源
@@ -219,6 +238,10 @@
 - [[实体_HNSW]] — 分层可导航小世界图，毫秒级 ANN 业界主流
 - [[实体_Docling]] — IBM 开源 PDF 解析库，RAG 挑战赛最佳解析器
 - [[实体_Cohere_Rerank]] — Cohere 重排序 API，CohereRerank top-k 精排（medium）
+- [[实体_美团搜索]] — 美团App搜索，查询改写全栈实践，覆盖率73%，QPS 6万/秒
+- [[实体_优图实验室]] — 腾讯AI实验室，RAG全栈方案，apd-embedding-2b/MAC-SQL/GraphRAG
+- [[实体_MAC-SQL]] — 多智能体Text2SQL框架，Selector/Decomposer/Refiner（COLING 2025）
+- [[实体_通义千问]] — 阿里大语言模型，RAG生成/判别核心模型（medium）
 
 ## Comparisons
 

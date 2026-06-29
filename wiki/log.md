@@ -2,6 +2,20 @@
 
 > 操作日志，每次 ingest / query / lint 后追加记录。
 
+## 2026-06-29 ingest | 批次7 阿里/美团/优图 RAG 工业实践（3 新篇 + 2 遗留确认，基于全文）
+- 遗留 2 篇（文章1/2）经核对已在 2026-06-26 批次完整处理（source/concept/index 齐全），本批次无需重复，跳过
+  - RAG_12痛点与解决方案.md（已存在）、提升RAG问答质量的技术路线.md（已存在）
+- 新建来源页（sources/）3 个：
+  - 阿里RAG技术演进.md (high) — 阿里云服务 RAG 四大命题（Cubox 无高亮）
+  - 美团搜索查询改写实践.md (high) — 美团查询改写全栈技术（Cubox 2 处高亮：查询改写定义/应用方式，已标重点）
+  - 优图RAG技术详解.md (high) — 腾讯优图 RAG 全栈（Cubox 1 处高亮：STS/IR 损失，已标重点）
+- 概念页（concepts/）新建 14 个：知识图谱RAG、RAR相关性过滤、RAG_Diagnoser、迭代式检索、SMT查询改写、强化学习NMT改写、向量化召回改写、协同训练、分层知识蒸馏、Embedding训练管线、Text2SQL、GraphRAG、知识树结构、S2Dual社区检测
+- 概念页（concepts/）更新 6 个：查询重写（追加美团/阿里实践+关联）、混合检索（追加阿里来源）、Agentic_RAG（追加来源+关联GraphRAG/迭代检索）、重排序Rerank（追加LLM Reranker分层蒸馏+优图来源）、SimCSE（追加美团来源）、Sentence-BERT（追加美团来源）、RAPTOR索引（追加优图来源+关联GraphRAG）
+- 实体页（entities/）新建 4 个：美团搜索、优图实验室、MAC-SQL、通义千问(medium)
+- 已更新 wiki/index.md（Sources/Concepts-RAG/Entities）
+- 全部内容基于全文，未使用模型自身知识补全
+- 跳过：文章1、2（已处理，非失败）；无失败篇目写入 fail.md
+
 ## 2026-06-26 ingest | RAG 痛点/基线/查询改写/挑战赛/技术路线（5 篇，基于全文）
 - 本批次 5 篇文章，全文均来自 tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/，高亮参考对应 Cubox 文件 Annotations
 - 来源页（sources/）：

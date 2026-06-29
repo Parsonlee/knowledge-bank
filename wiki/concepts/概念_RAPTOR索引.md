@@ -42,5 +42,5 @@ RAPTOR（Recursive Abstractive Processing for Tree-Organized Retrieval）是一�
 
 ## 关联
 
-- 相关概念：[[概念_Multi-representation_Indexing]]、[[概念_ColBERT]]、[[概念_RAG基础流程]]、[[概念_DOS_RAG]]
-- 来源：[[RAG索引进阶_Indexing]]、[[提升RAG问答质量的技术路线]]、[[斯坦福RAG新基线_DOS_RAG]]
+- 相关概念：[[概念_Multi-representation_Indexing]]、[[概念_ColBERT]]、[[概念_RAG基础流程]]、[[概念_DOS_RAG]]、[[概念_GraphRAG]]
+- 来源：[[RAG索引进阶_Indexing]]、[[提升RAG问答质量的技术路线]]、[[斯坦福RAG新基线_DOS_RAG]]、[[优图RAG技术详解]]
