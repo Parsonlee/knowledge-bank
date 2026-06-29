@@ -19,3 +19,31 @@
 - 来源：Cubox/[LLM]大模型显存计算公式与优化（知乎 URL 403 不可达）
 - 结论：知乎反爬，Cubox 内容不足以支撑 ingest，生成内容依赖模型补全，违反来源可追溯原则
 - 操作：删除全部生成页面，知乎移入不可爬列表
+
+## 2026-06-29 ingest | CV 目标检测系列 + SAM（5 篇，基于全文）
+- 本批次 5 篇文章，全文均来自 tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/，高亮参考对应 Cubox 文件 Annotations
+- 来源页（sources/）：
+  - 目标检测入门_经典模型.md (high) — 干货|目标检测入门 Part1（Cubox 无高亮）
+  - 目标检测入门_评测与训练技巧.md (high) — Part2（Cubox 1 处高亮：多尺度，已标重点）
+  - 目标检测入门_基础网络与分类定位权衡.md (high) — Part3（Cubox stub 无高亮，全文充实）
+  - 目标检测入门_特征复用与实时性.md (high) — Part4（Cubox stub 无高亮，全文充实）
+  - SAM_Segment_Anything模型.md (high) — SAM（Cubox 1 处高亮：架构，已标重点）
+- 概念页（concepts/）新建 15 个：两阶段检测、单阶段检测、Anchor机制、RoI_Pooling、检测评测指标、多尺度检测、NMS与Soft_NMS、数据增强_检测(medium)、Backbone设计范式、深度可分离卷积、通道注意力、位置敏感检测、特征金字塔网络、图像分割、Prompt驱动分割、Vision_Transformer、Focal_Loss
+- 实体页（entities/）新建 13 个：R-CNN、YOLO、SSD、ResNet、SENet、R-FCN、FPN、MobileNet、COCO数据集、Mask_R-CNN(medium)、SAM、ViT(medium)、CLIP(medium)
+- 已更新 wiki/index.md
+- 全部内容基于全文，未使用模型自身知识补全；medium 标注项为全文提及但未充分展开者
+- 跳过：无（5 篇全文均有实质内容）
+
+## 2026-06-26 ingest | DiT + OCR增强 + PyTorch增强 + Attention复杂度 + Normalization（5 篇，基于全文）
+- 本批次 5 篇文章，全文均来自 tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/，高亮参考对应 Cubox 文件 Annotations
+- 来源页（sources/）：
+  - DiT_扩散模型与Transformer.md (high) — DiT 详解（Cubox 无高亮）
+  - OCR的有效数据增强.md (high) — OCR 增强实战（Cubox 3 处高亮：工具库、形态学、噪声，已标重点）
+  - PyTorch图像增强方法总结.md (high) — 13 个 torchvision 增强（Cubox 无高亮）
+  - Attention复杂度解析与改进方向.md (high) — 注意力复杂度与 FlashAttention（Cubox 无高亮）
+  - Normalization方法总结_BN_LN_IN_GN.md (high) — BN/LN/IN/GN 对比（Cubox 无高亮）
+- 概念页（concepts/）新建 11 个：扩散模型、Latent_Diffusion、Patchify、adaLN_Zero、OCR数据增强、torchvision图像增强、自注意力复杂度、FlashAttention、Normalization方法对比、Batch_Normalization
+- 实体页（entities/）新建 3 个：DiT、Albumentations、FlashAttention
+- 已更新 wiki/index.md
+- 全部内容基于全文，未使用模型自身知识补全
+- 跳过：无（5 篇全文均有实质内容）
