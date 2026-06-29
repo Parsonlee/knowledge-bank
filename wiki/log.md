@@ -1,7 +1,324 @@
 # Wiki Log
 
+## 2026-06-29 ingest | Phase 4 Batch 3：AI-Agent/context-engineering（5篇，基于全文）
+
+- 本批次 5 篇文章，全文均来自 `tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/`，Cubox highlights 参考对应文件
+- 新建来源页（sources/）5 个：
+  - `Context_Engineering_LangChain_Manus_NotebookLM.md` (high) — LangChain × Manus 专家对话 NotebookLM 提炼：4条反直觉原则，战略边界/可逆压缩/工具分层卸载/简化优先
+  - `Manus创始人手把手拆解上下文工程.md` (high) — Peak Ji 亲写 Manus 官方博客：六大上下文工程原则，KV缓存/工具掩码/文件系统记忆/注意力复述/错误保留/Few-Shot多样性
+  - `AI应用实战_搞定复杂指令和工具膨胀.md` (high) — 阿里云雨清：联调造数场景单Agent→多Agent演进，意图识别+工具引擎+逆向推导，工具过滤100+→5个
+  - `浅谈上下文工程_Claude_Code_Manus_Kiro.md` (high) — 阿里云单从：三产品实践对比，提示工程→上下文工程→环境工程演进路线，Claude Code三层记忆架构
+  - `也许当前最好的上下文工程讲解_LangChain联合Manus.md` (high) — Lance Martin × Peak Ji 对话实录：压缩/总结两模式详解，隔离两种模式，三层行动空间，Q&A实战洞见
+- 新建概念页（concepts/）5 个：
+  - `概念_上下文工程.md` — 定义/七组成/四类操作/与提示工程区别/演进路线
+  - `概念_Context_Rot.md` — 上下文腐化现象、预腐化阈值128K-200K、触发流程
+  - `概念_分层行动空间.md` — Manus三层架构：函数调用/沙盒工具集/软件包API
+  - `概念_上下文隔离两种模式.md` — 通信模式 vs 共享上下文模式，Go语言哲学类比
+  - `概念_Spec_Driven_Development.md` — 规范驱动开发，EARS格式，Kiro三文件实现
+- 新建实体页（entities/）2 个：
+  - `实体_Peak_Ji_季逸超.md` — Manus联创，MIT TR35 2025，上下文工程六大原则提出者
+  - `实体_Manus.md` — 通用AI Agent，上下文工程实践标杆，架构特点与演进历史
+- index.md 已更新（Sources 追加 5 条，Concepts 追加 5 条，Entities 追加 2 条）
+
+## 2026-06-29 ingest | Phase 4 Batch 2：AI-Agent/tools 其他（4篇，基于全文）
+
+- 本批次 4 篇文章，全文均来自 `tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/`，Cubox highlights 参考对应文件
+- 新建来源页（sources/）4 个：
+  - `HumanInTheLoop用MCP实现.md` (high) — 彭世昕等（阿里云）：send_inquiry+MCP Notification 实现服务端 HITL，含 Proxy 代理和 YOLO 模式；Cubox 2 处高亮，已标注 [重点/高亮]
+  - `如何让Agent规划调用工具.md` (high) — 峙岳（蚂蚁集团）：「思考和规划」工具强制结构化规划，τ-bench 航空客服提升 54%；Cubox 无高亮（stub）
+  - `Qwen3混合部署与MCP.md` (high) — 翎薇（阿里云）：Qwen3-0.6b 本地做工具选择节省 token，Qwen3-235b-a22b 生成结果；Cubox 无高亮（stub）
+  - `Anthropic多智能体研究系统构建.md` (high) — Anthropic 工程团队：orchestrator-worker 研究系统，多智能体比单智能体提升 90.2%，8条提示词原则；Cubox 无高亮（stub）
+- 新建概念页（concepts/）6 个：
+  - `概念_HITL_MCP.md` — send_inquiry 挂起等待人类答复，MCP Notification 传凭条，HTTP 接口收答复，多端协同
+  - `概念_MCP_Proxy.md` — 代理模式在 tool/call 前植入确认逻辑，现有 MCP Server 零改动
+  - `概念_Agent思考工具.md` — think/plan/action 工具强制结构化规划，优于纯 Prompt，τ-bench 数据
+  - `概念_MCP混合部署.md` — 小模型做工具选择节省 token，大模型负责生成保证质量
+  - `概念_orchestrator-worker模式.md` — 主智能体规划分解，子智能体并行执行，含 Anthropic 效果数据
+  - `概念_多智能体协调.md` — 协调挑战、提示词 8 原则、评测策略、生产可靠性
+- 新建实体页（entities/）2 个：
+  - `实体_OpenLM平台.md` — 阿里巴巴智能引擎团队大模型研发平台，HITL MCP 落地环境
+  - `实体_Anthropic_Research系统.md` — Claude Research 多智能体研究系统，Opus 4 + Sonnet 4 架构
+- index.md 已更新（Sources 追加 4 条，Concepts 追加 6 条，Entities 追加 2 条）
+
+## 2026-06-29 ingest | Phase 4 Batch 1：AI-Agent/tools MCP系列（5篇，基于全文）
+
+- 本批次 5 篇文章，全文均来自 `tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/`，Cubox highlights 参考对应文件
+- 新建来源页（sources/）5 个：
+  - `别再误会MCP了辟谣指南.md` (high) — 苗刀（阿里云）：SDK 源码法证 CHS 三组件，Host 是 AI 智能唯一承载者；Cubox 4 处高亮，已全部标注 [重点/高亮]
+  - `MCP加数据库.md` (high) — ConardLi（Datawhale）：MCP+MongoDB Text-to-SQL 实战，RAG 四大局限与 MCP 演进；Cubox 无高亮（stub）
+  - `MCP遇上代码执行.md` (high) — Adam Jones/Conor Kelly（Anthropic）：CodeAgent 模式 Token 节省 98.7%，隐私保护与 Skills 沉淀；Cubox 1 处高亮，已标注 [重点/高亮]
+  - `MCP五大原语与Web化.md` (high) — David Soria Parra（MCP 联合创建者）：五大原语详解与 Web 化方向；Cubox 无高亮（stub）
+  - `基于MCP的AI_Agent应用开发实践.md` (high) — 金鑫（字节跳动）：Agent TARS MCP 实践，前后端分离类比与 Roadmap；Cubox 1 处高亮，已标注 [重点/高亮]
+- 新建概念页（concepts/）7 个：
+  - `概念_MCP协议.md` — MCP 定义、CHS 架构、五大原语、传输方式、与 Function Call 关系全景
+  - `概念_MCP_CHS架构.md` — Client-Host-Server 三组件精确界定，SDK 源码法证，CherryStudio 案例解剖
+  - `概念_MCP五大原语.md` — Tool/Prompt/Resource/Sampling/Roots 五类原语详解与三原语交互模型
+  - `概念_MCP传输方式.md` — Stdio/SSE/Streamable HTTP 对比、Web 化配套技术与选型建议
+  - `概念_MCP与Function_Call对比.md` — 协议 vs 模型特性、静态 vs 动态、Function Call 三大痛点与 MCP 解法
+  - `概念_MCP代码执行模式.md` — CodeAgent 模式：文件树按需加载、Token 减少 98.7%、隐私保护、Skills 沉淀
+  - `概念_MCP数据库集成.md` — Text-to-SQL 模式、RAG 四大局限、MongoDB 实战配置、适用场景
+- 新建实体页（entities/）5 个：
+  - `实体_Agent_TARS.md` — 字节跳动开源多模态 Agent，内置 FC + 用户自定义 MCP 双轨设计
+  - `实体_David_Soria_Parra.md` — Anthropic MCP 联合创建者，五大原语与 Web 化主导者
+  - `实体_MongoDB.md` — 文档型 NoSQL 数据库，mcp-mongo-server MCP 接入
+  - `实体_CherryStudio.md` — 开源 MCP Host，MCPService.ts（Client）+ ApiService.ts（Host）架构典型案例
+  - `实体_Cline.md` — VS Code AI 编码扩展，原生 MCP Client，npx 配置接入任意 MCP Server
+- index.md Sources/Concepts/Entities 三节均已更新，新增 Phase 4 Batch 1 条目
+- 全部内容基于全文，未使用模型自身知识补全
+- 跳过：无（5 篇全文均有实质内容）
+
+## 2026-06-29 verify | Phase 3 LLM 集群验收
+- 死链：严重 0 个，forward-ref 46 个（均为概念/实体前向引用，可接受）
+- 抽查 5 篇：全部 PASS（共核实 19 条 bullet，无编造）
+- fail.md：0 条记录，格式正确
+- 结论：**PASS**，详见 `wiki/verify-phase3.md`
+
 > 操作日志，每次 ingest / query / lint 后追加记录。
 
+## 2026-06-29 ingest | Batch 10：LLM 综合/推荐/数字人（3 篇，基于全文）
+
+- 本批次 3 篇文章，全文均来自 `tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/`，Cubox highlights 参考对应文件
+- 新建来源页（sources/）3 个：
+  - `蚂蚁集团大模型推荐算法与应用.md` (high) — 胡斌斌（蚂蚁NextEvo）：三条路径将LLM融入推荐：KG知识生产/DLLM2Rec教师蒸馏/种子用户池；Cubox 无高亮（stub）
+  - `从GPT-2到gpt-oss_OpenAI开放模型进化之路.md` (high) — Sebastian Raschka：gpt-oss 7项架构进化、与Qwen3宽vs深对比、MXFP4量化；Cubox 6 处高亮，已全部标注 [重点/高亮]
+  - `淘宝直播数字人_LLM文案生成技术.md` (high) — 淘天AIGC团队：口语化改写(DPO 97%)、多源信息多步→单步蒸馏(耗时降75%)、OCR图文一致、文案测评体系；Cubox 无高亮（stub）
+- 新建概念页（concepts/）4 个：
+  - `概念_大模型推荐系统.md` — 曝光/流行度偏差动机，三条融合路径框架
+  - `概念_LLM知识图谱生产.md` — 三元组生成流程、Utility精排RAG、可靠性保障、评价指标
+  - `概念_gpt-oss架构特征.md` — 7项进化对比表、宽vs深权衡、专家设计、注意力Sinks、MXFP4
+  - `概念_数字人文案生成.md` — 四大模块（口语化改写/多步蒸馏/素材图文一致/测评体系）完整框架
+- 新建实体页（entities/）5 个：
+  - `实体_蚂蚁集团NextEvo.md` — AI创新研发部门，支付宝推荐场景
+  - `实体_DLLM2Rec.md` — 两级蒸馏框架规格与效果
+  - `实体_gpt-oss.md` — 架构规格/量化/硬件要求/特性
+  - `实体_Sebastian_Raschka.md` — 博主简介/著作/GitHub
+  - `实体_淘天AIGC团队.md` — 团队简介/主要技术成果
+- index.md Sources/Concepts/Entities 三节均已更新，新增 Batch 10 条目
+- 全部内容基于全文，未使用模型自身知识补全
+- 跳过：无（3 篇全文均超 500 字符，内容充实）
+
+## 2026-06-29 ingest | Batch 9：LLM 面试/综述/创业/RL（5 篇，基于全文）
+
+- 本批次 5 篇文章，全文均来自 `tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/`，Cubox highlights 参考对应文件
+- 新建来源页（sources/）5 个：
+  - `LLM面试50题_MIT_CSAIL.md` (high) — MIT CSAIL 工程师 Hao Hoang 整理 50 个 LLM 面试题，覆盖架构/训练/推理/数学/系统五大主题；Cubox 仅有 URL 无高亮
+  - `大模型算法岗面试百问百答.md` (high) — Codering/江大白：RAG 体系/LLaMA 架构/SFT 方法/幻觉复读机全套面试知识点；Cubox 仅有简短摘要无高亮
+  - `北大LLMs数据管理全流程综述.md` (high) — 北大综述 arXiv:2312.01700：预训练（规模/质量5要素/组合/系统）+ SFT（数据规模/质量4维度/任务组合）全流程；Cubox 全文即来源无高亮
+  - `Jina_AI创业复盘.md` (high) — 创始人肖涵六年复盘：两次 Pivot/AI 团队 Scaling Law 困惑/被 Elastic 收购；Cubox 5 处高亮，已全部标注 [重点/高亮]
+  - `GPT5通用验证器_Universal_Verifier.md` (high) — 通用验证器技术全景：RLVR 局限→LLM-as-Judge（RaR/Rubicon/Writing-Zero）→内部自信度（VeriFree/INTUITOR）→OaK 终局；Cubox 3 处高亮，已标注
+- 新建概念页（concepts/）4 个：
+  - `概念_LLM面试知识体系.md` — 五大模块面试清单，链接各核心概念
+  - `概念_LLM数据管理预训练SFT.md` — 预训练+SFT 两阶段数据管理完整框架
+  - `概念_通用验证器.md` — 突破 RLVR 的两大路线与 OaK 终局，定义与机制
+  - `概念_AI创业Scaling_Law.md` — AI 团队规模与产出效率悖论（medium），来自 Jina AI 复盘
+- 新建实体页（entities/）2 个：
+  - `实体_Jina_AI.md` — 公司历程/产品演进/竞争格局/核心洞见
+  - `实体_RLVR技术.md` — 定义/优势/局限/后继方向
+- index.md Sources/Concepts/Entities 三节均已更新，新增 Batch 9 条目
+- 全部内容基于全文，未使用模型自身知识补全
+- 跳过：无（5 篇全文均超 500 字符，内容充实）
+
+
+
+- 本批次 5 篇文章，全文均来自 `tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/`，Cubox highlights 参考对应文件
+- 新建来源页（sources/）5 个：
+  - `大模型幻觉陷阱_AGI之路04期.md` (high) — 腾讯科技《AGI之路》第四期：李维/胡泳/陈天昊三维解构幻觉本质；Cubox 3 处高亮，已标重点
+  - `Discrete_Tokenization多模态综述.md` (high) — PaperWeekly 转载：首个多模态 LLM 离散化综述，8 类 VQ 方法与跨模态应用全景；Cubox 1 句高亮标注
+  - `Transformer大模型3D可视化_NanoGPT.md` (high) — 新智元：Brendan Bycroft bbycroft.net/llm 3D 可视化，逐层拆解 GPT-3/NanoGPT；Cubox 无高亮
+  - `LLM两年发展万字综述_2023-2025.md` (high) — 阿里云开发者凤聆：2023-2025 LLM 三大支柱演进（效率/推理/智能体）；Cubox 仅有简短笔记
+  - `Andrej_Karpathy_LLM教学笔记.md` (high) — 腾讯技术工程 huaxing：Karpathy 7 小时视频学习笔记，预训练/后训练/RL 全链路；Cubox 简短笔记
+- 新建概念页（concepts/）6 个：
+  - `概念_幻觉的社会传播影响` — 后真相/专家之死/衔尾蛇/对齐税与责任归属
+  - `概念_温度参数与幻觉创造力权衡` — 温度控制输出分布，高温增创意增幻觉，低温保准确
+  - `概念_Discrete_Tokenization` — 8 类 VQ 方法、码本坍塌与多模态应用全景
+  - `概念_BPE分词算法` — 迭代合并高频字节对，GPT 系列标准分词
+  - `概念_预训练数据处理管线` — URL 采集→过滤→去重→PII 移除 9 步标准流程
+  - `概念_LLM三大演进支柱_效率推理智能体` — 2023-2025 LLM 演进的三大正交支柱框架
+- 新建实体页（entities/）4 个：
+  - `实体_李维_出门问问` — 出门问问大模型团队前工程副总裁，幻觉技术解析
+  - `实体_Brendan_Bycroft` — bbycroft.net/llm LLM 3D 可视化作者
+  - `实体_Minimax_m1` — Minimax 456B 开源 MoE 模型，Lightning Attention + CISPO
+  - `实体_PaperWeekly` — AI/ML 论文解读媒体平台
+- index.md Sources/Concepts/Entities 三节均已更新，新增 Batch 8 条目
+
+## 2026-06-29 ingest | Batch 7：LLM/training + hallucination（5 篇，基于全文）
+
+- 本批次 5 篇文章，全文均来自 `tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/`，Cubox highlights 参考对应文件
+- 新建来源页（sources/）5 个：
+  - `LoRA微调实战_Qwen2.5全流程.md` (high) — 程序员老奥：CPU 笔记本 LoRA 微调 Qwen2.5-0.5B 完整代码，意图识别准确率 96.47%；Cubox 无高亮
+  - `三大Scaling_Law_预训练后训练推理.md` (high) — AINLPer：预训练/后训练/推理阶段三大 Scaling Law；Cubox 2 处高亮，已标重点
+  - `大规模神经网络优化_超参实践与规模律.md` (high) — 郑奘巍（NUS）：GPT→LLaMA2 超参演进 + Kaplan/Chinchilla 规模律推导与拾遗；Cubox 无高亮
+  - `翁荔_LLM外在幻觉_原因检测抵抗.md` (high) — 翁荔 Blog：外在幻觉定义/产幻原因/FActScore/SAFE/CoVe/FLAME；Cubox 2 处高亮，已标重点
+  - `LLM_32种消除幻觉技术综述.md` (high) — 夕小瑶：32 种幻觉消除技术两大分类框架（提示工程 + 模型开发）；Cubox 无高亮
+- 新建概念页（concepts/）6 个：
+  - `概念_LoRA低秩适应微调` — LoRA 低秩分解原理、r/alpha/dropout 超参、QLoRA 变体
+  - `概念_Scaling_Law三大规律` — 预训练/后训练/推理三大规律定义与关系
+  - `概念_LLM外在幻觉与上下文内幻觉` — 翁荔框架：两种幻觉类型 + 预训练/微调根因
+  - `概念_幻觉检测方法` — FActScore/SAFE/SelfCheckGPT/TruthfulQA 检测体系
+  - `概念_LLM幻觉消除技术分类` — 32 种技术分类框架（提示工程 vs 模型开发）
+  - `概念_抗幻觉方法` — RARR/FAVA/Self-RAG/CoVe/FLAME/WebGPT 抵抗方法体系
+- 新建实体页（entities/）2 个：
+  - `实体_翁荔_Lilian_Weng` — OpenAI 科学家，Agent 公式 + 幻觉 Blog
+  - `实体_PEFT库` — HuggingFace LoRA/QLoRA 微调库
+- index.md Sources/Concepts/Entities 三节均已更新，新增 LLM/training + hallucination 批次7专区
+
+## 2026-06-29 ingest | Batch 6：LLM/training/post-train + pre-train（5 篇，基于全文）
+
+- 本批次 5 篇文章，全文均来自 `tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/`，Cubox highlights 参考对应文件
+- 新建来源页（sources/）5 个：
+  - `后训练认知_SFT_vs_RL_记忆与遗忘机制.md` (high) — 普林斯顿陈丹琦团队：RL 抗遗忘优于 SFT，根源是 on-policy 数据；Cubox 1 处高亮，已标重点
+  - `HuggingFace手把手训练大模型实战指南.md` (high) — SmolLM3 端到端训练：Why→What→How + 消融/架构/数据/基础设施；Cubox 3 处高亮，已标重点
+  - `SFT数据挑选方法_质量多样性必要性.md` (high) — SFT 数据三维度：质量/多样性/必要性，MoDS/DEITA/CaR；Cubox 无高亮
+  - `375篇文献_推理大模型后训练技术综述.md` (high) — 375篇文献后训练三分类：微调/RL/测试时扩展；Cubox 无高亮
+  - `LLM后训练技术全景解读.md` (high) — 全景解读后训练：PEFT/LoRA系列/Prompt Tuning/PPO/DPO/GRPO/CoT/验证器/挑战；Cubox 无高亮
+- 新建概念页（concepts/）9 个：
+  - `概念_on-policy与off-policy数据` — on-policy/off-policy 定义及在后训练遗忘中的作用
+  - `概念_灾难性遗忘` — 后训练遗忘表现/根本原因/缓解方法
+  - `概念_alignment_tax` — 对齐税定义，非不可避免
+  - `概念_Forward_KL与Reverse_KL` — mode-covering vs mode-seeking，对遗忘的真实影响
+  - `概念_IFD指令跟随难度` — IFD 计算公式、四种情形解读、使用流程
+  - `概念_SFT数据三维度` — 质量/多样性/必要性三维度 + MoDS/DEITA/CaR 对比表
+  - `概念_K-Center-Greedy算法` — 最大化数据多样性的贪婪采样算法原理与应用
+  - `概念_多阶段训练策略` — 退火阶段高质量数据、Qwen3三阶段、SmolLM3实践
+  - `概念_过程奖励与结果奖励` — PRM/ORM 对比表，典型应用场景
+  - `概念_Reward_Hacking` — 奖励误导定义、典型例子、多目标对抗训练应对方案
+- 新建实体页（entities/）4 个：
+  - `实体_SmolLM3` — HuggingFace 3B 模型，GQA/RNoPE/嵌入共享架构
+  - `实体_DEITA` — SFT 数据筛选方法实体
+  - `实体_MoDS` — 三维度 SFT 数据筛选方法实体
+  - `实体_陈丹琦团队` — 普林斯顿 NLP 组，后训练遗忘研究
+- index.md Sources/Concepts/Entities 三节均已更新，新增 LLM/training/post-train 批次6专区
+
+## 2026-06-29 ingest | Batch 5：LLM/reasoning + training/RL（5 篇，基于全文）
+
+- 本批次 5 篇文章，全文均来自 `tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/`，Cubox highlights 参考对应文件
+- 新建来源页（sources/）5 个：
+  - `DeepSeek-R1工作原理.md` (high) — 沙丘智库解读 R1 论文：GRPO+四阶段训练管道+蒸馏；Cubox 3 处高亮，已标重点
+  - `DeepSeek-R1复现浪潮.md` (high) — 新智元：TinyZero/SimpleRL/Open R1 三大复现；Cubox 无高亮
+  - `R1复现认知与误区.md` (high) — 一线视角：四大关键+四大误区；Cubox 1 处高亮（planning 才是关键），已标重点
+  - `从CoT到Agent综述_上交.md` (high) — 上交张倬胜综述：CoT三路径+Agent三能力+六挑战；Cubox 2 处高亮，已标重点
+  - `强化学习入门指南_RLHF到GRPO.md` (high) — Unsloth：RLHF→PPO→GRPO→RLVR原理+实战；Cubox 1 处高亮，已标重点
+- 更新概念页（concepts/）2 个：
+  - `概念_GRPO强化学习` — 追加 DeepSeek-R1 GRPO 细节 + PPO vs GRPO 对比表
+  - `概念_思维链CoT高级方法` — 追加上交综述的三条路径（Prompt/结构/应用）+ Agent三能力关系
+- 新建概念页（concepts/）6 个：
+  - `概念_PPO近端策略优化` — 三组件架构、clip 机制、与 GRPO 对比
+  - `概念_RLHF基于人类反馈的强化学习` — 人类偏好→奖励模型→PPO，RLVR 演进
+  - `概念_奖励函数与验证器` — 验证器/奖励函数区别，GSM8K 典型设计
+  - `概念_DeepSeek-R1训练管道` — 四阶段管道、奖励系统、失败尝试（PRM/MCTS）
+  - `概念_推理模型顿悟时刻` — RL 涌现反思行为，正确解读与常见误区
+  - `概念_Agent感知记忆推理三能力` — 感知CoT/记忆CoT/推理CoT 赋能 Agent
+- 新建实体页（entities/）5 个：
+  - `实体_DeepSeek-R1` — 推理模型基本信息、评测数据、蒸馏版本
+  - `实体_TinyZero` — UC伯克利 $30 复现，CountDown 任务涌现
+  - `实体_SimpleRL` — 港科大 8K MATH 数据 7B 模型复现，第44步顿悟
+  - `实体_Open_R1` — HuggingFace 官方完全开源复刻三步骤
+  - `实体_Unsloth` — 开源微调框架，GRPO 训练工具
+- index.md Sources/Concepts/Entities 三节均已更新
+
+
+
+- 本批次 5 篇文章，全文均来自 `tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/`，Cubox highlights 参考对应文件
+- 新建来源页（sources/）5 个：
+  - `推测解码Speculative_Decoding综述.md` (high) — Draft-then-Verify 无损推理加速综述；Cubox 1 处高亮（定义原文），已标重点
+  - `大模型显存占用单卡分析.md` (high) — 混合精度/KV Cache/LoRA/QLoRA 四场景估算公式；Cubox 为 stub（无高亮内容）
+  - `语义缓存_constraint_cache.md` (high) — constraint-cache 语义规范化缓存键；Cubox highlights 含 GitHub 链接
+  - `思维链CoT高级提示技术.md` (high) — CoT/CoT-SC/Decoding CoT/ToT+MCTS；Cubox 2 处高亮（temperature/top_p 参数、Decoding CoT 定义），已标重点
+  - `自适应快慢思考推理模型.md` (high) — Qwen3/AdaCoT/AdaThinking 三方案对比；Cubox 1 处高亮（Selective Loss Masking 原理），已标重点
+- 新建概念页（concepts/）6 个：
+  - `概念_推测解码` — Draft-then-Verify 范式、Independent/Self Drafting、验证策略
+  - `概念_混合精度训练` — BF16/FP32 混合训练流程与 16 bytes/参数估算
+  - `概念_LoRA与QLoRA显存` — LoRA 2Φ、QLoRA 0.5Φ 显存估算原理与对比
+  - `概念_语义缓存` — 确定性规范化缓存键原理与适用场景
+  - `概念_思维链CoT高级方法` — CoT/CoT-SC/Decoding CoT/ToT+MCTS 及成本权衡
+  - `概念_自适应快慢思考` — 三方案：Qwen3 SFT、AdaCoT Pareto-PPO、AdaThinking 约束优化
+- 新建实体页（entities/）2 个：
+  - `实体_Medusa` — 多 FFN Head Self-Drafting 推测解码框架
+  - `实体_Qwen3` — 阿里混合思考模型，SFT + RL 方案，Thinking Budget 涌现能力
+- index.md Sources/Concepts/Entities 三节均已更新
+
+## 2026-06-29 ingest | Batch 3：LLM/arch/VLM + attention + inference（5 篇，基于全文）
+
+- 本批次 5 篇文章，全文均来自 `tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/`，Cubox highlights 参考对应文件
+- 新建来源页（sources/）5 个：
+  - `Florence-2_微软视觉基础模型.md` (high) — 微软 Azure AI Florence-2：FLD-5B + Seq2Seq 统一视觉任务；Cubox 3 处高亮（FLD-5B 规模/Seq2Seq 设计/零样本能力），已标重点
+  - `从LLaVA到Qwen3-VL_多模态架构演进.md` (high) — MLLM 三位一体架构、AnyRes vs DeepStack 两条路线全景；Cubox 为 stub（无高亮但有摘要），已从摘要提取要点标注
+  - `MiniMax_vs_Kimi_注意力路线之争.md` (high) — MiniMax M2 回归 Full Attention vs Kimi Linear KDA+MLA；Cubox 3 处高亮（工程复杂性/评测局限/基建不完善），已标重点
+  - `DeepSeek_MLA矩阵吸收原理.md` (high) — MLA 矩阵吸收图解：三处广播优化；Cubox 为 stub（无高亮）
+  - `KV_Cache原理图解.md` (high) — KV Cache 自回归推理原理、显存估算、GPT-2 实现；Cubox 为 stub（无高亮）
+- 新建概念页（concepts/）6 个：
+  - `概念_MLLM三位一体架构` — 视觉编码器 + 连接器 + LLM 三组件，两条演进路线
+  - `概念_视觉基础模型统一范式` — Prompt 驱动 Seq2Seq，多任务统一，数据是核心
+  - `概念_AnyRes高分辨率处理` — 全局+局部双路、Higher AnyRes 双线性插值
+  - `概念_DeepStack深度视觉融合` — ViT 多中间层注入 LLM 浅层，原地加法实现
+  - `概念_线性注意力与混合注意力` — Linear Attention O(N)、3:1 混合比例、行业现状
+  - `概念_MLA低秩KV压缩` — 低秩压缩 + 矩阵吸收 + 与 MQA/MHA 对比
+- 更新概念页（concepts/）1 个：
+  - `概念_KV_Cache` — 追加适用条件、显存公式示例、优化方向分类表、新关联
+- 新建实体页（entities/）8 个：
+  - `实体_Florence-2` — 微软通用视觉基础模型规格/架构/性能
+  - `实体_FLD-5B数据集` — 三类标注/三阶段构建/图像来源
+  - `实体_LLaVA` — 系列版本演进表/大道至简哲学
+  - `实体_Qwen3-VL` — DeepStack + MoE + MRoPE-Interleave + 与 2.5-VL 代码对比
+  - `实体_MiniMax_M2` — 回归 Full Attention 三大理由/策略定位
+  - `实体_Kimi_Linear` — 48B MoE/KDA+MLA 3:1/性能数据/vLLM 集成
+  - `实体_Kimi_Delta_Attention` — channel-wise gate/三任务100%验证/vLLM收录
+  - `实体_DeepSeek_V2` — MLA 首发/矩阵吸收/行业影响
+- 已更新 `wiki/index.md`（Sources +6、Concepts 新分组 LLM/arch/VLM +4 及 attention/inference +2、Entities +9）
+- 全部内容基于全文，未使用模型自身知识补全
+- 跳过：无（5 篇全文均超 500 字符，内容充实）
+
+## 2026-06-29 ingest | Batch 2：MoE + 现代 LLM 架构（5 篇，基于全文）
+
+- 本批次 5 篇文章，全文均来自 `tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/`
+- Cubox highlights 均为 stub（无有效 Annotations，仅含标题/链接），无法标注重点引文
+- 新建来源页（sources/）5 个：
+  - `腾讯混元TurboS技术报告.md` (high) — 560B Hybrid Transformer-Mamba MoE，自适应长短 CoT，论文 arxiv:2505.15431
+  - `大模型面试面经_简单透彻理解MoE.md` (high) — MoE 结构/Router/优缺点/PyTorch 示例
+  - `手把手教你实现稀疏MoE语言模型.md` (high) — 从零实现稀疏 MoE LM：Top-k/噪声 Top-k/SparseMoE/完整训练循环
+  - `从DeepSeek-V3到Kimi_K2_八种现代LLM架构大比较.md` (high) — Sebastian Raschka 8 种 2025 LLM 架构对比
+  - `2025年七大顶流大模型架构.md` (high) — 7 大旗舰开源 LLM 架构创新点综述
+- 新建概念页（concepts/）11 个：
+  - `概念_MoE混合专家` — MoE 整体架构、优势、挑战、现代模型参数对比表
+  - `概念_MoE_Router` — Top-k 门控、噪声 Top-k、共享专家
+  - `概念_MoE负载均衡` — 噪声门控/辅助损失/专家容量/组奖励调整
+  - `概念_混合Mamba架构` — AMF/MF 交错模块、1.8x 推理加速
+  - `概念_自适应长短CoT` — 两阶段训练：SFT 数据构建 + GRPO 难度自适应奖励
+  - `概念_GRPO强化学习` — 两阶段 GRPO：推理 GRPO + 通用 GRPO
+  - `概念_MLA多头潜在注意力` — K/V 压缩潜在空间，KV Cache 最小，建模性能优于 MHA
+  - `概念_滑动窗口注意力` — 局部注意力，Gemma 3 全局:局部=1:5，窗口 1024
+  - `概念_QK_Norm` — Q/K 在 RoPE 前各加 RMSNorm，与 Post-Norm 组合稳定训练
+  - `概念_NoPE无位置嵌入` — 不使用位置编码，SmolLM3 长度泛化更好
+  - `概念_Muon优化器` — 替代 AdamW，Kimi K2 首次 1T 参数规模使用，训练曲线极平滑
+- 新建实体页（entities/）4 个：
+  - `实体_腾讯混元TurboS` — 混元 TurboS 规格/架构/性能
+  - `实体_DeepSeek-V3` — DeepSeek V3/R1 MLA+MoE 架构
+  - `实体_Kimi_K2` — 1T 参数开源 MoE，Muon 优化器
+  - `实体_Gemma3` — 滑动窗口注意力+双层 Norm+Gemma 3n 移动端
+- 已更新 `wiki/index.md`（Sources +5、Concepts 新分组 LLM/arch/MoE +11、Entities +4）
+- 全部内容基于全文，未使用模型自身知识补全
+- 跳过：无（5 篇全文均超 500 字符，内容充实）
+
+
+## 2026-06-29 ingest | Batch 1：LLM/arch/Mamba 系列（5 篇，基于全文）
+- 本批次 5 篇文章，全文均来自 tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/，Cubox 文件均为 stub（无 Annotations 高亮，仅含标题/URL）
+- 新建来源页（sources/）5 个：
+  - A_Visual_Guide_to_Mamba_and_SSM.md (high) — 50+ 可视化图解 Mamba/SSM：数学基础/离散化/HiPPO/选择扫描/硬件感知
+  - Mamba_Explained_Kola_Ayonrinde.md (high) — Mamba 直觉讲解：效率/有效性权衡、选择机制、State Swapping 范式
+  - 一文读懂Mamba_知乎.md (high) — 中文论文解析：选择机制动机、作者背景（全文因 Cubox 截断，核心部分完整）
+  - Transformer被挑战_Mamba解析与PyTorch复现.md (high) — 架构解析 + 完整 PyTorch 复现代码（S6/MambaBlock/RMSNorm）
+  - Mamba2_SSD_大一统.md (high) — Mamba2 SSD 框架：SSM 与 Attention 等价、半可分离矩阵、8× 推理加速
+- 新建概念页（concepts/）11 个：
+  - 概念_状态空间模型SSM、概念_SSM三种表示、概念_SSM离散化、概念_HiPPO矩阵
+  - 概念_线性时不变LTI、概念_Mamba选择机制、概念_Mamba硬件感知算法
+  - 概念_MambaBlock架构、概念_状态空间对偶SSD、概念_半可分离矩阵
+  - 概念_State_Swapping (medium)
+- 新建实体页（entities/）5 个：
+  - 实体_Mamba、实体_Mamba2、实体_S4、实体_Albert_Gu、实体_Tri_Dao
+- 已更新 wiki/index.md（Sources +5、Concepts LLM/arch/Mamba 新分组 +11、Entities +5）
+- 全部内容基于全文，未使用模型自身知识补全
+- Cubox highlights 均为 stub，无实质高亮内容；A Visual Guide 有 2 条关键词标注，已在 source 页标注
+- 跳过：无（5 篇全文均超 500 字符，内容实质充实）
 
 ## 2026-06-29 verify | Phase 2 验收（RAG 集群）
 - 结论：**PASS（小修已完成）**，详见 `wiki/verify-phase2.md`

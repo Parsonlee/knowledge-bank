@@ -16,8 +16,9 @@
 | LLM Wiki 三层架构搭建 | ✅ |
 | Phase 1 ingest（Infra+CV+DL，21篇） | ✅ 验收 PASS |
 | Phase 2 ingest（RAG，~43篇） | ✅ 验收 PASS |
+| Phase 3 ingest（LLM，48篇，10批次） | ✅ 完成（待验收）|
 
-**当前 wiki 规模**：63 source + 155 concept + 43 entity，0 failures
+**当前 wiki 规模**：111 source + 225 concept + 84 entity，0 failures
 
 ## 关键配置（速查）
 

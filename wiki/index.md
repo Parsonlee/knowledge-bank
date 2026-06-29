@@ -66,6 +66,63 @@
 - [[腾讯查询优化四大类综述]] — 腾讯 QO 综述：查询扩展/分解/消歧/抽象四大类（RAG, RAG/query）
 - [[RAG综述_北大AIGC2024]] — 北大 PKU-DAIR RAG 综述：四大基础范式+五类提升方法+多模态应用+评估（RAG）
 - [[OpenAI_LLM应用最佳实践]] — OpenAI DevDay 2023：Prompt Engineering/RAG/Fine-tuning 两轴优化路线图（LLM）
+- [[A_Visual_Guide_to_Mamba_and_SSM]] — 50+ 可视化图解 Mamba/SSM 全流程：数学基础/离散化/选择扫描/硬件感知（LLM/arch/Mamba）
+- [[Mamba_Explained_Kola_Ayonrinde]] — Mamba 直觉讲解：效率/有效性权衡、选择机制类比、State Swapping 范式（LLM/arch/Mamba）
+- [[一文读懂Mamba_知乎]] — 中文解析 Mamba 论文：选择机制动机、作者背景（Albert Gu / Tri Dao）（LLM/arch/Mamba）
+- [[Transformer被挑战_Mamba解析与PyTorch复现]] — Mamba 架构解析 + 完整 PyTorch 复现：S6/MambaBlock/RMSNorm/enwiki8 训练（LLM/arch/Mamba）
+- [[Mamba2_SSD_大一统]] — Mamba2 SSD 框架：SSM 与 Attention 等价、半可分离矩阵、8倍推理加速（LLM/arch/Mamba）
+- [[腾讯混元TurboS技术报告]] — 560B Hybrid Transformer-Mamba MoE 模型，业界首个大规模部署 Mamba 架构，自适应长短 CoT（LLM/arch/Mamba, LLM/arch/MoE）
+- [[大模型面试面经_简单透彻理解MoE]] — MoE 结构原理、Router 机制、优缺点、PyTorch 示例代码（LLM/arch/MoE）
+- [[手把手教你实现稀疏MoE语言模型]] — 从零 PyTorch 实现稀疏 MoE：Top-k/噪声 Top-k 门控、SparseMoE、完整训练循环（LLM/arch/MoE）
+- [[从DeepSeek-V3到Kimi_K2_八种现代LLM架构大比较]] — Sebastian Raschka 对比 8 种 2025 LLM 架构：MLA/MoE/滑动窗口/Post-Norm/NoPE/Muon（LLM/arch）
+- [[2025年七大顶流大模型架构]] — 7 大旗舰开源 LLM 架构创新点综述（LLM/arch, LLM/arch/MoE）
+- [[Florence-2_微软视觉基础模型]] — 微软 Azure AI Florence-2：FLD-5B 数据集 + Seq2Seq 统一视觉任务（LLM/arch/VLM, CV/arch）
+- [[从LLaVA到Qwen3-VL_多模态架构演进]] — LLaVA AnyRes vs Qwen3-VL DeepStack，MLLM 两大演进路线全景（LLM/arch/VLM）
+- [[MiniMax_vs_Kimi_注意力路线之争]] — MiniMax M2 回归 Full Attention，Kimi Linear KDA+MLA 3:1，路线对比（LLM/arch/attention）
+- [[DeepSeek_MLA矩阵吸收原理]] — MLA 矩阵吸收图解：K/V 升维矩阵吸收进 Q，三处广播优化（LLM/arch/attention）
+- [[KV_Cache原理图解]] — KV Cache 图解：自回归推理缓存 K/V，显存估算，仅适用 Decoder（LLM/inference/kv-cache）
+- [[推测解码Speculative_Decoding综述]] — Draft-then-Verify 无损推理加速：Independent/Self Drafting + 验证策略（LLM/inference）
+- [[大模型显存占用单卡分析]] — 混合精度训练/KV Cache/LoRA/QLoRA 四场景单卡显存估算公式（LLM/inference, Infra/gpu, 面试）
+- [[语义缓存_constraint_cache]] — constraint-cache：语义规范化缓存键，99.9% 命中率，毫秒响应（LLM/inference）
+- [[思维链CoT高级提示技术]] — CoT/CoT-SC/Decoding CoT/ToT+MCTS 推理技术综述与成本权衡（LLM/reasoning）
+- [[自适应快慢思考推理模型]] — Qwen3 SFT混合思考、字节AdaCoT Pareto-PPO、清华AdaThinking约束优化三路方案（LLM/reasoning）
+- [[DeepSeek-R1工作原理]] — DeepSeek-R1 GRPO+多阶段训练管道，达到 o1-1217 水平（LLM/reasoning, LLM/training/RL）
+- [[DeepSeek-R1复现浪潮]] — UC伯克利/港科大/HuggingFace 以极低成本复现 R1-Zero，验证纯 RL 涌现推理（LLM/reasoning, LLM/training/RL）
+- [[R1复现认知与误区]] — 一线视角：复现 R1 四大关键（基模/数据/infra/超参）与四大误区（LLM/reasoning, LLM/training/RL）
+- [[从CoT到Agent综述_上交]] — 上交综述：CoT 三条路径（Prompt/结构/应用）及 CoT 赋能 Agent 感知/记忆/推理（LLM/reasoning, AI-Agent）
+- [[强化学习入门指南_RLHF到GRPO]] — Unsloth：RLHF→PPO→GRPO→RLVR 原理+奖励函数设计+实战技巧（LLM/training/RL）
+- [[LoRA微调实战_Qwen2.5全流程]] — LoRA 低成本微调 Qwen2.5-0.5B 实战：数据/代码/超参/CPU 跑通全流程（LLM/training/post-train）
+- [[三大Scaling_Law_预训练后训练推理]] — 预训练/后训练/推理阶段三大 Scaling Law 定义与技术手段（LLM/training）
+- [[大规模神经网络优化_超参实践与规模律]] — GPT→LLaMA2 超参演进 + Kaplan/Chinchilla 规模律推导与拾遗（LLM/training）
+- [[翁荔_LLM外在幻觉_原因检测抵抗]] — 翁荔 Blog：外在幻觉定义、产幻原因、FActScore/SAFE/CoVe/FLAME 检测与抵抗（LLM/hallucination）
+- [[LLM_32种消除幻觉技术综述]] — 32 种幻觉消除技术：提示工程（RAG/反馈/提示微调）与模型开发（解码/KG/损失/SFT）（LLM/hallucination）
+- [[大模型幻觉陷阱_AGI之路04期]] — 技术/传播/治理三维解构幻觉本质：长尾压缩→编造、专家之死、对齐税与责任归属（LLM/hallucination）
+- [[Discrete_Tokenization多模态综述]] — 首个多模态LLM离散化综述：8类VQ方法（VQ/RVQ/FSQ/LFQ等）、码本坍塌与跨模态全景（LLM/tokenization）
+- [[Transformer大模型3D可视化_NanoGPT]] — Brendan Bycroft 3D可视化逐层拆解 GPT-3/NanoGPT：Embedding/LN/Attention/MLP/Softmax（LLM/arch）
+- [[LLM两年发展万字综述_2023-2025]] — 2023-2025年LLM三大支柱：MoE/MLA效率革命、Thinking推理模型、Agent工具使用（LLM/arch, LLM/reasoning）
+- [[Andrej_Karpathy_LLM教学笔记]] — Karpathy教学视频总结：预训练数据管线/BPE/分布式训练/SFT/奖励建模/GRPO/Aha moment（LLM/arch, LLM/training）
+- [[LLM面试50题_MIT_CSAIL]] — MIT CSAIL 工程师 Hao Hoang 整理的 50 个 LLM 核心面试题（LLM, 面试）
+- [[大模型算法岗面试百问百答]] — 大模型算法岗面试知识点：RAG 体系/LLaMA 架构/SFT 方法/幻觉复读机（LLM, 面试）
+- [[北大LLMs数据管理全流程综述]] — 北大综述：预训练+SFT 两阶段数据规模/质量/组合/管理系统（LLM/training）
+- [[Jina_AI创业复盘]] — Jina AI 创始人肖涵六年复盘：两次 Pivot、AI 团队 Scaling Law 困惑、被 Elastic 收购（创业）
+- [[GPT5通用验证器_Universal_Verifier]] — 通用验证器（Universal Verifier）技术全景：RLVR 局限→两大路线→OaK 终局（LLM/training/RL）
+- [[蚂蚁集团大模型推荐算法与应用]] — 蚂蚁集团三条路径将LLM融入推荐：KG生产/教师蒸馏/种子用户池（LLM, Recommendation）
+- [[从GPT-2到gpt-oss_OpenAI开放模型进化之路]] — Sebastian Raschka 深度解析 gpt-oss 架构 7 项进化与 Qwen3 对比、MXFP4 量化（LLM/arch/MoE）
+- [[淘宝直播数字人_LLM文案生成技术]] — 淘宝直播数字人口语化改写(DPO 97%)、多源信息单步蒸馏、素材图文一致（LLM, LLM/arch/VLM）
+- [[别再误会MCP了辟谣指南]] — 阿里云工程师以 SDK 源码法证 MCP CHS 三组件，Host 是 AI 智能唯一承载者（AI-Agent/tools）
+- [[MCP加数据库]] — MCP+MongoDB Text-to-SQL 实战，结构化检索优于传统 RAG，含 Function Call 痛点与演进（AI-Agent/tools）
+- [[MCP遇上代码执行]] — Anthropic：CodeAgent 模式调用 MCP，Token 减少 98.7%，隐私保护与 Skills 沉淀（AI-Agent/tools）
+- [[MCP五大原语与Web化]] — MCP 联合创建者 David 解构五大原语，Web 化方向 OAuth 2.1 + Streamable HTTP（AI-Agent/tools）
+- [[基于MCP的AI_Agent应用开发实践]] — 字节跳动 Agent TARS：MCP 前后端分离类比、工程实践与 Roadmap（AI-Agent/tools）
+- [[HumanInTheLoop用MCP实现]] — 阿里云 OpenLM：send_inquiry+MCP Notification 实现服务端 HITL，含 Proxy 代理和 YOLO 模式（AI-Agent/tools）
+- [[如何让Agent规划调用工具]] — 蚂蚁集团：「思考和规划」工具强制结构化规划，航空客服提升 54%，选 DeepSeek V3 而非 R1（AI-Agent/tools）
+- [[Qwen3混合部署与MCP]] — 阿里云：Qwen3-0.6b 本地做工具选择节省 token，Qwen3-235b-a22b 生成结果（AI-Agent/tools）
+- [[Anthropic多智能体研究系统构建]] — Anthropic：orchestrator-worker 研究系统，多智能体比单智能体提升 90.2%，8条提示词原则（AI-Agent/multi-agent）
+- [[Context_Engineering_LangChain_Manus_NotebookLM]] — LangChain × Manus 对话提炼：4条反直觉原则——战略边界/可逆压缩/工具分层卸载/简化优先（AI-Agent/context-engineering）
+- [[AI应用实战_搞定复杂指令和工具膨胀]] — 阿里云联调造数：单Agent→多Agent，意图识别+工具引擎+逆向推导，工具100+→5个（AI-Agent/context-engineering）
+- [[Manus创始人手把手拆解上下文工程]] — Peak 亲写：KV缓存/工具掩码/文件系统记忆/注意力复述/错误保留/Few-Shot多样性六大原则（AI-Agent/context-engineering）
+- [[浅谈上下文工程_Claude_Code_Manus_Kiro]] — 提示工程→上下文工程→环境工程演进，Claude Code/Manus/Kiro三产品实践对比（AI-Agent/context-engineering）
+- [[也许当前最好的上下文工程讲解_LangChain联合Manus]] — Lance Martin × Peak Ji 对话实录：压缩/总结两模式、隔离两模式、三层行动空间、避免过度工程化（AI-Agent/context-engineering）
 
 ## Concepts
 
@@ -229,6 +286,99 @@
 - [[概念_LLM应用优化两轴]] — Context Optimization(RAG) + LLM Optimization(FT) 两轴并行迭代（LLM）
 - [[概念_Fine-tuning]] — 微调增强 LLM 特定领域/任务能力，蒸馏降本（LLM）
 
+### LLM/arch/Mamba（批次 Mamba）
+- [[概念_状态空间模型SSM]] — SSM 两方程：状态方程/输出方程，A/B/C/D 矩阵（LLM/arch/Mamba）
+- [[概念_SSM三种表示]] — 连续/循环/卷积三种等价表示，训练用卷积、推理用循环（LLM/arch/Mamba）
+- [[概念_SSM离散化]] — ZOH 离散化 + 步长参数 Δ，连续 SSM 转为离散序列模型（LLM/arch/Mamba）
+- [[概念_HiPPO矩阵]] — Legendre 多项式系数构造矩阵 A，压缩并记忆长程历史（LLM/arch/Mamba）
+- [[概念_线性时不变LTI]] — LTI 局限：A/B/C 固定导致无内容感知，选择机制的动机（LLM/arch/Mamba）
+- [[概念_Mamba选择机制]] — B/C/Δ 输入依赖，实现 content-aware 推理（LLM/arch/Mamba）
+- [[概念_Mamba硬件感知算法]] — parallel scan + kernel fusion + recomputation，GPU 高效实现（LLM/arch/Mamba）
+- [[概念_MambaBlock架构]] — 投影+1DConv+SelectiveSSM+残差，Mamba1/2 Block 结构（LLM/arch/Mamba）
+- [[概念_状态空间对偶SSD]] — Mamba2 核心：SSM 与线性 Attention 数学等价（LLM/arch/Mamba）
+- [[概念_半可分离矩阵]] — SSM 变换矩阵的代数结构，SSD 算法分块分解基础（LLM/arch/Mamba）
+- [[概念_State_Swapping]] — Mamba 特有推理范式：预生成 state 复用，无需 few-shot（LLM/arch/Mamba）
+
+### LLM/arch/MoE（批次 MoE+arch）
+- [[概念_MoE混合专家]] — 稀疏专家层替换 FFN，相同计算预算实现更大模型容量（LLM/arch/MoE）
+- [[概念_MoE_Router]] — Top-k 门控网络/路由机制，决定 Token 路由到哪些专家（LLM/arch/MoE）
+- [[概念_MoE负载均衡]] — 噪声 Top-k / 辅助损失 / 专家容量限制防止专家坍塌（LLM/arch/MoE）
+- [[概念_混合Mamba架构]] — Hybrid Transformer-Mamba：AMF/MF 交错模块，O(n) 长序列处理（LLM/arch/Mamba, LLM/arch/MoE）
+- [[概念_自适应长短CoT]] — 根据问题复杂度自动切换快速/深度推理模式（LLM/arch）
+- [[概念_MLA多头潜在注意力]] — K/V 压缩进低维潜在空间，KV Cache 最小化（LLM/arch）
+- [[概念_滑动窗口注意力]] — 局部注意力机制，大幅降低 KV Cache 内存（LLM/arch）
+- [[概念_QK_Norm]] — Q/K 在 RoPE 前各加 RMSNorm，稳定大模型训练（LLM/arch）
+- [[概念_NoPE无位置嵌入]] — 不使用位置编码，因果掩码隐式学习序列顺序（LLM/arch）
+- [[概念_Muon优化器]] — 替代 AdamW 的新优化器，Kimi K2 首次在 1T 参数规模使用（LLM/training）
+- [[概念_GRPO强化学习]] — 组相对策略优化，混元 TurboS 后训练 RL 算法（LLM/training/RL）
+
+### LLM/arch/VLM（批次3）
+- [[概念_MLLM三位一体架构]] — 视觉编码器 + 连接器 + LLM 通用框架（LLM/arch/VLM）
+- [[概念_视觉基础模型统一范式]] — Prompt 驱动 Seq2Seq，一套权重统一多视觉任务（LLM/arch/VLM）
+- [[概念_AnyRes高分辨率处理]] — LLaVA 系列全局+局部双路高分辨率策略（LLM/arch/VLM）
+- [[概念_DeepStack深度视觉融合]] — Qwen3-VL ViT 多中间层特征注入 LLM 浅层（LLM/arch/VLM）
+
+### LLM/arch/attention + inference（批次3）
+- [[概念_线性注意力与混合注意力]] — Linear Attention O(N)、Hybrid 3:1 路线及行业现状（LLM/arch/attention）
+- [[概念_MLA低秩KV压缩]] — DeepSeek MLA：低秩压缩 + 矩阵吸收广播优化（LLM/arch/attention）
+
+### LLM/inference + reasoning（批次4）
+- [[概念_推测解码]] — Draft-then-Verify：并行推测+验证实现无损推理加速（LLM/inference）
+- [[概念_混合精度训练]] — BF16/FP32混合训练流程，16 bytes/参数显存估算（LLM/inference）
+- [[概念_LoRA与QLoRA显存]] — LoRA 2Φ、QLoRA 0.5Φ显存估算原理（LLM/inference, 面试）
+- [[概念_语义缓存]] — 确定性规范化缓存键，语义相似查询命中同一缓存（LLM/inference）
+- [[概念_思维链CoT高级方法]] — CoT/CoT-SC/Decoding CoT/ToT+MCTS 及成本权衡（LLM/reasoning）
+- [[概念_自适应快慢思考]] — 三方案：Qwen3 SFT、AdaCoT Pareto、AdaThinking 约束优化（LLM/reasoning）
+
+### LLM/reasoning + training/RL（批次5）
+- [[概念_DeepSeek-R1训练管道]] — 冷启动SFT→推理RL→拒绝采样SFT→全场景RL四阶段，规则奖励无奖励黑客（LLM/training/RL）
+- [[概念_PPO近端策略优化]] — 生成策略+参考策略+价值模型三组件，RLHF 核心算法（LLM/training/RL）
+- [[概念_RLHF基于人类反馈的强化学习]] — 人类偏好→奖励模型→PPO 对齐流程，RLVR 演进方向（LLM/training/RL）
+- [[概念_奖励函数与验证器]] — 验证器判对错、奖励函数给分值，GRPO 奖励设计原则（LLM/training/RL）
+- [[概念_推理模型顿悟时刻]] — RL 训练中自发涌现的反思/重评估行为，1.5B 起可观察（LLM/reasoning）
+- [[概念_Agent感知记忆推理三能力]] — CoT 赋能 Agent：感知CoT/记忆CoT（树搜索+矢量检索）/推理CoT（AI-Agent, LLM/reasoning）
+
+### LLM/training + hallucination（批次7）
+- [[概念_LoRA低秩适应微调]] — LoRA 低秩分解原理、r/alpha/dropout 超参、QLoRA 变体与端侧适用场景（LLM/training/post-train）
+- [[概念_Scaling_Law三大规律]] — 预训练/后训练/推理三大 Scaling Law 定义、技术手段与 Kaplan/Chinchilla 关系（LLM/training）
+- [[概念_LLM外在幻觉与上下文内幻觉]] — 翁荔框架：两种幻觉类型、预训练/微调新知识两大根因（LLM/hallucination）
+- [[概念_幻觉检测方法]] — FActScore/SAFE/SelfCheckGPT/TruthfulQA 检测体系（LLM/hallucination）
+- [[概念_LLM幻觉消除技术分类]] — 32 种技术两大分类：提示工程（RAG/反馈/提示微调）vs 模型开发（LLM/hallucination）
+- [[概念_抗幻觉方法]] — RARR/FAVA/Self-RAG/CoVe/FLAME/WebGPT 抵抗方法体系（LLM/hallucination）
+- [[概念_幻觉的社会传播影响]] — 后真相时代幻觉放大机制：专家之死、衔尾蛇、责任归属与对齐税（LLM/hallucination）
+- [[概念_温度参数与幻觉创造力权衡]] — 温度参数控制输出分布平滑度，高温增创意增幻觉，低温保准确减创意（LLM/hallucination, LLM/inference）
+- [[概念_Discrete_Tokenization]] — VQ将连续多模态信号压缩为离散token，8类方法，码本坍塌核心挑战（LLM/tokenization）
+- [[概念_BPE分词算法]] — 迭代合并高频字节对，平衡词汇表大小与序列长度，GPT系列标准分词（LLM/tokenization）
+- [[概念_预训练数据处理管线]] — URL采集→过滤→去重→PII移除9步流程，FineWeb 15T token标准管线（LLM/training）
+- [[概念_LLM三大演进支柱_效率推理智能体]] — 2023-2025 LLM演进：效率（MoE/MLA）→推理（Thinking/RL）→智能体（工具调用）三大正交支柱（LLM/arch）
+
+### LLM/面试/训练/RL（批次9）
+- [[概念_LLM面试知识体系]] — LLM 面试五大模块清单：架构/微调/推理/数学/扩展（LLM, 面试）
+- [[概念_LLM数据管理预训练SFT]] — 预训练+SFT 两阶段数据质量/规模/组合管理框架（LLM/training）
+- [[概念_通用验证器]] — 突破 RLVR 限制的两大路线：评分细则 vs 内部自信度，OaK 终局架构（LLM/training/RL）
+- [[概念_AI创业Scaling_Law]] — AI 团队规模与产出效率的悖论：小而精 vs 规模扩张（创业）
+
+### LLM/Recommendation + arch（Batch 10）
+- [[概念_大模型推荐系统]] — 大模型融入推荐的三条路径：两阶段KG/教师蒸馏/种子用户池（LLM, Recommendation）
+- [[概念_LLM知识图谱生产]] — 大模型生成三元组扩充KG：关系过滤+目标实体生成+Utility精排RAG（LLM, Recommendation）
+- [[概念_gpt-oss架构特征]] — gpt-oss 7项架构进化、宽vs深对比、MXFP4量化（LLM/arch/MoE）
+- [[概念_数字人文案生成]] — 口语化改写/多步蒸馏/图文一致/测评体系完整框架（LLM）
+
+### AI-Agent/tools MCP系列（Phase 4 Batch 1）
+- [[概念_MCP协议]] — MCP 定义、CHS 架构、五大原语、传输方式、与 Function Call 关系全景（AI-Agent/tools）
+- [[概念_MCP_CHS架构]] — Client-Host-Server 三组件精确界定：Host 是 AI 智能唯一承载者，Server/Client 是模型无关 RPC 管道（AI-Agent/tools）
+- [[概念_MCP五大原语]] — Tool/Prompt/Resource/Sampling/Roots 五类原语：触发方、用途、高阶玩法与 Web 化方向（AI-Agent/tools）
+- [[概念_MCP传输方式]] — Stdio/SSE/Streamable HTTP 三种传输方式对比与选型（AI-Agent/tools）
+- [[概念_MCP与Function_Call对比]] — 协议 vs 模型特性、静态 vs 动态、碎片化痛点与 MCP 解法（AI-Agent/tools）
+- [[概念_MCP代码执行模式]] — CodeAgent 模式：按需加载工具定义，Token 消耗减少 98.7%，含隐私保护与 Skills 沉淀（AI-Agent/tools）
+- [[概念_MCP数据库集成]] — MCP+数据库 Text-to-SQL 模式，结构化检索优于 RAG，含 MongoDB 实战与局限（AI-Agent/tools）
+- [[概念_HITL_MCP]] — send_inquiry 挂起等待人类答复，MCP Notification 传凭条，HTTP 接口收答复，多端协同（AI-Agent/tools）
+- [[概念_MCP_Proxy]] — 代理模式在 tool/call 前植入确认逻辑，现有 MCP Server 零改动（AI-Agent/tools）
+- [[概念_Agent思考工具]] — think/plan/action 工具强制结构化规划，航空客服提升 54%，优于纯 Prompt（AI-Agent/tools）
+- [[概念_MCP混合部署]] — 小模型做工具选择节省 token，大模型负责生成保证质量（AI-Agent/tools）
+- [[概念_orchestrator-worker模式]] — 主智能体规划分解，子智能体并行执行，多智能体 vs 单智能体提升 90.2%（AI-Agent/multi-agent）
+- [[概念_多智能体协调]] — 多智能体协调挑战、提示词 8 原则、评测策略与生产可靠性（AI-Agent/multi-agent）
+
 ## Entities
 
 - [[实体_DeepSpeed]] — 分布式训练框架，ZeRO 系列策略来源
@@ -274,6 +424,80 @@
 - [[实体_通义千问]] — 阿里大语言模型，RAG生成/判别核心模型（medium）
 - [[实体_RAGAS]] — RAG 系统开源评估框架，多维度指标
 - [[实体_TableRAG]] — 华为云文本+表格异构问答混合推理框架
+- [[实体_Mamba]] — Mamba 选择性状态空间模型，线性时间序列建模（LLM/arch/Mamba）
+- [[实体_Mamba2]] — Mamba2 SSD 框架，SSM 与 Attention 大一统，ICML 2024（LLM/arch/Mamba）
+- [[实体_S4]] — Structured State Space for Sequences，Mamba 前置架构（LLM/arch/Mamba）
+- [[实体_Albert_Gu]] — Mamba/S4/HiPPO 核心作者，CMU 助理教授，Cartesia AI 联创（LLM/arch/Mamba）
+- [[实体_Tri_Dao]] — FlashAttention/Mamba 作者，Princeton 助理教授（LLM/arch/Mamba）
+- [[实体_腾讯混元TurboS]] — 业界首个大规模部署的 560B Hybrid Transformer-Mamba MoE 模型（LLM/arch/Mamba, LLM/arch/MoE）
+- [[实体_DeepSeek-V3]] — DeepSeek 旗舰 MoE 模型，MLA+256专家+共享专家架构（LLM/arch/MoE）
+- [[实体_Kimi_K2]] — 月之暗面 1T 参数开源 MoE 模型，Muon 优化器，基于 DeepSeek-V3 架构（LLM/arch/MoE）
+- [[实体_Gemma3]] — Google DeepMind 开源 LLM，滑动窗口注意力+双层 Norm，27B 性能优异（LLM/arch）
+- [[实体_Florence-2]] — 微软 Azure AI 通用视觉基础模型，FLD-5B + Seq2Seq（LLM/arch/VLM）
+- [[实体_FLD-5B数据集]] — Florence-2 配套 1.26亿图像/54亿标注超大规模视觉数据集（LLM/arch/VLM）
+- [[实体_LLaVA]] — 大道至简多模态系列：极简连接器 + AnyRes（LLM/arch/VLM）
+- [[实体_Qwen3-VL]] — 阿里 DeepStack + MoE 深度融合多模态模型（LLM/arch/VLM）
+- [[实体_MiniMax_M2]] — MiniMax 2025 旗舰，回归 Full Attention，Agent/代码定位（LLM/arch/attention）
+- [[实体_Kimi_Linear]] — 月之暗面开源 48B 混合注意力：KDA+MLA 3:1，KV Cache 减少 75%（LLM/arch/attention）
+- [[实体_Kimi_Delta_Attention]] — KDA：channel-wise gate 线性注意力，vLLM 已收录（LLM/arch/attention）
+- [[实体_DeepSeek_V2]] — DeepSeek MLA 首发模型（LLM/arch/attention）
+- [[实体_Medusa]] — Medusa 推测解码框架：多 FFN Head Self-Drafting（LLM/inference）
+- [[实体_Qwen3]] — 阿里 Qwen3：SFT 混合思考 + Thinking Budget 涌现（LLM/reasoning）
+- [[实体_DeepSeek-R1]] — DeepSeek 推理模型，GRPO+四阶段训练，AIME 79.8%，与 o1-1217 相当（LLM/reasoning, LLM/training/RL）
+- [[实体_TinyZero]] — UC伯克利 $30 复现 R1-Zero，CountDown 任务验证纯 RL 涌现推理（LLM/reasoning）
+- [[实体_SimpleRL]] — 港科大 8K 数据 7B 模型复现 R1，AIME 33.3%，第44步顿悟（LLM/reasoning）
+- [[实体_Open_R1]] — HuggingFace 官方完全开源复刻 R1 全套 pipeline（LLM/training/RL）
+- [[实体_Unsloth]] — 开源高效 LLM 微调框架，支持 GRPO 训练推理模型，GitHub 4万星（LLM/training/RL, Skill/python）
+- [[实体_SmolLM3]] — HuggingFace 3B 开源模型，384×H100 训练 11T tokens，GQA+RNoPE 架构（LLM/training/pre-train）
+- [[实体_DEITA]] — SFT 数据筛选方法，复杂性×质量综合评分 + 向量相似度多样性过滤（LLM/training/post-train）
+- [[实体_MoDS]] — 三维度 SFT 数据筛选：奖励模型质量+K-Center-Greedy多样性+必要性过滤（LLM/training/post-train）
+- [[实体_陈丹琦团队]] — 普林斯顿 NLP 组，后训练遗忘机制研究：on-policy 数据是关键（LLM/training/post-train）
+
+### LLM/面试/创业/RL（批次9）
+- [[实体_Jina_AI]] — 专注搜索底座模型 AI 初创，2020-2025，两次 Pivot 后被 Elastic 收购（创业）
+- [[实体_RLVR技术]] — 可验证奖励强化学习，o1/R1 推理能力核心，局限于有标准答案领域（LLM/training/RL）
+
+### LLM/Recommendation + arch（Batch 10）
+- [[实体_蚂蚁集团NextEvo]] — 蚂蚁集团AI创新研发部门，大模型推荐系统研究与落地（LLM, Recommendation）
+- [[实体_DLLM2Rec]] — 蚂蚁 GPT3.5→LLAMA2→序列模型两级蒸馏推荐框架（LLM, Recommendation）
+- [[实体_gpt-oss]] — OpenAI 首批开放权重推理模型 gpt-oss-20b/120b，Apache 2.0（LLM/arch/MoE）
+- [[实体_Sebastian_Raschka]] — LLM 架构技术博主，《Build a LLM from Scratch》作者（LLM/arch）
+- [[实体_淘天AIGC团队]] — 淘天集团直播AIGC团队，数字人直播完整链路（LLM）
+
+### LLM/training + hallucination（批次7）
+- [[实体_翁荔_Lilian_Weng]] — OpenAI 华人科学家，Agent 公式 + 幻觉 Blog 作者（LLM/hallucination）
+- [[实体_李维_出门问问]] — 出门问问大模型团队前工程副总裁，幻觉技术解析与应对建议（LLM/hallucination）
+- [[实体_Brendan_Bycroft]] — 软件工程师，bbycroft.net/llm LLM 3D 可视化作者（LLM/arch）
+- [[实体_Minimax_m1]] — Minimax 456B 开源 MoE 模型，Lightning Attention+CISPO，支持100万token上下文（LLM/arch）
+- [[实体_PaperWeekly]] — AI/ML 论文解读媒体平台，多篇综述传播渠道（LLM/tokenization）
+- [[实体_PEFT库]] — HuggingFace 参数高效微调库，LoRA/QLoRA/Adapter/Prefix 支持（LLM/training/post-train）
+
+### LLM/training/post-train（批次6）
+- [[后训练认知_SFT_vs_RL_记忆与遗忘机制]] — 普林斯顿研究：RL 抗遗忘优于 SFT，根源是 on-policy 数据分布（LLM/training/post-train）
+- [[HuggingFace手把手训练大模型实战指南]] — SmolLM3 端到端训练实战：Why→What→How + 架构/数据/基础设施全链路（LLM/training/pre-train, post-train）
+- [[SFT数据挑选方法_质量多样性必要性]] — SFT 数据三维度筛选：MoDS/DEITA/CaR 方法梳理（LLM/training/post-train）
+- [[375篇文献_推理大模型后训练技术综述]] — 后训练三分类综述：微调/RL/测试时扩展（LLM/training/post-train）
+- [[LLM后训练技术全景解读]] — 全景解读后训练：PEFT/LoRA/Prompt Tuning/PPO/DPO/GRPO/CoT/ToT（LLM/training/post-train）
+
+### AI-Agent/context-engineering（Phase 4 Batch 3）
+- [[概念_上下文工程]] — 动态系统填充恰好合适的信息给LLM，四类操作：Offload/Retrieve/Reduce/Isolate（AI-Agent/context-engineering）
+- [[概念_Context_Rot]] — 上下文腐化：长度增长导致性能下降，预腐化阈值128K-200K，触发压缩/总结（AI-Agent/context-engineering）
+- [[概念_分层行动空间]] — Manus三层工具架构：函数调用/沙盒工具集/软件包API，稳定接口+无限能力（AI-Agent/context-engineering）
+- [[概念_上下文隔离两种模式]] — 通信模式（干净上下文）vs 共享上下文模式，借鉴Go语言哲学（AI-Agent/context-engineering）
+- [[概念_Spec_Driven_Development]] — 规范驱动开发：Prompt→Requirements→Design→Tasks→Code，Kiro 实现（AI-Agent/context-engineering）
+
+### AI-Agent/tools MCP系列（Phase 4 Batch 1）
+- [[实体_Agent_TARS]] — 字节跳动开源多模态 Agent，内置 Function Call + 用户自定义 MCP Server 双轨设计（AI-Agent/tools）
+- [[实体_David_Soria_Parra]] — Anthropic 工程师，MCP 协议联合创建者，五大原语与 Web 化主导者（AI-Agent/tools）
+- [[实体_MongoDB]] — 文档型 NoSQL 数据库，mcp-mongo-server 接入 MCP 生态，Text-to-Query 结构化检索（AI-Agent/tools）
+- [[实体_CherryStudio]] — 开源 MCP Host 应用，MCPService.ts（Client）+ ApiService.ts（Host）CHS 架构典型案例（AI-Agent/tools）
+- [[实体_Cline]] — VS Code AI 编码扩展，原生 MCP Client，npx 配置接入任意 MCP Server（AI-Agent/tools）
+- [[实体_OpenLM平台]] — 阿里巴巴智能引擎团队大模型研发平台，HITL MCP 方案落地环境（AI-Agent/tools）
+- [[实体_Anthropic_Research系统]] — Anthropic Claude Research 多智能体研究系统，Opus 4 + Sonnet 4 orchestrator-worker（AI-Agent/multi-agent）
+
+### AI-Agent/context-engineering（Phase 4 Batch 3）
+- [[实体_Peak_Ji_季逸超]] — Manus 联合创始人，MIT TR35 2025，上下文工程六大原则提出者（AI-Agent/context-engineering）
+- [[实体_Manus]] — 通用AI Agent，上下文工程实践标杆，KV缓存/分层行动空间/文件系统记忆（AI-Agent/context-engineering）
 
 ## Comparisons
 
