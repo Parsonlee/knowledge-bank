@@ -35,6 +35,11 @@
 - [[RAG文本切分_token优化]] — 文本切分系列2.5：递归切分的 token 优化（RAG, RAG/chunking）
 - [[RAG文本切分_JSON文档切分]] — 文本切分系列3：Level 3 JSON 文档结构切分（RAG, RAG/chunking）
 - [[RAG文本切分_语义切分]] — 文本切分系列4：Level 4 基于向量模型的语义切分（RAG, RAG/chunking）
+- [[RAG高级优化_问题生成检索增强]] — 基于问题生成丰富文本片段提高检索准确性（RAG, RAG/query）
+- [[RAG高级优化_检索策略Fusion_HyDE]] — Fusion/HyDE 多路检索策略实战（RAG, RAG/retrieval）
+- [[RAG高级优化_检索后处理]] — 检索后处理：压缩/重排/Long-text Reorder（RAG, RAG/retrieval）
+- [[RAG高级优化_query转换之路]] — query 转换全景：重写/HyDE/子查询/Step-back（RAG, RAG/query）
+- [[RAG文本切分_Markdown切分]] — Markdown 标题切分定制化方案（RAG, RAG/chunking）
 
 ## Concepts
 
@@ -117,6 +122,17 @@
 - [[概念_Token切分优化]] — 按 token 而非字符计长度，对齐模型处理
 - [[概念_文档结构切分]] — Level 3 适配 JSON/Markdown/代码等格式
 - [[概念_语义切分]] — Level 4 向量差异超阈值切分，四种阈值方法
+- [[概念_问题生成检索增强]] — LLM 为文本片段生成问题，增强向量检索匹配
+- [[概念_Fusion_Retrieval]] — 稀疏(BM25)+稠密(向量)双路检索融合
+- [[概念_Reciprocal_Rank_Fusion]] — RRF 排序融合多路检索结果
+- [[概念_BM25]] — 经典稀疏检索算法，词频+文档长度惩罚
+- [[概念_检索后处理]] — 检索后重排/压缩/Long-text Reorder
+- [[概念_Contextual_Compression]] — LLM 提取检索文档中与查询相关的片段
+- [[概念_Long-text_Reorder]] — 长文本检索结果重排，重要文档置首尾
+- [[概念_查询重写]] — LLM 改写用户查询提升检索效果
+- [[概念_子查询分解]] — 复杂查询拆为子查询分别检索再合并
+- [[概念_Step-back提示]] — 退一步生成更抽象的查询获取更广泛上下文
+- [[概念_Markdown标题切分]] — 按 Markdown 标题层级结构化切分文档
 
 ## Entities
 
@@ -148,6 +164,7 @@
 - [[实体_Qdrant]] — Rust 编写的开源向量数据库/向量搜索引擎（medium）
 - [[实体_ColBERT]] — 斯坦福 token 级细粒度检索模型，MaxSim late interaction
 - [[实体_LlamaIndex]] — LLM/RAG 应用框架，文档加载与切分（medium）
+- [[实体_rank_bm25]] — Python BM25 轻量检索库（medium）
 
 ## Comparisons
 

@@ -2,6 +2,18 @@
 
 > 操作日志，每次 ingest / query / lint 后追加记录。
 
+## 2026-06-29 verify | Phase 1 验收（Infra+CV+DeepLearning）
+- 结论：**PASS（小修已完成）**，详见 `wiki/verify-phase1.md`
+- 抽查 5 source + 8 concept：真实性整体良好
+- 发现并修复：1 处死链（实体_YOLOv2→实体_YOLO）、SAM/ViT/CLIP 混入模型知识（已清理+降 confidence）
+- 死链扫描：123 页面仅 1 处死链
+
+## 2026-06-29 ingest | Phase2 批次3 RAG高级优化+Markdown切分（5篇，基于全文）
+- 来源：RAG高级优化×4 + RAG文本切分LV3 Markdown
+- 新建 source 5 / concept 12 / entity 1
+- 更新已有概念页：概念_HyDE（追加来源）
+- index.md/log.md 因 agent 中断补全
+
 ## 2026-06-29 ingest | 大模型显存计算与优化（基于全文）
 - 来源：tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/[LLM]大模型显存计算公式与优化 - 知乎.md（全文）
 - 高亮参考：Cubox/[LLM]大模型显存计算公式与优化 - 知乎-2025-05-06.md（Annotations）

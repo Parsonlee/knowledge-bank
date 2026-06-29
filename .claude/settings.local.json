@@ -8,11 +8,13 @@
       "WebFetch(domain:github.com)",
       "WebFetch(domain:docs.cubox.pro)",
       "WebFetch(domain:doc.wucai.site)",
-      "WebFetch(domain:help.cubox.pro)"
+      "WebFetch(domain:help.cubox.pro)",
+      "mcp__obsidian__tag_list",
+      "mcp__obsidian__search_query"
     ]
   },
+  "enableAllProjectMcpServers": true,
   "enabledMcpjsonServers": [
     "obsidian"
-  ],
-  "enableAllProjectMcpServers": true
+  ]
 }
