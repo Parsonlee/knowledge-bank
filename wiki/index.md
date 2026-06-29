@@ -15,6 +15,11 @@
 - [[PyTorch图像增强方法总结]] — 13 个 torchvision.transforms 增强方法附代码（CV/data-augmentation）
 - [[Attention复杂度解析与改进方向]] — 自注意力复杂度、FlashAttention 1/2/3、高效注意力（LLM/arch/attention）
 - [[Normalization方法总结_BN_LN_IN_GN]] — BN/LN/IN/GN 归一化方法对比（DeepLearning, 面试）
+- [[DPP行列式点过程]] — DPP 多样性采样、L-Ensemble、Cholesky 贪婪算法（DeepLearning）
+- [[机器学习中SVD总结]] — 特征值分解/SVD 原理、推导与应用（DeepLearning, 面试）
+- [[浅入浅出_生成式AI]] — 生成式 AI 入门：Transformer/Prompt/训练三阶段/Agent（DeepLearning）
+- [[梯度下降优化器可视化解释]] — Vanilla GD/Momentum/AdaGrad/RMSProp/Adam 对比（DeepLearning）
+- [[PyTorch训练代码模板]] — PyTorch 训练 9 步模板：超参/模型/数据/训练/早停/绘图/预测（DeepLearning, Skill/python/pytorch）
 
 ## Concepts
 
@@ -49,6 +54,17 @@
 - [[概念_FlashAttention]] — I/O 感知精确注意力，分块 + 在线 Softmax
 - [[概念_Normalization方法对比]] — BN/LN/IN/GN 维度与用途对比
 - [[概念_Batch_Normalization]] — BN 动机/算法/作用/问题
+- [[概念_Cholesky分解与DPP]] — Cholesky 分解加速 DPP 贪婪 MAP 推断，O(N·k²)
+- [[概念_行列式与多样性采样]] — 行列式=超平行体体积=多样性度量，DPP 数学基础
+- [[概念_特征值分解]] — EVD 方阵分解，特征值/特征向量/几何意义
+- [[概念_奇异值分解SVD]] — 任意矩阵分解 A=UΣV^T，降维/压缩基础工具
+- [[概念_矩阵分解方法]] — PCA/SVD/NMF/LDA/PMF 等方法清单与作用
+- [[概念_Transformer架构]] — Transformer 5 步流程：Tokenization/Embedding/Attention/FFN/Output
+- [[概念_大模型训练三阶段]] — Pre-train/Instruction FT/RLHF 训练流程
+- [[概念_Prompt工程方法]] — 有效 Prompt 方法：补充前提/范例/拆解/自我反省/Self-Consistency
+- [[概念_梯度下降优化器]] — Vanilla GD/Momentum/AdaGrad/RMSProp/Adam 原理对比
+- [[概念_早停EarlyStopping]] — 监控 val_loss 提前停止训练避免过拟合
+- [[概念_PyTorch训练循环]] — PyTorch 标准训练 9 步流程模板
 
 ## Entities
 
@@ -70,6 +86,7 @@
 - [[实体_DiT]] — Diffusion Transformer，扩散模型 SOTA 架构
 - [[实体_Albumentations]] — Python 图像增强库，OneOf/Compose 组合
 - [[实体_FlashAttention]] — I/O 感知精确注意力，长上下文行业标准
+- [[实体_Adam优化器]] — 一阶矩+二阶矩自适应优化器，深度学习常用选择
 
 ## Comparisons
 

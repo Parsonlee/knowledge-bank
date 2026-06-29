@@ -31,7 +31,21 @@
 - 概念页（concepts/）新建 15 个：两阶段检测、单阶段检测、Anchor机制、RoI_Pooling、检测评测指标、多尺度检测、NMS与Soft_NMS、数据增强_检测(medium)、Backbone设计范式、深度可分离卷积、通道注意力、位置敏感检测、特征金字塔网络、图像分割、Prompt驱动分割、Vision_Transformer、Focal_Loss
 - 实体页（entities/）新建 13 个：R-CNN、YOLO、SSD、ResNet、SENet、R-FCN、FPN、MobileNet、COCO数据集、Mask_R-CNN(medium)、SAM、ViT(medium)、CLIP(medium)
 - 已更新 wiki/index.md
-- 全部内容基于全文，未使用模型自身知识补全；medium 标注项为全文提及但未充分展开者
+- 全部内容基于全文，未使用模型自身知识补全
+- 跳过：无（5 篇全文均有实质内容）
+
+## 2026-06-29 ingest | DPP + SVD + 生成式AI + 优化器 + PyTorch模板（5 篇，基于全文）
+- 本批次 5 篇文章，全文均来自 tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/，Cubox 文件均为 stub 无 Annotations 高亮
+- 来源页（sources/）：
+  - DPP行列式点过程.md (high) — DPP 多样性采样/L-Ensemble/Cholesky 贪婪算法（Cubox 无高亮）
+  - 机器学习中SVD总结.md (high) — EVD/SVD 原理推导应用，面试向（Cubox 无高亮）
+  - 浅入浅出_生成式AI.md (high) — 李宏毅生成式AI导论笔记（Cubox 无高亮）
+  - 梯度下降优化器可视化解释.md (high) — 5 种优化器对比（Cubox 无高亮）
+  - PyTorch训练代码模板.md (high) — 9 步训练模板（Cubox 无高亮）
+- 概念页（concepts/）新建 11 个：Cholesky分解与DPP、行列式与多样性采样、特征值分解、奇异值分解SVD、矩阵分解方法(medium)、Transformer架构、大模型训练三阶段、Prompt工程方法、梯度下降优化器、早停EarlyStopping、PyTorch训练循环
+- 实体页（entities/）新建 1 个：Adam优化器
+- 已更新 wiki/index.md
+- 全部内容基于全文，未使用模型自身知识补全；矩阵分解方法标 medium（全文仅列举多数未展开）
 - 跳过：无（5 篇全文均有实质内容）
 
 ## 2026-06-26 ingest | DiT + OCR增强 + PyTorch增强 + Attention复杂度 + Normalization（5 篇，基于全文）
