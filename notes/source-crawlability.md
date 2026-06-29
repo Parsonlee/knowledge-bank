@@ -1,38 +1,85 @@
 # Cubox 文章来源抓取性分析
 
 > 用于 LLM Wiki Ingest 前评估：哪些原始文章可以自动抓取正文，哪些需要手动处理。
-> 生成时间：2026-06-26
+> 更新时间：2026-06-29（知乎实测 403，已移入不可爬）
 
 ## 摘要
 
 | 分类 | 数量 | 说明 |
 |------|------|------|
-| 🔴 反爬严格（公众号等） | 148 | 微信公众号、BestBlogs 等，无法直接爬取正文 |
-| 🟢 可正常抓取 | 48 | 知乎、博客、GitHub 等，可通过 URL 抓取全文 |
+| 🔴 不可爬 / 反爬严格 | 163 | 微信公众号、知乎、BestBlogs 等 |
+| 🟢 可正常抓取 | 33 | 博客园、机器之心、少数派、GitHub、独立博客/官网等 |
+
+## 反爬来源（已确认）
+
+| 域名 | 状态 |
+|------|------|
+| mp.weixin.qq.com | 公众号，无法爬 |
+| zhuanlan.zhihu.com | 知乎，实测 403 |
+| www.bestblogs.dev | 反爬 |
+| readmedium.com | 反爬 |
+| notebooklm.google.com | 需登录 |
+| home.mi.com | 需登录 |
 
 ## 可抓取来源域名
 
-| 域名 | 数量 | 备注 |
-|------|------|------|
-| zhuanlan.zhihu.com | 15 | 知乎专栏，可抓 |
-| baoyu.io | 5 | 宝玉博客 |
-| www.jiqizhixin.com | 3 | 机器之心 |
-| www.cnblogs.com | 3 | 博客园 |
-| sspai.com | 2 | 少数派 |
-| github.com | 2 | GitHub |
-| 其它博客/官网 | 18 | 各类独立博客、技术官网 |
+| 域名 | 数量 |
+|------|------|
+| baoyu.io | 5 |
+| www.jiqizhixin.com | 3 |
+| www.cnblogs.com | 3 |
+| sspai.com | 2 |
+| github.com | 2 |
+| 其它独立博客/官网 | 18 |
 
-## 公众号文章处理方案建议
+## 公众号/反爬文章处理方案（待定）
 
-1. **Cubox 自身导出**：Cubox Pro 支持导出全文 Markdown（如果你保存时存了全文）
-2. **浏览器手动复制**：在微信读书或公众号网页版打开，手动复制正文粘贴
-3. **Cubox API**：如果有 Cubox Pro，可通过 API 批量拉取已保存的全文内容
-4. **接受现状**：对于只有标题+链接的文章，wiki 层只生成 Source Summary（标题级别），不做深度 ingest
+1. **Cubox 自身导出**：Cubox Pro 支持导出含 Annotations 的内容
+2. **浏览器手动复制**：在原网页打开，手动复制正文
+3. **Cubox API**：批量拉取已保存内容
+4. **接受现状**：只有标题+摘要+高亮的文章，不做深度 ingest
 
 ---
 
-## 🔴 反爬严格（148 篇）
+## 🟢 可正常抓取（33 篇）
 
+- [《Agentic Design Patterns》中文翻译版-2025-10-29](https://github.com/ginobefun/agentic-design-patterns-cn)
+- [【有手就行】LoRA：用你自己的数据来微调大模型，让大模型真正懂你 - 程序员老奥 - 博客园-2025-12-15](https://www.cnblogs.com/oddmeta/p/19350019)
+- [A Visual Guide to Mamba and State Space Models-2025-06-26](https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-mamba-and-state)
+- [Agent的记忆模块前沿研究简述-2025-09-08](https://www.jiqizhixin.com/articles/2025-08-31-8)
+- [Attention复杂度解析与改进方向 - GRITJW - 博客园-2025-09-25](https://www.cnblogs.com/GlenTt/p/19109565)
+- [awesome-claude-code-subagents- Production-ready Claude subagents collection with 100+ specialized AI](https://github.com/VoltAgent/awesome-claude-code-subagents)
+- [Generative UI- A rich, custom, visual interactive user experience for any prompt-2025-12-11](https://research.google/blog/generative-ui-a-rich-custom-visual-interactive-user-experience-for-any-prompt/)
+- [Google Veo 3 账号最新获取方式 + 提示技巧全攻略！-腾讯云开发者社区-腾讯云-2025-07-31](https://cloud.tencent.com/developer/article/2532991)
+- [How to prompt Veo 3 for the best results – Replicate blog-2025-07-31](https://replicate.com/blog/using-and-prompting-veo-3)
+- [How we built our multi-agent research system - Anthropic-2025-06-21](https://www.anthropic.com/engineering/built-multi-agent-research-system?ref=blog.langchain.com)
+- [LLM推理加速新范式！推测解码（Speculative Decoding）最新综述-CSDN博客-2024-07-17](https://blog.csdn.net/qq_27590277/article/details/135812738)
+- [Mamba Explained - Kola Ayonrinde-2025-06-25](https://www.kolaayonrinde.com/blog/2024/02/11/mamba.html)
+- [MCP 遇上代码执行：构建更高效率的 AI 智能体 - 宝玉的分享-2025-11-10](https://baoyu.io/blog/code-execution-with-mcp)
+- [OpenAI- 构建 AI 智能体实用指南 - 宝玉的分享-2025-06-21](https://baoyu.io/translations/a-practical-guide-to-building-agents)
+- [OpenAI 翁荔提出大模型「外在幻觉」：万字 blog 详解抵抗办法、产幻原因和检测方式 - IT之家-2024-07-25](https://www.ithome.com/0/781/633.htm)
+- [Prompt Engineering, Finetune, RAG？：OpenAI LLM 应用最佳实践-2025-03-05](https://www.53ai.com/news/qianyanjishu/493.html)
+- [Py中的并发 async - await - FastAPI-2025-06-27](https://fastapi.tiangolo.com/zh/async/)
+- [RL 环境与智能体能力金字塔 - 宝玉的分享-2025-11-17](https://baoyu.io/translations/rl-envs-real-world)
+- [Switching pip to uv in a Dockerized Flask - Django App — Nick Janetakis-2025-06-25](https://nickjanetakis.com/blog/switching-pip-to-uv-in-a-dockerized-flask-or-django-app)
+- [The Technium- 50 Years of Travel Tips-2025-02-26](https://kk.org/thetechnium/50-years-of-travel-tips/)
+- [程序员的提示工程实战手册 - 宝玉的分享-2025-06-30](https://baoyu.io/translations/the-prompt-engineering-playbook-for)
+- [初入投资容易犯的错误-2025-06-29](https://laike9m.com/)
+- [从GPT-2到gpt-oss，深度详解OpenAI开放模型的进化之路 ｜ 机器之心-2025-08-25](https://www.jiqizhixin.com/articles/2025-08-18-7)
+- [从第一性原理深度拆解 Claude Agent Skill - 宝玉的分享-2025-12-01](https://baoyu.io/translations/claude-skills-deep-dive)
+- [迪拜华人开车完全指南-虎嗅网-2025-09-29](https://www.huxiu.com/article/4786318.html?f=wangzhan)
+- [俄罗斯套娃 (Matryoshka) 嵌入模型概述 - HuggingFace - 博客园-2025-07-19](https://www.cnblogs.com/huggingface/p/18057730)
+- [美团搜索中查询改写技术的探索与实践 - 美团技术团队-2024-08-28](https://tech.meituan.com/2022/02/17/exploration-and-practice-of-query-rewriting-in-meituan-search.html)
+- [什么是真正有效的驱蚊产品？ - 少数派-2025-08-21](https://sspai.com/post/60304)
+- [通义 DeepResearch：开源 AI 智能体的新纪元 - Tongyi DeepResearch-2025-10-09](https://tongyi-agent.github.io/zh/blog/introducing-tongyi-deep-research/)
+- [现代打工人如何获得幸福？ - 少数派-2024-04-03](https://sspai.com/post/86697)
+- [小红书涨粉的秘密不是“多发”而是“精准发”，靠数据复盘，2个月涨粉到2万+ - 人人都是产品经理-2025-12-09](https://www.woshipm.com/operate/6303211.html)
+- [写好 CLAUDE.md - HumanLayer 博客-2025-12-01](https://www.humanlayer.dev/blog/writing-a-good-claude-md)
+- [信息过载时代，如何真正「懂」LLM？从MIT分享的50个面试题开始 ｜ 机器之心-2025-06-21](https://www.jiqizhixin.com/articles/2025-06-18-9)
+
+## 🔴 不可爬 / 反爬严格（163 篇）
+
+- [[LLM]大模型显存计算公式与优化 - 知乎-2025-05-06](https://zhuanlan.zhihu.com/p/687226668)
 - [12 RAG 痛点和拟议解决方案-2025-05-28](https://readmedium.com/zh/12-rag-pain-points-and-proposed-solutions-43709939a28c)
 - [2025来自斯坦福的RAG新基线-2025-07-01](https://mp.weixin.qq.com/s/p-_8zsaKvd1cFP7gwV1wTA)
 - [2025年七大顶流大模型架构-2025-08-11](https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652616413&idx=3&sn=9dc9b7c377a96fa44801177d96d6ee41&poc_token=HPiklWijPzr_rchqo78-M5T3tJrOJc9kxodqFcwU)
@@ -51,6 +98,7 @@
 - [Claude Code 2.0.40版本后的一些实用更新-2025-12-03](https://mp.weixin.qq.com/s/lEWh_QNOwNRFcjYKVjxTEg)
 - [Claude Code 完全指南-2025-09-01](https://mp.weixin.qq.com/s?__biz=Mzg4MTYwMzY1Mw==&mid=2247516637&idx=1&sn=ed1e4415348c930d617322ab96934aef&poc_token=HAALtWijBvRbMRvx7H8AKKwQM-v1LQsWRBOorafe)
 - [DeepResearch的概念、核心挑战与进化路径-2025-06-30](https://mp.weixin.qq.com/s/3x9OkYtveF9gw_sGcuuw5Q)
+- [deepseek MLA 矩阵吸收浅谈 - 知乎-2025-04-14](https://zhuanlan.zhihu.com/p/1888290264377976190)
 - [DeepSeek-R1复现-2025-01-26](https://mp.weixin.qq.com/s/_yrzvSzzE6g3qBzVEk1q-Q)
 - [Determinantal Point Process：机器学习中行列式的妙用-2023-11-26](https://mp.weixin.qq.com/s/fRFiyW9peyCO2yLzTzV0BQ)
 - [FastAPI 架构指南：用这份模版打造可扩展又安全的系统（附实战经验）-2025-10-28](https://mp.weixin.qq.com/s/K7bbrvMRdUejCJu-vLlE-g)
@@ -59,6 +107,8 @@
 - [Human In the Loop竟然可以是个MCP--2025-12-09](https://mp.weixin.qq.com/s/V5cb4HAufxvbNackr8aLVg)
 - [ICLR2025盲审论文DMQR-RAG：多样查询改写，查询P@5提升了14.46%，超过RAG-Fusion-2024-12-24](https://mp.weixin.qq.com/s/PQF8Ka5UPYxpnEASTUSs5w)
 - [Jina AI创业复盘：AI团队的Scaling Law是什么-2025-12-15](https://mp.weixin.qq.com/s/tXAUF0dZBdGhszoda3rz3A)
+- [LLM 后训练技术 - 知乎-2025-03-26](https://zhuanlan.zhihu.com/p/30201040247)
+- [Mamba2- SSM和Transformer的大一统 - 知乎-2025-07-02](https://zhuanlan.zhihu.com/p/705138777)
 - [Manus 创始人手把手拆解：如何系统性打造 AI Agent 的上下文工程？-2025-07-25](https://mp.weixin.qq.com/s?__biz=MjM5NDk5MTA0MQ==&mid=2652326648&idx=1&sn=658231f328ed42e0a16b404d0aba42c8&poc_token=HJhQg2ij6yBS-iCa3wBV0brf6ocsMPbj9oOLcczW)
 - [MCP+数据库-2025-05-26](https://mp.weixin.qq.com/s/NUepKEk_wBWW4v8lW9OXTg?from=industrynews&color_scheme=light)
 - [MCP不止工具调用！MCP联合创建者：绝大多数人用法都太初级！曝MCP五大原语、高阶玩法：丰富人机交互体验；MCP的未来在Web-2025-08-14](https://mp.weixin.qq.com/s?__biz=MjM5ODI5Njc2MA==&mid=2655928063&idx=1&sn=0a6270dfe50a28e6ebd2df4ec7be3fe9&poc_token=HKdZnWijyW1h2bQIBipWz36yf-IDdxG_7kldUKUC)
@@ -68,6 +118,7 @@
 - [OpenAI新模型用的嵌入技术-俄罗斯套娃表示学习-2024-02-04](https://mp.weixin.qq.com/s/h9K06h5YcRXXKCjhzOArBA)
 - [Pandas一行代码绘制25种美图-2023-11-26](https://mp.weixin.qq.com/s/By_zRjBhjD07A9S-_pNOow)
 - [PyTorch常用代码段合集-2023-03-06](https://mp.weixin.qq.com/s/FtO1zuusgUTjL9y-JkFG0A)
+- [R1 的一些认知 - 知乎-2025-04-14](https://zhuanlan.zhihu.com/p/30750327127)
 - [RAG 挑战赛冠军方案解析：从数据解析到多路由器检索的工程实践，推荐阅读！-2025-06-09](https://mp.weixin.qq.com/s?__biz=MzIyNjM2MzQyNg==&mid=2247707431&idx=1&sn=1e9243aa7868e0dce9d1b615eaa5c70f)
 - [RAG：ColBERT原理、延迟交互机制与稠密向量的对比分析-2025-09-26](https://mp.weixin.qq.com/s?__biz=MzkwNjcxNTc2Ng==&mid=2247485657&idx=1&sn=30bc94da15598a7373aedf9fc33a02a9&scene=21&poc_token=HJoD1mijgUYBup2PQ7CK-tfueFdYxEMkDLGaRe1_)
 - [RAG从入门到精通系列1：基础RAG-2025-01-22](https://mp.weixin.qq.com/s/TlFNOw7_3Q8qywKLpVUmfg)
@@ -91,6 +142,7 @@
 - [RAG之延迟交互与残差压缩：从ColBERT到ColBERTv2的演进及其应用-2025-09-26](https://mp.weixin.qq.com/s/2-9FqIFxgWM10X9lnora4A)
 - [RAG综述，2025-03-10-2025-03-26](https://www.bestblogs.dev/article/b4bf77)
 - [RL Infra 行业全景：环境和 RLaaS 如何加速 RL 的 GPT-3 时刻-2025-09-25](https://mp.weixin.qq.com/s/-5lMX9oVHn6x0NI6QEZrrA?scene=1)
+- [SFT数据挑选方法 - 知乎-2025-04-14](https://zhuanlan.zhihu.com/p/22529462474)
 - [Sora的幕后功臣？详解大火的DiT：拥抱Transformer的扩散模型-2024-03-15](https://mp.weixin.qq.com/s/ScHjSd_JtcZKD2cJxWuavg)
 - [TableRAG- 处理文本+表格异构数据-2025-06-18](https://mp.weixin.qq.com/s/synQYJYw6B8b8QAkofitaw)
 - [Tongyi DeepResearch的技术报告探秘-2025-10-09](https://mp.weixin.qq.com/s?__biz=Mzk3NTc1NTU0Mw==&mid=2247501232&idx=1&sn=8a8370bfbe6a12ae5636a7f628a6496b&poc_token=HHUh52ijx4RoUrOdKbqgVNwtOcMcOWctcARoistS)
@@ -114,9 +166,12 @@
 - [大规模神经网络优化：超参最佳实践与规模律-2023-12-13](https://mp.weixin.qq.com/s/qETqjvApxnB73fEe4pr7_A)
 - [大模型面试面经：简单透彻理解MoE-2024-03-09](https://mp.weixin.qq.com/s/Jcll1imv6woUlcOdVe4ATg?poc_token=HFti4GWjrE7jhRKsCQDBFxeE4F2pYNS7bcZu_8uM)
 - [大模型算法岗，面试百问百答-2024-03-26](https://mp.weixin.qq.com/s/ur8wKqKomn-6yIfi3a1NNQ)
+- [大模型推理加速：看图学KV Cache - 知乎-2025-02-28](https://zhuanlan.zhihu.com/p/662498827)
 - [大语言模型的32种消除幻觉的技术，你都了解吗？-2024-01-17](https://mp.weixin.qq.com/s/ZXMagNOXfpobrnyCSvhS2g)
 - [多快好省，Qwen3混合部署模式引爆MCP-2025-06-18](https://mp.weixin.qq.com/s/2tjoXMOK-iPHs0mlFJhvrQ)
+- [分割一切(Segment Anything)不是梦，SAM模型引领图像分割新时代 - 知乎-2024-10-11](https://zhuanlan.zhihu.com/p/667801207)
 - [复杂场景下的 RAG 架构演进：跨模态知识联邦与统一语义推理实践-2025-06-10](https://mp.weixin.qq.com/s?__biz=MjM5MDE0Mjc4MA==&mid=2651246577&idx=2&sn=e26bfdbfc2e5f423f9c1bcb9285e4dd6)
+- [干货 - 目标检测入门，看这篇就够了（已更完） - 知乎-2024-10-25](https://zhuanlan.zhihu.com/p/34142321)
 - [关于 Nano Banana 的一些浅思-2025-09-08](https://mp.weixin.qq.com/s?__biz=MzIzNjE2NTI3NQ==&mid=2247490591&idx=1&sn=de04b231aa519679939fc7cf00181b58&poc_token=HBVyvmijvaOxRhtL2oa1lZN7PhnfSSFDwp7Kra8f)
 - [后训练认知：SFT vs RL—关于记忆和遗忘机制-2025-10-28](https://mp.weixin.qq.com/s/Vg0HUgIgOujLBClDXSDslQ)
 - [机器学习中SVD总结-2025-05-09](https://mp.weixin.qq.com/s/Dv51K8JETakIKe5dPBAPVg)
@@ -129,6 +184,9 @@
 - [聊聊AI应用架构演进-2025-06-17](https://mp.weixin.qq.com/s?__biz=MzIzOTU0NTQ0MA==&mid=2247550161&idx=1&sn=5c44281d46c42578173131ba33c565a2)
 - [六位一线AI工程师总结爆火！大模型应用摸爬滚打一年心得公开，网友：全程高能-2024-06-01](https://mp.weixin.qq.com/s/LwNFfwiHCED9AjB2su0C-g)
 - [蚂蚁集团在大模型推荐上的算法和应用-2024-09-23](https://mp.weixin.qq.com/s/h2-FQ-qJcMUAPJqnOy-qAQ?from=industrynews&version=4.1.27.6032&platform=win&nwr_flag=1)
+- [目标检测入门（二）：模型的评测与训练技巧 - 知乎-2024-10-25](https://zhuanlan.zhihu.com/p/34179420)
+- [目标检测入门（三）：基础网络演进、分类与定位的权衡 - 知乎-2024-10-25](https://zhuanlan.zhihu.com/p/34277738)
+- [目标检测入门（四）：特征复用、实时性 - 知乎-2025-07-03](https://zhuanlan.zhihu.com/p/34290195)
 - [能用到“退休”的 600条 Linux 命令，可以解决日常99%的问题~-2024-02-20](https://mp.weixin.qq.com/s/_T1WNfnTd5OoEA_RkgRThg)
 - [企业落地 NL2SQL，需要的是 AI-ready data 和 小模型-2025-08-29](https://mp.weixin.qq.com/s/m-y-ZvTMQw88uJseYpMyEA)
 - [浅入浅出—生成式 AI-2025-05-12](https://mp.weixin.qq.com/s?__biz=MzIzOTU0NTQ0MA==&mid=2247549128&idx=1&sn=464e2edfb6946bb7e4ce5510719f71b3&subscene=0)
@@ -172,7 +230,9 @@
 - [一套提示词帮你实现小红书、公众号封面自由-2025-11-18](https://mp.weixin.qq.com/s/OFCgFrXNQgIT2ho3V-4Oag)
 - [一图胜千言｜图解Pandas常用操作！-2024-06-22](https://mp.weixin.qq.com/s/mBAhShN4Z0FLg_r8wYXdAQ)
 - [一文读懂GPT-5的绝招，这是决定AI未来的隐形武器-2025-09-22](https://mp.weixin.qq.com/s?__biz=Mjc1NjM3MjY2MA==&mid=2691560834&idx=1&sn=200b13a34ec2f695fe20929963322555&poc_token=HLif0Gij86Dxa-9RuN5qbpR1WvrV4hg8SJ0VNgZ6)
+- [一文读懂Mamba：具有选择状态空间的线性时间序列建模 - 知乎-2024-07-10](https://zhuanlan.zhihu.com/p/680846351)
 - [一文读懂向量数据库，原理到应用全解析！-2025-07-04](https://mp.weixin.qq.com/s?__biz=MzIyNjM2MzQyNg==&mid=2247708621&idx=1&sn=92ff08240b4abd5153aa377d2219ac41)
+- [一文讲明白大模型显存占用（只考虑单卡） - 知乎-2025-04-14](https://zhuanlan.zhihu.com/p/713256008)
 - [一文详尽之Embedding（向量表示）！-2025-01-24](https://mp.weixin.qq.com/s/MPTXRhLtL6g5rtS7Hju3SA)
 - [一文详细了解：大模型三大缩放定律（Scaling Law）-2025-06-29](https://mp.weixin.qq.com/s/TmANwuqCawcq1Zr3vfNgFg)
 - [一行代码让 matplotlib 图表变高大上-2023-11-26](https://mp.weixin.qq.com/s/6TrDtLHqBBYEfCwJobZeAg)
@@ -180,55 +240,5 @@
 - [用Claude code重塑编程工作流-2025-09-08](https://mp.weixin.qq.com/s?__biz=MzI2NDU4OTExOQ==&mid=2247692023&idx=1&sn=d0a7dd0c17c8f16c60e98b39e24b0e4b&poc_token=HBROvmijYX4X6aQFu6WYb5fXHovbLXTQNBZp2Fch)
 - [用系统架构思维，告别“意大利面条式”系统提示词-2025-11-10](https://mp.weixin.qq.com/s?__biz=MzIzOTU0NTQ0MA==&mid=2247551851&idx=1&sn=56c996d61163f1acba5b16eace33c511&poc_token=HGs7EWmjDyHWuMcFbUBZzgp8uEIg-7S1j2JXMGHX)
 - [中枢与网关使用指南-2024-07-03](https://home.mi.com/views/article.html?articleId=713752525000000001)
-- [最新RAG综述来了！北京大学发布AIGC的检索增强技术综述-2024-03-15](https://mp.weixin.qq.com/s/o8oTN06UsQSlb5BNyJH23w)
-
-## 🟢 可正常抓取（48 篇）
-
-- [[LLM]大模型显存计算公式与优化 - 知乎-2025-05-06](https://zhuanlan.zhihu.com/p/687226668)
-- [《Agentic Design Patterns》中文翻译版-2025-10-29](https://github.com/ginobefun/agentic-design-patterns-cn)
-- [【有手就行】LoRA：用你自己的数据来微调大模型，让大模型真正懂你 - 程序员老奥 - 博客园-2025-12-15](https://www.cnblogs.com/oddmeta/p/19350019)
-- [A Visual Guide to Mamba and State Space Models-2025-06-26](https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-mamba-and-state)
-- [Agent的记忆模块前沿研究简述-2025-09-08](https://www.jiqizhixin.com/articles/2025-08-31-8)
-- [Attention复杂度解析与改进方向 - GRITJW - 博客园-2025-09-25](https://www.cnblogs.com/GlenTt/p/19109565)
-- [awesome-claude-code-subagents- Production-ready Claude subagents collection with 100+ specialized AI](https://github.com/VoltAgent/awesome-claude-code-subagents)
-- [deepseek MLA 矩阵吸收浅谈 - 知乎-2025-04-14](https://zhuanlan.zhihu.com/p/1888290264377976190)
-- [Generative UI- A rich, custom, visual interactive user experience for any prompt-2025-12-11](https://research.google/blog/generative-ui-a-rich-custom-visual-interactive-user-experience-for-any-prompt/)
-- [Google Veo 3 账号最新获取方式 + 提示技巧全攻略！-腾讯云开发者社区-腾讯云-2025-07-31](https://cloud.tencent.com/developer/article/2532991)
-- [How to prompt Veo 3 for the best results – Replicate blog-2025-07-31](https://replicate.com/blog/using-and-prompting-veo-3)
-- [How we built our multi-agent research system - Anthropic-2025-06-21](https://www.anthropic.com/engineering/built-multi-agent-research-system?ref=blog.langchain.com)
-- [LLM 后训练技术 - 知乎-2025-03-26](https://zhuanlan.zhihu.com/p/30201040247)
-- [LLM推理加速新范式！推测解码（Speculative Decoding）最新综述-CSDN博客-2024-07-17](https://blog.csdn.net/qq_27590277/article/details/135812738)
-- [Mamba Explained - Kola Ayonrinde-2025-06-25](https://www.kolaayonrinde.com/blog/2024/02/11/mamba.html)
-- [Mamba2- SSM和Transformer的大一统 - 知乎-2025-07-02](https://zhuanlan.zhihu.com/p/705138777)
-- [MCP 遇上代码执行：构建更高效率的 AI 智能体 - 宝玉的分享-2025-11-10](https://baoyu.io/blog/code-execution-with-mcp)
-- [OpenAI- 构建 AI 智能体实用指南 - 宝玉的分享-2025-06-21](https://baoyu.io/translations/a-practical-guide-to-building-agents)
-- [OpenAI 翁荔提出大模型「外在幻觉」：万字 blog 详解抵抗办法、产幻原因和检测方式 - IT之家-2024-07-25](https://www.ithome.com/0/781/633.htm)
-- [Prompt Engineering, Finetune, RAG？：OpenAI LLM 应用最佳实践-2025-03-05](https://www.53ai.com/news/qianyanjishu/493.html)
-- [Py中的并发 async - await - FastAPI-2025-06-27](https://fastapi.tiangolo.com/zh/async/)
-- [R1 的一些认知 - 知乎-2025-04-14](https://zhuanlan.zhihu.com/p/30750327127)
-- [RL 环境与智能体能力金字塔 - 宝玉的分享-2025-11-17](https://baoyu.io/translations/rl-envs-real-world)
-- [SFT数据挑选方法 - 知乎-2025-04-14](https://zhuanlan.zhihu.com/p/22529462474)
-- [Switching pip to uv in a Dockerized Flask - Django App — Nick Janetakis-2025-06-25](https://nickjanetakis.com/blog/switching-pip-to-uv-in-a-dockerized-flask-or-django-app)
-- [The Technium- 50 Years of Travel Tips-2025-02-26](https://kk.org/thetechnium/50-years-of-travel-tips/)
-- [程序员的提示工程实战手册 - 宝玉的分享-2025-06-30](https://baoyu.io/translations/the-prompt-engineering-playbook-for)
-- [初入投资容易犯的错误-2025-06-29](https://laike9m.com/)
-- [从GPT-2到gpt-oss，深度详解OpenAI开放模型的进化之路 ｜ 机器之心-2025-08-25](https://www.jiqizhixin.com/articles/2025-08-18-7)
-- [从第一性原理深度拆解 Claude Agent Skill - 宝玉的分享-2025-12-01](https://baoyu.io/translations/claude-skills-deep-dive)
-- [大模型推理加速：看图学KV Cache - 知乎-2025-02-28](https://zhuanlan.zhihu.com/p/662498827)
-- [迪拜华人开车完全指南-虎嗅网-2025-09-29](https://www.huxiu.com/article/4786318.html?f=wangzhan)
-- [俄罗斯套娃 (Matryoshka) 嵌入模型概述 - HuggingFace - 博客园-2025-07-19](https://www.cnblogs.com/huggingface/p/18057730)
-- [分割一切(Segment Anything)不是梦，SAM模型引领图像分割新时代 - 知乎-2024-10-11](https://zhuanlan.zhihu.com/p/667801207)
-- [干货 - 目标检测入门，看这篇就够了（已更完） - 知乎-2024-10-25](https://zhuanlan.zhihu.com/p/34142321)
-- [美团搜索中查询改写技术的探索与实践 - 美团技术团队-2024-08-28](https://tech.meituan.com/2022/02/17/exploration-and-practice-of-query-rewriting-in-meituan-search.html)
-- [目标检测入门（二）：模型的评测与训练技巧 - 知乎-2024-10-25](https://zhuanlan.zhihu.com/p/34179420)
-- [目标检测入门（三）：基础网络演进、分类与定位的权衡 - 知乎-2024-10-25](https://zhuanlan.zhihu.com/p/34277738)
-- [目标检测入门（四）：特征复用、实时性 - 知乎-2025-07-03](https://zhuanlan.zhihu.com/p/34290195)
-- [什么是真正有效的驱蚊产品？ - 少数派-2025-08-21](https://sspai.com/post/60304)
-- [通义 DeepResearch：开源 AI 智能体的新纪元 - Tongyi DeepResearch-2025-10-09](https://tongyi-agent.github.io/zh/blog/introducing-tongyi-deep-research/)
-- [现代打工人如何获得幸福？ - 少数派-2024-04-03](https://sspai.com/post/86697)
-- [小红书涨粉的秘密不是“多发”而是“精准发”，靠数据复盘，2个月涨粉到2万+ - 人人都是产品经理-2025-12-09](https://www.woshipm.com/operate/6303211.html)
-- [写好 CLAUDE.md - HumanLayer 博客-2025-12-01](https://www.humanlayer.dev/blog/writing-a-good-claude-md)
-- [信息过载时代，如何真正「懂」LLM？从MIT分享的50个面试题开始 ｜ 机器之心-2025-06-21](https://www.jiqizhixin.com/articles/2025-06-18-9)
-- [一文读懂Mamba：具有选择状态空间的线性时间序列建模 - 知乎-2024-07-10](https://zhuanlan.zhihu.com/p/680846351)
-- [一文讲明白大模型显存占用（只考虑单卡） - 知乎-2025-04-14](https://zhuanlan.zhihu.com/p/713256008)
 - [自适应快慢思考推理模型（Adaptive Reasoning Model）：Qwen3混合思考--字节AdaCoT--清华AdaThinking - 知乎-2025-06-30](https://zhuanlan.zhihu.com/p/1910075005586346955)
+- [最新RAG综述来了！北京大学发布AIGC的检索增强技术综述-2024-03-15](https://mp.weixin.qq.com/s/o8oTN06UsQSlb5BNyJH23w)
