@@ -18,6 +18,22 @@
 - 全部内容基于全文，未使用模型自身知识补全
 - 跳过：无（5 篇全文均有实质内容）
 
+## 2026-06-26 ingest | ColBERT/RAG综述/ES搜索/向量数据库（5 篇，基于全文）
+- 本批次 5 篇文章，全文均来自 tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/，Cubox 文件均为 stub 无 Annotations 高亮
+- 来源页（sources/）：
+  - ColBERT原理与延迟交互机制.md (high) — ColBERT 多向量/延迟交互/BGEM3 实验（Cubox 无高亮）
+  - ColBERTv2残差压缩演进.md (high) — 早期/延迟交互对比、ColBERTv2 残差压缩完整步骤及 BGE-M3 实验（Cubox 无高亮）
+  - RAG综述_中科院2025.md (high) — RAG 万字综述：八步流程/高级 RAG/Agentic/Memory（Cubox 无高亮）
+  - ES企业AI搜索实践.md (high) — Elasticsearch 向量搜索/混合检索/量化/RAG 实践（Cubox 无高亮）
+  - 向量数据库原理与应用全解析.md (high) — 向量化演进、索引方法、度量、主流产品对比（Cubox 无高亮）
+- 概念页（concepts/）新建 9 个：ColBERTv2残差压缩、混合检索、近似最近邻搜索、向量索引方法、向量相似度度量、向量量化、Agentic_RAG、Memory_RAG、知识整合
+- 概念页（concepts/）更新 5 个：ColBERT（追加延迟交互细节和来源）、BM25（追加来源）、Reciprocal_Rank_Fusion（追加来源和关联）、HyDE（追加来源和关联）、向量数据库（重写为 high，补充完整内容）
+- 实体页（entities/）新建 4 个：BGE-M3、Elasticsearch、Faiss、HNSW
+- 实体页（entities/）更新 1 个：ColBERT（追加 v2 版本信息和来源）
+- 已更新 wiki/index.md
+- 全部内容基于全文，未使用模型自身知识补全
+- 跳过：无（5 篇全文均有实质内容）
+
 ## 2026-06-29 verify | Phase 1 验收（Infra+CV+DeepLearning）
 - 结论：**PASS（小修已完成）**，详见 `wiki/verify-phase1.md`
 - 抽查 5 source + 8 concept：真实性整体良好

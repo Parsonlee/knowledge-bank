@@ -17,13 +17,13 @@ confidence: high
 
 ## 三种向量表示方法
 
-- **稠密向量（Dense Vector）**：低维，由 [[BERT]] / [[Sentence-BERT]] 将整个句子编码为单个向量。
-- **稀疏向量（Sparse Vector）**：高维，由 [[BM25]] / TF-IDF 产生。
-- **多向量（Multi-Vector）**：每段文本对应一组向量，每个 token 拥有自己的向量，[[ColBERT]] 是其代表。
+- **稠密向量（Dense Vector）**：低维，由 BERT / [[概念_Sentence-BERT|Sentence-BERT]] 将整个句子编码为单个向量。
+- **稀疏向量（Sparse Vector）**：高维，由 [[概念_BM25|BM25]] / TF-IDF 产生。
+- **多向量（Multi-Vector）**：每段文本对应一组向量，每个 token 拥有自己的向量，[[概念_ColBERT|ColBERT]] 是其代表。
 
 ## ColBERT 核心
 
-- 构建于 [[BERT]] 之上，为每个 token 生成独立的上下文嵌入（contextual embedding），而非每句一个向量。
+- 构建于 BERT 之上，为每个 token 生成独立的上下文嵌入（contextual embedding），而非每句一个向量。
 - 对查询 Q 产生向量集 {q1, …, qn}；对文档 D 产生向量集 {d1, …, dm}。
 - 维度通常为 1024，来自 BERT 输出 + 线性投影（linear projection）。
 
@@ -33,11 +33,11 @@ confidence: high
 - 随后对每个查询向量 qi，在所有文档向量 dj 中找到点积最大值（max dot product）。
 - 将所有最大值（max score）求和，作为最终相关性得分。
 
-这一逐 token 取最大再求和的过程即 [[MaxSim]] 计算方式。
+这一逐 token 取最大再求和的过程即 MaxSim 计算方式。
 
 ## 与稠密向量的对比
 
-| 维度 | 稠密向量（[[Sentence-BERT]]） | ColBERT（多向量） |
+| 维度 | 稠密向量（[[概念_Sentence-BERT|Sentence-BERT]]） | ColBERT（多向量） |
 |------|------------------------------|--------------------|
 | 表示 | 单个向量 | 多向量（每 token 一个） |
 | 相似度复杂度 | O(1) | O(n·m)（可用矩阵运算优化） |
@@ -57,15 +57,15 @@ confidence: high
 | 官方 colbert_score | 0.4768 |
 | 稠密余弦相似度 | 0.4103 |
 
-ColBERT 因逐 token 选取最大相似度而给出更高的相似度。相关模型见 [[BGE-M3]]。
+ColBERT 因逐 token 选取最大相似度而给出更高的相似度。相关模型见 [[实体_BGE-M3]]。
 
 ## 关键结论
 
 - 归一化（normalization）对可解释性至关重要。
 - 多向量比单个稠密向量能捕捉更细的粒度。
 
-## 相关概念
+## 关联
 
-- [[ColBERTv2残差压缩演进]]
-- [[Late Interaction]]
-- [[MaxSim]]
+- 相关概念：[[概念_ColBERT]]、[[概念_ColBERTv2残差压缩]]、[[概念_Dense_Embedding]]、[[概念_Sentence-BERT]]
+- 实体：[[实体_ColBERT]]、[[实体_BGE-M3]]
+- 来源：[[ColBERTv2残差压缩演进]]
