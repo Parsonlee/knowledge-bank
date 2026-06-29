@@ -40,6 +40,11 @@
 - [[RAG高级优化_检索后处理]] — 检索后处理：压缩/重排/Long-text Reorder（RAG, RAG/retrieval）
 - [[RAG高级优化_query转换之路]] — query 转换全景：重写/HyDE/子查询/Step-back（RAG, RAG/query）
 - [[RAG文本切分_Markdown切分]] — Markdown 标题切分定制化方案（RAG, RAG/chunking）
+- [[MRL_俄罗斯套娃表示学习]] — MRL 俄罗斯套娃嵌入技术，截断嵌入维度保留语义（RAG/embedding）
+- [[Matryoshka嵌入模型概述_HuggingFace]] — HuggingFace MRL 训练原理、Sentence Transformers 实现与性能实验（RAG/embedding）
+- [[从BM25到Multi-Vector_6种Embedding演进路线]] — Sparse/Dense/Quantized/Binary/Matryoshka/Multi-Vector 六种嵌入方案对比选型（RAG/embedding, RAG）
+- [[一文详尽之Embedding]] — Embedding 全景综述：One-Hot 到 SimCSE，BERT 各向异性问题与优化（RAG/embedding）
+- [[为什么用Qwen3_embedding和rerank]] — Qwen3 Embedding/Rerank 原理：[EOS] 池化、Instruct 机制、LLM 化重排（RAG/embedding, RAG）
 
 ## Concepts
 
@@ -133,6 +138,17 @@
 - [[概念_子查询分解]] — 复杂查询拆为子查询分别检索再合并
 - [[概念_Step-back提示]] — 退一步生成更抽象的查询获取更广泛上下文
 - [[概念_Markdown标题切分]] — 按 Markdown 标题层级结构化切分文档
+- [[概念_Matryoshka表示学习]] — MRL 嵌套学习多粒度表征，可截断维度保留语义
+- [[概念_Sparse_Embedding]] — 关键词式稀疏向量（TF-IDF/BM25/SPLADE）
+- [[概念_Dense_Embedding]] — 语义级稠密向量，通用语义搜索首选
+- [[概念_Quantized_Embedding]] — float32→int8 压缩，省内存磁盘
+- [[概念_Binary_Embedding]] — 0/1 二值化极致压缩，设备端离线快搜
+- [[概念_词向量]] — Word2Vec/GloVe/FastText 静态词向量及其局限
+- [[概念_BERT各向异性]] — BERT 词向量锥形分布导致相似度失效及优化
+- [[概念_Sentence-BERT]] — 孪生/三级网络微调 BERT 优化句向量相似度
+- [[概念_SimCSE]] — Dropout mask 增广 + 对比学习优化句向量
+- [[概念_Instruct_Embedding]] — 编码查询时附带任务指令引导多维度检索
+- [[概念_重排序Rerank]] — 检索后相关性精排，Qwen3 LLM 化 yes/no 打分
 
 ## Entities
 
@@ -165,6 +181,8 @@
 - [[实体_ColBERT]] — 斯坦福 token 级细粒度检索模型，MaxSim late interaction
 - [[实体_LlamaIndex]] — LLM/RAG 应用框架，文档加载与切分（medium）
 - [[实体_rank_bm25]] — Python BM25 轻量检索库（medium）
+- [[实体_Qwen3_Embedding]] — Qwen3 系列嵌入/重排模型，MTEB 排名第一，Instruct+LLM化Rerank
+- [[实体_Sentence_Transformers]] — 嵌入模型训练/推理框架，Matryoshka/Instruct 支持
 
 ## Comparisons
 

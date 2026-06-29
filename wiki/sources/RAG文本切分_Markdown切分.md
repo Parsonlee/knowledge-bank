@@ -1,9 +1,18 @@
-# RAG文本切分 LV3：轻松定制 Markdown 切分
+---
+type: source
+tags:
+  - RAG
+  - RAG/chunking
+summary: 文本切分五层级中针对 Markdown 的第三层级（Document Specific Splitting）实践，介绍如何借助 LangChain MarkdownHeaderTextSplitter 按标题进行有效切分。
+sources:
+  - "Cubox/RAG文本切分LV3：轻松定制Markdown切分-2024-10-25.md"
+created: "2026-06-29"
+updated: "2026-06-29"
+confidence: high
+url: "https://mp.weixin.qq.com/s?__biz=Mzk0NTcyNTMzNw==&mid=2247484120&idx=1&sn=51fdd215151fe9be2d0ab8290eed6a1e"
+---
 
-> 来源：哎呀AIYA 公众号
-> URL：https://mp.weixin.qq.com/s?__biz=Mzk0NTcyNTMzNw==&mid=2247484120&idx=1&sn=51fdd215151fe9be2d0ab8290eed6a1e
-> tags: RAG, RAG/chunking
-> Cubox 高亮：无
+# RAG文本切分 LV3：轻松定制 Markdown 切分
 
 ## 摘要
 

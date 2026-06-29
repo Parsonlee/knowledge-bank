@@ -1,9 +1,18 @@
-# RAG高级优化：检索后处理模块
+---
+type: source
+tags:
+  - RAG
+  - RAG/retrieval
+summary: 介绍四种检索后处理优化手段（Long-text Reorder、Contextual Compression、Refine、Emotion Prompt），帮助大模型更好地理解上下文知识。
+sources:
+  - "Cubox/RAG高级优化：检索后处理模块成竹在胸-2024-10-29.md"
+created: "2026-06-29"
+updated: "2026-06-29"
+confidence: high
+url: "https://mp.weixin.qq.com/s?__biz=Mzk0NTcyNTMzNw==&mid=2247484209&idx=1&sn=0ce7bb6bbb6a0ff5efb4ad10ce2765a7"
+---
 
-> 来源：哎呀AIYA 公众号
-> URL：https://mp.weixin.qq.com/s?__biz=Mzk0NTcyNTMzNw==&mid=2247484209&idx=1&sn=0ce7bb6bbb6a0ff5efb4ad10ce2765a7
-> tags: RAG, RAG/retrieval
-> Cubox 高亮：无
+# RAG高级优化：检索后处理模块
 
 ## 摘要
 

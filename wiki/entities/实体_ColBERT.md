@@ -23,4 +23,4 @@ ColBERT（Contextualized Late Interaction over BERT）是斯坦福 FutureData �
 ## 关联
 
 - 相关概念：[[概念_ColBERT]]、[[概念_Embedding与向量检索]]
-- 来源：[[RAG索引进阶_Indexing]]
+- 来源：[[RAG索引进阶_Indexing]]、[[从BM25到Multi-Vector_6种Embedding演进路线]]

@@ -2,6 +2,22 @@
 
 > 操作日志，每次 ingest / query / lint 后追加记录。
 
+## 2026-06-26 ingest | RAG/Embedding 专题（5 篇，基于全文）
+- 本批次 5 篇文章，全文均来自 tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/，高亮参考对应 Cubox 文件 Annotations
+- 来源页（sources/）：
+  - MRL_俄罗斯套娃表示学习.md (high) — OpenAI text-embedding-3 背后的 MRL 技术（Cubox 1 处高亮：MRL 定义，已标重点）
+  - Matryoshka嵌入模型概述_HuggingFace.md (high) — HuggingFace MRL 训练/推理/实验（Cubox 无高亮）
+  - 从BM25到Multi-Vector_6种Embedding演进路线.md (high) — 6 种嵌入方案对比选型（Cubox 无高亮）
+  - 一文详尽之Embedding.md (high) — Embedding 全景综述 One-Hot 到 SimCSE（Cubox 2 处高亮：句向量+大模型展望，已标重点）
+  - 为什么用Qwen3_embedding和rerank.md (high) — Qwen3 Embedding/Rerank 原理（Cubox 无高亮）
+- 概念页（concepts/）新建 12 个：Matryoshka表示学习、Sparse_Embedding、Dense_Embedding、Quantized_Embedding、Binary_Embedding、词向量、BERT各向异性、Sentence-BERT、SimCSE、Instruct_Embedding、重排序Rerank
+- 概念页（concepts/）更新 3 个：Embedding与向量检索（追加来源和关联）、ColBERT（追加来源）、BM25（追加来源和关联）
+- 实体页（entities/）新建 2 个：Qwen3_Embedding、Sentence_Transformers
+- 实体页（entities/）更新 1 个：ColBERT（追加来源）
+- 已更新 wiki/index.md
+- 全部内容基于全文，未使用模型自身知识补全
+- 跳过：无（5 篇全文均有实质内容）
+
 ## 2026-06-29 verify | Phase 1 验收（Infra+CV+DeepLearning）
 - 结论：**PASS（小修已完成）**，详见 `wiki/verify-phase1.md`
 - 抽查 5 source + 8 concept：真实性整体良好

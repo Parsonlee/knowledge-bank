@@ -1,9 +1,18 @@
-# RAG高级优化：检索策略探讨 Fusion, HyDE（含代码）
+---
+type: source
+tags:
+  - RAG
+  - RAG/retrieval
+summary: 介绍 Fusion Retrieval、HyDE、RAG-Fusion 三种检索优化方法，结合可创建更健壮准确的检索系统，并给出实现代码。
+sources:
+  - "Cubox/RAG高级优化：检索策略探讨Fusion, HyDE安排上(含代码)-2024-10-29.md"
+created: "2026-06-29"
+updated: "2026-06-29"
+confidence: high
+url: "https://mp.weixin.qq.com/s?__biz=Mzk0NTcyNTMzNw==&mid=2247484218&idx=1&sn=656549e48f411b94ebe72ecd61259324"
+---
 
-> 来源：哎呀AIYA 公众号
-> URL：https://mp.weixin.qq.com/s?__biz=Mzk0NTcyNTMzNw==&mid=2247484218&idx=1&sn=656549e48f411b94ebe72ecd61259324
-> tags: RAG, RAG/retrieval
-> Cubox 高亮：1 处（RRF 重排序），并附 RRF 实现代码
+# RAG高级优化：检索策略探讨 Fusion, HyDE（含代码）
 
 ## 摘要
 

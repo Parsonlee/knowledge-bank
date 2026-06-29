@@ -1,9 +1,18 @@
-# RAG高级优化：基于问题生成的文档检索增强
+---
+type: source
+tags:
+  - RAG
+  - RAG/query
+summary: 通过用相关问题丰富文本片段，显著提高识别文档中包含用户查询答案的最相关部分的准确性。
+sources:
+  - "Cubox/RAG高级优化：基于问题生成的文档检索增强-2024-10-25.md"
+created: "2026-06-29"
+updated: "2026-06-29"
+confidence: high
+url: "https://mp.weixin.qq.com/s?__biz=Mzk0NTcyNTMzNw==&mid=2247484125&idx=1&sn=0490793590a7061bf0593749f1a58474"
+---
 
-> 来源：哎呀AIYA 公众号
-> URL：https://mp.weixin.qq.com/s?__biz=Mzk0NTcyNTMzNw==&mid=2247484125&idx=1&sn=0490793590a7061bf0593749f1a58474
-> tags: RAG, RAG/query
-> Cubox 高亮：1 处（问题丰富文本片段提高检索准确性）
+# RAG高级优化：基于问题生成的文档检索增强
 
 ## 摘要
 
