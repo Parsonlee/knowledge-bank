@@ -32,5 +32,6 @@ score(d) = Σ 1 / (k + rank_i(d) + 1)
 
 ## 关联
 
-- 相关概念：[[概念_RAG_Fusion]]、[[概念_Fusion_Retrieval]]
-- 来源：[[RAG高级优化_检索策略Fusion_HyDE]]
+- 相关概念：[[概念_RAG_Fusion]]、[[概念_Fusion_Retrieval]]、[[概念_混合检索]]
+- 实体：[[实体_Elasticsearch]]
+- 来源：[[RAG高级优化_检索策略Fusion_HyDE]]、[[ES企业AI搜索实践]]

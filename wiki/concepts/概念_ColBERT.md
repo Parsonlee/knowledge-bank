@@ -19,12 +19,20 @@ ColBERT（Contextualized Late Interaction over BERT）是一种基于细粒度 t
 - **兼顾上下文信息**：token 嵌入是基于上下文生成的（BERT），捕捉更丰富语义
 - **鲁棒性**：不依赖严格字面匹配，能处理词法变体、同义词、句子结构变化
 
+## 延迟交互（Late Interaction）
+
+- 与"早期交互"（编码阶段即融合 query+doc，如 BERT Cross-Encoder）对比：延迟交互让 query 和 doc 独立编码，把交互推迟到相似度计算阶段
+- 优势：文档向量可离线预计算并存入索引（如 FAISS），在线检索仅需编码 query 并执行 MaxSim，复杂度远低于交互模型
+- 精度接近交叉编码器（rerank 模型），但查询延迟从数秒降至几十毫秒
+- 实验（BGEM3FlagModel）：query "What is BGE M3?"(8 token) vs doc "Definition of BM25"(7 token)，归一化得分 0.4768 与官方 colbert_score 完全一致；稠密向量余弦相似度 0.4103，ColBERT 因取 token 级最大相似度而得分更高
+
 ## 开源实现
 
 - GitHub: https://github.com/stanford-futuredata/ColBERT
+- 论文（ColBERTv2）: https://arxiv.org/abs/2112.01488
 
 ## 关联
 
-- 相关概念：[[概念_Embedding与向量检索]]、[[概念_RAPTOR索引]]、[[概念_Multi-representation_Indexing]]、[[概念_Dense_Embedding]]
-- 实体：[[实体_ColBERT]]
-- 来源：[[RAG索引进阶_Indexing]]、[[从BM25到Multi-Vector_6种Embedding演进路线]]
+- 相关概念：[[概念_Embedding与向量检索]]、[[概念_RAPTOR索引]]、[[概念_Multi-representation_Indexing]]、[[概念_Dense_Embedding]]、[[概念_ColBERTv2残差压缩]]
+- 实体：[[实体_ColBERT]]、[[实体_BGE-M3]]
+- 来源：[[RAG索引进阶_Indexing]]、[[从BM25到Multi-Vector_6种Embedding演进路线]]、[[ColBERT原理与延迟交互机制]]、[[ColBERTv2残差压缩演进]]

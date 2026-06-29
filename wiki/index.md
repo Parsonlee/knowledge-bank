@@ -45,6 +45,11 @@
 - [[从BM25到Multi-Vector_6种Embedding演进路线]] — Sparse/Dense/Quantized/Binary/Matryoshka/Multi-Vector 六种嵌入方案对比选型（RAG/embedding, RAG）
 - [[一文详尽之Embedding]] — Embedding 全景综述：One-Hot 到 SimCSE，BERT 各向异性问题与优化（RAG/embedding）
 - [[为什么用Qwen3_embedding和rerank]] — Qwen3 Embedding/Rerank 原理：[EOS] 池化、Instruct 机制、LLM 化重排（RAG/embedding, RAG）
+- [[ColBERT原理与延迟交互机制]] — ColBERT 多向量表示、延迟交互(MaxSim)与稠密向量对比，BGE-M3 实验（RAG/embedding, RAG）
+- [[ColBERTv2残差压缩演进]] — 早期/延迟交互、ColBERT→ColBERTv2 残差压缩(聚类+量化)，BGE-M3 4x 压缩实验（RAG/embedding, RAG）
+- [[RAG综述_中科院2025]] — RAG 万字综述：核心组件/八步流程/高级 RAG(训练/多模态/记忆/Agentic)（RAG）
+- [[ES企业AI搜索实践]] — Elasticsearch 向量搜索/混合检索/RRF/量化/Serverless 构建企业 RAG（RAG）
+- [[向量数据库原理与应用全解析]] — 向量化演进、索引方法、相似度度量、主流向量数据库对比（RAG/embedding）
 
 ## Concepts
 
@@ -111,7 +116,7 @@
 ### RAG
 - [[概念_RAG基础流程]] — RAG 三步：Indexing/Retrieval/Generation
 - [[概念_Embedding与向量检索]] — 文本转嵌入向量，按相似度检索 top-k
-- [[概念_向量数据库]] — Vector Store 存储嵌入向量并计算相似度（medium）
+- [[概念_向量数据库]] — 专用于存储向量化表示的系统，ANN 索引+相似度查询
 - [[概念_Query_Translation]] — 查询翻译：改写/分解/退一步提升检索
 - [[概念_RAG_Fusion]] — 多查询 + RRF 排序融合检索结果
 - [[概念_HyDE]] — 生成假设文档作为检索输入
@@ -149,6 +154,15 @@
 - [[概念_SimCSE]] — Dropout mask 增广 + 对比学习优化句向量
 - [[概念_Instruct_Embedding]] — 编码查询时附带任务指令引导多维度检索
 - [[概念_重排序Rerank]] — 检索后相关性精排，Qwen3 LLM 化 yes/no 打分
+- [[概念_ColBERTv2残差压缩]] — k-means 聚类+残差量化，存储减 6-10 倍性能损失 1-2%
+- [[概念_混合检索]] — 稀疏+稠密+BM25 多路召回融合(RRF/加权)
+- [[概念_近似最近邻搜索]] — ANNS：哈希/树/图/量化四类加速方法
+- [[概念_向量索引方法]] — Flat/Tree/LSH/IVF-PQ/HNSW 索引类型对比
+- [[概念_向量相似度度量]] — L2/L1/余弦/内积/汉明/杰卡德距离度量
+- [[概念_向量量化]] — float32→int8/INT4/BBQ/PQ/残差量化压缩方法
+- [[概念_Agentic_RAG]] — 智能体+RAG：查询规划/工具利用/推理优化
+- [[概念_Memory_RAG]] — 显式记忆增强 RAG：Memory3/MemoRAG/CAG
+- [[概念_知识整合]] — 输入层/中间层/输出层三种外部知识整合方式
 
 ## Entities
 
@@ -183,6 +197,10 @@
 - [[实体_rank_bm25]] — Python BM25 轻量检索库（medium）
 - [[实体_Qwen3_Embedding]] — Qwen3 系列嵌入/重排模型，MTEB 排名第一，Instruct+LLM化Rerank
 - [[实体_Sentence_Transformers]] — 嵌入模型训练/推理框架，Matryoshka/Instruct 支持
+- [[实体_BGE-M3]] — BAAI 多语言嵌入模型，1024 维，同时支持 dense 和 ColBERT 多向量
+- [[实体_Elasticsearch]] — 全文+原生向量搜索引擎，混合检索/RRF/量化/Serverless
+- [[实体_Faiss]] — Facebook 开源向量检索库，丰富索引算法+GPU 加速
+- [[实体_HNSW]] — 分层可导航小世界图，毫秒级 ANN 业界主流
 
 ## Comparisons
 
