@@ -36,6 +36,6 @@ Text2SQL 是一项将自然语言查询转换为 SQL 语句的技术，允许用
 
 ## 关联
 
-- 相关概念：[[概念_Query_Construction]]、[[概念_结构化输出]]
+- 相关概念：[[概念_Query_Construction]]、[[概念_结构化输出]]、[[概念_迭代式表格推理]]
 - 实体：[[实体_Elasticsearch]]、[[实体_MAC-SQL]]
-- 来源：[[优图RAG技术详解]]
+- 来源：[[优图RAG技术详解]]、[[TableRAG_文本表格异构问答]]

@@ -2,6 +2,21 @@
 
 > 操作日志，每次 ingest / query / lint 后追加记录。
 
+## 2026-06-29 ingest | 批次8 RAG检索/系统设计/TableRAG/跨模态RAG/RAGAS评估（5 篇，基于全文）
+- 本批次 5 篇文章，全文均来自 tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/，高亮参考对应 Cubox 文件 Annotations
+- 新建来源页（sources/）5 个：
+  - RAG检索_Retrieval入门到精通.md (high) — Re-Rank/CRAG/Self-RAG 检索优化（Cubox 无高亮）
+  - RAG系统设计_语义搜索与KG驱动选型.md (high) — 语义搜索本质/系统设计/KG-RAG（Cubox 无高亮）
+  - TableRAG_文本表格异构问答.md (high) — 华为云文本+表格混合推理框架（Cubox 无高亮）
+  - 跨模态知识联邦与统一语义推理RAG.md (high) — 枫清科技融合知识库+统一知识图谱（Cubox 2 处高亮：融合知识库定义/逻辑概念，已标重点）
+  - RAGAS评估RAG系统.md (high) — RAGAS 框架核心指标与实战（Cubox 无高亮）
+- 概念页（concepts/）新建 9 个：Semantic_Search本质、Multi-Vector检索、对比损失与三元组损失、距离函数选择、Lazy_Graph_RAG(medium)、迭代式表格推理、融合知识库、统一知识图谱、RAG评估框架RAGAS
+- 概念页（concepts/）更新 7 个：CRAG（追加工作原理细节+论文+来源+实现参考）、Self-RAG（追加论文+来源+实现参考）、重排序Rerank（追加三种基本做法+来源）、知识图谱RAG（追加KG成本/Lazy Graph RAG/跨模态统一图谱+来源）、GraphRAG（追加来源+关联）、表格序列化（追加来源+关联）、Text2SQL（追加来源+关联）、父页面检索（追加来源+关联）
+- 实体页（entities/）新建 2 个：TableRAG、RAGAS
+- 已更新 wiki/index.md（Sources/Concepts-RAG/Entities）
+- 全部内容基于全文，未使用模型自身知识补全
+- 跳过：无（5 篇全文均有实质内容）
+
 ## 2026-06-29 ingest | 批次7 阿里/美团/优图 RAG 工业实践（3 新篇 + 2 遗留确认，基于全文）
 - 遗留 2 篇（文章1/2）经核对已在 2026-06-26 批次完整处理（source/concept/index 齐全），本批次无需重复，跳过
   - RAG_12痛点与解决方案.md（已存在）、提升RAG问答质量的技术路线.md（已存在）

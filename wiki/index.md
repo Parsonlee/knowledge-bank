@@ -58,6 +58,11 @@
 - [[阿里RAG技术演进]] — 阿里云服务 RAG 四大命题：数据价值/异构检索/生成控制/评估体系（RAG）
 - [[美团搜索查询改写实践]] — 美团查询改写全栈：离线挖掘/BERT判别/SMT/NMT强化学习/向量化召回（RAG/query）
 - [[优图RAG技术详解]] — 腾讯优图RAG全栈：2B Embedding/Reranker蒸馏/Text2SQL/GraphRAG知识树（RAG）
+- [[RAG检索_Retrieval入门到精通]] — RAG系列6：Re-Rank/CRAG/Self-RAG 检索优化（RAG, RAG/retrieval）
+- [[RAG系统设计_语义搜索与KG驱动选型]] — 语义搜索本质/Loss/距离/Embedding/向量库选型 + KG-RAG/Lazy Graph RAG（RAG/embedding, RAG）
+- [[TableRAG_文本表格异构问答]] — 华为云 TableRAG：文本检索+SQL 混合推理，HeteQA 评测集（RAG）
+- [[跨模态知识联邦与统一语义推理RAG]] — 枫清科技融合知识库+统一知识图谱处理异构知识（RAG）
+- [[RAGAS评估RAG系统]] — RAGAS 框架五大核心指标科学评估 RAG 系统（RAG/eval）
 
 ## Concepts
 
@@ -199,6 +204,17 @@
 - [[概念_知识树结构]] — 融合图与树优点的四级知识粒度树型图谱
 - [[概念_S2Dual社区检测]] — Structure+Semantics 双感知社区检测，超越 Leiden
 
+#### 语义搜索/系统设计/评估概念（批次8）
+- [[概念_Semantic_Search本质]] — metric embedding，document as index，无结构即灵活
+- [[概念_Multi-Vector检索]] — 用代理表示（自然语言/总结）索引低资源/长文件
+- [[概念_对比损失与三元组损失]] — Contrastive/Triplet Loss 按类内方差选择
+- [[概念_距离函数选择]] — 余弦(非度量)/欧氏(度量)距离选型与三角不等式
+- [[概念_Lazy_Graph_RAG]] — 语义搜索弥补 KG 不足，索引成本降至 0.1%（medium）
+- [[概念_迭代式表格推理]] — TableRAG 在线推理：拆解/检索/SQL/组合四步
+- [[概念_融合知识库]] — 多元异构数据统一逻辑存储，物理存储不变
+- [[概念_统一知识图谱]] — 多模态元素统一图谱，N度扩展查询提取子图
+- [[概念_RAG评估框架RAGAS]] — RAGAS 检索侧/生成侧多维评估指标
+
 ## Entities
 
 - [[实体_DeepSpeed]] — 分布式训练框架，ZeRO 系列策略来源
@@ -242,6 +258,8 @@
 - [[实体_优图实验室]] — 腾讯AI实验室，RAG全栈方案，apd-embedding-2b/MAC-SQL/GraphRAG
 - [[实体_MAC-SQL]] — 多智能体Text2SQL框架，Selector/Decomposer/Refiner（COLING 2025）
 - [[实体_通义千问]] — 阿里大语言模型，RAG生成/判别核心模型（medium）
+- [[实体_RAGAS]] — RAG 系统开源评估框架，多维度指标
+- [[实体_TableRAG]] — 华为云文本+表格异构问答混合推理框架
 
 ## Comparisons
 

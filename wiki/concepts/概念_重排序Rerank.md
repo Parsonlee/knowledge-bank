@@ -29,8 +29,14 @@
 - 传统 Reranker（BERT/RoBERTa，110M~400M，512 token）→ LLM Reranker（8k+ token，理解能力更强）
 - 分层知识蒸馏：约束多个 Transformer 层输出一致，支持层级输出能力（详见 [[概念_分层知识蒸馏]]）
 
+## Re-Rank 的三种基本做法
+
+- 基于相似度的排序：余弦相似度、点积等度量
+- 基于深度学习的排序模型：BERT/T5 等预训练模型评估文档-查询相关性
+- 使用回归模型：将文档特征（长度、相似度、标题等）输入回归模型预测重要性得分
+
 ## 关联
 
-- 相关概念：[[概念_检索后处理]]、[[概念_Instruct_Embedding]]、[[概念_LLM重排序]]、[[概念_分层知识蒸馏]]
+- 相关概念：[[概念_检索后处理]]、[[概念_Instruct_Embedding]]、[[概念_LLM重排序]]、[[概念_分层知识蒸馏]]、[[概念_RAG_Fusion]]
 - 实体：[[实体_Qwen3_Embedding]]、[[实体_Cohere_Rerank]]
-- 来源：[[为什么用Qwen3_embedding和rerank]]、[[RAG_12痛点与解决方案]]、[[RAG挑战赛冠军方案]]、[[提升RAG问答质量的技术路线]]、[[优图RAG技术详解]]
+- 来源：[[为什么用Qwen3_embedding和rerank]]、[[RAG_12痛点与解决方案]]、[[RAG挑战赛冠军方案]]、[[提升RAG问答质量的技术路线]]、[[优图RAG技术详解]]、[[RAG检索_Retrieval入门到精通]]
