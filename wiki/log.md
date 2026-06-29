@@ -61,3 +61,17 @@
 - 已更新 wiki/index.md
 - 全部内容基于全文，未使用模型自身知识补全
 - 跳过：无（5 篇全文均有实质内容）
+
+## 2026-06-29 ingest | AI-Native Infra + AI Infra 系统设计 + PyTorch代码段 + RL Infra全景 + 智能体能力金字塔（5 篇，基于全文）
+- 本批次 5 篇文章，全文均来自 tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/，高亮参考对应 Cubox 文件 Annotations
+- 来源页（sources/）：
+  - AI-Native的Infra演化路线L0到L5.md (high) — L0-L5 能力成熟度模型（Cubox 无高亮）
+  - 入局AI_Infra系统设计与挑战.md (high) — AI Infra vs 传统 Infra 全拆解（Cubox 无高亮）
+  - PyTorch常用代码段合集.md (high) — 5 大类代码段 + Tips（Cubox 无高亮）
+  - RL_Infra行业全景.md (high) — RL 环境/RLaaS/数据（Cubox 高亮 1 处：Mechanize 复制训练，已标重点）
+  - RL环境与智能体能力金字塔.md (high) — 智能体能力金字塔（Cubox 无高亮）
+- 概念页（concepts/）新建 17 个：AI-Native_Infra、L0-L5能力成熟度模型、Result-as-a-Service、模型并行、CUDA_Graph、KV_Cache、连续批处理、通信计算重叠、Label_Smoothing(medium)、Mixup训练(medium)、学习率调度、RL环境、RLaaS、复制训练、RLVR、智能体能力金字塔、接地气Groundedness
+- 实体页（entities/）新建 5 个：PyTorch、vLLM、Mechanize、Fireworks_AI、Surge_AI；更新 1 个：Megatron（追加来源）
+- 已更新 wiki/index.md
+- 全部内容基于全文，未使用模型自身知识补全
+- 跳过：无（5 篇全文均有实质内容）

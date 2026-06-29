@@ -20,6 +20,11 @@
 - [[浅入浅出_生成式AI]] — 生成式 AI 入门：Transformer/Prompt/训练三阶段/Agent（DeepLearning）
 - [[梯度下降优化器可视化解释]] — Vanilla GD/Momentum/AdaGrad/RMSProp/Adam 对比（DeepLearning）
 - [[PyTorch训练代码模板]] — PyTorch 训练 9 步模板：超参/模型/数据/训练/早停/绘图/预测（DeepLearning, Skill/python/pytorch）
+- [[AI-Native的Infra演化路线L0到L5]] — AI-Native Infra 的 L0-L5 能力成熟度模型与 Result-as-a-Service（Infra/AI）
+- [[入局AI_Infra系统设计与挑战]] — AI Infra vs 传统 Infra：硬件/软件/训练/推理挑战全拆解（Infra/AI）
+- [[PyTorch常用代码段合集]] — PyTorch 5 大类常用代码段 + 实用 Tips（Skill/python/pytorch, DeepLearning）
+- [[RL_Infra行业全景]] — RL 环境/RLaaS/数据三大模块，RL 的 GPT-3 时刻（LLM/training/RL, Infra/AI）
+- [[RL环境与智能体能力金字塔]] — Surge AI 智能体能力金字塔：工具/规划/适应/接地气/常识推理（LLM/training/RL, Infra/AI）
 
 ## Concepts
 
@@ -65,6 +70,23 @@
 - [[概念_梯度下降优化器]] — Vanilla GD/Momentum/AdaGrad/RMSProp/Adam 原理对比
 - [[概念_早停EarlyStopping]] — 监控 val_loss 提前停止训练避免过拟合
 - [[概念_PyTorch训练循环]] — PyTorch 标准训练 9 步流程模板
+- [[概念_AI-Native_Infra]] — 专为 AI 设计、去掉人类兜底层的基础设施范式
+- [[概念_L0-L5能力成熟度模型]] — AI 从模仿人类到掌控 OS 的 L0-L5 演进
+- [[概念_Result-as-a-Service]] — 人类只表达需求验收结果、AI 负责全实现的终极形态
+- [[概念_KV_Cache]] — 缓存 K/V 已计算结果，空间换时间避免重复计算
+- [[概念_CUDA_Graph]] — 多 GPU 操作转 DAG 一次性提交，减少 CPU-GPU 交互
+- [[概念_模型并行]] — 拆分大模型到多 GPU，解决单机存不下
+- [[概念_连续批处理]] — 动态批处理，短请求完成即释放、新请求随时加入
+- [[概念_通信计算重叠]] — 用 GPU stream 令计算与通信时间上重叠
+- [[概念_Label_Smoothing]] — 软化硬标签缓解过度自信（medium）
+- [[概念_Mixup训练]] — Beta 分布插值混合样本图像与标签（medium）
+- [[概念_学习率调度]] — ReduceLROnPlateau/Cosine/MultiStep/Warmup 调度器
+- [[概念_RL环境]] — Agent 学习的虚拟世界：状态/任务/奖励三要素
+- [[概念_RLaaS]] — 强化学习即服务，Palantir 式企业深度定制
+- [[概念_复制训练]] — 复现现有软件作为 RL 任务，单元测试验证奖励
+- [[概念_RLVR]] — 可自动验证奖励的强化学习
+- [[概念_智能体能力金字塔]] — 工具/规划/适应/接地气/常识推理五层能力
+- [[概念_接地气Groundedness]] — 智能体紧贴上下文、不幻觉不捏造的能力
 
 ## Entities
 
@@ -87,6 +109,11 @@
 - [[实体_Albumentations]] — Python 图像增强库，OneOf/Compose 组合
 - [[实体_FlashAttention]] — I/O 感知精确注意力，长上下文行业标准
 - [[实体_Adam优化器]] — 一阶矩+二阶矩自适应优化器，深度学习常用选择
+- [[实体_PyTorch]] — 深度学习框架事实标准，动态计算图/自动微分/Python 优先
+- [[实体_vLLM]] — 开源 LLM 推理框架，KV Cache/连续批处理/PagedAttention
+- [[实体_Mechanize]] — RL 环境平台，复制训练（Replication Training）范式
+- [[实体_Fireworks_AI]] — AI Inference Infra 公司，RFT 产品化
+- [[实体_Surge_AI]] — RL 环境/数据公司，智能体能力金字塔框架
 
 ## Comparisons
 

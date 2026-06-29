@@ -6,6 +6,7 @@ tags:
 summary: NVIDIA 的大模型训练并行框架，提供 TP/SP/PP 等并行策略及激活值重计算公式。
 sources:
   - "wiki/sources/大模型显存计算与优化.md"
+  - "wiki/sources/入局AI_Infra系统设计与挑战.md"
 created: "2026-06-29"
 updated: "2026-06-29"
 confidence: medium
