@@ -1,0 +1,34 @@
+---
+type: entity
+tags:
+  - CV
+summary: CLIP（Contrastive Language-Image Pre-training），OpenAI 视觉-语言对齐模型，为 SAM 提供文本 Prompt 能力。
+sources:
+  - "wiki/sources/SAM_Segment_Anything模型.md"
+created: "2026-06-26"
+updated: "2026-06-26"
+confidence: medium
+---
+
+# 实体：CLIP
+
+## 简介
+
+CLIP（Contrastive Language-Image Pre-training）由 OpenAI 提出，用于视觉-语言理解，通过对比学习对齐图像与文本嵌入。
+
+## 关键信息（全文所述）
+
+- 双编码器架构：图像编码器（ViT 或 ResNet）+ 文本编码器（Transformer）
+- 训练使用对比损失对齐图文嵌入
+- 在 SAM 中的作用：提供文本 Prompt 能力，使 SAM 可接受文本指定分割目标（SAM 基础模型不原生支持文本，需 CLIP 集成）
+
+## 备注
+
+全文在 SAM 多模态集成语境下介绍 CLIP，细节有限（confidence: medium）。
+
+## 关联
+
+- [[SAM_Segment_Anything模型]]（来源）
+- [[概念_Prompt驱动分割]]
+- [[实体_SAM]]
+- [[实体_ViT]]
