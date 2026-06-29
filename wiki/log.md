@@ -62,6 +62,20 @@
 - 全部内容基于全文，未使用模型自身知识补全
 - 跳过：无（5 篇全文均有实质内容）
 
+## 2026-06-26 ingest | RAG从入门到精通系列1-5（5 篇，基于全文）
+- 本批次 5 篇文章，全文均来自 tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/，高亮参考对应 Cubox 文件 Annotations
+- 来源页（sources/）：
+  - RAG基础_索引检索生成.md (high) — 系列1：Indexing/Retrieval/Generation 基础（Cubox 无高亮）
+  - RAG查询翻译_Query_Translation.md (high) — 系列2：Multi-Query/RAG Fusion/Decomposition/Step-back/HyDE（Cubox 无高亮）
+  - RAG路由_Routing.md (high) — 系列3：Logical/Semantic Routing（Cubox 无高亮）
+  - RAG查询构造_Query_Construction.md (high) — 系列4：自然语言转结构化查询（Cubox 无高亮）
+  - RAG索引进阶_Indexing.md (high) — 系列5：Multi-representation/RAPTOR/ColBERT（Cubox 3 处高亮，已标重点）
+- 概念页（concepts/）新建 11 个：RAG基础流程、Embedding与向量检索、向量数据库(medium)、Query_Translation、RAG_Fusion、HyDE、RAG_Routing、Query_Construction、Multi-representation_Indexing、RAPTOR索引、ColBERT
+- 实体页（entities/）新建 3 个：LangChain(medium)、Qdrant(medium)、ColBERT
+- 已更新 wiki/index.md
+- 全部内容基于全文，未使用模型自身知识补全
+- 跳过：无（5 篇全文均有实质内容）
+
 ## 2026-06-29 ingest | AI-Native Infra + AI Infra 系统设计 + PyTorch代码段 + RL Infra全景 + 智能体能力金字塔（5 篇，基于全文）
 - 本批次 5 篇文章，全文均来自 tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/，高亮参考对应 Cubox 文件 Annotations
 - 来源页（sources/）：

@@ -25,6 +25,11 @@
 - [[PyTorch常用代码段合集]] — PyTorch 5 大类常用代码段 + 实用 Tips（Skill/python/pytorch, DeepLearning）
 - [[RL_Infra行业全景]] — RL 环境/RLaaS/数据三大模块，RL 的 GPT-3 时刻（LLM/training/RL, Infra/AI）
 - [[RL环境与智能体能力金字塔]] — Surge AI 智能体能力金字塔：工具/规划/适应/接地气/常识推理（LLM/training/RL, Infra/AI）
+- [[RAG基础_索引检索生成]] — RAG 基础流程：Indexing/Retrieval/Generation + LangChain/Qdrant 实现（RAG）
+- [[RAG查询翻译_Query_Translation]] — Query Translation：Multi-Query/RAG Fusion/Decomposition/Step-back/HyDE（RAG, RAG/query）
+- [[RAG路由_Routing]] — Routing：Logical/Semantic 路由智能选择检索路径（RAG）
+- [[RAG查询构造_Query_Construction]] — Query Construction：自然语言转元数据结构化查询（RAG, RAG/query）
+- [[RAG索引进阶_Indexing]] — 进阶索引：Multi-representation/RAPTOR/ColBERT（RAG, RAG/chunking）
 
 ## Concepts
 
@@ -88,6 +93,19 @@
 - [[概念_智能体能力金字塔]] — 工具/规划/适应/接地气/常识推理五层能力
 - [[概念_接地气Groundedness]] — 智能体紧贴上下文、不幻觉不捏造的能力
 
+### RAG
+- [[概念_RAG基础流程]] — RAG 三步：Indexing/Retrieval/Generation
+- [[概念_Embedding与向量检索]] — 文本转嵌入向量，按相似度检索 top-k
+- [[概念_向量数据库]] — Vector Store 存储嵌入向量并计算相似度（medium）
+- [[概念_Query_Translation]] — 查询翻译：改写/分解/退一步提升检索
+- [[概念_RAG_Fusion]] — 多查询 + RRF 排序融合检索结果
+- [[概念_HyDE]] — 生成假设文档作为检索输入
+- [[概念_RAG_Routing]] — 逻辑路由/语义路由智能选择检索路径
+- [[概念_Query_Construction]] — 自然语言转元数据结构化查询
+- [[概念_Multi-representation_Indexing]] — 摘要+原文多表示索引（Proposition Indexing）
+- [[概念_RAPTOR索引]] — 树状分层索引：GMM/UMAP/多尺度聚类递归摘要
+- [[概念_ColBERT]] — token 级嵌入 late interaction 细粒度检索
+
 ## Entities
 
 - [[实体_DeepSpeed]] — 分布式训练框架，ZeRO 系列策略来源
@@ -114,6 +132,9 @@
 - [[实体_Mechanize]] — RL 环境平台，复制训练（Replication Training）范式
 - [[实体_Fireworks_AI]] — AI Inference Infra 公司，RFT 产品化
 - [[实体_Surge_AI]] — RL 环境/数据公司，智能体能力金字塔框架
+- [[实体_LangChain]] — LLM/RAG 应用框架，链式串联检索与生成（medium）
+- [[实体_Qdrant]] — Rust 编写的开源向量数据库/向量搜索引擎（medium）
+- [[实体_ColBERT]] — 斯坦福 token 级细粒度检索模型，MaxSim late interaction
 
 ## Comparisons
 
