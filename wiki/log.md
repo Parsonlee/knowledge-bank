@@ -1,5 +1,30 @@
 # Wiki Log
 
+## 2026-06-30 ingest | Phase 6 Batch 1：AIGC（5篇，基于全文）
+
+- 本批次 5 篇文章，全文均来自 `tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/`，Cubox metadata 参考对应文件（均为 stub，无 Annotations 高亮；重点段落依据正文加粗/结论性表述自行标注 [重点/高亮]）
+- 新建来源页（sources/）5 个：
+  - `Gemini的PPT生成技巧与模板提示词.md` (high) — 歸藏：Gemini APP PPT 生成（Canvas 模式/导出 PDF/谷歌幻灯片/pptx）+ 五套风格提示词（Bento Grid/极简中性/瑞士荧光绿/极简黑白）；最大问题页数固定约 13 页，建议当模板用
+  - `How_to_prompt_Veo3_Replicate.md` (high) — Replicate 官方 Veo 3 指南：七要素/同提示词产出相似/角色一致性/音频/避免字幕/风格/自拍/竖屏/物理/4K 提升
+  - `Google_Veo3账号获取与提示技巧全攻略.md` (high) — AI进修生（腾讯云）：免费获 Gemini Pro 账号方法 + Gemini/Flow 平台对比 + 端到端思维 + 提示技巧（大段翻译引用 Replicate 指南，两篇互为来源）；Veo3 不支持中文台词
+  - `九大主流AI_PPT横测.md` (high) — 绛烨（卡尔的AI沃茨）：AI原生派（Gamma）vs 传统革新派（WPS AI）；最后一公里难题（二次编辑+格式兼容）；Manus/Genspark/Skywork/Flowith/z.ai/秘塔横测；AI+X 创业警示
+  - `一套提示词实现封面自由.md` (high) — 歸藏：模块化封面提示词（四模块：角色/基本要求/风格/用户输入），公众号 3.35:1 + 小红书 3:4，纯 HTML+CSS+html2canvas，十套精选风格，DeepSeek V3 0324 可达 Claude 3.7 效果
+- 新建概念页（concepts/）5 个：
+  - `概念_Veo3视频提示词.md` — 七要素表 + Veo3 核心特性（同提示词产出相似/角色一致性/避免字幕/发音/风格切换）+ 自拍技巧
+  - `概念_PPT生成提示词.md` — 代码方式可控性强/风格提示词可复用/当模板而非成品/三维度描述法
+  - `概念_HTML代码方式生成视觉物料.md` — LLM 输出 HTML+CSS（+JS/html2canvas）渲染物料，优势与对前端能力依赖
+  - `概念_AI_PPT工具路径.md` — 两条路径 + 两个最佳赋能点 + 通用 Agent 跨界局限
+  - `概念_AI产品最后一公里.md` — 二次编辑 + 格式导出兼容两维度 + AI+X 创业警示
+- 新建实体页（entities/）4 个：
+  - `实体_Veo_3.md` (high) — Google 文本生成带音频视频模型
+  - `实体_Gemini.md` (medium) — Google AI 助手（PPT/深度研究/搜索），仅工具层信息故 medium
+  - `实体_Gamma.md` (medium) — AI 原生 PPT 工具先行者
+  - `实体_Genspark.md` (medium) — 通用型超级智能体，PPT 为附属功能
+- 追加 `实体_Manus.md`：补充 AIGC PPT 生成能力评价 + 出现文章引用
+- index.md 已更新（Sources 追加 5 条，Concepts 新增 AIGC 专区 5 条，Entities 新增 AIGC 专区 4 条）
+- 跳过：无（5 篇全文均 >500 字符，内容完整）
+- 全部内容基于全文，未使用模型自身知识补全；Skywork 未单独建实体页（横测中仅一句话提及，信息不足）
+
 ## 2026-06-30 ingest | Phase 5 Batch 3（最后一批）：Skill/data-analysis + Skill/linux + Life（4篇，基于全文）
 
 - 本批次 4 篇文章，全文均来自 `tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/`，Cubox highlights 参考对应文件

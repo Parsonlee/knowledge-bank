@@ -31,9 +31,14 @@ updated: "2026-06-29"
 - MCP发布后从紧凑静态行动空间转变为可无限扩展系统
 - 每次重构后发现最大飞跃来自简化而非增加复杂层
 
+## AIGC：PPT 生成能力
+
+[[九大主流AI_PPT横测]] 评测：Manus 能生成 PPT，遵循标准「大纲优先」模式（先生成大纲再创建完整演示文稿）。但暴露通用型工具的「最后一公里」短板——二次编辑和格式兼容性（导出到 PowerPoint/WPS）存在问题，现阶段更像快速产出内容框架的「玩具」而非可靠生产力工具。
+
 ## 出现文章
 
 - [[Context_Engineering_LangChain_Manus_NotebookLM]]
 - [[Manus创始人手把手拆解上下文工程]]
 - [[也许当前最好的上下文工程讲解_LangChain联合Manus]]
 - [[浅谈上下文工程_Claude_Code_Manus_Kiro]]
+- [[九大主流AI_PPT横测]]（AIGC）

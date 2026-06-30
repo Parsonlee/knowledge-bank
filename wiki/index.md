@@ -163,6 +163,11 @@
 - [[一行代码让matplotlib图表变高大上]] — dufte 库三个 API 自动美化 matplotlib 图表样式（Skill/data-analysis）
 - [[600条Linux命令速查手册]] — 28 大类约 600 条 Linux 命令分场景速查手册（Skill/linux）
 - [[现代打工人如何获得幸福]] — 评论尸：时间度量衡/幸福积分模型/天职/逃离职场PUA五种思维（Life）
+- [[Gemini的PPT生成技巧与模板提示词]] — Gemini APP PPT 生成能力使用技巧与五套百搭风格提示词（AIGC）
+- [[How_to_prompt_Veo3_Replicate]] — Replicate 官方 Veo 3 提示词指南：七要素/角色一致性/音频/风格/自拍（AIGC）
+- [[Google_Veo3账号获取与提示技巧全攻略]] — Veo3 免费获取账号方法+Flow平台使用+提示技巧全攻略中文版（AIGC）
+- [[九大主流AI_PPT横测]] — 九大 AI PPT 工具横测：AI原生派vs传统革新派，最后一公里难题（AIGC）
+- [[一套提示词实现封面自由]] — 模块化封面生成提示词：小红书/公众号封面+十套风格，DeepSeek V3 也能用（AIGC）
 
 ## Concepts
 
@@ -587,6 +592,13 @@
 - [[概念_天职Calling]] — 本身能带来快乐的工作，三条筛选标准，天职不是"钱多事少离家近"（Life）
 - [[概念_习得性快乐]] — A型（多巴胺驱动）vs B型（社会建构），被动习得→习得性不快乐的风险（Life）
 
+### AIGC（Phase 6 Batch 1）
+- [[概念_Veo3视频提示词]] — Veo 3 提示词七要素/角色一致性/音频控制/避免字幕/风格切换/自拍技巧（AIGC）
+- [[概念_PPT生成提示词]] — 用结构化提示词控制 AI 生成 PPT/封面的风格/配色/排版，三维度描述法（AIGC）
+- [[概念_HTML代码方式生成视觉物料]] — LLM 输出 HTML+CSS 代码渲染视觉物料，可控性强、可复用（AIGC）
+- [[概念_AI_PPT工具路径]] — AI 原生派（Gamma 对话生成）vs 传统革新派（WPS AI 润物细无声）（AIGC）
+- [[概念_AI产品最后一公里]] — AI PPT 从「能用」到「可交付」的 gap：二次编辑+格式导出兼容（AIGC）
+
 ### AI-Agent/deep-research（Phase 4 Batch 6）
 - [[概念_Deep-Research-Agent定义与分类]] — DR Agent 定义、与 RAG/Tool Use 的边界、规划策略三模式（Planning-Only/Intent-to-Planning/Unified）（AI-Agent/deep-research）
 - [[概念_Deep-Research四大挑战]] — 信息窄门/幻觉不可靠/线性效率瓶颈/评测错位，及对应未来方向（AI-Agent/deep-research）
@@ -645,6 +657,12 @@
 
 ### Life（Phase 5 Batch 3）
 - [[实体_评论尸]] — 中文互联网创作者，博客「虹线」，《幸福的积分》作者（Life）
+
+### AIGC（Phase 6 Batch 1）
+- [[实体_Veo_3]] — Google 文本生成带音频视频模型，物理模拟出色，需 Gemini Pro（AIGC）
+- [[实体_Gemini]] — Google AI 助手，PPT 生成/深度研究/搜索，Veo 3 使用前提（AIGC）
+- [[实体_Gamma]] — AI 原生 PPT 工具先行者，对话生成卡片式演示文稿（AIGC）
+- [[实体_Genspark]] — 通用型超级智能体，PPT 为附属功能，图片引用缺失问题（AIGC）
 
 ## Comparisons
 
