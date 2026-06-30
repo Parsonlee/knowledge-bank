@@ -1,5 +1,25 @@
 # Wiki Log
 
+## 2026-06-30 ingest | Phase 5 Batch 3（最后一批）：Skill/data-analysis + Skill/linux + Life（4篇，基于全文）
+
+- 本批次 4 篇文章，全文均来自 `tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/`，Cubox highlights 参考对应文件
+- 新建来源页（sources/）3 个：
+  - `一行代码让matplotlib图表变高大上.md` (high) — 费弗里（程序员的那些事）：dufte 库三个 API（dufte.style/legend()/show_bar_values()）自动美化 matplotlib 图表；Cubox 无高亮（stub）
+  - `600条Linux命令速查手册.md` (high) — 冰河（码小辫转载）：28 大类约 600 条 Linux 命令分场景速查；Cubox 无高亮（stub）
+  - `现代打工人如何获得幸福.md` (high) — 评论尸、汐笺（少数派/虹线）：时间度量衡/幸福积分模型/天职/习得性快乐/逃离PUA五种思维，全文6万余字合理截取；Cubox 1处高亮已标注 [重点/高亮]
+- 新建概念页（concepts/）4 个：
+  - `概念_matplotlib样式美化.md` — dufte 设计哲学（去除多余轴线）、三个 API、局部主题设置方式
+  - `概念_Linux命令分类速查.md` — 28 大功能分类完整目录（系统/文件/文本/磁盘/用户/网络/VIM/包管理等）
+  - `概念_幸福积分模型.md` — 幸福=曲线下面积（积分）而非高度，时间度量衡，等周不等式，延迟满足的投资类比
+  - `概念_天职Calling.md` — 三条筛选标准，天职≠钱多事少离家近，工作本身=娱乐（价格为负数），案例
+  - `概念_习得性快乐.md` — A型（多巴胺驱动）vs B型（社会建构），被动习得→习得性不快乐，消费虚无主义困境
+- 新建实体页（entities/）2 个：
+  - `实体_dufte.md` — matplotlib 样式美化 Python 库，三个核心 API
+  - `实体_评论尸.md` (medium) — 博客「虹线」创作者，《幸福的积分》作者
+- index.md 已更新（Sources 追加 3 条，Concepts 新增 Skill/linux + Life 专区共 5 条，Entities 追加 2 条）
+- 跳过：`数据可视化 - 你会颜色搭配嘛？`（全文<500字符，正文几乎全是图片，无可提取文字知识）→ 已追加 fail.md
+- 全部内容基于全文，未使用模型自身知识补全
+
 ## 2026-06-30 ingest | Phase 5 Batch 2：Skill/data-analysis + LLM/training（5篇，基于全文）
 
 - 本批次 5 篇文章，全文均来自 `tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/`，Cubox highlights 参考对应文件
