@@ -174,6 +174,10 @@
 - [[淘宝直播数字人_TTS语音合成技术]] — 淘天直播 AIGC 团队：TTS 数据管线 + V1→V4 四代模型演进（CosyVoice2+vLLM）（TTS）
 - [[Foundation_Sprint产品验证完全指南]] — 谷歌 Jake Knapp 的 Foundation Sprint：10 小时奠定战略基础，基础/差异化2x2/Magic Lenses 三阶段 + 创始假设（创业）
 - [[RLMRec_港大百度LLM推荐算法]] — 港大联合百度：互信息最大化对齐 CF 表征与 LLM 语义表征，即插即用去噪增强（Recommendation）
+- [[阿里云大模型落地RIDE方法论与RaaS实践]] — 阿里云 CIO 蒋林泉：RIDE 四步方法论 + RaaS 结果即服务 + 翻译/Agent 两模式 + 数字人管理（创业）
+- [[Superhuman_PMF引擎方法论]] — Superhuman 把 PMF 量化为可优化指标的四步引擎，22%→58%，ARR 3500 万美元（创业）
+- [[Bundle_Unbundle视角看AI时代机会]] — 42章经：Grammarly 案例 + Shishir Bundle 理论(MCC/2x2) + 集装箱历史类比 AI（创业）
+- [[100家顶尖AI初创公司的7个真相]] — Leonis AI 100：高人效/倒漏斗GTM/多赢家/快速转型/阈值解锁/收入激增/研究型创始人（创业）
 
 ## Concepts
 
@@ -629,6 +633,19 @@
 - [[概念_Magic_Lenses魔术镜头]] — 五种专家视角（客户/务实/增长/财务/差异化）评估执行路径（创业）
 - [[概念_先思考再行动]] — AI 时代先做战略思考再开发：快是陷阱、AI 致平庸、思考不可外包（创业）
 
+### 创业（Phase 6 Batch 4）
+- [[概念_RIDE方法论]] — 阿里云 RIDE：Reorganize/Identify/Define/Execute 大模型 E2E 落地四步法（创业）
+- [[概念_RaaS结果即服务]] — 红杉 RaaS：只交付工具不够，必须真正上线产生业务结果（创业）
+- [[概念_AI企业数字人管理模式]] — 数字人作为正式员工管理：汇报业务部门/AI 工号/效率效果双达标上岗（创业）
+- [[概念_PMF引擎]] — Superhuman 四步法：精准细分/分析反馈/规划路线图/重复迭代，量化优化 PMF（创业）
+- [[概念_Sean_Ellis_PMF指标]] — "非常失望"比例 40% 门槛：PMF 领先指标（创业）
+- [[概念_Bundle理论]] — Shishir Mehrotra：三种用户/MCC 分成/刚需错开非刚需重叠/2x2 矩阵（创业）
+- [[概念_Unbundle_Rebundle规律]] — 技术 unbundle 切入市场/商业 rebundle 捕获价值/集装箱类比 AI（创业）
+- [[概念_AI初创高人效模式]] — Leonis AI 100：极简扁平团队人均百万美元 ARR，轻人力重算力数据（创业）
+- [[概念_倒漏斗GTM模式]] — AI 初创：PLG 先行验证价值，销售后置正式化已存在需求（创业）
+- [[概念_AI市场阈值解锁]] — AI 市场按序爆发：模型突破关键阈值才解锁新品类（创业）
+- [[概念_研究型创始人崛起]] — 86% 技术创始人/82% 技术 CEO，研究型创始人预判能力突破（创业）
+
 ### AI-Agent/deep-research（Phase 4 Batch 6）
 - [[概念_Deep-Research-Agent定义与分类]] — DR Agent 定义、与 RAG/Tool Use 的边界、规划策略三模式（Planning-Only/Intent-to-Planning/Unified）（AI-Agent/deep-research）
 - [[概念_Deep-Research四大挑战]] — 信息窄门/幻觉不可靠/线性效率瓶颈/评测错位，及对应未来方向（AI-Agent/deep-research）
@@ -708,6 +725,15 @@
 ### 创业（Phase 6 Batch 3）
 - [[实体_Jake_Knapp]] — Design Sprint 创造者，前 Google Ventures 设计合伙人，Character Capital 联创（创业）
 - [[实体_Character_Capital]] — Jake Knapp 与 John Zeratsky 创立的风投，专注 0 阶段超早期项目（创业）
+
+### 创业（Phase 6 Batch 4）
+- [[实体_蒋林泉]] — 阿里云 CIO & aliyun.com 负责人，RIDE 方法论提出者（创业）
+- [[实体_阿里云]] — 阿里巴巴公共云服务商，企业大模型落地实践与技术底座（创业, Infra/AI）
+- [[实体_Superhuman]] — AI 邮件客户端，PMF 引擎标杆，ARR 3500 万美元，被 Grammarly 收购（创业）
+- [[实体_Rahul_Vohra]] — Superhuman 创始人兼 CEO，PMF 引擎方法论提出者（创业）
+- [[实体_Grammarly]] — 嵌入式 AI 写作工具，年收入超 7 亿美金，收购 Coda+Superhuman 后改名（创业）
+- [[实体_Shishir_Mehrotra]] — Coda 创始人，新 Superhuman 集团 CEO，Bundle 理论实践者（创业）
+- [[实体_Leonis_Capital]] — 华人 2021 年成立早期 AI 风投，发布 The Leonis AI 100 报告（创业）
 
 ## Comparisons
 

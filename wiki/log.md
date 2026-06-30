@@ -1,5 +1,38 @@
 # Wiki Log
 
+## 2026-06-30 ingest | Phase 6 Batch 4：创业×4（RIDE/PMF/Bundle/AI初创真相）
+
+- 本批次 4 篇文章，全文均来自 tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/，高亮参考对应 Cubox 文件 Annotations
+- 来源页（sources/）新建 4 个：
+  - `阿里云大模型落地RIDE方法论与RaaS实践.md` (high) — 蒋林泉 RIDE 四步 + RaaS + 翻译/Agent 两模式 + 数字人管理（Cubox 无高亮）
+  - `Superhuman_PMF引擎方法论.md` (high) — Rahul Vohra PMF 引擎四步法，22%→58%（Cubox 无高亮）
+  - `Bundle_Unbundle视角看AI时代机会.md` (high) — Grammarly 案例 + Shishir Bundle 理论 + 集装箱历史类比（Cubox 高亮 1 处：最佳 bundle 策略"刚需错开非刚需重叠"，已标重点）
+  - `100家顶尖AI初创公司的7个真相.md` (high) — Leonis AI 100 七大洞察（Cubox 高亮 3 处：层级压缩/销售后置/技术型创始人数据，已标重点）
+- 概念页（concepts/）新建 11 个：
+  - `概念_RIDE方法论.md` — Reorganize/Identify/Define/Execute 大模型 E2E 落地四步法
+  - `概念_RaaS结果即服务.md` — 红杉 RaaS，只交付工具不够必须产生业务结果
+  - `概念_AI企业数字人管理模式.md` — 数字人作为正式员工管理：汇报业务/AI工号/双达标上岗
+  - `概念_PMF引擎.md` — Superhuman 四步法：精准细分/分析反馈/路线图/重复
+  - `概念_Sean_Ellis_PMF指标.md` — "非常失望"比例 40% 门槛，PMF 领先指标
+  - `概念_Bundle理论.md` — Shishir：三种用户/MCC/刚需错开非刚需重叠/2x2
+  - `概念_Unbundle_Rebundle规律.md` — unbundle 切入/rebundle 捕获/集装箱→AI 类比
+  - `概念_AI初创高人效模式.md` — 极简团队人均百万美元 ARR，轻人力重算力数据
+  - `概念_倒漏斗GTM模式.md` — PLG 先行验证，销售后置正式化已存在需求
+  - `概念_AI市场阈值解锁.md` — 模型突破关键阈值才解锁新品类，把握时机与执行同等重要
+  - `概念_研究型创始人崛起.md` — 86%技术创始人，研究型创始人预判能力突破
+- 实体页（entities/）新建 7 个：
+  - `实体_蒋林泉.md` — 阿里云 CIO，RIDE 方法论提出者
+  - `实体_阿里云.md` — 阿里巴巴公共云服务商，企业大模型落地主体
+  - `实体_Superhuman.md` — AI 邮件客户端，ARR 3500 万美元，被 Grammarly 收购
+  - `实体_Rahul_Vohra.md` — Superhuman 创始人，PMF 引擎提出者
+  - `实体_Grammarly.md` — 嵌入式 AI 写作工具，年收入超 7 亿美金
+  - `实体_Shishir_Mehrotra.md` — Coda 创始人/新 Superhuman CEO，Bundle 理论
+  - `实体_Leonis_Capital.md` — 华人早期 AI 风投，The Leonis AI 100 报告
+- 已更新 wiki/index.md（Sources + Concepts + Entities 三处追加）
+- 已更新概念页 概念_AI创业Scaling_Law.md 无需更新（无交叉内容）
+- 全部内容基于全文，未使用模型自身知识补全
+- 跳过：无（4 篇全文均有实质内容，均超 500 字符）
+
 ## 2026-06-30 ingest | Phase 6 Batch 3：创业×1 新建 + 已存在×4 跳过（5篇批次）
 
 - 本批次 5 篇文章检查结果：
