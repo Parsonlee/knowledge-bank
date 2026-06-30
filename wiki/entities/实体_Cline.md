@@ -32,4 +32,4 @@ Cline（前身 Claude-Dev）是 VS Code 的开源 AI 编码助手扩展，原生
 
 ## 参考来源
 
-- [[wiki/sources/MCP加数据库]] — VS Code + Cline + mcp-mongo-server 实战
+- [[MCP加数据库]] — VS Code + Cline + mcp-mongo-server 实战

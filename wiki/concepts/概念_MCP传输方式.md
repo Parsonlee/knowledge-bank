@@ -79,6 +79,6 @@ Streamable HTTP 解决扩展性问题，但 MCP Web 化还需配套：
 
 ## 参考来源
 
-- [[wiki/sources/MCP五大原语与Web化]] — Streamable HTTP 与 Web 化方向（MCP 联合创建者解读）
-- [[wiki/sources/基于MCP的AI_Agent应用开发实践]] — Stdio/SSE 实践与 Sidecar 模式、Roadmap
-- [[wiki/sources/MCP加数据库]] — npx Stdio 启动方式实战配置
+- [[MCP五大原语与Web化]] — Streamable HTTP 与 Web 化方向（MCP 联合创建者解读）
+- [[基于MCP的AI_Agent应用开发实践]] — Stdio/SSE 实践与 Sidecar 模式、Roadmap
+- [[MCP加数据库]] — npx Stdio 启动方式实战配置

@@ -29,4 +29,4 @@ Agent TARS 是字节跳动开发并开源的多模态 AI Agent 框架。在 MCP 
 
 ## 参考来源
 
-- [[wiki/sources/基于MCP的AI_Agent应用开发实践]] — 金鑫（字节跳动）MCP 实践分享
+- [[基于MCP的AI_Agent应用开发实践]] — 金鑫（字节跳动）MCP 实践分享

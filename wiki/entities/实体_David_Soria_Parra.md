@@ -25,4 +25,4 @@ David Soria Parra 是 Anthropic 工程团队成员，MCP（Model Context Protoco
 
 ## 参考来源
 
-- [[wiki/sources/MCP五大原语与Web化]] — David Soria Parra 访谈整理，五大原语与 Web 化权威解读
+- [[MCP五大原语与Web化]] — David Soria Parra 访谈整理，五大原语与 Web 化权威解读

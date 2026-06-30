@@ -76,8 +76,8 @@ MCP 不是"更高级的 Function Calling"，两者定位不同：
 
 ## 参考来源
 
-- [[wiki/sources/别再误会MCP了辟谣指南]] — CHS 架构深度解析（SDK 源码法证）
-- [[wiki/sources/MCP加数据库]] — MCP 核心价值与演进背景
-- [[wiki/sources/MCP五大原语与Web化]] — 五大原语权威解读（MCP 联合创建者）
-- [[wiki/sources/基于MCP的AI_Agent应用开发实践]] — 工程实践与 Roadmap
-- [[wiki/sources/MCP遇上代码执行]] — Token 消耗问题与代码执行模式
+- [[别再误会MCP了辟谣指南]] — CHS 架构深度解析（SDK 源码法证）
+- [[MCP加数据库]] — MCP 核心价值与演进背景
+- [[MCP五大原语与Web化]] — 五大原语权威解读（MCP 联合创建者）
+- [[基于MCP的AI_Agent应用开发实践]] — 工程实践与 Roadmap
+- [[MCP遇上代码执行]] — Token 消耗问题与代码执行模式

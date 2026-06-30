@@ -27,4 +27,4 @@ npx -y mcp-mongo-server mongodb://localhost:27017/mydb
 
 ## 参考来源
 
-- [[wiki/sources/MCP加数据库]] — MCP+MongoDB 实战配置与 RAG 对比
+- [[MCP加数据库]] — MCP+MongoDB 实战配置与 RAG 对比
