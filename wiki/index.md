@@ -178,6 +178,12 @@
 - [[Superhuman_PMF引擎方法论]] — Superhuman 把 PMF 量化为可优化指标的四步引擎，22%→58%，ARR 3500 万美元（创业）
 - [[Bundle_Unbundle视角看AI时代机会]] — 42章经：Grammarly 案例 + Shishir Bundle 理论(MCC/2x2) + 集装箱历史类比 AI（创业）
 - [[100家顶尖AI初创公司的7个真相]] — Leonis AI 100：高人效/倒漏斗GTM/多赢家/快速转型/阈值解锁/收入激增/研究型创始人（创业）
+- [[50年旅行经验之谈_Kevin_Kelly]] — Kevin Kelly 53 年旅行经验：Retreat/Engage 两模式 + Laser-Back 直达返回法 + 大量实操 tips（Life）
+- [[迪拜华人开车完全指南]] — 贴车文化/大转盘路权/Speed Bump/Waze 导航/重罚执法/燃油车市与中国品牌（Life）
+- [[初入投资容易犯的错误]] — laike9m：选错市场/一开始重仓/风格横跳三大错误 + 除以十/3-6月试错/固定1-2模式框架（Life）
+- [[什么是真正有效的驱蚊产品]] — 少数派：DEET/Picaridin/IR3535/OLE 四成分 + 浓度影响时长 + 安全性建议（Life）
+- [[中枢与网关使用指南]] — 米家智能家居：网关/中枢系统/主备中枢/从网关/盲网关概念体系（Life）
+- [[AI时代如何做独立开发]] — 艾逗笔：一年十款产品的五条感悟 + 出海 SOP/SEO/AI Wrapper + AI Coding/Agent/Infra/MCP 四方向（创业）
 
 ## Concepts
 
@@ -602,6 +608,17 @@
 - [[概念_天职Calling]] — 本身能带来快乐的工作，三条筛选标准，天职不是"钱多事少离家近"（Life）
 - [[概念_习得性快乐]] — A型（多巴胺驱动）vs B型（社会建构），被动习得→习得性不快乐的风险（Life）
 
+### Life（Phase 6 Batch 5：旅行/驾驶/投资/驱蚊/智能家居）
+- [[概念_Laser-Back旅行法]] — Kevin Kelly 两周假期优化法：激光直冲最远点再蜿蜒返回，12 天最佳（Life）
+- [[概念_旅行的投入与体验模式]] — Retreat（R&R 退隐）vs Engage（E&E 投入体验）两种旅行模式（Life）
+- [[概念_Roundabout路权规则]] — 大转盘"进让行出直出"路权规则，效率与安全双优（Life）
+- [[概念_迪拜驾驶文化]] — 贴车文化/重罚厉慑执法/Speed Bump/Waze/燃油车市综合特征（Life）
+- [[概念_投资反馈机制]] — 选正常市场获有效反馈，不正常市场无法纠错成长（Life）
+- [[概念_投资风格确立]] — 缩小决策解空间，固定 1-2 种最舒服模式长期精进（Life）
+- [[概念_驱蚊有效成分]] — DEET/Picaridin/IR3535/OLE 四成分，含量影响有效时间非效果（Life）
+- [[概念_DEET避蚊胺]] — 教科书级驱蚊成分，浓度边际效应，分龄安全建议（Life）
+- [[概念_智能家居中枢与网关]] — 米家网关/中枢系统/主备中枢/从网关/盲网关概念体系（Life）
+
 ### AIGC（Phase 6 Batch 1）
 - [[概念_Veo3视频提示词]] — Veo 3 提示词七要素/角色一致性/音频控制/避免字幕/风格切换/自拍技巧（AIGC）
 - [[概念_PPT生成提示词]] — 用结构化提示词控制 AI 生成 PPT/封面的风格/配色/排版，三维度描述法（AIGC）
@@ -645,6 +662,9 @@
 - [[概念_倒漏斗GTM模式]] — AI 初创：PLG 先行验证价值，销售后置正式化已存在需求（创业）
 - [[概念_AI市场阈值解锁]] — AI 市场按序爆发：模型突破关键阈值才解锁新品类（创业）
 - [[概念_研究型创始人崛起]] — 86% 技术创始人/82% 技术 CEO，研究型创始人预判能力突破（创业）
+
+### 创业（Phase 6 Batch 5：AI 独立开发）
+- [[概念_AI独立开发方法论]] — 艾逗笔五条感悟（快/精/小切入/造血/流量）+ 出海 SOP + 四 all in 方向（创业）
 
 ### AI-Agent/deep-research（Phase 4 Batch 6）
 - [[概念_Deep-Research-Agent定义与分类]] — DR Agent 定义、与 RAG/Tool Use 的边界、规划策略三模式（Planning-Only/Intent-to-Planning/Unified）（AI-Agent/deep-research）
@@ -705,6 +725,11 @@
 ### Life（Phase 5 Batch 3）
 - [[实体_评论尸]] — 中文互联网创作者，博客「虹线」，《幸福的积分》作者（Life）
 
+### Life（Phase 6 Batch 5：旅行/驾驶/智能家居）
+- [[实体_Kevin_Kelly]] — 博客 The Technium 作者，50 年旅行经验，Laser-Back 方法提出者（Life）
+- [[实体_Waze]] — 以色列 2006 成立/Google 旗下导航 APP，中东地区市占率第一（Life）
+- [[实体_捷途Jetour]] — 奇瑞旗下中国汽车品牌，迪拜/中东市场中国车企扛把子（Life）
+
 ### AIGC（Phase 6 Batch 1）
 - [[实体_Veo_3]] — Google 文本生成带音频视频模型，物理模拟出色，需 Gemini Pro（AIGC）
 - [[实体_Gemini]] — Google AI 助手，PPT 生成/深度研究/搜索，Veo 3 使用前提（AIGC）
@@ -734,6 +759,10 @@
 - [[实体_Grammarly]] — 嵌入式 AI 写作工具，年收入超 7 亿美金，收购 Coda+Superhuman 后改名（创业）
 - [[实体_Shishir_Mehrotra]] — Coda 创始人，新 Superhuman 集团 CEO，Bundle 理论实践者（创业）
 - [[实体_Leonis_Capital]] — 华人 2021 年成立早期 AI 风投，发布 The Leonis AI 100 报告（创业）
+
+### 创业（Phase 6 Batch 5：AI 独立开发）
+- [[实体_艾逗笔_idoubi]] — ThinkAny & MCP.so 创始人，腾讯 5 年后裸辞独立开发，AI 应用出海（创业）
+- [[实体_MCP_so]] — MCP 应用市场，月均百万访问，被 a16z 引用，程序化 SEO Google MCP 关键词第一（创业）
 
 ## Comparisons
 

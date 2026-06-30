@@ -1,5 +1,30 @@
 # Wiki Log
 
+## 2026-06-30 ingest | Phase 6 Batch 5：Life×5 + 创业×1（旅行/驾驶/投资/驱蚊/智能家居/独立开发）
+
+- 本批次 6 篇文章，全文均来自 tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/
+- **高亮检查**：6 篇对应 Cubox 文件均无 Annotations 高亮区块（仅含标准 frontmatter + 摘要 + Read 链接），故本批次无 `[重点/高亮]` 标注
+- 来源页（sources/）新建 6 个（全部 confidence: high）：
+  - `50年旅行经验之谈_Kevin_Kelly.md` — KK 53 年旅行经验，两种模式 + Laser-Back + 大量 tips（Life）
+  - `迪拜华人开车完全指南.md` — 八节：寸步难行/贴车/大转盘/Speed Bump/Waze/罚款/燃油车市/中国汽车（Life）
+  - `初入投资容易犯的错误.md` — laike9m：三大错误 + 除以十/试错/固定模式三步框架（Life）
+  - `什么是真正有效的驱蚊产品.md` — 少数派：四成分 + 浓度规律 + 安全性 + 中国市场（Life）
+  - `中枢与网关使用指南.md` — 米家：网关/中枢系统/主备中枢/从网关/盲网关（Life）
+  - `AI时代如何做独立开发.md` — 艾逗笔：五感悟 + 出海 SOP/SEO/Wrapper + 四 all in 方向（创业）
+- 概念页（concepts/）新建 11 个：
+  - `概念_Laser-Back旅行法.md`、`概念_旅行的投入与体验模式.md`（Life）
+  - `概念_Roundabout路权规则.md`、`概念_迪拜驾驶文化.md`（Life）
+  - `概念_投资反馈机制.md`、`概念_投资风格确立.md`（Life）
+  - `概念_驱蚊有效成分.md`、`概念_DEET避蚊胺.md`（Life）
+  - `概念_智能家居中枢与网关.md`（Life）
+  - `概念_AI独立开发方法论.md`（创业）
+- 实体页（entities/）新建 5 个：
+  - `实体_Kevin_Kelly.md`、`实体_Waze.md`、`实体_捷途Jetour.md`（Life）
+  - `实体_艾逗笔_idoubi.md`、`实体_MCP_so.md`（创业）
+- 复用既有页：`概念_PMF引擎`、`概念_MCP协议` 已存在（独立开发文中提及），通过 wikilink 引用，未新建
+- 已更新 wiki/index.md（Sources 6 条 + Concepts Life/创业两个新分组 + Entities Life/创业两个新分组）
+- 全部内容基于全文，未使用模型自身知识补全；6 篇全文均有实质内容且超 500 字符，无跳过
+
 ## 2026-06-30 ingest | Phase 6 Batch 4：创业×4（RIDE/PMF/Bundle/AI初创真相）
 
 - 本批次 4 篇文章，全文均来自 tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/，高亮参考对应 Cubox 文件 Annotations
