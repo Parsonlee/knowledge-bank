@@ -172,6 +172,7 @@
 - [[关于Nano_Banana的一些浅思]] — Gemini 2.5 Flash Image 功能/提示词模板全解析+普通人与大模型协作哲学/Vibe Coding 三阶段实践（AIGC）
 - [[超详细提示词教程_玩转Wan2.2]] — 通义万相 2.2 文生视频提示词完整词典：基础/进阶/图生视频公式 + 9大维度美学控制（AIGC）
 - [[淘宝直播数字人_TTS语音合成技术]] — 淘天直播 AIGC 团队：TTS 数据管线 + V1→V4 四代模型演进（CosyVoice2+vLLM）（TTS）
+- [[Foundation_Sprint产品验证完全指南]] — 谷歌 Jake Knapp 的 Foundation Sprint：10 小时奠定战略基础，基础/差异化2x2/Magic Lenses 三阶段 + 创始假设（创业）
 - [[RLMRec_港大百度LLM推荐算法]] — 港大联合百度：互信息最大化对齐 CF 表征与 LLM 语义表征，即插即用去噪增强（Recommendation）
 
 ## Concepts
@@ -621,6 +622,13 @@
 - [[概念_互信息最大化去噪表征]] — CF 表征含噪声，引入文本语义模态极大化共存部分；InfoNCE 变分下界优化（Recommendation）
 - [[概念_LLM用户商品画像生成]] — Item-to-User 流水线；商品先于用户生成；CoT 风格 Instruction；可并行（Recommendation）
 
+### 创业（Phase 6 Batch 3）
+- [[概念_Foundation_Sprint]] — Jake Knapp 超早期项目战略奠基流程：10 小时三阶段，产出创始假设（创业）
+- [[概念_Design_Sprint]] — 五天产品验证冲刺：Map/Sketch/Decide/Prototype/Test + Scorecard 计分卡（创业）
+- [[概念_差异化2x2分析]] — Foundation Sprint 差异化工具：经典+自定义因素，2x2 独占右上角避开"失败者村"（创业）
+- [[概念_Magic_Lenses魔术镜头]] — 五种专家视角（客户/务实/增长/财务/差异化）评估执行路径（创业）
+- [[概念_先思考再行动]] — AI 时代先做战略思考再开发：快是陷阱、AI 致平庸、思考不可外包（创业）
+
 ### AI-Agent/deep-research（Phase 4 Batch 6）
 - [[概念_Deep-Research-Agent定义与分类]] — DR Agent 定义、与 RAG/Tool Use 的边界、规划策略三模式（Planning-Only/Intent-to-Planning/Unified）（AI-Agent/deep-research）
 - [[概念_Deep-Research四大挑战]] — 信息窄门/幻觉不可靠/线性效率瓶颈/评测错位，及对应未来方向（AI-Agent/deep-research）
@@ -696,6 +704,10 @@
 ### Recommendation（Phase 6 Batch 2）
 - [[实体_RLMRec]] — 港大+百度模型无关 LLM 推荐框架；互信息最大化对比/生成双范式；落地搜索业务（Recommendation）
 - [[实体_港大数据智能实验室]] — HKU-DS，RLMRec 团队，chaoh 实验室（Recommendation）
+
+### 创业（Phase 6 Batch 3）
+- [[实体_Jake_Knapp]] — Design Sprint 创造者，前 Google Ventures 设计合伙人，Character Capital 联创（创业）
+- [[实体_Character_Capital]] — Jake Knapp 与 John Zeratsky 创立的风投，专注 0 阶段超早期项目（创业）
 
 ## Comparisons
 

@@ -1,6 +1,27 @@
 # Wiki Log
 
-## 2026-06-30 ingest | Phase 6 Batch 2：AIGC×3 + TTS×1 + Recommendation×1（5篇，基于全文）
+## 2026-06-30 ingest | Phase 6 Batch 3：创业×1 新建 + 已存在×4 跳过（5篇批次）
+
+- 本批次 5 篇文章检查结果：
+  - 文章 1「Nano-Banana Pro 论文绘图最全教程发布」：**已在 Phase 6 Batch 2 完整处理**（source+概念+实体+index 齐全），跳过
+  - 文章 2「关于 Nano Banana 的一些浅思」：**已在 Phase 6 Batch 2 完整处理**，跳过
+  - 文章 3「淘宝直播数字人：TTS语音合成技术」：**已在 Phase 6 Batch 2 完整处理**，跳过
+  - 文章 4「7天验证产品思路、10小时找到基础共识：来自谷歌的"Foundation Sprint"完全指南」：**新建**
+  - 文章 5「Jina AI创业复盘：AI团队的Scaling Law是什么」：**已在 Batch 9 完整处理**，跳过
+- 新建来源页（sources/）1 个：
+  - `Foundation_Sprint产品验证完全指南.md` (high) — Jake Knapp 的 Foundation Sprint：10 小时三阶段（基础/差异化/推进方法）+ 创始假设句式 + Latchet 案例三次 Design Sprint 迭代验证 + AI 时代先思考再行动
+- 新建概念页（concepts/）5 个：
+  - `概念_Foundation_Sprint.md` — 超早期项目约 10 小时战略奠基流程：三大阶段 + 创始假设产出
+  - `概念_Design_Sprint.md` — 五天标准化产品验证冲刺：Map/Sketch/Decide/Prototype/Test + Scorecard 计分卡
+  - `概念_差异化2x2分析.md` — 经典+自定义差异化因素、2x2 图右上角独占、项目原则迷你宣言
+  - `概念_Magic_Lenses魔术镜头.md` — 五种专家视角评估执行路径 + 可自定义镜头
+  - `概念_先思考再行动.md` — AI 时代快是陷阱/AI 致平庸/战略思考不可外包 + Bob Baxley "原始标记"
+- 新建实体页（entities/）2 个：
+  - `实体_Jake_Knapp.md` — Design Sprint 创造者，前 GV 设计合伙人，Character Capital 联创
+  - `实体_Character_Capital.md` — Jake Knapp 与 John Zeratsky 创立的风投，专注 0 阶段项目
+- 已更新 wiki/index.md（Sources 追加 1 条，Concepts 新增 创业 Phase 6 Batch 3 专区 5 条，Entities 追加 2 条）
+- 全部内容基于全文，未使用模型自身知识补全
+- 跳过：4 篇（均已在此前批次完整处理，非失败）
 
 - 本批次 5 篇文章，全文均来自 `tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/`，Cubox 文件均为 stub（无 Annotations 高亮）
 - 注：此批次源文件已有前次 ingest 遗留的孤儿页面（不在 index，链接不合规范），本批次统一覆盖更新为规范格式并完整注册
