@@ -156,6 +156,10 @@
 - [[Docker化Flask_Django应用从pip切换到uv]] — Nick Janetakis：Docker 项目 pip→uv，约 10x 提速，pyproject.toml/uv.lock/非 root（Skill/python）
 - [[加速Python循环的12种方法]] — 12 种 for 循环优化：map 970x/set 498x/filterfalse 131x/lru_cache 57x（Skill/python）
 - [[五个鲜为人知的Python功能]] — contextlib.suppress/setrecursionlimit/typing.Literal/__missing__/__subclasshook__（Skill/python）
+- [[自动探索性数据分析EDA_10个Python包]] — D-Tale/Pandas-Profiling/Sweetviz/AutoViz/Dataprep 等 10 个自动 EDA 包对比与选型（Skill/python, Skill/data-analysis）
+- [[Pandas一行代码绘制25种美图]] — DataFrame.plot/Series.plot 一行代码绘制 25 种图表（Skill/data-analysis）
+- [[超强图解Pandas操作大全]] — 图解 Pandas 核心操作：排序/分组/连接/透视/索引（Skill/data-analysis, 面试）
+- [[图解Pandas常用操作_NumPy对比与进阶]] — Pandas Illustrated 翻译：NumPy 对比/Series/DataFrame/MultiIndex 四部分（Skill/data-analysis, Skill/python, 面试）
 
 ## Concepts
 
@@ -566,6 +570,11 @@
 - [[概念_Python函数式工具]] — map/lru_cache/filterfalse/Generator，C 实现替代显式循环（Skill/python）
 - [[概念_Python进阶特性]] — suppress/setrecursionlimit/Literal/__missing__/__subclasshook__（Skill/python）
 
+### Skill/data-analysis（Phase 5 Batch 2）
+- [[概念_自动EDA工具]] — 10 个自动 EDA 包四类分类（报告/可视化/定制/ML 集成）与选型建议（Skill/data-analysis, Skill/python）
+- [[概念_Pandas可视化]] — DataFrame.plot/Series.plot 内置绘图 + pandas.plotting 高级可视化（Skill/data-analysis）
+- [[概念_Pandas核心操作图解]] — 选择/排序/分组/合并/变形/索引 + NumPy 对比关键差异（Skill/data-analysis, Skill/python, 面试）
+
 ### AI-Agent/deep-research（Phase 4 Batch 6）
 - [[概念_Deep-Research-Agent定义与分类]] — DR Agent 定义、与 RAG/Tool Use 的边界、规划策略三模式（Planning-Only/Intent-to-Planning/Unified）（AI-Agent/deep-research）
 - [[概念_Deep-Research四大挑战]] — 信息窄门/幻觉不可靠/线性效率瓶颈/评测错位，及对应未来方向（AI-Agent/deep-research）
@@ -616,6 +625,10 @@
 ### Skill/python（Phase 5 Batch 1）
 - [[实体_FastAPI]] — Python 高性能 Web 框架，基于 Starlette/Pydantic，原生 async/await，性能与 Go 不相上下（Skill/python）
 - [[实体_uv]] — Astral 开发的 Rust 编写 Python 包管理器，pip 替代品，约 10x 速度提升（Skill/python）
+
+### Skill/data-analysis（Phase 5 Batch 2）
+- [[实体_Pandas]] — Python 数据分析核心库，基于 NumPy，Series/DataFrame + groupby/merge/pivot/plot（Skill/data-analysis, Skill/python）
+- [[实体_Dataprep]] — 开源 Python EDA 包，基于 Pandas+Dask，自动 EDA 中速度最快（Skill/data-analysis, Skill/python）
 
 ## Comparisons
 

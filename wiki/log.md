@@ -1,5 +1,24 @@
 # Wiki Log
 
+## 2026-06-30 ingest | Phase 5 Batch 2：Skill/data-analysis + LLM/training（5篇，基于全文）
+
+- 本批次 5 篇文章，全文均来自 `tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/`，Cubox highlights 参考对应文件
+- 新建来源页（sources/）4 个：
+  - `自动探索性数据分析EDA_10个Python包.md` (high) — 数据STUDIO：10 个自动 EDA Python 包（D-Tale/Pandas-Profiling/Sweetviz/AutoViz/Dataprep/KLib/Dabl/SpeedML/DataTile/edaviz），推荐 Dataprep 最常用；Cubox 无高亮（stub）
+  - `Pandas一行代码绘制25种美图.md` (high) — pythonic生物人/凹凸数据：DataFrame.plot/Series.plot 一行代码 25 种可视化，kind 参数 11 种图表类型；Cubox 无高亮（stub）
+  - `超强图解Pandas操作大全.md` (high) — 网络：图解 Pandas 核心操作（sort_values/groupby/join/merge/pivot_table/melt/stack/set_index 等）；Cubox 无高亮（stub）
+  - `图解Pandas常用操作_NumPy对比与进阶.md` (high) — Pandas Illustrated 翻译：四部分完整图解（NumPy 对比 7 大优势/Series+Index/DataFrame/MultiIndex），NaN 处理后大数组 Pandas 快 1.5x；Cubox 无高亮（stub）
+- 新建概念页（concepts/）3 个：
+  - `概念_自动EDA工具.md` — 10 个自动 EDA 包四类分类（报告/可视化/定制/ML集成）与选型建议
+  - `概念_Pandas可视化.md` — DataFrame.plot/Series.plot API、kind 参数、pandas.plotting 高级可视化
+  - `概念_Pandas核心操作图解.md` — 选择过滤/排序/分组聚合/连接合并/变形/索引管理 + NumPy 对比表
+- 新建实体页（entities/）2 个：
+  - `实体_Pandas.md` — Python 数据分析核心库，Series/DataFrame + groupby/merge/pivot/plot
+  - `实体_Dataprep.md` — 开源 Python EDA 包，Pandas+Dask，自动 EDA 中速度最快
+- index.md 已更新（Sources 追加 4 条，Concepts 新增 Skill/data-analysis 专区 3 条，Entities 追加 2 条）
+- 全部内容基于全文，未使用模型自身知识补全
+- 跳过：`SFT数据挑选方法 - 知乎`（已在 Phase 4 Batch 6 完整处理，source+概念+实体均存在于 index.md）
+
 ## 2026-06-30 ingest | Phase 5 Batch 1：Skill/python（5篇，基于全文）
 
 - 本批次 5 篇文章，全文均来自 `tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/`，Cubox highlights 参考对应文件
