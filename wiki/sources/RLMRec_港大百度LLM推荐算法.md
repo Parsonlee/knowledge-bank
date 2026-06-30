@@ -1,70 +1,60 @@
 ---
-title: "RLMRec：港大百度 LLM 推荐算法"
-source_url: ""
+title: "即插即用、简单有效的大语言模型推荐算法！港大联合百度推出RLMRec"
+source_url: "https://mp.weixin.qq.com/s/syCREjY7YIg8LIsDzj6EPQ"
 author: "PaperWeekly"
-date_published: ""
+date_published: "2024-02-07"
+tags: [Recommendation]
 confidence: high
-tags:
-  - Recommendation
-  - LLM/arch
-  - RAG/embedding
 ---
 
 # RLMRec：港大百度 LLM 推荐算法
 
-> 港大联合百度提出 RLMRec，通过互信息最大化对齐协同过滤表示与 LLM 语义表示，实现对交互图噪声的去噪增强。
+港大联合百度提出 RLMRec，从互信息最大化的理论角度，引入 LLM 生成的文本语义信号优化推荐算法表征学习中的噪声，通过对比式/生成式两套对齐范式实现去噪增强。
 
 ## Key Points
 
-- **论文信息**：arxiv:2310.15950，港大联合百度研究院，已部署于公司搜索业务。
+- **论文信息**：arxiv:2310.15950，代码 github.com/HKUDS/RLMRec，已落地公司搜索业务
 
-- **核心问题**：协同过滤（CF）从用户-物品交互图中学习的表示含有大量噪声（稀疏交互、长尾用户），单纯依赖行为信号导致推荐质量受限。
+- **核心问题**：基于图神经网络的协同过滤（CF）从用户-物品交互图学习表征，但交互图含噪声（误点击、购买后不喜欢等），噪声被 BPR 损失嵌入表征，形成有噪表征学习
 
-- **核心思路**：用 LLM 生成的文本语义表示作为"干净信号"，通过**互信息最大化**与 CF 侧表示对齐，将语义知识注入协同过滤，实现去噪。
+- **核心思路**（详见 [[概念_互信息最大化去噪表征]]）
+  - CF-side Representation 含两种成分：有益于推荐的偏好成分 + 噪音成分
+  - 引入另一模态（文本语义）特征，极大化两模态共存部分（交集），压缩噪音
+  - 理论推导：该优化等同于**最大化两种模态特征表示的互信息**
+  - 通过 InfoNCE 的互信息变分下界优化，引入 critic function 计算相似度
 
-- **关键组件**
+- **LLM 文本表征获取**（详见 [[概念_LLM用户商品画像生成]]）
+  - 用户画像：体现喜欢什么类别商品；商品画像：体现吸引什么用户群体
+  - 先商品后用户（Item-to-User）生成流程
+  - 商品画像：用原始描述（Amazon-book）或属性标签+用户反馈（Yelp）构建 Prompts
+  - 用户画像：基于购买商品+反馈构建 Prompts
+  - 每个用户/商品独立生成，可并行；用思维链思想构建 Instruction 提质
+  - 文本编码器：OpenAI text-embedding-ada-002（越优异编码器帮助越大）
 
-  1. **LLM Profile 生成**
-     - Item-to-User 流水线：先为物品生成描述，再聚合为用户画像。
-     - CoT 风格指令：引导 LLM 逐步推理用户偏好，生成结构化文本 profile。
-     - 并行生成以降低延迟。
+- **两种对齐范式**
+  - **RLMRec-Con（对比式对齐）**：MLP 降维文本表征至 CF 维度，余弦相似度+指数函数；双向对齐；抗噪能力最强
+  - **RLMRec-Gen（生成式对齐）**：随机节点初始特征替换为 [MASK]，MLP 放大 CF 表征至文本维度；Mask-autoencoding 单向重构；预训练场景避免过拟合
 
-  2. **文本编码**
-     - 使用 OpenAI `text-embedding-ada-002` 将 profile 文本编码为稠密向量。
-     - 消融实验表明：文本编码器质量与最终推荐性能正相关。
+- **模型无关框架**：可无缝嵌入任意以表征学习为基础的 CF 推荐算法
 
-  3. **两种对齐范式**
-     - **RLMRec-Con（对比对齐）**：双向对比学习，拉近 CF 表示与语义表示，推远负样本；抗噪能力最强。
-     - **RLMRec-Gen（生成对齐）**：掩码自编码，单向从 CF 表示重建文本语义表示；预训练场景下更能避免过拟合。
-
-- **模型无关框架**：可即插即用地接入任意基于 CF 的推荐模型（GCCF / LightGCN / SGL / SimGCL / DCCF / AutoCF），无需修改原始模型结构。
-
-- **实验结果**
-  - 数据集：Amazon-Book、Yelp、Steam。
-  - 基线：GCCF、LightGCN、SGL、SimGCL、DCCF、AutoCF。
-  - RLMRec 在所有数据集和基线上均取得显著提升。
-
-- **消融与分析**
-  - 更强的文本编码器 → 更好的推荐性能（编码器质量是瓶颈）。
-  - 噪声实验：RLMRec-Con 对交互噪声的抵抗力最强。
-  - 预训练场景：RLMRec-Gen 泛化更好，过拟合风险更低。
-
-- **工程部署**：已落地于百度搜索业务，验证了工业级可用性。
+- **实验**
+  - 数据集：Amazon-book、Yelp、Steam
+  - 基线：GCCF/LightGCN/SGL/SimGCL/DCCF/AutoCF，均显著提升
+  - 消融：更强文本编码器→更好性能；打乱文本表征顺序性能下降最明显
+  - 噪声实验：RLMRec-Con 抗噪最强；预训练：RLMRec-Gen 泛化更好
 
 ## Related Concepts
 
-- [[协同过滤]]
-- [[互信息最大化]]
-- [[对比学习]]
-- [[LightGCN]]
-- [[推荐系统]]
-- [[用户画像]]
-- [[RAG/embedding]]
-- [[掩码自编码]]
+- [[概念_互信息最大化去噪表征]]
+- [[概念_LLM用户商品画像生成]]
+- [[概念_大模型推荐系统]]
 
 ## Related Entities
 
-- [[香港大学]]
-- [[百度]]
-- [[PaperWeekly]]
-- [[OpenAI text-embedding-ada-002]]
+- [[实体_RLMRec]]
+- [[实体_港大数据智能实验室]]
+
+## 来源
+
+- 全文：`tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/即插即用、简单有效的大语言模型推荐算法！港大联合百度推出RLMRec.md`
+- Cubox：`Cubox/即插即用、简单有效的大语言模型推荐算法！港大联合百度推出RLMRec-2024-02-07.md`
