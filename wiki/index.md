@@ -168,6 +168,11 @@
 - [[Google_Veo3账号获取与提示技巧全攻略]] — Veo3 免费获取账号方法+Flow平台使用+提示技巧全攻略中文版（AIGC）
 - [[九大主流AI_PPT横测]] — 九大 AI PPT 工具横测：AI原生派vs传统革新派，最后一公里难题（AIGC）
 - [[一套提示词实现封面自由]] — 模块化封面生成提示词：小红书/公众号封面+十套风格，DeepSeek V3 也能用（AIGC）
+- [[Nano-Banana_Pro论文绘图教程]] — 「架构师→渲染器→编辑器」三步工作流，VISUAL SCHEMA 驱动 Gemini 2.5 Flash Image 生成 CVPR/NeurIPS 学术插图（AIGC）
+- [[关于Nano_Banana的一些浅思]] — Gemini 2.5 Flash Image 功能/提示词模板全解析+普通人与大模型协作哲学/Vibe Coding 三阶段实践（AIGC）
+- [[超详细提示词教程_玩转Wan2.2]] — 通义万相 2.2 文生视频提示词完整词典：基础/进阶/图生视频公式 + 9大维度美学控制（AIGC）
+- [[淘宝直播数字人_TTS语音合成技术]] — 淘天直播 AIGC 团队：TTS 数据管线 + V1→V4 四代模型演进（CosyVoice2+vLLM）（TTS）
+- [[RLMRec_港大百度LLM推荐算法]] — 港大联合百度：互信息最大化对齐 CF 表征与 LLM 语义表征，即插即用去噪增强（Recommendation）
 
 ## Concepts
 
@@ -599,6 +604,23 @@
 - [[概念_AI_PPT工具路径]] — AI 原生派（Gamma 对话生成）vs 传统革新派（WPS AI 润物细无声）（AIGC）
 - [[概念_AI产品最后一公里]] — AI PPT 从「能用」到「可交付」的 gap：二次编辑+格式导出兼容（AIGC）
 
+### AIGC（Phase 6 Batch 2）
+- [[概念_Nano_Banana_Pro论文绘图工作流]] — 架构师→渲染器→编辑器三步工作流；VISUAL SCHEMA 五种布局原型；禁止用于实验数据图表（AIGC）
+- [[概念_Nano_Banana图像生成提示词]] — 描述场景而非关键词；摄影师/设计师思维；六大生成+四大编辑场景完整模板（AIGC）
+- [[概念_人与大模型协作]] — Gemini 三大启示：思想催化剂/认知谦逊/Knowing-Why；GPT-5 补充：三颗钉子+错账本（AIGC）
+- [[概念_Vibe_Coding三阶段]] — 初级原型/中级重构/高级整体-细节-整体循环；UI/UX 不适合 AI 直接生成（AIGC）
+- [[概念_文生视频提示词公式]] — 基础/进阶/图生视频三套公式；主体+场景+运动+美学控制+风格化（AIGC）
+- [[概念_视频美学控制词典]] — Wan2.2 九大维度完整词典：光源/光线/时间/景别/构图/焦段/运镜/风格/特效（AIGC）
+
+### TTS（Phase 6 Batch 2）
+- [[概念_直播TTS数据处理管线]] — 语音信号处理/语音理解/说话人聚类三环节漏斗；利用直播回放替代录制素材（TTS）
+- [[概念_TTS两阶段架构]] — 前端文本归一化+后端语言模型/声学模型/声码器；Encodec偏声学/HuBERT偏语义（TTS）
+- [[概念_韵律情感拟人化TTS]] — 显式停顿@/拖音→标签控制韵律；参考音频情感注入高低音变化；个性化韵律表（TTS）
+
+### Recommendation（Phase 6 Batch 2）
+- [[概念_互信息最大化去噪表征]] — CF 表征含噪声，引入文本语义模态极大化共存部分；InfoNCE 变分下界优化（Recommendation）
+- [[概念_LLM用户商品画像生成]] — Item-to-User 流水线；商品先于用户生成；CoT 风格 Instruction；可并行（Recommendation）
+
 ### AI-Agent/deep-research（Phase 4 Batch 6）
 - [[概念_Deep-Research-Agent定义与分类]] — DR Agent 定义、与 RAG/Tool Use 的边界、规划策略三模式（Planning-Only/Intent-to-Planning/Unified）（AI-Agent/deep-research）
 - [[概念_Deep-Research四大挑战]] — 信息窄门/幻觉不可靠/线性效率瓶颈/评测错位，及对应未来方向（AI-Agent/deep-research）
@@ -663,6 +685,17 @@
 - [[实体_Gemini]] — Google AI 助手，PPT 生成/深度研究/搜索，Veo 3 使用前提（AIGC）
 - [[实体_Gamma]] — AI 原生 PPT 工具先行者，对话生成卡片式演示文稿（AIGC）
 - [[实体_Genspark]] — 通用型超级智能体，PPT 为附属功能，图片引用缺失问题（AIGC）
+
+### AIGC（Phase 6 Batch 2）
+- [[实体_Nano_Banana_Pro]] — Gemini 2.5 Flash Image 别名，原生多模态/强角色一致性/对话式编辑，学术绘图最佳选择（AIGC）
+- [[实体_通义万相Wan2.2]] — 阿里通义文生视频模型，三套提示词公式+九大维度美学控制词典（AIGC）
+
+### TTS（Phase 6 Batch 2）
+- [[实体_CosyVoice]] — 阿里通义开源 TTS 模型，V4 融合 CosyVoice2+Qwen2.5-0.5B+vLLM，相似度 0.93（TTS）
+
+### Recommendation（Phase 6 Batch 2）
+- [[实体_RLMRec]] — 港大+百度模型无关 LLM 推荐框架；互信息最大化对比/生成双范式；落地搜索业务（Recommendation）
+- [[实体_港大数据智能实验室]] — HKU-DS，RLMRec 团队，chaoh 实验室（Recommendation）
 
 ## Comparisons
 

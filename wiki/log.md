@@ -1,5 +1,25 @@
 # Wiki Log
 
+## 2026-06-30 ingest | Phase 6 Batch 2：AIGC×3 + TTS×1 + Recommendation×1（5篇，基于全文）
+
+- 本批次 5 篇文章，全文均来自 `tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/`，Cubox 文件均为 stub（无 Annotations 高亮）
+- 注：此批次源文件已有前次 ingest 遗留的孤儿页面（不在 index，链接不合规范），本批次统一覆盖更新为规范格式并完整注册
+- 来源页（sources/）新建/更新 5 个：
+  - `Nano-Banana_Pro论文绘图教程.md` (high) — 三步工作流（Architect→Renderer→Editor）；VISUAL SCHEMA 五布局原型；禁用于实验数据图表；进阶技巧（参考图风格迁移/HEX控色/去水印/Illustrator矢量化）
+  - `关于Nano_Banana的一些浅思.md` (high) — Gemini 2.5 Flash Image 能力概览/六大生成+四大编辑模板/Vibe Coding 三阶段；Gemini+GPT-5 人机协作哲学对话完整摘要
+  - `超详细提示词教程_玩转Wan2.2.md` (high) — 通义万相 2.2 文生视频三套公式 + 九大维度完整美学词典（光源9/光线8/时间5/景别5/构图5/焦段4/运镜7/风格4/特效2）
+  - `淘宝直播数字人_TTS语音合成技术.md` (high) — 三环节数据管线（信号处理/语音理解/说话人聚类）；V1→V4 四代模型演进；CosyVoice2+vLLM V4 相似度 0.9284
+  - `RLMRec_港大百度LLM推荐算法.md` (high) — 互信息最大化理论框架；Item-to-User CoT 画像生成；RLMRec-Con/Gen 对齐；模型无关即插即用；落地百度搜索业务
+- 概念页（concepts/）新建 11 个：
+  - Nano_Banana_Pro论文绘图工作流、Nano_Banana图像生成提示词、人与大模型协作、Vibe_Coding三阶段（AIGC）
+  - 文生视频提示词公式、视频美学控制词典（AIGC）
+  - 直播TTS数据处理管线、TTS两阶段架构、韵律情感拟人化TTS（TTS）
+  - 互信息最大化去噪表征、LLM用户商品画像生成（Recommendation）
+- 实体页（entities/）新建 5 个：Nano_Banana_Pro、通义万相Wan2.2（AIGC）；CosyVoice（TTS）；RLMRec、港大数据智能实验室（Recommendation）
+- 已更新 wiki/index.md
+- 全部内容基于全文，未使用模型自身知识补全
+- 跳过：无（5 篇全文均有实质内容，最短约 2500 字）
+
 ## 2026-06-30 ingest | Phase 6 Batch 1：AIGC（5篇，基于全文）
 
 - 本批次 5 篇文章，全文均来自 `tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/`，Cubox metadata 参考对应文件（均为 stub，无 Annotations 高亮；重点段落依据正文加粗/结论性表述自行标注 [重点/高亮]）

@@ -17,4 +17,4 @@
 └─────────┴─────────────────────┴───────────────┘
 - [ ] wiki/下的entities、sources的tag需要整理
 - [ ] wiki/sources 需要修复每个的frontmatters(主要是source)
-- [ ] wiki/entities
+- [ ] wiki/entities 频率不高的人/组织移除，可能需要设置一个阈值。本质上是精简entites+concepts，需要深度讨论
