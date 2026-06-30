@@ -160,6 +160,9 @@
 - [[Pandas一行代码绘制25种美图]] — DataFrame.plot/Series.plot 一行代码绘制 25 种图表（Skill/data-analysis）
 - [[超强图解Pandas操作大全]] — 图解 Pandas 核心操作：排序/分组/连接/透视/索引（Skill/data-analysis, 面试）
 - [[图解Pandas常用操作_NumPy对比与进阶]] — Pandas Illustrated 翻译：NumPy 对比/Series/DataFrame/MultiIndex 四部分（Skill/data-analysis, Skill/python, 面试）
+- [[一行代码让matplotlib图表变高大上]] — dufte 库三个 API 自动美化 matplotlib 图表样式（Skill/data-analysis）
+- [[600条Linux命令速查手册]] — 28 大类约 600 条 Linux 命令分场景速查手册（Skill/linux）
+- [[现代打工人如何获得幸福]] — 评论尸：时间度量衡/幸福积分模型/天职/逃离职场PUA五种思维（Life）
 
 ## Concepts
 
@@ -574,6 +577,15 @@
 - [[概念_自动EDA工具]] — 10 个自动 EDA 包四类分类（报告/可视化/定制/ML 集成）与选型建议（Skill/data-analysis, Skill/python）
 - [[概念_Pandas可视化]] — DataFrame.plot/Series.plot 内置绘图 + pandas.plotting 高级可视化（Skill/data-analysis）
 - [[概念_Pandas核心操作图解]] — 选择/排序/分组/合并/变形/索引 + NumPy 对比关键差异（Skill/data-analysis, Skill/python, 面试）
+- [[概念_matplotlib样式美化]] — dufte 主题/图例/柱标注三 API，一行代码商务风图表（Skill/data-analysis）
+
+### Skill/linux（Phase 5 Batch 3）
+- [[概念_Linux命令分类速查]] — 28 大类 600 条 Linux 命令按场景分组速查体系（Skill/linux）
+
+### Life（Phase 5 Batch 3）
+- [[概念_幸福积分模型]] — 幸福总量=曲线下面积（积分），时间度量衡，等周不等式类比（Life）
+- [[概念_天职Calling]] — 本身能带来快乐的工作，三条筛选标准，天职不是"钱多事少离家近"（Life）
+- [[概念_习得性快乐]] — A型（多巴胺驱动）vs B型（社会建构），被动习得→习得性不快乐的风险（Life）
 
 ### AI-Agent/deep-research（Phase 4 Batch 6）
 - [[概念_Deep-Research-Agent定义与分类]] — DR Agent 定义、与 RAG/Tool Use 的边界、规划策略三模式（Planning-Only/Intent-to-Planning/Unified）（AI-Agent/deep-research）
@@ -629,6 +641,10 @@
 ### Skill/data-analysis（Phase 5 Batch 2）
 - [[实体_Pandas]] — Python 数据分析核心库，基于 NumPy，Series/DataFrame + groupby/merge/pivot/plot（Skill/data-analysis, Skill/python）
 - [[实体_Dataprep]] — 开源 Python EDA 包，基于 Pandas+Dask，自动 EDA 中速度最快（Skill/data-analysis, Skill/python）
+- [[实体_dufte]] — matplotlib 样式美化库，dufte.style/legend()/show_bar_values() 三 API（Skill/data-analysis）
+
+### Life（Phase 5 Batch 3）
+- [[实体_评论尸]] — 中文互联网创作者，博客「虹线」，《幸福的积分》作者（Life）
 
 ## Comparisons
 
