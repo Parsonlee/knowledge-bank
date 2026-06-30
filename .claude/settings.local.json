@@ -10,7 +10,9 @@
       "WebFetch(domain:doc.wucai.site)",
       "WebFetch(domain:help.cubox.pro)",
       "mcp__obsidian__tag_list",
-      "mcp__obsidian__search_query"
+      "mcp__obsidian__search_query",
+      "mcp__obsidian__vault_patch",
+      "mcp__obsidian__vault_get_document_map"
     ]
   },
   "enableAllProjectMcpServers": true,

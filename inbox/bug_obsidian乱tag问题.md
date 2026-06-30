@@ -38,5 +38,5 @@ rm -rf tmp/*
 
 ## 状态
 
-- [ ] 确认 tmp/ 外是否还有污染源
-- [ ] 选择并执行修复方案
+- [x] 确认 tmp/ 外是否还有污染源（tmp/ 是唯一来源）
+- [x] 选择并执行修复方案（方案一：已在 `.obsidian/app.json` 写入 `userIgnoreFilters: ["tmp"]`）
