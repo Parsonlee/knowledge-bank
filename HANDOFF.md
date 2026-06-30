@@ -55,34 +55,3 @@
 ### 4. Obsidian Git 自动推送（如未配置）
 
 设置面板里把 **Vault backup interval** 改为 `10` 分钟。
-
-| 批次 | 内容 | 任务 |
-|------|------|------|
-| Batch 1 | Skill/claude-code 5篇（Claude Code完全指南/2.0.40更新/awesome-subagents/一个半月感受/写好CLAUDE.md） | #20 |
-| Batch 2 | claude-code 1篇 + python 4篇（用Claude code重塑/FastAPI/async/uv/Python技巧） | #21 |
-| Batch 3 | python + data-analysis 5篇（加速循环/EDA/Pandas美图/超强图解Pandas/一图胜千言） | #22 |
-| Batch 4 | data-analysis + linux 4篇（matplotlib/数据可视化/Linux 600命令/现代打工人201KB） | #23 |
-
-### 2. Phase 6：AIGC+TTS+Recommendation+创业+Life（21篇，5批）
-
-| 批次 | 内容 | 任务 |
-|------|------|------|
-| Batch 5 | AIGC 5篇（Gemini PPT/Veo 3×2/AI PPT横测/小红书封面） | #24 |
-| Batch 6 | AIGC+TTS+Recommendation 5篇（Nano-Banana×2/Wan2.2/TTS/RLMRec） | #25 |
-| Batch 7 | 创业 5篇（Foundation Sprint/独立开发/100家AI初创/Superhuman/最小单元） | #26 |
-| Batch 8 | 创业+Life 5篇（RIDE方法论/投资误区/Travel Tips/中枢与网关/驱蚊） | #27 |
-| Batch 9 | Life 1篇（迪拜华人开车完全指南） | #28 |
-
-### 3. iOS 移动端同步（待机）
-
-方案已定，等 wiki ingest 完成后再配：
-- GitHub 生成 PAT（fine-grained，仅 knowledge-bank 读写权限）
-- iOS Obsidian 装 Obsidian Git 插件，填入用户名 + PAT
-
-## 验收原则（快查）
-
-每个 Phase 完成后在主对话直接验收：
-1. 死链检查：`grep -roh '\[\[[^]|]*' wiki/ | sed 's/\[\[//' | sort -u` vs 实际文件名
-2. 抽查 3-5 个 source 页对比原文，确认无编造
-3. 确认 `wiki/fail.md` 无漏记
-4. 验收报告写入 `wiki/verify-phaseN.md` 并追加 `wiki/log.md`
