@@ -1,5 +1,28 @@
 # Wiki Log
 
+## 2026-06-30 ingest | Phase 5 Batch 1：Skill/python（5篇，基于全文）
+
+- 本批次 5 篇文章，全文均来自 `tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/`，Cubox highlights 参考对应文件
+- 新建来源页（sources/）5 个：
+  - `FastAPI架构指南_项目模板与实战经验.md` (high) — brianobot/PyTorch研习社：生产级 FastAPI 项目结构 Routers/Schemas/Services 三层分离 + 安全中间件（slowapi/CORS/GZip/TrustedHost）+ Makefile；Cubox 无高亮（stub）
+  - `Python并发_async_await与FastAPI.md` (high) — FastAPI 官方中文文档：async/await 协程，并发vs并行汉堡比喻，路径函数 def/async def 选择规则，基于 AnyIO/Starlette；Cubox 无高亮（stub）
+  - `Docker化Flask_Django应用从pip切换到uv.md` (high) — Nick Janetakis：Docker 项目 pip→uv 实测 10x 提速，pyproject.toml+uv.lock，UV_COMPILE_BYTECODE/UV_PROJECT_ENVIRONMENT 配置；Cubox 无高亮（stub）
+  - `加速Python循环的12种方法.md` (high) — Nirmalya Ghosh/Deephub：12 种 for 循环优化，map 970x/set 498x/filterfalse 131x/lru_cache 57x/numpy 28x；Cubox 2 处高亮已标注 [重点/高亮]
+  - `五个鲜为人知的Python功能.md` (high) — PyTorch研习社：contextlib.suppress/setrecursionlimit/typing.Literal/__missing__/__subclasshook__ 五个进阶特性；Cubox 1 处高亮已标注 [重点/高亮]
+- 新建概念页（concepts/）6 个：
+  - `概念_FastAPI项目结构模式.md` — 三层分离（Routers/Schemas/Services）、核心模块职责、安全中间件配置
+  - `概念_Python_async_await并发.md` — 协程定义、并发vs并行、FastAPI 中 def/async def 选择规则与底层机制
+  - `概念_uv包管理器.md` — uv 核心特性、常用命令、Docker 实践要点
+  - `概念_Python循环优化技巧.md` — 12 种方法速览表、关键原理归纳（函数调用开销/数据结构/C扩展/缓存/字符串）
+  - `概念_Python函数式工具.md` — map/lru_cache/filterfalse/Generator 工具详解与设计哲学
+  - `概念_Python进阶特性.md` — suppress/setrecursionlimit/Literal/__missing__/__subclasshook__ 五大特性汇总
+- 新建实体页（entities/）2 个：
+  - `实体_FastAPI.md` — Python 高性能 Web 框架，Starlette+Pydantic，原生 async/await，性能与 Go 不相上下
+  - `实体_uv.md` — Astral 开发 Rust 编写 Python 包管理器，pip 替代品，10x 速度提升
+- index.md 已更新（Sources 追加 5 条，Concepts 新增 Skill/python 专区 6 条，Entities 追加 2 条）
+- 全部内容基于全文，未使用模型自身知识补全
+- 跳过：无（5 篇全文均超 500 字符，内容充实）
+
 ## 2026-06-29 verify | Phase 4 AI-Agent 集群验收
 - 死链：严重 0 个，笔误类 2 个（概念_FlattenedRAG_StructuredRAG / 概念_DataOps），forward-ref 23 个
 - 抽查 5 篇：全部 PASS（MCP遇上代码执行 / Anthropic多智能体研究系统构建 / 从第一性原理深度拆解_Claude_Agent_Skill_宝玉 / AI智能体8种Memory策略与技术实现 / 万字长文深入浅出教你优雅开发复杂AI_Agent）

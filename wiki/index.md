@@ -151,6 +151,11 @@
 - [[人工智能体AI_Agent开发与应用全面调研]] — 2023年全面调研：大脑/感知/行动框架 + 8大开源框架（AutoGPT/LangChain/AutoGen）+ 应用与挑战（AI-Agent）
 - [[聊聊AI应用架构演进]] — 七步演进：基础调用→RAG→Guardrails→意图路由→模型网关→缓存→Agent模式，含推理优化（AI-Agent, 创业）
 - [[企业落地NL2SQL_AI-ready_data与小模型]] — NL2SQL生产落地：AI-ready data + 小模型（3B/7B LoRA）+ 两级Schema Linking，幻觉率7.9%→1.3%（AI-Agent/AI-BI）
+- [[FastAPI架构指南_项目模板与实战经验]] — 生产级 FastAPI 项目结构：Routers/Schemas/Services 三层分离 + 安全中间件 + Makefile（Skill/python）
+- [[Python并发_async_await与FastAPI]] — FastAPI 官方文档：async/await 协程、并发 vs 并行、路径函数 def/async def 选择（Skill/python）
+- [[Docker化Flask_Django应用从pip切换到uv]] — Nick Janetakis：Docker 项目 pip→uv，约 10x 提速，pyproject.toml/uv.lock/非 root（Skill/python）
+- [[加速Python循环的12种方法]] — 12 种 for 循环优化：map 970x/set 498x/filterfalse 131x/lru_cache 57x（Skill/python）
+- [[五个鲜为人知的Python功能]] — contextlib.suppress/setrecursionlimit/typing.Literal/__missing__/__subclasshook__（Skill/python）
 
 ## Concepts
 
@@ -553,6 +558,14 @@
 - [[概念_M-Schema]] — NL2SQL增强Schema表示：补充类型/中文释义/真实值示例+约束池（AI-Agent/AI-BI）
 - [[概念_Schema_Linking]] — BM25粗排+SIC精排两级联接，从全量Schema筛选相关表列，幻觉率-78%（AI-Agent/AI-BI）
 
+### Skill/python（Phase 5 Batch 1）
+- [[概念_FastAPI项目结构模式]] — Routers/Schemas/Services 三层分离 + 安全中间件 + pydantic-settings（Skill/python）
+- [[概念_Python_async_await并发]] — 协程/并发vs并行（汉堡比喻）/FastAPI def vs async def 选择（Skill/python）
+- [[概念_uv包管理器]] — Rust 编写 pip 替代品，pyproject.toml+uv.lock，Docker 集成 10x 提速（Skill/python）
+- [[概念_Python循环优化技巧]] — 12 种 for 循环优化方法与提速比，map/set/lru_cache/filterfalse（Skill/python）
+- [[概念_Python函数式工具]] — map/lru_cache/filterfalse/Generator，C 实现替代显式循环（Skill/python）
+- [[概念_Python进阶特性]] — suppress/setrecursionlimit/Literal/__missing__/__subclasshook__（Skill/python）
+
 ### AI-Agent/deep-research（Phase 4 Batch 6）
 - [[概念_Deep-Research-Agent定义与分类]] — DR Agent 定义、与 RAG/Tool Use 的边界、规划策略三模式（Planning-Only/Intent-to-Planning/Unified）（AI-Agent/deep-research）
 - [[概念_Deep-Research四大挑战]] — 信息窄门/幻觉不可靠/线性效率瓶颈/评测错位，及对应未来方向（AI-Agent/deep-research）
@@ -599,6 +612,10 @@
 - [[实体_LangSmith]] — LangChain 可观测性平台：可视化 Trace/调试/测试评估，Agent 复现性关键工具（AI-Agent）
 - [[实体_Qwen2.5-Coder]] — 阿里代码专用模型3B/7B，NL2SQL LoRA 精调基座，实测EX提升+6.4%（AI-Agent/AI-BI）
 - [[实体_矩阵起源]] — MatrixOne HTAP数据库 + Matrix Intelligence 平台，AI-ready data 基础设施（AI-Agent/AI-BI）
+
+### Skill/python（Phase 5 Batch 1）
+- [[实体_FastAPI]] — Python 高性能 Web 框架，基于 Starlette/Pydantic，原生 async/await，性能与 Go 不相上下（Skill/python）
+- [[实体_uv]] — Astral 开发的 Rust 编写 Python 包管理器，pip 替代品，约 10x 速度提升（Skill/python）
 
 ## Comparisons
 
