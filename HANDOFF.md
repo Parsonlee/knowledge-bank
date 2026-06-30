@@ -19,7 +19,10 @@
 | Phase 3 ingest（LLM，48篇，10批次） | ✅ 验收 PASS |
 | Phase 4 ingest（AI-Agent，~43篇，9批次） | ✅ 验收 PASS |
 
-**当前 wiki 规模**：153 source + 275 concept + 108 entity，0 failures
+| Phase 5 ingest（Skill，~19篇） | ✅ 验收 PASS |
+| Phase 6 ingest（AIGC+创业+Life，~26篇） | ✅ 验收 PASS |
+
+**当前 wiki 规模**：191 source + 331 concept + 137 entity，fail: 1篇
 
 ## 关键配置（速查）
 
@@ -32,7 +35,26 @@
 
 ## Next Steps
 
-### 1. Phase 5：Skill（16篇，4批）—— 待开始
+### 1. ✅ 全量 ingest 完成
+
+205 篇 Cubox 全文已全部处理（191 成功 / 1 跳过-图片为主 / 其余已在前批处理）。
+验收报告：`wiki/verify-phase1.md` / `verify-phase2.md` / `verify-phase4.md` / `verify-phase5_6.md`
+
+### 2. iOS 移动端同步（待配置）
+
+方案已定：
+- GitHub 生成 PAT（fine-grained，仅 knowledge-bank 读写权限）
+- iOS Obsidian 装 Obsidian Git 插件，填入用户名 + PAT
+
+### 3. wiki 持续维护（长期）
+
+- **75 个 forward-reference**：`概念_GRPO`、`实体_Claude` 等被引用但未建页，可按需补建
+- **comparisons/ 和 overview/**：目前为空，可让 Claude 针对感兴趣主题生成对比分析页
+- **新文章 ingest**：未来新收藏的 Cubox 文章，按 TheSchema.md 规则单篇 ingest
+
+### 4. Obsidian Git 自动推送（如未配置）
+
+设置面板里把 **Vault backup interval** 改为 `10` 分钟。
 
 | 批次 | 内容 | 任务 |
 |------|------|------|

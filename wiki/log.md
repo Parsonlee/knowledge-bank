@@ -1,5 +1,12 @@
 # Wiki Log
 
+
+## 2026-06-30 verify | Phase 5+6 验收（Skill+AIGC+创业+Life）
+- 结论：**PASS（bug 已修复）**，详见 `wiki/verify-phase5_6.md`
+- 修复 7 个真实死链（路径前缀×5 + 命名不匹配×2）
+- 75 个 forward-reference（正常，未来可补建）
+- 内容抽查 2 篇：Superhuman PMF / KK旅行经验 均 ✓ 真实
+- fail.md：1 条合理记录
 ## 2026-06-30 ingest | Phase 6 Batch 5：Life×5 + 创业×1（旅行/驾驶/投资/驱蚊/智能家居/独立开发）
 
 - 本批次 6 篇文章，全文均来自 tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/
