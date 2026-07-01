@@ -18,11 +18,10 @@
 | Phase 2 ingest（RAG，~43篇） | ✅ 验收 PASS |
 | Phase 3 ingest（LLM，48篇，10批次） | ✅ 验收 PASS |
 | Phase 4 ingest（AI-Agent，~43篇，9批次） | ✅ 验收 PASS |
+| Phase 5 ingest（Skill，16篇，4批次） | ✅ 验收 PASS |
+| Phase 6 ingest（AIGC等，21篇，5批次） | ✅ 验收 PASS |
 
-| Phase 5 ingest（Skill，~19篇） | ✅ 验收 PASS |
-| Phase 6 ingest（AIGC+创业+Life，~26篇） | ✅ 验收 PASS |
-
-**当前 wiki 规模**：191 source + 331 concept + 137 entity，fail: 1篇
+**当前 wiki 规模**：191 source + 331 concept + 137 entity，1 failure (跳过)
 
 ## 关键配置（速查）
 
