@@ -3,3 +3,4 @@
 - [ ] wiki/下的entities、sources的tag需要整理
 - [ ] wiki/entities 频率不高的人/组织移除，可能需要设置一个阈值。本质上是精简entites+concepts，需要深度讨论
 - [ ] workdocs/ 存放了工作期间的项目文档docx，需要解析并入库
+- [ ] wucai的库存同步过来
