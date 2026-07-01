@@ -2,12 +2,11 @@
 type: entity
 tags:
   - Life
-  - 创业
-summary: "奇瑞汽车旗下品牌，在中东迪拜市场本地化落地优秀的中国出海车企。"
+summary: 奇瑞汽车旗下品牌，在中东迪拜市场本地化落地优秀的中国出海车企。
 sources:
-  - "wiki/sources/迪拜华人开车完全指南.md"
-created: "2026-06-29"
-updated: "2026-07-01"
+  - wiki/sources/迪拜华人开车完全指南.md
+created: 2026-06-29
+updated: 2026-07-01
 confidence: high
 ---
 
