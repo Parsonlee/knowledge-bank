@@ -1,15 +1,14 @@
 ---
 type: source
-tags:
-  - AI-Agent/coding
-summary: "阿里云团队在 DevOps 系统中构建 Coding 驱动的"自我编程" Agent：基于 Py4j 的 Code+泛化调用机制、仿脑区功能分区架构、Segment 上下文工程、三层记忆体系（感知/短期/长期）的完整工程实践。"
+tags: []
+summary: 阿里云团队在 DevOps 系统中构建 Coding 驱动的"自我编程" Agent：基于 Py4j 的 Code+泛化调用机制、仿脑区功能分区架构、Segment
+  上下文工程、三层记忆体系（感知/短期/长期）的完整工程实践。
 sources:
-  - "Cubox/从代码生成到自主决策：打造一个Coding驱动的\"自我编程\"Agent-2025-11-18.md"
-created: "2026-06-29"
-updated: "2026-06-29"
+- Cubox/从代码生成到自主决策：打造一个Coding驱动的“自我编程”Agent-2025-11-18.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 ## 来源信息
 
 - 作者：残风、栀七、荀易、辉酱（阿里云开发者）

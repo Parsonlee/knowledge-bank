@@ -1,15 +1,14 @@
 ---
 type: source
 tags:
-  - AI-Agent
-summary: "从系统工程视角剖析 Agent 开发的三层复杂度（可运行/可复现/可进化），批判框架封装幻觉，提出系统化是唯一解"
+- AI-Agent
+summary: 从系统工程视角剖析 Agent 开发的三层复杂度（可运行/可复现/可进化），批判框架封装幻觉，提出系统化是唯一解
 sources:
-  - "Cubox/Agent系统开发经验-2025-11-07.md"
-created: "2026-06-29"
-updated: "2026-06-29"
+- Cubox/Agent系统开发经验-2025-11-07.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 # Agent系统开发经验
 
 ## 来源信息

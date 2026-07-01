@@ -1,16 +1,16 @@
 ---
 type: source
 tags:
-  - RAG
-  - RAG/chunking
-summary: 文本切分系列第2.5篇，介绍在递归字符切分中融入 token 计数的优化方法，对比 tiktoken、SentenceTransformers 和自定义 tokenizer 三种方案。
+- RAG
+- RAG/chunking
+summary: 文本切分系列第2.5篇，介绍在递归字符切分中融入 token 计数的优化方法，对比 tiktoken、SentenceTransformers 和自定义
+  tokenizer 三种方案。
 sources:
-  - "Cubox/RAG文本切分的五个层次2：递归字符切分的token优化.md"
-created: "2026-06-29"
-updated: "2026-06-29"
+- Cubox/RAG文本切分的五个层次2：递归字符切分的token优化(实战)-2024-10-17.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 # RAG文本切分_token优化
 
 > 来源：哎呀AIYA 微信公众号《RAG文本切分的五个层次2：递归字符切分的token优化(实战)》

@@ -1,15 +1,14 @@
 ---
 type: source
 tags:
-  - LLM/training/post-train
-summary: "使用 LoRA 在 CPU 老笔记本上对 Qwen2.5-0.5B-Instruct 进行领域微调的完整实战流程"
+- LLM/training/post-train
+summary: 使用 LoRA 在 CPU 老笔记本上对 Qwen2.5-0.5B-Instruct 进行领域微调的完整实战流程
 sources:
-  - "Cubox/【有手就行】LoRA：用你自己的数据来微调大模型，让大模型真正懂你 - 程序员老奥 - 博客园-2025-12-15.md"
-created: "2026-06-29"
-updated: "2026-06-29"
+- Cubox/【有手就行】LoRA：用你自己的数据来微调大模型，让大模型真正懂你 - 程序员老奥 - 博客园-2025-12-15.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 ## 来源信息
 
 - **标题**：【有手就行】LoRA：用你自己的数据来微调大模型，让大模型真正懂你

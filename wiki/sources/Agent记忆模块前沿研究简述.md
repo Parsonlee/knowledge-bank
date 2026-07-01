@@ -1,15 +1,15 @@
 ---
 type: source
 tags:
-  - AI-Agent/memory
-summary: "机器之心综述：LLM 记忆的分类体系（上下文内/外部/参数化/分层情境），及 MemGPT、MemOS、MIRIX、G-Memory、M3-Agent 等前沿系统，五大挑战与趋势。"
+- AI-Agent/memory
+summary: 机器之心综述：LLM 记忆的分类体系（上下文内/外部/参数化/分层情境），及 MemGPT、MemOS、MIRIX、G-Memory、M3-Agent
+  等前沿系统，五大挑战与趋势。
 sources:
-  - "Cubox/Agent的记忆模块前沿研究简述-2025-09-08.md"
-created: "2026-06-29"
-updated: "2026-06-29"
+- Cubox/Agent的记忆模块前沿研究简述-2025-09-08.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 ## 来源信息
 
 - 原文：[Agent的记忆模块前沿研究简述](https://www.jiqizhixin.com/articles/2025-08-31-8)

@@ -1,13 +1,23 @@
 ---
-title: "淘宝直播数字人：TTS语音合成技术"
-source_url: "https://mp.weixin.qq.com/s?__biz=MzAxNDEwNjk5OQ==&mid=2650540777&idx=1&sn=1abacfeabd3ae176250125dc48ded953"
-author: "平江、泷予、沧亭（淘天集团-直播AIGC团队）"
-date_published: "2025-07-04"
-tags: [TTS]
+type: source
+tags:
+- TTS
+summary: '**TTS 在数字人直播中的定位**：连接 LLM 生成的播报文稿与口型驱动模块，要求低延迟、高相似度、强表现力。'
+sources:
+- Cubox/淘宝直播数字人：TTS语音合成技术-2025-07-04.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 # 淘宝直播数字人：TTS语音合成技术
+
+## 来源信息
+
+- **标题**：淘宝直播数字人：TTS语音合成技术
+- **作者**：平江、泷予、沧亭（淘天集团-直播AIGC团队）
+- **发布时间**：2025-07-04
+- **URL**：https://mp.weixin.qq.com/s?__biz=MzAxNDEwNjk5OQ==&mid=2650540777&idx=1&sn=1abacfeabd3ae176250125dc48ded953
+
 
 淘天集团直播 AIGC 团队详述数字人直播中 TTS 系统从数据管道到四代模型演进的完整技术路径。TTS 承接 LLM 生成文案并驱动数字人唇形动作，是直播链路关键中间层。
 

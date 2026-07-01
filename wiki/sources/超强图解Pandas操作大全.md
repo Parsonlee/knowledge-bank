@@ -1,16 +1,17 @@
 ---
 type: source
 tags:
-  - Skill/data-analysis
-  - 面试
-summary: 通过可视化图解讲解 Pandas 核心操作：sort_values 排序、列选择、groupby 分组聚合（单列/多列/多聚合函数）、loc 布尔索引过滤、删除列、join 连接、merge 合并、pivot_table 透视表、melt 宽转长、pivot 长转宽、stack/unstack 压栈展开、reset_index/set_index 索引操作，每个操作配图解释执行步骤。
+- Skill/data-analysis
+- 面试
+summary: 通过可视化图解讲解 Pandas 核心操作：sort_values 排序、列选择、groupby 分组聚合（单列/多列/多聚合函数）、loc 布尔索引过滤、删除列、join
+  连接、merge 合并、pivot_table 透视表、melt 宽转长、pivot 长转宽、stack/unstack 压栈展开、reset_index/set_index
+  索引操作，每个操作配图解释执行步骤。
 sources:
-  - "Cubox/超强图解 Pandas，建议收藏-2022-09-18.md"
-created: "2026-06-30"
-updated: "2026-06-30"
+- Cubox/超强图解 Pandas，建议收藏-2022-09-18.md
+created: '2026-06-30'
+updated: '2026-07-01'
 confidence: high
 ---
-
 # 超强图解 Pandas 操作大全
 
 ## 来源信息

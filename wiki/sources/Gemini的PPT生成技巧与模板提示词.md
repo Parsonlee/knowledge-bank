@@ -1,15 +1,25 @@
 ---
-title: Gemini 的 PPT 生成：使用技巧及模板提示词
-source_url: https://mp.weixin.qq.com/s?__biz=MzU0MDk3NTUxMA==&mid=2247493410&idx=1&sn=218d4a6269cde93005745b9f3b85b454
-cubox_url: https://cubox.pro/web/card/7387387562941218975
-author: 歸藏（歸藏的AI工具箱）
-date_clipped: 2025-11-10
+type: source
 tags:
-  - AIGC
+- AIGC
+summary: '[[实体_Gemini]] APP 新上线 PPT 生成能力，作者实测后认为「相当可以」。由于用前端代码方式实现，可以用提示词非常细粒度地控制
+  PPT 风格细节，作者评价「生成质量比 Anthropic 那一坨强多了」。该能力可与 Gemini 本身及谷歌其他产品打通。'
+sources:
+- Cubox/Gemini 的 PPT 生成：使用技巧及模板提示词-2025-11-10.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
+cubox_url: https://cubox.pro/web/card/7387387562941218975
+date_clipped: 2025-11-10
 ---
-
 # Gemini 的 PPT 生成：使用技巧及模板提示词
+
+## 来源信息
+
+- **标题**：Gemini 的 PPT 生成：使用技巧及模板提示词
+- **作者**：歸藏（歸藏的AI工具箱）
+- **URL**：https://mp.weixin.qq.com/s?__biz=MzU0MDk3NTUxMA==&mid=2247493410&idx=1&sn=218d4a6269cde93005745b9f3b85b454
+
 
 > 来源：歸藏的 AI 工具箱（微信公众号），[[实体_Gemini]] APP 上线 PPT 生成能力后的使用技巧与模板提示词分享。
 

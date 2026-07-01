@@ -1,16 +1,16 @@
 ---
 type: source
 tags:
-  - Skill/python
-  - Skill/data-analysis
-summary: 介绍 10 个用于自动探索性数据分析（EDA）的 Python 包——D-Tale、Pandas-Profiling、Sweetviz、AutoViz、Dataprep、KLib、Dabl、SpeedML、DataTile、edaviz，多数只需几行代码即可生成全面的数据概览与可视化报告。作者推荐 Dataprep 最常用，AutoViz 和 D-Tale 也不错。
+- Skill/python
+- Skill/data-analysis
+summary: 介绍 10 个用于自动探索性数据分析（EDA）的 Python 包——D-Tale、Pandas-Profiling、Sweetviz、AutoViz、Dataprep、KLib、Dabl、SpeedML、DataTile、edaviz，多数只需几行代码即可生成全面的数据概览与可视化报告。作者推荐
+  Dataprep 最常用，AutoViz 和 D-Tale 也不错。
 sources:
-  - "Cubox/区区几行Python代码，就能实现全面自动探索性数据分析！-2024-02-21.md"
-created: "2026-06-30"
-updated: "2026-06-30"
+- Cubox/区区几行Python代码，就能实现全面自动探索性数据分析！-2024-02-21.md
+created: '2026-06-30'
+updated: '2026-07-01'
 confidence: high
 ---
-
 # 自动探索性数据分析 EDA：10 个 Python 包
 
 ## 来源信息

@@ -1,16 +1,16 @@
 ---
 type: source
 tags:
-  - DeepLearning
-  - 面试
-summary: 总结四种 Normalization 方法 BN/LN/IN/GN 的区别——基于 [N,C,H,W] 特征图在不同维度做归一化（"一摞书"比喻）；BN 的动机/作用/问题、LN 适配 RNN、IN 用于风格迁移、GN 解决小 batch 问题。
+- DeepLearning
+- 面试
+summary: 总结四种 Normalization 方法 BN/LN/IN/GN 的区别——基于 [N,C,H,W] 特征图在不同维度做归一化（"一摞书"比喻）；BN
+  的动机/作用/问题、LN 适配 RNN、IN 用于风格迁移、GN 解决小 batch 问题。
 sources:
-  - "Cubox/常用 Normalization 方法的总结与思考：BN、LN、IN、GN-2023-11-26.md"
-created: "2026-06-26"
-updated: "2026-06-26"
+- Cubox/常用 Normalization 方法的总结与思考：BN、LN、IN、GN-2023-11-26.md
+created: '2026-06-26'
+updated: '2026-07-01'
 confidence: high
 ---
-
 # 常用 Normalization 方法总结：BN、LN、IN、GN
 
 ## 来源信息

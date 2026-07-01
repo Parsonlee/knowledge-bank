@@ -1,15 +1,15 @@
 ---
 type: source
 tags:
-  - LLM/arch/Mamba
-summary: "Mamba 架构解析 + 完整 PyTorch 复现代码：S6 模块、MambaBlock、RMSNorm、SRAM/HBM 内存优化、enwiki8 训练流程"
+- LLM/arch/Mamba
+summary: Mamba 架构解析 + 完整 PyTorch 复现代码：S6 模块、MambaBlock、RMSNorm、SRAM/HBM 内存优化、enwiki8
+  训练流程
 sources:
-  - "Cubox/Transformer被挑战？新架构Mamba解析以及Pytorch复现-2024-03-26.md"
-created: "2026-06-29"
-updated: "2026-06-29"
+- Cubox/Transformer被挑战？新架构Mamba解析以及Pytorch复现-2024-03-26.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 ## 来源信息
 
 - **标题**：Transformer被挑战？新架构Mamba解析以及Pytorch复现

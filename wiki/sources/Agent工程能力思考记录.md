@@ -1,15 +1,14 @@
 ---
 type: source
 tags:
-  - AI-Agent/coding
-summary: "大淘宝技术团队从工程角度重定义LLM时代核心业务资产，分析Agent协作机制、MCP协议工程补充与平台配套能力。"
+- AI-Agent/coding
+summary: 大淘宝技术团队从工程角度重定义LLM时代核心业务资产，分析Agent协作机制、MCP协议工程补充与平台配套能力。
 sources:
-  - "Cubox/Agent工程能力思考记录-2025-06-17.md"
-created: "2026-06-29"
-updated: "2026-06-29"
+- Cubox/Agent工程能力思考记录-2025-06-17.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 ## 来源信息
 
 - 作者：大淘宝技术（营销交易技术团队）

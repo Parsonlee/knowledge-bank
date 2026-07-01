@@ -1,16 +1,15 @@
 ---
 type: source
 tags:
-  - LLM/arch/MoE
-  - LLM/arch
-summary: "Sebastian Raschka深度分析gpt-oss架构：从GPT-2到gpt-oss的7项进化、与Qwen3的对比（宽vs深、专家数量）、MXFP4量化使120B单卡可运行"
+- LLM/arch/MoE
+- LLM/arch
+summary: Sebastian Raschka深度分析gpt-oss架构：从GPT-2到gpt-oss的7项进化、与Qwen3的对比（宽vs深、专家数量）、MXFP4量化使120B单卡可运行
 sources:
-  - "Cubox/从GPT-2到gpt-oss，深度详解OpenAI开放模型的进化之路 ｜ 机器之心-2025-08-25.md"
-created: "2026-06-29"
-updated: "2026-06-29"
+- Cubox/从GPT-2到gpt-oss，深度详解OpenAI开放模型的进化之路 ｜ 机器之心-2025-08-25.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 ## 来源信息
 
 - 标题：从GPT-2到gpt-oss，深度详解OpenAI开放模型的进化之路

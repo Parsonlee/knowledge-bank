@@ -1,13 +1,23 @@
 ---
-title: "RAGAS评估RAG系统"
-source_url: "https://mp.weixin.qq.com/s?__biz=MzkwNjcxNTc2Ng==&mid=2247484810&idx=1&sn=8a4180ab552ce9305ab5bbaead771396"
-author: "筱可 / 筱可AI"
-date_published: "2025-09-26"
-tags: [RAG/eval]
+type: source
+tags:
+- RAG/eval
+summary: BLEU：n-gram 匹配 + 简短惩罚，仅关注词语匹配忽略语义，无法评估检索质量和事实一致性
+sources:
+- Cubox/用 RAGAS 精准定位 RAG 系统短板-2025-09-26.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 # RAGAS评估RAG系统
+
+## 来源信息
+
+- **标题**：RAGAS评估RAG系统
+- **作者**：筱可 / 筱可AI
+- **发布时间**：2025-09-26
+- **URL**：https://mp.weixin.qq.com/s?__biz=MzkwNjcxNTc2Ng==&mid=2247484810&idx=1&sn=8a4180ab552ce9305ab5bbaead771396
+
 
 > 介绍 RAGAS 评估框架的核心指标、计算原理和实战用法，用于科学评估 RAG 系统性能。
 

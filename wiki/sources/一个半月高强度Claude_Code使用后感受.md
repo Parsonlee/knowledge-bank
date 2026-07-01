@@ -1,14 +1,23 @@
 ---
-title: 一个半月高强度Claude Code使用后感受
-source_url: https://mp.weixin.qq.com/s/bI4SEWPuL5ljCEAjkWpznw
-author: 王巍（喵神）
+type: source
 tags:
-  - Skill/claude-code
-confidence: high
+- Skill/claude-code
+summary: 王巍（喵神），知名 iOS/Unity 开发者，一个半月持续使用 Claude Code（CC）的深度体验总结。涵盖 Vibe Coding 迭代速度、从编辑器
+  AI 转换到命令行的思维变革、CC 的边界认知、Plan Mode 使用策略、小步迭代 vs 放飞自我、上下文管理、周边工具生态等全方位实
+sources:
+- Cubox/一个半月高强度Claude Code使用后感受-2025-08-11.md
 created: 2026-06-30
+updated: '2026-07-01'
+confidence: high
 ---
-
 # 一个半月高强度 Claude Code 使用后感受
+
+## 来源信息
+
+- **标题**：一个半月高强度Claude Code使用后感受
+- **作者**：王巍（喵神）
+- **URL**：https://mp.weixin.qq.com/s/bI4SEWPuL5ljCEAjkWpznw
+
 
 ## 概述
 

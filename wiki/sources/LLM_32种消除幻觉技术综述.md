@@ -1,15 +1,14 @@
 ---
 type: source
 tags:
-  - LLM/hallucination
-summary: "32 种 LLM 幻觉消除技术综述：提示工程（RAG/反馈/提示微调）与模型开发（解码策略/KG/损失函数/SFT）两大类"
+- LLM/hallucination
+summary: 32 种 LLM 幻觉消除技术综述：提示工程（RAG/反馈/提示微调）与模型开发（解码策略/KG/损失函数/SFT）两大类
 sources:
-  - "Cubox/大语言模型的32种消除幻觉的技术，你都了解吗？-2024-01-17.md"
-created: "2026-06-29"
-updated: "2026-06-29"
+- Cubox/大语言模型的32种消除幻觉的技术，你都了解吗？-2024-01-17.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 ## 来源信息
 
 - **标题**：大语言模型的32种消除幻觉的技术，你都了解吗？

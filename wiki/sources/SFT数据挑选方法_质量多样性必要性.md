@@ -1,15 +1,15 @@
 ---
 type: source
 tags:
-  - LLM/training/post-train
-summary: "SFT 数据清洗三维度：质量（奖励模型打分）、多样性（K-Center-Greedy/聚类）、必要性（IFD 指标），梳理 MoDS/DEITA/CaR 三类方法"
+- LLM/training/post-train
+summary: SFT 数据清洗三维度：质量（奖励模型打分）、多样性（K-Center-Greedy/聚类）、必要性（IFD 指标），梳理 MoDS/DEITA/CaR
+  三类方法
 sources:
-  - "Cubox/SFT数据挑选方法 - 知乎-2025-04-14.md"
-created: "2026-06-29"
-updated: "2026-06-29"
+- Cubox/SFT数据挑选方法 - 知乎-2025-04-14.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 ## 来源信息
 
 - 标题：SFT数据挑选方法

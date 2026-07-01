@@ -1,15 +1,15 @@
 ---
 type: source
 tags:
-  - AI-Agent/tools
-summary: "MCP+数据库实现 Text-to-SQL 式结构化检索，实测比传统 RAG 效果好，并详解 Function Call→MCP 演进与 Cline+MongoDB 实战"
+- AI-Agent/tools
+summary: MCP+数据库实现 Text-to-SQL 式结构化检索，实测比传统 RAG 效果好，并详解 Function Call→MCP 演进与 Cline+MongoDB
+  实战
 sources:
-  - "Cubox/MCP+数据库-2025-05-26.md"
-created: "2026-06-29"
-updated: "2026-06-29"
+- Cubox/MCP+数据库-2025-05-26.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 ## 来源信息
 
 - **标题**：MCP + 数据库，一种比 RAG 检索效果更好的新方式！

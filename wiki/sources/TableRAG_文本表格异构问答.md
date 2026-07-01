@@ -1,13 +1,23 @@
 ---
-title: "TableRAG_文本表格异构问答"
-source_url: "https://mp.weixin.qq.com/s/synQYJYw6B8b8QAkofitaw"
-author: "华为云信息检索团队"
-date_published: "2025-06-18"
-tags: [RAG]
+type: source
+tags:
+- RAG
+summary: 传统 RAG 处理含表格文档的缺陷：
+sources:
+- Cubox/TableRAG- 处理文本+表格异构数据-2025-06-18.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 # TableRAG_文本表格异构问答
+
+## 来源信息
+
+- **标题**：TableRAG_文本表格异构问答
+- **作者**：华为云信息检索团队
+- **发布时间**：2025-06-18
+- **URL**：https://mp.weixin.qq.com/s/synQYJYw6B8b8QAkofitaw
+
 
 > 华为云提出的 TableRAG 混合推理框架，融合文本检索与 SQL 数据库操作，解决文本+表格异构文档问答难题。
 

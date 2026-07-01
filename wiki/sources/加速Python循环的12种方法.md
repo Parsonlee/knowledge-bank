@@ -1,14 +1,23 @@
 ---
-title: "加速Python循环的12种方法，最高可以提速900倍"
-source_url: "https://mp.weixin.qq.com/s/LyZtKIVhVvBP8BCKWEYqYw"
-author: "Nirmalya Ghosh（Deephub Imba 译）"
-date: 2024-01-03
+type: source
 tags:
-  - Skill/python
+- Skill/python
+summary: 12 种优化 Python for 循环的方法，提速 1.3x 到 970x。
+sources:
+- Cubox/加速Python循环的12种方法,最高可以提速900倍-2024-01-03.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
+date: 2024-01-03
 ---
-
 # 加速 Python 循环的 12 种方法
+
+## 来源信息
+
+- **标题**：加速Python循环的12种方法，最高可以提速900倍
+- **作者**：Nirmalya Ghosh（Deephub Imba 译）
+- **URL**：https://mp.weixin.qq.com/s/LyZtKIVhVvBP8BCKWEYqYw
+
 
 > 来源：Deephub Imba / AI算法与图像处理，作者 Nirmalya Ghosh
 > 测试方法：timeit 模块，10 次运行各 100K 循环，取每循环平均纳秒

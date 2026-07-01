@@ -1,17 +1,14 @@
 ---
 type: source
 tags:
-  - RAG
-summary: "12 个 RAG 痛点及对应解决方案：涵盖内容缺失、排名遗漏、上下文不足、未提取、格式错误、粒度不当、不完整、数据摄取扩展性、结构化数据QA、复杂PDF提取、后备模型、LLM安全"
+- RAG
+summary: 12 个 RAG 痛点及对应解决方案：涵盖内容缺失、排名遗漏、上下文不足、未提取、格式错误、粒度不当、不完整、数据摄取扩展性、结构化数据QA、复杂PDF提取、后备模型、LLM安全
 sources:
-  - title: "12 RAG Pain Points and Proposed Solutions"
-    url: https://readmedium.com/zh/12-rag-pain-points-and-proposed-solutions-43709939a28c
-    cubox_id: "7327342715878769247"
+- Cubox/12 RAG 痛点和拟议解决方案-2025-05-28.md
 created: 2026-06-26
-updated: 2026-06-26
+updated: '2026-07-01'
 confidence: high
 ---
-
 # RAG_12痛点与解决方案
 
 ## 摘要

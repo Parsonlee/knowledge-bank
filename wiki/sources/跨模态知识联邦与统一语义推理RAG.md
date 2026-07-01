@@ -1,13 +1,23 @@
 ---
-title: "跨模态知识联邦与统一语义推理RAG"
-source_url: "https://mp.weixin.qq.com/s?__biz=MjM5MDE0Mjc4MA==&mid=2651246577&idx=2&sn=e26bfdbfc2e5f423f9c1bcb9285e4dd6"
-author: "王传阳 / 枫清科技"
-date_published: "2025-06-10"
-tags: [RAG]
+type: source
+tags:
+- RAG
+summary: '> 融合知识库它主要是将左边散落的各种多元异构数据，包括指标、结构化数据、文档、图片等信息，通过知识融合技术整合到一个统一的融合知识库中。知识融合的过程涉及多种常用技术手段。'
+sources:
+- Cubox/复杂场景下的 RAG 架构演进：跨模态知识联邦与统一语义推理实践-2025-06-10.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 # 跨模态知识联邦与统一语义推理RAG
+
+## 来源信息
+
+- **标题**：跨模态知识联邦与统一语义推理RAG
+- **作者**：王传阳 / 枫清科技
+- **发布时间**：2025-06-10
+- **URL**：https://mp.weixin.qq.com/s?__biz=MjM5MDE0Mjc4MA==&mid=2651246577&idx=2&sn=e26bfdbfc2e5f423f9c1bcb9285e4dd6
+
 
 > QCon 演讲实录，解决企业级复杂场景下异构知识的结构离散性和模态多样性问题。
 

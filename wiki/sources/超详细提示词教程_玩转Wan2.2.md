@@ -1,13 +1,23 @@
 ---
-title: "超详细提示词教程｜玩转Wan2.2"
-source_url: "https://mp.weixin.qq.com/s?__biz=MzkxMTYyMTAzNA==&mid=2247497083&idx=2&sn=837efe78d54b6429bbb8392f15d08369"
-author: "通义大模型/Prompt技巧"
-date_published: "2025-11-10"
-tags: [AIGC]
+type: source
+tags:
+- AIGC
+summary: '**三套 Prompt 公式**（详见 [[概念_文生视频提示词公式]]）'
+sources:
+- Cubox/超详细提示词教程｜玩转Wan2.2-2025-11-10.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 # 超详细提示词教程：玩转 Wan2.2
+
+## 来源信息
+
+- **标题**：超详细提示词教程｜玩转Wan2.2
+- **作者**：通义大模型/Prompt技巧
+- **发布时间**：2025-11-10
+- **URL**：https://mp.weixin.qq.com/s?__biz=MzkxMTYyMTAzNA==&mid=2247497083&idx=2&sn=837efe78d54b6429bbb8392f15d08369
+
 
 通义万相 2.2（[[实体_通义万相Wan2.2]]）文生视频 Prompt 写作技巧完整教程，系统整理基础/进阶公式及完整影视级美学控制词典。
 

@@ -1,14 +1,23 @@
 ---
-title: Claude Code 2.0.40版本后的一些实用更新
-source_url: https://mp.weixin.qq.com/s/lEWh_QNOwNRFcjYKVjxTEg
-author: 字节笔记本
+type: source
 tags:
-  - Skill/claude-code
-confidence: high
+- Skill/claude-code
+summary: 字节笔记本整理的 Claude Code 2.0.40 版本后新增功能汇总，涵盖自定义输出样式、提示钩子模型参数、Git 命令扩展、[[概念_Subagent子代理|Subagent]]
+  生命周期管理和 [[概念_Agent_Skills元工具架构|Skills]] 自动加载等关键更新。
+sources:
+- Cubox/Claude Code 2.0.40版本后的一些实用更新-2025-12-03.md
 created: 2026-06-30
+updated: '2026-07-01'
+confidence: high
 ---
-
 # Claude Code 2.0.40 版本后的实用更新
+
+## 来源信息
+
+- **标题**：Claude Code 2.0.40版本后的一些实用更新
+- **作者**：字节笔记本
+- **URL**：https://mp.weixin.qq.com/s/lEWh_QNOwNRFcjYKVjxTEg
+
 
 ## 概述
 

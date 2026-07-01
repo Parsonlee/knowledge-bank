@@ -1,17 +1,15 @@
 ---
 type: source
 tags:
-  - RAG
-summary: "斯坦福 2025 新论文提出 DOS RAG（Document's Original Structure RAG）：检索后按原文顺序排列片段而非按相关性排序，在多个长文档 QA 基准上持平或超越 ReadAgent/RAPTOR 等复杂方案"
+- RAG
+summary: 斯坦福 2025 新论文提出 DOS RAG（Document's Original Structure RAG）：检索后按原文顺序排列片段而非按相关性排序，在多个长文档
+  QA 基准上持平或超越 ReadAgent/RAPTOR 等复杂方案
 sources:
-  - title: "2025来自斯坦福的RAG新基线"
-    url: https://mp.weixin.qq.com/s/p-_8zsaKvd1cFP7gwV1wTA
-    cubox_id: "7339538872369417741"
+- Cubox/2025来自斯坦福的RAG新基线-2025-07-01.md
 created: 2026-06-26
-updated: 2026-06-26
+updated: '2026-07-01'
 confidence: high
 ---
-
 # 斯坦福RAG新基线_DOS_RAG
 
 ## 摘要

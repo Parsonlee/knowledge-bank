@@ -1,17 +1,14 @@
 ---
 type: source
 tags:
-  - RAG
-summary: "阿里云开发者文章：用 Python 基础库从零手撕 RAG 内核，含 10 大实战技巧——naive RAG/语义分块/上下文检索增强/块标题CCH/问题生成/Query改写/重排序/相关段落提取RSE/上下文压缩/反馈机制"
+- RAG
+summary: 阿里云开发者文章：用 Python 基础库从零手撕 RAG 内核，含 10 大实战技巧——naive RAG/语义分块/上下文检索增强/块标题CCH/问题生成/Query改写/重排序/相关段落提取RSE/上下文压缩/反馈机制
 sources:
-  - title: "RAG技巧与底层代码剖析"
-    url: https://mp.weixin.qq.com/s/oX6JZS_INj9M8Ntkh4Jp9Q
-    cubox_id: "7331951337749351963"
+- Cubox/RAG技巧与底层代码剖析-2025-06-10.md
 created: 2026-06-29
-updated: 2026-06-29
+updated: '2026-07-01'
 confidence: high
 ---
-
 # RAG技巧与底层代码剖析
 
 ## 摘要

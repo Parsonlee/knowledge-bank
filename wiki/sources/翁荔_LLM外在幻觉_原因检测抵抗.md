@@ -1,15 +1,14 @@
 ---
 type: source
 tags:
-  - LLM/hallucination
-summary: "翁荔 Blog：LLM 外在幻觉定义、产生原因（预训练/微调新知识）、检测方法（FActScore/SAFE/SelfCheckGPT）、抵抗方法（RAG/CoVe/FLAME）"
+- LLM/hallucination
+summary: 翁荔 Blog：LLM 外在幻觉定义、产生原因（预训练/微调新知识）、检测方法（FActScore/SAFE/SelfCheckGPT）、抵抗方法（RAG/CoVe/FLAME）
 sources:
-  - "Cubox/OpenAI 翁荔提出大模型「外在幻觉」：万字 blog 详解抵抗办法、产幻原因和检测方式 - IT之家-2024-07-25.md"
-created: "2026-06-29"
-updated: "2026-06-29"
+- Cubox/OpenAI 翁荔提出大模型「外在幻觉」：万字 blog 详解抵抗办法、产幻原因和检测方式 - IT之家-2024-07-25.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 ## 来源信息
 
 - **标题**：OpenAI 翁荔提出大模型「外在幻觉」：万字 blog 详解抵抗办法、产幻原因和检测方式

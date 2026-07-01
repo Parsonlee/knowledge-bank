@@ -1,13 +1,23 @@
 ---
-title: "关于 Nano Banana 的一些浅思"
-source_url: "https://mp.weixin.qq.com/s?__biz=MzIzNjE2NTI3NQ==&mid=2247490591&idx=1&sn=de04b231aa519679939fc7cf00181b58"
-author: "lencx（浮之静）"
-date_published: "2025-09-08"
-tags: [AIGC]
+type: source
+tags:
+- AIGC
+summary: '**Nano Banana 定位**：Gemini 2.5 Flash Image 的别名，原生多模态快速高效模型，单步同时处理文字与图像'
+sources:
+- Cubox/关于 Nano Banana 的一些浅思-2025-09-08.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 # 关于 Nano Banana 的一些浅思
+
+## 来源信息
+
+- **标题**：关于 Nano Banana 的一些浅思
+- **作者**：lencx（浮之静）
+- **发布时间**：2025-09-08
+- **URL**：https://mp.weixin.qq.com/s?__biz=MzIzNjE2NTI3NQ==&mid=2247490591&idx=1&sn=de04b231aa519679939fc7cf00181b58
+
 
 lencx 围绕 [[实体_Nano_Banana_Pro]]（Gemini 2.5 Flash Image）的功能解析、提示词工程实践指南，以及关于人类与大模型协作的深度思考。
 

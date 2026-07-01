@@ -1,15 +1,15 @@
 ---
 type: source
 tags:
-  - AI-Agent/AI-BI
-summary: "腾讯 OlaChat 智能 BI 平台实践：多任务对话系统 + 任务编排引擎 + FlattenedRAG/StructuredRAG 结构化元数据检索 + Text2SQL 微调+Agent 方案"
+- AI-Agent/AI-BI
+summary: 腾讯 OlaChat 智能 BI 平台实践：多任务对话系统 + 任务编排引擎 + FlattenedRAG/StructuredRAG 结构化元数据检索
+  + Text2SQL 微调+Agent 方案
 sources:
-  - "Cubox/腾讯基于 LLM 的智能数据分析平台 OlaChat 的落地实践-2024-12-16.md"
-created: "2026-06-29"
-updated: "2026-06-29"
+- Cubox/腾讯基于 LLM 的智能数据分析平台 OlaChat 的落地实践-2024-12-16.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 # 腾讯基于 LLM 的智能数据分析平台 OlaChat 的落地实践
 
 ## 来源信息

@@ -1,16 +1,15 @@
 ---
 type: source
 tags:
-  - RAG
-  - RAG/chunking
+- RAG
+- RAG/chunking
 summary: 文本切分系列第3篇，介绍 Level 3 基于文档结构的 JSON 数据切分方法，包含 LangChain 和 LlamaIndex 两种实现。
 sources:
-  - "Cubox/RAG文本切分五个层次3：不同文档切分之JSON.md"
-created: "2026-06-29"
-updated: "2026-06-29"
+- Cubox/RAG文本切分五个层次3：不同文档切分之JSON(实战)-2024-10-17.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 # RAG文本切分_JSON文档切分
 
 > 来源：哎呀AIYA 微信公众号《RAG文本切分五个层次3：不同文档切分之JSON(实战)》

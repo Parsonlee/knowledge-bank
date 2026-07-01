@@ -1,16 +1,16 @@
 ---
 type: source
 tags:
-  - LLM/arch/Mamba
-  - LLM/arch/MoE
-summary: "腾讯混元 TurboS：560B 参数 Hybrid Transformer-Mamba MoE 模型，业界首个大规模部署的 Mamba 架构，自适应长短 CoT 融合"
+- LLM/arch/Mamba
+- LLM/arch/MoE
+summary: 腾讯混元 TurboS：560B 参数 Hybrid Transformer-Mamba MoE 模型，业界首个大规模部署的 Mamba 架构，自适应长短
+  CoT 融合
 sources:
-  - "Cubox/腾讯混元TurboS技术报告首次全公开：560B参数混合Mamba架构，自适应长短链融合-2025-06-25.md"
-created: "2026-06-29"
-updated: "2026-06-29"
+- Cubox/腾讯混元TurboS技术报告首次全公开：560B参数混合Mamba架构，自适应长短链融合-2025-06-25.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 ## 来源信息
 
 - **标题**：腾讯混元TurboS技术报告首次全公开：560B参数混合Mamba架构，自适应长短链融合

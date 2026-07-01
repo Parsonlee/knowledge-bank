@@ -1,13 +1,23 @@
 ---
-title: "7天验证产品思路、10小时找到基础共识：来自谷歌的\"Foundation Sprint\"完全指南"
-source_url: "https://mp.weixin.qq.com/s?__biz=MzI0NTAwMzU1MA==&mid=2247504197&idx=1&sn=11698be60ec593a151706720934656fe"
-author: "随机小助手（随机小分队）/ Linkloud"
-date_published: "2025-09-08"
-tags: [创业]
+type: source
+tags:
+- 创业
+summary: '**从 Design Sprint 到 Foundation Sprint**（详见 [[概念_Design_Sprint]]、[[概念_Foundation_Sprint]]）'
+sources:
+- Cubox/7天验证产品思路、10小时找到基础共识：来自谷歌的“Foundation Sprint”完全指南-2025-09-08.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 # Foundation Sprint 产品验证完全指南
+
+## 来源信息
+
+- **标题**：7天验证产品思路、10小时找到基础共识：来自谷歌的"Foundation Sprint"完全指南
+- **作者**：随机小助手（随机小分队）/ Linkloud
+- **发布时间**：2025-09-08
+- **URL**：https://mp.weixin.qq.com/s?__biz=MzI0NTAwMzU1MA==&mid=2247504197&idx=1&sn=11698be60ec593a151706720934656fe
+
 
 前 Google Ventures、Design Sprint 创造者 Jake Knapp 与 John Zeratsky 设计的 [[概念_Foundation_Sprint]]：一个仅需约 10 小时、帮助超早期项目在动手开发之前奠定坚实战略基础的"前传"流程，最终产出可被 [[概念_Design_Sprint]] 验证的"创始假设"。
 

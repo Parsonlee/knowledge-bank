@@ -1,15 +1,14 @@
 ---
 type: source
 tags:
-  - LLM/training
-summary: "大模型三大 Scaling Law：预训练/后训练/推理阶段 Scaling 的定义、技术手段与行业意义"
+- LLM/training
+summary: 大模型三大 Scaling Law：预训练/后训练/推理阶段 Scaling 的定义、技术手段与行业意义
 sources:
-  - "Cubox/一文详细了解：大模型三大缩放定律（Scaling Law）-2025-06-29.md"
-created: "2026-06-29"
-updated: "2026-06-29"
+- Cubox/一文详细了解：大模型三大缩放定律（Scaling Law）-2025-06-29.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 ## 来源信息
 
 - **标题**：一文详细了解：大模型三大缩放定律（Scaling Law）

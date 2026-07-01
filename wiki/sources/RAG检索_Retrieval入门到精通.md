@@ -1,13 +1,24 @@
 ---
-title: "RAG检索_Retrieval入门到精通"
-source_url: "https://mp.weixin.qq.com/s?__biz=MzI2ODUyMTQyNA==&mid=2247495615&idx=1&sn=022d4b59324ae486b7b65b280b74eb80"
-author: "南七无名式 / PyTorch研习社"
-date_published: "2025-02-05"
-tags: [RAG, RAG/retrieval]
+type: source
+tags:
+- RAG
+- RAG/retrieval
+summary: Re-Rank：对检索到的候选文档进行重新排序，提高生成答案的相关性和精确度
+sources:
+- Cubox/RAG从入门到精通系列6：Retrieval（检索）-2025-02-05.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 # RAG检索_Retrieval入门到精通
+
+## 来源信息
+
+- **标题**：RAG检索_Retrieval入门到精通
+- **作者**：南七无名式 / PyTorch研习社
+- **发布时间**：2025-02-05
+- **URL**：https://mp.weixin.qq.com/s?__biz=MzI2ODUyMTQyNA==&mid=2247495615&idx=1&sn=022d4b59324ae486b7b65b280b74eb80
+
 
 > RAG从入门到精通系列6，主题为 Retrieval（检索）中的 Ranking 与 Refinement 两大优化方向。
 

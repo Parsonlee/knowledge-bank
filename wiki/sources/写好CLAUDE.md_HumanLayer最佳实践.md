@@ -1,14 +1,23 @@
 ---
-title: 写好CLAUDE.md_HumanLayer最佳实践
-source_url: https://www.humanlayer.dev/blog/writing-a-good-claude-md
-author: HumanLayer
+type: source
 tags:
-  - Skill/claude-code
-confidence: high
+- Skill/claude-code
+summary: HumanLayer 团队发布的 CLAUDE.md 编写最佳实践指南，基于上下文工程原则，从 LLM 无状态特性出发，提出"少即是多"、渐进式披露等核心方法论，帮助开发者写出高质量的
+  [[概念_CLAUDE.md最佳实践|CLAUDE.md]] 文件。
+sources:
+- Cubox/写好 CLAUDE.md - HumanLayer 博客-2025-12-01.md
 created: 2026-06-30
+updated: '2026-07-01'
+confidence: high
 ---
-
 # 写好 CLAUDE.md — HumanLayer 博客
+
+## 来源信息
+
+- **标题**：写好CLAUDE.md_HumanLayer最佳实践
+- **作者**：HumanLayer
+- **URL**：https://www.humanlayer.dev/blog/writing-a-good-claude-md
+
 
 ## 概述
 

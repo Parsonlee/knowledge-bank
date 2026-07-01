@@ -1,13 +1,23 @@
 ---
-title: "即插即用、简单有效的大语言模型推荐算法！港大联合百度推出RLMRec"
-source_url: "https://mp.weixin.qq.com/s/syCREjY7YIg8LIsDzj6EPQ"
-author: "PaperWeekly"
-date_published: "2024-02-07"
-tags: [Recommendation]
+type: source
+tags:
+- Recommendation
+summary: '**论文信息**：arxiv:2310.15950，代码 github.com/HKUDS/RLMRec，已落地公司搜索业务'
+sources:
+- Cubox/即插即用、简单有效的大语言模型推荐算法！港大联合百度推出RLMRec-2024-02-07.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 # RLMRec：港大百度 LLM 推荐算法
+
+## 来源信息
+
+- **标题**：即插即用、简单有效的大语言模型推荐算法！港大联合百度推出RLMRec
+- **作者**：PaperWeekly
+- **发布时间**：2024-02-07
+- **URL**：https://mp.weixin.qq.com/s/syCREjY7YIg8LIsDzj6EPQ
+
 
 港大联合百度提出 RLMRec，从互信息最大化的理论角度，引入 LLM 生成的文本语义信号优化推荐算法表征学习中的噪声，通过对比式/生成式两套对齐范式实现去噪增强。
 

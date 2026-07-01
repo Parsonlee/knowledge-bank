@@ -1,17 +1,15 @@
 ---
 type: source
 tags:
-  - RAG
-summary: "阿里云服务领域 RAG 技术演进：四大核心命题（数据价值/异构检索/生成控制/评估体系），多层次知识库构建、混合检索（向量+文本+图谱）、RAR相关性过滤、RAG Diagnoser原子事实评估"
+- RAG
+summary: 阿里云服务领域 RAG 技术演进：四大核心命题（数据价值/异构检索/生成控制/评估体系），多层次知识库构建、混合检索（向量+文本+图谱）、RAR相关性过滤、RAG
+  Diagnoser原子事实评估
 sources:
-  - title: "阿里的RAG技术演进"
-    url: https://mp.weixin.qq.com/s/7VVWAtbDX4CM4seTB_xHmw
-    cubox_id: "7310317549244124587"
+- Cubox/阿里的RAG技术演进-2025-04-11.md
 created: 2026-06-29
-updated: 2026-06-29
+updated: '2026-07-01'
 confidence: high
 ---
-
 # 阿里RAG技术演进
 
 ## 摘要

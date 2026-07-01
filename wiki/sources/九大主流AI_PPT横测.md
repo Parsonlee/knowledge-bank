@@ -1,15 +1,24 @@
 ---
-title: 九大主流AI PPT横测，能打的Agent只有3个半
-source_url: https://mp.weixin.qq.com/s/wCsyPpjpPkC6eOsKy2VYvQ
-cubox_url: https://cubox.pro/web/card/7342143926301623873
-author: 绛烨（卡尔的AI沃茨）
-date_clipped: 2025-07-08
+type: source
 tags:
-  - AIGC
+- AIGC
+summary: PPT 应用场景广阔（职场汇报、教育学习、创业融资路演），是现代信息社会核心表达方式之一。作者将市面上 AI PPT 工具归为两条主流路径。
+sources:
+- Cubox/九大主流AI PPT横测，能打的Agent只有3个半-2025-07-08.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
+cubox_url: https://cubox.pro/web/card/7342143926301623873
+date_clipped: 2025-07-08
 ---
-
 # 九大主流 AI PPT 横测，能打的 Agent 只有 3 个半
+
+## 来源信息
+
+- **标题**：九大主流AI PPT横测，能打的Agent只有3个半
+- **作者**：绛烨（卡尔的AI沃茨）
+- **URL**：https://mp.weixin.qq.com/s/wCsyPpjpPkC6eOsKy2VYvQ
+
 
 > 作者深度使用多款主流 AI PPT 工具后的横向测评，核心论点是 AI PPT 的「最后一公里」难题（二次编辑与格式兼容）。
 

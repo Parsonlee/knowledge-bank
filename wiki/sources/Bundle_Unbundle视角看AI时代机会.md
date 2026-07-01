@@ -1,13 +1,23 @@
 ---
-title: "把世界拆成最小单元，然后重新拼装 | 42章经 AI Newsletter"
-source_url: "https://mp.weixin.qq.com/s?__biz=MzIyMDE5OTYyMw==&mid=2651051342&idx=1&sn=07f78e8659b364d4e3c2d5758c77174e"
-author: "Celia（42章经）"
-date_published: "2025-12-01"
-tags: [创业]
+type: source
+tags:
+- 创业
+summary: '**Grammarly 逆袭案例**："有护城河，但没有城堡"的产品'
+sources:
+- Cubox/把世界拆成最小单元，然后重新拼装 - 42章经 AI Newsletter-2025-12-01.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 # Bundle/Unbundle 视角看 AI 时代机会
+
+## 来源信息
+
+- **标题**：把世界拆成最小单元，然后重新拼装 | 42章经 AI Newsletter
+- **作者**：Celia（42章经）
+- **发布时间**：2025-12-01
+- **URL**：https://mp.weixin.qq.com/s?__biz=MzIyMDE5OTYyMw==&mid=2651051342&idx=1&sn=07f78e8659b364d4e3c2d5758c77174e
+
 
 42章经从 Marc Andreessen "赚钱只有两种方式：bundle 或 unbundle"出发，结合 Grammarly→Superhuman 案例、Shishir Mehrotra 的 [[概念_Bundle理论]]，以及集装箱历史，分析 AI 时代的机会与价值捕获逻辑。
 

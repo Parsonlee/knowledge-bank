@@ -1,16 +1,15 @@
 ---
 type: source
 tags:
-  - AI-Agent/tools
-  - AI-Agent/prompt-engineering
-summary: "蚂蚁集团实践：通过'思考和规划'工具强制模型在多工具调用前结构化思考，显著提升 Agent 效果"
+- AI-Agent/tools
+- AI-Agent/prompt-engineering
+summary: 蚂蚁集团实践：通过'思考和规划'工具强制模型在多工具调用前结构化思考，显著提升 Agent 效果
 sources:
-  - "Cubox/如何让 Agent 规划调用工具-2025-05-28.md"
-created: "2026-06-29"
-updated: "2026-06-29"
+- Cubox/如何让 Agent 规划调用工具-2025-05-28.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 ## 来源信息
 
 - 标题：如何让 Agent 规划调用工具

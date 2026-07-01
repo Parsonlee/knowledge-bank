@@ -1,17 +1,18 @@
 ---
 type: source
 tags:
-  - Skill/data-analysis
-  - Skill/python
-  - 面试
-summary: 四大部分完整图解 Pandas——Part 1 与 NumPy 对比 7 大优势及性能基准；Part 2 Series 与 Index 内部结构、loc/iloc、布尔索引、缺失值处理、统计函数、GroupBy；Part 3 DataFrame 读写 CSV、构建方式、索引、算术对齐、concat/merge/join、分组与透视；Part 4 MultiIndex 多级索引。原文为 Pandas Illustrated 翻译版。
+- Skill/data-analysis
+- Skill/python
+- 面试
+summary: 四大部分完整图解 Pandas——Part 1 与 NumPy 对比 7 大优势及性能基准；Part 2 Series 与 Index 内部结构、loc/iloc、布尔索引、缺失值处理、统计函数、GroupBy；Part
+  3 DataFrame 读写 CSV、构建方式、索引、算术对齐、concat/merge/join、分组与透视；Part 4 MultiIndex 多级索引。原文为
+  Pandas Illustrated 翻译版。
 sources:
-  - "Cubox/一图胜千言｜图解Pandas常用操作！-2024-06-22.md"
-created: "2026-06-30"
-updated: "2026-06-30"
+- Cubox/一图胜千言｜图解Pandas常用操作！-2024-06-22.md
+created: '2026-06-30'
+updated: '2026-07-01'
 confidence: high
 ---
-
 # 图解 Pandas 常用操作：NumPy 对比与进阶
 
 ## 来源信息

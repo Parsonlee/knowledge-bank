@@ -1,14 +1,23 @@
 ---
-title: awesome-claude-code-subagents资源集合
-source_url: https://github.com/VoltAgent/awesome-claude-code-subagents
-author: VoltAgent 社区
+type: source
 tags:
-  - Skill/claude-code
-confidence: high
+- Skill/claude-code
+summary: VoltAgent 社区维护的 Claude Code [[概念_Subagent子代理]] 资源集合，包含 100+ 个生产就绪的专用 AI 代理定义，覆盖全栈开发、DevOps、数据科学和业务运营等领域。
+sources:
+- Cubox/awesome-claude-code-subagents- Production-ready Claude subagents collection
+  with 100+ specialized AI.md
 created: 2026-06-30
+updated: '2026-07-01'
+confidence: high
 ---
-
 # awesome-claude-code-subagents 资源集合
+
+## 来源信息
+
+- **标题**：awesome-claude-code-subagents资源集合
+- **作者**：VoltAgent 社区
+- **URL**：https://github.com/VoltAgent/awesome-claude-code-subagents
+
 
 ## 概述
 

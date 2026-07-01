@@ -1,15 +1,15 @@
 ---
 type: source
 tags:
-  - AI-Agent/AI-BI
-summary: "腾讯 OlaChat ABI 工程架构：原子 Agent + DAG 编排 + 统一协议 + Text2DSL 中间层，解决 AI 能力复用、长文本幻觉、自然语言到 BI 指令转换三大挑战"
+- AI-Agent/AI-BI
+summary: 腾讯 OlaChat ABI 工程架构：原子 Agent + DAG 编排 + 统一协议 + Text2DSL 中间层，解决 AI 能力复用、长文本幻觉、自然语言到
+  BI 指令转换三大挑战
 sources:
-  - "Cubox/腾讯在 ABI 工程领域的探索与实践-2025-08-29.md"
-created: "2026-06-29"
-updated: "2026-06-29"
+- Cubox/腾讯在 ABI 工程领域的探索与实践-2025-08-29.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 # 腾讯在 ABI 工程领域的探索与实践
 
 ## 来源信息

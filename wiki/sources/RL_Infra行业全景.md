@@ -1,16 +1,17 @@
 ---
 type: source
 tags:
-  - LLM/training/RL
-  - Infra/AI
-summary: 海外独角兽 Cage 梳理 RL Infra 行业全景：RL 环境（应用沙盒/浏览器环境/世界模型）、RLaaS（Palantir 模式深度定制）、数据/评估三大模块；论证 RL Scaling 将把 AI 从"人类数据时代"推向"Agent 体验时代"，迎来 RL 的 GPT-3 时刻。Cubox 高亮重点：Mechanize 复制训练（Replication Training）范式。
+- LLM/training/RL
+- Infra/AI
+summary: 海外独角兽 Cage 梳理 RL Infra 行业全景：RL 环境（应用沙盒/浏览器环境/世界模型）、RLaaS（Palantir 模式深度定制）、数据/评估三大模块；论证
+  RL Scaling 将把 AI 从"人类数据时代"推向"Agent 体验时代"，迎来 RL 的 GPT-3 时刻。Cubox 高亮重点：Mechanize 复制训练（Replication
+  Training）范式。
 sources:
-  - "Cubox/RL Infra 行业全景：环境和 RLaaS 如何加速 RL 的 GPT-3 时刻-2025-09-25.md"
-created: "2026-06-29"
-updated: "2026-06-29"
+- Cubox/RL Infra 行业全景：环境和 RLaaS 如何加速 RL 的 GPT-3 时刻-2025-09-25.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 # RL Infra 行业全景：环境和 RLaaS 如何加速 RL 的 GPT-3 时刻
 
 ## 来源信息

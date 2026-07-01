@@ -1,19 +1,18 @@
 ---
 type: source
 tags:
-  - LLM
-  - RAG
-  - AI-Agent/prompt-engineering
-summary: "OpenAI DevDay 2023 演讲总结：LLM 应用性能优化路线——Prompt Engineering → RAG → Fine-tuning，两轴(Context Optimization / LLM Optimization)思考框架，附 RAG 45%→98% 案例与 Fine-tuning+RAG 结合 Text-to-SQL 案例"
+- LLM
+- RAG
+- AI-Agent/prompt-engineering
+summary: OpenAI DevDay 2023 演讲总结：LLM 应用性能优化路线——Prompt Engineering → RAG → Fine-tuning，两轴(Context
+  Optimization / LLM Optimization)思考框架，附 RAG 45%→98% 案例与 Fine-tuning+RAG 结合 Text-to-SQL
+  案例
 sources:
-  - title: "Prompt Engineering, Finetune, RAG？：OpenAI LLM 应用最佳实践"
-    url: https://www.53ai.com/news/qianyanjishu/493.html
-    cubox_id: "7296844151134357370"
+- Cubox/Prompt Engineering, Finetune, RAG？：OpenAI LLM 应用最佳实践-2025-03-05.md
 created: 2026-06-29
-updated: 2026-06-29
+updated: '2026-07-01'
 confidence: high
 ---
-
 # OpenAI_LLM应用最佳实践
 
 ## 摘要

@@ -1,16 +1,15 @@
 ---
 type: source
 tags:
-  - LLM/reasoning
-  - LLM/training/RL
-summary: "全球 UC伯克利/港科大/HuggingFace 等团队以极低成本成功复现 DeepSeek-R1-Zero，验证纯 RL 涌现推理能力"
+- LLM/reasoning
+- LLM/training/RL
+summary: 全球 UC伯克利/港科大/HuggingFace 等团队以极低成本成功复现 DeepSeek-R1-Zero，验证纯 RL 涌现推理能力
 sources:
-  - "Cubox/DeepSeek-R1复现-2025-01-26.md"
-created: "2026-06-29"
-updated: "2026-06-29"
+- Cubox/DeepSeek-R1复现-2025-01-26.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 ## 来源信息
 
 - **标题**：全球掀DeepSeek复现狂潮！硅谷巨头神话崩塌，30刀见证啊哈时刻

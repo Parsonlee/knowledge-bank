@@ -1,15 +1,15 @@
 ---
 type: source
 tags:
-  - AI-Agent/coding
-summary: "腾讯程序员系统梳理 AI Agent 三级进化（LLM/AI/Multi-Agent）、MCP+A2A 协议对比、CoT/ReAct/Plan-and-Execute 思考框架，并以 Golang Eino+tRPC-A2A-Go 框架展示生产级多 Agent 实践。"
+- AI-Agent/coding
+summary: 腾讯程序员系统梳理 AI Agent 三级进化（LLM/AI/Multi-Agent）、MCP+A2A 协议对比、CoT/ReAct/Plan-and-Execute
+  思考框架，并以 Golang Eino+tRPC-A2A-Go 框架展示生产级多 Agent 实践。
 sources:
-  - "Cubox/万字长文深入浅出教你优雅开发复杂AI Agent-2025-06-30.md"
-created: "2026-06-29"
-updated: "2026-06-29"
+- Cubox/万字长文深入浅出教你优雅开发复杂AI Agent-2025-06-30.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 ## 来源信息
 
 - 作者：walli（腾讯技术工程）

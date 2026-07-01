@@ -1,15 +1,14 @@
 ---
 type: source
 tags:
-  - AI-Agent/skill
-summary: "从第一性原理拆解 Claude Agent Skills：提示词模板元工具架构，通过上下文注入扩展 LLM 能力"
+- AI-Agent/skill
+summary: 从第一性原理拆解 Claude Agent Skills：提示词模板元工具架构，通过上下文注入扩展 LLM 能力
 sources:
-  - "Cubox/Claude Agent Skills：从第一性原理深入剖析-2025-11-06.md"
-created: "2026-06-29"
-updated: "2026-06-29"
+- Cubox/Claude Agent Skills：从第一性原理深入剖析-2025-11-06.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 ## 来源信息
 
 - 原文：微信公众号 PaperAgent

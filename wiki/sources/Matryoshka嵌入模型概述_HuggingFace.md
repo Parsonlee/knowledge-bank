@@ -1,17 +1,14 @@
 ---
 type: source
 tags:
-  - RAG/embedding
-summary: "HuggingFace 俄罗斯套娃嵌入模型概述——MRL 训练原理、Sentence Transformers 实现、截断使用方法与性能实验"
+- RAG/embedding
+summary: HuggingFace 俄罗斯套娃嵌入模型概述——MRL 训练原理、Sentence Transformers 实现、截断使用方法与性能实验
 sources:
-  - title: "俄罗斯套娃 (Matryoshka) 嵌入模型概述 - HuggingFace"
-    url: https://www.cnblogs.com/huggingface/p/18057730
-    cubox_id: "7346119674347653057"
+- Cubox/俄罗斯套娃 (Matryoshka) 嵌入模型概述 - HuggingFace - 博客园-2025-07-19.md
 created: 2026-06-26
-updated: 2026-06-26
+updated: '2026-07-01'
 confidence: high
 ---
-
 # Matryoshka嵌入模型概述_HuggingFace
 
 ## 核心内容

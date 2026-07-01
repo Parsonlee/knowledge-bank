@@ -1,14 +1,23 @@
 ---
-title: "Switching pip to uv in a Dockerized Flask / Django App"
-source_url: "https://nickjanetakis.com/blog/switching-pip-to-uv-in-a-dockerized-flask-or-django-app"
-author: "Nick Janetakis"
-date: 2025-06-25
+type: source
 tags:
-  - Skill/python
+- Skill/python
+summary: 作者分享了将 Docker 化 Python 项目从 pip 切换到 uv 的完整实践，实测约 10x 速度提升。
+sources:
+- Cubox/Switching pip to uv in a Dockerized Flask - Django App — Nick Janetakis-2025-06-25.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
+date: 2025-06-25
 ---
-
 # Docker 化 Flask/Django 应用从 pip 切换到 uv
+
+## 来源信息
+
+- **标题**：Switching pip to uv in a Dockerized Flask / Django App
+- **作者**：Nick Janetakis
+- **URL**：https://nickjanetakis.com/blog/switching-pip-to-uv-in-a-dockerized-flask-or-django-app
+
 
 > 来源：Nick Janetakis 博客，2025-06-17 更新
 

@@ -1,15 +1,14 @@
 ---
 type: source
 tags:
-  - AI-Agent/context-engineering
-summary: "阿里云联调造数场景：单Agent→多Agent演进，意图识别+工具引擎+推理执行三模块解决复杂指令和工具膨胀问题"
+- AI-Agent/context-engineering
+summary: 阿里云联调造数场景：单Agent→多Agent演进，意图识别+工具引擎+推理执行三模块解决复杂指令和工具膨胀问题
 sources:
-  - "Cubox/AI应用实战：搞定复杂指令和工具膨胀-2025-11-19.md"
-created: "2026-06-29"
-updated: "2026-06-29"
+- Cubox/AI应用实战：搞定复杂指令和工具膨胀-2025-11-19.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 ## 来源信息
 
 - 标题：【智造】AI应用实战：6个agent搞定复杂指令和工具膨胀

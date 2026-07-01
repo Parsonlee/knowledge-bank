@@ -1,15 +1,14 @@
 ---
 type: source
 tags:
-  - LLM/inference
-summary: "constraint-cache：通过确定性语义规范化将相似查询映射为同一缓存键，实现 99.9% 缓存命中率和毫秒级响应"
+- LLM/inference
+summary: constraint-cache：通过确定性语义规范化将相似查询映射为同一缓存键，实现 99.9% 缓存命中率和毫秒级响应
 sources:
-  - "Cubox/让本地大模型不再重复推理的缓存技巧-2025-11-04.md"
-created: "2026-06-29"
-updated: "2026-06-29"
+- Cubox/让本地大模型不再重复推理的缓存技巧-2025-11-04.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 ## 来源信息
 
 - 标题：让本地大模型不再重复推理的缓存技巧

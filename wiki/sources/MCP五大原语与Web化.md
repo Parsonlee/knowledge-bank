@@ -1,15 +1,15 @@
 ---
 type: source
 tags:
-  - AI-Agent/tools
-summary: "MCP 联合创建者 David 解构五大原语（Prompt/Resource/Tool/Sampling/Roots），并阐述 MCP Web 化（OAuth 2.1 + Streamable HTTP）的未来方向"
+- AI-Agent/tools
+summary: MCP 联合创建者 David 解构五大原语（Prompt/Resource/Tool/Sampling/Roots），并阐述 MCP Web 化（OAuth
+  2.1 + Streamable HTTP）的未来方向
 sources:
-  - "Cubox/MCP不止工具调用！MCP联合创建者：绝大多数人用法都太初级！曝MCP五大原语、高阶玩法：丰富人机交互体验；MCP的未来在Web-2025-08-14.md"
-created: "2026-06-29"
-updated: "2026-06-29"
+- Cubox/MCP不止工具调用！MCP联合创建者：绝大多数人用法都太初级！曝MCP五大原语、高阶玩法：丰富人机交互体验；MCP的未来在Web-2025-08-14.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 ## 来源信息
 
 - **标题**：MCP不止工具调用！MCP联合创建者：绝大多数人用法都太初级！曝MCP五大原语、高阶玩法：丰富人机交互体验；MCP的未来在Web

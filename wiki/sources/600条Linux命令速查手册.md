@@ -1,16 +1,25 @@
 ---
-title: 600条Linux命令速查手册
 type: source
-confidence: high
 tags:
-  - Skill/linux
-source_url: https://mp.weixin.qq.com/s/_T1WNfnTd5OoEA_RkgRThg
+- Skill/linux
+summary: 本文将日常运维中常用的 Linux 命令按功能分为 28 大类进行整理，涵盖从系统信息到网络配置、从文件管理到软件包管理的全方位速查。全文约 600
+  条命令，号称"能用到退休"，可解决日常 99% 的问题。
+sources:
+- Cubox/能用到“退休”的 600条 Linux 命令，可以解决日常99%的问题~-2024-02-20.md
+created: '2026-06-29'
+updated: '2026-07-01'
+confidence: high
 cubox_url: https://cubox.pro/web/card/7159452574557406140
-author: 冰河（码小辫转载）
 date_collected: 2024-02-20
 ---
-
 # 600条Linux命令速查手册
+
+## 来源信息
+
+- **标题**：600条Linux命令速查手册
+- **作者**：冰河（码小辫转载）
+- **URL**：https://mp.weixin.qq.com/s/_T1WNfnTd5OoEA_RkgRThg
+
 
 > 来源：微信公众号「码小辫」转载，原作者冰河。Cubox 无高亮（stub），全文基于剪藏正文（约47KB）。
 

@@ -1,17 +1,15 @@
 ---
 type: source
 tags:
-  - RAG
-summary: "刘晓国（Elastic 中国社区首席布道师）QCon 演讲：基于 Elasticsearch 构建企业 AI 搜索应用，涵盖稠密/稀疏向量、混合检索 RRF、量化、HNSW+GPU 加速、Serverless 架构与 Agentic RAG 落地实践"
+- RAG
+summary: 刘晓国（Elastic 中国社区首席布道师）QCon 演讲：基于 Elasticsearch 构建企业 AI 搜索应用，涵盖稠密/稀疏向量、混合检索
+  RRF、量化、HNSW+GPU 加速、Serverless 架构与 Agentic RAG 落地实践
 sources:
-  - title: "基于 Elasticsearch 创建企业 AI 搜索应用实践"
-    url: https://mp.weixin.qq.com/s?__biz=MjM5MDE0Mjc4MA==&mid=2651254397&idx=2&sn=75ca687e144aeaab9d6b76ba65cd695e&poc_token=HEcQtWij6IHPhLy_HjN1wgXcJ4b8uuDukW4hO2FX
-    cubox_id: "7362036978633673592"
+- Cubox/基于 Elasticsearch 创建企业 AI 搜索应用实践-2025-09-01.md
 created: 2026-06-26
-updated: 2026-06-26
+updated: '2026-07-01'
 confidence: high
 ---
-
 # ES企业AI搜索实践
 
 ## 摘要

@@ -1,18 +1,16 @@
 ---
 type: source
 tags:
-  - RAG/embedding
-  - RAG
-summary: "从 BM25 到 Multi-Vector 的 6 种 Embedding 演进路线：Sparse/Dense/Quantized/Binary/Matryoshka/Multi-Vector 对比选型"
+- RAG/embedding
+- RAG
+summary: 从 BM25 到 Multi-Vector 的 6 种 Embedding 演进路线：Sparse/Dense/Quantized/Binary/Matryoshka/Multi-Vector
+  对比选型
 sources:
-  - title: "从BM25到Multi-Vector：6种Embedding演进路线"
-    url: https://mp.weixin.qq.com/s/wkcFxpHXaHLTm0K9Dv3ihQ
-    cubox_id: "7367863515257768722"
+- Cubox/从BM25到Multi-Vector：6种Embedding演进路线-2025-09-17.md
 created: 2026-06-26
-updated: 2026-06-26
+updated: '2026-07-01'
 confidence: high
 ---
-
 # 从BM25到Multi-Vector_6种Embedding演进路线
 
 ## 核心内容

@@ -1,15 +1,14 @@
 ---
 type: source
 tags:
-  - AI-Agent/tools
-summary: "字节跳动 Agent TARS 开发者以前后端分离类比，阐述 MCP 将工具层从 Agent 解耦的范式转移与落地实践"
+- AI-Agent/tools
+summary: 字节跳动 Agent TARS 开发者以前后端分离类比，阐述 MCP 将工具层从 Agent 解耦的范式转移与落地实践
 sources:
-  - "Cubox/基于 MCP 的 AI Agent 应用开发实践-2025-05-12.md"
-created: "2026-06-29"
-updated: "2026-06-29"
+- Cubox/基于 MCP 的 AI Agent 应用开发实践-2025-05-12.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 ## 来源信息
 
 - **标题**：基于 MCP 的 AI Agent 应用开发实践

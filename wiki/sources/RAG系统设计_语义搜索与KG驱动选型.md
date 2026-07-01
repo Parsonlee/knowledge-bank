@@ -1,13 +1,24 @@
 ---
-title: "RAG系统设计_语义搜索与KG驱动选型"
-source_url: "https://mp.weixin.qq.com/s?__biz=MzU1NDA4NjU2MA==&mid=2247639036&idx=2&sn=374549b625d449cf9d137783ae038dd0"
-author: "尹一峰 / Hugging Face"
-date_published: "2025-05-19"
-tags: [RAG/embedding, RAG]
+type: source
+tags:
+- RAG/embedding
+- RAG
+summary: RAG 的本质是提示工程（Prompt Engineering）：通过改变条件调整概率分布，不改变模型参数 θ
+sources:
+- Cubox/RAG系统设计：揭秘语义搜索被低估的核心价值与KG驱动的架构选型策略-2025-05-19.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 # RAG系统设计_语义搜索与KG驱动选型
+
+## 来源信息
+
+- **标题**：RAG系统设计_语义搜索与KG驱动选型
+- **作者**：尹一峰 / Hugging Face
+- **发布时间**：2025-05-19
+- **URL**：https://mp.weixin.qq.com/s?__biz=MzU1NDA4NjU2MA==&mid=2247639036&idx=2&sn=374549b625d449cf9d137783ae038dd0
+
 
 > AICon 演讲实录，深入探讨语义搜索在 RAG 中的核心价值、系统设计权衡，以及 KG-RAG 的适用场景。
 

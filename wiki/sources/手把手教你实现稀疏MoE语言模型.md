@@ -1,16 +1,15 @@
 ---
 type: source
 tags:
-  - LLM/arch/MoE
-  - Skill/python
-summary: "从零 PyTorch 实现稀疏 MoE 语言模型：Top-k 门控、噪声 Top-k、SparseMoE 模块到完整训练循环"
+- LLM/arch/MoE
+- Skill/python
+summary: 从零 PyTorch 实现稀疏 MoE 语言模型：Top-k 门控、噪声 Top-k、SparseMoE 模块到完整训练循环
 sources:
-  - "Cubox/手把手教你，从零开始实现一个稀疏混合专家架构语言模型（MoE）-2024-02-18.md"
-created: "2026-06-29"
-updated: "2026-06-29"
+- Cubox/手把手教你，从零开始实现一个稀疏混合专家架构语言模型（MoE）-2024-02-18.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 ## 来源信息
 
 - **标题**：手把手教你，从零开始实现一个稀疏混合专家架构语言模型（MoE）

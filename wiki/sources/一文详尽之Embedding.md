@@ -1,17 +1,14 @@
 ---
 type: source
 tags:
-  - RAG/embedding
-summary: "Embedding 全景综述：从独热编码/词袋/主题模型/Word2Vec 到 BERT 各向异性问题及优化方法（SBERT/Bert-flow/Bert-whitening/SimCSE）"
+- RAG/embedding
+summary: Embedding 全景综述：从独热编码/词袋/主题模型/Word2Vec 到 BERT 各向异性问题及优化方法（SBERT/Bert-flow/Bert-whitening/SimCSE）
 sources:
-  - title: "一文详尽之Embedding（向量表示）！"
-    url: https://mp.weixin.qq.com/s/MPTXRhLtL6g5rtS7Hju3SA
-    cubox_id: "7282379762964629528"
+- Cubox/一文详尽之Embedding（向量表示）！-2025-01-24.md
 created: 2026-06-26
-updated: 2026-06-26
+updated: '2026-07-01'
 confidence: high
 ---
-
 # 一文详尽之Embedding
 
 ## 用户高亮 [重点/高亮]

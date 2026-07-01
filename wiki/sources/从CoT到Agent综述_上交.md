@@ -1,16 +1,15 @@
 ---
 type: source
 tags:
-  - LLM/reasoning
-  - AI-Agent
-summary: "上交大综述：从 CoT 基本原理到 Agent，覆盖 Prompt 模式/推理结构/应用场景三条路径及 Agent 挑战"
+- LLM/reasoning
+- AI-Agent
+summary: 上交大综述：从 CoT 基本原理到 Agent，覆盖 Prompt 模式/推理结构/应用场景三条路径及 Agent 挑战
 sources:
-  - "Cubox/从 CoT 到 Agent，最全综述来了！上交出品-2023-11-26.md"
-created: "2026-06-29"
-updated: "2026-06-29"
+- Cubox/从 CoT 到 Agent，最全综述来了！上交出品-2023-11-26.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 ## 来源信息
 
 - **标题**：从 CoT 到 Agent，最全综述来了！上交出品

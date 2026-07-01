@@ -1,16 +1,15 @@
 ---
 type: source
 tags:
-  - AI-Agent/tools
-  - AI-Agent/multi-agent
-summary: "阿里云实践：用 Qwen3-0.6b 做 MCP 工具选择节省 token，Qwen3-235b-a22b 负责生成，混合部署兼顾成本与效果"
+- AI-Agent/tools
+- AI-Agent/multi-agent
+summary: 阿里云实践：用 Qwen3-0.6b 做 MCP 工具选择节省 token，Qwen3-235b-a22b 负责生成，混合部署兼顾成本与效果
 sources:
-  - "Cubox/多快好省，Qwen3混合部署模式引爆MCP-2025-06-18.md"
-created: "2026-06-29"
-updated: "2026-06-29"
+- Cubox/多快好省，Qwen3混合部署模式引爆MCP-2025-06-18.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 ## 来源信息
 
 - 标题：多快好省，Qwen3混合部署模式引爆MCP

@@ -1,16 +1,15 @@
 ---
 type: source
 tags:
-  - LLM/training/post-train
-  - LLM/training/pre-train
-summary: "HuggingFace 200+ 页 SmolLM3 训练实战博客，覆盖 Why→What→How、架构、数据、长周期训练、后训练与基础设施全链路"
+- LLM/training/post-train
+- LLM/training/pre-train
+summary: HuggingFace 200+ 页 SmolLM3 训练实战博客，覆盖 Why→What→How、架构、数据、长周期训练、后训练与基础设施全链路
 sources:
-  - "Cubox/HuggingFace从决策到落地「手把手」教你训练大模型-2025-11-18.md"
-created: "2026-06-29"
-updated: "2026-06-29"
+- Cubox/HuggingFace从决策到落地「手把手」教你训练大模型-2025-11-18.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 ## 来源信息
 
 - 标题：HuggingFace发布超200页「实战指南」，从决策到落地「手把手」教你训练大模型

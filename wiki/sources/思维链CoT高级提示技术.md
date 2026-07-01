@@ -1,16 +1,15 @@
 ---
 type: source
 tags:
-  - LLM/reasoning
-  - AI-Agent/prompt-engineering
-summary: "CoT 高级提示工程综述：从 Zero-shot CoT 到 CoT-SC、Decoding CoT、Tree of Thoughts + MCTS，及成本权衡"
+- LLM/reasoning
+- AI-Agent/prompt-engineering
+summary: CoT 高级提示工程综述：从 Zero-shot CoT 到 CoT-SC、Decoding CoT、Tree of Thoughts + MCTS，及成本权衡
 sources:
-  - "Cubox/思维链高级提示付费文章-2025-01-23.md"
-created: "2026-06-29"
-updated: "2026-06-29"
+- Cubox/思维链高级提示付费文章-2025-01-23.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 ## 来源信息
 
 - 标题：Medium上20万次阅读的思维链高级提示付费文章

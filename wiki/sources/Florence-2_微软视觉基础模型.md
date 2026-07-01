@@ -1,16 +1,15 @@
 ---
 type: source
 tags:
-  - LLM/arch/VLM
-  - CV/arch
-summary: "微软 Azure AI 提出 Florence-2，基于 Seq2Seq 架构和 FLD-5B 超大数据集，统一处理图像理解、检测、定位、分割等多种视觉任务"
+- LLM/arch/VLM
+- CV/arch
+summary: 微软 Azure AI 提出 Florence-2，基于 Seq2Seq 架构和 FLD-5B 超大数据集，统一处理图像理解、检测、定位、分割等多种视觉任务
 sources:
-  - "Cubox/微软 Azure AI 团队新作 - Florence-2- 解锁视觉新境界，万能感知引领未来！-2023-11-26.md"
-created: "2026-06-29"
-updated: "2026-06-29"
+- Cubox/微软 Azure AI 团队新作 - Florence-2- 解锁视觉新境界，万能感知引领未来！-2023-11-26.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 ## 来源信息
 
 - **标题**：微软 Azure AI 团队新作 | Florence-2: 解锁视觉新境界，万能感知引领未来！

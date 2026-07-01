@@ -1,15 +1,14 @@
 ---
 type: source
 tags:
-  - LLM/arch/MoE
-summary: "MoE 面试面经：结构原理、优缺点、Router 机制、PyTorch 示例代码的简明讲解"
+- LLM/arch/MoE
+summary: MoE 面试面经：结构原理、优缺点、Router 机制、PyTorch 示例代码的简明讲解
 sources:
-  - "Cubox/大模型面试面经：简单透彻理解MoE-2024-03-09.md"
-created: "2026-06-29"
-updated: "2026-06-29"
+- Cubox/大模型面试面经：简单透彻理解MoE-2024-03-09.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 ## 来源信息
 
 - **标题**：大模型面试面经：简单透彻理解MoE

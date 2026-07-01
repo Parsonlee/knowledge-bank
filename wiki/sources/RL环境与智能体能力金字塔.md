@@ -1,16 +1,16 @@
 ---
 type: source
 tags:
-  - LLM/training/RL
-  - Infra/AI
-summary: Surge AI 用 9 个模型在自建 RL 环境（Corecraft 客服场景）执行 150 项任务，提出「智能体能力金字塔」：工具使用→规划/目标设定→适应性→接地气（groundedness）→常识推理。GPT-5/Claude Sonnet 4.5 遥遥领先但仍失败超 40%；常识推理是 GPT-5 与人类水平的主要差距。
+- LLM/training/RL
+- Infra/AI
+summary: Surge AI 用 9 个模型在自建 RL 环境（Corecraft 客服场景）执行 150 项任务，提出「智能体能力金字塔」：工具使用→规划/目标设定→适应性→接地气（groundedness）→常识推理。GPT-5/Claude
+  Sonnet 4.5 遥遥领先但仍失败超 40%；常识推理是 GPT-5 与人类水平的主要差距。
 sources:
-  - "Cubox/RL 环境与智能体能力金字塔 - 宝玉的分享-2025-11-17.md"
-created: "2026-06-29"
-updated: "2026-06-29"
+- Cubox/RL 环境与智能体能力金字塔 - 宝玉的分享-2025-11-17.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 # RL 环境与智能体能力金字塔
 
 ## 来源信息

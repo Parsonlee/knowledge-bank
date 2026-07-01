@@ -1,14 +1,23 @@
 ---
-title: 用Claude code重塑编程工作流
-source_url: https://mp.weixin.qq.com/s?__biz=MzI2NDU4OTExOQ==&mid=2247692023
-author: 厉辉（腾讯云开发者）
+type: source
 tags:
-  - Skill/claude-code
-confidence: high
+- Skill/claude-code
+summary: 厉辉（腾讯云开发者）结合 Anthropic 内部实践与个人思考，提出一套"场景化 AI 协作框架"。基于对 Anthropic 内部 9 个团队、数十个应用场景的分析，归纳出三种协作模式和三个反直觉高效技巧，将
+  AI 从"编码助手"升级为"开发搭档"。
+sources:
+- Cubox/用Claude code重塑编程工作流-2025-09-08.md
 created: 2026-06-30
+updated: '2026-07-01'
+confidence: high
 ---
-
 # 用 Claude Code 重塑编程工作流
+
+## 来源信息
+
+- **标题**：用Claude code重塑编程工作流
+- **作者**：厉辉（腾讯云开发者）
+- **URL**：https://mp.weixin.qq.com/s?__biz=MzI2NDU4OTExOQ==&mid=2247692023
+
 
 ## 概述
 

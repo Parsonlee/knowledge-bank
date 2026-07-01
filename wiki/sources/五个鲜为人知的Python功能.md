@@ -1,14 +1,23 @@
 ---
-title: "写了十年 Python，我竟然现在才知道这5个功能！"
-source_url: "https://mp.weixin.qq.com/s/YdKuIzRgmXgrz7MDPqSfig"
-author: "PyTorch研习社"
-date: 2025-07-31
+type: source
 tags:
-  - Skill/python
+- Skill/python
+summary: 5 个教程很少提及但能干净解决实际问题的 Python 功能。
+sources:
+- Cubox/写了十年 Python，我竟然现在才知道这5个功能！-2025-07-31.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
+date: 2025-07-31
 ---
-
 # 五个鲜为人知的 Python 功能
+
+## 来源信息
+
+- **标题**：写了十年 Python，我竟然现在才知道这5个功能！
+- **作者**：PyTorch研习社
+- **URL**：https://mp.weixin.qq.com/s/YdKuIzRgmXgrz7MDPqSfig
+
 
 > 来源：微信公众号 AI研究生 / PyTorch研习社
 

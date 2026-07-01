@@ -1,16 +1,25 @@
 ---
-title: 一行代码让 matplotlib 图表变高大上
 type: source
-confidence: high
 tags:
-  - Skill/data-analysis
-source_url: https://mp.weixin.qq.com/s/6TrDtLHqBBYEfCwJobZeAg
+- Skill/data-analysis
+summary: '`matplotlib` 是 Python 生态中最流行的数据可视化框架，功能强大但默认样式简陋，想做出简洁商务风格图表往往需要编写大量代码调整参数。本文介绍
+  [[实体_dufte]] 库——通过简短代码自动改造默认 matplotlib 图表样式。`pip install dufte` 安装后，将'
+sources:
+- Cubox/一行代码让 matplotlib 图表变高大上-2023-11-26.md
+created: '2026-06-29'
+updated: '2026-07-01'
+confidence: high
 cubox_url: https://cubox.pro/web/card/7128377660480160628
-author: 费弗里（程序员的那些事）
 date_collected: 2023-11-26
 ---
-
 # 一行代码让 matplotlib 图表变高大上
+
+## 来源信息
+
+- **标题**：一行代码让 matplotlib 图表变高大上
+- **作者**：费弗里（程序员的那些事）
+- **URL**：https://mp.weixin.qq.com/s/6TrDtLHqBBYEfCwJobZeAg
+
 
 > 来源：微信公众号「程序员的那些事」，作者费弗里。Cubox 无高亮（stub），全文基于剪藏正文。
 

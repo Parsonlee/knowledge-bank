@@ -1,15 +1,14 @@
 ---
 type: source
 tags:
-  - LLM/arch/Mamba
-summary: "知乎中文解析 Mamba 论文：选择机制动机、硬件感知算法、选择性复制与归纳头任务，作者背景（Albert Gu / Tri Dao）"
+- LLM/arch/Mamba
+summary: 知乎中文解析 Mamba 论文：选择机制动机、硬件感知算法、选择性复制与归纳头任务，作者背景（Albert Gu / Tri Dao）
 sources:
-  - "Cubox/一文读懂Mamba：具有选择状态空间的线性时间序列建模 - 知乎-2024-07-10.md"
-created: "2026-06-29"
-updated: "2026-06-29"
+- Cubox/一文读懂Mamba：具有选择状态空间的线性时间序列建模 - 知乎-2024-07-10.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 ## 来源信息
 
 - **标题**：一文读懂 Mamba：具有选择状态空间的线性时间序列建模

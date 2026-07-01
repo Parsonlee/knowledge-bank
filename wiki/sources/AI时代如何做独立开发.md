@@ -1,15 +1,24 @@
 ---
-title: "一年上线超 10 款产品，AI 时代如何做独立开发"
-author: 艾逗笔（idoubi）
-source_url: https://mp.weixin.qq.com/s?__biz=MjM5MDE0Mjc4MA==&mid=2651250699&idx=2&sn=5bbbaf6666be58fba2ce856a0fbf14df
-cubox_url: https://cubox.pro/web/card/7348601856957875896
+type: source
 tags:
-  - 创业
+- 创业
+summary: 2011 武大核工程本科 → 自学平面设计+网页编程 → 取网名 idoubi 致敬 Adobe。
+sources:
+- Cubox/一年上线超 10 款产品，AI 时代如何做独立开发-2025-07-26.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
+cubox_url: https://cubox.pro/web/card/7348601856957875896
 ingested: 2026-06-30
 ---
-
 # AI 时代如何做独立开发
+
+## 来源信息
+
+- **标题**：一年上线超 10 款产品，AI 时代如何做独立开发
+- **作者**：艾逗笔（idoubi）
+- **URL**：https://mp.weixin.qq.com/s?__biz=MjM5MDE0Mjc4MA==&mid=2651250699&idx=2&sn=5bbbaf6666be58fba2ce856a0fbf14df
+
 
 > InfoQ/AICon 大会分享。ThinkAny & MCP.so 创始人艾逗笔（idoubi）讲述一年半独立开发经验：感悟、可复制经验和行业机会。
 

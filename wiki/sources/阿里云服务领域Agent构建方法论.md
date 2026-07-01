@@ -1,15 +1,15 @@
 ---
 type: source
 tags:
-  - AI-Agent/prompt-engineering
-summary: "阿里云服务领域 Agent 一年实战方法论：广义/狭义 Agent 定义之争、四大落地挑战、Workflow 三代演化路径、Multi-Agent 架构权衡与调优路径图。"
+- AI-Agent/prompt-engineering
+summary: 阿里云服务领域 Agent 一年实战方法论：广义/狭义 Agent 定义之争、四大落地挑战、Workflow 三代演化路径、Multi-Agent
+  架构权衡与调优路径图。
 sources:
-  - "Cubox/如何构建和调优高可用性的Agent？浅谈阿里云服务领域Agent构建的方法论-2025-06-20.md"
-created: "2026-06-29"
-updated: "2026-06-29"
+- Cubox/如何构建和调优高可用性的Agent？浅谈阿里云服务领域Agent构建的方法论-2025-06-20.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 ## 来源信息
 
 - 原文：[如何构建和调优高可用性的Agent？浅谈阿里云服务领域Agent构建的方法论](https://mp.weixin.qq.com/s/zEZ53f7EtnI2ve1QRELUSw)

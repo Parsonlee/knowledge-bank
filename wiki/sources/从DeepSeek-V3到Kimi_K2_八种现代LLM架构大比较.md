@@ -1,16 +1,15 @@
 ---
 type: source
 tags:
-  - LLM/arch
-  - LLM/arch/MoE
-summary: "Sebastian Raschka 对比 8 种 2024-2025 年现代 LLM 架构的创新点：MLA/MoE/滑动窗口/Post-Norm/NoPE/Muon"
+- LLM/arch
+- LLM/arch/MoE
+summary: Sebastian Raschka 对比 8 种 2024-2025 年现代 LLM 架构的创新点：MLA/MoE/滑动窗口/Post-Norm/NoPE/Muon
 sources:
-  - "Cubox/从DeepSeek-V3到Kimi K2：八种现代 LLM 架构大比较-2025-08-04.md"
-created: "2026-06-29"
-updated: "2026-06-29"
+- Cubox/从DeepSeek-V3到Kimi K2：八种现代 LLM 架构大比较-2025-08-04.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 ## 来源信息
 
 - **标题**：从DeepSeek-V3到Kimi K2：八种现代 LLM 架构大比较

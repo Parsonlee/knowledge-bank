@@ -1,18 +1,16 @@
 ---
 type: source
 tags:
-  - RAG/embedding
-  - RAG
-summary: "从 ColBERT 到 ColBERTv2 的演进——早期交互/延迟交互对比、表示模型与交互模型，及 ColBERTv2 的残差压缩（residual compression）、知识蒸馏与 BGE-M3 压缩实验"
+- RAG/embedding
+- RAG
+summary: 从 ColBERT 到 ColBERTv2 的演进——早期交互/延迟交互对比、表示模型与交互模型，及 ColBERTv2 的残差压缩（residual
+  compression）、知识蒸馏与 BGE-M3 压缩实验
 sources:
-  - title: "从ColBERT到ColBERTv2的演进及其应用"
-    url: https://mp.weixin.qq.com/s/2-9FqIFxgWM10X9lnora4A
-    cubox_id: "7371088814812430418"
+- Cubox/RAG之延迟交互与残差压缩：从ColBERT到ColBERTv2的演进及其应用-2025-09-26.md
 created: 2026-06-26
-updated: 2026-06-26
+updated: '2026-07-01'
 confidence: high
 ---
-
 # ColBERTv2残差压缩演进
 
 ## 早期交互 vs 延迟交互

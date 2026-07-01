@@ -1,15 +1,14 @@
 ---
 type: source
 tags:
-  - AI-Agent/coding
-summary: "私域知识工程三板斧：让AI从业务小白变成项目老手，一次性生成符合项目规范的高质量代码"
+- AI-Agent/coding
+summary: 私域知识工程三板斧：让AI从业务小白变成项目老手，一次性生成符合项目规范的高质量代码
 sources:
-  - "Cubox/私域知识工程实战：如何让AI一次性写出高质量代码？-2025-09-28.md"
-created: "2026-06-29"
-updated: "2026-06-29"
+- Cubox/私域知识工程实战：如何让AI一次性写出高质量代码？-2025-09-28.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 ## 来源信息
 
 - 原文：阿里云开发者，作者修染

@@ -1,17 +1,14 @@
 ---
 type: source
 tags:
-  - RAG
-summary: "北京大学 PKU-DAIR 综述(arXiv:2402.19473)：AIGC 场景下检索增强技术，覆盖近 300 篇论文，四大基础范式+五类提升方法+多模态应用+评估基准"
+- RAG
+summary: 北京大学 PKU-DAIR 综述(arXiv:2402.19473)：AIGC 场景下检索增强技术，覆盖近 300 篇论文，四大基础范式+五类提升方法+多模态应用+评估基准
 sources:
-  - title: "最新RAG综述来了！北京大学发布AIGC的检索增强技术综述"
-    url: https://mp.weixin.qq.com/s/o8oTN06UsQSlb5BNyJH23w
-    cubox_id: "7168120648684801077"
+- Cubox/最新RAG综述来了！北京大学发布AIGC的检索增强技术综述-2024-03-15.md
 created: 2026-06-29
-updated: 2026-06-29
+updated: '2026-07-01'
 confidence: high
 ---
-
 # RAG综述_北大AIGC2024
 
 ## 摘要

@@ -1,15 +1,14 @@
 ---
 type: source
 tags:
-  - AI-Agent/coding
-summary: "六位一线AI工程师分享大模型应用开发一年实战心得：提示词/RAG/微调/Agent/评估全链路经验"
+- AI-Agent/coding
+summary: 六位一线AI工程师分享大模型应用开发一年实战心得：提示词/RAG/微调/Agent/评估全链路经验
 sources:
-  - "Cubox/六位一线AI工程师总结爆火！大模型应用摸爬滚打一年心得公开，网友：全程高能-2024-06-01.md"
-created: "2026-06-29"
-updated: "2026-06-29"
+- Cubox/六位一线AI工程师总结爆火！大模型应用摸爬滚打一年心得公开，网友：全程高能-2024-06-01.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 ## 来源信息
 
 - 原文：量子位 QbitAI，作者梦晨/西风

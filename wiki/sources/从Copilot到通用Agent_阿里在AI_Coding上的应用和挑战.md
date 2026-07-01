@@ -1,15 +1,15 @@
 ---
 type: source
 tags:
-  - AI-Agent/coding
-summary: "阿里巴巴代码平台负责人向邦宇分享从 Copilot 到通用 Agent 的实践：内部智能研发工具两年演进、遇到的工程与模型挑战、以及双 Agent 产品（IDE Agent + Aone Agent）的架构设计。"
+- AI-Agent/coding
+summary: 阿里巴巴代码平台负责人向邦宇分享从 Copilot 到通用 Agent 的实践：内部智能研发工具两年演进、遇到的工程与模型挑战、以及双 Agent
+  产品（IDE Agent + Aone Agent）的架构设计。
 sources:
-  - "Cubox/从 Copilot 到 通用 Agent ： 阿里在 AI Coding 上的应用和挑战-2025-07-04.md"
-created: "2026-06-29"
-updated: "2026-06-29"
+- Cubox/从 Copilot 到 通用 Agent ： 阿里在 AI Coding 上的应用和挑战-2025-07-04.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 ## 来源信息
 
 - 演讲嘉宾：向邦宇（阿里巴巴代码平台负责人）

@@ -1,15 +1,14 @@
 ---
 type: source
 tags:
-  - LLM/arch
-summary: "软件工程师Brendan Bycroft制作的LLM 3D可视化网站，逐层展示GPT-3/NanoGPT的Embedding/LN/Self-Attention/MLP/Softmax工作原理"
+- LLM/arch
+summary: 软件工程师Brendan Bycroft制作的LLM 3D可视化网站，逐层展示GPT-3/NanoGPT的Embedding/LN/Self-Attention/MLP/Softmax工作原理
 sources:
-  - "Cubox/矩阵模拟！Transformer大模型3D可视化，GPT-3、Nano-GPT每一层清晰可见-2023-12-04.md"
-created: "2026-06-29"
-updated: "2026-06-29"
+- Cubox/矩阵模拟！Transformer大模型3D可视化，GPT-3、Nano-GPT每一层清晰可见-2023-12-04.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 # 矩阵模拟！Transformer大模型3D可视化，GPT-3、Nano-GPT每一层清晰可见
 
 ## 来源信息

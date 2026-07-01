@@ -1,15 +1,15 @@
 ---
 type: source
 tags:
-  - CV/data-augmentation
-summary: 针对 OCR（手写金额识别）的数据增强实战：用 OpenCV + albumentations 实现三类增强——形态学（腐蚀/膨胀模拟细/粗笔画）、噪声（RandomRain/RandomShadow/PixelDropout）、变换（ShiftScaleRotate/Affine/Blur），并用 OneOf 随机组合；附完整 augment_img 代码。
+- CV/data-augmentation
+summary: 针对 OCR（手写金额识别）的数据增强实战：用 OpenCV + albumentations 实现三类增强——形态学（腐蚀/膨胀模拟细/粗笔画）、噪声（RandomRain/RandomShadow/PixelDropout）、变换（ShiftScaleRotate/Affine/Blur），并用
+  OneOf 随机组合；附完整 augment_img 代码。
 sources:
-  - "Cubox/OCR的有效数据增强-2024-10-08.md"
-created: "2026-06-26"
-updated: "2026-06-26"
+- Cubox/OCR的有效数据增强-2024-10-08.md
+created: '2026-06-26'
+updated: '2026-07-01'
 confidence: high
 ---
-
 # OCR 的有效数据增强
 
 ## 来源信息

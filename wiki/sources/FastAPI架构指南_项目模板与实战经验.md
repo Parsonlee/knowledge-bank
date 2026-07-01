@@ -1,14 +1,23 @@
 ---
-title: "FastAPI架构指南：用这份模版打造可扩展又安全的系统（附实战经验）"
-source_url: "https://mp.weixin.qq.com/s/K7bbrvMRdUejCJu-vLlE-g"
-author: "brianobot / PyTorch研习社"
-date: 2025-10-28
+type: source
 tags:
-  - Skill/python
+- Skill/python
+summary: 作者分享了一套在生产环境中支撑 500+ 并发用户的 FastAPI 标准项目结构。
+sources:
+- Cubox/FastAPI 架构指南：用这份模版打造可扩展又安全的系统（附实战经验）-2025-10-28.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
+date: 2025-10-28
 ---
-
 # FastAPI 架构指南：项目模板与实战经验
+
+## 来源信息
+
+- **标题**：FastAPI架构指南：用这份模版打造可扩展又安全的系统（附实战经验）
+- **作者**：brianobot / PyTorch研习社
+- **URL**：https://mp.weixin.qq.com/s/K7bbrvMRdUejCJu-vLlE-g
+
 
 > 来源：微信公众号 PyTorch研习社，GitHub 模板 https://github.com/brianobot/fastAPI_project_structure
 

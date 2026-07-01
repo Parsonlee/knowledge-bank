@@ -1,16 +1,15 @@
 ---
 type: source
 tags:
-  - DeepLearning
-  - Skill/python/pytorch
+- DeepLearning
+- Skill/python/pytorch
 summary: 一套完整的 PyTorch 深度学习训练代码模板，涵盖超参定义、数据集、模型、早停、训练验证测试九个步骤。
 sources:
-  - "Cubox/深度学习pytorch训练代码模板.md"
-created: "2026-06-29"
-updated: "2026-06-29"
+- Cubox/PyTorch常用代码段合集-2023-03-06.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 # PyTorch 训练代码模板
 
 > 来源：实操教程 | 深度学习pytorch训练代码模板(个人习惯)（视学算法/wfnian）

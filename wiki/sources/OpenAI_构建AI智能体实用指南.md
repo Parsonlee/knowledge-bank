@@ -1,15 +1,14 @@
 ---
 type: source
 tags:
-  - AI-Agent/multi-agent
-summary: "OpenAI 官方实用指南（宝玉译）：Agent 三大基石（模型/工具/指令）、单一/主管/去中心化编排模式、分层安全护栏与 HITL 机制。"
+- AI-Agent/multi-agent
+summary: OpenAI 官方实用指南（宝玉译）：Agent 三大基石（模型/工具/指令）、单一/主管/去中心化编排模式、分层安全护栏与 HITL 机制。
 sources:
-  - "Cubox/OpenAI- 构建 AI 智能体实用指南 - 宝玉的分享-2025-06-21.md"
-created: "2026-06-29"
-updated: "2026-06-29"
+- Cubox/OpenAI- 构建 AI 智能体实用指南 - 宝玉的分享-2025-06-21.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 ## 来源信息
 
 - 原文：[A Practical Guide to Building Agents](https://cdn.openai.com/business-guides-and-resources/a-practical-guide-to-building-agents.pdf)

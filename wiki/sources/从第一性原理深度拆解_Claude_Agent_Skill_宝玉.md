@@ -1,16 +1,15 @@
 ---
 type: source
 tags:
-  - AI-Agent/skill
-  - AI-Agent/context-engineering
-summary: "宝玉翻译 Han Lee 深度文章：从源码层面解构 Claude Agent Skill 元工具架构，含双消息注入机制与执行上下文修改全生命周期"
+- AI-Agent/skill
+- AI-Agent/context-engineering
+summary: 宝玉翻译 Han Lee 深度文章：从源码层面解构 Claude Agent Skill 元工具架构，含双消息注入机制与执行上下文修改全生命周期
 sources:
-  - "Cubox/从第一性原理深度拆解 Claude Agent Skill - 宝玉的分享-2025-12-01.md"
-created: "2026-06-29"
-updated: "2026-06-29"
+- Cubox/从第一性原理深度拆解 Claude Agent Skill - 宝玉的分享-2025-12-01.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 ## 来源信息
 
 - 原文：Han Lee，翻译：宝玉 baoyu.io

@@ -1,13 +1,23 @@
 ---
-title: "阿里云CIO首次系统复盘：大模型落地的RIDE方法论与RaaS实践突破"
-source_url: "https://mp.weixin.qq.com/s?__biz=MjM5MDE0Mjc4MA==&mid=2651254924&idx=2&sn=be96b75d62ac8083f0a45b52bd8e9247"
-author: "蒋林泉（阿里云CIO）"
-date_published: "2025-09-08"
-tags: [创业]
+type: source
+tags:
+- 创业
+summary: '**核心矛盾**：业务部门在社交媒体看到的 AI"炸裂效果" vs IT 部门实际生产力的不均衡发展。CEO 和业务部门比 IT 团队还"上头"'
+sources:
+- Cubox/阿里云CIO首次系统复盘：大模型落地的RIDE方法论与RaaS实践突破-2025-09-08.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 # 阿里云大模型落地 RIDE 方法论与 RaaS 实践
+
+## 来源信息
+
+- **标题**：阿里云CIO首次系统复盘：大模型落地的RIDE方法论与RaaS实践突破
+- **作者**：蒋林泉（阿里云CIO）
+- **发布时间**：2025-09-08
+- **URL**：https://mp.weixin.qq.com/s?__biz=MjM5MDE0Mjc4MA==&mid=2651254924&idx=2&sn=be96b75d62ac8083f0a45b52bd8e9247
+
 
 阿里云 CIO 蒋林泉基于三年数字化/智能化推进经验，分享企业内部大模型 E2E 落地的 [[概念_RIDE方法论]] 与 [[概念_RaaS结果即服务]]，覆盖组织变革、业务识别、指标定义、工程执行全流程。已落地约 28 个数字人项目。
 

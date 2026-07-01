@@ -1,14 +1,23 @@
 ---
-title: "Py中的并发 async / await - FastAPI"
-source_url: "https://fastapi.tiangolo.com/zh/async/"
-author: "FastAPI 官方文档（Sebastián Ramírez）"
-date: 2025-06-27
+type: source
 tags:
-  - Skill/python
+- Skill/python
+summary: FastAPI 官方对异步编程、并发与并行的完整讲解。
+sources:
+- Cubox/Py中的并发 async - await - FastAPI-2025-06-27.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
+date: 2025-06-27
 ---
-
 # Python 并发 async/await 与 FastAPI
+
+## 来源信息
+
+- **标题**：Py中的并发 async / await - FastAPI
+- **作者**：FastAPI 官方文档（Sebastián Ramírez）
+- **URL**：https://fastapi.tiangolo.com/zh/async/
+
 
 > 来源：FastAPI 官方中文文档 https://fastapi.tiangolo.com/zh/async/
 

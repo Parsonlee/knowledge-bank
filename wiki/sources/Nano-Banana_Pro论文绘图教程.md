@@ -1,13 +1,23 @@
 ---
-title: "Nano-Banana Pro 论文绘图最全教程发布"
-source_url: "https://mp.weixin.qq.com/s/IG8cITKAESi-vomyQiobZg"
-author: "Mark（华南理工大学）/ Datawhale"
-date_published: "2025-12-09"
-tags: [AIGC]
+type: source
+tags:
+- AIGC
+summary: '**核心理念**：将复杂绘图任务拆解为"逻辑构建（The Architect）"与"视觉渲染（The Renderer）"两个独立互补环节'
+sources:
+- Cubox/Nano-Banana Pro 论文绘图最全教程发布-2025-12-09.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 # Nano-Banana Pro 论文绘图教程
+
+## 来源信息
+
+- **标题**：Nano-Banana Pro 论文绘图最全教程发布
+- **作者**：Mark（华南理工大学）/ Datawhale
+- **发布时间**：2025-12-09
+- **URL**：https://mp.weixin.qq.com/s/IG8cITKAESi-vomyQiobZg
+
 
 以「架构师→渲染器→编辑器」三步标准化工作流，利用 LLM 逻辑推理能力指导 [[实体_Nano_Banana_Pro]]（Gemini 2.5 Flash Image）的像素生成，产出 CVPR/NeurIPS 顶刊标准学术插图。
 

@@ -1,15 +1,24 @@
 ---
-title: "The Technium: 50 Years of Travel Tips（50年旅行经验之谈）"
-author: Kevin Kelly
-source_url: https://kk.org/thetechnium/50-years-of-travel-tips/
-cubox_url: https://cubox.pro/web/card/7294315218044192235
+type: source
 tags:
-  - Life
+- Life
+summary: '**退隐（Retreat / R&R）**：为逃离工作日常、放松充电、被宠爱、做有趣的事，去容易的地方——即"度假"。'
+sources:
+- Cubox/The Technium- 50 Years of Travel Tips-2025-02-26.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
+cubox_url: https://cubox.pro/web/card/7294315218044192235
 ingested: 2026-06-30
 ---
-
 # 50年旅行经验之谈（Kevin Kelly）
+
+## 来源信息
+
+- **标题**：The Technium: 50 Years of Travel Tips（50年旅行经验之谈）
+- **作者**：Kevin Kelly
+- **URL**：https://kk.org/thetechnium/50-years-of-travel-tips/
+
 
 > Kevin Kelly（KK，《连线》创始主编）总结自己 50 多年（文中也说 53 年）的旅行经验。形式为大量并列的旅行 tips，无章节结构。
 

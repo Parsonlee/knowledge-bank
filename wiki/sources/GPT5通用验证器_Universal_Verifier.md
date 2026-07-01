@@ -1,16 +1,16 @@
 ---
 type: source
 tags:
-  - LLM
-  - LLM/training/RL
-summary: "通用验证器（Universal Verifier）技术全景：RLVR 的局限→LLM-as-Judge 两大路线（评分细则/内部自信度）→OaK 终局架构"
+- LLM
+- LLM/training/RL
+summary: 通用验证器（Universal Verifier）技术全景：RLVR 的局限→LLM-as-Judge 两大路线（评分细则/内部自信度）→OaK
+  终局架构
 sources:
-  - "Cubox/一文读懂GPT-5的绝招，这是决定AI未来的隐形武器-2025-09-22.md"
-created: "2026-06-29"
-updated: "2026-06-29"
+- Cubox/一文读懂GPT-5的绝招，这是决定AI未来的隐形武器-2025-09-22.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 ## 来源信息
 
 - **标题**：一文读懂GPT-5的绝招，这是决定AI未来的隐形武器

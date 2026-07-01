@@ -1,18 +1,16 @@
 ---
 type: source
 tags:
-  - RAG/embedding
-  - RAG
-summary: "Qwen3 Embedding 与 Rerank 原理剖析：三层嵌入流程、[CLS] vs [EOS] 池化、Instruct 指令机制、Reranker 的 LLM 化 yes/no 打分"
+- RAG/embedding
+- RAG
+summary: Qwen3 Embedding 与 Rerank 原理剖析：三层嵌入流程、[CLS] vs [EOS] 池化、Instruct 指令机制、Reranker
+  的 LLM 化 yes/no 打分
 sources:
-  - title: "为什么用Qwen3 embedding和rerank"
-    url: https://mp.weixin.qq.com/s/hmJ1H9gTBmHV_dOGM7UeWg
-    cubox_id: "7337179436820728245"
+- Cubox/为什么用Qwen3 embedding和rerank-2025-06-24.md
 created: 2026-06-26
-updated: 2026-06-26
+updated: '2026-07-01'
 confidence: high
 ---
-
 # 为什么用Qwen3_embedding和rerank
 
 ## 核心内容

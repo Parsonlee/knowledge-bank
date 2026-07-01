@@ -1,15 +1,14 @@
 ---
 type: source
 tags:
-  - LLM/training/post-train
-summary: "以 arxiv 2502.21321 为蓝本，全景解读 LLM 后训练：微调（全参/PEFT/LoRA系列/Prompt Tuning）、RL（奖励建模/PPO/DPO/GRPO/过程奖励vs结果奖励）、测试时扩展（CoT/ToT/MCTS/验证器）及挑战与实践"
+- LLM/training/post-train
+summary: 以 arxiv 2502.21321 为蓝本，全景解读 LLM 后训练：微调（全参/PEFT/LoRA系列/Prompt Tuning）、RL（奖励建模/PPO/DPO/GRPO/过程奖励vs结果奖励）、测试时扩展（CoT/ToT/MCTS/验证器）及挑战与实践
 sources:
-  - "Cubox/LLM 后训练技术 - 知乎-2025-03-26.md"
-created: "2026-06-29"
-updated: "2026-06-29"
+- Cubox/LLM 后训练技术 - 知乎-2025-03-26.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 ## 来源信息
 
 - 标题：全景解读 LLM 后训练技术

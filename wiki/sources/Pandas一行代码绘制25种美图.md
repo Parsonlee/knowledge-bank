@@ -1,15 +1,15 @@
 ---
 type: source
 tags:
-  - Skill/data-analysis
-summary: 使用 Pandas 的 DataFrame.plot 和 Series.plot 两个核心函数，一行代码实现 25 种可视化，涵盖折线图、条形图、直方图、箱图、面积图、散点图、饼图、hexbin、核密度、andrews_curves、parallel_coordinates、radviz、bootstrap_plot、子图布局及图中嵌入数据表格等，支持 kind 参数 area/bar/barh/box/density/hexbin/hist/kde/line/pie/scatter。
+- Skill/data-analysis
+summary: 使用 Pandas 的 DataFrame.plot 和 Series.plot 两个核心函数，一行代码实现 25 种可视化，涵盖折线图、条形图、直方图、箱图、面积图、散点图、饼图、hexbin、核密度、andrews_curves、parallel_coordinates、radviz、bootstrap_plot、子图布局及图中嵌入数据表格等，支持
+  kind 参数 area/bar/barh/box/density/hexbin/hist/kde/line/pie/scatter。
 sources:
-  - "Cubox/Pandas一行代码绘制25种美图-2023-11-26.md"
-created: "2026-06-30"
-updated: "2026-06-30"
+- Cubox/Pandas一行代码绘制25种美图-2023-11-26.md
+created: '2026-06-30'
+updated: '2026-07-01'
 confidence: high
 ---
-
 # Pandas 一行代码绘制 25 种美图
 
 ## 来源信息

@@ -1,13 +1,23 @@
 ---
-title: "把 AI 邮件工具做到 3500 万美元 ARR，Superhuman：找到 PMF 其实有明确的方法论"
-source_url: "https://mp.weixin.qq.com/s?__biz=Mzg5NTc0MjgwMw==&mid=2247521394&idx=1&sn=5ba89a3d61d8536569fa576f077f6a2e"
-author: "Founder Park（编译 Rahul Vohra 博客）"
-date_published: "2025-12-13"
-tags: [创业]
+type: source
+tags:
+- 创业
+summary: '**公司背景**：成立 2014/2015 年，从 0 到 MVP 花近两年；切入被 Gmail/Outlook 垄断的免费邮件市场，聚焦高管/创业者/高绩效者，核心痛点是效率'
+sources:
+- Cubox/把 AI 邮件工具做到 3500 万美元 ARR，Superhuman：找到 PMF 其实有明确的方法论-2025-12-13.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
-
 # Superhuman PMF 引擎方法论
+
+## 来源信息
+
+- **标题**：把 AI 邮件工具做到 3500 万美元 ARR，Superhuman：找到 PMF 其实有明确的方法论
+- **作者**：Founder Park（编译 Rahul Vohra 博客）
+- **发布时间**：2025-12-13
+- **URL**：https://mp.weixin.qq.com/s?__biz=Mzg5NTc0MjgwMw==&mid=2247521394&idx=1&sn=5ba89a3d61d8536569fa576f077f6a2e
+
 
 AI 邮件工具 Superhuman 创始人 [[实体_Rahul_Vohra]] 将"找到 PMF"系统化为可量化、可优化的 [[概念_PMF引擎]]。2025 年中 ARR 达 3500 万美元，年留存率 85%+，2025 年 7 月被 Grammarly 收购。
 

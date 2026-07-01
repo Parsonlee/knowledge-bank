@@ -1,15 +1,24 @@
 ---
-title: How to prompt Veo 3 for the best results – Replicate blog
-source_url: https://replicate.com/blog/using-and-prompting-veo-3
-cubox_url: https://cubox.pro/web/card/7350507002675594556
-author: Replicate（fofr / Shridar）
-date_clipped: 2025-07-31
+type: source
 tags:
-  - AIGC
+- AIGC
+summary: '[[实体_Veo_3]]（Google）从文本提示词生成带音频的视频，音频可以是对话、画外音、音效和音乐。'
+sources:
+- Cubox/How to prompt Veo 3 for the best results – Replicate blog-2025-07-31.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
+cubox_url: https://cubox.pro/web/card/7350507002675594556
+date_clipped: 2025-07-31
 ---
-
 # How to prompt Veo 3 for the best results（Replicate）
+
+## 来源信息
+
+- **标题**：How to prompt Veo 3 for the best results – Replicate blog
+- **作者**：Replicate（fofr / Shridar）
+- **URL**：https://replicate.com/blog/using-and-prompting-veo-3
+
 
 > Replicate 官方博客的 [[实体_Veo_3]] 提示词指南，与中文版「Google Veo 3 账号最新获取方式 + 提示技巧全攻略」互为来源（中文版引用并翻译了本文）。参见 [[Google_Veo3账号获取与提示技巧全攻略]]。
 
