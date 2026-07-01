@@ -1,7 +1,12 @@
-# 实体_Faiss
-
-> tags: RAG, RAG/retrieval
-> confidence: high
+---
+type: entity
+tags:
+  - RAG/retrieval
+summary: "Meta AI 开源的高效海量向量相似度检索与聚类计算库。"
+created: "2026-06-29"
+updated: "2026-07-01"
+confidence: high
+---
 
 ## 简介
 
@@ -22,3 +27,4 @@ Faiss（Facebook AI Similarity Search）是由 Facebook AI Research 开源的向
 - 相关概念：[[概念_向量索引方法]]、[[概念_近似最近邻搜索]]、[[概念_向量数据库]]、[[概念_向量量化]]
 - 实体：[[实体_HNSW]]、[[实体_ColBERT]]
 - 来源：[[向量数据库原理与应用全解析]]、[[ColBERTv2残差压缩演进]]、[[RAG挑战赛冠军方案]]、[[美团搜索查询改写实践]]
+

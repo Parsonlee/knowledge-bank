@@ -1,7 +1,13 @@
-# 实体_Elasticsearch
-
-> tags: RAG, RAG/retrieval
-> confidence: high
+---
+type: entity
+tags:
+  - RAG/retrieval
+  - Infra/AI
+summary: "广泛应用的全文分布式搜索引擎，原生支持向量字段与近邻搜索，用于构建混合检索。"
+created: "2026-06-29"
+updated: "2026-07-01"
+confidence: high
+---
 
 ## 简介
 
@@ -29,3 +35,4 @@ Elasticsearch 是强大的搜索引擎技术，广泛应用于各类应用的搜
 - 相关概念：[[概念_混合检索]]、[[概念_向量量化]]、[[概念_向量索引方法]]、[[概念_Reciprocal_Rank_Fusion]]、[[概念_Agentic_RAG]]、[[概念_HyDE]]
 - 实体：[[实体_HNSW]]、[[实体_CLIP]]
 - 来源：[[ES企业AI搜索实践]]
+

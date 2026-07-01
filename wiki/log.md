@@ -857,3 +857,12 @@
 - 已更新 wiki/index.md
 - 全部内容基于全文，未使用模型自身知识补全
 - 跳过：无（5 篇全文均有实质内容）
+
+## 2026-07-01 lint | Tag 体系清洗与梳理（wiki/sources 与 wiki/entities 全量标准化）
+- 依据 AGENTS.md 与 TheSchema.md 确立的正交解耦架构原则（全局统一领域主题 Tag + Frontmatter/目录区分知识类型载体），完成 wiki/sources 与 wiki/entities 下全部文档的 Tag 与元数据标准化治理。
+- 修复 sources 目录下 2 篇缺失 Tag 的页面：
+  - 别再误会MCP了辟谣指南.md -> AI-Agent/tools
+  - 从代码生成到自主决策_Coding驱动的自我编程Agent.md -> AI-Agent/coding
+- 结构化重构并补全 entities 目录下 25 篇旧版无 Frontmatter（仅含 blockquote 元数据）实体页：
+  - 为所有 25 篇实体规范化构建 YAML Frontmatter（title, type: entity, tags, summary, sources, created, updated, confidence），并完全继承或收敛到标准主题 Tag 分支下（包括 RAG/embedding, RAG/retrieval, RAG/chunking, AI-Agent/tools, DeepLearning, Life 等）。
+- 审计确认：当前 wiki/sources（191 篇）与 wiki/entities（137 篇）共 328 篇文档 100% 拥有标准合规的 YAML Frontmatter 与正确的层次化领域 Tag，实现全域检索互通无死角。

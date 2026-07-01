@@ -1,6 +1,6 @@
 - [x] 全量 Ingest 阶段（Phase 1 至 Phase 6，共 191 篇 Sources 导入）已全部完成。
 - [x] wiki/sources 需要修复每个的frontmatters(主要是source，191 篇已全部完成规范化清洗与 Cubox 物理路径 100% 关联)
-- [ ] wiki/下的entities、sources的tag需要整理
+- [x] wiki/下的entities、sources的tag需要整理（已完成 191 篇 sources 与 137 篇 entities 全量合规检查与补全）
 - [ ] wiki/entities 频率不高的人/组织移除，可能需要设置一个阈值。本质上是精简entites+concepts，需要深度讨论
 - [ ] workdocs/ 存放了工作期间的项目文档docx，需要解析并入库
 - [ ] wucai的库存同步过来

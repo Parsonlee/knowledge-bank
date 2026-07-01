@@ -1,7 +1,12 @@
-# 实体_Docling
-
-> tags: RAG
-> confidence: high
+---
+type: entity
+tags:
+  - RAG/chunking
+summary: "IBM 开源的高精度复杂文档与多模态 PDF 解析切分工具库。"
+created: "2026-06-29"
+updated: "2026-07-01"
+confidence: high
+---
 
 ## 简介
 
@@ -22,3 +27,4 @@ Docling 是 IBM 开源的 PDF 解析库，在企业年报 RAG 挑战赛中是表
 
 - 相关概念：[[概念_表格序列化]]、[[概念_文档结构切分]]
 - 来源：[[RAG挑战赛冠军方案]]
+

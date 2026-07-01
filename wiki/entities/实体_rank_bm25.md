@@ -1,7 +1,13 @@
-# 实体_rank_bm25
-
-> tags: RAG, RAG/retrieval
-> confidence: medium
+---
+type: entity
+tags:
+  - RAG/retrieval
+  - Skill/python
+summary: "Python BM25 关键词匹配相关性打分算法库，常用于多路召回融合。"
+created: "2026-06-29"
+updated: "2026-07-01"
+confidence: medium
+---
 
 ## 简介
 
@@ -25,3 +31,4 @@ scores = bm25.get_scores(query.split())
 
 - 相关概念：[[概念_BM25]]、[[概念_Fusion_Retrieval]]
 - 来源：[[RAG高级优化_检索策略Fusion_HyDE]]
+

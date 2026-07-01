@@ -1,7 +1,12 @@
-# 实体_TableRAG
-
-> tags: RAG
-> confidence: high
+---
+type: entity
+tags:
+  - RAG
+summary: "华为云提出的融合文本向量检索与关系型数据库 SQL 查询的表格异构 RAG 框架。"
+created: "2026-06-29"
+updated: "2026-07-01"
+confidence: high
+---
 
 ## 简介
 
@@ -27,3 +32,4 @@ https://arxiv.org/abs/2506.10380
 
 - 相关概念：[[概念_迭代式表格推理]]、[[概念_表格序列化]]、[[概念_Text2SQL]]
 - 来源：[[TableRAG_文本表格异构问答]]
+

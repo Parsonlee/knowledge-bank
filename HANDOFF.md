@@ -14,17 +14,14 @@
 | 全量 Cubox 文章 Ingest（Phase 1-6，191 篇） | ✅ | 构建了 191 source + 331 concept + 137 entity |
 | **Wiki Sources Frontmatter 全量规范化清洗** | ✅ | **191 篇笔记 Frontmatter 100% 符合规范且无语法错误** |
 | **Sources 字段物理文件关联审计与锚定** | ✅ | **191 篇笔记 100% 精准关联到 `Cubox/*.md` 物理文件** |
+| **Sources & Entities Tag 与 Frontmatter 标准化治理** | ✅ | **191 篇 Sources 与 137 篇 Entities 100% 拥有标准 Frontmatter 及规范 Tag** |
 
 **当前 wiki 规模**：191 source + 331 concept + 137 entity
 
 ## What Worked
 
-- **双重层级验证方案（API + 物理磁盘）**：
-  在校验 Markdown 头部语法时，利用 HTTP 头部 `Accept: application/vnd.olrapi.note+json` 访问 Obsidian Local REST API (`https://127.0.0.1:27124/vault/{path}`)，直接让 Obsidian 底层引擎 `CachedMetadata` 进行 YAML 解析验证，确保 100% 兼容；同时配合 Python `os.path.exists` 校验实体路径，成功杜绝死链和假关联。
-- **URL + 相似度双通道智能匹配**：
-  对于原本只写了文章标题或旧版字典格式的 Frontmatter，自动化脚本提取页面中的有效 URL 与 `Cubox/*.md` 文件内容比对，配合文件名相似度（SequenceMatcher），实现了 100% 的无遗漏物理文件关联。
-- **旧版元数据下沉正文**：
-  旧版笔记把 `title`、`author`、`source_url` 等写在 Frontmatter 中导致字段冗杂。将其清洗剥离并统一格式化置入正文 `## 来源信息` 区域，既保证了 Frontmatter 简洁规范，又保留了完整追溯信息。
+- **正交解耦架构设计（主题 Tag + 载体属性）**：
+  明确了全局共用 `AGENTS.md` 定义的技术领域 Tag 树（`LLM/`, `RAG/`, `AI-Agent/` 等）以保证跨页面网状聚合互通，同时完全依靠 YAML Frontmatter 的 `type:` 属性与物理目录路径实现知识载体类型隔离，避免了 Tag 体系的分裂与污染。
 
 ## What Didn't Work
 
@@ -42,14 +39,14 @@
 
 ## Next Steps
 
-### 1. Tag 体系清洗与梳理（重点优先级）
-- 按照 `AGENTS.md` 定义的规范，对 `wiki/entities` 和 `wiki/sources` 下笔记的 `tags:` 列表进行整理，确保统一归入标准层级分支（如 `LLM/`, `AI-Agent/`, `RAG/`, `Skill/`, `Infra/` 等）。
+### 1. 概念页 (wiki/concepts) Tag 补全与低频精简（优先事项）
+- 当前 `wiki/concepts/` 有 117 篇页面缺失 Tag。且 `entities` / `concepts` 中存在部分低频提及（如引用仅 1 次且无实质内容）的人或组织。需要按照「先提议再执行」原则，梳理概念页 Tag 并设置阈值精简合并。
 
-### 2. 精简实体与概念页（精细化治理）
-- 针对 `wiki/entities` 中出现频率低、仅提及 1 次的人或组织进行筛选评估，制定清理阈值或深度讨论优化方案。
+### 2. 解析与导入工作项目文档 (`workdocs/`)
+- `workdocs/` 目录下存放了工作期间的项目文档（`.docx` 格式），需要编写解析处理管线提取要点，导入到 Wiki 架构中并在 `wiki/sources` 生成对应项目笔记。
 
-### 3. 解析与导入工作项目文档
-- `workdocs/` 目录下存放了工作期间的 Word 项目文档（`.docx` 格式），需要编写解析处理流程并导入到 Wiki 架构中。
+### 3. 五彩 (Wucai) 剪藏库同步入库
+- 对接五彩高亮与剪藏数据，参照 Cubox 文章的 Ingest 标准完成清洗与双向链接建库。
 
 ### 4. 移动端同步与日常维护
 - **iOS 同步**：通过 GitHub 细粒度 PAT 在 iOS 端 Obsidian Git 插件中完成远程同步配置。
