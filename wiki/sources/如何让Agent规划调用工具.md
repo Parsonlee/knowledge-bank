@@ -45,3 +45,6 @@ confidence: high
 - [[实体_Qwen3]]
 - [[MCP遇上代码执行]]
 - [[如何让Agent规划调用工具]]
+
+---
+> 📎 **物理文献**：[[raw/如何让 Agent 规划调用工具.md]]

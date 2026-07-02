@@ -57,3 +57,6 @@ FastAPI 官方对异步编程、并发与并行的完整讲解。
 
 - [[概念_Python_async_await并发]]
 - [[概念_FastAPI项目结构模式]]
+
+---
+> 📎 **物理文献**：[[raw/Py中的并发 async _ await - FastAPI.md]]

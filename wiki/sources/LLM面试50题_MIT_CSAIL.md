@@ -95,3 +95,6 @@ confidence: high
 - [[概念_Fine-tuning]]
 - [[实体_DeepSeek-R1]]
 - [[实体_Qwen3]]
+
+---
+> 📎 **物理文献**：[[raw/信息过载时代，如何真正「懂」LLM？从MIT分享的50个面试题开始 ｜ 机器之心.md]]

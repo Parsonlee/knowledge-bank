@@ -77,3 +77,6 @@ confidence: high
 
 - [[概念_Deep-Research实现架构四类]]
 - [[概念_Deep-Research-Agent定义与分类]]
+
+---
+> 📎 **物理文献**：[[raw/一篇95页最新80种Deep Research系统全面综述.md]]

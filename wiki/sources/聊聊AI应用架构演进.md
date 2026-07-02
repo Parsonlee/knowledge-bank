@@ -101,3 +101,6 @@ confidence: high
 - [[概念_AI应用架构演进]]
 - [[实体_LangChain]]
 - [[实体_LangSmith]]
+
+---
+> 📎 **物理文献**：[[raw/聊聊AI应用架构演进.md]]

@@ -94,3 +94,6 @@ confidence: high
 
 - [[实体_Mechanize]]
 - [[实体_Fireworks_AI]]
+
+---
+> 📎 **物理文献**：[[raw/RL Infra 行业全景：环境和 RLaaS 如何加速 RL 的 GPT-3 ....md]]

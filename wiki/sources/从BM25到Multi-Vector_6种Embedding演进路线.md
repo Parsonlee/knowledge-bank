@@ -86,3 +86,6 @@ confidence: high
 
 - 相关概念：[[概念_Sparse_Embedding]]、[[概念_Dense_Embedding]]、[[概念_Quantized_Embedding]]、[[概念_Binary_Embedding]]、[[概念_Matryoshka表示学习]]、[[概念_ColBERT]]、[[概念_BM25]]、[[概念_Embedding与向量检索]]
 - 实体：[[实体_ColBERT]]
+
+---
+> 📎 **物理文献**：[[raw/从BM25到Multi-Vector：6种Embedding演进路线.md]]

@@ -1,7 +1,7 @@
 ---
 type: source
 tags:
-- LLM/arch/VLM
+- LLM/Multimodal
 summary: 系统梳理多模态大模型从 LLaVA 到 Qwen3-VL 的架构演进：三位一体黄金架构、AnyRes 输入端方案 vs DeepStack 深度融合方案的两条技术路线
 sources:
 - raw/从LLaVA到Qwen3-VL，多模态大模型主流架构的演进之路.md
@@ -81,3 +81,6 @@ confidence: high
 - [[实体_LLaVA]] — 大道至简多模态模型系列
 - [[实体_Qwen3-VL]] — 阿里巴巴深度融合多模态模型
 - [[概念_视觉基础模型统一范式]]
+
+---
+> 📎 **物理文献**：[[raw/从LLaVA到Qwen3-VL，多模态大模型主流架构的演进之路.md]]

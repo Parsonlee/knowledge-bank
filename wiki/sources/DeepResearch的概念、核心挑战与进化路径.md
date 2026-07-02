@@ -74,3 +74,6 @@ confidence: high
 - [[概念_Deep-Research-Agent定义与分类]]
 - [[概念_Deep-Research四大挑战]]
 - [[概念_Deep-Research规划策略三模式]]
+
+---
+> 📎 **物理文献**：[[raw/DeepResearch的概念、核心挑战与进化路径.md]]

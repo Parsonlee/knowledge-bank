@@ -79,3 +79,6 @@ confidence: high
 - 相关概念：[[概念_向量数据库]]、[[概念_混合检索]]、[[概念_Agentic_RAG]]、[[概念_向量量化]]、[[概念_Embedding与向量检索]]、[[概念_BM25]]、[[概念_Reciprocal_Rank_Fusion]]、[[概念_Sparse_Embedding]]、[[概念_Dense_Embedding]]、[[概念_Quantized_Embedding]]、[[概念_重排序Rerank]]、[[概念_HyDE]]、[[概念_Chunk_Size与Overlap]]、[[概念_RAG_Fusion]]、[[概念_问题生成检索增强]]
 - 实体：[[实体_Elasticsearch]]、[[实体_HNSW]]
 - 相关来源：[[RAG综述_中科院2025]]、[[向量数据库原理与应用全解析]]、[[从BM25到Multi-Vector_6种Embedding演进路线]]
+
+---
+> 📎 **物理文献**：[[raw/基于 Elasticsearch 创建企业 AI 搜索应用实践.md]]

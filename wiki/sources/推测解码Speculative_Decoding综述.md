@@ -44,3 +44,6 @@ confidence: high
 - [[概念_FlashAttention]] — 推理加速另一关键方向
 - [[实体_Medusa]] — Self-Drafting 代表工作，多 FFN Head 并行解码
 - [[实体_vLLM]] — 工业界推理框架，集成推测解码等加速手段
+
+---
+> 📎 **物理文献**：[[raw/LLM推理加速新范式！推测解码（Speculative Decoding）最新综....md]]

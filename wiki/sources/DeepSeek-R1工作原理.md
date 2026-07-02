@@ -50,3 +50,6 @@ confidence: high
 - [[概念_思维链CoT高级方法]] — CoT 推理
 - [[实体_DeepSeek-V3]] — 基础模型
 - [[实体_DeepSeek-R1]] — 本文主角
+
+---
+> 📎 **物理文献**：[[raw/万字长文详解DeepSeek-R1模型工作原理.md]]

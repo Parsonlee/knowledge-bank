@@ -73,3 +73,6 @@ confidence: high
 
 - 全文：`tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/7天验证产品思路、10小时找到基础共识：来自谷歌的"Foundation Sprint"完全指南.md`
 - Cubox：`raw/7天验证产品思路、10小时找到基础共识：来自谷歌的"Foundation Sprint"完全指南-2025-09-08.md`
+
+---
+> 📎 **物理文献**：[[raw/7天验证产品思路、10小时找到基础共识：来自谷歌的“Foundation Spr....md]]

@@ -85,3 +85,6 @@ confidence: high
 - 相关概念：[[概念_Query_Translation]]、[[概念_RAG_Fusion]]、[[概念_HyDE]]、[[概念_子查询分解]]、[[概念_Step-back提示]]、[[概念_RAG_Routing]]、[[概念_Query_Construction]]、[[概念_Multi-representation_Indexing]]、[[概念_RAPTOR索引]]、[[概念_ColBERT]]、[[概念_混合检索]]、[[概念_重排序Rerank]]、[[概念_CRAG]]、[[概念_Self-RAG]]、[[概念_Adaptive-RAG]]、[[概念_Reciprocal_Rank_Fusion]]、[[概念_语义切分]]
 - 实体：[[实体_ColBERT]]
 - 相关来源：[[RAG查询翻译_Query_Translation]]、[[RAG路由_Routing]]、[[RAG查询构造_Query_Construction]]、[[RAG索引进阶_Indexing]]
+
+---
+> 📎 **物理文献**：[[raw/探索提升RAG系统问答质量的技术路线.md]]

@@ -39,3 +39,6 @@ confidence: high
 - 实体：[[实体_LangChain]]
 - 系列上一篇：[[RAG路由_Routing]]
 - 系列下一篇：[[RAG索引进阶_Indexing]]
+
+---
+> 📎 **物理文献**：[[raw/RAG从入门到精通系列4：Query Construction（查询构造）.md]]

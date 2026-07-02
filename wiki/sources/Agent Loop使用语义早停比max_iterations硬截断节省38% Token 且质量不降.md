@@ -27,3 +27,6 @@ updated: "2026-07-02"
 
 - 概念关联：[[概念_早停EarlyStopping]]、[[概念_RAG评估框架RAGAS]]
 - 实体关联：[[实体_Sentence_Transformers]]、[[实体_RAGAS]]
+
+---
+> 📎 **物理文献**：[[raw/Agent Loop使用语义早停比max_iterations硬截断节省38% Token 且质量不降.md]]

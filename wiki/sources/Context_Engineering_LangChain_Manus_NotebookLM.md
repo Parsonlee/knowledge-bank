@@ -82,3 +82,6 @@ confidence: high
 - [[概念_分层行动空间]]
 - [[实体_Peak_Ji_季逸超]]
 - [[实体_LangChain]]
+
+---
+> 📎 **物理文献**：[[raw/AI 代理的上下文工程：LangChain 和 Manas - Notebook....md]]

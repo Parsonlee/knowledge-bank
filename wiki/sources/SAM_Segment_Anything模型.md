@@ -56,3 +56,6 @@ confidence: high
 - [[实体_SAM]]
 - [[实体_CLIP]]
 - [[实体_ViT]]
+
+---
+> 📎 **物理文献**：[[raw/分割一切(Segment Anything)不是梦，SAM模型引领图像分割新时代....md]]

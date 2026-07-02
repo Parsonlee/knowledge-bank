@@ -38,3 +38,6 @@ confidence: high
 - [[概念_MambaBlock架构]] — Block 结构：投影+卷积+S6+残差
 - [[实体_Mamba]] — Mamba 模型
 - [[实体_S4]] — S4 前置架构
+
+---
+> 📎 **物理文献**：[[raw/Transformer被挑战？新架构Mamba解析以及Pytorch复现.md]]

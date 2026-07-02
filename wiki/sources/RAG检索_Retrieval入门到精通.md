@@ -61,3 +61,6 @@ confidence: high
 - 相关概念：[[概念_重排序Rerank]]、[[概念_CRAG]]、[[概念_Self-RAG]]、[[概念_RAG_Fusion]]、[[概念_Reciprocal_Rank_Fusion]]
 - 系列前篇：[[RAG查询翻译_Query_Translation]]、[[RAG路由_Routing]]、[[RAG查询构造_Query_Construction]]、[[RAG索引进阶_Indexing]]
 - 实体：[[实体_LangChain]]、[[实体_Qdrant]]
+
+---
+> 📎 **物理文献**：[[raw/RAG从入门到精通系列6：Retrieval（检索）.md]]

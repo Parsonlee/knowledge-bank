@@ -84,3 +84,6 @@ confidence: high
 - [[概念_Context_Rot]]
 - [[实体_Peak_Ji_季逸超]]
 - [[实体_Manus]]
+
+---
+> 📎 **物理文献**：[[raw/Manus 创始人手把手拆解：如何系统性打造 AI Agent 的上下文工程？.md]]

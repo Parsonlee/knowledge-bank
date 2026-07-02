@@ -63,3 +63,6 @@ confidence: high
 
 - [[概念_Normalization方法对比]]
 - [[概念_Batch_Normalization]]
+
+---
+> 📎 **物理文献**：[[raw/常用 Normalization 方法的总结与思考：BN、LN、IN、GN.md]]

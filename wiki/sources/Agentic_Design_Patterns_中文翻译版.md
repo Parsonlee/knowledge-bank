@@ -74,3 +74,6 @@ confidence: high
 - [[概念_HITL_MCP]]
 - [[概念_RAG基础流程]]
 - [[概念_思维链CoT高级方法]]
+
+---
+> 📎 **物理文献**：[[raw/《Agentic Design Patterns》中文翻译版.md]]

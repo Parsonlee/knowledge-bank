@@ -2,7 +2,7 @@
 type: entity
 tags:
   - LLM
-  - LLM/arch/VLM
+  - LLM/Multimodal
 ---
 
 # 实体：淘天AIGC团队

@@ -28,3 +28,6 @@ updated: "2026-07-02"
 
 - 概念关联：[[概念_上下文工程]]、[[概念_早停EarlyStopping]]、[[概念_智能体能力金字塔]]
 - 实体关联：[[实体_Anthropic_Research系统]]
+
+---
+> 📎 **物理文献**：[[raw/从提示员到系统架构师：Loop Engineering 的范式跃迁.md]]

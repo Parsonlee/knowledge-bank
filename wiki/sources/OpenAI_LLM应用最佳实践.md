@@ -75,3 +75,6 @@ confidence: high
 
 - 相关概念：[[概念_RAG基础流程]]、[[概念_HyDE]]、[[概念_查询重写]]、[[概念_重排序Rerank]]、[[概念_Prompt工程方法]]、[[概念_RAG评估框架RAGAS]]、[[概念_LLM应用优化两轴]]
 - 相关实体：[[实体_RAGAS]]
+
+---
+> 📎 **物理文献**：[[raw/Prompt Engineering, Finetune, RAG？：OpenA....md]]

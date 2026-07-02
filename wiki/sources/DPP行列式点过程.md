@@ -69,3 +69,6 @@ confidence: high
 ## 相关实体
 
 - （无独立实体需创建）
+
+---
+> 📎 **物理文献**：[[raw/Determinantal Point Process：机器学习中行列式的妙用.md]]

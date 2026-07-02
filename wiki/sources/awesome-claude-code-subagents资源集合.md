@@ -75,3 +75,6 @@ Role definition and expertise...
 - [[概念_Subagent子代理]]
 - [[概念_Agent_Skills元工具架构]]
 - [[概念_Claude_Code工作流]]
+
+---
+> 📎 **物理文献**：[[raw/awesome-claude-code-subagents_ Productio....md]]

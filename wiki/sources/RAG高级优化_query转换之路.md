@@ -58,3 +58,6 @@ url: https://mp.weixin.qq.com/s/UZV4ztL0j5k2qPV8U_wZVg
 - 概念：[[概念_Query_Translation]]、[[概念_查询重写]]、[[概念_Step-back提示]]、[[概念_子查询分解]]
 - 实体：[[实体_LangChain]]
 - 同系列：[[RAG高级优化_检索策略Fusion_HyDE]]、[[RAG高级优化_检索后处理]]、[[RAG高级优化_问题生成检索增强]]
+
+---
+> 📎 **物理文献**：[[raw/RAG高级优化：一文看尽query的转换之路.md]]

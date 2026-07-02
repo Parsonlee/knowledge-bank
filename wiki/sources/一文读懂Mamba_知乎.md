@@ -35,3 +35,6 @@ confidence: high
 - [[实体_Mamba]] — Mamba 模型
 - [[实体_Albert_Gu]] — Mamba 第一作者
 - [[实体_Tri_Dao]] — Mamba 第二作者，FlashAttention 作者
+
+---
+> 📎 **物理文献**：[[raw/一文读懂Mamba：具有选择状态空间的线性时间序列建模 - 知乎.md]]

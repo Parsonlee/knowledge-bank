@@ -50,3 +50,6 @@ dufte 自带一套图例风格化策略，只需在绘图过程中用 `dufte.leg
 - 概念：[[概念_matplotlib样式美化]]
 - 实体：[[实体_dufte]]、[[实体_Pandas]]（同属 data-analysis 可视化工具链）
 - 相关来源：[[Pandas一行代码绘制25种美图]]
+
+---
+> 📎 **物理文献**：[[raw/一行代码让 matplotlib 图表变高大上.md]]

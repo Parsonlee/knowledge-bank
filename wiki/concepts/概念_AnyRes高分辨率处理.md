@@ -1,7 +1,7 @@
 ---
 type: concept
 tags:
-  - LLM/arch/VLM
+  - LLM/Multimodal
 summary: "AnyRes：LLaVA 系列处理高分辨率图像的输入端技术，通过全局缩略图+局部切块双路策略，在不改动模型内部的前提下保留细节"
 created: "2026-06-29"
 updated: "2026-06-29"

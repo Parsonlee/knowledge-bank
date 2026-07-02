@@ -3,7 +3,7 @@ id: "7128378846868410088"
 cubox_url: https://cubox.pro/web/card/7128378846868410088
 url: https://mp.weixin.qq.com/s/On6XBPJ1uyc2YE-CipOPyg
 tags:
-  - LLM/arch/VLM
+  - LLM/Multimodal
 ---
 # 微软 Azure AI 团队新作 | Florence-2: 解锁视觉新境界，万能感知引领未来！
 

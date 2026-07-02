@@ -1,7 +1,7 @@
 ---
 type: concept
 tags:
-  - LLM/arch/VLM
+  - LLM/Multimodal
   - CV/arch
 summary: "多模态大模型通用架构蓝图：视觉编码器（眼睛）+ 连接器（灵魂之桥）+ LLM（大脑）三部分协同工作"
 created: "2026-06-29"

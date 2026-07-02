@@ -83,3 +83,6 @@ confidence: high
 - [[概念_Reward_Hacking]]
 - [[实体_TRL框架]]
 - [[实体_vLLM]]
+
+---
+> 📎 **物理文献**：[[raw/LLM 后训练技术 - 知乎.md]]

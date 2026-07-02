@@ -89,3 +89,6 @@ confidence: high
 - [[概念_LLM不确定性放大]]
 - [[实体_LangChain]]
 - [[实体_LangSmith]]
+
+---
+> 📎 **物理文献**：[[raw/Agent系统开发经验.md]]

@@ -58,3 +58,6 @@ url: https://mp.weixin.qq.com/s?__biz=Mzk0NTcyNTMzNw==&mid=2247484125&idx=1&sn=0
 - 概念：[[概念_问题生成检索增强]]、[[概念_Embedding与向量检索]]
 - 实体：[[实体_LangChain]]
 - 同系列：[[RAG高级优化_检索策略Fusion_HyDE]]、[[RAG高级优化_query转换之路]]、[[RAG高级优化_检索后处理]]
+
+---
+> 📎 **物理文献**：[[raw/RAG高级优化：基于问题生成的文档检索增强.md]]

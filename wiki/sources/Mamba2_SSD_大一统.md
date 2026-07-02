@@ -47,3 +47,6 @@ confidence: high
 - [[概念_MambaBlock架构]] — Mamba2 Block 改进
 - [[实体_Mamba2]] — Mamba2 模型
 - [[实体_Mamba]] — Mamba1
+
+---
+> 📎 **物理文献**：[[raw/Mamba2_ SSM和Transformer的大一统 - 知乎.md]]

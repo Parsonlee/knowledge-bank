@@ -64,3 +64,6 @@ confidence: high
 
 - [[实体_DiT]]
 - [[实体_ViT]]
+
+---
+> 📎 **物理文献**：[[raw/Sora的幕后功臣？详解大火的DiT：拥抱Transformer的扩散模型.md]]

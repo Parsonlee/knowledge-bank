@@ -92,3 +92,6 @@ confidence: high
 - [[概念_Agent感知记忆推理三能力]]
 - [[概念_MCP协议]]
 - [[实体_Cline]]
+
+---
+> 📎 **物理文献**：[[raw/从 Copilot 到 通用 Agent ： 阿里在 AI Coding 上的应....md]]

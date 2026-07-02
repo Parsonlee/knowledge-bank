@@ -2,7 +2,7 @@
 title: 实测腾讯开源的 BrowserSkill：让 AI 直接用你登录好的浏览器
 source: https://mp.weixin.qq.com/s/w3JLeJb4_8_uhVUqY7vqCw
 author:
-  - "[[翻斗花园二蛋]]"
+  - "\[\[翻斗花园二蛋]]"
 published:
 created: 2026-07-01
 description: 一句话：做一个本地桥接层，让 AI Agent 通过 CLI 命令控制你浏览器里的一个专属窗口，共享你的登录态，但不打扰你正常用浏览器。

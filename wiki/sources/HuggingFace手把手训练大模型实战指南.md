@@ -54,3 +54,6 @@ confidence: high
 - [[实体_SmolLM3]]
 - [[实体_HuggingFace]]
 - [[实体_nanotron]]
+
+---
+> 📎 **物理文献**：[[raw/HuggingFace从决策到落地「手把手」教你训练大模型.md]]

@@ -84,3 +84,6 @@ confidence: high
 - [[实体_Anthropic_Research系统]]
 - [[概念_MCP代码执行模式]]
 - [[概念_上下文工程]]
+
+---
+> 📎 **物理文献**：[[raw/Anthropic再发Agent神文：像人类工程师一样思考，解决「长程任务」难题.md]]

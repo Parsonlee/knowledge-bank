@@ -54,3 +54,6 @@ confidence: high
 - 实体：[[实体_LangChain]]、[[实体_LlamaIndex]]
 - 系列上一篇：[[RAG文本切分_递归字符切分]]
 - 系列下一篇：[[RAG文本切分_JSON文档切分]]
+
+---
+> 📎 **物理文献**：[[raw/RAG文本切分的五个层次2：递归字符切分的token优化(实战).md]]

@@ -68,3 +68,6 @@ confidence: high
 - [[实体_Llama4]] — Meta Llama 4 模型实体
 - [[2025年七大顶流大模型架构]] — 同主题互补文章
 - [[腾讯混元TurboS技术报告]] — Mamba+MoE 混合架构
+
+---
+> 📎 **物理文献**：[[raw/从DeepSeek-V3到Kimi K2：八种现代 LLM 架构大比较.md]]

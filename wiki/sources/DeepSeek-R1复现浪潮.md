@@ -41,3 +41,6 @@ confidence: high
 - [[实体_SimpleRL]] — 港科大复现项目
 - [[实体_Open_R1]] — HuggingFace 复现项目
 - [[DeepSeek-R1工作原理]] — 原始论文解读
+
+---
+> 📎 **物理文献**：[[raw/DeepSeek-R1复现.md]]

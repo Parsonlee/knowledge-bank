@@ -107,3 +107,6 @@ confidence: high
 - [[概念_WebFrontier数据合成]]
 - [[概念_Deep-Research-Agent定义与分类]]
 - [[实体_通义DeepResearch]]
+
+---
+> 📎 **物理文献**：[[raw/通义 DeepResearch：开源 AI 智能体的新纪元 _ Tongyi D....md]]

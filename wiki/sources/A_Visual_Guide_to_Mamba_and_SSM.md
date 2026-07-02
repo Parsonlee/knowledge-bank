@@ -47,3 +47,6 @@ confidence: high
 - [[概念_线性时不变LTI]] — LTI 局限与选择机制动机
 - [[实体_Mamba]] — Mamba 模型整体
 - [[实体_S4]] — Structured State Space for Sequences
+
+---
+> 📎 **物理文献**：[[raw/A Visual Guide to Mamba and State Space ....md]]

@@ -37,3 +37,6 @@ confidence: high
 - [[概念_大模型训练三阶段]] — 预训练/指令微调/RLHF 三阶段
 - [[概念_MoE混合专家]] — 预训练 Scaling 的架构创新
 - [[实体_DeepSeek-R1]] — 推理 Scaling 代表模型
+
+---
+> 📎 **物理文献**：[[raw/一文详细了解：大模型三大缩放定律（Scaling Law）.md]]

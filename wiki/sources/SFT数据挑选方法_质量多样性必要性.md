@@ -51,3 +51,6 @@ confidence: high
 - [[实体_DEITA]]
 - [[实体_MoDS]]
 - [[实体_CaR]]
+
+---
+> 📎 **物理文献**：[[raw/SFT数据挑选方法 - 知乎.md]]

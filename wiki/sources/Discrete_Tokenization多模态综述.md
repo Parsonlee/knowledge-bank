@@ -52,3 +52,6 @@ confidence: high
 ### 相关 Source
 - [[从LLaVA到Qwen3-VL_多模态架构演进]] — 多模态LLM架构演进视角
 - [[A_Visual_Guide_to_Mamba_and_SSM]] — 序列建模替代架构
+
+---
+> 📎 **物理文献**：[[raw/从离散token到多模态统一：Discrete Tokenization全景综述....md]]

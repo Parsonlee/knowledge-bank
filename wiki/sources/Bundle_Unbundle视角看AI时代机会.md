@@ -55,3 +55,6 @@ confidence: high
 - [[实体_Shishir_Mehrotra]]
 - [[实体_Grammarly]]
 - [[实体_Superhuman]]
+
+---
+> 📎 **物理文献**：[[raw/把世界拆成最小单元，然后重新拼装 _ 42章经 AI Newsletter.md]]

@@ -90,3 +90,6 @@ Eino 组件分类：
 - [[概念_HITL_MCP]]
 - [[实体_Agent_TARS]]
 - [[实体_CherryStudio]]
+
+---
+> 📎 **物理文献**：[[raw/万字长文深入浅出教你优雅开发复杂AI Agent.md]]

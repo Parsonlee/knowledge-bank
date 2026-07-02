@@ -70,3 +70,6 @@ confidence: high
 - [[概念_大模型训练三阶段]] — 后训练阶段
 - [[实体_DeepSeek-R1]] — GRPO 的应用案例
 - [[实体_Unsloth]] — 本文出品方，开源微调框架
+
+---
+> 📎 **物理文献**：[[raw/新手必看！强化学习入门指南 _ 从RLHF、PPO、GRPO到RLVR，最后到训....md]]

@@ -71,3 +71,6 @@ confidence: high
 - [[实体_AutoGen]]
 - [[实体_MetaGPT]]
 - [[实体_ChatDev]]
+
+---
+> 📎 **物理文献**：[[raw/人工智能体(AI Agent)开发与应用全面调研：原理及开发、应用及挑战.md]]

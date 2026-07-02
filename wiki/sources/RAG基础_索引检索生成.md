@@ -50,3 +50,6 @@ confidence: high
 - 概念：[[概念_RAG基础流程]]、[[概念_Embedding与向量检索]]、[[概念_向量数据库]]
 - 实体：[[实体_LangChain]]、[[实体_Qdrant]]
 - 系列下一篇：[[RAG查询翻译_Query_Translation]]
+
+---
+> 📎 **物理文献**：[[raw/RAG从入门到精通系列5：Indexing（索引）.md]]

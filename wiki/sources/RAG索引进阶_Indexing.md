@@ -55,3 +55,6 @@ confidence: high
 - 概念：[[概念_Multi-representation_Indexing]]、[[概念_RAPTOR索引]]、[[概念_ColBERT]]
 - 实体：[[实体_LangChain]]、[[实体_ColBERT]]
 - 系列上一篇：[[RAG查询构造_Query_Construction]]
+
+---
+> 📎 **物理文献**：[[raw/RAG从入门到精通系列5：Indexing（索引）.md]]

@@ -100,3 +100,6 @@ class JsonSerializable(ABC):
 ## 关联概念
 
 - [[概念_Python进阶特性]]
+
+---
+> 📎 **物理文献**：[[raw/写了十年 Python，我竟然现在才知道这5个功能！.md]]

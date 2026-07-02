@@ -82,3 +82,6 @@ ingested: 2026-06-30
 ## 其他
 
 - 作者推荐其周更旅行 newsletter **Nomadico**（每期 4 条简短 tips，免费）。
+
+---
+> 📎 **物理文献**：[[raw/The Technium_ 50 Years of Travel Tips.md]]

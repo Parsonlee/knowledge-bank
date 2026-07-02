@@ -55,3 +55,6 @@ url: https://mp.weixin.qq.com/s?__biz=Mzk0NTcyNTMzNw==&mid=2247484209&idx=1&sn=0
 - 概念：[[概念_检索后处理]]、[[概念_Long-text_Reorder]]、[[概念_Contextual_Compression]]
 - 实体：[[实体_LangChain]]
 - 同系列：[[RAG高级优化_query转换之路]]、[[RAG高级优化_检索策略Fusion_HyDE]]、[[RAG高级优化_问题生成检索增强]]
+
+---
+> 📎 **物理文献**：[[raw/RAG高级优化：检索后处理模块成竹在胸.md]]

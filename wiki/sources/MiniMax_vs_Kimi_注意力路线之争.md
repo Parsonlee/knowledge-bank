@@ -73,3 +73,6 @@ confidence: high
 - [[实体_Kimi_Linear]] — 月之暗面开源混合注意力模型
 - [[实体_Kimi_Delta_Attention]] — KDA：channel-wise gate 线性注意力
 - [[Attention复杂度解析与改进方向]]
+
+---
+> 📎 **物理文献**：[[raw/MiniMax和Kimi为了“注意力”，隔空交手.md]]

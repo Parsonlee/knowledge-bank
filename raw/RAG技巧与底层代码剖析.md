@@ -1221,7 +1221,7 @@ RSE 的实现步骤：
         def __init__(self):        """        初始化向量数据库，包含三个并行列表：        - vectors: 存储嵌入向量（NumPy 数组）        - texts: 存储原始文本块        - metadata: 存储每个文本块的元数据        """        self.vectors: List[np.ndarray] = []  # 嵌入向量列表        self.texts: List[str] = []           # 文本内容列表        self.metadata: List[Dict] = []       # 元数据列表
         def add_item(self, text: str, embedding: List[float], metadata: Optional[Dict] = None) -> None:        """        添加一个条目到向量数据库中。
             参数:            text (str): 需要存储的文本内容            embedding (List[float]): 表示该文本的嵌入向量            metadata (Dict, optional): 可选的元数据字典        """        self.vectors.append(np.array(embedding))        self.texts.append(text)        self.metadata.append(metadata or {})
-        def similarity_search(        self,        query_embedding: List[float],        k: int = 5,        filter_func: Optional[Callable[[Dict], bool]] = None    ) -> List[Dict]:        """        使用余弦相似度查找与查询向量最相似的条目。
+        def similarity_search(        self,        query_embedding: List[float],        k: int = 5,        filter_func: Optional[Callable\[\[Dict], bool]] = None    ) -> List[Dict]:        """        使用余弦相似度查找与查询向量最相似的条目。
             参数:            query_embedding (List[float]): 查询向量            k (int): 返回结果的数量            filter_func (Callable, optional): 过滤函数，用于基于元数据筛选结果
             返回:            List[Dict]: 包含文本、元数据和相关性评分的结果列表        """        ifnot self.vectors:            return []
             query_vector = np.array(query_embedding)        similarities = []

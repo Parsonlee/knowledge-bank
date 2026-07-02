@@ -75,3 +75,6 @@ confidence: high
 - [[概念_RoPE位置编码]] — gpt-oss 使用 RoPE 取代绝对位置嵌入
 - [[实体_Qwen3]] — 与 gpt-oss 对比的顶级开放权重 MoE 模型
 - [[概念_自适应快慢思考]] — gpt-oss 推理工作量低/中/高可控
+
+---
+> 📎 **物理文献**：[[raw/从GPT-2到gpt-oss，深度详解OpenAI开放模型的进化之路 ｜ 机器之....md]]

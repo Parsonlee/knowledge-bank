@@ -55,3 +55,6 @@ confidence: high
 - 实体：[[实体_LangChain]]
 - 系列上一篇：[[RAG基础_索引检索生成]]
 - 系列下一篇：[[RAG路由_Routing]]
+
+---
+> 📎 **物理文献**：[[raw/RAG从入门到精通系列2：Query Translation（查询翻译）.md]]

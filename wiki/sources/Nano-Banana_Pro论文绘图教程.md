@@ -61,3 +61,6 @@ confidence: high
 
 - 全文：`tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/Nano-Banana Pro 论文绘图最全教程发布.md`
 - Cubox：`raw/Nano-Banana Pro 论文绘图最全教程发布.md`
+
+---
+> 📎 **物理文献**：[[raw/Nano-Banana Pro 论文绘图最全教程发布.md]]

@@ -45,3 +45,6 @@ confidence: high
 - [[概念_Mamba硬件感知算法]] — 弥补选择机制丧失卷积加速的效率损失
 - [[概念_State_Swapping]] — Mamba 特有的新推理范式
 - [[实体_Mamba]] — Mamba 模型
+
+---
+> 📎 **物理文献**：[[raw/Mamba Explained _ Kola Ayonrinde.md]]

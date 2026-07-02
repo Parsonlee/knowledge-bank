@@ -33,3 +33,6 @@ confidence: high
 - [[概念_大模型训练三阶段]] — 训练阶段概述
 - [[实体_Qwen系列模型]] — Qwen2.5/Qwen3 系列
 - [[实体_PEFT库]] — HuggingFace PEFT，LoRA 实现库
+
+---
+> 📎 **物理文献**：[[raw/【有手就行】LoRA：用你自己的数据来微调大模型，让大模型真正懂你 - 程序员老....md]]

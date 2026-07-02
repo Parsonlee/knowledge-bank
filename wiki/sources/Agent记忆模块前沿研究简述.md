@@ -118,3 +118,6 @@ confidence: high
 - [[概念_Memory_RAG]] — Memory3/MemoRAG/CAG 记忆增强 RAG
 - [[实体_翁荔_Lilian_Weng]] — 记忆分类框架来源
 - [[概念_MoE混合专家]] — BTX 方法中 MoE 结构
+
+---
+> 📎 **物理文献**：[[raw/Agent的记忆模块前沿研究简述.md]]

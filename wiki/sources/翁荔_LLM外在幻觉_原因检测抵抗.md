@@ -59,3 +59,6 @@ confidence: high
 - [[概念_抗幻觉方法]] — RAG/CoVe/FLAME/Self-RAG 抵抗方案
 - [[实体_翁荔_Lilian_Weng]] — OpenAI 科学家，Agent 公式 / 幻觉 Blog 作者
 - [[实体_Self-RAG]] — 自我反思 RAG，同时也是幻觉抵抗方法
+
+---
+> 📎 **物理文献**：[[raw/OpenAI 翁荔提出大模型「外在幻觉」：万字 blog 详解抵抗办法、产幻原因....md]]

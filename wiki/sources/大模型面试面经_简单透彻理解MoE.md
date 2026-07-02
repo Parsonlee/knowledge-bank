@@ -39,3 +39,6 @@ confidence: high
 - [[手把手教你实现稀疏MoE语言模型]] — 实战代码实现
 - [[从DeepSeek-V3到Kimi_K2_八种现代LLM架构大比较]] — MoE 在现代 LLM 中的应用
 - [[腾讯混元TurboS技术报告]] — MoE + Mamba 混合架构实例
+
+---
+> 📎 **物理文献**：[[raw/大模型面试面经：简单透彻理解MoE.md]]

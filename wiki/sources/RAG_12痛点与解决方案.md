@@ -102,3 +102,6 @@ confidence: high
 - 相关概念：[[概念_重排序Rerank]]、[[概念_HyDE]]、[[概念_检索后处理]]、[[概念_Long-text_Reorder]]、[[概念_Contextual_Compression]]、[[概念_Query_Translation]]、[[概念_RAG基础流程]]、[[概念_Prompt_Compression]]、[[概念_LLM重排序]]、[[概念_RAG_Routing]]
 - 实体：[[实体_LlamaIndex]]、[[实体_LangChain]]、[[实体_Cohere_Rerank]]
 - 相关来源：[[RAG高级优化_检索后处理]]、[[RAG查询翻译_Query_Translation]]
+
+---
+> 📎 **物理文献**：[[raw/12 RAG 痛点和拟议解决方案.md]]

@@ -65,3 +65,6 @@ confidence: high
 - [[实体_Claude]]
 - [[MCP遇上代码执行]]
 - [[从CoT到Agent综述_上交]]
+
+---
+> 📎 **物理文献**：[[raw/How we built our multi-agent research sy....md]]

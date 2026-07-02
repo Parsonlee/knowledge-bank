@@ -61,3 +61,6 @@ confidence: high
 - 相关概念：[[概念_Matryoshka表示学习]]、[[概念_Embedding与向量检索]]
 - 实体：[[实体_Sentence_Transformers]]
 - 参考论文：Kusupati et al. (2022). Matryoshka representation learning. NeurIPS 35. https://arxiv.org/abs/2205.13147
+
+---
+> 📎 **物理文献**：[[raw/俄罗斯套娃 (Matryoshka) 嵌入模型概述 - HuggingFace ....md]]

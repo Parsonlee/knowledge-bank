@@ -58,3 +58,6 @@ confidence: high
 - [[实体_Agent_TARS]]
 - [[别再误会MCP了辟谣指南]]
 - [[MCP五大原语与Web化]]
+
+---
+> 📎 **物理文献**：[[raw/Human In the Loop竟然可以是个MCP_.md]]

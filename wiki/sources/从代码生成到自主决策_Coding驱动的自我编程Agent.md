@@ -96,3 +96,6 @@ Segment 采用 `[Segment]: [Content]` 结构，通过组合不同 Segment 形成
 - [[概念_MCP协议]]
 - [[概念_上下文工程]]
 - [[概念_Context_Rot]]
+
+---
+> 📎 **物理文献**：[[raw/从代码生成到自主决策：打造一个Coding驱动的“自我编程”Agent.md]]

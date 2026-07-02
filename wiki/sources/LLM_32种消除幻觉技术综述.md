@@ -80,3 +80,6 @@ confidence: high
 - [[概念_CRAG]] — 纠正型 RAG，与 EVER 类似的生成中验证思路
 - [[概念_Self-RAG]] — 自我反思 RAG，与 CoVe 类似
 - [[翁荔_LLM外在幻觉_原因检测抵抗]] — 翁荔 Blog，详解 RARR/CoVe/SAFE/Self-RAG 等方法
+
+---
+> 📎 **物理文献**：[[raw/大语言模型的32种消除幻觉的技术，你都了解吗？.md]]

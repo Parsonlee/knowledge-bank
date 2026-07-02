@@ -65,3 +65,6 @@ confidence: high
 ## 关联实体
 
 （全文仅举例提及 Supabase/Firebase/Vercel/AWS/Railway/Fly.io 等作为对比，未深入详述，不单独建实体页）
+
+---
+> 📎 **物理文献**：[[raw/AI-Native 的 Infra 演化路线：L0 到 L5.md]]

@@ -56,3 +56,6 @@ confidence: high
 - [[实体_DeepSeek_V2]] — MLA 首次提出的模型
 - [[MiniMax_vs_Kimi_注意力路线之争]]
 - [[Attention复杂度解析与改进方向]]
+
+---
+> 📎 **物理文献**：[[raw/deepseek MLA 矩阵吸收浅谈 - 知乎.md]]

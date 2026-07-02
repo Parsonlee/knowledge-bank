@@ -63,3 +63,6 @@ confidence: high
 
 ### 实体
 - [[实体_PyTorch]] — NanoGPT / minGPT 的实现框架
+
+---
+> 📎 **物理文献**：[[raw/矩阵模拟！Transformer大模型3D可视化，GPT-3、Nano-GPT每....md]]

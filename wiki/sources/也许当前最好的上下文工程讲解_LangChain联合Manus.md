@@ -132,3 +132,6 @@ confidence: high
 - [[实体_Peak_Ji_季逸超]]
 - [[实体_Manus]]
 - [[实体_LangChain]]
+
+---
+> 📎 **物理文献**：[[raw/也许当前最好的「上下文工程」讲解_LangChain联合Manus季逸超最新分享....md]]

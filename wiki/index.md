@@ -64,6 +64,7 @@
 - [[跨模态知识联邦与统一语义推理RAG]] — 枫清科技融合知识库+统一知识图谱处理异构知识（RAG）
 - [[RAGAS评估RAG系统]] — RAGAS 框架五大核心指标科学评估 RAG 系统（RAG/eval）
 - [[腾讯查询优化四大类综述]] — 腾讯 QO 综述：查询扩展/分解/消歧/抽象四大类（RAG, RAG/query）
+- [[RAG技巧与底层代码剖析]] — 阿里云开发者：用 Python 基础库从零手撕 RAG 内核，含 10 大实战技巧（RAG）
 - [[RAG综述_北大AIGC2024]] — 北大 PKU-DAIR RAG 综述：四大基础范式+五类提升方法+多模态应用+评估（RAG）
 - [[OpenAI_LLM应用最佳实践]] — OpenAI DevDay 2023：Prompt Engineering/RAG/Fine-tuning 两轴优化路线图（LLM）
 - [[A_Visual_Guide_to_Mamba_and_SSM]] — 50+ 可视化图解 Mamba/SSM 全流程：数学基础/离散化/选择扫描/硬件感知（LLM/arch/Mamba）
@@ -130,6 +131,11 @@
 - [[从代码生成到自主决策_Coding驱动的自我编程Agent]] — 阿里云：Coding 驱动（Py4j 泛化调用）+ 仿脑区五功能区架构 + Segment 上下文工程 + 三层记忆体系（AI-Agent/coding）
 - [[六位一线AI工程师总结_大模型应用一年心得]] — 六位工程师一年实战：Prompt/RAG/微调/Agent/评估全链路经验，实习生测试+LLM裁判+古德哈特定律（AI-Agent/coding）
 - [[私域知识工程实战_让AI一次性写出高质量代码]] — 阿里云：三板斧（入职培训/知识驱动编程/自动维护）解决 AI 编程信息不对称，一次性输出符合项目规范代码（AI-Agent/coding）
+- [[Claude_Code_2.0.40版本后的实用更新]] — 字节整理 Claude Code 2.0.40 后新增功能汇总，涵盖自定义输出样式与权限配置（Skill/claude-code）
+- [[awesome-claude-code-subagents资源集合]] — VoltAgent 社区维护的 Claude Code 子代理（Subagents）资源集与配置实战（Skill/claude-code）
+- [[一个半月高强度Claude_Code使用后感受]] — 王巍（喵神）：持续使用 Claude Code 的深度体验，心智模型转换与编程效率加速（Skill/claude-code）
+- [[写好CLAUDE.md_HumanLayer最佳实践]] — HumanLayer 团队编写 CLAUDE.md 最佳实践，基于上下文工程原则与模块化约束（Skill/claude-code）
+- [[用Claude_code重塑编程工作流]] — 厉辉结合 Anthropic 内部实践与个人思考，提出一套自动化编程与测试闭环流（Skill/claude-code）
 - [[Claude_Agent_Skills_从第一性原理深入剖析]] — PaperAgent：Skills 元工具架构速览，SKILL.md 结构、四种模式、纯 LLM 推理技能选择（AI-Agent/skill）
 - [[Agentic_Design_Patterns_中文翻译版]] — Antonio Gulli 著作中文翻译：21种 Agent 设计模式，核心/高级/集成/生产四类全景（AI-Agent/skill）
 - [[从第一性原理深度拆解_Claude_Agent_Skill_宝玉]] — Han Lee/宝玉：源码级解构 Skills 双消息注入、isMeta 机制、contextModifier 执行上下文修改全生命周期（AI-Agent/skill）
@@ -248,10 +254,24 @@
 - [[概念_RLaaS]] — 强化学习即服务，Palantir 式企业深度定制
 - [[概念_复制训练]] — 复现现有软件作为 RL 任务，单元测试验证奖励
 - [[概念_RLVR]] — 可自动验证奖励的强化学习
+- [[概念_Forward_KL与Reverse_KL]] — 对齐中的两种 KL 散度行为差异与优化特性
+- [[概念_IFD指令跟随难度]] — Instruction-Following Difficulty，通过困惑度挑选高价值 SFT 样本
+- [[概念_K-Center-Greedy算法]] — 基于核心集策略的贪心样本选择算法
+- [[概念_Reward_Hacking]] — 奖励黑客：利用奖励模型漏洞取高分而非真正满足意图
+- [[概念_SFT数据三维度]] — 规模/质量/多样性三维度评估与数据选型配比
+- [[概念_alignment_tax]] — 对齐税：安全与偏好对齐导致的模型通用能力或基础性能下降
+- [[概念_on-policy与off-policy数据]] — 强化学习训练中采样模型与目标优化策略的同源匹配关系
+- [[概念_多阶段训练策略]] — 从通用领域到垂直任务能力的退火精调流转路径
+- [[概念_灾难性遗忘]] — 微调新任务时导致原有预训练通用知识与能力退化
+- [[概念_过程奖励与结果奖励]] — PRM（每步推理评估）与 ORM（最终结果评估）对比
 - [[概念_智能体能力金字塔]] — 工具/规划/适应/接地气/常识推理五层能力
 - [[概念_接地气Groundedness]] — 智能体紧贴上下文、不幻觉不捏造的能力
 
 ### RAG
+- [[概念_CCH块标题]] — Contextual Chunk Headers：为每个切片添加层级化标题增强独立语义
+- [[概念_RAG反馈机制]] — 收集用户与系统隐/显式反馈迭代优化 RAG 检索管线
+- [[概念_RSE相关段落提取]] — Relevant Segment Extraction：定位并提取文档连续相关段落
+- [[概念_上下文增强检索]] — 检索前增强块上下文，提高切片独立理解能力
 - [[概念_RAG基础流程]] — RAG 三步：Indexing/Retrieval/Generation
 - [[概念_Embedding与向量检索]] — 文本转嵌入向量，按相似度检索 top-k
 - [[概念_向量数据库]] — 专用于存储向量化表示的系统，ANN 索引+相似度查询

@@ -48,3 +48,6 @@ confidence: high
 - [[实体_Mamba2]] — Mamba2 SSM 架构组件
 - [[A_Visual_Guide_to_Mamba_and_SSM]] — Mamba 架构基础
 - [[Mamba2_SSD_大一统]] — Mamba2 SSD 框架
+
+---
+> 📎 **物理文献**：[[raw/腾讯混元TurboS技术报告首次全公开：560B参数混合Mamba架构，自适应长....md]]

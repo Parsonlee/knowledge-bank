@@ -114,3 +114,6 @@ Karpathy 认为 RL 与 SFT/RLHF 有本质区别：
 - [[Transformer大模型3D可视化_NanoGPT]] — bbycroft.net/llm 可视化（本文也引用同一网站）
 - [[DeepSeek-R1工作原理]] — R1技术详解
 - [[强化学习入门指南_RLHF到GRPO]] — RL完整入门路线
+
+---
+> 📎 **物理文献**：[[raw/Andrej Karpathy LLM教学.md]]

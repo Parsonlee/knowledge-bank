@@ -60,3 +60,6 @@ date: 2025-06-25
 
 - [[概念_uv包管理器]]
 - [[概念_FastAPI项目结构模式]]
+
+---
+> 📎 **物理文献**：[[raw/Switching pip to uv in a Dockerized Flas....md]]

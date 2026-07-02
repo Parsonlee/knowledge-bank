@@ -40,3 +40,6 @@ confidence: high
 - [[概念_KV_Cache]] — Token 消耗背景
 - [[实体_Anthropic]] — 本文作者所在公司
 - [[实体_Cloudflare]] — 独立发现相同方法
+
+---
+> 📎 **物理文献**：[[raw/MCP 遇上代码执行：构建更高效率的 AI 智能体 _ 宝玉的分享.md]]

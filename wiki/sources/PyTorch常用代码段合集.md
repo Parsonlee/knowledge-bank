@@ -100,3 +100,6 @@ confidence: high
 ## 关联实体
 
 - [[实体_PyTorch]]
+
+---
+> 📎 **物理文献**：[[raw/PyTorch常用代码段合集.md]]

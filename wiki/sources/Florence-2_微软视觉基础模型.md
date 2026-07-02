@@ -1,7 +1,7 @@
 ---
 type: source
 tags:
-- LLM/arch/VLM
+- LLM/Multimodal
 - CV/arch
 summary: 微软 Azure AI 提出 Florence-2，基于 Seq2Seq 架构和 FLD-5B 超大数据集，统一处理图像理解、检测、定位、分割等多种视觉任务
 sources:
@@ -43,3 +43,6 @@ confidence: high
 - [[实体_Florence-2]] — 微软 Azure AI 通用视觉模型
 - [[实体_FLD-5B数据集]] — Florence-2 配套超大规模标注数据集
 - [[实体_DaViT]] — Florence-2 使用的视觉编码器
+
+---
+> 📎 **物理文献**：[[raw/微软 Azure AI 团队新作 _ Florence-2_ 解锁视觉新境界，万....md]]

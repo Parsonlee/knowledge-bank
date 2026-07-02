@@ -62,3 +62,6 @@ if layer_past is not None:
 - [[大模型显存计算与优化]]
 - [[DeepSeek_MLA矩阵吸收原理]]
 - [[MiniMax_vs_Kimi_注意力路线之争]]
+
+---
+> 📎 **物理文献**：[[raw/大模型推理加速：看图学KV Cache - 知乎.md]]

@@ -89,3 +89,6 @@ confidence: high
 
 - 相关概念：[[概念_Embedding与向量检索]]、[[概念_知识图谱RAG]]、[[概念_GraphRAG]]、[[概念_向量数据库]]、[[概念_向量索引方法]]、[[概念_向量相似度度量]]、[[概念_ColBERT]]、[[概念_Multi-representation_Indexing]]、[[概念_Step-back提示]]、[[概念_父页面检索]]
 - 实体：[[实体_HNSW]]
+
+---
+> 📎 **物理文献**：[[raw/RAG系统设计：揭秘语义搜索被低估的核心价值与KG驱动的架构选型策略.md]]

@@ -81,3 +81,6 @@ confidence: high
 - [[概念_智能体能力金字塔]] — Agent 能力
 - [[概念_Agentic_RAG]] — Agent + RAG
 - [[概念_Memory_RAG]] — 长期记忆机制
+
+---
+> 📎 **物理文献**：[[raw/从 CoT 到 Agent，最全综述来了！上交出品.md]]

@@ -142,3 +142,6 @@ confidence: high
 - 相关概念：[[概念_Dense_Embedding]]、[[概念_重排序Rerank]]、[[概念_分层知识蒸馏]]、[[概念_Embedding训练管线]]、[[概念_Text2SQL]]、[[概念_GraphRAG]]、[[概念_Agentic_RAG]]、[[概念_知识树结构]]
 - 实体：[[实体_优图实验室]]、[[实体_MAC-SQL]]
 - 相关来源：[[RAG综述_中科院2025]]、[[阿里RAG技术演进]]
+
+---
+> 📎 **物理文献**：[[raw/万字长文详解优图RAG技术.md]]

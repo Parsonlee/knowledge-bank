@@ -76,3 +76,6 @@ confidence: high
 - 相关概念：[[概念_ColBERT]]、[[概念_ColBERTv2残差压缩]]、[[概念_向量量化]]、[[概念_Sentence-BERT]]
 - 实体：[[实体_ColBERT]]、[[实体_BGE-M3]]、[[实体_Faiss]]
 - 来源：[[ColBERT原理与延迟交互机制]]
+
+---
+> 📎 **物理文献**：[[raw/RAG之延迟交互与残差压缩：从ColBERT到ColBERTv2的演进及其应用.md]]

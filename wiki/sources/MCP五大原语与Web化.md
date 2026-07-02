@@ -37,3 +37,6 @@ confidence: high
 - [[概念_MCP链式调用]] — Sampling 实现的链式调用
 - [[实体_Anthropic]] — MCP 协议制定方
 - [[实体_David_Soria_Parra]] — MCP 联合创建者
+
+---
+> 📎 **物理文献**：[[raw/MCP不止工具调用！MCP联合创建者：绝大多数人用法都太初级！曝MCP五大原语、....md]]

@@ -85,3 +85,6 @@ Qwen3 Embedding 在 MTEB 排行榜上开源闭源现在都是第一，Rerank 同
 
 - 相关概念：[[概念_Embedding与向量检索]]、[[概念_Instruct_Embedding]]、[[概念_Sentence-BERT]]、[[概念_重排序Rerank]]
 - 实体：[[实体_Qwen3_Embedding]]、[[实体_Sentence_Transformers]]
+
+---
+> 📎 **物理文献**：[[raw/为什么用Qwen3 embedding和rerank.md]]

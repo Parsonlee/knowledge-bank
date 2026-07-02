@@ -95,3 +95,6 @@ confidence: high
 
 - 相关概念：[[概念_Embedding与向量检索]]、[[概念_词向量]]、[[概念_BERT各向异性]]、[[概念_Sentence-BERT]]、[[概念_SimCSE]]
 - 实体：[[实体_Sentence_Transformers]]
+
+---
+> 📎 **物理文献**：[[raw/一文详尽之Embedding（向量表示）！.md]]

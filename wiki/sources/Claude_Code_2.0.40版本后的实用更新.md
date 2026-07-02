@@ -79,3 +79,6 @@ confidence: high
 - [[概念_Agent_Skills元工具架构]]
 - [[概念_Claude_Code工作流]]
 - [[概念_CLAUDE.md最佳实践]]
+
+---
+> 📎 **物理文献**：[[raw/Claude Code 2.0.40版本后的一些实用更新.md]]

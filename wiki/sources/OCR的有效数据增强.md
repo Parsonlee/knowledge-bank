@@ -53,3 +53,6 @@ confidence: high
 ## 关联实体
 
 - [[实体_Albumentations]]
+
+---
+> 📎 **物理文献**：[[raw/OCR的有效数据增强.md]]

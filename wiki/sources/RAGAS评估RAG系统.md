@@ -86,3 +86,6 @@ confidence: high
 
 - 相关概念：[[概念_RAG评估框架RAGAS]]、[[概念_Embedding与向量检索]]、[[概念_BM25]]、[[概念_混合检索]]
 - 实体：[[实体_BGE-M3]]
+
+---
+> 📎 **物理文献**：[[raw/用 RAGAS 精准定位 RAG 系统短板.md]]

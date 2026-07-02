@@ -2,7 +2,7 @@
 title: Uvicorn、Gunicorn 傻傻分不清？FastAPI 生产部署避坑指南
 source: https://www.cnblogs.com/ymtianyu/p/20797468
 author:
-  - "[[一名程序媛呀]]"
+  - "\[\[一名程序媛呀]]"
 published: 2026-06-25
 created: 2026-06-26
 description: 你是不是也遇到过 FastAPI 应用一上量就卡死、502 频发？这篇来自程序媛老友的经验之谈，不讲天书，只给你最落地的

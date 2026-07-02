@@ -99,3 +99,6 @@ confidence: high
 - 实体：[[实体_LangChain]]、[[实体_LlamaIndex]]
 - 来源论文：arXiv:2402.19473
 - GitHub：https://github.com/hymie122/RAG-Survey
+
+---
+> 📎 **物理文献**：[[raw/最新RAG综述来了！北京大学发布AIGC的检索增强技术综述.md]]

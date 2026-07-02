@@ -37,3 +37,6 @@ confidence: high
 - [[概念_MCP数据库集成]] — MCP+数据库模式
 - [[实体_MongoDB]] — 文中使用的文档型数据库
 - [[实体_Cline]] — VsCode AI 编码插件，MCP 客户端
+
+---
+> 📎 **物理文献**：[[raw/MCP+数据库.md]]

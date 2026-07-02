@@ -98,3 +98,6 @@ confidence: high
 - [[概念_Embedding训练管线]]
 - [[概念_重排序Rerank]]
 - [[概念_AI创业Scaling_Law]]
+
+---
+> 📎 **物理文献**：[[raw/Jina AI创业复盘：AI团队的Scaling Law是什么.md]]

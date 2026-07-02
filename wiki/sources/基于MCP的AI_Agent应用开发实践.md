@@ -39,3 +39,6 @@ confidence: high
 - [[概念_MCP传输方式]] — Stdio/SSE/Streamable HTTP
 - [[实体_Agent_TARS]] — 字节跳动开源多模态 Agent
 - [[实体_Anthropic]] — MCP 协议制定方
+
+---
+> 📎 **物理文献**：[[raw/基于 MCP 的 AI Agent 应用开发实践.md]]
