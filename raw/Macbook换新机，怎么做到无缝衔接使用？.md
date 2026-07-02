@@ -68,21 +68,3 @@ tags:
 Conversation summary
 
 评论区主要围绕如何无缝衔接新旧MacBook的使用展开，大家对使用雷电数据线进行快速数据迁移和利用Agent进行环境体检的建议表示认可和赞赏。同时，部分用户分享了旧机的后续用途，整体氛围积极且实用。
-
-旧机准备给儿子玩了
-
-[![](https://www.superlinear.academy/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRlh5TlFnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--b3188cbb609f09767a8e9e7eeb3ffafb3d77aed0/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lKYW5CbFp3WTZCa1ZVT2hSeVpYTnBlbVZmZEc5ZmJHbHRhWFJiQjJrQ0xBRnBBaXdCT2dwellYWmxjbnNHT2dwemRISnBjRlE9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--ef295ed08e817a599d692fd6d8761673d3ed547f/IMG_2643.jpeg)](https://www.superlinear.academy/u/f7e34206)
-
-准备一根雷电 4 或 5 的数据线，把两台 Mac 直接连起来，走霹雳网桥通道。  
-  
-学习了！  
-  
-还有最后用agent综合体检的思路也很有用！
-
-Yan Wang 鸭哥 榨干旧机的最后一滴 哈哈
-
-[![](https://www.superlinear.academy/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCTVNBTXdnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--4cdb078a6803ddf96a1c9fc02fe3d083d6ff8a62/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFJc0FXa0NMQUU2Q25OaGRtVnlld1k2Q25OMGNtbHdWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--67365f61f655fbc86c65a51f2e9992ab818c41cd/%E5%A4%B4%E5%83%8F.jpg)](https://www.superlinear.academy/u/452cd000)
-
-诶这个好实用
-
-立正 谢谢～

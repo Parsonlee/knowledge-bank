@@ -7,7 +7,7 @@ published: 2026-06-28
 created: 2026-06-29
 description:
 tags:
-  - clippings
+  - Skill/claude-code
 ---
 ## 目录 \[−\]
 

@@ -6,12 +6,4 @@
 - **桌面端 (Mac/Linux/Windows)**：Obsidian + [Obsidian Git](https://github.com/Vinzent03/obsidian-git) 插件，定时自动 commit & push/pull。
 - **移动端 (iPhone/iPad)**：Obsidian 移动版 + Obsidian Git 插件（或 Working Copy 配合）。
 
-## 目录约定
-
-| 目录 | 用途 |
-| --- | --- |
-| `inbox/` | 速记、待整理的临时笔记 |
-| `notes/` | 已整理的长期笔记 |
-| `assets/` | 图片等附件 |
-
 > `.obsidian/` 里的配置会随仓库同步，因此插件和主题在各端保持一致；`workspace.json` 等设备相关缓存已在 `.gitignore` 中排除。
