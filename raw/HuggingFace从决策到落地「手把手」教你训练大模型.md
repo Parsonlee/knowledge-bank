@@ -15,7 +15,7 @@ tags:
 
 ---
 
-## Annotations  
+\## Annotations  
 
 > 基线虽好，但并非为你量身定制，因此需要修改。然而，「任何架构上的改变都伴随着风险」。为此，必须遵守「去风险」的纪律，即：「除非你测试过它确实有帮助，否则不要改变任何东西。」
 >
@@ -46,7 +46,7 @@ tags:
 
 ---
 
-## 📖 正文全文
+\## 📖 正文全文
 
 # HuggingFace发布超200页「实战指南」，从决策到落地「手把手」教你训练大模型
 
@@ -68,9 +68,9 @@ tags:
 
 下面是对博客内容的概述，非常推荐感兴趣的读者阅读原文。
 
-* 博客地址：https://huggingface.co/spaces/HuggingFaceTB/smol-training-playbook#positional-encodings--long-context
+* 博客地址：https://huggingface.co/spaces/HuggingFaceTB/smol-training-playbook\#positional-encodings--long-context
 
-### 训练罗盘：Why→What→How
+\#\## 训练罗盘：Why→What→How
 
 
 ![](https://image.cubox.pro/cardImg/1rn32vsvdjgcfx0dv4m3lexhxqo5wfhys20eyex5v7whq1tzbs?imageMogr2/quality/90/format/gif/ignore-error/1)
@@ -83,7 +83,7 @@ tags:
 ![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fmmbiz.qpic.cn%2Fsz_mmbiz_png%2FKmXPKA19gW9zbEuZWEibE1lekBVNudojw5ickykcFluDP8gr9AYIavCYsHtn96kB8vW5QABvtpgkF1ebibeSVTMvA%2F640%3Fwx_fmt%3Dpng%26from%3Dappmsg%26tp%3Dwebp%26wxfrom%3D5%26wx_lazy%3D1%23imgIndex%3D2&valid=false)
 
 
-### Why
+\#\## Why
 
 文章列举了一些不应该训练模型的错误理由，例如：「我们有闲置算力」、「别人都在做」或「AI 是未来」。
 
@@ -106,7 +106,7 @@ tags:
 
 * **战略开源：** 你发现并有能力填补当前开源生态系统中的一个特定空白。
 
-### What
+\#\## What
 
 一旦你明确了「Why」，就可以推导出「训练什么 (What)」。包括模型类型（密集型、MoE、混合型、某种新型）、模型大小、架构细节和数据混合。
 
@@ -122,7 +122,7 @@ tags:
 
 文章还建议，预训练团队一开始不需要很多人（2-3 人足矣），关键是配备足够的算力并保持快速迭代。
 
-### 每一个大型模型都始于一个小型消融
+\#\## 每一个大型模型都始于一个小型消融
 
 在开始训练 LLM 之前，需要做出一系列关键决策（架构、优化器、数据组合等）。人们常以为这些决策是靠深思熟虑得出的，但仅凭推理是不够的，因为 LLM 的行为常常反直觉。
 
@@ -184,7 +184,7 @@ tags:
 ![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fmmbiz.qpic.cn%2Fsz_mmbiz_png%2FKmXPKA19gW9zbEuZWEibE1lekBVNudojwDxpCCjTUbYoeQyavpkmAUJaQ4SCdCVGFCKhbnUgH3dyvyeCdSiakn9Q%2F640%3Fwx_fmt%3Dpng%26from%3Dappmsg%26tp%3Dwebp%26wxfrom%3D5%26wx_lazy%3D1%23imgIndex%3D6&valid=false)
 
 
-### 模型架构设计
+\#\## 模型架构设计
 
 这部分内容详细阐述了设计和确定 LLM 架构的完整决策过程，从高层目标到具体的组件选择和超参数设置。
 
@@ -216,7 +216,7 @@ tags:
 
 最后回顾了关于模型规模（参数量 N）和数据量（Token 数 D）的经典权衡。
 
-### 数据管理艺术
+\#\## 数据管理艺术
 
 这部分内容详细阐述了「数据策展的艺术」，强调了在 LLM 训练中，数据是决定模型「学到什么」的关键因素，其重要性甚至超过了模型架构。
 
@@ -252,7 +252,7 @@ tags:
 
 文章最后以 SmolLM3 为例，展示了如何应用这些原则。
 
-### 堪比「马拉松」的长周期训练
+\#\## 堪比「马拉松」的长周期训练
 
 从前面来看，此时已经准备好了大部分的工作，经过验证的模型架构、最终确定的数据混合方案、调好的超参数，剩下的任务就是搭建好基础设施（这在最后讲解），然后「开始」训练。而训练是一个堪比「马拉松」的长周期过程，过程中可能会出现各种情况，所以要做好面对各种挑战的准备。
 
@@ -266,7 +266,7 @@ tags:
 
 另外，文章还指出，在现代 LLM 的预训练中，通常会采用多阶段训练策略（multi-stage training），每个阶段使用不同的数据混合比例，并在最后阶段进行上下文长度扩展。比如 Qwen3 就采用了通用阶段、推理阶段、长上下文阶段的三阶段训练方案。而 SmolLM3 采用了类似的理念，在训练过程中计划性地引入高质量数据集并扩展上下文长度，同时根据性能监控结果进行动态调整。
 
-### 超越基础模型------2025 年的后训练阶段
+\#\## 超越基础模型------2025 年的后训练阶段
 
 这部分主要介绍了模型的后训练（Post-training）。以 SmolLM3 为例，在完成预训练（Pre-training）后就拥有了 SmolLM3 的原始能力（raw ability），但在 GPU 的温度还未降下之前，就进入了后训练（Post-training）阶段。
 
@@ -324,7 +324,7 @@ SmolLM3 是一个优秀的基础模型，但要在发布前变得可用，必须
 
 * 是最好的基线：一个良好的 SFT 检查点（checkpoint）通常能提供你所需的大部分性能提升，并让后续如 DPO 或 RLHF 等方法的训练更加高效。
 
-### 基础设施：被忽视的关键一环
+\#\## 基础设施：被忽视的关键一环
 
 这部分主要是将基础设施，因为大多数从事模型训练的人都非常关心模型架构和数据质量，而忽视了底层的基础设施，认为「租几块 GPU，撞上 Pytorch 就可以了」。然而并非如此，如果用一个比喻来形容，那就是「预训练是蛋糕坯，后训练是上面的糖霜和樱桃，而基础设施就是工业级烤箱」。没有它，一切无从谈起。
 

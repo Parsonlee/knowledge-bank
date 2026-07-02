@@ -17,7 +17,7 @@ tags:
 
 ---
 
-## 📖 正文全文
+\## 📖 正文全文
 
 # 实战｜13个Pytorch 图像增强方法总结（附代码）
 
@@ -27,7 +27,7 @@ tags:
   
 ```
 
-## 作者丨结发授长生@知乎
+\## 作者丨结发授长生@知乎
 链接丨https://zhuanlan.zhihu.com/p/559887437
 
 
@@ -60,7 +60,7 @@ tags:
 *
   中心区域
 
-## **调整大小**
+\## **调整大小**
 
 **在开始图像大小的调整之前我们需要导入数据（图像以眼底图像为例）。**
 
@@ -76,9 +76,9 @@ tags:
     plt.rcParams\["savefig.bbox"\] = 'tight'
     orig_img = Image.open(Path('image/000001.tif'))
     torch.manual_seed(0) # 设置 CPU 生成随机数的 种子 ，方便下次复现实验结果
-    print(np.asarray(orig_img).shape) #(800, 800, 3)
+    print(np.asarray(orig_img).shape) \#(800, 800, 3)
 
-    #图像大小的调整
+    \#图像大小的调整
     resized_imgs = \[T.Resize(size=size)(orig_img) for size in \[128,256\]\]
     # plt.figure('resize:128\*128')
     ax1 = plt.subplot(131)
@@ -97,7 +97,7 @@ tags:
 
 ![图片](https://image.cubox.pro/cardImg/2023112617051957386/21802.jpg?imageMogr2/quality/90/ignore-error/1)
 
-## 灰度变换
+\## 灰度变换
 
 此操作将RGB图像转化为灰度图像。
 
@@ -113,7 +113,7 @@ tags:
 
 ![图片](https://image.cubox.pro/cardImg/2023112617052065701/20334.jpg?imageMogr2/quality/90/ignore-error/1)
 
-## 标准化
+\## 标准化
 
 标准化可以加快基于神经网络结构的模型的计算速度，加快学习速度。
 
@@ -137,7 +137,7 @@ tags:
 
 ![图片](https://image.cubox.pro/cardImg/2023112617052088254/42612.jpg?imageMogr2/quality/90/ignore-error/1)
 
-## **随机旋转**
+\## **随机旋转**
 
 设计角度旋转图像
 
@@ -166,7 +166,7 @@ tags:
 
 ![图片](https://image.cubox.pro/cardImg/2023112617052056017/73331.jpg?imageMogr2/quality/90/ignore-error/1)
 
-## **中心剪切**
+\## **中心剪切**
 
 剪切图像的中心区域
 
@@ -201,7 +201,7 @@ tags:
 
 ![图片](https://image.cubox.pro/cardImg/2023112617052017037/69926.jpg?imageMogr2/quality/90/ignore-error/1)
 
-## **随机裁剪**
+\## **随机裁剪**
 
 随机剪切图像的某一部分
 
@@ -236,7 +236,7 @@ tags:
 
 ![图片](https://image.cubox.pro/cardImg/2023112617052094004/64579.jpg?imageMogr2/quality/90/ignore-error/1)
 
-## **高斯模糊**
+\## **高斯模糊**
 
 使用高斯核对图像进行模糊变换
 
@@ -271,7 +271,7 @@ tags:
 
 ![图片](https://image.cubox.pro/cardImg/2023112617052181676/35057.jpg?imageMogr2/quality/90/ignore-error/1)
 
-## 亮度、对比度和饱和度调节
+\## 亮度、对比度和饱和度调节
 
     from PIL import Image
     from pathlib import Path
@@ -298,7 +298,7 @@ tags:
 
 ![图片](https://image.cubox.pro/cardImg/2023112617052164917/17165.jpg?imageMogr2/quality/90/ignore-error/1)
 
-## 水平翻转
+\## 水平翻转
 
     from PIL import Image
     from pathlib import Path
@@ -327,7 +327,7 @@ tags:
 
 ![图片](https://image.cubox.pro/cardImg/2023112617052167942/94461.jpg?imageMogr2/quality/90/ignore-error/1)
 
-## 垂直翻转
+\## 垂直翻转
 
     from PIL import Image
     from pathlib import Path
@@ -360,7 +360,7 @@ tags:
 
 ![图片](https://image.cubox.pro/cardImg/2023112617052169097/84725.jpg?imageMogr2/quality/90/ignore-error/1)
 
-## 高斯噪声
+\## 高斯噪声
 
 向图像中加入高斯噪声。通过设置噪声因子，噪声因子越高，图像的噪声越大。
 
@@ -401,7 +401,7 @@ tags:
 
 ![图片](https://image.cubox.pro/cardImg/2023112617052113732/94684.jpg?imageMogr2/quality/90/ignore-error/1)
 
-## **随机块**
+\## **随机块**
 
 正方形补丁随机应用在图像中。这些补丁的数量越多，神经网络解决问题的难度就越大。
 
@@ -444,7 +444,7 @@ tags:
 
 ![图片](https://image.cubox.pro/cardImg/2023112617052224659/11851.jpg?imageMogr2/quality/90/ignore-error/1)
 
-## **中心区域**
+\## **中心区域**
 
 和随机块类似，只不过在图像的中心加入补丁
 

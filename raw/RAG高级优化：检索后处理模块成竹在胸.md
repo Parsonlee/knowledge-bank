@@ -18,31 +18,31 @@ tags:
 
 ---
 
-## 📖 正文全文
+\## 📖 正文全文
 
 # RAG高级优化：检索后处理模块成竹在胸
 
 [mp.weixin.qq.com](https://mp.weixin.qq.com/s?__biz=Mzk0NTcyNTMzNw==&mid=2247484209&idx=1&sn=0ce7bb6bbb6a0ff5efb4ad10ce2765a7&chksm=c31049c7f467c0d1eae08bc1e7a589b3769d96971ed8149daa55a4e1c6000a0a56b47227aa64&cur_album_id=3621348003472015367&scene=189)哎呀AIYA 哎呀AIYA
 
-通过上文的方法[RAG高级优化：一文看尽query的转换之路](http://mp.weixin.qq.com/s?__biz=Mzk0NTcyNTMzNw==&mid=2247484174&idx=1&sn=f993d1ac4fe041a857783e2f133789a5&chksm=c31049f8f467c0ee6fac4b4a3402f43649db341c734284932f1385cdfeb6152e00766887468f&scene=21#wechat_redirect)，我们召回了一些相关片段，本文我们将介绍在将召回片段送入大模型之前的一些优化手段，它们能帮助大模型更好的理解上下文知识，给出最佳的回答：
+通过上文的方法[RAG高级优化：一文看尽query的转换之路](http://mp.weixin.qq.com/s?__biz=Mzk0NTcyNTMzNw==&mid=2247484174&idx=1&sn=f993d1ac4fe041a857783e2f133789a5&chksm=c31049f8f467c0ee6fac4b4a3402f43649db341c734284932f1385cdfeb6152e00766887468f&scene=21\#wechat_redirect)，我们召回了一些相关片段，本文我们将介绍在将召回片段送入大模型之前的一些优化手段，它们能帮助大模型更好的理解上下文知识，给出最佳的回答：
 
 *
 
-  ### Long-text Reorder
+  \#\## Long-text Reorder
 
 *
 
-  ### Contextual compression
+  \#\## Contextual compression
 
 *
 
-  ### Refine
+  \#\## Refine
 
 *
 
-  ### Emotion Prompt
+  \#\## Emotion Prompt
 
-### **Long-text Reorder**
+\#\## **Long-text Reorder**
 
 根据论文 Lost in the Middle: How Language Models Use Long Contexts，的实验表明，大模型更容易记忆开头和结尾的文档，而对中间部分的文档记忆能力不强，因此可以根据召回的文档和query的相关性进行重排序。
 ![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fmmbiz.qpic.cn%2Fmmbiz_jpg%2Fr8c4hf2wliaagtl6ELaXbTmdrXTRNXZ5ZBqkJ3XuFciaIaskAeOQTNIYNSyib8G2YrfqV977LL5AicS0juYazjyUaA%2F640%3Fwx_fmt%3Dother%26from%3Dappmsg%26tp%3Dwebp%26wxfrom%3D5%26wx_lazy%3D1%26wx_co%3D1&valid=false)
@@ -63,7 +63,7 @@ tags:
                 reordered_result.insert(0, value)
         return reordered_result
 
-### **Contextual compression**
+\#\## **Contextual compression**
 
 本质上利用LLM去判断检索之后的文档和用户query的相关性，只返回相关度最高的k个。
 
@@ -82,7 +82,7 @@ tags:
     )
     print(compressed_docs)
 
-### **Refine**
+\#\## **Refine**
 
 对最后大模型生成的回答进行进一步的改写，保证回答的准确性。主要涉及提示词工程，参考的提示词如下：
 
@@ -95,7 +95,7 @@ tags:
     Given the new context, refine the original answer to better answer the query. If the context isn't useful, return the original answer.
     Refined Answer:
 
-### **Emotion Prompt**
+\#\## **Emotion Prompt**
 
 同样是提示词工程的一部分，思路来源于微软的论文：
 > Large Language Models Understand and Can Be Enhanced by Emotional Stimuli
@@ -141,15 +141,15 @@ tags:
 往期推荐
 
 
-[RAG高级优化：一文看尽query的转换之路](http://mp.weixin.qq.com/s?__biz=Mzk0NTcyNTMzNw==&mid=2247484174&idx=1&sn=f993d1ac4fe041a857783e2f133789a5&chksm=c31049f8f467c0ee6fac4b4a3402f43649db341c734284932f1385cdfeb6152e00766887468f&scene=21#wechat_redirect)  
+[RAG高级优化：一文看尽query的转换之路](http://mp.weixin.qq.com/s?__biz=Mzk0NTcyNTMzNw==&mid=2247484174&idx=1&sn=f993d1ac4fe041a857783e2f133789a5&chksm=c31049f8f467c0ee6fac4b4a3402f43649db341c734284932f1385cdfeb6152e00766887468f&scene=21\#wechat_redirect)  
 
 
-[支持大模型流式输出的JSON提取工具](http://mp.weixin.qq.com/s?__biz=Mzk0NTcyNTMzNw==&mid=2247483821&idx=1&sn=6f34d91291fbcab03a79142eaa3ed56f&chksm=c3104b5bf467c24d7c4184784831d2cab8ce97f47cfc86d40da172650e67dba9a0860a7411b0&scene=21#wechat_redirect)  
+[支持大模型流式输出的JSON提取工具](http://mp.weixin.qq.com/s?__biz=Mzk0NTcyNTMzNw==&mid=2247483821&idx=1&sn=6f34d91291fbcab03a79142eaa3ed56f&chksm=c3104b5bf467c24d7c4184784831d2cab8ce97f47cfc86d40da172650e67dba9a0860a7411b0&scene=21\#wechat_redirect)  
 
 
-[RAG高级优化：基于问题生成的文档检索增强](http://mp.weixin.qq.com/s?__biz=Mzk0NTcyNTMzNw==&mid=2247484125&idx=1&sn=0490793590a7061bf0593749f1a58474&chksm=c310482bf467c13dc718c0601c3b2ec0072e8d376cfa0c3b5d0d71406dbfa39bb1b09c684cfc&scene=21#wechat_redirect)  
+[RAG高级优化：基于问题生成的文档检索增强](http://mp.weixin.qq.com/s?__biz=Mzk0NTcyNTMzNw==&mid=2247484125&idx=1&sn=0490793590a7061bf0593749f1a58474&chksm=c310482bf467c13dc718c0601c3b2ec0072e8d376cfa0c3b5d0d71406dbfa39bb1b09c684cfc&scene=21\#wechat_redirect)  
 
 
-[一款优秀的开源项目，PDF扫描件识别也超容易](http://mp.weixin.qq.com/s?__biz=Mzk0NTcyNTMzNw==&mid=2247484167&idx=1&sn=b6dbd57396f03cbfe1dbad2a58424293&chksm=c31049f1f467c0e7f37cf29359bdb4ae8f319ce1ba346bbf5bb6c716c8b533a1f907c79d1673&scene=21#wechat_redirect)
+[一款优秀的开源项目，PDF扫描件识别也超容易](http://mp.weixin.qq.com/s?__biz=Mzk0NTcyNTMzNw==&mid=2247484167&idx=1&sn=b6dbd57396f03cbfe1dbad2a58424293&chksm=c31049f1f467c0e7f37cf29359bdb4ae8f319ce1ba346bbf5bb6c716c8b533a1f907c79d1673&scene=21\#wechat_redirect)
 
 [Read in Cubox](https://cubox.pro/web/card/7250872929913668335)

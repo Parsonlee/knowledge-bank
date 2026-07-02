@@ -14,7 +14,7 @@ tags:
 
 ---
 
-## Annotations  
+\## Annotations  
 
 > 在普适化的Prompt作用下，当Agent发现需要澄清问题时，虽然会产生“疑问”，但是它会将疑问直接“打在公屏”上：在输出中阐述这个疑问。即使出现在“深度思考”的正文中，大模型也会试图通过既有知识尝试自主回答这个问题。
 >
@@ -33,7 +33,7 @@ tags:
 
 ---
 
-## 📖 正文全文
+\## 📖 正文全文
 
 # Human In the Loop竟然可以是个MCP?
 
@@ -170,13 +170,13 @@ YOLO（You Only Look Once）模式是Cursor于2024年末推出的重要功能\[5
 
 * 如何进行决策？
 
-### 2.3.1 服务端决策
+\#\## 2.3.1 服务端决策
 
 当确定"开启YOLO模式后的决策方是服务端"时，由于"YOLO是否开启"只是一个"开关"，实际上Agent代码在设计、编写时，都已经"连接"了上述HITL MCP Server（即"人机回路"的MCP Server，下同）或者MCP Server Proxy。当"YOLO模式"开启时，Agent只能通过Prompt对大模型进行约束，迫使其绕过HITL MCP Server，不要主动调用；而对于MCP Server Proxy，Agent要么完全无法绕过而被迫执行，要么完全不去执行。无论选用哪种方式，Agent得到的结果都将与原有设计大相径庭。
 
 如果Agent的代码编写较为灵活，那么也可以在"YOLO模式"开启时，去除其与HITL MCP Server的"连接"，减少对Prompt的干预。即使这样，也依旧无法解决MCP Server Proxy代理的工具调用的困境。
 
-### 2.3.2 客户端决策
+\#\## 2.3.2 客户端决策
 
 通常情况下在服务端执行Agent，其客户端一般都设计为"瘦客户端"，即客户端（含桌面端、Web端和App端等）都不具备模型推理和其他计算能力，只是作为"UI渲染器"。那么如果由客户端来代替人类进行决策的话，客户端可选的策略类型就只能是"随机"、"YOLO"或者"请求外援"三种了。
 
@@ -204,7 +204,7 @@ YOLO（You Only Look Once）模式是Cursor于2024年末推出的重要功能\[5
 **2.4 端侧方案**
 
 
-### 2.4.1 常规处理
+\#\## 2.4.1 常规处理
 
 无论是业务侧的Web端、App端还是桌面端，UI渲染的基础都是调用Agent主入口的SSE链路的帧。常见的主入口是OpenAI兼容协议的ChatCompletions，使用HTTP POST方法访问。端侧不断地解析Agent主入口（接口）源源不断的返回的SSE帧，根据帧类型决策立即渲染或者攒批渲染。
 
@@ -212,7 +212,7 @@ YOLO（You Only Look Once）模式是Cursor于2024年末推出的重要功能\[5
 
 等待人类作答期间，端侧还需要打开计时器，在一定时间内自动触发"超时未作答"机制。而对于网络异常导致的Agent主入口SSE断连，端侧还需要自动关闭已经渲染好的UI界面，以防误作答。
 
-### 2.4.2 多端协同
+\#\## 2.4.2 多端协同
 
 在使用美国苹果公司的iCloud帐号登录新设备，或者使用新浏览器时，经常会被要求登录人在已经登录这个帐号的机器上确认本次登录的合法性，并获取6位数字；登录人需要在任意设备上确认完成后，将6位数字填入新设备的输入框内，完成新设备的登录授权工作。当"确认合法性"任务下发时，几乎所有的设备都会立即收到这个通知；点击任意设备"确认"后，其他设备的登录通知都会立即消失或者不可用。
 
@@ -240,7 +240,7 @@ OpenLM Agent平台上MCP组件的默认超时时间一般是30秒。这几乎可
 
 人类直接回答看起来是最容易的，实际在工程实现上却是最复杂的。从"问询"数量上来看：如果大模型的疑问只有一个，那么只需要让人类直接书写"答复"即可；如果大模型的疑问不止一个，那么除了要考虑"疑问"的传递方式和UI渲染方式之外，还需要顾虑人类的体验。
 
-### 3.1.1 现实问题
+\#\## 3.1.1 现实问题
 
 有的人使用Agent是期望其产生不一样的创意，比如生成不一样的图片、视频和文字。这类人通常乐于在大模型实际工作之前将任务尽可能的描述清晰，以防止生成的内容偏差较大，甚至有大方向上的背离；有的人使用Agent则是期望其成为一个全能的"助理"，协助完成一定程度的重复工作。如果一个简单的工作交给Agent之后，它还要问东问西，问这问那，那么人类一定会产生"还不如我自己做"的想法，最终弃用这个助理Agent。
 
@@ -256,7 +256,7 @@ OpenLM Agent平台上MCP组件的默认超时时间一般是30秒。这几乎可
 
 ![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fmmbiz.qpic.cn%2Fmmbiz_png%2FZ6bicxIx5naKahRTlpm3GYyaauSblaX4AicMhmd3oicl82xGZR2LUGpiaXzhlOdKv7Oq9niaDy20n7N0Iz90Bva0vLQ%2F640%3Fwx_fmt%3Dpng%26from%3Dappmsg%26tp%3Dwebp%26wxfrom%3D5%26wx_lazy%3D1%23imgIndex%3D9&valid=false)
 
-### 3.1.2 多轮单问题
+\#\## 3.1.2 多轮单问题
 
 "通过多轮次问问题，每次一个问题"的模式从功能上看起来更像是人类和AI下属之间的任务交派过程：人类下发一个任务，AI下属通过多次问简单问题澄清一些不清楚点。然后AI下属开始干活儿，交活儿。其技术实现也较为简单：每次发送一个代表"疑问"的字符串，人类也会回答一个代表"答复"的字符串。字符串可长可短，代表着人类和AI之间的思想沟通。
 
@@ -264,7 +264,7 @@ Agent可以利用大模型的执行循环，在不断确认信息是否足够，
 
 多轮单问题的好处是显而易见的：Agent可以在多轮中逐步对人类任务的模糊之处进行确认，甚至可以对每一次"答复"中的模糊之处再次进行问询，最终达到一个它满意的状态。而缺点也较为明显：带过6岁大小朋友的人都可以理解一个人在耳边不停地问"为什么""为什么""为什么"时候的心情。轮次的数量是一个较为难以把控的难点。轮次太多容易让人类产生厌烦情绪；而人为限制轮次又可能会僵化设计，在某些场景下出现任务描述不清晰就开始干活儿的窘境。
 
-### 3.1.3 单轮多问题
+\#\## 3.1.3 单轮多问题
 
 单轮多问题与多轮单问题相对：AI只提出一次（或者限定极少次数的）疑问，但是会一次性提出多个疑问。使用这种模式工作的Agent需要在Prompt上进行特殊的约束。而多个疑问以结构化数据还是以非结构化数据提交给人类面前的UI进行渲染也是一个工程上的选择难题。
 
@@ -282,7 +282,7 @@ Agent可以利用大模型的执行循环，在不断确认信息是否足够，
 
 ![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fmmbiz.qpic.cn%2Fmmbiz_png%2FZ6bicxIx5naKahRTlpm3GYyaauSblaX4AJ77EVibibdWamzMgpfiawnpoS6a6kRJSmsCwHg0jcaEMHjB1Go5x5gKug%2F640%3Fwx_fmt%3Dpng%26from%3Dappmsg%26tp%3Dwebp%26wxfrom%3D5%26wx_lazy%3D1%23imgIndex%3D10&valid=false)
 
-### 3.1.4 渲染方式
+\#\## 3.1.4 渲染方式
 
 "依次作答"的渲染可以用在"单轮多问题"的问答结构下。无论使用结构化数据还是非结构化数据传递"疑问"和"答复"，都可以一次性渲染多个问题，让人类依次作答。只是渲染出来的界面可以有不同的策略。
 
@@ -298,7 +298,7 @@ Agent可以利用大模型的执行循环，在不断确认信息是否足够，
 **3.2 其他回答**
 
 
-### 3.2.1 拒绝回答
+\#\## 3.2.1 拒绝回答
 
 1）答疑解惑
 
@@ -322,7 +322,7 @@ Agent可以利用大模型的执行循环，在不断确认信息是否足够，
 
 ![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fmmbiz.qpic.cn%2Fmmbiz_png%2FZ6bicxIx5naKahRTlpm3GYyaauSblaX4AUibIBUnFWH2CthJYXJMgnc7QRQvJ1NBtnFWMlAOA2CvqPagOj0koXBA%2F640%3Fwx_fmt%3Dpng%26from%3Dappmsg%26tp%3Dwebp%26wxfrom%3D5%26wx_lazy%3D1%23imgIndex%3D14&valid=false)
 
-### 3.2.2 超时未作答
+\#\## 3.2.2 超时未作答
 
 无论是从工程上来看，还是从"让Agent作为助理干活儿"的需求上来看，Agent对于人类的询问如果在一段时间之内未得到人类的答复，那么Agent还是需要将任务继续做下去的。不然如何体现出"智能"呢？因此"超时未作答"机制也是需要在工程链路中做出考量的一个环节。
 
@@ -332,7 +332,7 @@ Agent可以利用大模型的执行循环，在不断确认信息是否足够，
 
 由于已经针对"拒绝回答"的场景优化过提示词，"超时未作答"场景可以复用这些实现，让Agent更好的在人类未对模糊点进行答复的情况下努力工作。
 
-### 3.2.3 默认作答
+\#\## 3.2.3 默认作答
 
 无论是"拒绝回答"还是"超时未作答"策略，都是利用一个"兜底"的"答复"来试图搪塞Agent，以便让Agent自主决策，或者自由发挥。而"兜底"的答复一般都是内置在Agent中或者端侧UI代码中的，不一定符合上下文，极易造成场景局限性。如果把自己想象成Agent，那么这种搪塞式的统一作答很像是在和心不在焉的人交流，其答复也可能"驴唇不对马嘴"。
 
@@ -423,15 +423,15 @@ Agent可以利用大模型的执行循环，在不断确认信息是否足够，
 我们是阿里巴巴智能引擎团队，是阿里集团内AI工程系统的建设者与维护者，主导设计了大数据AI工程体系AI·OS。团队聚焦于大模型全链路工程能力建设，持续优化研发范式，专注大模型训推性能优化、引擎平台、Agent应用平台等关键组件，为阿里集团各业务提供高效稳定的AI工程基础设施。
 
 
-## 附录参考
+\## 附录参考
 
 \[1\] https://blog.langchain.ac.cn/human-in-the-loop-with-opengpts-and-langgraph/
 
-\[2\] https://modelcontextprotocol.io/specification/2025-06-18/server/tools#listing-tools
+\[2\] https://modelcontextprotocol.io/specification/2025-06-18/server/tools\#listing-tools
 
 \[3\] https://platform.iflow.cn/cli/quickstart
 
-\[4\] https://modelcontextprotocol.io/specification/2025-06-18/server/tools#text-content
+\[4\] https://modelcontextprotocol.io/specification/2025-06-18/server/tools\#text-content
 
 \[5\] https://cursor.com/changelog/0-44-x
 

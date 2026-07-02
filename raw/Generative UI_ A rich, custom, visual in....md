@@ -18,7 +18,7 @@ tags:
 
 ---
 
-## 📖 正文全文
+\## 📖 正文全文
 
 # Generative UI: A rich, custom, visual interactive user experience for any prompt
 
@@ -38,7 +38,7 @@ Our research on generative UI, also referred to as generative interfaces, comes 
 
 <br />
 
-## Bringing generative UI to Google products
+\## Bringing generative UI to Google products
 
 <br />
 
@@ -62,7 +62,7 @@ Example of AI Mode in Google Search with the prompt, "show me how rna polymerase
 
 <br />
 
-## How the generative UI implementation works
+\## How the generative UI implementation works
 
 <br />
 
@@ -84,7 +84,7 @@ For some products, it might be preferable to consistently see results in specifi
 
 <br />
 
-## Generative UI outputs are strongly preferred over standard formats
+\## Generative UI outputs are strongly preferred over standard formats
 
 <br />
 
@@ -96,7 +96,7 @@ The sites designed by human experts had the highest preference rates. These were
 
 <br />
 
-## Opportunities ahead
+\## Opportunities ahead
 
 <br />
 

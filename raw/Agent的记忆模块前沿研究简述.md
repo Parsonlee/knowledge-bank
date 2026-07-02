@@ -17,7 +17,7 @@ tags:
 
 ---
 
-## 📖 正文全文
+\## 📖 正文全文
 
 # 那天，AI大模型想起了，被「失忆」所束缚的枷锁
 
@@ -49,7 +49,7 @@ tags:
 
 ^来源：arXiv:2508.09736^
 
-另外，我们也看到了一批关注 AI 记忆的创业公司的诞生，包括提出了 [MemGPT](https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650935808&idx=3&sn=355a891bfa933980ca9e82fbaf3d3f94&scene=21#wechat_redirect) 的 Letta AI、提出了 AI 的记忆操作系统 [MemOS](https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650978033&idx=1&sn=43db54ff2f9ef0d706c354df1c6104d8&scene=21#wechat_redirect) 的记忆张量（上海）科技有限公司以及我们前段时间报道过的提出了拥有一定的原生记忆能力的[非 Transformer 架构 Yan 2.0 Preview 的国内 AI 创企 RockAI 等](https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650981912&idx=1&sn=059c8410c527f9c3388e8f42e7448771&scene=21#wechat_redirect)。
+另外，我们也看到了一批关注 AI 记忆的创业公司的诞生，包括提出了 [MemGPT](https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650935808&idx=3&sn=355a891bfa933980ca9e82fbaf3d3f94&scene=21\#wechat_redirect) 的 Letta AI、提出了 AI 的记忆操作系统 [MemOS](https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650978033&idx=1&sn=43db54ff2f9ef0d706c354df1c6104d8&scene=21\#wechat_redirect) 的记忆张量（上海）科技有限公司以及我们前段时间报道过的提出了拥有一定的原生记忆能力的[非 Transformer 架构 Yan 2.0 Preview 的国内 AI 创企 RockAI 等](https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650981912&idx=1&sn=059c8410c527f9c3388e8f42e7448771&scene=21\#wechat_redirect)。
 
 这些案例背后，记忆并不只是「存信息」那么简单，而是涉及存储、检索、提炼和遗忘等复杂机制。
 
@@ -280,7 +280,7 @@ MemOS 整个系统由 API 与应用接口层、记忆调度与管理层、记忆
 
 为应对这些挑战，AI 社区正在积极探索不同的解决方案。
 
-其中，由前 Meta Reality Labs 顶尖科学家团队创立的研究实验室 [Memories.ai 提出了「大视觉记忆模型」（LVMM）](https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650981586&idx=2&sn=3f892e9d0afcd355ecf1c552e9450d19&scene=21#wechat_redirect)。
+其中，由前 Meta Reality Labs 顶尖科学家团队创立的研究实验室 [Memories.ai 提出了「大视觉记忆模型」（LVMM）](https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650981586&idx=2&sn=3f892e9d0afcd355ecf1c552e9450d19&scene=21\#wechat_redirect)。
 
 这一模型为 AI 系统引入了革命性的视觉记忆层：它突破了传统 AI 在视频处理中仅限于「片段式分析」的局限，转而能够持续捕获、存储和结构化海量的视觉数据。这样，AI 不仅能够永久保留上下文信息，还能精准识别时序模式、进行智能对比分析。换句话说，该平台可以将原始视频转化为可搜索、带有上下文关联的数据库，从而赋予 AI 系统类似人类的持续学习能力，配备上了一个几乎无限的「视觉大脑」。
 

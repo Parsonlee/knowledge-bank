@@ -133,6 +133,10 @@
 - [[Claude_Agent_Skills_从第一性原理深入剖析]] — PaperAgent：Skills 元工具架构速览，SKILL.md 结构、四种模式、纯 LLM 推理技能选择（AI-Agent/skill）
 - [[Agentic_Design_Patterns_中文翻译版]] — Antonio Gulli 著作中文翻译：21种 Agent 设计模式，核心/高级/集成/生产四类全景（AI-Agent/skill）
 - [[从第一性原理深度拆解_Claude_Agent_Skill_宝玉]] — Han Lee/宝玉：源码级解构 Skills 双消息注入、isMeta 机制、contextModifier 执行上下文修改全生命周期（AI-Agent/skill）
+- [[Agent Loop使用语义早停比max_iterations硬截断节省38% Token 且质量不降]] — 提出语义早停方法，通过余弦距离收敛判断 Agent Loop 终止，替代硬迭代上限，节省 38% Token 且保证质量（AI-Agent/loop-engineering, AI-Agent/coding）
+- [[Anthropic x ClaudeCode 官方插件：AI Agent 的领域知识插件——鸟窝]] — 解析 Anthropic 官方 13 个领域知识插件，将 CLAUDE.md 等静态规范转化为动态运行时检查与分阶段引导（AI-Agent/skill, AI-Agent/coding）
+- [[从提示员到系统架构师：Loop Engineering 的范式跃迁]] — 剖析从 Prompt 到 Loop 工程的四层抽象跃迁，工程师从与 AI 逐轮对话的操作员转变为设计自主循环的架构师（AI-Agent/loop-engineering, AI-Agent/coding）
+- [[实测腾讯开源的 BrowserSkill：让 AI 直接用你登录好的浏览器]] — 评测腾讯开源 BrowserSkill CLI，复用日常真实浏览器与登录态进行 Agent 自动化操作，纯本地不隔离（AI-Agent/tools, AI-Agent/skill）
 - [[DeepResearch的概念、核心挑战与进化路径]] — 华为/利物浦/牛津综述：DR Agent 定义、四大核心挑战与未来进化路径（AI-Agent/deep-research）
 - [[Tongyi DeepResearch的技术报告探秘]] — 魔搭社区解读：通义 DeepResearch 三阶段训练、IterResearch 范式、WebFrontier 数据合成与六大研发问题（AI-Agent/deep-research）
 - [[一篇95页最新80种Deep Research系统全面综述]] — 浙大综述 80+ 系统，4 维分类法与单体/流水线/多智能体/混合四种架构（AI-Agent/deep-research）

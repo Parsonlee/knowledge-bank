@@ -17,7 +17,7 @@ tags:
 
 ---
 
-## 📖 正文全文
+\## 📖 正文全文
 
 # 7天验证产品思路、10小时找到基础共识：来自谷歌的"Foundation Sprint"完全指南
 
@@ -294,44 +294,44 @@ end
 往期回顾  
 
 
-[复盘投资Figma和Revolut：绝不要因为估值而否决一个项目](https://mp.weixin.qq.com/s?__biz=MzI0NTAwMzU1MA==&mid=2247504161&idx=1&sn=a304069239bba40c60d84897a99ee550&scene=21#wechat_redirect)
+[复盘投资Figma和Revolut：绝不要因为估值而否决一个项目](https://mp.weixin.qq.com/s?__biz=MzI0NTAwMzU1MA==&mid=2247504161&idx=1&sn=a304069239bba40c60d84897a99ee550&scene=21\#wechat_redirect)
 
 2025-08-28
 
 
-[](https://mp.weixin.qq.com/s?__biz=MzI0NTAwMzU1MA==&mid=2247504161&idx=1&sn=a304069239bba40c60d84897a99ee550&scene=21#wechat_redirect)
+[](https://mp.weixin.qq.com/s?__biz=MzI0NTAwMzU1MA==&mid=2247504161&idx=1&sn=a304069239bba40c60d84897a99ee550&scene=21\#wechat_redirect)
 
 
-[BVP：AI Native公司将如何瓦解SAP和Salesforce的护城河？](https://mp.weixin.qq.com/s?__biz=MzI0NTAwMzU1MA==&mid=2247504123&idx=1&sn=57bccebbbc01e42ceb52f0672d8bd3db&scene=21#wechat_redirect)
+[BVP：AI Native公司将如何瓦解SAP和Salesforce的护城河？](https://mp.weixin.qq.com/s?__biz=MzI0NTAwMzU1MA==&mid=2247504123&idx=1&sn=57bccebbbc01e42ceb52f0672d8bd3db&scene=21\#wechat_redirect)
 
 2025-08-25
 
 
-[](https://mp.weixin.qq.com/s?__biz=MzI0NTAwMzU1MA==&mid=2247504123&idx=1&sn=57bccebbbc01e42ceb52f0672d8bd3db&scene=21#wechat_redirect)
+[](https://mp.weixin.qq.com/s?__biz=MzI0NTAwMzU1MA==&mid=2247504123&idx=1&sn=57bccebbbc01e42ceb52f0672d8bd3db&scene=21\#wechat_redirect)
 
 
-[Greylock：为何AI原生用户研究是下一个百亿美金赛道？](https://mp.weixin.qq.com/s?__biz=MzI0NTAwMzU1MA==&mid=2247504114&idx=1&sn=48dc2067e423da79d8cd0222c2a31709&scene=21#wechat_redirect)
+[Greylock：为何AI原生用户研究是下一个百亿美金赛道？](https://mp.weixin.qq.com/s?__biz=MzI0NTAwMzU1MA==&mid=2247504114&idx=1&sn=48dc2067e423da79d8cd0222c2a31709&scene=21\#wechat_redirect)
 
 2025-08-20
 
 
-[](https://mp.weixin.qq.com/s?__biz=MzI0NTAwMzU1MA==&mid=2247504114&idx=1&sn=48dc2067e423da79d8cd0222c2a31709&scene=21#wechat_redirect)
+[](https://mp.weixin.qq.com/s?__biz=MzI0NTAwMzU1MA==&mid=2247504114&idx=1&sn=48dc2067e423da79d8cd0222c2a31709&scene=21\#wechat_redirect)
 
 
-[为什么Figma是2020年以来科技圈最成功的IPO？](https://mp.weixin.qq.com/s?__biz=MzI0NTAwMzU1MA==&mid=2247504068&idx=1&sn=ef774e23dc040ac8df066e2f4a4512fa&scene=21#wechat_redirect)
+[为什么Figma是2020年以来科技圈最成功的IPO？](https://mp.weixin.qq.com/s?__biz=MzI0NTAwMzU1MA==&mid=2247504068&idx=1&sn=ef774e23dc040ac8df066e2f4a4512fa&scene=21\#wechat_redirect)
 
 2025-08-12
 
 
-[](https://mp.weixin.qq.com/s?__biz=MzI0NTAwMzU1MA==&mid=2247504068&idx=1&sn=ef774e23dc040ac8df066e2f4a4512fa&scene=21#wechat_redirect)
+[](https://mp.weixin.qq.com/s?__biz=MzI0NTAwMzU1MA==&mid=2247504068&idx=1&sn=ef774e23dc040ac8df066e2f4a4512fa&scene=21\#wechat_redirect)
 
 
-[Vercel创始人：AI Coding不会替代工程师，而是让每个人成为创造者！](https://mp.weixin.qq.com/s?__biz=MzI0NTAwMzU1MA==&mid=2247504045&idx=1&sn=725a7aeb058920a90898a95304111fc8&scene=21#wechat_redirect)
+[Vercel创始人：AI Coding不会替代工程师，而是让每个人成为创造者！](https://mp.weixin.qq.com/s?__biz=MzI0NTAwMzU1MA==&mid=2247504045&idx=1&sn=725a7aeb058920a90898a95304111fc8&scene=21\#wechat_redirect)
 
 2025-08-06
 
 
-[](https://mp.weixin.qq.com/s?__biz=MzI0NTAwMzU1MA==&mid=2247504045&idx=1&sn=725a7aeb058920a90898a95304111fc8&scene=21#wechat_redirect)
+[](https://mp.weixin.qq.com/s?__biz=MzI0NTAwMzU1MA==&mid=2247504045&idx=1&sn=725a7aeb058920a90898a95304111fc8&scene=21\#wechat_redirect)
 
 
 [Read in Cubox](https://cubox.pro/web/card/7364609020524495143)

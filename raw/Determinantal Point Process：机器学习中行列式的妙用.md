@@ -17,7 +17,7 @@ tags:
 
 ---
 
-## 📖 正文全文
+\## 📖 正文全文
 
 # Determinantal Point Process：机器学习中行列式的妙用
 
@@ -188,8 +188,8 @@ tags:
     print('采样到第一个和第二个的概率：%f'%p_12)
     print('采样到第一个和第三个的概率：%f'%p_13)
 
-    #采样到第一个和第二个的概率：0.983567
-    #采样到第一个和第三个的概率：0.923823
+    \#采样到第一个和第二个的概率：0.983567
+    \#采样到第一个和第三个的概率：0.923823
 
 
 然而，对于一个大小为 的集合，一共有 种组合，如何快速地进行 DPP 的计算以及如何最快找到大小为 的多样性最大的子集是比较困难的，留给下文。
@@ -364,16 +364,16 @@ Window size 的选择也是比较重要的，不妨看一些 demo：
 **更多阅读**
 
 
-[![图片](https://image.cubox.pro/cardImg/2023112617052170712/49777.jpg?imageMogr2/quality/90/ignore-error/1)](https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&mid=2247619262&idx=1&sn=540db9243cc0ed2253d763854db34279&chksm=96ebcd3ea19c4428102d0df0f60d659505d1d8250555e1686d2732960fc3aad9e89a5d87dbca&scene=21#wechat_redirect)
+[![图片](https://image.cubox.pro/cardImg/2023112617052170712/49777.jpg?imageMogr2/quality/90/ignore-error/1)](https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&mid=2247619262&idx=1&sn=540db9243cc0ed2253d763854db34279&chksm=96ebcd3ea19c4428102d0df0f60d659505d1d8250555e1686d2732960fc3aad9e89a5d87dbca&scene=21\#wechat_redirect)
 
-[![图片](https://image.cubox.pro/cardImg/2023112617052115470/87816.jpg?imageMogr2/quality/90/ignore-error/1)](https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&mid=2247617017&idx=3&sn=7e2f4869a486be3e18e9e19032a5444b&chksm=96ebd679a19c5f6f75a4f9241a5a2deeae8364efaf0bb50a2d1d4fa11156fbd2332a7ffa3a77&scene=21#wechat_redirect)
+[![图片](https://image.cubox.pro/cardImg/2023112617052115470/87816.jpg?imageMogr2/quality/90/ignore-error/1)](https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&mid=2247617017&idx=3&sn=7e2f4869a486be3e18e9e19032a5444b&chksm=96ebd679a19c5f6f75a4f9241a5a2deeae8364efaf0bb50a2d1d4fa11156fbd2332a7ffa3a77&scene=21\#wechat_redirect)
 
-[![图片](https://image.cubox.pro/cardImg/2023112617052124144/24946.jpg?imageMogr2/quality/90/ignore-error/1)](https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&mid=2247616242&idx=3&sn=572972eebc99e1478a50bb9fbb59f2a9&chksm=96ebd972a19c50648d8aa30633cb2f9bf87a3cc9ca3c0572a7fb700c813cdbbdecf9d11a5d18&scene=21#wechat_redirect)
+[![图片](https://image.cubox.pro/cardImg/2023112617052124144/24946.jpg?imageMogr2/quality/90/ignore-error/1)](https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&mid=2247616242&idx=3&sn=572972eebc99e1478a50bb9fbb59f2a9&chksm=96ebd972a19c50648d8aa30633cb2f9bf87a3cc9ca3c0572a7fb700c813cdbbdecf9d11a5d18&scene=21\#wechat_redirect)
 
 
 ![图片](https://image.cubox.pro/cardImg/2023112617052293306/40997.jpg?imageMogr2/quality/90/ignore-error/1)
 
-**#投 稿通 道#**
+**\#投 稿通 道\#**
 
 
 **让你的文字被更多人看到**

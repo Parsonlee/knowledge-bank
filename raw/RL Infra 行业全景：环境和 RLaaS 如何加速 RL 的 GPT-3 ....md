@@ -15,7 +15,7 @@ tags:
 
 ---
 
-## Annotations  
+\## Annotations  
 
 > Mechanize 提出了复制训练（Replication Training）的新范式。它的核心思想是：让 AI Agent 去完整复现现有软件产品或其中的特定功能，并以此作为训练任务。任务成功与否，可以通过自动化的方式进行验证，例如 agent 生成的代码是否通过了原始仓库的所有单元测试。这种方法巧妙地将一个开放、模糊的创造性任务，转化为了一个有明确、可验证奖励信号的 RL 问题，从而解决了为长周期、复杂任务设计奖励函数的难题。
 >
@@ -32,7 +32,7 @@ tags:
 
 ---
 
-## 📖 正文全文
+\## 📖 正文全文
 
 # RL Infra 行业全景：环境和 RLaaS 如何加速 RL 的 GPT-3 时刻
 
@@ -264,31 +264,31 @@ AI 时代更多公司在效仿 Palantir 的模式：通过 forward-deployed engi
 延伸阅读
 
 
-[](https://mp.weixin.qq.com/s?__biz=Mzg2OTY0MDk0NQ==&mid=2247518212&idx=1&sn=44168d416ed4e47dfd13236be96caaab&scene=21#wechat_redirect)
+[](https://mp.weixin.qq.com/s?__biz=Mzg2OTY0MDk0NQ==&mid=2247518212&idx=1&sn=44168d416ed4e47dfd13236be96caaab&scene=21\#wechat_redirect)
 
 
 为 OpenAI 秘密提供模型测试， OpenRouter 给 LLMs 做了套"网关系统"
 
 
-[](https://mp.weixin.qq.com/s?__biz=Mzg2OTY0MDk0NQ==&mid=2247518173&idx=1&sn=4e2a05aa5ededbc950079253803c57eb&scene=21#wechat_redirect)
+[](https://mp.weixin.qq.com/s?__biz=Mzg2OTY0MDk0NQ==&mid=2247518173&idx=1&sn=4e2a05aa5ededbc950079253803c57eb&scene=21\#wechat_redirect)
 
 
 Agentic Enterprise：生成式软件重新定义企业形态｜AGIX PM Notes
 
 
-[](https://mp.weixin.qq.com/s?__biz=Mzg2OTY0MDk0NQ==&mid=2247518145&idx=1&sn=c4603e0ee1c1a45a0bcd4c1eafd4e016&scene=21#wechat_redirect)
+[](https://mp.weixin.qq.com/s?__biz=Mzg2OTY0MDk0NQ==&mid=2247518145&idx=1&sn=c4603e0ee1c1a45a0bcd4c1eafd4e016&scene=21\#wechat_redirect)
 
 
 Stripe x Cursor，硅谷两代"金童"对谈: 未来5年IDE里将不再是代码
 
 
-[](https://mp.weixin.qq.com/s?__biz=Mzg2OTY0MDk0NQ==&mid=2247518120&idx=1&sn=6f4e7c983c66e5a5c2b84be206ab223e&scene=21#wechat_redirect)
+[](https://mp.weixin.qq.com/s?__biz=Mzg2OTY0MDk0NQ==&mid=2247518120&idx=1&sn=6f4e7c983c66e5a5c2b84be206ab223e&scene=21\#wechat_redirect)
 
 
 超越 Prompt 和 RAG，「上下文工程」成了 Agent 核心胜负手
 
 
-[](https://mp.weixin.qq.com/s?__biz=Mzg2OTY0MDk0NQ==&mid=2247518031&idx=1&sn=bb6cada95f0ffbb951f6bdcc21663afa&scene=21#wechat_redirect)
+[](https://mp.weixin.qq.com/s?__biz=Mzg2OTY0MDk0NQ==&mid=2247518031&idx=1&sn=bb6cada95f0ffbb951f6bdcc21663afa&scene=21\#wechat_redirect)
 
 
 一半美国医生都在用的AI产品，OpenEvidence 是医疗界的 Bloomberg

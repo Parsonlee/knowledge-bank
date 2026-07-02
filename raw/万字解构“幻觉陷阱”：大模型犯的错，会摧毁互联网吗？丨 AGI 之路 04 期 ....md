@@ -14,7 +14,7 @@ tags:
 
 ---
 
-## Annotations  
+\## Annotations  
 
 > 大模型本质上是语言概率模型，用户给定前文条件，模型预测下文，这就是它的训练目标。大模型训练是对大数据的压缩，捕捉数据蕴含的大大小小的知识点和规律性。大模型不是死记硬背的数据库，训练数据中的“长尾”事实与噪音无异，被压缩剔除。面对这些缺失信息，模型会自动编造看上去“合理”的细节填补，形成AI幻觉。  
 
@@ -31,7 +31,7 @@ tags:
 
 ---
 
-## 📖 正文全文
+\## 📖 正文全文
 
 # 万字解构"幻觉陷阱"：大模型犯的错，会摧毁互联网吗？丨 AGI 之路 04 期
 
@@ -74,7 +74,7 @@ tags:
 
 ![](https://image.cubox.pro/cardImg/1ji2dq5t70qyd4fi9tnhu9j1zibzk9xob3d1nhulljy91kxr1q?imageMogr2/quality/90/ignore-error/1)
 
-#### **什么是大模型的"幻觉"？**
+\#\#\## **什么是大模型的"幻觉"？**
 
 
 腾讯科技：首先请李维老师为大家科普一下，为什么说"大模型的幻觉是刻在基因里的"？
@@ -133,7 +133,7 @@ tags:
 
 ![](https://image.cubox.pro/cardImg/2cli6g9hs51ho9r9y4f6zot24qfzuwmu9ogg86x1i3cs0t4jey?imageMogr2/quality/90/ignore-error/1)
 
-#### **如何应对大模型的"幻觉"？**
+\#\#\## **如何应对大模型的"幻觉"？**
 
 腾讯科技：所以大模型既像"新闻记者"，也像"小说家"；它既要遵循客观事实，又具备一定想象力。各位认为作为"非专家"应该怎样识别大模型在何时扮演"记者"的角色，何时又充当"小说家"的角色？尤其是现在推理模型能够在短时间内给出大量答案，并引用数十个甚至上百个来源。作为非专家，如何理性怀疑这些结果？
 
@@ -155,9 +155,9 @@ tags:
 
 ![](https://image.cubox.pro/cardImg/5sb8fjc13xufqwgg46xw5ecvabrn13glghgge5276l7uz1gttq?imageMogr2/quality/90/ignore-error/1)
 
-#### **大模型的"幻觉"**
+\#\#\## **大模型的"幻觉"**
 
-#### **不应该被称之为"幻觉"？**
+\#\#\## **不应该被称之为"幻觉"？**
 
 腾讯科技：您之前提到认为"幻觉"这个词不太好，如果不叫它大模型幻觉，应该怎么称呼？
 
@@ -213,9 +213,9 @@ tags:
 
 ![](https://image.cubox.pro/cardImg/5fxb202be0cv3tvxjhkl07x4exvpdm3j7s38tu8wifs6t8jhr8?imageMogr2/quality/90/ignore-error/1)
 
-#### **大模型能力越强**
+\#\#\## **大模型能力越强**
 
-#### **越容易出现"幻觉"吗？**
+\#\#\## **越容易出现"幻觉"吗？**
 
 腾讯科技：随着大模型技术的发展，它们的规模和迭代速度也在不断提升。在DeepSeek R1 发布后，我们发现它的幻觉程度明显高于其基础模型V3及OpenAI的GPT-4等模型。这是否意味着推理能力越强，幻觉就会越严重？
 
@@ -241,7 +241,7 @@ tags:
 
 ![](https://image.cubox.pro/cardImg/3agcpdp1rggeihxao9oj77uvdcz2t1rprm204i4pvpyms18slm?imageMogr2/quality/90/ignore-error/1)
 
-#### **如何与大模型的幻觉共处？**
+\#\#\## **如何与大模型的幻觉共处？**
 
 腾讯科技：企业或模型开发方应在什么时候主动加大投入以防止幻觉带来的负面影响？现在是否已经到了该加强这类工作的时刻？
 
@@ -301,7 +301,7 @@ tags:
 
 ![](https://image.cubox.pro/cardImg/512e86mjb3mrtl3jbplroqyp14ecdztrpaw5dp55iznlfihwtu?imageMogr2/quality/90/ignore-error/1)
 
-#### **AGI之路系列直播推荐**
+\#\#\## **AGI之路系列直播推荐**
 
 **直播预约：**
 
@@ -319,10 +319,10 @@ tags:
 
 **AGI之路往期精华实录**
 
-[![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fimagedelivery.net%2FqGOFcc1O8XwTZW3W1JAHHg%2Faa128781-6800-4bdc-987b-32883ea2ac00%2Fpublic&valid=false)](https://mp.weixin.qq.com/s?__biz=Mjc1NjM3MjY2MA==&mid=2691556553&idx=1&sn=0c8baf2869c3ecb0d9d7ed789ed32d91&scene=21#wechat_redirect)
+[![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fimagedelivery.net%2FqGOFcc1O8XwTZW3W1JAHHg%2Faa128781-6800-4bdc-987b-32883ea2ac00%2Fpublic&valid=false)](https://mp.weixin.qq.com/s?__biz=Mjc1NjM3MjY2MA==&mid=2691556553&idx=1&sn=0c8baf2869c3ecb0d9d7ed789ed32d91&scene=21\#wechat_redirect)
 
-[](https://mp.weixin.qq.com/s?__biz=Mjc1NjM3MjY2MA==&mid=2691555889&idx=1&sn=cbebadccccd19f7363aa69a054ecb2d2&scene=21#wechat_redirect)[![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fimagedelivery.net%2FqGOFcc1O8XwTZW3W1JAHHg%2Fa1156065-577c-4471-6baf-400c88697b00%2Fpublic&valid=false)](https://mp.weixin.qq.com/s?__biz=Mjc1NjM3MjY2MA==&mid=2691556440&idx=1&sn=3f028412703c34bcca8b3f7ad8929e5c&scene=21#wechat_redirect)
+[](https://mp.weixin.qq.com/s?__biz=Mjc1NjM3MjY2MA==&mid=2691555889&idx=1&sn=cbebadccccd19f7363aa69a054ecb2d2&scene=21\#wechat_redirect)[![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fimagedelivery.net%2FqGOFcc1O8XwTZW3W1JAHHg%2Fa1156065-577c-4471-6baf-400c88697b00%2Fpublic&valid=false)](https://mp.weixin.qq.com/s?__biz=Mjc1NjM3MjY2MA==&mid=2691556440&idx=1&sn=3f028412703c34bcca8b3f7ad8929e5c&scene=21\#wechat_redirect)
 
-[![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fimagedelivery.net%2FqGOFcc1O8XwTZW3W1JAHHg%2F794efd83-63ff-435f-3a0c-320863482b00%2Fpublic&valid=false)](https://mp.weixin.qq.com/s?__biz=Mjc1NjM3MjY2MA==&mid=2691556361&idx=1&sn=98c44a483d27b3946a0915afca982699&scene=21#wechat_redirect)
+[![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fimagedelivery.net%2FqGOFcc1O8XwTZW3W1JAHHg%2F794efd83-63ff-435f-3a0c-320863482b00%2Fpublic&valid=false)](https://mp.weixin.qq.com/s?__biz=Mjc1NjM3MjY2MA==&mid=2691556361&idx=1&sn=98c44a483d27b3946a0915afca982699&scene=21\#wechat_redirect)
 
 [Read in Cubox](https://cubox.pro/web/card/7299064431609120505)

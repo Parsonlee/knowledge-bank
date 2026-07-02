@@ -14,7 +14,7 @@ tags:
 
 ---
 
-## Annotations  
+\## Annotations  
 
 > 然而，这种基于视觉相似性的判断，是导致后续一系列概念混淆的根源。它不仅是一个微不足道的命名偏差，更从根本上模糊了MCP设计的核心思想。官方规范开宗明义地指出：
 >
@@ -55,7 +55,7 @@ tags:
 
 ---
 
-## 📖 正文全文
+\## 📖 正文全文
 
 # 别再误会MCP了！一篇写给AI工程师的硬核"辟谣"指南
 
@@ -310,25 +310,25 @@ https://modelcontextprotocol.io/specification/2025-06-18/server/tools
 
 场景一：传统的Function Calling 的Python伪代码实现（Function Calling意图识别 + 自行实现函数调用）
 
-    ## Step1.调用大模型意图识别messages = [{"content": "用户问句，帮我查一下杭州4C8G的ECS规格？", "role": "user"}]assistant_output = call_llm(messages, tools=TOOLS) #注意：这里直接传递了数据结构，不再需要文本拼接
+    \## Step1.调用大模型意图识别messages = [{"content": "用户问句，帮我查一下杭州4C8G的ECS规格？", "role": "user"}]assistant_output = call_llm(messages, tools=TOOLS) \#注意：这里直接传递了数据结构，不再需要文本拼接
 
-    ## Step2.读取意图识别结果，并且本地调用工具if assistant_output['tool_calls']['function']['name'] == 'describe_instance_types':    tool_info = {"name": "describe_instance_types", "role": "tool"}    arguments = json.loads(assistant_output['tool_calls']['function']['arguments'])    param_1 = arguments['param_1']    param_2 = arguments['param_2']    # 调用工具    tool_info['content'] = describe_instance_types(param_1, param_2)elif assistant_output['tool_calls']['function']['name'] == 'describe_regions':    tool_info = {"name": "describe_regions", "role": "tool"}    # 调用工具    tool_info['content'] = describe_regions()
-    ## Step3.返回结果messages.append(tool_info)final_assistant_output = call_llm(messages)
+    \## Step2.读取意图识别结果，并且本地调用工具if assistant_output['tool_calls']['function']['name'] == 'describe_instance_types':    tool_info = {"name": "describe_instance_types", "role": "tool"}    arguments = json.loads(assistant_output['tool_calls']['function']['arguments'])    param_1 = arguments['param_1']    param_2 = arguments['param_2']    # 调用工具    tool_info['content'] = describe_instance_types(param_1, param_2)elif assistant_output['tool_calls']['function']['name'] == 'describe_regions':    tool_info = {"name": "describe_regions", "role": "tool"}    # 调用工具    tool_info['content'] = describe_regions()
+    \## Step3.返回结果messages.append(tool_info)final_assistant_output = call_llm(messages)
 
-    ## 工具定义TOOLS = [{"type": "function","function": {"name": "describe_regions","description": "查询地域","parameters": {},}},         {"type": "function","function": {"name": "describe_instance_types","description": "查询实例规格表",                                          "parameters": {"properties": {"param_1": { "类型、描述、举例" },"param_2": { "类型、描述、举例" },}}}}]## 工具实现def describe_regions():    ...## 工具实现def describe_instance_types(param_1, param_2):    ...
+    \## 工具定义TOOLS = [{"type": "function","function": {"name": "describe_regions","description": "查询地域","parameters": {},}},         {"type": "function","function": {"name": "describe_instance_types","description": "查询实例规格表",                                          "parameters": {"properties": {"param_1": { "类型、描述、举例" },"param_2": { "类型、描述、举例" },}}}}]\## 工具实现def describe_regions():    ...\## 工具实现def describe_instance_types(param_1, param_2):    ...
 
 
 在这种模式下，工具的定义、实现和调用逻辑全部硬编码在Host应用中。这导致了高度的耦合：每增加或修改一个工具，都需要修改并重新部署整个应用。
 
 场景二：基于MCP 的Python伪代码实现（Prompt模式意图识别 + MCP Tools Call）
 
-    ## Step0.初始化MCP客户端client = Client()await client.connect("...")tools = await client.list_tools()
-    ## Step1.调用大模型意图识别messages = [    {"role": "system", "content": build_mcp_tool_prompt(tools)},#注意：这里是文本拼接了Prompt    {"role": "user", "content": "帮我查一下杭州4C8G的ECS规格？"}]assistant_response = await call_llm(messages)
-    ## Step2.解析意图识别结果，并且远程调用工具tool_call = parse_tool_use(assistant_response)result = await client.call_tool(name=tool_call["name"],arguments=tool_call["arguments"])
-    ## Step3.结果输出messages.append({"result": result})final_response = await call_llm(messages)
-    ## 工具定义 TOOLS 不再需要，client.list_tools()获得## 工具实现 def describe_regions()不再需要，client.call_tool()调用
-    ## 新增：通用意图识别提示词构建def build_mcp_tool_prompt(tools)    tool_descriptions = ""    for tool in tools:        tool_descriptions = tool_descriptions + f"<tool>{tool['name']}</tool>\n"    return f"""你是一个智能助手，可以使用以下工具来帮助用户解决问题。可用MCP工具列表：{tool_descriptions}请使用以下XML格式调用工具：<tool_use><name>{{工具名称}}</name><arguments>{{JSON格式参数}}</arguments></tool_use>示例：<tool_use><name>DescribeInstanceTypes</name><arguments>{{"param_1": "cn-hangzhou", "param_2": "4C8G"}}</arguments></tool_use>"""
-    ## 新增：解析大模型输出获得工具和入参def parse_tool_use(response):    tool_use_regex = re.compile(r"<tool_use>\s*<name>(.*?)</name>\s*<arguments>(.*?)</arguments>\s*</tool_use>",re.DOTALL)    match = tool_use_regex.search(response)    tool_name, arguments_str = match.groups()    return {"name": tool_name, "arguments": arguments_str}
+    \## Step0.初始化MCP客户端client = Client()await client.connect("...")tools = await client.list_tools()
+    \## Step1.调用大模型意图识别messages = [    {"role": "system", "content": build_mcp_tool_prompt(tools)},\#注意：这里是文本拼接了Prompt    {"role": "user", "content": "帮我查一下杭州4C8G的ECS规格？"}]assistant_response = await call_llm(messages)
+    \## Step2.解析意图识别结果，并且远程调用工具tool_call = parse_tool_use(assistant_response)result = await client.call_tool(name=tool_call["name"],arguments=tool_call["arguments"])
+    \## Step3.结果输出messages.append({"result": result})final_response = await call_llm(messages)
+    \## 工具定义 TOOLS 不再需要，client.list_tools()获得\## 工具实现 def describe_regions()不再需要，client.call_tool()调用
+    \## 新增：通用意图识别提示词构建def build_mcp_tool_prompt(tools)    tool_descriptions = ""    for tool in tools:        tool_descriptions = tool_descriptions + f"<tool>{tool['name']}</tool>\n"    return f"""你是一个智能助手，可以使用以下工具来帮助用户解决问题。可用MCP工具列表：{tool_descriptions}请使用以下XML格式调用工具：<tool_use><name>{{工具名称}}</name><arguments>{{JSON格式参数}}</arguments></tool_use>示例：<tool_use><name>DescribeInstanceTypes</name><arguments>{{"param_1": "cn-hangzhou", "param_2": "4C8G"}}</arguments></tool_use>"""
+    \## 新增：解析大模型输出获得工具和入参def parse_tool_use(response):    tool_use_regex = re.compile(r"<tool_use>\s*<name>(.*?)</name>\s*<arguments>(.*?)</arguments>\s*</tool_use>",re.DOTALL)    match = tool_use_regex.search(response)    tool_name, arguments_str = match.groups()    return {"name": tool_name, "arguments": arguments_str}
 
 
 在MCP模式下，Host应用转变为一个纯粹的AI决策和调度中心。它不关心工具如何实现，只关心如何通过标准化协议mcp_client.call_tool()来调用它们。这种彻底的解耦带来了巨大的工程优势：

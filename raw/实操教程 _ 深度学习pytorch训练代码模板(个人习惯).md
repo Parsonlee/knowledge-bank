@@ -18,11 +18,11 @@ tags:
 
 ---
 
-## 📖 正文全文
+\## 📖 正文全文
 
 # 实操教程 \| 深度学习pytorch训练代码模板(个人习惯)
 
-[mp.weixin.qq.com](http://mp.weixin.qq.com/s?__biz=MzU4NjIxODMyOQ==&mid=2247511189&idx=5&sn=d9b1abed7a71fc312f58d207c34c6983&chksm=fdfc42a3ca8bcbb5891ee4711cbb1f9da53476357e43b2bec1e9d8a6810adca6a1ea16f3d282&mpshare=1&scene=1&srcid=0915rpg37c6joJ3CGBMsQoRh&sharer_sharetime=1663228878509&sharer_shareid=e12ed373ec9a1ae2d7b1d1a5274c5e8e#rd)视学算法
+[mp.weixin.qq.com](http://mp.weixin.qq.com/s?__biz=MzU4NjIxODMyOQ==&mid=2247511189&idx=5&sn=d9b1abed7a71fc312f58d207c34c6983&chksm=fdfc42a3ca8bcbb5891ee4711cbb1f9da53476357e43b2bec1e9d8a6810adca6a1ea16f3d282&mpshare=1&scene=1&srcid=0915rpg37c6joJ3CGBMsQoRh&sharer_sharetime=1663228878509&sharer_shareid=e12ed373ec9a1ae2d7b1d1a5274c5e8e\#rd)视学算法
 
 点击上方"**视学算法**"，选择加"**星标** "或"**置顶** "
 
@@ -62,7 +62,7 @@ tags:
 9.
    预测
 
-## 一、导入包以及设置随机种子
+\## 一、导入包以及设置随机种子
 
     import numpy as np
     import torch
@@ -79,7 +79,7 @@ tags:
     np.random.seed(seed)
     random.seed(seed)
 
-## 二、以类的方式定义超参数
+\## 二、以类的方式定义超参数
 
     class argparse():
         pass
@@ -89,7 +89,7 @@ tags:
     args.hidden_size, args.input_size= \[40, 30\]
     args.device, = \[torch.device("cuda:0" if torch.cuda.is_available() else "cpu"),\]
 
-## 三、定义自己的模型
+\## 三、定义自己的模型
 
     class Your_model(nn.Module):
         def __init__(self):
@@ -100,7 +100,7 @@ tags:
             pass
             return x
 
-## 四、定义早停类(此步骤可以省略)
+\## 四、定义早停类(此步骤可以省略)
 
     class EarlyStopping():
         def __init__(self,patience=7,verbose=False,delta=0):
@@ -133,7 +133,7 @@ tags:
             torch.save(model.state_dict(), path+'/'+'model_checkpoint.pth')
             self.val_loss_min = val_loss
 
-## 五、定义自己的数据集Dataset,DataLoader
+\## 五、定义自己的数据集Dataset,DataLoader
 
     class Dataset_name(Dataset):
         def __init__(self, flag='train'):
@@ -157,7 +157,7 @@ tags:
     valid_dataset = Dataset_name(flag='valid')
     valid_dataloader = DataLoader(dataset=valid_dataset, batch_size=64, shuffle=True)
 
-## 六、实例化模型，设置loss，优化器等
+\## 六、实例化模型，设置loss，优化器等
 
     model = Your_model().to(args.device)
     criterion = torch.nn.MSELoss()
@@ -170,7 +170,7 @@ tags:
 
     early_stopping = EarlyStopping(patience=args.patience,verbose=True)
 
-## 七、开始训练以及调整lr
+\## 七、开始训练以及调整lr
 
     for epoch in range(args.epochs):
         Your_model.train()
@@ -190,7 +190,7 @@ tags:
                     epoch, args.epochs, idx, len(train_dataloader),loss.item()))
         train_epochs_loss.append(np.average(train_epoch_loss))
 
-            #=====================valid============================
+            \#=====================valid============================
         Your_model.eval()
         valid_epoch_loss = \[\]
         for idx,(data_x,data_y) in enumerate(valid_dataloader,0):
@@ -201,12 +201,12 @@ tags:
             valid_epoch_loss.append(loss.item())
             valid_loss.append(loss.item())
         valid_epochs_loss.append(np.average(valid_epoch_loss))
-        #==================early stopping======================
+        \#==================early stopping======================
         early_stopping(valid_epochs_loss\[-1\],model=Your_model,path=r'c:\\your_model_to_save')
         if early_stopping.early_stop:
             print("Early stopping")
             break
-        #====================adjust lr========================
+        \#====================adjust lr========================
         lr_adjust = {
                 2: 5e-5, 4: 1e-5, 6: 5e-6, 8: 1e-6,
                 10: 5e-7, 15: 1e-7, 20: 5e-8
@@ -217,7 +217,7 @@ tags:
                 param_group\['lr'\] = lr
             print('Updating learning rate to {}'.format(lr))
 
-## 八、绘图
+\## 八、绘图
 
     plt.figure(figsize=(12,4))
     plt.subplot(121)
@@ -230,7 +230,7 @@ tags:
     plt.legend()
     plt.show()
 
-## 九、预测
+\## 九、预测
 
     # 此处可定义一个预测集的Dataloader。也可以直接将你的预测数据reshape,添加batch_size=1
     Your_model.eval()

@@ -17,7 +17,7 @@ FastAPI framework, high performance, easy to learn, fast to code, ready for prod
 
 ---
 
-## 📖 正文全文
+\## 📖 正文全文
 
 # FastAPI 并发 async / await
 
@@ -25,7 +25,7 @@ FastAPI framework, high performance, easy to learn, fast to code, ready for prod
 
 有关路径操作函数的 `async def` 语法以及异步代码、并发和并行的一些背景知识。
 
-## 赶时间吗？[¶](https://fastapi.tiangolo.com/zh/async/#_1 "Permanent link")
+\## 赶时间吗？[¶](https://fastapi.tiangolo.com/zh/async/\#_1 "Permanent link")
 
 如果你正在使用第三方库，它们会告诉你使用 `await` 关键字来调用它们，就像这样：
 
@@ -73,7 +73,7 @@ Note
 
 但是，通过遵循上述步骤，它将能够进行一些性能优化。
 
-## 技术细节[¶](https://fastapi.tiangolo.com/zh/async/#_2 "Permanent link")
+\## 技术细节[¶](https://fastapi.tiangolo.com/zh/async/\#_2 "Permanent link")
 
 Python 的现代版本支持通过一种叫**"协程"** ------使用 `async` 和 `await` 语法的东西来写**"异步代码"**。
 
@@ -83,7 +83,7 @@ Python 的现代版本支持通过一种叫**"协程"** ------使用 `async` 和
 * **`async` 和 `await`**
 * **协程**
 
-## 异步代码[¶](https://fastapi.tiangolo.com/zh/async/#_3 "Permanent link")
+\## 异步代码[¶](https://fastapi.tiangolo.com/zh/async/\#_3 "Permanent link")
 
 异步代码仅仅意味着编程语言 💬 有办法告诉计算机/程序 🤖 在代码中的某个点，它 🤖 将不得不等待在某些地方完成一些事情。让我们假设一些事情被称为 "慢文件"📝.
 
@@ -112,7 +112,7 @@ Python 的现代版本支持通过一种叫**"协程"** ------使用 `async` 和
 
 对于"同步"（与"异步"相反），他们通常也使用"顺序"一词，因为计算机程序在切换到另一个任务之前是按顺序执行所有步骤，即使这些步骤涉及到等待。
 
-### 并发与汉堡[¶](https://fastapi.tiangolo.com/zh/async/#_4 "Permanent link")
+\#\## 并发与汉堡[¶](https://fastapi.tiangolo.com/zh/async/\#_4 "Permanent link")
 
 上述异步代码的思想有时也被称为"并发"，它不同于"并行"。
 
@@ -122,7 +122,7 @@ Python 的现代版本支持通过一种叫**"协程"** ------使用 `async` 和
 
 要了解差异，请想象以下关于汉堡的故事：
 
-### 并发汉堡[¶](https://fastapi.tiangolo.com/zh/async/#_5 "Permanent link")
+\#\## 并发汉堡[¶](https://fastapi.tiangolo.com/zh/async/\#_5 "Permanent link")
 
 你和你的恋人一起去快餐店，你排队在后面，收银员从你前面的人接单。😍
 
@@ -180,7 +180,7 @@ Info
 
 然后你去柜台🔀， 到现在初始任务已经完成⏯， 拿起汉堡，说声谢谢，然后把它们送到桌上。这就完成了与计数器交互的步骤/任务⏹. 这反过来又产生了一项新任务，即"吃汉堡"🔀 ⏯， 上一个"拿汉堡"的任务已经结束了⏹.
 
-### 并行汉堡[¶](https://fastapi.tiangolo.com/zh/async/#_6 "Permanent link")
+\#\## 并行汉堡[¶](https://fastapi.tiangolo.com/zh/async/\#_6 "Permanent link")
 
 现在让我们假设不是"并发汉堡"，而是"并行汉堡"。
 
@@ -248,7 +248,7 @@ Info
 
 你可不会想带你的恋人 😍 和你一起去银行办事🏦.
 
-### 汉堡结论[¶](https://fastapi.tiangolo.com/zh/async/#_7 "Permanent link")
+\#\## 汉堡结论[¶](https://fastapi.tiangolo.com/zh/async/\#_7 "Permanent link")
 
 在"你与恋人一起吃汉堡"的这个场景中，因为有很多人在等待🕙， 使用并发系统更有意义⏸🔀⏯.
 
@@ -266,9 +266,9 @@ Info
 
 这与 **FastAPI** 的性能水平相同。
 
-你可以同时拥有并行性和异步性，你可以获得比大多数经过测试的 NodeJS 框架更高的性能，并且与 Go 不相上下， Go 是一种更接近于 C 的编译语言（[全部归功于 Starlette](https://www.techempower.com/benchmarks/#section=data-r17&hw=ph&test=query&l=zijmkf-1)）。
+你可以同时拥有并行性和异步性，你可以获得比大多数经过测试的 NodeJS 框架更高的性能，并且与 Go 不相上下， Go 是一种更接近于 C 的编译语言（[全部归功于 Starlette](https://www.techempower.com/benchmarks/\#section=data-r17&hw=ph&test=query&l=zijmkf-1)）。
 
-### 并发比并行好吗？[¶](https://fastapi.tiangolo.com/zh/async/#_8 "Permanent link")
+\#\## 并发比并行好吗？[¶](https://fastapi.tiangolo.com/zh/async/\#_8 "Permanent link")
 
 不！这不是故事的本意。
 
@@ -304,7 +304,7 @@ CPU 密集型操作的常见示例是需要复杂的数学处理。
 * **机器学习**: 它通常需要大量的"矩阵"和"向量"乘法。想象一个包含数字的巨大电子表格，并同时将所有数字相乘；
 * **深度学习**: 这是机器学习的一个子领域，同样适用。只是没有一个数字的电子表格可以相乘，而是一个庞大的数字集合，在很多情况下，你需要使用一个特殊的处理器来构建和使用这些模型。
 
-### 并发 + 并行: Web + 机器学习[¶](https://fastapi.tiangolo.com/zh/async/#web "Permanent link")
+\#\## 并发 + 并行: Web + 机器学习[¶](https://fastapi.tiangolo.com/zh/async/\#web "Permanent link")
 
 使用 **FastAPI**，你可以利用 Web 开发中常见的并发机制的优势（NodeJS 的主要吸引力）。
 
@@ -314,7 +314,7 @@ CPU 密集型操作的常见示例是需要复杂的数学处理。
 
 了解如何在生产环境中实现这种并行性，可查看此文 [Deployment](https://fastapi.tiangolo.com/zh/deployment/)。
 
-## `async` 和 `await`[¶](https://fastapi.tiangolo.com/zh/async/#async-await_1 "Permanent link")
+\## `async` 和 `await`[¶](https://fastapi.tiangolo.com/zh/async/\#async-await_1 "Permanent link")
 
 现代版本的 Python 有一种非常直观的方式来定义异步代码。这使它看起来就像正常的"顺序"代码，并在适当的时候"等待"。
 
@@ -363,7 +363,7 @@ CPU 密集型操作的常见示例是需要复杂的数学处理。
         burgers = await get_burgers(2)
         return burgers
 
-### 更多技术细节[¶](https://fastapi.tiangolo.com/zh/async/#_9 "Permanent link")
+\#\## 更多技术细节[¶](https://fastapi.tiangolo.com/zh/async/\#_9 "Permanent link")
 
 你可能已经注意到，`await` 只能在 `async def` 定义的函数内部使用。
 
@@ -375,7 +375,7 @@ CPU 密集型操作的常见示例是需要复杂的数学处理。
 
 但如果你想在没有 FastAPI 的情况下使用 `async` / `await`，则可以这样做。
 
-### 编写自己的异步代码[¶](https://fastapi.tiangolo.com/zh/async/#_10 "Permanent link")
+\#\## 编写自己的异步代码[¶](https://fastapi.tiangolo.com/zh/async/\#_10 "Permanent link")
 
 Starlette （和 **FastAPI** ） 是基于 [AnyIO](https://anyio.readthedocs.io/en/stable/) 实现的，这使得它们可以兼容 Python 的标准库 [asyncio](https://docs.python.org/3/library/asyncio-task.html) 和 [Trio](https://trio.readthedocs.io/en/stable/)。
 
@@ -385,7 +385,7 @@ Starlette （和 **FastAPI** ） 是基于 [AnyIO](https://anyio.readthedocs.io/
 
 我（指原作者 ------ 译者注）基于 AnyIO 新建了一个库，作为一个轻量级的封装层，用来优化类型注解，同时提供了更好的**自动补全** 、**内联错误提示** 等功能。这个库还附带了一个友好的入门指南和教程，能帮助你**理解** 并编写**自己的异步代码** ：[Asyncer](https://asyncer.tiangolo.com/)。如果你有**结合使用异步代码和常规**（阻塞/同步）代码的需求，这个库会特别有用。
 
-### 其他形式的异步代码[¶](https://fastapi.tiangolo.com/zh/async/#_11 "Permanent link")
+\#\## 其他形式的异步代码[¶](https://fastapi.tiangolo.com/zh/async/\#_11 "Permanent link")
 
 这种使用 `async` 和 `await` 的风格在语言中相对较新。
 
@@ -399,13 +399,13 @@ Starlette （和 **FastAPI** ） 是基于 [AnyIO](https://anyio.readthedocs.io/
 
 在以前版本的 NodeJS / 浏览器 JavaScript 中，你会使用"回调"，因此也可能导致[回调地狱](http://callbackhell.com/)。
 
-## 协程[¶](https://fastapi.tiangolo.com/zh/async/#_12 "Permanent link")
+\## 协程[¶](https://fastapi.tiangolo.com/zh/async/\#_12 "Permanent link")
 
 **协程** 只是 `async def` 函数返回的一个非常奇特的东西的称呼。Python 知道它有点像一个函数，它可以启动，也会在某个时刻结束，而且它可能会在内部暂停 ⏸ ，只要内部有一个 `await`。
 
 通过使用 `async` 和 `await` 的异步代码的所有功能大多数被概括为"协程"。它可以与 Go 的主要关键特性 "Goroutines" 相媲美。
 
-## 结论[¶](https://fastapi.tiangolo.com/zh/async/#_13 "Permanent link")
+\## 结论[¶](https://fastapi.tiangolo.com/zh/async/\#_13 "Permanent link")
 
 让我们再来回顾下上文所说的：
 > Python 的现代版本可以通过使用 `async` 和 `await` 语法创建**协程** ，并用于支持**异步代码**。
@@ -414,7 +414,7 @@ Starlette （和 **FastAPI** ） 是基于 [AnyIO](https://anyio.readthedocs.io/
 
 所有这些使得 FastAPI（通过 Starlette）如此强大，也是它拥有如此令人印象深刻的性能的原因。
 
-## 非常技术性的细节[¶](https://fastapi.tiangolo.com/zh/async/#_14 "Permanent link")
+\## 非常技术性的细节[¶](https://fastapi.tiangolo.com/zh/async/\#_14 "Permanent link")
 
 Warning
 
@@ -424,23 +424,23 @@ Warning
 
 如果你有相当多的技术知识（协程、线程、阻塞等），并且对 FastAPI 如何处理 `async def` 与常规 `def` 感到好奇，请继续。
 
-### 路径操作函数[¶](https://fastapi.tiangolo.com/zh/async/#_15 "Permanent link")
+\#\## 路径操作函数[¶](https://fastapi.tiangolo.com/zh/async/\#_15 "Permanent link")
 
 当你使用 `def` 而不是 `async def` 来声明一个*路径操作函数*时，它运行在外部的线程池中并等待其结果，而不是直接调用（因为它会阻塞服务器）。
 
 如果你使用过另一个不以上述方式工作的异步框架，并且你习惯于用普通的 `def` 定义普通的仅计算路径操作函数，以获得微小的性能增益（大约100纳秒），请注意，在 FastAPI 中，效果将完全相反。在这些情况下，最好使用 `async def`，除非路径操作函数内使用执行阻塞 的代码。
 
-在这两种情况下，与你之前的框架相比，**FastAPI** 可能[仍然很快](https://fastapi.tiangolo.com/zh/#_11)。
+在这两种情况下，与你之前的框架相比，**FastAPI** 可能[仍然很快](https://fastapi.tiangolo.com/zh/\#_11)。
 
-### 依赖[¶](https://fastapi.tiangolo.com/zh/async/#_16 "Permanent link")
+\#\## 依赖[¶](https://fastapi.tiangolo.com/zh/async/\#_16 "Permanent link")
 
 这同样适用于[依赖](https://fastapi.tiangolo.com/zh/tutorial/dependencies/)。如果一个依赖是标准的 `def` 函数而不是 `async def`，它将被运行在外部线程池中。
 
-### 子依赖[¶](https://fastapi.tiangolo.com/zh/async/#_17 "Permanent link")
+\#\## 子依赖[¶](https://fastapi.tiangolo.com/zh/async/\#_17 "Permanent link")
 
 你可以拥有多个相互依赖的依赖以及[子依赖](https://fastapi.tiangolo.com/zh/tutorial/dependencies/sub-dependencies/) （作为函数的参数），它们中的一些可能是通过 `async def` 声明，也可能是通过 `def` 声明。它们仍然可以正常工作，这些通过 `def` 声明的函数将会在外部线程中调用（来自线程池），而不是"被等待"。
 
-### 其他函数[¶](https://fastapi.tiangolo.com/zh/async/#_18 "Permanent link")
+\#\## 其他函数[¶](https://fastapi.tiangolo.com/zh/async/\#_18 "Permanent link")
 
 你可直接调用通过 `def` 或 `async def` 创建的任何其他函数，FastAPI 不会影响你调用它们的方式。
 
@@ -452,7 +452,7 @@ Warning
 
 再次提醒，这些是非常技术性的细节，如果你来搜索它可能对你有用。
 
-否则，你最好应该遵守的指导原则[赶时间吗？](https://fastapi.tiangolo.com/zh/async/#_1).
+否则，你最好应该遵守的指导原则[赶时间吗？](https://fastapi.tiangolo.com/zh/async/\#_1).
 
 [Read in Cubox](https://cubox.pro/web/card/7338195548794523053)
 

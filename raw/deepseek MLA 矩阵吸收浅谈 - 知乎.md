@@ -7,7 +7,7 @@ tags:
 ---
 # deepseek MLA 矩阵吸收浅谈 - 知乎
 
-一个小例子在开始之前，我们先看一个小例子 a = torch.randn(1000, 500, 1000, device=&#39;cuda&#39;) b = torch.randn(1000, 1000, 2000, device=&#39;cuda&#39;) t1 = time.time() c = a @ b # c shape(1000,50…
+一个小例子在开始之前，我们先看一个小例子 a = torch.randn(1000, 500, 1000, device=&\#39;cuda&\#39;) b = torch.randn(1000, 1000, 2000, device=&\#39;cuda&\#39;) t1 = time.time() c = a @ b # c shape(1000,50…
 
 [Read in Cubox](https://cubox.pro/web/card/7311397260774870486)  
 [Read Original](https://zhuanlan.zhihu.com/p/1888290264377976190)  
@@ -17,7 +17,7 @@ tags:
 
 ---
 
-## 📖 正文全文
+\## 📖 正文全文
 
 # deepseek MLA 矩阵吸收浅谈
 
@@ -47,7 +47,7 @@ V升维矩阵的吸收和最终注意力分数
 
 小总结
 
-## 一个小例子
+\## 一个小例子
 
 在开始之前，我们先看一个小例子
 
@@ -89,30 +89,30 @@ N: 不用[位置编码](https://zhida.zhihu.com/search?content_id=255609228&cont
 R: 旋转位置编码部分  
 L: Low rank 数
 
-## MLA计算流程
+\## MLA计算流程
 
 所有流程参考与[deepseek](https://zhida.zhihu.com/search?content_id=255609228&content_type=Article&match_order=1&q=deepseek&zhida_source=entity)代码，MLA参考这张图，由于网上有很多关于该图的说明，以及公式的推导过程，所以，在本文中不再进行MLA解释和公式推导。
 ![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fpica.zhimg.com%2Fv2-5c9ec87b329e320a4ce936ef7f7b3740_1440w.jpg&valid=false)
 
-### Q矩阵的处理
+\#\## Q矩阵的处理
 
 ![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fpica.zhimg.com%2Fv2-ca25c78484afb66f5f46f4af34f39358_1440w.jpg&valid=false)
 
 首先将输入的查询Q进行低秩投影，然后再升维，最后拆分为需要进行位置编码的部分q_rope， 和无需位置编码的部分q_nope。
 
-### KV矩阵处理
+\#\## KV矩阵处理
 
 ![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fpica.zhimg.com%2Fv2-9e53ab0aa41d61fdbef880277cc1d026_1440w.jpg&valid=false)
 
 KV先进行降秩投影，注意，对比与Q矩阵，KV并未进行升维，得到k_rope需要进行位置编码的部分和compressed_kv，至于升维矩阵，将在后面通过矩阵吸收处理。
 
-### 编码部分计算注意力权重
+\#\## 编码部分计算注意力权重
 
 ![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fpica.zhimg.com%2Fv2-f6ea989e6886151db21cea15ebcfda62_1440w.jpg&valid=false)
 
 对于Q的编码部分和K的编码部分，进行完位置编码之后，即可计算该部分的注意力权重，注意，此处q_rope编码的时候，应提供该词的具体位置，而不是使用S=1。另外，此处也是体现了矩阵吸收的地方，观察k_rope，其头的维度为1， 也就是此处的注意力权重计算为广播计算，**使用了"小例子"优化逻辑**。 假如我们在KV矩阵处理的时候，进行了升维度操纵，那么这儿的k_rope的头就是H=16，它的性能将低于当前H=1情况。
 
-### 拆分KV升维矩阵
+\#\## 拆分KV升维矩阵
 
 ![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fpic3.zhimg.com%2Fv2-ea94e1bbce62a8060470259be9f09182_1440w.jpg&valid=false)
 
@@ -120,13 +120,13 @@ KV的升维矩阵是由nn.Linear创建的，它的in_features= 512, out_features
 
 此处的操作是将升维矩阵拆分成k_up（K的升维矩阵）和v_up（V的升维矩阵），k_up和v_up在后面将会被吸收。
 
-### K升维矩阵的吸收
+\#\## K升维矩阵的吸收
 
 ![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fpic4.zhimg.com%2Fv2-ef08db149d9be2e4c167e69c945f6aad_1440w.jpg&valid=false)
 
 此处可以看见， q_nope @ k_up 即将k_up吸收如q_nope中，此处q_nope和k_up都包含多头信息。
 
-### 注意力分数计算
+\#\## 注意力分数计算
 
 ![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fpicx.zhimg.com%2Fv2-4b76df9a85b4a75b2c3f3903421fe3e7_1440w.jpg&valid=false)
 
@@ -144,14 +144,14 @@ KV的升维矩阵是由nn.Linear创建的，它的in_features= 512, out_features
 
 这也就是MLA矩阵吸收所带来的好处，它在注意力计算的时候，对K 和V 的计算都不包含头信息在内。考虑到deepseek的多头数是128，所以此项优化给deepseek带来巨大的收益。
 
-### V升维矩阵的吸收和最终注意力分数
+\#\## V升维矩阵的吸收和最终注意力分数
 
 接下来，我们要对V的升维矩阵进行吸收
 ![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fpica.zhimg.com%2Fv2-75d1ea66e9331eb4f17c616d736e531e_1440w.jpg&valid=false)
 
 至此，使用注意力分数 @v_up\^T即可吸收V的升维矩阵v_up， 最后在将头信息进行合并，再用nn.Linear投影出最终的注意力分数，至此，MLA注意力计算结束。
 
-## 小总结
+\## 小总结
 
 1. MLA既继承了MQA的优势，同时又极大的保留了信息的表达。
 2. 矩阵吸收带来的优化是在注意力计算的时候，K和V不包含头信息，以至于计算的时候减少了内存的访问。

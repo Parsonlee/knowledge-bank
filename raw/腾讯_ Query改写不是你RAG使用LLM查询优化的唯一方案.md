@@ -18,7 +18,7 @@ tags:
 
 ---
 
-## 📖 正文全文
+\## 📖 正文全文
 
 # 腾讯: Query改写不是你RAG使用LLM查询优化的唯一方案
 
@@ -34,13 +34,13 @@ tags:
 
 ![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fmmbiz.qpic.cn%2Fmmbiz_png%2F2lV2gxZP553tNDsFKJ6R51a2sxyxKStiaPibFPHX7PbFm50YibXMgNhAxdJtYpvf7ohpMFZ92rMFG6IVHXMCQlKFA%2F640%3Fwx_fmt%3Dpng%26from%3Dappmsg%26tp%3Dwebp%26wxfrom%3D5%26wx_lazy%3D1%26wx_co%3D1&valid=false)
 
-## 1. Query Expansion（查询扩展）
+\## 1. Query Expansion（查询扩展）
 
 查询扩展可以基于不同的知识来源，分为内部扩展和外部扩展。
 
 ![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fmmbiz.qpic.cn%2Fmmbiz_png%2F2lV2gxZP553tNDsFKJ6R51a2sxyxKStiapWVVU6YE7bO7cDXd7LTDQ31n0JZibIRXGGqC6H8Gn1QgruEnwkLsmMg%2F640%3Fwx_fmt%3Dpng%26from%3Dappmsg%26tp%3Dwebp%26wxfrom%3D5%26wx_lazy%3D1%26wx_co%3D1&valid=false)
 
-## 1.1 内部扩展（Internal Expansion）
+\## 1.1 内部扩展（Internal Expansion）
 
 * **技术与原理**：内部扩展主要针对信息时效性较低的查询，这些信息通常包含在LLMs的预训练阶段内嵌入的知识。如：
 
@@ -64,7 +64,7 @@ tags:
 
 * **应用场景**：适用于信息时效性较低、相关知识可能包含在 LLMs 预训练阶段的查询，如 "2020 年夏季奥运会将在何处举行？" 可通过内部扩展优化。
 
-## 1.2 外部扩展（External Expansion）
+\## 1.2 外部扩展（External Expansion）
 
 * **技术与原理**：外部扩展主要针对通常需要从知识库或网络中搜索事实的高度时效性查询。如：
 
@@ -78,9 +78,9 @@ tags:
 
 * **应用场景**：针对需要从外部获取最新事实的高度时效性查询，如 "2024 年夏季奥运会将在何处举行？" 可通过外部扩展从知识库检索相关信息优化。
 
-## 2. Question Decomposition（问题分解）
+\## 2. Question Decomposition（问题分解）
 
-## 2.1 技术与原理
+\## 2.1 技术与原理
 
 * 对于复杂查询，简单地使用原始查询进行搜索通常无法检索到足够的信息。因此，LLMs需要先将这些查询分解成更简单、可回答的子查询，然后搜索与这些子组件相关的信息。通过整合这些子查询的响应，LLMs能够构建对原始查询的全面响应。如：
 
@@ -116,7 +116,7 @@ tags:
 
 ![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fmmbiz.qpic.cn%2Fmmbiz_png%2F2lV2gxZP553tNDsFKJ6R51a2sxyxKStiaehXtc7bFib2PRtSXJzR6ibnwwQChywbueEz7wWxoS5khwiaHuX3pjAR7g%2F640%3Fwx_fmt%3Dpng%26from%3Dappmsg%26tp%3Dwebp%26wxfrom%3D5%26wx_lazy%3D1%26wx_co%3D1&valid=false)
 
-## 2.2 应用场景
+\## 2.2 应用场景
 
 适用于需要检索多个事实以形成全面答案的复杂查询，如：
 
@@ -124,9 +124,9 @@ tags:
 
 * "2024 年奥运会男子单打乒乓球金牌得主的出生日期是什么时候？" 可优化为 "2024 年夏季奥运会男子单打乒乓球冠军是谁？"（假设冠军是）和 "的出生日期是什么时候？" 两个子查询。
 
-## 3. Query Disambiguation（查询消歧）
+\## 3. Query Disambiguation（查询消歧）
 
-## 3.1 技术与原理
+\## 3.1 技术与原理
 
 * 查询消歧旨在识别和消除复杂查询中的歧义，确保查询是明确的。这涉及到确定查询中可能被多种方式解释的元素，并细化查询以确保单一、精确的解释，也就是通过多种方式澄清意图。如：
 
@@ -144,15 +144,15 @@ tags:
 
   * 利用 LLMs 的 NLP 能力（如解决共指关系、扩展上下文）减少对话历史歧义，通过多种方式将优化后的对话历史融入框架。
 
-## 3.2 应用场景
+\## 3.2 应用场景
 
 主要针对模糊查询，如：
 
 * "2024 年夏季奥运会乒乓球单打冠军是谁？" 可能指代男子或女子单打冠军，可消歧为 "2024 年夏季奥运会女子乒乓球单打冠军是谁？" 和 "2024 年夏季奥运会男子乒乓球单打冠军是谁？" 两个子查询。
 
-## 4. Query Abstraction（查询抽象）
+\## 4. Query Abstraction（查询抽象）
 
-## 4.1 技术与原理
+\## 4.1 技术与原理
 
 * 查询抽象旨在提供对事实需求的更广泛视角，可能导致更多样化和全面的结果。这涉及到识别和提炼查询的基本意图和核心概念元素，然后创建一个高层次的表示，捕捉本质含义的同时去除具体细节。如：
 
@@ -172,10 +172,10 @@ tags:
 
   * 通过两阶段（查询到模式、模式到子图）用语言模型和图语义距离处理查询与知识图谱结构对齐。
 
-## 4.2 应用场景
+\## 4.2 应用场景
 
 适用于需要理解并应用领域特定推理及数据上下文的查询，如 "中国举办过多少次奥运会？" 可抽象为 "奥运会的举办历史"，为理解和回答查询提供更广泛背景。
 
-## 5. 查询优化核心技术的分类树
+\## 5. 查询优化核心技术的分类树
 
 [Read in Cubox](https://cubox.pro/web/card/7276136020473547829)

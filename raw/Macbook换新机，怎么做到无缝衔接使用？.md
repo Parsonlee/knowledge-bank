@@ -9,7 +9,7 @@ description: 新旧MacBook迁移
 tags:
   - Life
 ---
-## 【经验总结】Macbook换新机，怎么做到无缝衔接使用？
+\## 【经验总结】Macbook换新机，怎么做到无缝衔接使用？
 
 这几天拿新旧 MacBook 做了数据迁移。  
   

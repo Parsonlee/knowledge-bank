@@ -18,7 +18,7 @@ tags:
 
 ---
 
-## 📖 正文全文
+\## 📖 正文全文
 
 # RAG从入门到精通系列6：Retrieval（检索）
 
@@ -33,9 +33,9 @@ RAG（Retrieval Augmented Generation，检索增强生成）是一种将 LLM 与
 
 ![](https://image.cubox.pro/cardImg/2tofsitxtpibxotyebymmk7f8wvbv1v3xteqnpeld4am58om51?imageMogr2/quality/90/format/gif/ignore-error/1)
 
-我们已经学习了 **Query Translation**《[RAG从入门到精通系列2：Query Translation（查询翻译）](https://mp.weixin.qq.com/s?__biz=MzI2ODUyMTQyNA==&mid=2247495307&idx=1&sn=fed449f41e11c4ef2fe033b38d3d8dc8&scene=21#wechat_redirect)》、**Routing** 《[RAG从入门到精通系列3：Routing（路由）](https://mp.weixin.qq.com/s?__biz=MzI2ODUyMTQyNA==&mid=2247495394&idx=1&sn=fe6c0e48aa97c9eded45d996041a88b1&scene=21#wechat_redirect)》、 **Query Construction**《[RAG从入门到精通系列4：Query Construction（查询构造）](https://mp.weixin.qq.com/s?__biz=MzI2ODUyMTQyNA==&mid=2247495560&idx=1&sn=7762f8e5842b5cc997875a756365e744&scene=21#wechat_redirect)》和 **Indexing**《[RAG从入门到精通系列5：Indexing（索引）](https://mp.weixin.qq.com/s?__biz=MzI2ODUyMTQyNA==&mid=2247495567&idx=1&sn=3c2f6d114a792093f28e8a2b95851de6&scene=21#wechat_redirect)》。
+我们已经学习了 **Query Translation**《[RAG从入门到精通系列2：Query Translation（查询翻译）](https://mp.weixin.qq.com/s?__biz=MzI2ODUyMTQyNA==&mid=2247495307&idx=1&sn=fed449f41e11c4ef2fe033b38d3d8dc8&scene=21\#wechat_redirect)》、**Routing** 《[RAG从入门到精通系列3：Routing（路由）](https://mp.weixin.qq.com/s?__biz=MzI2ODUyMTQyNA==&mid=2247495394&idx=1&sn=fe6c0e48aa97c9eded45d996041a88b1&scene=21\#wechat_redirect)》、 **Query Construction**《[RAG从入门到精通系列4：Query Construction（查询构造）](https://mp.weixin.qq.com/s?__biz=MzI2ODUyMTQyNA==&mid=2247495560&idx=1&sn=7762f8e5842b5cc997875a756365e744&scene=21\#wechat_redirect)》和 **Indexing**《[RAG从入门到精通系列5：Indexing（索引）](https://mp.weixin.qq.com/s?__biz=MzI2ODUyMTQyNA==&mid=2247495567&idx=1&sn=3c2f6d114a792093f28e8a2b95851de6&scene=21\#wechat_redirect)》。
 
-现在我们继续要按照上图的节点顺序回到《[RAG从入门到精通系列1：基础RAG](https://mp.weixin.qq.com/s?__biz=MzI2ODUyMTQyNA==&mid=2247495255&idx=1&sn=562e184d49d101f7be545b412a236e46&scene=21#wechat_redirect)》中介绍过的 **Retrieval**（检索）。
+现在我们继续要按照上图的节点顺序回到《[RAG从入门到精通系列1：基础RAG](https://mp.weixin.qq.com/s?__biz=MzI2ODUyMTQyNA==&mid=2247495255&idx=1&sn=562e184d49d101f7be545b412a236e46&scene=21\#wechat_redirect)》中介绍过的 **Retrieval**（检索）。
 
 在传统的 RAG 系统中，基本的流程是：
 
@@ -67,7 +67,7 @@ RAG（Retrieval Augmented Generation，检索增强生成）是一种将 LLM 与
 
 3. **使用回归模型**：有时可以将候选文档的特征（如长度、相似度、标题等）输入回归模型，预测每个文档的重要性得分，最终根据得分对文档排序
 
-在《[RAG从入门到精通系列2：Query Translation（查询翻译）](https://mp.weixin.qq.com/s?__biz=MzI2ODUyMTQyNA==&mid=2247495307&idx=1&sn=fed449f41e11c4ef2fe033b38d3d8dc8&scene=21#wechat_redirect)》中介绍过了 RAG Fusion：生成多个用户查询来检索多篇文档，然后利用 RRF（Reciprocal Rank Fusion）对检索结果进行重新排名。  
+在《[RAG从入门到精通系列2：Query Translation（查询翻译）](https://mp.weixin.qq.com/s?__biz=MzI2ODUyMTQyNA==&mid=2247495307&idx=1&sn=fed449f41e11c4ef2fe033b38d3d8dc8&scene=21\#wechat_redirect)》中介绍过了 RAG Fusion：生成多个用户查询来检索多篇文档，然后利用 RRF（Reciprocal Rank Fusion）对检索结果进行重新排名。  
 
 ![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fmmbiz.qpic.cn%2Fsz_mmbiz_png%2FSaeK9tW7Bu8nKU3GjTh6GQJ7rGq1FpzS2V0KJb06jMOGrMe4VlEkjUEPpNRmsywLmHcn31TaSCVKzQw2QbMUbg%2F640%3Fwx_fmt%3Dpng%26from%3Dappmsg%26tp%3Dwebp%26wxfrom%3D5%26wx_lazy%3D1%26wx_co%3D1&valid=false)
 

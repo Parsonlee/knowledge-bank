@@ -17,7 +17,7 @@ tags:
 
 ---
 
-## 📖 正文全文
+\## 📖 正文全文
 
 # 手把手教你，从零开始实现一个稀疏混合专家架构语言模型（MoE）
 
@@ -34,7 +34,7 @@ tags:
 **极市导读**
 
 
-本文介绍了实现一个稀疏混合专家语言模型（MoE）的方法，详细解释了模型的实施过程，包括采用稀疏混合专家取代传统的前馈神经网络，实现 top-k 门控和带噪声的 top-k 门控，以及采用 Kaiming He 初始化技术。作者还说明了从 makemore 架构保持不变的元素，比如数据集处理、分词预处理和语言建模任务。最后还提供了一个 GitHub 仓库链接，用于实现模型的整个过程，是一本不可多得的实战教科书。\>\>[](http://mp.weixin.qq.com/s?__biz=MzI5MDUyMDIxNA==&mid=2247564839&idx=6&sn=ff2c1ca613b52f97af8ce4ddebe06146&chksm=ec1d13dedb6a9ac8bd166c8f79e62148465e78591f905d184136a146f58cbe88e25d6e2752dd&scene=21#wechat_redirect)[加入极市CV技术交流群，走在计算机视觉的最前沿](http://mp.weixin.qq.com/s?__biz=MzI5MDUyMDIxNA==&mid=2247618084&idx=1&sn=981fa2ed41e2eda97799ae098b7c8907&chksm=ec1de3dddb6a6acb719081ffef32f72b72e7d6416f3504bf7049594b9f34f2d6cf570654ae21&scene=21#wechat_redirect)
+本文介绍了实现一个稀疏混合专家语言模型（MoE）的方法，详细解释了模型的实施过程，包括采用稀疏混合专家取代传统的前馈神经网络，实现 top-k 门控和带噪声的 top-k 门控，以及采用 Kaiming He 初始化技术。作者还说明了从 makemore 架构保持不变的元素，比如数据集处理、分词预处理和语言建模任务。最后还提供了一个 GitHub 仓库链接，用于实现模型的整个过程，是一本不可多得的实战教科书。\>\>[](http://mp.weixin.qq.com/s?__biz=MzI5MDUyMDIxNA==&mid=2247564839&idx=6&sn=ff2c1ca613b52f97af8ce4ddebe06146&chksm=ec1d13dedb6a9ac8bd166c8f79e62148465e78591f905d184136a146f58cbe88e25d6e2752dd&scene=21\#wechat_redirect)[加入极市CV技术交流群，走在计算机视觉的最前沿](http://mp.weixin.qq.com/s?__biz=MzI5MDUyMDIxNA==&mid=2247618084&idx=1&sn=981fa2ed41e2eda97799ae098b7c8907&chksm=ec1de3dddb6a6acb719081ffef32f72b72e7d6416f3504bf7049594b9f34f2d6cf570654ae21&scene=21\#wechat_redirect)
 
 
 **内容简介**   
@@ -101,11 +101,11 @@ tags:
 * 
 * 
 
-    #This code is borrowed from Andrej Karpathy's makemore repository linked in the repo.The self attention layers in Sparse mixture of experts models are the same asin regular transformer models
+    \#This code is borrowed from Andrej Karpathy's makemore repository linked in the repo.The self attention layers in Sparse mixture of experts models are the same asin regular transformer models
     torch.manual_seed(1337)B,T,C = 4,8,32 # batch, time, channelsx = torch.randn(B,T,C)
     # let's see a single Head perform self-attentionhead_size = 16key = nn.Linear(C, head_size, bias=False)query = nn.Linear(C, head_size, bias=False)value = nn.Linear(C, head_size, bias=False)k = key(x)   # (B, T, 16)q = query(x) # (B, T, 16)wei =  q @ k.transpose(-2, -1) # (B, T, 16) @ (B, 16, T) ---> (B, T, T)
-    tril = torch.tril(torch.ones(T, T))#wei = torch.zeros((T,T))wei = wei.masked_fill(tril == 0, float('-inf'))wei = F.softmax(wei, dim=-1) #B,T,T
-    v = value(x) #B,T,Hout = wei @ v # (B,T,T) @ (B,T,H) -> (B,T,H)out.shape
+    tril = torch.tril(torch.ones(T, T))\#wei = torch.zeros((T,T))wei = wei.masked_fill(tril == 0, float('-inf'))wei = F.softmax(wei, dim=-1) \#B,T,T
+    v = value(x) \#B,T,Hout = wei @ v # (B,T,T) @ (B,T,H) -> (B,T,H)out.shape
 
 
 * 
@@ -148,7 +148,7 @@ tags:
 * 
 * 
 
-    #Causal scaled dot product self-Attention Headn_embd = 64n_head = 4n_layer = 4head_size = 16dropout = 0.1
+    \#Causal scaled dot product self-Attention Headn_embd = 64n_head = 4n_layer = 4head_size = 16dropout = 0.1
     class Head(nn.Module):    """ one head of self-attention """
         def __init__(self, head_size):        super().__init__()        self.key = nn.Linear(n_embd, head_size, bias=False)        self.query = nn.Linear(n_embd, head_size, bias=False)        self.value = nn.Linear(n_embd, head_size, bias=False)        self.register_buffer('tril', torch.tril(torch.ones(block_size, block_size)))
             self.dropout = nn.Dropout(dropout)
@@ -172,7 +172,7 @@ tags:
 * 
 * 
 
-    #Multi-Headed Self Attentionclass MultiHeadAttention(nn.Module):    """ multiple heads of self-attention in parallel """
+    \#Multi-Headed Self Attentionclass MultiHeadAttention(nn.Module):    """ multiple heads of self-attention in parallel """
         def __init__(self, num_heads, head_size):        super().__init__()        self.heads = nn.ModuleList([Head(head_size) for _ in range(num_heads)])        self.proj = nn.Linear(n_embd, n_embd)        self.dropout = nn.Dropout(dropout)
         def forward(self, x):        out = torch.cat([h(x) for h in self.heads], dim=-1)        out = self.dropout(self.proj(out))        return out
 
@@ -203,7 +203,7 @@ tags:
 * 
 * 
 
-    #Expert moduleclass Expert(nn.Module):    """ An MLP is a simple linear layer followed by a non-linearity i.e. each Expert """
+    \#Expert moduleclass Expert(nn.Module):    """ An MLP is a simple linear layer followed by a non-linearity i.e. each Expert """
         def __init__(self, n_embd):        super().__init__()        self.net = nn.Sequential(            nn.Linear(n_embd, 4 * n_embd),            nn.ReLU(),            nn.Linear(4 * n_embd, n_embd),            nn.Dropout(dropout),        )
         def forward(self, x):        return self.net(x)
 
@@ -231,9 +231,9 @@ tags:
 * 
 * 
 
-    #Understanding how gating worksnum_experts = 4top_k=2n_embed=32
+    \#Understanding how gating worksnum_experts = 4top_k=2n_embed=32
 
-    #Example multi-head attention output for a simple illustrative example, consider n_embed=32, context_length=4 and batch_size=2mh_output = torch.randn(2, 4, n_embed)
+    \#Example multi-head attention output for a simple illustrative example, consider n_embed=32, context_length=4 and batch_size=2mh_output = torch.randn(2, 4, n_embed)
     topkgate_linear = nn.Linear(n_embed, num_experts) # nn.Linear(32, 4)
     logits = topkgate_linear(mh_output)top_k_logits, top_k_indices = logits.topk(top_k, dim=-1)  # Get top-k expertstop_k_logits, top_k_indices
 
@@ -258,7 +258,7 @@ tags:
 * 
 * 
 
-    #output:(tensor([[[ 0.0246, -0.0190],          [ 0.1991,  0.1513],          [ 0.9749,  0.7185],          [ 0.4406, -0.8357]],          [[ 0.6206, -0.0503],          [ 0.8635,  0.3784],          [ 0.6828,  0.5972],          [ 0.4743,  0.3420]]], grad_fn=<TopkBackward0>), tensor([[[2, 3],          [2, 1],          [3, 1],          [2, 1]],          [[0, 2],          [0, 3],          [3, 2],          [3, 0]]]))
+    \#output:(tensor([[[ 0.0246, -0.0190],          [ 0.1991,  0.1513],          [ 0.9749,  0.7185],          [ 0.4406, -0.8357]],          [[ 0.6206, -0.0503],          [ 0.8635,  0.3784],          [ 0.6828,  0.5972],          [ 0.4743,  0.3420]]], grad_fn=<TopkBackward0>), tensor([[[2, 3],          [2, 1],          [3, 1],          [2, 1]],          [[0, 2],          [0, 3],          [3, 2],          [3, 0]]]))
 
 
 通过仅保留沿最后一个维度进行比较的前 k 大的值，来获得稀疏门控的输出。用负无穷值填充其余部分，在使用 softmax 激活函数。负无穷会被映射至零，而最大的前两个值会更加突出，且和为 1。要求和为 1 是为了对专家输出的内容进行加权。
@@ -267,7 +267,7 @@ tags:
 * 
 * 
 
-    zeros = torch.full_like(logits, float('-inf')) #full_like clones a tensor and fills it with a specified value (like infinity) for masking or calculations.sparse_logits = zeros.scatter(-1, top_k_indices, top_k_logits)sparse_logits
+    zeros = torch.full_like(logits, float('-inf')) \#full_like clones a tensor and fills it with a specified value (like infinity) for masking or calculations.sparse_logits = zeros.scatter(-1, top_k_indices, top_k_logits)sparse_logits
 
 
 * 
@@ -281,7 +281,7 @@ tags:
 * 
 * 
 
-    #outputtensor([[[   -inf,    -inf,  0.0246, -0.0190],         [   -inf,  0.1513,  0.1991,    -inf],         [   -inf,  0.7185,    -inf,  0.9749],         [   -inf, -0.8357,  0.4406,    -inf]],
+    \#outputtensor([[[   -inf,    -inf,  0.0246, -0.0190],         [   -inf,  0.1513,  0.1991,    -inf],         [   -inf,  0.7185,    -inf,  0.9749],         [   -inf, -0.8357,  0.4406,    -inf]],
             [[ 0.6206,    -inf, -0.0503,    -inf],         [ 0.8635,    -inf,    -inf,  0.3784],         [   -inf,    -inf,  0.5972,  0.6828],         [ 0.3420,    -inf,    -inf,  0.4743]]], grad_fn=<ScatterBackward0>)
 
 
@@ -302,7 +302,7 @@ tags:
 * 
 * 
 
-    #ouputtensor([[[0.0000, 0.0000, 0.5109, 0.4891],         [0.0000, 0.4881, 0.5119, 0.0000],         [0.0000, 0.4362, 0.0000, 0.5638],         [0.0000, 0.2182, 0.7818, 0.0000]],
+    \#ouputtensor([[[0.0000, 0.0000, 0.5109, 0.4891],         [0.0000, 0.4881, 0.5119, 0.0000],         [0.0000, 0.4362, 0.0000, 0.5638],         [0.0000, 0.2182, 0.7818, 0.0000]],
             [[0.6617, 0.0000, 0.3383, 0.0000],         [0.6190, 0.0000, 0.0000, 0.3810],         [0.0000, 0.0000, 0.4786, 0.5214],         [0.4670, 0.0000, 0.0000, 0.5330]]], grad_fn=<SoftmaxBackward0>)
 
 
@@ -340,8 +340,8 @@ tags:
 * 
 * 
 
-    #Testing this out:num_experts = 4top_k = 2n_embd = 32
-    mh_output = torch.randn(2, 4, n_embd)  # Example inputtop_k_gate = TopkRouter(n_embd, num_experts, top_k)gating_output, indices = top_k_gate(mh_output)gating_output.shape, gating_output, indices#And it works!!
+    \#Testing this out:num_experts = 4top_k = 2n_embd = 32
+    mh_output = torch.randn(2, 4, n_embd)  # Example inputtop_k_gate = TopkRouter(n_embd, num_experts, top_k)gating_output, indices = top_k_gate(mh_output)gating_output.shape, gating_output, indices\#And it works!!
 
 
 * 
@@ -365,7 +365,7 @@ tags:
 * 
 * 
 
-    #output(torch.Size([2, 4, 4]), tensor([[[0.5284, 0.0000, 0.4716, 0.0000],          [0.0000, 0.4592, 0.0000, 0.5408],          [0.0000, 0.3529, 0.0000, 0.6471],          [0.3948, 0.0000, 0.0000, 0.6052]],          [[0.0000, 0.5950, 0.4050, 0.0000],          [0.4456, 0.0000, 0.5544, 0.0000],          [0.7208, 0.0000, 0.0000, 0.2792],          [0.0000, 0.0000, 0.5659, 0.4341]]], grad_fn=<SoftmaxBackward0>), tensor([[[0, 2],          [3, 1],          [3, 1],          [3, 0]],          [[1, 2],          [2, 0],          [0, 3],          [2, 3]]]))
+    \#output(torch.Size([2, 4, 4]), tensor([[[0.5284, 0.0000, 0.4716, 0.0000],          [0.0000, 0.4592, 0.0000, 0.5408],          [0.0000, 0.3529, 0.0000, 0.6471],          [0.3948, 0.0000, 0.0000, 0.6052]],          [[0.0000, 0.5950, 0.4050, 0.0000],          [0.4456, 0.0000, 0.5544, 0.0000],          [0.7208, 0.0000, 0.0000, 0.2792],          [0.0000, 0.0000, 0.5659, 0.4341]]], grad_fn=<SoftmaxBackward0>), tensor([[[0, 2],          [3, 1],          [3, 1],          [3, 0]],          [[1, 2],          [2, 0],          [0, 3],          [2, 3]]]))
 
 
 尽管最近发布的 mixtral 的论文没有提到这一点，但本文的作者相信有噪声的 Top-k 门控机制是训练 MoE 模型的一个重要工具。从本质上讲，不会希望所有的 token 都发送给同一组「受欢迎」的专家网络。人们需要的是能在开发和探索之间取得良好平衡。为此，为了负载平衡，从门控的线性层向 logits 激活函数添加标准正态噪声是有帮助的，这使训练更有效率。
@@ -399,10 +399,10 @@ tags:
 * 
 * 
 
-    #Changing the above to accomodate noisy top-k gatingclass NoisyTopkRouter(nn.Module):    def __init__(self, n_embed, num_experts, top_k):        super(NoisyTopkRouter, self).__init__()        self.top_k = top_k        #layer for router logits        self.topkroute_linear = nn.Linear(n_embed, num_experts)        self.noise_linear =nn.Linear(n_embed, num_experts)
+    \#Changing the above to accomodate noisy top-k gatingclass NoisyTopkRouter(nn.Module):    def __init__(self, n_embed, num_experts, top_k):        super(NoisyTopkRouter, self).__init__()        self.top_k = top_k        \#layer for router logits        self.topkroute_linear = nn.Linear(n_embed, num_experts)        self.noise_linear =nn.Linear(n_embed, num_experts)
             def forward(self, mh_output):        # mh_ouput is the output tensor from multihead self attention block        logits = self.topkroute_linear(mh_output)
-            #Noise logits        noise_logits = self.noise_linear(mh_output)
-            #Adding scaled unit gaussian noise to the logits        noise = torch.randn_like(logits)*F.softplus(noise_logits)        noisy_logits = logits + noise
+            \#Noise logits        noise_logits = self.noise_linear(mh_output)
+            \#Adding scaled unit gaussian noise to the logits        noise = torch.randn_like(logits)*F.softplus(noise_logits)        noisy_logits = logits + noise
             top_k_logits, indices = noisy_logits.topk(self.top_k, dim=-1)        zeros = torch.full_like(noisy_logits, float('-inf'))        sparse_logits = zeros.scatter(-1, indices, top_k_logits)        router_output = F.softmax(sparse_logits, dim=-1)        return router_output, indices
 
 
@@ -419,8 +419,8 @@ tags:
 * 
 * 
 
-    #Testing this out, again:num_experts = 8top_k = 2n_embd = 16
-    mh_output = torch.randn(2, 4, n_embd)  # Example inputnoisy_top_k_gate = NoisyTopkRouter(n_embd, num_experts, top_k)gating_output, indices = noisy_top_k_gate(mh_output)gating_output.shape, gating_output, indices#It works!!
+    \#Testing this out, again:num_experts = 8top_k = 2n_embd = 16
+    mh_output = torch.randn(2, 4, n_embd)  # Example inputnoisy_top_k_gate = NoisyTopkRouter(n_embd, num_experts, top_k)gating_output, indices = noisy_top_k_gate(mh_output)gating_output.shape, gating_output, indices\#It works!!
 
 
 * 
@@ -445,7 +445,7 @@ tags:
 * 
 * 
 
-    #output(torch.Size([2, 4, 8]), tensor([[[0.4181, 0.0000, 0.5819, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000],          [0.4693, 0.5307, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000],          [0.0000, 0.4985, 0.5015, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000],          [0.0000, 0.0000, 0.0000, 0.2641, 0.0000, 0.7359, 0.0000, 0.0000]],          [[0.0000, 0.0000, 0.0000, 0.6301, 0.0000, 0.3699, 0.0000, 0.0000],          [0.0000, 0.0000, 0.0000, 0.4766, 0.0000, 0.0000, 0.0000, 0.5234],          [0.0000, 0.0000, 0.0000, 0.6815, 0.0000, 0.0000, 0.3185, 0.0000],          [0.4482, 0.5518, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000]]],        grad_fn=<SoftmaxBackward0>), tensor([[[2, 0],          [1, 0],          [2, 1],          [5, 3]],          [[3, 5],          [7, 3],          [3, 6],          [1, 0]]]))
+    \#output(torch.Size([2, 4, 8]), tensor([[[0.4181, 0.0000, 0.5819, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000],          [0.4693, 0.5307, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000],          [0.0000, 0.4985, 0.5015, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000],          [0.0000, 0.0000, 0.0000, 0.2641, 0.0000, 0.7359, 0.0000, 0.0000]],          [[0.0000, 0.0000, 0.0000, 0.6301, 0.0000, 0.3699, 0.0000, 0.0000],          [0.0000, 0.0000, 0.0000, 0.4766, 0.0000, 0.0000, 0.0000, 0.5234],          [0.0000, 0.0000, 0.0000, 0.6815, 0.0000, 0.0000, 0.3185, 0.0000],          [0.4482, 0.5518, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000]]],        grad_fn=<SoftmaxBackward0>), tensor([[[2, 0],          [1, 0],          [2, 1],          [5, 3]],          [[3, 5],          [7, 3],          [3, 6],          [1, 0]]]))
 
 
 **创建稀疏化的混合专家模块**
@@ -513,7 +513,7 @@ tags:
 * 
 
     import torchimport torch.nn as nn
-    #Let's test this outnum_experts = 8top_k = 2n_embd = 16dropout=0.1
+    \#Let's test this outnum_experts = 8top_k = 2n_embd = 16dropout=0.1
     mh_output = torch.randn(4, 8, n_embd)  # Example multi-head attention outputsparse_moe = SparseMoE(n_embd, num_experts, top_k)final_output = sparse_moe(mh_output)print("Shape of the final output:", final_output.shape)
 
 
@@ -548,7 +548,7 @@ tags:
 * 
 * 
 
-    #Create a self attention + mixture of experts block, that may be repeated several number of times class Block(nn.Module):    """ Mixture of Experts Transformer block: communication followed by computation (multi-head self attention + SparseMoE) """
+    \#Create a self attention + mixture of experts block, that may be repeated several number of times class Block(nn.Module):    """ Mixture of Experts Transformer block: communication followed by computation (multi-head self attention + SparseMoE) """
         def __init__(self, n_embed, n_head, num_experts, top_k):        # n_embed: embedding dimension, n_head: the number of heads we'd like        super().__init__()        head_size = n_embed // n_head        self.sa = MultiHeadAttention(n_head, head_size)        self.smoe = SparseMoE(n_embed, num_experts, top_k)        self.ln1 = nn.LayerNorm(n_embed)        self.ln2 = nn.LayerNorm(n_embed)
         def forward(self, x):        x = x + self.sa(self.ln1(x))        x = x + self.smoe(self.ln2(x))        return x
 
@@ -662,8 +662,8 @@ Glorot 参数初始化通常被用于 transformer 模型，因此这是一个可
 * 
 * 
 
-    #Using MLFlowm = model.to(device)# print the number of parameters in the modelprint(sum(p.numel() for p in m.parameters())/1e6, 'M parameters')
-    # create a PyTorch optimizeroptimizer = torch.optim.AdamW(model.parameters(), lr=learning_rate)#mlflow.set_experiment("makeMoE")with mlflow.start_run():    #If you use mlflow.autolog() this will be automatically logged. I chose to explicitly log here for completeness    params = {"batch_size": batch_size , "block_size" : block_size, "max_iters": max_iters, "eval_interval": eval_interval,              "learning_rate": learning_rate, "device": device, "eval_iters": eval_iters, "dropout" : dropout, "num_experts": num_experts, "top_k": top_k }    mlflow.log_params(params)    for iter in range(max_iters):
+    \#Using MLFlowm = model.to(device)# print the number of parameters in the modelprint(sum(p.numel() for p in m.parameters())/1e6, 'M parameters')
+    # create a PyTorch optimizeroptimizer = torch.optim.AdamW(model.parameters(), lr=learning_rate)\#mlflow.set_experiment("makeMoE")with mlflow.start_run():    \#If you use mlflow.autolog() this will be automatically logged. I chose to explicitly log here for completeness    params = {"batch_size": batch_size , "block_size" : block_size, "max_iters": max_iters, "eval_interval": eval_interval,              "learning_rate": learning_rate, "device": device, "eval_iters": eval_iters, "dropout" : dropout, "num_experts": num_experts, "top_k": top_k }    mlflow.log_params(params)    for iter in range(max_iters):
             # every once in a while evaluate the loss on train and val sets        if iter % eval_interval == 0 or iter == max_iters - 1:            losses = estimate_loss()            print(f"step {iter}: train loss {losses['train']:.4f}, val loss {losses['val']:.4f}")            metrics = {"train_loss": losses['train'], "val_loss": losses['val']}            mlflow.log_metrics(metrics, step=iter)
 
             # sample a batch of data        xb, yb = get_batch('train')
@@ -748,11 +748,11 @@ Glorot 参数初始化通常被用于 transformer 模型，因此这是一个可
 *极市干货*
 
 
-**技术专栏：**[多模态大模型超详细解读专栏](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI5MDUyMDIxNA==&action=getalbum&album_id=2918280735411683334#wechat_redirect)｜[搞懂Tranformer系列](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI5MDUyMDIxNA==&action=getalbum&album_id=2090301627206303744#wechat_redirect)｜[ICCV2023论文解读](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI5MDUyMDIxNA==&action=getalbum&album_id=3021109573835554818#wechat_redirect)｜[极市直播](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI5MDUyMDIxNA==&action=getalbum&album_id=1425604183083892737#wechat_redirect)
+**技术专栏：**[多模态大模型超详细解读专栏](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI5MDUyMDIxNA==&action=getalbum&album_id=2918280735411683334\#wechat_redirect)｜[搞懂Tranformer系列](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI5MDUyMDIxNA==&action=getalbum&album_id=2090301627206303744\#wechat_redirect)｜[ICCV2023论文解读](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI5MDUyMDIxNA==&action=getalbum&album_id=3021109573835554818\#wechat_redirect)｜[极市直播](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI5MDUyMDIxNA==&action=getalbum&album_id=1425604183083892737\#wechat_redirect)
 
-**极视角动态**：[欢迎高校师生申报极视角2023年教育部产学合作协同育人项目](http://mp.weixin.qq.com/s?__biz=MzkwMjIxOTM0NA==&mid=2247499703&idx=1&sn=26efecffec277dfd4b55a0b7482cb244&chksm=c0aa6c88f7dde59e52d7d7ba295868e1209692e576c00a9952502cfdf3337cb64daa8c13b048&scene=21#wechat_redirect)｜[新视野+智慧脑，「无人机+AI」成为道路智能巡检好帮手！](http://mp.weixin.qq.com/s?__biz=MzkwMjIxOTM0NA==&mid=2247499654&idx=1&sn=5e87643e93831c4ce5014aae869957f8&chksm=c0aa6cb9f7dde5afa601b0ce3343e6fb845ff752d5451972ccfd276525ca8028ce7471ee15e3&scene=21#wechat_redirect)
+**极视角动态**：[欢迎高校师生申报极视角2023年教育部产学合作协同育人项目](http://mp.weixin.qq.com/s?__biz=MzkwMjIxOTM0NA==&mid=2247499703&idx=1&sn=26efecffec277dfd4b55a0b7482cb244&chksm=c0aa6c88f7dde59e52d7d7ba295868e1209692e576c00a9952502cfdf3337cb64daa8c13b048&scene=21\#wechat_redirect)｜[新视野+智慧脑，「无人机+AI」成为道路智能巡检好帮手！](http://mp.weixin.qq.com/s?__biz=MzkwMjIxOTM0NA==&mid=2247499654&idx=1&sn=5e87643e93831c4ce5014aae869957f8&chksm=c0aa6cb9f7dde5afa601b0ce3343e6fb845ff752d5451972ccfd276525ca8028ce7471ee15e3&scene=21\#wechat_redirect)
 
-**技术综述：** [四万字详解Neural ODE：用神经网络去刻画非离散的状态变化](http://mp.weixin.qq.com/s?__biz=MzI5MDUyMDIxNA==&mid=2247651748&idx=1&sn=1babe6c6a4f1adff434b482e68532518&chksm=ec127c5ddb65f54b9c086a5048b252084dca44006b08ec1e7a169006b94048f5d24091494443&scene=21#wechat_redirect)｜[transformer的细节到底是怎么样的？Transformer 连环18问！](http://mp.weixin.qq.com/s?__biz=MzI5MDUyMDIxNA==&mid=2247647297&idx=1&sn=f5ddd4238cb61f6b6f2eb50d9fbd8680&chksm=ec126db8db65e4ae95414f033fd2e465f1c56e8b3d8c41f57c0fb0d5f1d4ba20c53dbbdbbb4c&scene=21#wechat_redirect)
+**技术综述：** [四万字详解Neural ODE：用神经网络去刻画非离散的状态变化](http://mp.weixin.qq.com/s?__biz=MzI5MDUyMDIxNA==&mid=2247651748&idx=1&sn=1babe6c6a4f1adff434b482e68532518&chksm=ec127c5ddb65f54b9c086a5048b252084dca44006b08ec1e7a169006b94048f5d24091494443&scene=21\#wechat_redirect)｜[transformer的细节到底是怎么样的？Transformer 连环18问！](http://mp.weixin.qq.com/s?__biz=MzI5MDUyMDIxNA==&mid=2247647297&idx=1&sn=f5ddd4238cb61f6b6f2eb50d9fbd8680&chksm=ec126db8db65e4ae95414f033fd2e465f1c56e8b3d8c41f57c0fb0d5f1d4ba20c53dbbdbbb4c&scene=21\#wechat_redirect)
 
 ![](https://image.cubox.pro/cardImg/2024021816114739419/76525.jpg?imageMogr2/quality/90/ignore-error/1)
 

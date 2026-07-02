@@ -14,7 +14,7 @@ tags:
 
 ---
 
-## Annotations  
+\## Annotations  
 
 > Selective Loss Masking
 > 模型在训练的过程中，如果处理不当，很可能会陷入到二元境地，比如一直都输出 CoT token 或者一直不输出 CoT token。比如在 【数学类】数据集中训练之后，很可能一直输出 CoT token。这样模型就不能很好的进行探索，坍缩到一个方向去了。
@@ -28,7 +28,7 @@ mask掉<think>后的第一个token，即不参与loss计算，保留模型对是
 
 ---
 
-## 📖 正文全文
+\## 📖 正文全文
 
 # 自适应快慢思考推理模型（Adaptive Reasoning Model）：Qwen3混合思考-\>字节AdaCoT-\>清华AdaThinking
 
@@ -80,7 +80,7 @@ Selective Loss Masking
 
 5. 总结
 
-## **1. 背景**
+\## **1. 背景**
 
 OpenAI O 系列发布之后，Inference Time Scaling 的模型一直备受关注，这种具有长思考能力的模型倍称为：Large Reasoning Model（LRM）。所谓的长思考能力指得是 [Long Chain-of-Thought](https://zhida.zhihu.com/search?content_id=258172295&content_type=Article&match_order=1&q=Long+Chain-of-Thought&zhida_source=entity)（LongCoT），和大家在 [Prompt Engeering](https://zhida.zhihu.com/search?content_id=258172295&content_type=Article&match_order=1&q=Prompt+Engeering&zhida_source=entity) 中常见的 CoT 技巧是一样的，比如告诉模型 `Let's think it step-by-step` 或者 `You should think about it deeply before you give final answer`，而 `LongCoT` 指的是模型可以输出【更长的思考过程】。
 
@@ -99,7 +99,7 @@ OpenAI O 系列发布之后，Inference Time Scaling 的模型一直备受关注
 ![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fpic4.zhimg.com%2Fv2-a3088e2f6a944cc9334de0bc4b5740a3_1440w.jpg&valid=false)
 adacot-adathinking-20250525140638319 \[!NOTE\] 本文首发于[chaofa用代码打点酱油](https://link.zhihu.com/?target=https%3A//bruceyuan.com/)的个人 Blog，后续有更新会优先更新于 Blog 中，原文链接[自适应快慢思考推理模型：Qwen3混合思考-\>字节AdaCoT-\>清华AdaThinking](https://link.zhihu.com/?target=https%3A//bruceyuan.com/post/slow-fast-thinking-from-qwen3-thinking-mixed-to-adacot-to-adathinking.html)，也会同步到同名[公众号-chaofa用代码打点酱油](https://link.zhihu.com/?target=https%3A//bruceyuan.com/llms-zero-to-hero/chaofa-wechat-official-account.png)（仅同步）
 
-## **2. 阿里 Qwen3 混合思考**
+\## **2. 阿里 Qwen3 混合思考**
 
 Qwen3 的整体训练流程如下图所示：
 ![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fpic2.zhimg.com%2Fv2-392f4d4896fa0e9af904d93c5f4ee087_1440w.jpg&valid=false)
@@ -109,9 +109,9 @@ qwen3-tech-report-full-architecture
 
 首先如果让聪明的读者来做这个事情，可能也能想到要【构造混合思考的训练数据，然后通过 Prompt 指示模型进行思考或者不思考】，因为 OpenChat 在 23年九月份的 [OpenChat: Advancing Open-source Language Models with Mixed-Quality Data](https://link.zhihu.com/?target=https%3A//arxiv.org/abs/2309.11235) 就有类似的思想。因此核心就是构造具有思考、以及没有思考的数据。
 
-### **2.1 训练**
+\#\## **2.1 训练**
 
-### **2.1.1 （主）SFT 数据构造**
+\#\## **2.1.1 （主）SFT 数据构造**
 
 构造一个混合思考的 system template，如下所示
 ![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fpicx.zhimg.com%2Fv2-b5e9111193a4fa2eddb4b758f277e335_1440w.jpg&valid=false)
@@ -122,7 +122,7 @@ qwen3-tech-report-thinking-mixed-mode
 
 另外还有一个自发涌现出来的能力（Thinking Budget）：当模型训练完了之后，我们可以根据用户设置的 max_tokens 手动终止思考过程，当快接近 `max_tokens` 的时候，拼接一句： `Considering the limited time by the user, I have to give the solution based on the thinking directly now.\n</think>.\n\n` 然后让模型接着生成，模型就能做最终的回复，并且效果还不错。
 
-### **2.1.2 强化学习RL**
+\#\## **2.1.2 强化学习RL**
 
 在第 4 阶段通用 R L的过程中，其他数据怎么处理的我们在本文中暂不介绍，感兴趣可以看 [Qwen3 Technical Report](https://link.zhihu.com/?target=https%3A//arxiv.org/abs/2505.09388)。我们仅介绍和 `Thinking Mode Fusion` 相关的。具体是：
 
@@ -131,7 +131,7 @@ qwen3-tech-report-thinking-mixed-mode
 * user query 中有 `/think` 的时候，模型的回复需要时 `<think> a lot of thinking</think> final respone`
 * user query 中有 `/no_think` 的时候，模型的回复需要时 `<think></think> final respone`，注意⚠️：这里的 `think` xml 中是没有内容的。
 
-### **2.1.3 推理**
+\#\## **2.1.3 推理**
 
 从刚刚的训练数据中，我们也可以推测出模型推理是怎么做的，有两种方式：
 
@@ -179,7 +179,7 @@ qwen3-tech-report-thinking-mixed-mode
 
 发现问题没有，模型并不会主动知道什么时候应该思考，什么时候不应该，这都是人在控制的？而下面两篇文章就是就是让模型自己学会【要不要思考】。
 
-## **3. 字节Seed AdaCoT**
+\## **3. 字节Seed AdaCoT**
 
 再来回顾一个这个图，我们希望模型主动触发思考和非思考的过程，而不是像 qwen3 一样，需要人为控制。
 ![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fpic4.zhimg.com%2Fv2-a3088e2f6a944cc9334de0bc4b5740a3_1440w.jpg&valid=false)
@@ -191,9 +191,9 @@ AdaCoT 这里是把是否要输出 `CoT`（思考过程 Thinking）当做一个[
 
 其中 P(\\theta) 是模型得分（最终的评估的分数，比如是否代码是否通过），T(\\theta) 是激活 CoT 的次数，因此我们可以设置不同的 \\lambda_{P} 和 \\lambda_{T} 来得到最大的的值，两个 \\lambda 是超参数，在文中实现了**四组参数**。
 
-### **3.1 训练**
+\#\## **3.1 训练**
 
-### **3.1.1 SFT 冷启动**
+\#\## **3.1.1 SFT 冷启动**
 
 为了让模型能快速知道什么时候应该用 `think or CoT`，什么时候不该，最简单方式就是造一批数据让模型做冷启动。
 
@@ -210,12 +210,12 @@ AdaCoT 这里是把是否要输出 `CoT`（思考过程 Thinking）当做一个[
     { last_prompt } 
     < User ' s final question - End >
 
-    ## 评估步骤
+    \## 评估步骤
     1. 仔细阅读, 理解问题
     2. 评估 question 的难度，xxx
     3. 输出需要按照特定的格式
 
-    ## 评估准则
+    \## 评估准则
     - 需要深度思考。
      - 需要多步才能输出最终的答案
      - 需要一个有逻辑的思考
@@ -225,7 +225,7 @@ AdaCoT 这里是把是否要输出 `CoT`（思考过程 Thinking）当做一个[
      - 基本常识
      - ...
 
-    ## 输出格式
+    \## 输出格式
     仅输出下面两者之一，不要给任何解释：
     - 需要深度思考
     - 不需要深度思考
@@ -239,9 +239,9 @@ AdaCoT 这里是把是否要输出 `CoT`（思考过程 Thinking）当做一个[
 
 > 备注：这个是非常有意义的，因为 RL 只是提高 pass@1 score，而不会显著提高 pass@k score，也就是说 RL 只是提高了正确答案出现的概率。因此如果基础模型就不好，RL 效果也会好。  
 
-### **3.1.2 （主）RL 训练**
+\#\## **3.1.2 （主）RL 训练**
 
-### **PPO 训练**
+\#\## **PPO 训练**
 
 这里用的是 [PPO 算法](https://zhida.zhihu.com/search?content_id=258172295&content_type=Article&match_order=1&q=PPO+%E7%AE%97%E6%B3%95&zhida_source=entity)。因此需要一个 [Reward Model](https://zhida.zhihu.com/search?content_id=258172295&content_type=Article&match_order=1&q=Reward+Model&zhida_source=entity)，具体的 Reward function 设置如下
 
@@ -257,31 +257,31 @@ AdaCoT 这里是把是否要输出 `CoT`（思考过程 Thinking）当做一个[
 
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"> r t ( θ ) = π θ ( a t \| s t ) π θ old ( a t \| s t ) </math>r_t(\\theta) = \\frac{\\pi_\\theta(a_t\|s_t)}{\\pi_{\\theta_{\\text{old}}}(a_t\|s_t)} \\\\
 
-### **Selective Loss Masking**
+\#\## **Selective Loss Masking**
 
 模型在训练的过程中，如果处理不当，很可能会陷入到二元境地，比如一直都输出 CoT token 或者一直不输出 CoT token。比如在 【数学类】数据集中训练之后，很可能一直输出 `CoT token`。这样模型就不能很好的进行探索，坍缩到一个方向去了。
 
 这里的做法也很简单，在 RL 训练的过程中，把 policy gradient 中的 loss 不算所有的 token，而是 mask 掉 `<think>` 后的第一个 token。这样做有什么好处，我们保持了 SFT/RL 阶段学到的要不要触发 CoT，只是我们 mask 掉了 Loss，通过 Loss 优化控制下一步是否触发 CoT，而不是改变上一步学到的结果。
 
-### **3.2 实验结论**
+\#\## **3.2 实验结论**
 
 ![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fpic2.zhimg.com%2Fv2-71595ab007d8f03eeb1f5bd2df7ec83f_1440w.jpg&valid=false)
 adacot-adathinking-20250525161351250
 
 最终的效果也很好，只使用 65% 左右的 CoT 触发率就达到了接近 100% 触发 CoT 的效果。而对于火山的实际调用 CASE 来看，只有 3.18% 的 CoT rate，也就是大部分人的 query 都很简单，没必要 CoT，这在实际工业界还是非常有用的。
 
-### **3.3 其他**
+\#\## **3.3 其他**
 
 本篇文章出发点很好，唯一的遗憾是细节还是有一些缺失，尤其是比较关键的 Score 设置，比如公式（1）中的 <math xmlns="http://www.w3.org/1998/Math/MathML"> P ( θ ) </math>P(\\theta) 中 score 的计算方式，以及公式（2）中的 <math xmlns="http://www.w3.org/1998/Math/MathML"> R b a s e ( x , r ) </math>R_{base}(x, r) 是怎么得到的，以及细节是什么。不过作为一篇工业界文章，已经非常好启发性了。而且最重要的是：这篇文章落地了，在[火山方舟](https://link.zhihu.com/?target=https%3A//www.volcengine.com/)中就有可以调用的模型。
 > 这篇文章是一个师弟写得，太牛逼了，太佩服了（蹭蹭师弟的热度）  
 
-## **4. 清华 AdaThinking**
+\## **4. 清华 AdaThinking**
 
 和 Seed-AdaCoT 这个文章**出发点一样** ，但是清华的这篇 `AdaThinking` 有一个很好理解的图，有前置的分析，RL 阶段也写得更细节一点（这就是工业论文和学界论文的区别吗？）再把这个图放过来
 ![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fpic4.zhimg.com%2Fv2-a3088e2f6a944cc9334de0bc4b5740a3_1440w.jpg&valid=false)
 adacot-adathinking-20250525140638319
 
-### **4.1 前置分析**
+\#\## **4.1 前置分析**
 
 ![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fpic2.zhimg.com%2Fv2-5204d638764b1720dc0899bc5de5c3b3_1440w.jpg&valid=false)
 adacot-adathinking-20250525162722639
@@ -296,9 +296,9 @@ adacot-adathinking-20250525162722639
 ![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fpic4.zhimg.com%2Fv2-8ac5c065c7c947de103d915773414655_1440w.jpg&valid=false)
 adacot-adathinking-20250525174241784
 
-### **4.2 （主）RL 训练**
+\#\## **4.2 （主）RL 训练**
 
-### **4.2.1 RL for Constrained Optimization Objective**
+\#\## **4.2.1 RL for Constrained Optimization Objective**
 
 整体的优化目标如下，尽量少的出现 Thinking（y_1 = 表示第一生成的词就是 `</think>` 这样就表示没有思考），但是需要 R_{\\theta}(x, y) 要大于 R_{\\theta_{ref}}(x, y)，后者就是约束。
 
@@ -328,7 +328,7 @@ adacot-adathinking-20250525174241784
 
 A(x, y) = \\mathbb{I}(y_1 = ) \\cdot \\delta + R(x, y) - \\bar{R}_{ref}(x) \\\\
 
-### **4.2.2 修改重要性采样**
+\#\## **4.2.2 修改重要性采样**
 
 由于开始的模型是 thinking model，所以模型一开始 y_1 = 概率为 0，模型不会直接输出 `</think>` 终止符。因此我们直接修改 \\pi_{\\theta_{old}}。
 ![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fpic1.zhimg.com%2Fv2-1c9c61e8a344c5d6bf967363f0be3cac_1440w.jpg&valid=false)
@@ -341,7 +341,7 @@ A(x, y) = \\mathbb{I}(y_1 = ) \\cdot \\delta + R(x, y) - \\bar{R}_{ref}(x) \\\\
 
 \\begin{align\*} \\bar{R}_{\\text{nothink}}(x) + \\delta \&\> \\bar{R}_{\\text{ref}}(x), \\\\ \\bar{R}_{\\text{nothink}}(x) + \\delta \&\> \\bar{R}_{\\text{think}}(x). \\end{align\*} \\\\
 
-### **4.3 实验结论**
+\#\## **4.3 实验结论**
 
 ![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fpicx.zhimg.com%2Fv2-f6cf4d7470b463dfc1e35d65275b43b9_1440w.jpg&valid=false)
 adacot-adathinking-20250525192643470
@@ -358,7 +358,7 @@ adacot-adathinking-20250525192603224
 
 这说明了，我们修改重要性采样是很有必要的。
 
-## **5. 总结**
+\## **5. 总结**
 
 上面介绍三篇文章如何处理这种混合思考模式。
 

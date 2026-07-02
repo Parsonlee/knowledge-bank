@@ -17,14 +17,14 @@ tags:
 
 ---
 
-## 📖 正文全文
+\## 📖 正文全文
 
 # 人工智能体(AI Agent)开发与应用全面调研：原理及开发、应用及挑战
 
 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/ML_NTUxHRVO3iMMGBasfZQ)旺知识 江大白
 
 
-[![](https://image.cubox.pro/cardImg/gd256qxq4ekc5ec8q4vf9j93xcqh6d9yg6ykplrq5rklwg23l?imageMogr2/quality/90/ignore-error/1)](http://mp.weixin.qq.com/s?__biz=Mzg5NzgyNTU2Mg==&mid=2247522122&idx=1&sn=a757f1cc6d9c99eb36ac2a8f1c6b06ed&chksm=c069393ff71eb02984bd2747a814dbd8b5b3fe577939ccc8c184c3d416318ed1c4ffbe3e1325&scene=21#wechat_redirect)
+[![](https://image.cubox.pro/cardImg/gd256qxq4ekc5ec8q4vf9j93xcqh6d9yg6ykplrq5rklwg23l?imageMogr2/quality/90/ignore-error/1)](http://mp.weixin.qq.com/s?__biz=Mzg5NzgyNTU2Mg==&mid=2247522122&idx=1&sn=a757f1cc6d9c99eb36ac2a8f1c6b06ed&chksm=c069393ff71eb02984bd2747a814dbd8b5b3fe577939ccc8c184c3d416318ed1c4ffbe3e1325&scene=21\#wechat_redirect)
 
 
 以下文章来源于微信公众号：旺知识
@@ -189,7 +189,7 @@ PromptAppGPT包含基于低代码提示的开发、GPT文本生成、DALLE图像
 
 * 🔌自定义扩展执行器（插件）
 
-* #️⃣在线提示编辑器、编译器和运行器
+* \#️⃣在线提示编辑器、编译器和运行器
 
 * ⚙️自动生成用户界面
 
@@ -465,13 +465,13 @@ XAgent工作流程。图源：https://github.com/OpenBMB/XAgent
 **时长统计算法功能编排**
 
 
-## 推荐阅读
+\## 推荐阅读
 
-## [![](https://image.cubox.pro/cardImg/41b13j7kimd31k52a634jv7gbt46otnm1udq28mfq19pcqms3v?imageMogr2/quality/90/ignore-error/1)](https://mp.weixin.qq.com/s?__biz=Mzg5NzgyNTU2Mg==&mid=2247498203&idx=1&sn=e706b7da428ba33efd163cf0e5a5407b&source=41&scene=21#wechat_redirect)
-[](http://mp.weixin.qq.com/s?__biz=MzU5OTA2Mjk5Mw==&mid=2247490028&idx=1&sn=4166889e22c31f3c0af7a376967b5dca&chksm=febbf952c9cc70442f63ef7155bbd6cb0535ccb4ae6ea6f110af8e14cdabfad9fa4865feeaae&scene=21#wechat_redirect)江大白[\|](http://mp.weixin.qq.com/s?__biz=MzU5OTA2Mjk5Mw==&mid=2247490028&idx=1&sn=4166889e22c31f3c0af7a376967b5dca&chksm=febbf952c9cc70442f63ef7155bbd6cb0535ccb4ae6ea6f110af8e14cdabfad9fa4865feeaae&scene=21#wechat_redirect)这些年从0转行AI行业的一些感悟
+\## [![](https://image.cubox.pro/cardImg/41b13j7kimd31k52a634jv7gbt46otnm1udq28mfq19pcqms3v?imageMogr2/quality/90/ignore-error/1)](https://mp.weixin.qq.com/s?__biz=Mzg5NzgyNTU2Mg==&mid=2247498203&idx=1&sn=e706b7da428ba33efd163cf0e5a5407b&source=41&scene=21\#wechat_redirect)
+[](http://mp.weixin.qq.com/s?__biz=MzU5OTA2Mjk5Mw==&mid=2247490028&idx=1&sn=4166889e22c31f3c0af7a376967b5dca&chksm=febbf952c9cc70442f63ef7155bbd6cb0535ccb4ae6ea6f110af8e14cdabfad9fa4865feeaae&scene=21\#wechat_redirect)江大白[\|](http://mp.weixin.qq.com/s?__biz=MzU5OTA2Mjk5Mw==&mid=2247490028&idx=1&sn=4166889e22c31f3c0af7a376967b5dca&chksm=febbf952c9cc70442f63ef7155bbd6cb0535ccb4ae6ea6f110af8e14cdabfad9fa4865feeaae&scene=21\#wechat_redirect)这些年从0转行AI行业的一些感悟
 
-### [![](https://image.cubox.pro/cardImg/69niza9xn483a7tkdxhm6hhor2di5c2f5zz3a5gidenusuvgxt?imageMogr2/quality/90/ignore-error/1)](https://mp.weixin.qq.com/s?__biz=Mzg5NzgyNTU2Mg==&mid=2247519757&idx=1&sn=f405931318c98f67c660817c6d56b803&chksm=c0692078f71ea96ea43c4ef679995cd2f52fefd9a6f111fb607ea51de9b0891994079b4361c6&scene=21#wechat_redirect)
-[](http://mp.weixin.qq.com/s?__biz=MzU5OTA2Mjk5Mw==&mid=2247490028&idx=1&sn=4166889e22c31f3c0af7a376967b5dca&chksm=febbf952c9cc70442f63ef7155bbd6cb0535ccb4ae6ea6f110af8e14cdabfad9fa4865feeaae&scene=21#wechat_redirect)AI项目应用[\|](http://mp.weixin.qq.com/s?__biz=MzU5OTA2Mjk5Mw==&mid=2247490028&idx=1&sn=4166889e22c31f3c0af7a376967b5dca&chksm=febbf952c9cc70442f63ef7155bbd6cb0535ccb4ae6ea6f110af8e14cdabfad9fa4865feeaae&scene=21#wechat_redirect)万字长文教你一步步实现离岗识别
+\#\## [![](https://image.cubox.pro/cardImg/69niza9xn483a7tkdxhm6hhor2di5c2f5zz3a5gidenusuvgxt?imageMogr2/quality/90/ignore-error/1)](https://mp.weixin.qq.com/s?__biz=Mzg5NzgyNTU2Mg==&mid=2247519757&idx=1&sn=f405931318c98f67c660817c6d56b803&chksm=c0692078f71ea96ea43c4ef679995cd2f52fefd9a6f111fb607ea51de9b0891994079b4361c6&scene=21\#wechat_redirect)
+[](http://mp.weixin.qq.com/s?__biz=MzU5OTA2Mjk5Mw==&mid=2247490028&idx=1&sn=4166889e22c31f3c0af7a376967b5dca&chksm=febbf952c9cc70442f63ef7155bbd6cb0535ccb4ae6ea6f110af8e14cdabfad9fa4865feeaae&scene=21\#wechat_redirect)AI项目应用[\|](http://mp.weixin.qq.com/s?__biz=MzU5OTA2Mjk5Mw==&mid=2247490028&idx=1&sn=4166889e22c31f3c0af7a376967b5dca&chksm=febbf952c9cc70442f63ef7155bbd6cb0535ccb4ae6ea6f110af8e14cdabfad9fa4865feeaae&scene=21\#wechat_redirect)万字长文教你一步步实现离岗识别
 
 
 **注意：** 随着人工智能行业的发展，大模型（AIGC、GPT等）＆小模型（Yolo、OCR等）在同步进化。各路从业者都在探索，驰骋AI江湖。

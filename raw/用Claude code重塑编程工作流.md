@@ -14,7 +14,7 @@ tags:
 
 ---
 
-## Annotations  
+\## Annotations  
 
 > 深度解析：为什么"重来"比"修复"更有效？
 >
@@ -29,7 +29,7 @@ tags:
 
 ---
 
-## 📖 正文全文
+\## 📖 正文全文
 
 # 菜鸡才用AI写代码，10倍程序员这样用Claude重塑编程工作流
 
@@ -61,7 +61,7 @@ tags:
 关注腾讯云开发者，一手技术干货提前解锁👇
 
 
-## 01
+\## 01
 
 
 引言：一个程序员的典型一天
@@ -72,7 +72,7 @@ tags:
 
 这一切的背后，是一种全新的工作方式。本文将结合Anthropic团队的内部实践与我个人的深度思考，为你提供一套全新的AI协作地图，展示如何从"单一工具使用者"进化为"场景化策略大师"，真正将AI从一个"编码助手"变为我们的"开发搭档"。
 
-## 02
+\## 02
 
 
 一套框架，三种场景：程序员日常工作的AI协作地图
@@ -117,7 +117,7 @@ tags:
 * 为什么有效：AI将过去需要数天甚至数周才能完成的知识内化过程，压缩到了几小时。Anthropic的推理团队成员通过这种模式，将学习机器学习概念的时间缩短了80%。
 
 
-## 03
+\## 03
 
 
 三个被低估的高效技巧：来自Anthropic内部实践
@@ -243,7 +243,7 @@ tags:
   * 我是否准备好进入"截图-生成-验证"的快速迭代循环，而不是期望一次搞定？
 
 
-## 04
+\## 04
 
 
 从理论到实践：可执行的实施路径
@@ -340,7 +340,7 @@ tags:
 * ✅ 正确：建立数据安全规范和代码审查流程
 
 
-## 05
+\## 05
 
 
 更深层的思考：从工具使用到工作方式变革
@@ -361,7 +361,7 @@ AI协作最深远的影响，是模糊了专业边界，重塑了团队协作范
 
 这最终催生了一种新的、更高效的团队协作模式：非技术人员的能力被前所未有地解放，工程师的价值更多地体现在赋能他人和解决最核心的难题上。
 
-## 06
+\## 06
 
 
 结论：重新定义你的工作流
@@ -391,10 +391,10 @@ AI协作最深远的影响，是模糊了专业边界，重塑了团队协作范
 
 你们团队有没有"非技术同事"用 AI 独立完成小项目？欢迎评论分享经验。我们将选取1则优质的评论，送出腾讯云定制文件袋套装1个（见下图）。9月11日中午12点开奖。
 
-[](https://mp.weixin.qq.com/s?__biz=MzI2NDU4OTExOQ==&mid=2247691279&idx=1&sn=5da2fbe1159f12e45d3d7f4b673a0108&scene=21#wechat_redirect)
+[](https://mp.weixin.qq.com/s?__biz=MzI2NDU4OTExOQ==&mid=2247691279&idx=1&sn=5da2fbe1159f12e45d3d7f4b673a0108&scene=21\#wechat_redirect)
 
-[](https://mp.weixin.qq.com/s?__biz=MzI2NDU4OTExOQ==&mid=2247691682&idx=1&sn=8eac13cc848ee0779e1a4ab85142d87a&scene=21#wechat_redirect)
+[](https://mp.weixin.qq.com/s?__biz=MzI2NDU4OTExOQ==&mid=2247691682&idx=1&sn=8eac13cc848ee0779e1a4ab85142d87a&scene=21\#wechat_redirect)
 
-[](https://mp.weixin.qq.com/s?__biz=MzI2NDU4OTExOQ==&mid=2247691610&idx=1&sn=99c2ab7608d2ed7edc1e1aa029dd08ed&scene=21#wechat_redirect)
+[](https://mp.weixin.qq.com/s?__biz=MzI2NDU4OTExOQ==&mid=2247691610&idx=1&sn=99c2ab7608d2ed7edc1e1aa029dd08ed&scene=21\#wechat_redirect)
 
 [Read in Cubox](https://cubox.pro/web/card/7364572208015869762)

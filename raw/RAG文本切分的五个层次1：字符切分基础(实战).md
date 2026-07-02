@@ -18,7 +18,7 @@ tags:
 
 ---
 
-## 📖 正文全文
+\## 📖 正文全文
 
 # RAG文本切分的五个层次1：字符切分基础(实战)
 
@@ -80,7 +80,7 @@ tags:
 
 LangChain实现
 
-### **导入模块：**
+\#\## **导入模块：**
 
 
 * 
@@ -125,7 +125,7 @@ LangChain实现
 
 LLama-Index实现
 
-### **加载依赖模块**
+\#\## **加载依赖模块**
 
 
 * 
@@ -172,14 +172,14 @@ nodes里面不仅包含了切分的文本信息，也包含了很多额外的相
 往期推荐
 
 
-[RAG：Langchain中使用自己的LLM大模型](http://mp.weixin.qq.com/s?__biz=Mzk0NTcyNTMzNw==&mid=2247483750&idx=1&sn=776d59a1d9b95ceda8e7d99a94014c20&chksm=c3104b90f467c28643c5d49cfb8c960cb51e9f4a48e368fec0bea9a7c7cc2089f246b65a2804&scene=21#wechat_redirect)
+[RAG：Langchain中使用自己的LLM大模型](http://mp.weixin.qq.com/s?__biz=Mzk0NTcyNTMzNw==&mid=2247483750&idx=1&sn=776d59a1d9b95ceda8e7d99a94014c20&chksm=c3104b90f467c28643c5d49cfb8c960cb51e9f4a48e368fec0bea9a7c7cc2089f246b65a2804&scene=21\#wechat_redirect)
 
 
-[](https://mp.weixin.qq.com/s?__biz=MzI0MjYwNTUyMw==&mid=2247484227&idx=1&sn=57de0d20b27be9a273f6418875360fa3&chksm=e9788fffde0f06e930d951763f03e52b8cf392b164ea00b5b0a1112e6572fe9bfebc53933195&scene=21#wechat_redirect)[一款约束大模型结构化输出的开源工具，后处理不存在了提速又提质！(实战)](http://mp.weixin.qq.com/s?__biz=Mzk0NTcyNTMzNw==&mid=2247483887&idx=1&sn=1304cc26fe5269d402207d0acedca368&chksm=c3104b19f467c20fb59e80bffbc8b24dfee79494017a94a6aa8a3cbf019f707557c7979dbc40&scene=21#wechat_redirect)  
+[](https://mp.weixin.qq.com/s?__biz=MzI0MjYwNTUyMw==&mid=2247484227&idx=1&sn=57de0d20b27be9a273f6418875360fa3&chksm=e9788fffde0f06e930d951763f03e52b8cf392b164ea00b5b0a1112e6572fe9bfebc53933195&scene=21\#wechat_redirect)[一款约束大模型结构化输出的开源工具，后处理不存在了提速又提质！(实战)](http://mp.weixin.qq.com/s?__biz=Mzk0NTcyNTMzNw==&mid=2247483887&idx=1&sn=1304cc26fe5269d402207d0acedca368&chksm=c3104b19f467c20fb59e80bffbc8b24dfee79494017a94a6aa8a3cbf019f707557c7979dbc40&scene=21\#wechat_redirect)  
 
 
-[支持大模型流式输出的JSON提取工具](http://mp.weixin.qq.com/s?__biz=Mzk0NTcyNTMzNw==&mid=2247483821&idx=1&sn=6f34d91291fbcab03a79142eaa3ed56f&chksm=c3104b5bf467c24d7c4184784831d2cab8ce97f47cfc86d40da172650e67dba9a0860a7411b0&scene=21#wechat_redirect)
+[支持大模型流式输出的JSON提取工具](http://mp.weixin.qq.com/s?__biz=Mzk0NTcyNTMzNw==&mid=2247483821&idx=1&sn=6f34d91291fbcab03a79142eaa3ed56f&chksm=c3104b5bf467c24d7c4184784831d2cab8ce97f47cfc86d40da172650e67dba9a0860a7411b0&scene=21\#wechat_redirect)
 
-[一文读懂token到底是什么鬼，消耗那么多钱？](http://mp.weixin.qq.com/s?__biz=Mzk0NTcyNTMzNw==&mid=2247483676&idx=1&sn=34ff4199b3506d29bd2ceb38adc11093&chksm=c3104beaf467c2fc6406daecf514cd9ecc0e1ae5fff6007b370ff1ae1224484796967b48cd6f&scene=21#wechat_redirect)
+[一文读懂token到底是什么鬼，消耗那么多钱？](http://mp.weixin.qq.com/s?__biz=Mzk0NTcyNTMzNw==&mid=2247483676&idx=1&sn=34ff4199b3506d29bd2ceb38adc11093&chksm=c3104beaf467c2fc6406daecf514cd9ecc0e1ae5fff6007b370ff1ae1224484796967b48cd6f&scene=21\#wechat_redirect)
 
 [Read in Cubox](https://cubox.pro/web/card/7246422148867165245)

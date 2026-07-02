@@ -18,7 +18,7 @@ RAG系列教程第一篇：基础
 
 ---
 
-## 📖 正文全文
+\## 📖 正文全文
 
 # RAG从入门到精通系列1：基础RAG
 
@@ -81,7 +81,7 @@ RAG（Retrieval Augmented Generation，检索增强生成）是一种将 LLM 与
 
 接下来就是配置 Qdrant 向量数据库：  
 
-可以阅读《[Qdrant：使用Rust编写的开源向量数据库\&向量搜索引擎](https://mp.weixin.qq.com/s?__biz=MzI2ODUyMTQyNA==&mid=2247493427&idx=1&sn=75181307c395cd1d51ccfaafac340866&scene=21#wechat_redirect)》了解一下 Qdrant。  
+可以阅读《[Qdrant：使用Rust编写的开源向量数据库\&向量搜索引擎](https://mp.weixin.qq.com/s?__biz=MzI2ODUyMTQyNA==&mid=2247493427&idx=1&sn=75181307c395cd1d51ccfaafac340866&scene=21\#wechat_redirect)》了解一下 Qdrant。  
 
 最后一步对文档块建立索引并存到向量数据库中：  
 

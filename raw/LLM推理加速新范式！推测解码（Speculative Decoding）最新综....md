@@ -14,7 +14,7 @@ tags:
 
 ---
 
-## Annotations  
+\## Annotations  
 
 > 推测解码是一种“先推测后验证” (Draft-then-Verify) 的解码算法：在每个解码步，该算法首先高效地“推测”target LLM未来多个解码步的结果，然后用target LLM同时进行验证，以加速推理。  
 
@@ -23,7 +23,7 @@ tags:
 
 ---
 
-## 📖 正文全文
+\## 📖 正文全文
 
 # LLM推理加速新范式！推测解码（Speculative Decoding）最新综述
 
@@ -41,7 +41,7 @@ Abs: https://arxiv.org/abs/2401.07851
 
 Repo: https://github.com/hemingkx/SpeculativeDecodingPapers
 
-### {#t1}1. Background {#t0}
+\#\## {\#t1}1. Background {\#t0}
 
 近年来，随着LLM (Large Language Model) 规模的逐渐增大（200M-\>7B-\>175B），LLM的推理加速技术正逐步引起NLP学界的广泛关注。尤其是像ChatGPT\[1\]，Bard\[2\]这种线上实时交互的应用，LLM的inference latency（推理耗时）极大程度地影响了用户的使用体验。那么，LLM的Latency主要来自哪里呢？
 
@@ -53,7 +53,7 @@ Repo: https://github.com/hemingkx/SpeculativeDecodingPapers
 
 图1: 自回归解码（左），推测解码（右）
 
-### {#t2}2. Speculative Decoding
+\#\## {\#t2}2. Speculative Decoding
 
 那么，如何更好地利用GPU资源，让它成为一个合格的打工人呢？相信大家心里已经有答案了：把公司当作家，减少通勤次数，就可以少摸鱼多打工了（泪目）。
 
@@ -69,7 +69,7 @@ Repo: https://github.com/hemingkx/SpeculativeDecodingPapers
 
 图2: 推测解码研究思路的演化
 
-### {#t3}3. Key Facets of Speculative Decoding
+\#\## {\#t3}3. Key Facets of Speculative Decoding
 
 首先，我们总结推测解码的定义：
 > 推测解码是一种"先推测后验证" (*Draft-then-Verify* ) 的解码算法：在每个解码步，该算法首先**高效地"推测"** target LLM未来多个解码步的结果，然后用target LLM**同时进行验证**，以加速推理。
@@ -90,13 +90,13 @@ Repo: https://github.com/hemingkx/SpeculativeDecodingPapers
 
 图3: 推测解码相关研究的归纳分类
 
-### {#t4}4. "推测"的高效性和准确性
+\#\## {\#t4}4. "推测"的高效性和准确性
 
 > "推测"阶段（Drafting）的目的是精准地"预测"LLM未来多个解码步的生成结果，且不引入过多的latency。
 
 因此，"推测"阶段的设计聚焦在"推测精度（accuracy）"和"推测耗时（latency）"的权衡上。一般来说，用以推测的模型越大，推测精度越高（即通过验证的token越多），但是推测阶段的耗时越大。**如何在这两者之间达到权衡，使得推测解码总的加速比较高，是推测阶段主要关注的问题。**
 
-#### {#t5}4.1 Independent Drafting
+\#\#\## {\#t5}4.1 Independent Drafting
 
 最简单的Drafting思路是，拿一个跟target LLM同系列的smaller LM进行"推测"\[12\]\[13\]。比如OPT-70B的加速可以用OPT-125M进行推测，T5-XXL可以用T5-small。这样的好处是可以直接利用现有的模型资源，无需进行额外的训练。而且，由于同系列的模型使用相近的模型结构、分词方法、训练语料和训练流程，小模型本身就存在一定的和target LLM之间的"行为相似性"（behavior alignment），适合用来作为高效的"推测"模型。
 
@@ -109,7 +109,7 @@ Repo: https://github.com/hemingkx/SpeculativeDecodingPapers
 
 显然是有的。最直接的思路，就是去增强小模型和大模型之间的"行为相似性"（behavior alignment），让小模型模仿得"更像"一些。目前在这方面的研究进展集中在知识蒸馏（knowledge distillation）上：将target LLM作为教师模型，小模型作为学生模型，通过知识蒸馏让小模型更加趋向于target LLM的预测行为\[14\]\[15\]。并且，知识蒸馏还可以有效地增强小模型的生成质量，通过减少低级的预测错误，增加通过验证的token数量。
 
-#### {#t6}4.2 Self-Drafting
+\#\#\## {\#t6}4.2 Self-Drafting
 
 然而，采用一个独立的"推测"模型也有缺点：
 
@@ -126,7 +126,7 @@ Repo: https://github.com/hemingkx/SpeculativeDecodingPapers
 然而，这些FFN Heads依然需要进行额外的训练。除了这两个工作，还有一些研究提出利用Early-Existing或者Layer-Skipping来进行"高效推测"\[16\]\[17\]，甚至仅仅是在模型输入的最后插入多个\[PAD\] token，从而实现并行的"推测"\[18\]。然而，"部署的便捷性"和"推测精度"之间依然存在一定的权衡关系。如何选择合适的"推测"策略，达到令人满意的加速效果，就见仁见智了。
 > 感兴趣的友友可以移步具体论文查看细节，我们后续也准备提供一个公平的加速评测，给大家提供一个参考～
 
-### {#t7}5. 验证策略的选择
+\#\## {\#t7}5. 验证策略的选择
 
 > "验证"阶段（Verification）的首要目的是保证解码结果的质量。
 
@@ -149,7 +149,7 @@ Repo: https://github.com/hemingkx/SpeculativeDecodingPapers
 
 除了支持贪婪解码，推测解码还可以在理论上保障和target LLM nucleus sampling的分布相同\[12\]\[13\]，具体证明感兴趣的朋友可以查看相关paper～。另外，相比于只验证单一的"推测"序列，相关研究还提出可以让target LLM并行验证多条"推测"序列，从而进一步增大通过验证的"推测"token数量\[19\]。
 
-### {#t8}6. 总结
+\#\## {\#t8}6. 总结
 
 ![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fimg-blog.csdnimg.cn%2Fimg_convert%2F902914457c7fc9482633feffeef5b02b.png&valid=false)
 
@@ -157,7 +157,7 @@ Repo: https://github.com/hemingkx/SpeculativeDecodingPapers
 
 在上表中，我们给出目前常用的推测解码算法的总结～。作为一种新兴的推理加速算法，推测解码在实现对target LLM推理加速的同时保障了解码结果的质量，具有广阔的应用前景和极大的科研潜力，个人比较看好～。然而，推测解码研究本身也存在许多尚未解答的问题，比如如何更好地实现target LLM和"推测"模型之间的行为对齐、如何结合具体任务的特点设计相应的推测解码策略（比如多模态模型加速），都是值得思考的问题。
 
-##### 参考
+\#\#\#\## 参考
 
 1. https://chat.openai.com/
 

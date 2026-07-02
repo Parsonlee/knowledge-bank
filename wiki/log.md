@@ -1,5 +1,15 @@
 # Wiki Log
 
+## 2026-07-02 ingest | 恢复 64f7758 遗漏文章入库与 Tag 净化
+- **删除处理**：根据用户指令删除 `Clippings/Mac 外接 2k 显示器攻略.md`。
+- **正文 Tag 净化**：深度转义 `raw/*.md` 正文中未加反斜杠转义的行内 `#xxx` 伪标签（共处理 207 篇、转义 5900 处伪标签），彻底解决合并至 raw 后正文注释/十六进制颜色码引发的全局 Tag 污染。
+- **完成 4 篇待入库文章 Ingest 闭环**：
+  - `raw/Agent Loop使用语义早停比max_iterations硬截断节省38% Token 且质量不降.md` -> `wiki/sources/Agent Loop使用语义早停比max_iterations硬截断节省38% Token 且质量不降.md` (+ 补充更新 `[[概念_早停EarlyStopping]]`)
+  - `raw/Anthropic x ClaudeCode 官方插件：AI Agent 的领域知识插件——鸟窝.md` -> `wiki/sources/Anthropic x ClaudeCode 官方插件：AI Agent 的领域知识插件——鸟窝.md` (+ 关联 `[[概念_私域知识工程]]`、`[[概念_上下文工程]]`)
+  - `raw/从提示员到系统架构师：Loop Engineering 的范式跃迁.md` -> `wiki/sources/从提示员到系统架构师：Loop Engineering 的范式跃迁.md` (+ 补充更新 `[[概念_上下文工程]]` 演进阶梯)
+  - `raw/实测腾讯开源的 BrowserSkill：让 AI 直接用你登录好的浏览器.md` -> `wiki/sources/实测腾讯开源的 BrowserSkill：让 AI 直接用你登录好的浏览器.md` (+ 关联 `[[概念_智能体能力金字塔]]`)
+- **索引更新**：同步更新 `wiki/index.md`，追加以上 4 篇 Ingest 文章索引。
+
 ## 2026-07-02 refactor & verify | 架构升级与 Cubox 批注/全文大整合 (迁移至 raw/)
 - **结构升级**：正式废除 `inbox/` 概念与目录；确认 `raw/` 和 `Clippings/` 为第一层原始数据核心目录。
 - **合并执行**：智能配对并合并原 `Cubox/` (196 篇卡片批注) 与 `tmp/...205全文/` (长文全文)，统一无缝合并入 `raw/` 目录（实测 `raw/` 共 212 篇笔记）。清理废弃旧目录 `Cubox/` 与 `tmp/...205全文/`。

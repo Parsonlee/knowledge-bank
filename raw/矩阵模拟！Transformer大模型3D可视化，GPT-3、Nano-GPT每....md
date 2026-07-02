@@ -17,21 +17,21 @@ tags:
 
 ---
 
-## 📖 正文全文
+\## 📖 正文全文
 
 # 矩阵模拟！Transformer大模型3D可视化，GPT-3、Nano-GPT每一层清晰可见
 
 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/UtNLpJc0SlIowuHGbJ8SRg)新智元 新智元
 
-### ![图片](https://image.cubox.pro/cardImg/2023120418464533825/52737.jpg?imageMogr2/quality/90/ignore-error/1)
+\#\## ![图片](https://image.cubox.pro/cardImg/2023120418464533825/52737.jpg?imageMogr2/quality/90/ignore-error/1)
 
-### *** ** * ** ***
+\#\## *** ** * ** ***
 **新智元报道**
 
 
 编辑：桃子 好困
 
-##### **【新智元导读】** Transformer大模型工作原理究竟是什么样的？一位软件工程师打开了大模型的矩阵世界。
+\#\#\#\## **【新智元导读】** Transformer大模型工作原理究竟是什么样的？一位软件工程师打开了大模型的矩阵世界。
 
 
 黑客帝国中，「矩阵模拟」的世界或许真的存在。  
@@ -351,7 +351,7 @@ Transformer
 
 ![图片](https://image.cubox.pro/cardImg/2023120418465882195/33526.jpg?imageMogr2/quality/90/ignore-error/1)
 
-## Softmax
+\## Softmax
 
 softmax运算不仅是自注意力机制的一部分，如前文所述，它还会出现在模型的最后阶段。
 

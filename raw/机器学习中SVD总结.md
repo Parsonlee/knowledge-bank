@@ -17,7 +17,7 @@ tags:
 
 ---
 
-## 📖 正文全文
+\## 📖 正文全文
 
 # 机器学习中SVD总结
 
@@ -313,14 +313,14 @@ Reference:
 
 **推荐阅读：**
 
-1.[分类中解决类别不平衡问题。](https://mp.weixin.qq.com/s?__biz=MzI5NDMzMjY1MA==&mid=2247484313&idx=1&sn=568015a62bf99ca5b6bd282b465244be&chksm=ec65321cdb12bb0a772814204ac5f48136c99f44a39ff34f5bde115ab5630948a40f747a39f0&scene=21#wechat_redirect)
+1.[分类中解决类别不平衡问题。](https://mp.weixin.qq.com/s?__biz=MzI5NDMzMjY1MA==&mid=2247484313&idx=1&sn=568015a62bf99ca5b6bd282b465244be&chksm=ec65321cdb12bb0a772814204ac5f48136c99f44a39ff34f5bde115ab5630948a40f747a39f0&scene=21\#wechat_redirect)
 
-2.[深度学习中的Batch Normalization。](https://mp.weixin.qq.com/s?__biz=MzI5NDMzMjY1MA==&mid=2247484251&idx=1&sn=8602c659f7890064d7cf9f5d56d2a124&chksm=ec6532dedb12bbc86aa908ac42bb2ee9f4a2a7e46fd2848fb8e77db1d9657941038c4d0b4fee&scene=21#wechat_redirect)
+2.[深度学习中的Batch Normalization。](https://mp.weixin.qq.com/s?__biz=MzI5NDMzMjY1MA==&mid=2247484251&idx=1&sn=8602c659f7890064d7cf9f5d56d2a124&chksm=ec6532dedb12bbc86aa908ac42bb2ee9f4a2a7e46fd2848fb8e77db1d9657941038c4d0b4fee&scene=21\#wechat_redirect)
 
-3.[神经网络梯度消失和梯度爆炸及解决办法](https://mp.weixin.qq.com/s?__biz=MzI5NDMzMjY1MA==&mid=2247484212&idx=1&sn=28a68a2c0a1365004363306983cfbb7b&chksm=ec6532b1db12bba73f820c1a3c94d0c63a33c31e76322642d34e6e2283a053d53e258d3b5aa2&scene=21#wechat_redirect)
+3.[神经网络梯度消失和梯度爆炸及解决办法](https://mp.weixin.qq.com/s?__biz=MzI5NDMzMjY1MA==&mid=2247484212&idx=1&sn=28a68a2c0a1365004363306983cfbb7b&chksm=ec6532b1db12bba73f820c1a3c94d0c63a33c31e76322642d34e6e2283a053d53e258d3b5aa2&scene=21\#wechat_redirect)
 
-4.[ROC曲线和AUC面积理解](https://mp.weixin.qq.com/s?__biz=MzI5NDMzMjY1MA==&mid=2247484146&idx=1&sn=963765a3ede231292bcae8b6e21c5325&chksm=ec653377db12ba615279b2a9702f9c129dba27adbbe8936fcf2a211b3592f159738345dc8add&scene=21#wechat_redirect)
+4.[ROC曲线和AUC面积理解](https://mp.weixin.qq.com/s?__biz=MzI5NDMzMjY1MA==&mid=2247484146&idx=1&sn=963765a3ede231292bcae8b6e21c5325&chksm=ec653377db12ba615279b2a9702f9c129dba27adbbe8936fcf2a211b3592f159738345dc8add&scene=21\#wechat_redirect)
 
-5.[【错误率、精度、查准率、查全率和F1度量】详细介绍](https://mp.weixin.qq.com/s?__biz=MzI5NDMzMjY1MA==&mid=2247484127&idx=1&sn=9e59dc3f6f8a152e63361c399cb7124c&chksm=ec65335adb12ba4c86d6c5d88dfb0d2d4e5e06e264015cffaf2ce60e6d447fe7f27458f98c99&scene=21#wechat_redirect)
+5.[【错误率、精度、查准率、查全率和F1度量】详细介绍](https://mp.weixin.qq.com/s?__biz=MzI5NDMzMjY1MA==&mid=2247484127&idx=1&sn=9e59dc3f6f8a152e63361c399cb7124c&chksm=ec65335adb12ba4c86d6c5d88dfb0d2d4e5e06e264015cffaf2ce60e6d447fe7f27458f98c99&scene=21\#wechat_redirect)
 
 [Read in Cubox](https://cubox.pro/web/card/7320348013975569050)

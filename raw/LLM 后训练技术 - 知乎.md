@@ -18,7 +18,7 @@ tags:
 
 ---
 
-## 📖 正文全文
+\## 📖 正文全文
 
 # 全景解读 LLM 后训练技术
 
@@ -76,7 +76,7 @@ tags:
 
 这篇文章是以2025年2月的一篇综述论文为蓝本，对「[LLM后训练技术](https://zhida.zhihu.com/search?content_id=255062417&content_type=Article&match_order=1&q=LLM%E5%90%8E%E8%AE%AD%E7%BB%83%E6%8A%80%E6%9C%AF&zhida_source=entity)」的全景讲解：[\[2502.21321\] LLM Post-Training: A Deep Dive into Reasoning Large Language Models](https://link.zhihu.com/?target=https%3A//arxiv.org/abs/2502.21321)
 
-## 引言：从[预训练](https://zhida.zhihu.com/search?content_id=255062417&content_type=Article&match_order=1&q=%E9%A2%84%E8%AE%AD%E7%BB%83&zhida_source=entity)到后训练
+\## 引言：从[预训练](https://zhida.zhihu.com/search?content_id=255062417&content_type=Article&match_order=1&q=%E9%A2%84%E8%AE%AD%E7%BB%83&zhida_source=entity)到后训练
 
 2023 年，当 ChatGPT 惊艳世界时，很多人第一次意识到：原来 AI 不仅能背课文，还能写代码、编故事、解数学题。这些聪明表现的背后，得益于大语言模型（LLM）的两个关键训练阶段：**预训练** （Pretraining）和**后训练**（Post-training）。
 
@@ -91,9 +91,9 @@ tags:
 在后面的讲述中，我们沿用上述原论文给出的分类视角（taxonomy），从「微调」、「强化学习」、「测试时拓展」三个类别去认识各种后训练技术。
 ![](https://image.cubox.pro/cardImg/3cf5nw2r9vr21ku2ro42hsnzw3inn54kdaxqbd76h8hx3077uj.jpg?imageMogr2/quality/90/ignore-error/1)
 
-## 一、[微调技术](https://zhida.zhihu.com/search?content_id=255062417&content_type=Article&match_order=1&q=%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF&zhida_source=entity)：模型的定向进化
+\## 一、[微调技术](https://zhida.zhihu.com/search?content_id=255062417&content_type=Article&match_order=1&q=%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF&zhida_source=entity)：模型的定向进化
 
-### 1.1 全参数微调
+\#\## 1.1 全参数微调
 
 全参数微调（Full Fine-tuning）是指在预训练模型的基础上，使用下游任务的数据集，更新模型中的**所有参数**，以使模型适应特定任务。这种方法在早期的深度学习中非常常见，但随着模型规模的增大，其弊端也逐渐显现。
 
@@ -103,11 +103,11 @@ tags:
 | 灾难性遗忘 | 新任务覆盖旧知识        | 知识蒸馏 + 持续学习   |
 | 数据依赖  | 需要大量标注数据        | 提示学习 + 数据增强   |
 
-### 1.2 参数高效微调 (PEFT)
+\#\## 1.2 参数高效微调 (PEFT)
 
 参数高效微调（Parameter-Efficient Fine-Tuning，PEFT）是一系列旨在以较少的计算资源和数据量，实现与全参数微调相近性能的技术。这类方法通常**冻结** 预训练模型的大部分参数，只训练**少量额外的参数**。
 
-### 1.2.1 LoRA 系列技术
+\#\## 1.2.1 LoRA 系列技术
 
 **低秩适配（LoRA）** 的核心思想是冻结原始参数，通过低秩分解引入可训练参数。
 
@@ -148,7 +148,7 @@ LoRA 假设预训练模型的参数矩阵的更新可以表示为一个低秩矩
   * **核心思想** ：Delta-LoRA 引入**参数更新量的动量机制**。
   * **实现方式**：Delta-LoRA 在更新 LoRA 参数时，考虑之前的更新方向和幅度，从而更稳定地进行微调。
 
-### 1.2.2 提示微调技术
+\#\## 1.2.2 提示微调技术
 
 **提示微调（Prompt Tuning）** 是一种通过**设计合适的提示（Prompt）** 来引导预训练模型完成下游任务的技术。与全参数微调和 LoRA 不同，提示微调通常**不直接修改预训练模型的参数**（注意不是完全不修改参数），而是通过优化提示相关的向量来调整模型的行为。
 
@@ -205,7 +205,7 @@ LoRA 假设预训练模型的参数矩阵的更新可以表示为一个低秩矩
 * 最佳提示插入位置
 * 不同提示向量的权重分配
 
-### 1.3 [领域自适应微调](https://zhida.zhihu.com/search?content_id=255062417&content_type=Article&match_order=1&q=%E9%A2%86%E5%9F%9F%E8%87%AA%E9%80%82%E5%BA%94%E5%BE%AE%E8%B0%83&zhida_source=entity)
+\#\## 1.3 [领域自适应微调](https://zhida.zhihu.com/search?content_id=255062417&content_type=Article&match_order=1&q=%E9%A2%86%E5%9F%9F%E8%87%AA%E9%80%82%E5%BA%94%E5%BE%AE%E8%B0%83&zhida_source=entity)
 
 **领域自适应微调（Domain Adaptive Fine-Tuning）** 是指在特定领域的数据上对预训练模型进行微调，以使其更好地适应该领域的任务。这种方法在医疗、法律等专业领域尤其重要，因为这些领域的数据具有独特的特点和术语。
 
@@ -228,13 +228,13 @@ LoRA 假设预训练模型的参数矩阵的更新可以表示为一个低秩矩
     * **FActScore**：一种用于评估模型生成答案的事实一致性的指标。FActScore 越高，表示模型生成的答案与事实越一致。
     * **重要性**：在医疗领域，事实一致性至关重要。如果模型生成错误的医疗信息，可能会对患者的健康造成严重影响。
 
-## 二、强化学习：从对齐到推理
+\## 二、强化学习：从对齐到推理
 
-### 2.1 LLM推理技术全景图
+\#\## 2.1 LLM推理技术全景图
 
 ![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fpic2.zhimg.com%2Fv2-b4f88aeb2659f158f0313a8213693bb9_1440w.jpg&valid=false)
 
-### 2.2 [奖励建模](https://zhida.zhihu.com/search?content_id=255062417&content_type=Article&match_order=1&q=%E5%A5%96%E5%8A%B1%E5%BB%BA%E6%A8%A1&zhida_source=entity)
+\#\## 2.2 [奖励建模](https://zhida.zhihu.com/search?content_id=255062417&content_type=Article&match_order=1&q=%E5%A5%96%E5%8A%B1%E5%BB%BA%E6%A8%A1&zhida_source=entity)
 
 **奖励建模（Reward Modeling）** 是很多 RL 方法的关键步骤之一。它的目标是根据人类的偏好数据，训练一个能够预测人类对模型输出的偏好程度的模型。
 
@@ -255,7 +255,7 @@ LoRA 假设预训练模型的参数矩阵的更新可以表示为一个低秩矩
 
 这个公式表示，我们希望奖励模型给出的奖励值能够尽可能地符合人类的偏好。也就是说，如果人类更喜欢 <math xmlns="http://www.w3.org/1998/Math/MathML"> y i </math>y_i\\而不是 <math xmlns="http://www.w3.org/1998/Math/MathML"> y j </math>y_j\\，那么我们希望 <math xmlns="http://www.w3.org/1998/Math/MathML"> R ( x , y i ) </math>R(x, y_i)\\尽可能地大于 <math xmlns="http://www.w3.org/1998/Math/MathML"> R ( x , y j ) </math>R(x, y_j)\\。
 
-### 2.3 主流优化算法对比
+\#\## 2.3 主流优化算法对比
 
 |  方法  |   更新机制   |   优势   |     局限     |
 |------|----------|--------|------------|
@@ -265,7 +265,7 @@ LoRA 假设预训练模型的参数矩阵的更新可以表示为一个低秩矩
 
 ![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fpic2.zhimg.com%2Fv2-7afd94ac417b0429eee717697839ed91_1440w.jpg&valid=false)
 
-### 2.4 过程奖励 Vs 结果奖励
+\#\## 2.4 过程奖励 Vs 结果奖励
 
 在强化学习中，**奖励函数**的设计至关重要。奖励函数定义了模型在不同状态下应该获得的奖励，从而引导模型学习到期望的行为。
 
@@ -302,7 +302,7 @@ LoRA 假设预训练模型的参数矩阵的更新可以表示为一个低秩矩
 * **代码生成**：通过单元测试的比例。例如，如果模型生成的代码能够通过所有的单元测试，则给出正奖励；否则，给出负奖励。
 * **对话系统**：用户满意度评分。例如，如果用户对模型的回复感到满意，则给出正奖励；否则，给出负奖励。
 
-### 2.5 强化学习的推理增强实践
+\#\## 2.5 强化学习的推理增强实践
 
 举一个 **思维树（ToT）算法框架** 的例子：
 
@@ -313,9 +313,9 @@ LoRA 假设预训练模型的参数矩阵的更新可以表示为一个低秩矩
 
 ![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fpicx.zhimg.com%2Fv2-b40e19c9b5b2477204b7e549a89ea6a1_1440w.jpg&valid=false)
 
-## 三、[测试时扩展](https://zhida.zhihu.com/search?content_id=255062417&content_type=Article&match_order=1&q=%E6%B5%8B%E8%AF%95%E6%97%B6%E6%89%A9%E5%B1%95&zhida_source=entity)：推理即搜索
+\## 三、[测试时扩展](https://zhida.zhihu.com/search?content_id=255062417&content_type=Article&match_order=1&q=%E6%B5%8B%E8%AF%95%E6%97%B6%E6%89%A9%E5%B1%95&zhida_source=entity)：推理即搜索
 
-### 3.1 主流推理增强技术
+\#\## 3.1 主流推理增强技术
 
 |      方法       |      核心思想      |   适用场景    |
 |---------------|----------------|-----------|
@@ -324,7 +324,7 @@ LoRA 假设预训练模型的参数矩阵的更新可以表示为一个低秩矩
 | 思维树（ToT）      | 树形结构空间搜索       | 复杂规划问题    |
 | 蒙特卡洛树搜索（MCTS） | 模拟 - 评估 - 回溯机制 | 游戏类、策略性问题 |
 
-### 3.2 计算最优扩展策略
+\#\## 3.2 计算最优扩展策略
 
 不同的推理增强技术适用于不同的场景。如何根据具体的问题选择最优的推理增强技术呢？这就是 **计算最优扩展策略** 要解决的问题。
 
@@ -350,7 +350,7 @@ LoRA 假设预训练模型的参数矩阵的更新可以表示为一个低秩矩
 * **历史正确率统计**：如果模型在过去的历史数据中对类似问题的正确率较低，则说明该问题的难度较大。
 * **语义模糊性评分**：如果问题存在语义模糊性，则难度较大。例如，"苹果公司最近发布了什么？" 这个问题存在语义模糊性，因为 "发布" 可以指发布新产品、发布财报等。
 
-### 3.3 [验证器增强推理](https://zhida.zhihu.com/search?content_id=255062417&content_type=Article&match_order=1&q=%E9%AA%8C%E8%AF%81%E5%99%A8%E5%A2%9E%E5%BC%BA%E6%8E%A8%E7%90%86&zhida_source=entity)
+\#\## 3.3 [验证器增强推理](https://zhida.zhihu.com/search?content_id=255062417&content_type=Article&match_order=1&q=%E9%AA%8C%E8%AF%81%E5%99%A8%E5%A2%9E%E5%BC%BA%E6%8E%A8%E7%90%86&zhida_source=entity)
 
 **验证器增强推理** 是一种通过使用验证器（Verifier）来检查模型生成的答案的正确性，从而提高推理准确率的技术。
 
@@ -372,9 +372,9 @@ LoRA 假设预训练模型的参数矩阵的更新可以表示为一个低秩矩
 
 ![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fpica.zhimg.com%2Fv2-70daf2f26529e3b4a4d9b0eeb489bbcc_1440w.jpg&valid=false)
 
-## 四、挑战与未来方向
+\## 四、挑战与未来方向
 
-### 4.1 现有技术瓶颈
+\#\## 4.1 现有技术瓶颈
 
 **奖励误导（Reward Hacking）**
 
@@ -412,7 +412,7 @@ LoRA 假设预训练模型的参数矩阵的更新可以表示为一个低秩矩
 
 ![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fpicx.zhimg.com%2Fv2-82c472044a92c65a1b1facc4e526986f_1440w.jpg&valid=false)
 
-### 4.2 前沿研究方向
+\#\## 4.2 前沿研究方向
 
 为了解决上述技术瓶颈，研究人员正在探索一些新的研究方向。比如 **元认知机制** 、**物理推理融合** 、 **群体智能系统**等。下面我将对这些方向进行更详细的讲解：
 
@@ -448,13 +448,13 @@ LoRA 假设预训练模型的参数矩阵的更新可以表示为一个低秩矩
 
 在这个流程图中，「任务分解」Agent 负责将问题分解为多个子问题，并将这些子问题分配给各个子任务Agent。「结果整合」Agent 负责将这些结果整合起来，得到最终的答案。
 
-## 五、实践指南：如何选择后训练方案
+\## 五、实践指南：如何选择后训练方案
 
-### 5.1 决策流程图
+\#\## 5.1 决策流程图
 
 ![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fpicx.zhimg.com%2Fv2-44b1e97efa5e13d3183a9b45f8542935_1440w.jpg&valid=false)
 
-### 5.2 工具链推荐
+\#\## 5.2 工具链推荐
 
 |  工具类型  |         推荐选项         |     核心功能     |
 |--------|----------------------|--------------|

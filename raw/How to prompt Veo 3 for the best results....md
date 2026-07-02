@@ -17,7 +17,7 @@ Learn expert prompting techniques to create stunning videos with Google's Veo 3.
 
 ---
 
-## 📖 正文全文
+\## 📖 正文全文
 
 # How to prompt Veo 3 for the best results
 
@@ -31,7 +31,7 @@ Ready to give it a spin?
 Let our resident AI podcaster introduce us:
 Prompt: A podcast show, a woman in a grey sweater and dark brown tousled hair in an updo, she looks directly at the camera, with strands framing her face. She talks into a mic saying: This is Replicate's guide to prompting Veo 3...
 
-## Write what happens
+\## Write what happens
 
 First the basics. A well-crafted prompt is the key to generating good videos. The more you can specify in your prompt, in plain language, the easier it is for Veo 3 to understand and generate the video you want.
 
@@ -61,7 +61,7 @@ Basic prompt
 Your browser does not support the video tag.
 Detailed prompt
 
-### Change your prompt each time
+\#\## Change your prompt each time
 
 If you're familiar with prompting models like Midjourney or [Flux](https://replicate.com/black-forest-labs/flux-1.1-pro), you'll know that with those models you'll get a decent level of variation if you run the same prompt a few times (ie using different seeds).
 
@@ -93,7 +93,7 @@ a woman laughs long and loudly, she's in an office meeting and she's embarrassed
 
 <br />
 
-## Character consistency
+\## Character consistency
 
 Typically character consistency is hard when you're using a video model without a starting frame or scene ingredients. These features are coming to Veo 3 soon.
 
@@ -108,7 +108,7 @@ John, a man in his 40s with short brown hair, wearing a blue jacket and glasses,
 
 <br />
 
-## Prompting audio
+\## Prompting audio
 
 As Veo 3 generates audio with each video, you also need to prompt for the audio you want to hear. Consider these elements:
 
@@ -117,7 +117,7 @@ As Veo 3 generates audio with each video, you also need to prompt for the audio 
 3. Sound effects or noises from outside the scene (like a phone ringing)
 4. Any music the scene might need (a tense cinematic score, a cheerful pop song, etc).
 
-### Prompting dialogue and avoiding subtitles
+\#\## Prompting dialogue and avoiding subtitles
 
 The characters you can create with Veo 3 are fascinating. They talk, tell jokes, gesticulate, sometimes they can act. But if you want them to talk, you need to prompt for that.
 
@@ -128,7 +128,7 @@ You can prompt dialogue in two different ways:
 
 Both of these will lead to a video of a guy talking, the first will use the exact words you asked for, the second will let the model decide how to say it, in this case the model will decide on a name for you.
 
-#### Writing your own dialogue
+\#\#\## Writing your own dialogue
 
 If you're being explicit about what's being said, try to keep your dialogue short. It should be something that can be said in just about 8 seconds.
 
@@ -140,7 +140,7 @@ John, a man in his 40s with short brown hair, wearing a blue jacket and glasses,
 
 <br />
 
-#### Letting Veo 3 script the dialogue
+\#\#\## Letting Veo 3 script the dialogue
 
 If you aren't good at writing dialogue, implicit dialogue prompts will help. And you can always transcribe the outputs you liked for use in later prompts.
 
@@ -161,7 +161,7 @@ Some prompts you could try to see how versatile Veo 3 is with dialogue:
 * a man is having an argument over the phone
 * a woman tells us her life story
 
-#### Getting pronunciation right
+\#\#\## Getting pronunciation right
 
 Sometimes you'll find that the model is pronouncing words incorrectly. The easiest way to handle this is to spell the words phonetically. In the opening example, our podcaster says:
 > Read on to get fofr and Shridar's guidance on making videos
@@ -169,7 +169,7 @@ Sometimes you'll find that the model is pronouncing words incorrectly. The easie
 But to get the correct pronunciation for our names, we had to change the prompt to:
 > Read on to get foh-fur's and Shreedar's guidance on making videos
 
-#### Who says what
+\#\#\## Who says what
 
 When you prompt a conversation between multiple characters you will sometimes find that Veo 3 mixes up who says what. This is common when the characters have similar descriptions, and it's ambiguous to Veo 3 which character is which.
 
@@ -177,7 +177,7 @@ Try to be specific in your prompt about who is speaking:
 > The woman wearing pink says: But I'm the one who's wearing pink
 > The man with the glasses replies: No, I'm the one with the glasses
 
-### Avoiding subtitles in outputs
+\#\## Avoiding subtitles in outputs
 
 Veo 3 must have been trained on plenty of videos with baked-in subtitles, because it's very common to see poorly spelled and incorrect subtitles in the outputs. They often ruin a generation, but there are a couple of easy ways to avoid them:
 
@@ -185,7 +185,7 @@ Veo 3 must have been trained on plenty of videos with baked-in subtitles, becaus
 * put "(no subtitles)" in the prompt, negatives work well in Veo 3 prompts
 * if all else fails, keep saying No subtitles. No subtitles! Multiple times.
 
-### The wrong background audio (or the case of the unwanted live studio audience)
+\#\## The wrong background audio (or the case of the unwanted live studio audience)
 
 If you don't define the background audio you want to hear in your video, then Veo 3 needs to work it out, often that's ok, but sometimes it gets it wrong. A live studio audience is a common hallucination. Sometimes it's what you want, like a fake sitcom. But usually the extra laughter doesn't fit the scene. Veo 3 even did this when making the examples above, here's an example of an out of place studio audience ruining a generation:
 Example of unwanted studio audience laughter in the background.  
@@ -193,13 +193,13 @@ Prompt: "a standup comic tells an awkward joke at a music festival"
 
 The easiest way to avoid this is to prompt the audio you expect to hear explicitly. In this case we fixed the generation by adding "sounds of distant bands, noisy crowd, ambient background of a busy festival field" to get the right sort of feeling in the output.
 
-## Prompting music
+\## Prompting music
 
 Just like the rest of the video, if you want music in your scene you need to include it in your prompt.
 
 Again, you can be explicit and describe the genre, style and mood of the music you want to hear. Or you can be more vague and let Veo 3 decide.
 
-## Styles
+\## Styles
 
 Out of the box Veo 3 will typically generate something that looks like a well-produced live action video, think smooth professional demo, a commercial or a music video.
 
@@ -246,7 +246,7 @@ Anime
 Your browser does not support the video tag.
 Marble
 
-## Camera motion
+\## Camera motion
 
 As you might expect, just like other video models, Veo 3 responds well to common camera movement prompts. Using terms like these, you can control the action in your video:
 
@@ -270,7 +270,7 @@ Left to right pan
 Your browser does not support the video tag.
 Dolly shot
 
-## Selfie-style videos
+\## Selfie-style videos
 
 Veo 3 is surprisingly good at making selfie videos that actually look real. We've found that certain phrases seem to unlock this behavior consistently.
 
@@ -292,7 +292,7 @@ Tokyo travel blogger Gorilla selfie
 
 One more thing the Tokyo example shows: adding "The image is slightly grainy, looks very film-like" seems to push the output away from that too-clean AI look. It ends up feeling more like something that was actually shot on a phone.
 
-## How to make vertical videos with Veo 3
+\## How to make vertical videos with Veo 3
 
 At the moment Veo 3 doesn't natively support vertical videos, only 16:9 horizontal are possible. You can however take a landscape video and outpaint it using a model like [Luma's Reframe Video](https://replicate.com/luma/reframe-video).
 
@@ -301,7 +301,7 @@ A Veo 3 video that was reframed as a 9:16 vertical video
 
 Native support for vertical videos in Veo 3 is coming soon.
 
-## Physics
+\## Physics
 
 Veo 3 excels at simulating realistic physics, maintaining proper motion and interactions while applying different styles. The model preserves the natural movement of objects, ensuring that physics-based animations like falling, bouncing, and fluid motion remain physically accurate even when transformed into different artistic styles.
 
@@ -317,11 +317,11 @@ Chrome
 Your browser does not support the video tag.
 Paint
 
-## Upscaling to 4k and 60fps
+\## Upscaling to 4k and 60fps
 
 By default, Veo 3 outputs 1280p x 720p video. We recommend using [Topaz Lab's Video Upscaler](https://replicate.com/topazlabs/video-upscale) to bring your videos up to 4k resolution and 60 frames-per-second.
 
-## Final remarks
+\## Final remarks
 
 The difference between a bland video and a great one comes down to your prompt. With Veo 3, you're not just describing what happens, you're directing a scene. High quality videos will layer in subject, setting, action, camera work, audio and mood. Think like a filmmaker and [Veo 3](https://replicate.com/google/veo-3) will follow your lead.
 

@@ -18,7 +18,7 @@ tags:
 
 ---
 
-## 📖 正文全文
+\## 📖 正文全文
 
 # RAG从入门到精通系列4：Query Construction（查询构造）
 
@@ -33,7 +33,7 @@ RAG（Retrieval Augmented Generation，检索增强生成）是一种将 LLM 与
 
 ![](https://image.cubox.pro/cardImg/2tofsitxtpibxotyebymmk7f8wvbv1v3xteqnpeld4am58om51?imageMogr2/quality/90/format/gif/ignore-error/1)
 
-我们从《[RAG从入门到精通系列3：Routing（路由）](https://mp.weixin.qq.com/s?__biz=MzI2ODUyMTQyNA==&mid=2247495394&idx=1&sn=fe6c0e48aa97c9eded45d996041a88b1&scene=21#wechat_redirect)》中学习了 ****Routing**** ，在本文中我们将进入下一个节点：**Query Construction**（查询构造）。
+我们从《[RAG从入门到精通系列3：Routing（路由）](https://mp.weixin.qq.com/s?__biz=MzI2ODUyMTQyNA==&mid=2247495394&idx=1&sn=fe6c0e48aa97c9eded45d996041a88b1&scene=21\#wechat_redirect)》中学习了 ****Routing**** ，在本文中我们将进入下一个节点：**Query Construction**（查询构造）。
 
 ![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fmmbiz.qpic.cn%2Fsz_mmbiz_png%2FSaeK9tW7BuicRwlC67ibqX1RQicOxmMia6pdqqGf48RUOPAIWC4ezPPzEsIdzQrhwMENQmudSlqe8V0JAeaHpJvhug%2F640%3Fwx_fmt%3Dpng%26from%3Dappmsg%26tp%3Dwebp%26wxfrom%3D5%26wx_lazy%3D1%26wx_co%3D1&valid=false)
 

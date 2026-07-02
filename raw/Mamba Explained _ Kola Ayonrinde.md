@@ -17,13 +17,13 @@ The State Space Model taking on Transformers
 
 ---
 
-## 📖 正文全文
+\## 📖 正文全文
 
 # Mamba Explained
 
 [www.kolaayonrinde.com](https://www.kolaayonrinde.com/blog/2024/02/11/mamba.html)Kola Ayonrinde
 
-### The State Space Model taking on Transformers
+\#\## The State Space Model taking on Transformers
 
 ![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fwww.kolaayonrinde.com%2Fblog%2Fimages%2Fmamba%2Fsnake.png&valid=true)
 
@@ -44,7 +44,7 @@ Here we'll discuss:
 * Analogies and intuitions for thinking about Mamba, and
 * What Mamba means for Interpretability, AI Safety and Applications.
 
-## Problems with Transformers - Maybe Attention *Isn't* All You Need
+\## Problems with Transformers - Maybe Attention *Isn't* All You Need
 
 We're very much in the Transformer-era of history. ML used to be about detecting cats and dogs. Now, with Transformers, we're [generating human-like poetry](https://openai.com/research/gpt-4), [coding better than the median competitive programmer](https://storage.googleapis.com/deepmind-media/AlphaCode2/AlphaCode2_Tech_Report.pdf), and [solving the protein folding problem](https://www.nature.com/articles/s41586-021-03819-2).
 
@@ -58,7 +58,7 @@ To add insult to injury, storing this KV cache requires O(n) space. The fateful 
 
 On the margin, we can mitigate the quadratic bottleneck with techniques like [Sliding Window Attention](https://paperswithcode.com/method/sliding-window-attention) or clever CUDA optimisations like [FlashAttention](https://arxiv.org/pdf/2205.14135.pdf). But ultimately, for super long context windows (like a chatbot which remembers every conversation you've shared), we need a different approach.
 
-### Foundation Model Backbones
+\#\## Foundation Model Backbones
 
 Fundamentally, all good ML architecture backbones have components for two important operations:
 
@@ -77,7 +77,7 @@ Like a Transformer made up of stacked transformer blocks, Mamba is made up of st
 
 We would like to understand and motivate the choice of the SSM for sequence transformations.
 
-## Motivating Mamba - A Throwback to Temple Run
+\## Motivating Mamba - A Throwback to Temple Run
 
 Imagine we're building a Temple Run agent ^4^. It chooses if the runner should move left or right at any time.
 
@@ -106,11 +106,11 @@ The system evolves as a function of the current state and new observations. A sm
 
 You can learn a lot about the system dynamics by observing the top of the screen - if it's moving faster, we can infer the whole screen is and the game is speeding up^5^. In this way, even if we start off knowing nothing about the game except our limited observation, pretty soon we could understand the whole screen.
 
-### What's the State?
+\#\## What's the State?
 
 Here, **state** refers to the variables that, when combined with the input variables, fully determine the future system behaviour. In theory, once we have the state, there's nothing else we need to know about the past to predict the future. With this choice of state, the system is converted to a **Markov Decision Process** . Ideally, the state is a fairly small amount of information which captures the essential properties of the system. That is, **the state is a compression of the past** ^6^
 
-## Discretisation - How To Deal With Living in a Quantised World
+\## Discretisation - How To Deal With Living in a Quantised World
 
 Okay, great! So, given some state and input observation, we have an autoregressive-style system to determine the next action. Amazing!
 
@@ -151,7 +151,7 @@ Hence, after renaming the coefficients and relabelling indices, we have the disc
 If you've ever looked at an RNN before ^10^ and this feels familiar - *trust your instincts*:
 > We have some input x, which is combined with the previous hidden state by some transform to give the new hidden state. Then we use the hidden state to calculate the output at each time step.
 
-## Understanding the SSM Matrices
+\## Understanding the SSM Matrices
 
 Now, we can interpret the A, B, C, D matrices more intuitively:
 
@@ -170,7 +170,7 @@ And that's it! That's the SSM, our \~drop-in replacement for Attention (`Communi
 
 Okay great, that's the theory - but does this work? Well...
 
-## Effectiveness vs Efficiency: Attention is Focus, Selectivity is Prioritisation
+\## Effectiveness vs Efficiency: Attention is Focus, Selectivity is Prioritisation
 
 At WWDC '97, Steve Jobs famously noted that "[focusing is about saying no](https://www.youtube.com/watch?v=H8eP99neOVs&t=98s)". Focus is ruthless prioritisation. It's common to think about Attention *positively* as choosing what to *notice* . In the Steve Jobs sense, we might instead frame Attention *negatively* as choosing what to *discard*.
 
@@ -198,7 +198,7 @@ We'd like something closer to the Pareto frontier of the effectiveness/efficienc
 
 SSMs are as **efficient** as RNNs, but we might wonder how **effective** they are. After all, it seems like they would have a hard time discarding only *unnecessary* information and keeping everything relevant. If each token is being processed the same way, applying the same A and B matrices as if in a factory assembly line for tokens, there is no context-dependence. We would like the forgetting and remembering matrices (A and B respectively) to vary and dynamically adapt to inputs.
 
-### The Selection Mechanism
+\#\## The Selection Mechanism
 
 **Selectivity** allows each token to be transformed into the state in a way that is unique to its own needs. Selectivity is what takes us from vanilla SSM models (applying the same A (forgetting) and B (remembering) matrices to every input) to Mamba, the ***Selective*** *State Space Model*.
 
@@ -224,7 +224,7 @@ Humans (mostly) don't have photographic memory for everything they experience wi
 
 If we had infinite capacity for memorisation, it's clear the transformer approach is better than the human approach - it truly is more effective. But it's less efficient - transformers have to store so much information about the past that might not be relevant. Transformers (🤖) only decide what's relevant at **recall time** . The innovation of Mamba (🐍) is allowing the model better ways of forgetting earlier - it's focusing by choosing what to *discard* using **Selectivity** , throwing away less relevant information at **memory-making time** ^16^.
 
-### The Problems of Selectivity
+\#\## The Problems of Selectivity
 
 Applying the Selection Mechanism does have its gotchas though. Non-selective SSMs (i.e. A,B not dependent on x) are fast to compute in training. This is because the component of <math xmlns="http://www.w3.org/1998/Math/MathML"> y t </math> which depends on <math xmlns="http://www.w3.org/1998/Math/MathML"> x i </math> can be expressed as a linear map, i.e. a single matrix that can be precomputed!
 
@@ -238,7 +238,7 @@ If we're paying attention, we might spot something even better here - this expre
 
 Unfortunately, with the Selection Mechanism, we lose the convolutional form. Much attention is given to making Mamba efficient on modern GPU hardware using similar hardware optimisation tricks to Tri Dao's Flash Attention ^17^. With the hardware optimisations, Mamba is able to run faster than comparably sized Transformers.
 
-### Machine Learning for Political Economists - How Large Should The State Be?
+\#\## Machine Learning for Political Economists - How Large Should The State Be?
 
 The Mamba authors write, "the efficiency vs. effectiveness tradeoff of sequence models is characterised by how well they compress their state". In other words, like in political economy^18^, the fundamental problem is how to manage the state.
 
@@ -255,26 +255,26 @@ The Mamba authors write, "the efficiency vs. effectiveness tradeoff of sequence 
 
 The upshot is **state representation is critical** . A smaller state is more efficient; a larger state is more effective. The key is to **selectively** and **dynamically** compress data into the state. Mamba's Selection Mechanism allows for context-dependent reasoning, focusing and ignoring. For both performance and interpretability, understanding the state seems to be very useful.
 
-## Information Flow in Transformer vs Mamba
+\## Information Flow in Transformer vs Mamba
 
 How do Transformers know anything? At initialisation, a transformer isn't very smart. It learns in two ways:
 
 1. Training data (Pretraining, SFT, RLHF etc)
 2. In context-data
 
-#### Training Data
+\#\#\## Training Data
 
 Models learn from their training data. This is a kind of lossy compression of input data into the weights. We can think of the effect of pretraining data on the transformer kinda like the effect of your ancestor's experiences on your genetics - you can't recall their experiences, you just have vague instincts about them ^20^.
 
-#### In Context-Data
+\#\#\## In Context-Data
 
 Transformers use their context as short-term memory, which they can recall with \~perfect fidelity. So we get [In-Context Learning](https://thegradient.pub/in-context-learning-in-context/), e.g. using induction heads to solve the [Indirect Object Identification](https://arxiv.org/pdf/2211.00593.pdf) task, or [computing Linear Regression](https://proceedings.neurips.cc/paper_files/paper/2022/file/c529dba08a146ea8d6cf715ae8930cbe-Paper-Conference.pdf).
 
-#### Retrieval
+\#\#\## Retrieval
 
 Note that Transformers don't filter their context at all until recall time. So if we have a bunch of information we think *might* be useful to the Transformer, we filter it *outside* the Transformer (using Information Retrieval strategies) and then stuff the results into the prompt. This process is known as Retrieval Augmented Generation (RAG). RAG determines relevant information for the context window of a transformer. A human with the internet is kinda like a RAG system - you still have to know what to search but whatever you retrieve is as salient as short-term memory to you.
 
-#### Information Flow for Mamba
+\#\#\## Information Flow for Mamba
 
 Training Data acts similarly for Mamba. However, the lines are slightly blurred for in-context data and retrieval. In-context data for Mamba *is* compressed/filtered similar to retrieval data for transformers. This in-context data is also accessible for look-up like for transformers (although with somewhat lower fidelity).
 
@@ -282,7 +282,7 @@ Training Data acts similarly for Mamba. However, the lines are slightly blurred 
 
 Transformer context is to Mamba states what short-term is to long-term memory. Mamba doesn't just have "RAM", it has a hard drive^21^ ^22^.
 
-### Swapping States as a New Prompting Paradigm
+\#\## Swapping States as a New Prompting Paradigm
 
 Currently, we often use RAG to give a transformer contextual information.
 
@@ -308,7 +308,7 @@ The structure of an effective LLM call goes from...
 
 This is cheaper and faster than few-shot prompting (as the state is infinitely reusable without inference cost). It's also MUCH cheaper than finetuning and doesn't require any gradient updates. We could imagine retrieving states in addition to context.
 
-## Mamba \& Mechanistic Interpretability
+\## Mamba \& Mechanistic Interpretability
 
 Transformer interpretability typically involves:
 
@@ -329,7 +329,7 @@ The model is expected to fill in the blank with the name that is not repeated in
 
 Since it's hypothesised that much of In-Context Learning in Transformers is downstream of more primitive sequence position operations (like [Induction Heads](https://transformer-circuits.pub/2022/in-context-learning-and-induction-heads/index.html)), Mamba being able to complete this task suggests a more general In-Context Learning ability.
 
-## What's Next for Mamba \& SSMs?
+\## What's Next for Mamba \& SSMs?
 
 Mamba-like models are likely to excel in scenarios requiring extremely long context and long-term memory. Examples include:
 
@@ -354,13 +354,13 @@ Your chatbot co-evolves with you. It remembers.
 
 ![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fwww.kolaayonrinde.com%2Fblog%2Fimages%2Fmamba%2Fher.png&valid=true) The film HER is looking better and better as time goes on 😳
 
-### Agents \& AI Safety
+\#\## Agents \& AI Safety
 
 One reason for positive updates in existential risk from AGI is Language Models. Previously, Deep-RL agents trained via self-play looked set to be the first AGIs. Language models are inherently much safer since they aren't trained with long-term goals. ^25^
 
 The potential for long-term sequence reasoning here brings back the importance of agent-based AI safety. Few agent worries are relevant to Transformers with an 8k context window. Many are relevant to systems with impressive long-term memories and possible instrumental goals.
 
-### The Best Collab Since Taco Bell \& KFC: 🤖 x 🐍
+\#\## The Best Collab Since Taco Bell \& KFC: 🤖 x 🐍
 
 The Mamba authors show that there's value in combining Mamba's long context with the Transformer's high fidelity over short sequences. For example, if you're making long videos, you likely can't fit a whole movie into a Transformer's context for attention ^26^. You could imagine having Attention look at the most recent frames for short-term fluidity and an SSM for long-term narrative consistency ^27^.
 

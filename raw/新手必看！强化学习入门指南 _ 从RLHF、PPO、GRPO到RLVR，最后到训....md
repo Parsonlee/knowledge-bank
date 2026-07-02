@@ -15,7 +15,7 @@ tags:
 
 ---
 
-## Annotations  
+\## Annotations  
 
 > GRPO 完全移除了价值模型，但我们仍然需要根据当前状态估算「平均奖励」。诀窍在于对 LLM 进行采样！然后，我们通过统计多个不同问题的采样过程来计算平均奖励。  
 
@@ -24,7 +24,7 @@ tags:
 
 ---
 
-## 📖 正文全文
+\## 📖 正文全文
 
 # 新手必看！强化学习入门指南 \| 从RLHF、PPO、GRPO到RLVR，最后到训练推理模型
 
@@ -36,7 +36,7 @@ tags:
 更多干货，第一时间送达
 
 
-更多精彩内容-\>[专注大模型、Agent、RAG等前沿分享！](https://mp.weixin.qq.com/s?__biz=MzUzOTgwNDMzOQ==&mid=2247502960&idx=1&sn=e938491c6253a6525ab37a9238111059&scene=21&token=646435429&lang=zh_CN#wechat_redirect)
+更多精彩内容-\>[专注大模型、Agent、RAG等前沿分享！](https://mp.weixin.qq.com/s?__biz=MzUzOTgwNDMzOQ==&mid=2247502960&idx=1&sn=e938491c6253a6525ab37a9238111059&scene=21&token=646435429&lang=zh_CN\#wechat_redirect)
 
 强化学习（RL）已经成为当今 LLM 不可或缺的技术之一。从大模型对齐到推理模型训练再到如今的智能体强化学习（Agentic RL），你几乎能在当今 AI 领域的每个领域看到强化学习的身影。
 
@@ -151,7 +151,7 @@ GRPO 完全移除了价值模型，但我们仍然需要根据当前状态估算
 
 仅凭这两个，我们基本上可以无限次调用语言模型，直到得到一个好的答案。例如，对于「What is 2+2?」，一个未经训练的糟糕模型语言模型可能会输出：
 
-0、cat、-10、1928、3、A、B、122、17、182、172、A、C、BAHS、%$、#、9、-192、12.31，然后突然变为 4。
+0、cat、-10、1928、3、A、B、122、17、182、172、A、C、BAHS、%$、\#、9、-192、12.31，然后突然变为 4。
 
 奖励信号为 0、0、0、0、0、0、0、0、0、0、0、0、0、0、0，然后突然变为 1。
 
@@ -161,7 +161,7 @@ GRPO 完全移除了价值模型，但我们仍然需要根据当前状态估算
 
 本质上，强化学习提供了一种技巧 ------ 与其简单地等待无限，不如在实实在在地收到「坏信号」（即坏答案）时去「引导」模型尝试不生成坏答案。这意味着，尽管你可能等待了很长时间才出现一个「好」答案，但模型其实已经在尽力调整，尽量不输出坏答案。
 
-在「What is 2+2?」这个例子中，先出现了 0、cat、-10、1928、3、A、B、122、17、182、172、A、C、BAHS、%$、#、9、-192、12.31，然后突然出现了 4。
+在「What is 2+2?」这个例子中，先出现了 0、cat、-10、1928、3、A、B、122、17、182、172、A、C、BAHS、%$、\#、9、-192、12.31，然后突然出现了 4。
 
 由于我们得到了坏答案，强化学习会影响模型，使其尝试不输出坏答案。这意味着随着时间的推移，我们会仔细地「修剪」或移动模型的输出分布，使其远离错误答案。这意味着强化学习并非低效，因为我们并非只是等待无限，而是积极地尝试「推动」模型尽可能地向「正确答案空间」靠拢。
 
@@ -185,9 +185,9 @@ GRPO 是如何训练模型的？
 
 4. 该模型的学习方式是在每一步对权重进行更新。
 
-这里有一些示例笔记本：https://docs.unsloth.ai/get-started/unsloth-notebooks#grpo-reasoning-notebooks
+这里有一些示例笔记本：https://docs.unsloth.ai/get-started/unsloth-notebooks\#grpo-reasoning-notebooks
 
-更多精彩内容--\>[专注大模型/AIGC、Agent、RAG等学术前沿分享！](https://mp.weixin.qq.com/s?__biz=MzUzOTgwNDMzOQ==&mid=2247502960&idx=1&sn=e938491c6253a6525ab37a9238111059&scene=21#wechat_redirect)
+更多精彩内容--\>[专注大模型/AIGC、Agent、RAG等学术前沿分享！](https://mp.weixin.qq.com/s?__biz=MzUzOTgwNDMzOQ==&mid=2247502960&idx=1&sn=e938491c6253a6525ab37a9238111059&scene=21\#wechat_redirect)
 
 基础知识/技巧
 
@@ -325,35 +325,35 @@ GSM8K 奖励函数
 
 * xmlcount_reward_func -- 确保响应中每个 XML 标签恰好对应一个。
 
-## 推荐阅读
+\## 推荐阅读
 
-\[1\][Transformer\|前馈神经网络（FFN）](https://mp.weixin.qq.com/s?__biz=MzUzOTgwNDMzOQ==&mid=2247503288&idx=1&sn=ee4b2bc1b396a1e82725998911ded45d&scene=21#wechat_redirect)
+\[1\][Transformer\|前馈神经网络（FFN）](https://mp.weixin.qq.com/s?__biz=MzUzOTgwNDMzOQ==&mid=2247503288&idx=1&sn=ee4b2bc1b396a1e82725998911ded45d&scene=21\#wechat_redirect)
 
-\[2\][Transformer\|从MHA到DeepSeek MLA！](https://mp.weixin.qq.com/s?__biz=MzUzOTgwNDMzOQ==&mid=2247502844&idx=1&sn=067165341bbfeba775fa4301a9d1095e&scene=21#wechat_redirect)  
+\[2\][Transformer\|从MHA到DeepSeek MLA！](https://mp.weixin.qq.com/s?__biz=MzUzOTgwNDMzOQ==&mid=2247502844&idx=1&sn=067165341bbfeba775fa4301a9d1095e&scene=21\#wechat_redirect)  
 
-\[3\][Transformer\|注意力机制Attentio](https://mp.weixin.qq.com/s?__biz=MzUzOTgwNDMzOQ==&mid=2247503167&idx=1&sn=28f09a3d817e2eb44d05efb09469a121&scene=21#wechat_redirect)n
+\[3\][Transformer\|注意力机制Attentio](https://mp.weixin.qq.com/s?__biz=MzUzOTgwNDMzOQ==&mid=2247503167&idx=1&sn=28f09a3d817e2eb44d05efb09469a121&scene=21\#wechat_redirect)n
 
-\[4\][Transformer\|MoE架构（含DeepSeek）](https://mp.weixin.qq.com/s?__biz=MzUzOTgwNDMzOQ==&mid=2247503052&idx=1&sn=c359ce895889fc9538614a3637cd5ca1&scene=21#wechat_redirect)
+\[4\][Transformer\|MoE架构（含DeepSeek）](https://mp.weixin.qq.com/s?__biz=MzUzOTgwNDMzOQ==&mid=2247503052&idx=1&sn=c359ce895889fc9538614a3637cd5ca1&scene=21\#wechat_redirect)
 
-\[5\][Transformer\|](https://mp.weixin.qq.com/s?__biz=MzUzOTgwNDMzOQ==&mid=2247503052&idx=1&sn=c359ce895889fc9538614a3637cd5ca1&scene=21#wechat_redirect)归一化(Normalization)
+\[5\][Transformer\|](https://mp.weixin.qq.com/s?__biz=MzUzOTgwNDMzOQ==&mid=2247503052&idx=1&sn=c359ce895889fc9538614a3637cd5ca1&scene=21\#wechat_redirect)归一化(Normalization)
 
-\[6\][Transformer\|位置编码（DeepSeek位置编码）](https://mp.weixin.qq.com/s?__biz=MzUzOTgwNDMzOQ==&mid=2247503621&idx=1&sn=208f1af0b06d7b2a67b1abba3cc8feaf&scene=21&token=1395322781&lang=zh_CN#wechat_redirect)
+\[6\][Transformer\|位置编码（DeepSeek位置编码）](https://mp.weixin.qq.com/s?__biz=MzUzOTgwNDMzOQ==&mid=2247503621&idx=1&sn=208f1af0b06d7b2a67b1abba3cc8feaf&scene=21&token=1395322781&lang=zh_CN\#wechat_redirect)
 
-更多精彩内容--\>[专注大模型/AIGC、Agent、RAG等学术前沿分享！](https://mp.weixin.qq.com/s?__biz=MzUzOTgwNDMzOQ==&mid=2247502960&idx=1&sn=e938491c6253a6525ab37a9238111059&scene=21#wechat_redirect)
+更多精彩内容--\>[专注大模型/AIGC、Agent、RAG等学术前沿分享！](https://mp.weixin.qq.com/s?__biz=MzUzOTgwNDMzOQ==&mid=2247502960&idx=1&sn=e938491c6253a6525ab37a9238111059&scene=21\#wechat_redirect)
 
-## AI-Agent文章推荐
+\## AI-Agent文章推荐
 
-\[1\][Gartner预测，2028年Agent应用将融入1/3的企业软件」](https://mp.weixin.qq.com/s?__biz=MzUzOTgwNDMzOQ==&mid=2247503352&idx=1&sn=2060166c055cae370bf8e1fcd6cda4f0&scene=21#wechat_redirect)
+\[1\][Gartner预测，2028年Agent应用将融入1/3的企业软件」](https://mp.weixin.qq.com/s?__biz=MzUzOTgwNDMzOQ==&mid=2247503352&idx=1&sn=2060166c055cae370bf8e1fcd6cda4f0&scene=21\#wechat_redirect)
 
-\[2\][大模型Agent \| 构建AI-Agent的 5大挑战，及解决方案！](https://mp.weixin.qq.com/s?__biz=MzUzOTgwNDMzOQ==&mid=2247503319&idx=1&sn=350ef84bc745020205924299fb0fd19e&scene=21#wechat_redirect)
+\[2\][大模型Agent \| 构建AI-Agent的 5大挑战，及解决方案！](https://mp.weixin.qq.com/s?__biz=MzUzOTgwNDMzOQ==&mid=2247503319&idx=1&sn=350ef84bc745020205924299fb0fd19e&scene=21\#wechat_redirect)
 
-\[3\][盘点一下！大模型Agent"花式玩法"](https://mp.weixin.qq.com/s?__biz=MzUzOTgwNDMzOQ==&mid=2247503082&idx=1&sn=200478638eb006682b74c4699d3e8884&scene=21#wechat_redirect)
+\[3\][盘点一下！大模型Agent"花式玩法"](https://mp.weixin.qq.com/s?__biz=MzUzOTgwNDMzOQ==&mid=2247503082&idx=1&sn=200478638eb006682b74c4699d3e8884&scene=21\#wechat_redirect)
 
-\[4\][大模型Agent的USB接口--MCP](https://mp.weixin.qq.com/s?__biz=MzUzOTgwNDMzOQ==&mid=2247503133&idx=1&sn=6288a4f5a4a654849ed5b3e2aae54fa7&scene=21#wechat_redirect)
+\[4\][大模型Agent的USB接口--MCP](https://mp.weixin.qq.com/s?__biz=MzUzOTgwNDMzOQ==&mid=2247503133&idx=1&sn=6288a4f5a4a654849ed5b3e2aae54fa7&scene=21\#wechat_redirect)
 
-\[5\][2025年的风口！\| 万字长文纵观大模型Agent！](https://mp.weixin.qq.com/s?__biz=MzUzOTgwNDMzOQ==&mid=2247502963&idx=1&sn=175be55cd5578c843b2d55090716dee3&scene=21#wechat_redirect)
+\[5\][2025年的风口！\| 万字长文纵观大模型Agent！](https://mp.weixin.qq.com/s?__biz=MzUzOTgwNDMzOQ==&mid=2247502963&idx=1&sn=175be55cd5578c843b2d55090716dee3&scene=21\#wechat_redirect)
 
-\[6\][万字长文！从AI Agent到Agent工作流，一文详细了解代理工作流(Agentic Workflows)](https://mp.weixin.qq.com/s?__biz=MzUzOTgwNDMzOQ==&mid=2247503120&idx=1&sn=c3b794e337635420dcea77e76804c7f2&scene=21#wechat_redirect)
+\[6\][万字长文！从AI Agent到Agent工作流，一文详细了解代理工作流(Agentic Workflows)](https://mp.weixin.qq.com/s?__biz=MzUzOTgwNDMzOQ==&mid=2247503120&idx=1&sn=c3b794e337635420dcea77e76804c7f2&scene=21\#wechat_redirect)
 
 欢迎投稿或寻求报道，联系：ainlperbot
 

@@ -18,7 +18,7 @@ tags:
 
 ---
 
-## 📖 正文全文
+\## 📖 正文全文
 
 # 即插即用、简单有效的大语言模型推荐算法！港大联合百度推出RLMRec
 
@@ -177,16 +177,16 @@ https://sites.google.com/view/chaoh/group-join-us?authuser=0
 **更多阅读**
 
 
-[![图片](https://image.cubox.pro/cardImg/2024020719473272116/68488.jpg?imageMogr2/quality/90/ignore-error/1)](https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&mid=2247651348&idx=1&sn=f675292dc2382fe406cf9a083bc43fe8&chksm=96e44f94a193c682bc73542ebedce862752720146bf6d392a1f338a84064c1d31ffe179cd1b0&scene=21#wechat_redirect)
+[![图片](https://image.cubox.pro/cardImg/2024020719473272116/68488.jpg?imageMogr2/quality/90/ignore-error/1)](https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&mid=2247651348&idx=1&sn=f675292dc2382fe406cf9a083bc43fe8&chksm=96e44f94a193c682bc73542ebedce862752720146bf6d392a1f338a84064c1d31ffe179cd1b0&scene=21\#wechat_redirect)
 
-[![图片](https://image.cubox.pro/cardImg/2024020719473217270/93134.jpg?imageMogr2/quality/90/ignore-error/1)](https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&mid=2247641053&idx=2&sn=7aed340d17b677d9bdf72d86f34f3310&chksm=96e4785da193f14bb080397ca23661bc8649a56e4e5ed92fe77f80947db10fa2bf68afe1b2de&scene=21#wechat_redirect)
+[![图片](https://image.cubox.pro/cardImg/2024020719473217270/93134.jpg?imageMogr2/quality/90/ignore-error/1)](https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&mid=2247641053&idx=2&sn=7aed340d17b677d9bdf72d86f34f3310&chksm=96e4785da193f14bb080397ca23661bc8649a56e4e5ed92fe77f80947db10fa2bf68afe1b2de&scene=21\#wechat_redirect)
 
-[![图片](https://image.cubox.pro/cardImg/2024020719473238905/56481.jpg?imageMogr2/quality/90/ignore-error/1)](https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&mid=2247640870&idx=2&sn=5431c403cc8d6727bb3a000af26a92bd&chksm=96e478a6a193f1b02fb9b5c97d454c0cd80074c6f392068b39f1d0f3dfec41bd70e8aaf20b67&scene=21#wechat_redirect)
+[![图片](https://image.cubox.pro/cardImg/2024020719473238905/56481.jpg?imageMogr2/quality/90/ignore-error/1)](https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&mid=2247640870&idx=2&sn=5431c403cc8d6727bb3a000af26a92bd&chksm=96e478a6a193f1b02fb9b5c97d454c0cd80074c6f392068b39f1d0f3dfec41bd70e8aaf20b67&scene=21\#wechat_redirect)
 
 
 ![图片](https://image.cubox.pro/cardImg/2024020719473357920/23522.jpg?imageMogr2/quality/90/ignore-error/1)
 
-**#投 稿通 道#**
+**\#投 稿通 道\#**
 
 
 **让你的文字被更多人看到**

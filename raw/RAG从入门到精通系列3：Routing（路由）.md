@@ -18,7 +18,7 @@ tags:
 
 ---
 
-## 📖 正文全文
+\## 📖 正文全文
 
 # RAG从入门到精通系列3：Routing（路由）
 
@@ -33,7 +33,7 @@ RAG（Retrieval Augmented Generation，检索增强生成）是一种将 LLM 与
 
 ![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fmmbiz.qpic.cn%2Fsz_mmbiz_png%2FSaeK9tW7Bu8bchx6XOFHAkoCAVrOh1N5MycECIYib1InAKy7T6ibI91aWzkGOToGVIaFmnJp8NUkRTfcX3PA3Wlw%2F640%3Fwx_fmt%3Dpng%26from%3Dappmsg%26tp%3Dwebp%26wxfrom%3D5%26wx_lazy%3D1%26wx_co%3D1&valid=false)
 
-我们从《[RAG从入门到精通系列2：Query Translation（查询翻译）](https://mp.weixin.qq.com/s?__biz=MzI2ODUyMTQyNA==&mid=2247495307&idx=1&sn=fed449f41e11c4ef2fe033b38d3d8dc8&scene=21#wechat_redirect)》中学习了 **Query Translation** ，在本文中我们将进入下一个节点：**Routing**（路由）。
+我们从《[RAG从入门到精通系列2：Query Translation（查询翻译）](https://mp.weixin.qq.com/s?__biz=MzI2ODUyMTQyNA==&mid=2247495307&idx=1&sn=fed449f41e11c4ef2fe033b38d3d8dc8&scene=21\#wechat_redirect)》中学习了 **Query Translation** ，在本文中我们将进入下一个节点：**Routing**（路由）。
 
 ![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fmmbiz.qpic.cn%2Fsz_mmbiz_png%2FSaeK9tW7Bu9Zw1DvX6aOxjescOcwibYNSErHYOfPR5I7lUSlV1TlRCXaeIfyl0PpZ8CMyTGiaQmAeANpuVA6NxcA%2F640%3Fwx_fmt%3Dpng%26from%3Dappmsg%26tp%3Dwebp%26wxfrom%3D5%26wx_lazy%3D1%26wx_co%3D1&valid=false)
 

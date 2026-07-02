@@ -14,7 +14,7 @@ tags:
 
 ---
 
-## Annotations  
+\## Annotations  
 
 > typing.Literal：字符串安全的秘密武器  
 
@@ -23,7 +23,7 @@ tags:
 
 ---
 
-## 📖 正文全文
+\## 📖 正文全文
 
 # 写了十年 Python，我竟然现在才知道这5个功能！
 
@@ -46,7 +46,7 @@ tags:
 
 开始吧！
 
-### 1. contextlib.suppress：悄悄干掉异常（不用丑陋的try块）
+\#\## 1. contextlib.suppress：悄悄干掉异常（不用丑陋的try块）
 
 **问题** ：你想忽略某个特定的异常，但为了这点小事写try/except块感觉太夸张了。
 
@@ -86,7 +86,7 @@ tags:
 **为什么重要** ：  
 这种功能让你的代码干净10倍------它就藏在contextlib模块里，大多数人只在用@contextmanager时才会碰它。
 
-### 2. sys.setrecursionlimit：搞定递归，免受其害
+\#\## 2. sys.setrecursionlimit：搞定递归，免受其害
 
 **问题** ：你在写递归算法，比如树遍历或DFS，突然Python抛出：
 
@@ -118,7 +118,7 @@ tags:
 **为什么被忽视** ：  
 因为大多数人不敢碰sys设置。但你不一样，你不是普通人。
 
-### 3. typing.Literal：字符串安全的秘密武器
+\#\## 3. typing.Literal：字符串安全的秘密武器
 
 **问题** ：你的函数接收字符串，但实际上只接受几个有效值。比如：
 
@@ -152,7 +152,7 @@ tags:
     def get_data(format: Literal['json', 'xml'] | None = None):
         ...
 
-### 4. **missing** ：dict子类里被低估的魔法方法
+\#\## 4. **missing** ：dict子类里被低估的魔法方法
 
 **问题** ：你在用字典，想自定义处理不存在的键，但defaultdict给你的控制不够。
 
@@ -183,7 +183,7 @@ tags:
 **为什么重要** ：  
 它让你对字典行为有手术刀般的控制。大多数开发者甚至不知道__missing__的存在------它在官方Python数据模型文档之外很少被提及。
 
-### 5. **subclasshook** ：让你的API像鸭子一样灵活
+\#\## 5. **subclasshook** ：让你的API像鸭子一样灵活
 
 **问题** ：你定义了一个抽象基类，但不想强迫别人继承它------你只希望他们实现正确的方法。
 

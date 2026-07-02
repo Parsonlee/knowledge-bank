@@ -17,7 +17,7 @@ tags:
 
 ---
 
-## 📖 正文全文
+\## 📖 正文全文
 
 # 从离散token到多模态统一：Discrete Tokenization全景综述重磅上线
 
@@ -187,14 +187,14 @@ LLM驱动的多模态离散建模
 **更多阅读**
 
 
-[](https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&mid=2247705323&idx=3&sn=61bf9533f01d8ff083cebc56ee2a0ad9&scene=21#wechat_redirect)
+[](https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&mid=2247705323&idx=3&sn=61bf9533f01d8ff083cebc56ee2a0ad9&scene=21\#wechat_redirect)
 
-[](https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&mid=2247705030&idx=2&sn=9386a322196f9f551e975134c8ce7b97&scene=21#wechat_redirect)
+[](https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&mid=2247705030&idx=2&sn=9386a322196f9f551e975134c8ce7b97&scene=21\#wechat_redirect)
 
-[](https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&mid=2247704773&idx=1&sn=090b163bc55a20d8902d516f0c0f2abf&scene=21#wechat_redirect)
+[](https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&mid=2247704773&idx=1&sn=090b163bc55a20d8902d516f0c0f2abf&scene=21\#wechat_redirect)
 
 
-**#投 稿 通 道#**
+**\#投 稿 通 道\#**
 
 
 **让你的文字被更多人看到**

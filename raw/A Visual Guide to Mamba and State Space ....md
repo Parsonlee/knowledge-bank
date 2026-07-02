@@ -19,13 +19,13 @@ Key:
 
 ---
 
-## 📖 正文全文
+\## 📖 正文全文
 
 # A Visual Guide to Mamba and State Space Models
 
 [newsletter.maartengrootendorst.com](https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-mamba-and-state)Maarten Grootendorst
 
-##### Translations *- [Korean](https://tulip-phalange-a1e.notion.site/05f977226a0e44c6b35ed9bfe0076839)* UPDATE 🔥*- Now **with** **animations** !*
+\#\#\#\## Translations *- [Korean](https://tulip-phalange-a1e.notion.site/05f977226a0e44c6b35ed9bfe0076839)* UPDATE 🔥*- Now **with** **animations** !*
 
 The Transformer architecture has been a major component in the success of Large Language Models (LLMs). It has been used for nearly all LLMs that are being used today, from open-source models like Mistral to closed-source models like ChatGPT.
 
@@ -33,7 +33,7 @@ To further improve LLMs, new architectures are developed that might even outperf
 
 [![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_%21cam8%21%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_lossy%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F5547a54a-5f47-41c0-a2ee-2ba5bcceefb8_1920x1080.gif&valid=true)](https://substackcdn.com/image/fetch/$s_!cam8!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5547a54a-5f47-41c0-a2ee-2ba5bcceefb8_1920x1080.gif)
 
-Mamba was proposed in the paper [Mamba: Linear-Time Sequence Modeling with Selective State Spaces](https://arxiv.org/abs/2312.00752).[1](https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-mamba-and-state#footnote-1-141228095) You can find its official implementation and model checkpoints in its [repository](https://github.com/state-spaces/mamba).
+Mamba was proposed in the paper [Mamba: Linear-Time Sequence Modeling with Selective State Spaces](https://arxiv.org/abs/2312.00752).[1](https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-mamba-and-state\#footnote-1-141228095) You can find its official implementation and model checkpoints in its [repository](https://github.com/state-spaces/mamba).
 
 *To see a **Table of Contents** (ToC), click on the stack of lines on the left-hand side.*
 
@@ -49,7 +49,7 @@ To see more visualizations related to LLMs and to support this newsletter, check
 
 *P.S. If you read the book, a **[quick review](https://www.amazon.com/Hands-Large-Language-Models-Understanding/dp/1098150961)** would mean the world---it really helps us authors!*
 
-## Part 1: **The Problem with Transformers**
+\## Part 1: **The Problem with Transformers**
 
 To illustrate why Mamba is such an interesting architecture, let's do a short re-cap of transformers first and explore one of its disadvantages.
 
@@ -61,7 +61,7 @@ A major benefit of Transformers is that whatever input it receives, it can look 
 
 [![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_%21CBPZ%21%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252Fd2c01c75-1105-4aeb-a608-f00c85bbe5f7_1776x532.png&valid=true)](https://substackcdn.com/image/fetch/$s_!CBPZ!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd2c01c75-1105-4aeb-a608-f00c85bbe5f7_1776x532.png)
 
-## The Core Components of Transformers
+\## The Core Components of Transformers
 
 Remember that a Transformer consists of two structures, a set of encoder blocks for representing text and a set of decoder blocks for generating text. Together, these structures can be used for several tasks, including translation.
 
@@ -73,7 +73,7 @@ We can adopt this structure to create generative models by using only decoders. 
 
 Let's take a look at how that works!
 
-## A Blessing with Training...
+\## A Blessing with Training...
 
 A single decoder block consists of two main components, masked self-attention followed by a feed-forward neural network.
 
@@ -91,7 +91,7 @@ During training, this matrix is created in one go. The attention between "*My* "
 
 It enables **parallelization** , which speeds up training tremendously!
 
-## And the Curse with Inference!
+\## And the Curse with Inference!
 
 There is a flaw, however. When generating the next token, we need to re-calculate the attention for the *entire sequence* , even if we already generated some tokens.
 
@@ -105,7 +105,7 @@ This need to recalculate the entire sequence is a major bottleneck of the Transf
 
 Let's look at how a "classic" technique, Recurrent Neural Networks, solves this problem of slow inference.
 
-## Are RNNs a Solution?
+\## Are RNNs a Solution?
 
 Recurrent Neural Networks (RNN) is a sequence-based network. It takes two inputs at each time step in a sequence, namely the input at time step ***t*** and a hidden state of the previous time step ***t-1*** , to generate the next hidden state and predict the output.
 
@@ -131,11 +131,11 @@ Although RNNs could be fast for both training and inference, they lacked the acc
 
 Instead, we look at State Space Models to efficiently use RNNs (and sometimes use convolutions).
 
-## Part 2: The **State Space Model (SSM)**
+\## Part 2: The **State Space Model (SSM)**
 
 A State Space Model (SSM), like the Transformer and RNN, processes sequences of information, like text but also signals. In this section, we will go through the basics of SSMs and how they relate to textual data.
 
-## What is a State Space?
+\## What is a State Space?
 
 A State Space contains the minimum number of variables that fully describe a system. It is a way to mathematically represent a problem by defining a system's possible states.
 
@@ -155,7 +155,7 @@ Sounds familiar? That is because embeddings or vectors in language models are al
 
 In terms of neural networks, the "state" of a system is typically its hidden state and in the context of Large Language Models, one of the most important aspects of generating a new token.
 
-## What is a State Space Model?
+\## What is a State Space Model?
 
 SSMs are models used to describe these state representations and make predictions of what their next state could be depending on some input.
 
@@ -239,7 +239,7 @@ We can update the original equations (and add some pretty colors) to signify the
 
 Together, these two equations aim to predict the state of a system from observed data. Since the input is expected to be continuous, the main representation of the SSM is a **continuous-time representation** .
 
-## From a Continuous to a Discrete Signal
+\## From a Continuous to a Discrete Signal
 
 Finding the state representation ***h(t)*** is analytically challenging if you have a continuous signal. Moreover, since we generally have a discrete input (like a textual sequence), we want to discretize the model.
 
@@ -270,7 +270,7 @@ We use ***k*** instead of ***t*** to represent discretized timesteps and to make
 
 Now that we have a formulation of a discrete representation, let's explore how we can actually *compute* the model.
 
-## The Recurrent Representation
+\## The Recurrent Representation
 
 Our discretized SSM allows us to formulate the problem in specific timesteps instead of continuous signals. A recurrent approach, as we saw before with RNNs is quite useful here.
 
@@ -292,7 +292,7 @@ Which we can unfold (or unroll) as such:
 
 Notice how we can use this discretized version using the underlying methodology of an RNN.
 
-## The Convolution Representation
+\## The Convolution Representation
 
 Another representation that we can use for SSMs is that of convolutions. Remember from classic image recognition tasks where we applied filters (*kernels* ) to derive aggregate features:
 
@@ -324,7 +324,7 @@ In the final step, we can see the full effect of the kernel:
 
 A major benefit of representing the SSM as a convolution is that it can be trained in parallel like Convolutional Neural Networks (CNNs). However, due to the fixed kernel size, their inference is not as fast and unbounded as RNNs.
 
-## The Three Representations
+\## The Three Representations
 
 These three representations, *continuous* , *recurrent* , and *convolutional* all have different sets of advantages and disadvantages:
 
@@ -336,7 +336,7 @@ With these representations, there is a neat trick that we can use, namely choose
 
 [![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_%2177LQ%21%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F9c43c82d-9735-4d55-97bb-8ad6f504909e_1960x1008.png&valid=true)](https://substackcdn.com/image/fetch/$s_!77LQ!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9c43c82d-9735-4d55-97bb-8ad6f504909e_1960x1008.png)
 
-This model is referred to as the [Linear State-Space Layer (LSSL)](https://proceedings.neurips.cc/paper_files/paper/2021/hash/05546b0e38ab9175cd905eebcc6ebb76-Abstract.html).[2](https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-mamba-and-state#footnote-2-141228095)
+This model is referred to as the [Linear State-Space Layer (LSSL)](https://proceedings.neurips.cc/paper_files/paper/2021/hash/05546b0e38ab9175cd905eebcc6ebb76-Abstract.html).[2](https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-mamba-and-state\#footnote-2-141228095)
 
 These representations share an important property, namely that of ***Linear Time Invariance*** (LTI). LTI states that the SSMs parameters, *A* , *B* , and *C* , are fixed for all timesteps. This means that matrices *A* , *B* , and *C* are the same for every token the SSM generates.
 
@@ -344,7 +344,7 @@ In other words, regardless of what sequence you give the SSM, the values of *A* 
 
 Before we explore how Mamba addresses this issue, let's explore the final piece of the puzzle, *matrix A* .
 
-## The Importance of Matrix *A*
+\## The Importance of Matrix *A*
 
 Arguably one of the most important aspects of the SSM formulation is *matrix A* . As we saw before with the recurrent representation, it captures information about the *previous* state to build the *new* state.
 
@@ -358,7 +358,7 @@ Creating *matrix A* can therefore be the difference between remembering only a f
 
 So how can we create *matrix A* in a way that retains a large memory (context size)?
 
-We use Hungry Hungry Hippo! Or [HiPPO](https://proceedings.neurips.cc/paper/2020/hash/102f0bb6efb3a6128a3c750dd16729be-Abstract.html)[3](https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-mamba-and-state#footnote-3-141228095) for **Hi** gh-order **P** olynomial **P** rojection **O** perators.
+We use Hungry Hungry Hippo! Or [HiPPO](https://proceedings.neurips.cc/paper/2020/hash/102f0bb6efb3a6128a3c750dd16729be-Abstract.html)[3](https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-mamba-and-state\#footnote-3-141228095) for **Hi** gh-order **P** olynomial **P** rojection **O** perators.
 
 [![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_%21OpoS%21%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F07985a64-fc26-4ee8-9ec2-c488e4cb709a_1492x488.png&valid=true)](https://substackcdn.com/image/fetch/$s_!OpoS!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F07985a64-fc26-4ee8-9ec2-c488e4cb709a_1492x488.png)
 
@@ -376,9 +376,9 @@ Building *matrix A* using HiPPO was shown to be much better than initializing it
 
 The idea behind the HiPPO Matrix is that it produces a hidden state that memorizes its history.
 
-Mathematically, it does so by tracking the coefficients of a [Legendre polynomial](https://proceedings.neurips.cc/paper/2019/hash/952285b9b7e7a1be5aa7849f32ffff05-Abstract.html) which allows it to approximate all of the previous history.[4](https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-mamba-and-state#footnote-4-141228095)
+Mathematically, it does so by tracking the coefficients of a [Legendre polynomial](https://proceedings.neurips.cc/paper/2019/hash/952285b9b7e7a1be5aa7849f32ffff05-Abstract.html) which allows it to approximate all of the previous history.[4](https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-mamba-and-state\#footnote-4-141228095)
 
-HiPPO was then applied to the recurrent and convolution representations that we saw before to handle long-range dependencies. The result was [Structured State Space for Sequences (S4)](https://arxiv.org/abs/2111.00396), a class of SSMs that can efficiently handle long sequences.[5](https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-mamba-and-state#footnote-5-141228095)
+HiPPO was then applied to the recurrent and convolution representations that we saw before to handle long-range dependencies. The result was [Structured State Space for Sequences (S4)](https://arxiv.org/abs/2111.00396), a class of SSMs that can efficiently handle long sequences.[5](https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-mamba-and-state\#footnote-5-141228095)
 
 It consists of three parts:
 
@@ -393,7 +393,7 @@ It consists of three parts:
 This class of SSMs has several benefits depending on the representation you choose (recurrent vs. convolution). It can also handle long sequences of text and store memory efficiently by building upon the HiPPO matrix.
 > **NOTE** : If you want to dive into more of the technical details on how to calculate the HiPPO matrix and build a S4 model yourself, I would HIGHLY advise going through the [Annotated S4](https://srush.github.io/annotated-s4/).
 
-## Part 3: **Mamba - A Selective SSM**
+\## Part 3: **Mamba - A Selective SSM**
 
 We finally have covered all the fundamentals necessary to understand what makes Mamba special. State Space Models can be used to model textual sequences but still have a set of disadvantages we want to prevent.
 
@@ -407,7 +407,7 @@ Together they create the *selective SSM* or *S6* models which can be used, like 
 
 Before exploring the two main contributions, let's first explore why they are necessary.
 
-## What Problem does it attempt to Solve?
+\## What Problem does it attempt to Solve?
 
 State Space Models, and even the S4 (Structured State Space Model), perform poorly on certain tasks that are vital in language modeling and generation, namely *the ability to focus on or ignore particular inputs* .
 
@@ -439,7 +439,7 @@ In comparison, these tasks are relatively easy for Transformers since they *dyna
 
 The poor performance of SSMs on these tasks illustrates the underlying problem with time-invariant SSMs, the static nature of matrices *A* , *B* , and *C* results in problems with *content-awareness* .
 
-## Selectively Retain Information
+\## Selectively Retain Information
 
 The recurrent representation of an SSM creates a small state that is quite efficient as it compresses the entire history. However, compared to a Transformer model which does no compression of the history (through the attention matrix), it is much less powerful.
 
@@ -470,7 +470,7 @@ A smaller *step size* **∆** results in ignoring specific words and instead usi
 
 [![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_%21D8RX%21%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F06b21aab-aa32-450a-ae02-b976a2c9f9d8_2520x616.png&valid=true)](https://substackcdn.com/image/fetch/$s_!D8RX!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F06b21aab-aa32-450a-ae02-b976a2c9f9d8_2520x616.png)
 
-## The Scan Operation
+\## The Scan Operation
 
 Since these matrices are now *dynamic* , they cannot be calculated using the convolution representation since it assumes a *fixed* kernel. We can only use the recurrent representation and lose the parallelization the convolution provides.
 
@@ -488,7 +488,7 @@ It assumes the order in which we do operations does not matter through the assoc
 
 Together, dynamic matrices *B* and *C* , and the parallel scan algorithm create the ***selective scan algorithm*** to represent the dynamic and fast nature of using the recurrent representation.
 
-## Hardware-aware Algorithm
+\## Hardware-aware Algorithm
 
 A disadvantage of recent GPUs is their limited transfer (IO) speed between their small but highly efficient SRAM and their large but slightly less efficient DRAM. Frequently copying information between SRAM and DRAM becomes a bottleneck.
 
@@ -522,7 +522,7 @@ We have now covered all components of its architecture which is depicted using t
 
 This architecture is often referred to as a ***selective SSM*** or ***S6*** model since it is essentially an S4 model computed with the selective scan algorithm.
 
-## The Mamba Block
+\## The Mamba Block
 
 The *selective SSM* that we have explored thus far can be implemented as a block, the same way we can represent self-attention in a decoder block.
 
@@ -552,7 +552,7 @@ Notice some changes, like the inclusion of normalization layers and softmax for 
 
 When we put everything together, we get both fast inference and training and even unbounded context. Using this architecture, the authors found it matches and sometimes even exceeds the performance of Transformer models of the same size!
 
-## **Conclusion**
+\## **Conclusion**
 
 This concludes our journey in State Space Models and the incredible Mamba architecture using a selective State Space Model. Hopefully, this post gives you a better understanding of the potential of State Space Models, particularly Mamba. Who knows if this is going to replace the Transformers but for now, it is incredible to see such different architectures getting well-deserved attention!
 
@@ -560,7 +560,7 @@ To see more visualizations related to LLMs and to support this newsletter, check
 
 [![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_%21MdLW%21%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252Fa0b260f5-da52-4186-bc06-fd22077b2737_590x768.jpeg&valid=true)](https://substackcdn.com/image/fetch/$s_!MdLW!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa0b260f5-da52-4186-bc06-fd22077b2737_590x768.jpeg) View more information about the book on the [official website](https://www.llm-book.com/). You can order the book on [Amazon](https://www.amazon.com/Hands-Large-Language-Models-Understanding/dp/1098150961). All code is uploaded to [Github](https://github.com/HandsOnLLM/Hands-On-Large-Language-Models).
 
-## Resources
+\## Resources
 
 Hopefully, this was an accessible introduction to Mamba and State Space Models. If you want to go deeper, I would suggest the following resources:
 
@@ -576,23 +576,23 @@ Hopefully, this was an accessible introduction to Mamba and State Space Models. 
 
 * And of course, [the Mamba paper](https://arxiv.org/abs/2312.00752)! It was even used for DNA modeling and speech generation.
 
-[1](https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-mamba-and-state#footnote-anchor-1-141228095)
+[1](https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-mamba-and-state\#footnote-anchor-1-141228095)
 
 Gu, Albert, and Tri Dao. "Mamba: Linear-time sequence modeling with selective state spaces." *arXiv preprint arXiv:2312.00752* (2023).
 
-[2](https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-mamba-and-state#footnote-anchor-2-141228095)
+[2](https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-mamba-and-state\#footnote-anchor-2-141228095)
 
 Gu, Albert, et al. "Combining recurrent, convolutional, and continuous-time models with linear state space layers." *Advances in neural information processing systems* 34 (2021): 572-585.
 
-[3](https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-mamba-and-state#footnote-anchor-3-141228095)
+[3](https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-mamba-and-state\#footnote-anchor-3-141228095)
 
 Gu, Albert, et al. "Hippo: Recurrent memory with optimal polynomial projections." *Advances in neural information processing systems* 33 (2020): 1474-1487.
 
-[4](https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-mamba-and-state#footnote-anchor-4-141228095)
+[4](https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-mamba-and-state\#footnote-anchor-4-141228095)
 
 Voelker, Aaron, Ivana Kajić, and Chris Eliasmith. "Legendre memory units: Continuous-time representation in recurrent neural networks." *Advances in neural information processing systems* 32 (2019).
 
-[5](https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-mamba-and-state#footnote-anchor-5-141228095)
+[5](https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-mamba-and-state\#footnote-anchor-5-141228095)
 
 Gu, Albert, Karan Goel, and Christopher Ré. "Efficiently modeling long sequences with structured state spaces." *arXiv preprint arXiv:2111.00396* (2021).
 

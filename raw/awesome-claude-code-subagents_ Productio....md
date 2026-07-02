@@ -17,7 +17,7 @@ Production-ready Claude subagents collection with 100+ specialized AI agents for
 
 ---
 
-## 📖 正文全文
+\## 📖 正文全文
 
 # Use saved searches to filter your results more quickly
 
@@ -29,9 +29,9 @@ Production-ready Claude subagents collection with 100+ specialized AI agents for
 
 [![](https://image.cubox.pro/cardImg/4kbyjdctmmqciy9t70zsdfkqaswmpd2tj0sg646ta3i1gltam3?imageMogr2/quality/90/ignore-error/1)](https://s.voltagent.dev/discord) [![](https://image.cubox.pro/cardImg/1xz1ojynjfanea99s399n2zaanpp10lxcnyiyutlhlb0ciq7fz?imageMogr2/quality/90/ignore-error/1)](https://twitter.com/voltagent_dev)
 
-## Awesome Claude Code Subagents
+\## Awesome Claude Code Subagents
 
-## What is this?
+\## What is this?
 
 This repository serves as the definitive collection of Claude Code subagents - specialized AI agents designed for specific development tasks. Each subagent is:
 
@@ -41,20 +41,20 @@ This repository serves as the definitive collection of Claude Code subagents - s
 * **Continuously maintained**: Regular updates with new capabilities
 * **Community-driven**: Open to contributions and improvements
 
-## Quick Start
+\## Quick Start
 
 1. Browse categories to find the subagent you need
 2. Copy the subagent definition
 3. Use with Claude Code or integrate into your workflow
 4. Customize based on your project requirements
 
-### ⚡️ Maintained by the [VoltAgent](https://github.com/voltagent/voltagent) open-source AI agent framework community.
+\#\## ⚡️ Maintained by the [VoltAgent](https://github.com/voltagent/voltagent) open-source AI agent framework community.
 
 [![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fprivate-user-images.githubusercontent.com%2F18739364%2F435493405-452a03e7-eeda-4394-9ee7-0ffbcf37245c.png%3Fjwt%3DeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTczODI0OTQsIm5iZiI6MTc1NzM4MjE5NCwicGF0aCI6Ii8xODczOTM2NC80MzU0OTM0MDUtNDUyYTAzZTctZWVkYS00Mzk0LTllZTctMGZmYmNmMzcyNDVjLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA5MDklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwOTA5VDAxNDMxNFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWVlMDZkODVhMTZiM2E5ZDljNjI3NzU3NzU5ZWE5Yjk0OWNhYzhiNDRmNjhiODg4MGFkZTQyOWQzOGIyYTg0OGQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.WqN2AgYJJHYfMs_0P4kFsiDf8dBkilvpldMv_-lzlBw&valid=false)](https://github.com/VoltAgent/voltagent)
 
-## 📚 Categories
+\## 📚 Categories
 
-### [01. Core Development](https://github.com/VoltAgent/awesome-claude-code-subagents/blob/main/categories/01-core-development)
+\#\## [01. Core Development](https://github.com/VoltAgent/awesome-claude-code-subagents/blob/main/categories/01-core-development)
 
 Essential development subagents for everyday coding tasks.
 
@@ -70,7 +70,7 @@ Essential development subagents for everyday coding tasks.
 * [**websocket-engineer**](https://github.com/VoltAgent/awesome-claude-code-subagents/blob/main/categories/01-core-development/websocket-engineer.md) - Real-time communication specialist
 * [**wordpress-master**](https://github.com/VoltAgent/awesome-claude-code-subagents/blob/main/categories/01-core-development/wordpress-master.md) - WordPress development and optimization expert
 
-### [02. Language Specialists](https://github.com/VoltAgent/awesome-claude-code-subagents/blob/main/categories/02-language-specialists)
+\#\## [02. Language Specialists](https://github.com/VoltAgent/awesome-claude-code-subagents/blob/main/categories/02-language-specialists)
 
 Language-specific experts with deep framework knowledge.
 
@@ -98,7 +98,7 @@ Language-specific experts with deep framework knowledge.
 * [**rust-engineer**](https://github.com/VoltAgent/awesome-claude-code-subagents/blob/main/categories/02-language-specialists/rust-engineer.md) - Systems programming expert
 * [**spring-boot-engineer**](https://github.com/VoltAgent/awesome-claude-code-subagents/blob/main/categories/02-language-specialists/spring-boot-engineer.md) - Spring Boot 3+ microservices expert
 
-### [03. Infrastructure](https://github.com/VoltAgent/awesome-claude-code-subagents/blob/main/categories/03-infrastructure)
+\#\## [03. Infrastructure](https://github.com/VoltAgent/awesome-claude-code-subagents/blob/main/categories/03-infrastructure)
 
 DevOps, cloud, and deployment specialists.
 
@@ -115,7 +115,7 @@ DevOps, cloud, and deployment specialists.
 * [**sre-engineer**](https://github.com/VoltAgent/awesome-claude-code-subagents/blob/main/categories/03-infrastructure/sre-engineer.md) - Site reliability engineering expert
 * [**terraform-engineer**](https://github.com/VoltAgent/awesome-claude-code-subagents/blob/main/categories/03-infrastructure/terraform-engineer.md) - Infrastructure as Code expert
 
-### [04. Quality \& Security](https://github.com/VoltAgent/awesome-claude-code-subagents/blob/main/categories/04-quality-security)
+\#\## [04. Quality \& Security](https://github.com/VoltAgent/awesome-claude-code-subagents/blob/main/categories/04-quality-security)
 
 Testing, security, and code quality experts.
 
@@ -132,7 +132,7 @@ Testing, security, and code quality experts.
 * [**security-auditor**](https://github.com/VoltAgent/awesome-claude-code-subagents/blob/main/categories/04-quality-security/security-auditor.md) - Security vulnerability expert
 * [**test-automator**](https://github.com/VoltAgent/awesome-claude-code-subagents/blob/main/categories/04-quality-security/test-automator.md) - Test automation framework expert
 
-### [05. Data \& AI](https://github.com/VoltAgent/awesome-claude-code-subagents/blob/main/categories/05-data-ai)
+\#\## [05. Data \& AI](https://github.com/VoltAgent/awesome-claude-code-subagents/blob/main/categories/05-data-ai)
 
 Data engineering, ML, and AI specialists.
 
@@ -149,7 +149,7 @@ Data engineering, ML, and AI specialists.
 * [**postgres-pro**](https://github.com/VoltAgent/awesome-claude-code-subagents/blob/main/categories/05-data-ai/postgres-pro.md) - PostgreSQL database expert
 * [**prompt-engineer**](https://github.com/VoltAgent/awesome-claude-code-subagents/blob/main/categories/05-data-ai/prompt-engineer.md) - Prompt optimization specialist
 
-### [06. Developer Experience](https://github.com/VoltAgent/awesome-claude-code-subagents/blob/main/categories/06-developer-experience)
+\#\## [06. Developer Experience](https://github.com/VoltAgent/awesome-claude-code-subagents/blob/main/categories/06-developer-experience)
 
 Tooling and developer productivity experts.
 
@@ -164,7 +164,7 @@ Tooling and developer productivity experts.
 * [**refactoring-specialist**](https://github.com/VoltAgent/awesome-claude-code-subagents/blob/main/categories/06-developer-experience/refactoring-specialist.md) - Code refactoring expert
 * [**tooling-engineer**](https://github.com/VoltAgent/awesome-claude-code-subagents/blob/main/categories/06-developer-experience/tooling-engineer.md) - Developer tooling specialist
 
-### [07. Specialized Domains](https://github.com/VoltAgent/awesome-claude-code-subagents/blob/main/categories/07-specialized-domains)
+\#\## [07. Specialized Domains](https://github.com/VoltAgent/awesome-claude-code-subagents/blob/main/categories/07-specialized-domains)
 
 Domain-specific technology experts.
 
@@ -180,7 +180,7 @@ Domain-specific technology experts.
 * [**risk-manager**](https://github.com/VoltAgent/awesome-claude-code-subagents/blob/main/categories/07-specialized-domains/risk-manager.md) - Risk assessment and management expert
 * [**seo-specialist**](https://github.com/VoltAgent/awesome-claude-code-subagents/blob/main/categories/07-specialized-domains/seo-specialist.md) - Search engine optimization expert
 
-### [08. Business \& Product](https://github.com/VoltAgent/awesome-claude-code-subagents/blob/main/categories/08-business-product)
+\#\## [08. Business \& Product](https://github.com/VoltAgent/awesome-claude-code-subagents/blob/main/categories/08-business-product)
 
 Product management and business analysis.
 
@@ -195,7 +195,7 @@ Product management and business analysis.
 * [**technical-writer**](https://github.com/VoltAgent/awesome-claude-code-subagents/blob/main/categories/08-business-product/technical-writer.md) - Technical documentation specialist
 * [**ux-researcher**](https://github.com/VoltAgent/awesome-claude-code-subagents/blob/main/categories/08-business-product/ux-researcher.md) - User research expert
 
-### [09. Meta \& Orchestration](https://github.com/VoltAgent/awesome-claude-code-subagents/blob/main/categories/09-meta-orchestration)
+\#\## [09. Meta \& Orchestration](https://github.com/VoltAgent/awesome-claude-code-subagents/blob/main/categories/09-meta-orchestration)
 
 Agent coordination and meta-programming.
 
@@ -208,7 +208,7 @@ Agent coordination and meta-programming.
 * [**task-distributor**](https://github.com/VoltAgent/awesome-claude-code-subagents/blob/main/categories/09-meta-orchestration/task-distributor.md) - Task allocation specialist
 * [**workflow-orchestrator**](https://github.com/VoltAgent/awesome-claude-code-subagents/blob/main/categories/09-meta-orchestration/workflow-orchestrator.md) - Complex workflow automation
 
-### [10. Research \& Analysis](https://github.com/VoltAgent/awesome-claude-code-subagents/blob/main/categories/10-research-analysis)
+\#\## [10. Research \& Analysis](https://github.com/VoltAgent/awesome-claude-code-subagents/blob/main/categories/10-research-analysis)
 
 Research, search, and analysis specialists.
 
@@ -219,11 +219,11 @@ Research, search, and analysis specialists.
 * [**market-researcher**](https://github.com/VoltAgent/awesome-claude-code-subagents/blob/main/categories/10-research-analysis/market-researcher.md) - Market analysis and consumer insights
 * [**data-researcher**](https://github.com/VoltAgent/awesome-claude-code-subagents/blob/main/categories/10-research-analysis/data-researcher.md) - Data discovery and analysis expert
 
-## 🤖 Understanding Subagents
+\## 🤖 Understanding Subagents
 
 Subagents are specialized AI assistants that enhance Claude Code's capabilities by providing task-specific expertise. They act as dedicated helpers that Claude Code can call upon when encountering particular types of work.
 
-### What Makes Subagents Special?
+\#\## What Makes Subagents Special?
 
 **Independent Context Windows**   
 Every subagent operates within its own isolated context space, preventing cross-contamination between different tasks and maintaining clarity in the primary conversation thread.
@@ -237,14 +237,14 @@ After creating a subagent, you can utilize it throughout various projects and di
 **Granular Tool Permissions**   
 You can configure each subagent with specific tool access rights, enabling fine-grained control over which capabilities are available for different task types.
 
-### Core Advantages
+\#\## Core Advantages
 
 * **Memory Efficiency**: Isolated contexts prevent the main conversation from becoming cluttered with task-specific details
 * **Enhanced Accuracy**: Specialized prompts and configurations lead to better results in specific domains
 * **Workflow Consistency**: Team-wide subagent sharing ensures uniform approaches to common tasks
 * **Security Control**: Tool access can be restricted based on subagent type and purpose
 
-### Getting Started with Subagents
+\#\## Getting Started with Subagents
 
 **1. Access the Subagent Manager**
 
@@ -264,7 +264,7 @@ You can configure each subagent with specific tool access rights, enabling fine-
 
     > Have the code-reviewer subagent analyze my latest commits
 
-### Subagent Storage Locations
+\#\## Subagent Storage Locations
 
 |       Type        |        Path         |     Availability     | Precedence |
 |-------------------|---------------------|----------------------|------------|
@@ -273,15 +273,15 @@ You can configure each subagent with specific tool access rights, enabling fine-
 
 Note: When naming conflicts occur, project-specific subagents override global ones.
 
-## 🛠️ How to Use Subagents
+\## 🛠️ How to Use Subagents
 
-### Setting Up in Claude Code
+\#\## Setting Up in Claude Code
 
 1. Place subagent files in `.claude/agents/` within your project
 2. Claude Code automatically detects and loads the subagents
 3. Invoke them naturally in conversation or let Claude decide when to use them
 
-### Creating New Subagents - Step by Step
+\#\## Creating New Subagents - Step by Step
 
 **Step 1: Launch the Agent Interface**
 
@@ -309,7 +309,7 @@ Note: When naming conflicts occur, project-specific subagents override global on
 
     > Ask the code-reviewer agent to examine my pull request
 
-## 📖 Subagent Structure
+\## 📖 Subagent Structure
 
 Each subagent follows a standardized template:
 
@@ -322,17 +322,17 @@ tools: List of MCP tools used
 
 Role definition and expertise...
 
-## MCP Tool Integration
+\## MCP Tool Integration
 Tool descriptions and usage patterns...
 
-## Communication Protocol
+\## Communication Protocol
 Inter-agent communication specifications...
 
-## Implementation Workflow
+\## Implementation Workflow
 Structured development phases...
 ```
 
-## 🤝 Contributing
+\## 🤝 Contributing
 
 We welcome contributions! See [CONTRIBUTING.md](https://github.com/VoltAgent/awesome-claude-code-subagents/blob/main/CONTRIBUTING.md) for guidelines.
 
@@ -342,18 +342,18 @@ We welcome contributions! See [CONTRIBUTING.md](https://github.com/VoltAgent/awe
 * Share usage examples
 * Report issues and bugs
 
-## 👥 Maintainers
+\## 👥 Maintainers
 
 This repository is maintained by the [VoltAgent](https://github.com/voltagent/voltagent) team:
 
 * Core maintainers of the VoltAgent open-source AI agent framework and community member
 * Committed to best practices and production readiness
 
-## 📄 License
+\## 📄 License
 
 MIT License - see [LICENSE](https://github.com/VoltAgent/awesome-claude-code-subagents/blob/main/LICENSE)
 
-## 🔗 Related Resources
+\## 🔗 Related Resources
 
 * [VoltAgent Framework](https://github.com/voltagent/voltagent)
 * [Claude Code Documentation](https://docs.anthropic.com/claude-code)

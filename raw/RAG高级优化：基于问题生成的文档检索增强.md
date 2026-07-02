@@ -15,7 +15,7 @@ tags:
 
 ---
 
-## Annotations  
+\## Annotations  
 
 > 通过用相关问题丰富文本片段，我们的目标是显著提高识别文档中包含用户查询答案的最相关部分的准确性。  
 
@@ -24,13 +24,13 @@ tags:
 
 ---
 
-## 📖 正文全文
+\## 📖 正文全文
 
 # RAG高级优化：基于问题生成的文档检索增强
 
 [mp.weixin.qq.com](https://mp.weixin.qq.com/s?__biz=Mzk0NTcyNTMzNw==&mid=2247484125&idx=1&sn=0490793590a7061bf0593749f1a58474&chksm=c310482bf467c13dc718c0601c3b2ec0072e8d376cfa0c3b5d0d71406dbfa39bb1b09c684cfc&scene=21)哎呀AIYA 哎呀AIYA
 
-我们在之前的系列文章介绍了文本切分的一些方法[RAG文本切分的第四个层次，基于向量模型的语义切分](http://mp.weixin.qq.com/s?__biz=Mzk0NTcyNTMzNw==&mid=2247484106&idx=1&sn=e731d2e0cf52ccdd685eab32dfeaa131&chksm=c310483cf467c12a5d5c85ce3c66ec4d1379bff786ed802fd6c954a8972458021998a4367d8a&scene=21#wechat_redirect)，我们如何能将片段有效召回呢？优化的方案较多，后续将逐步介绍。
+我们在之前的系列文章介绍了文本切分的一些方法[RAG文本切分的第四个层次，基于向量模型的语义切分](http://mp.weixin.qq.com/s?__biz=Mzk0NTcyNTMzNw==&mid=2247484106&idx=1&sn=e731d2e0cf52ccdd685eab32dfeaa131&chksm=c310483cf467c12a5d5c85ce3c66ec4d1379bff786ed802fd6c954a8972458021998a4367d8a&scene=21\#wechat_redirect)，我们如何能将片段有效召回呢？优化的方案较多，后续将逐步介绍。
 
 我们将在本文中介绍一种文本增强技术，该技术利用额外的问题生成来改进矢量数据库中的文档检索。通过生成和合并与每个文本片段相关的问题，增强系统标准检索过程，从而增加了找到相关文档的可能性，这些文档可以用作生成式问答的上下文。
 
@@ -43,7 +43,7 @@ tags:
 *
   **问题增强:**使用语言模型在文档和片段级别生成相关问题。
 *
-  **矢量存储创建:** 使用[向量模型](http://mp.weixin.qq.com/s?__biz=Mzk0NTcyNTMzNw==&mid=2247483894&idx=1&sn=be66697008c0b2de60819ccb4beab659&chksm=c3104b00f467c216e934a5d24cc7130efe06c8b1e04055c22c5a38184fbbb0e8bf8e2e67f0e3&scene=21#wechat_redirect)计算文档的嵌入，并创建FAISS矢量存储。
+  **矢量存储创建:** 使用[向量模型](http://mp.weixin.qq.com/s?__biz=Mzk0NTcyNTMzNw==&mid=2247483894&idx=1&sn=be66697008c0b2de60819ccb4beab659&chksm=c3104b00f467c216e934a5d24cc7130efe06c8b1e04055c22c5a38184fbbb0e8bf8e2e67f0e3&scene=21\#wechat_redirect)计算文档的嵌入，并创建FAISS矢量存储。
 *
   **检索和答案生成:**使用FAISS查找最相关的文档，并根据提供的上下文生成答案。
 
@@ -182,14 +182,14 @@ tags:
 往期推荐
 
 
-[RAG文本切分LV3：轻松定制Markdown切分](http://mp.weixin.qq.com/s?__biz=Mzk0NTcyNTMzNw==&mid=2247484120&idx=1&sn=51fdd215151fe9be2d0ab8290eed6a1e&chksm=c310482ef467c13880ca7633fafbac9bedb57c318a7629ce08d27ea7609baa3e42c7ab70992a&scene=21#wechat_redirect)  
+[RAG文本切分LV3：轻松定制Markdown切分](http://mp.weixin.qq.com/s?__biz=Mzk0NTcyNTMzNw==&mid=2247484120&idx=1&sn=51fdd215151fe9be2d0ab8290eed6a1e&chksm=c310482ef467c13880ca7633fafbac9bedb57c318a7629ce08d27ea7609baa3e42c7ab70992a&scene=21\#wechat_redirect)  
 
 
-[支持大模型流式输出的JSON提取工具](http://mp.weixin.qq.com/s?__biz=Mzk0NTcyNTMzNw==&mid=2247483821&idx=1&sn=6f34d91291fbcab03a79142eaa3ed56f&chksm=c3104b5bf467c24d7c4184784831d2cab8ce97f47cfc86d40da172650e67dba9a0860a7411b0&scene=21#wechat_redirect)  
+[支持大模型流式输出的JSON提取工具](http://mp.weixin.qq.com/s?__biz=Mzk0NTcyNTMzNw==&mid=2247483821&idx=1&sn=6f34d91291fbcab03a79142eaa3ed56f&chksm=c3104b5bf467c24d7c4184784831d2cab8ce97f47cfc86d40da172650e67dba9a0860a7411b0&scene=21\#wechat_redirect)  
 
 
-[高级 RAG实战：召回更好的片段Query扩展](http://mp.weixin.qq.com/s?__biz=Mzk0NTcyNTMzNw==&mid=2247484014&idx=1&sn=c50328bcf4e970150d36a0435ba8c72d&chksm=c3104898f467c18e5effdbc5b82ddc12f6bdb3848871a353605f1702c1639c8a7a2327da923e&scene=21#wechat_redirect)
+[高级 RAG实战：召回更好的片段Query扩展](http://mp.weixin.qq.com/s?__biz=Mzk0NTcyNTMzNw==&mid=2247484014&idx=1&sn=c50328bcf4e970150d36a0435ba8c72d&chksm=c3104898f467c18e5effdbc5b82ddc12f6bdb3848871a353605f1702c1639c8a7a2327da923e&scene=21\#wechat_redirect)
 
-[颠覆传统OCR轻松搞定复杂PDF的工具](http://mp.weixin.qq.com/s?__biz=Mzk0NTcyNTMzNw==&mid=2247484116&idx=1&sn=bcc36c86009e0f4811d6b1e0ed5f6de7&chksm=c3104822f467c13463c036ebdda23b93eb68fc7ed1b6679f2c22297582bd5c7453e230566716&scene=21#wechat_redirect)
+[颠覆传统OCR轻松搞定复杂PDF的工具](http://mp.weixin.qq.com/s?__biz=Mzk0NTcyNTMzNw==&mid=2247484116&idx=1&sn=bcc36c86009e0f4811d6b1e0ed5f6de7&chksm=c3104822f467c13463c036ebdda23b93eb68fc7ed1b6679f2c22297582bd5c7453e230566716&scene=21\#wechat_redirect)
 
 [Read in Cubox](https://cubox.pro/web/card/7249427872513786838)

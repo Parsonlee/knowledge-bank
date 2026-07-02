@@ -17,7 +17,7 @@ tags:
 
 ---
 
-## 📖 正文全文
+\## 📖 正文全文
 
 # 一文全解析：AI 智能体 8 种常见的记忆（Memory）策略与技术实现
 
@@ -335,7 +335,7 @@ tags:
         if len(active_memory) >= 2:        old_id, old_turn = active_memory.popleft()        passive_memory[old_id] = old_turn  # pageout到被动存储
         active_memory.append((turn_id, turn))    turn_id += 1
     def get_context(query):    context = "\n".join([x[1] for x in active_memory])  # 当前活动记忆上下文    paged_in = ""
-        #这里共关键词模拟判断需要pagein的记忆，实际应用策略更复杂     for id, turn in passive_memory.items():        if any(word in turn.lower() for word in query.lower().split() if len(word) > 3):        #需执行page in的动作，略         paged_in += f"\n(Paged in from Turn {id}): {turn}"               return f"### Active Memory (RAM):\n{context}\n\n### Paged-In from Disk:\n{paged_in}"
+        \#这里共关键词模拟判断需要pagein的记忆，实际应用策略更复杂     for id, turn in passive_memory.items():        if any(word in turn.lower() for word in query.lower().split() if len(word) > 3):        \#需执行page in的动作，略         paged_in += f"\n(Paged in from Turn {id}): {turn}"               return f"\#\## Active Memory (RAM):\n{context}\n\n\#\## Paged-In from Disk:\n{paged_in}"
 
 
 【特点分析】

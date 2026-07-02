@@ -18,7 +18,7 @@ tags:
 
 ---
 
-## 📖 正文全文
+\## 📖 正文全文
 
 # 聊聊AI应用架构演进
 
@@ -121,7 +121,7 @@ Input Guardrails的一个例子
 
 输出防护是为质量和安全两方面兜底；
 
-#### 输出内容质量
+\#\#\## 输出内容质量
 
 输出内容质量的问题比较常见的有：1. 输出的内容格式不对或者错误； 2. 输出结果不实，即有幻觉；3. 输出的内容质量不高，比如文档总结的不好，写个篇偏离主题的小短文等。
 
@@ -232,7 +232,7 @@ LLM推理性能主要有两个核心的衡量指标：1. 从用户提交query到
 **Parallelism**
 
 
-### 并行技术主要包含两种主流方式：Tensor Parallelism和Pipeline Parallelism。
+\#\## 并行技术主要包含两种主流方式：Tensor Parallelism和Pipeline Parallelism。
 
 Tensor Parallelism，主要是指把向量计算进行拆解，并行分发到不同的GPU上，来降低整体的推理延迟；Tensor Parallelism在参数量级大到不能在单一GPU硬件上部署的模型推理实现中使用比较广泛。
 

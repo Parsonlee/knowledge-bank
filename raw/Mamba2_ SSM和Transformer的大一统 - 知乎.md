@@ -17,7 +17,7 @@ Introduction最近Mamba-2被ICML接收，实现了状态空间模型和注意力
 
 ---
 
-## 📖 正文全文
+\## 📖 正文全文
 
 # Mamba2: SSM和Transformer的大一统
 
@@ -65,7 +65,7 @@ Variable Length（可变长度）
 
 References:
 
-## Introduction
+\## Introduction
 
 最近Mamba-2被ICML接收，实现了状态空间模型和[注意力机制](https://zhida.zhihu.com/search?content_id=244828514&content_type=Article&match_order=1&q=%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6&zhida_source=entity)的大一统，不仅拥有较强的模型表现，还实现了性能的8倍优化。我最近正好在研读这方面的工作，认真学习了一下技术报告和原文，这里就做一些记录。原文真的太长了，所以本文力求提取核心思想，有错误之处，请大家帮忙指出和改正。但是原文真的非常值得一读！从理论基础到算法设计，到模型结构的设计，到系统性能优化，真的是十分全面和系统，值得反复品味和学习。
 
@@ -85,9 +85,9 @@ Nvidia做了更多的验证，分为两个方面（参考[An Empirical Study of 
 
 **混合模型（Mamba-2-Hybrid）：**8B参数，包含43% Mamba-2, 7% self-attention, 50% MLP层，改模型在所有12个标准任务上超过了8b的Transformer模型，推理过程得到了8倍的提速。长文本任务上，在16K，32K，128K任务中，Hybrid模型可以达到和Transformer模型相当或超过的水平。
 
-## SSD Model
+\## SSD Model
 
-### The Linear (SSM) Mode
+\#\## The Linear (SSM) Mode
 
 **Structured State Space Models （结构化状态空间模型，SSM）：**
 
@@ -194,7 +194,7 @@ Y=\\operatorname{SSM}(A, B, C)(X)=M X\\\\
 ![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fpica.zhimg.com%2Fv2-fcc3db4d009945bbb491e62e3d2b2060_1440w.jpg&valid=false)
 状态空间模型是半可分离矩阵变换
 
-### The Attention Mode: Structured Attention
+\#\## The Attention Mode: Structured Attention
 
 Transformers 的Attention机制本质上也是一个映射操作：
 
@@ -234,7 +234,7 @@ Z=contract(SP,SN\\rightarrow SPN)(V,K)\\\\H=contract(TS,SPN\\rightarrow TPN)(L,Z
 
 也就是说，SMA有着二次和线性两种形式。
 
-### **SSM与Attention的联系**
+\#\## **SSM与Attention的联系**
 
 1. **从SSM到Attention**
 
@@ -258,7 +258,7 @@ L=\\left\[\\begin{array}{ccccl} 1 \& \& \& \& \\\\ a_{1} \& 1 \& \& \& \\\\ a_{2
 
 y=\\left\[\\begin{array}{ccc} 1 \& \& \\\\ \\vdots \& \\ddots \& \\\\ 1 \& \\ldots \& 1 \\end{array}\\right\]x\\Leftrightarrow y_{0}=x_{0}; y_{t}=y_{t-1}+x_{t}\\\\
 
-## State Space Duality（状态空间对偶）
+\## State Space Duality（状态空间对偶）
 
 对偶性是指状态空间方程（ A_t 是标量）和线性注意力的掩码表示本质上是同一个模型。二者之间的等价关系可以对应为：
 ![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fpica.zhimg.com%2Fv2-664c1cdd05355c2e20a04cb5b4775cee_1440w.jpg&valid=false)
@@ -271,11 +271,11 @@ y=\\left\[\\begin{array}{ccc} 1 \& \& \\\\ \\vdots \& \\ddots \& \\\\ 1 \& \\ldo
 SSD使用统一的理论将 SSM 和 Attention 联系了起来，其交集的部分即 SSD 模型，在该理论下 Linear Attention 和 [RetNet](https://zhida.zhihu.com/search?content_id=244828514&content_type=Article&match_order=1&q=RetNet&zhida_source=entity) 只是其一种特殊形式。
 ![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fpic4.zhimg.com%2Fv2-c8ce83bd4d36a87fdd9dc9b1b8022941_1440w.jpg&valid=false)
 
-## Efficiency: the SSM and Attention Modes
+\## Efficiency: the SSM and Attention Modes
 
 SSD Mode在训练和推理上都实现了适配GPU的优化。推理上，状态空间模型（SSM）的递归模式非常适合高效的自回归推理；训练上，SSD相比于Attention降低了计算复杂度，可以更加高效的训练（也可以高效推理），相比于SSM，SSD实现了并行计算和矩阵运算（通过矩阵乘使得序列长度为 T 时的二次复杂度降低到线性），充分利用GPU的算力。
 
-### SSD Algorithm：Block Matrix Decomposition
+\#\## SSD Algorithm：Block Matrix Decomposition
 
 ![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fpicx.zhimg.com%2Fv2-310f8ede0662b98952e25dc42dbf0e2d_1440w.jpg&valid=false)
 
@@ -286,7 +286,7 @@ SSD Mode在训练和推理上都实现了适配GPU的优化。推理上，状态
 3. (黄色) 黄色部分自己形成了一个1-SS矩阵，这部分计算等同于SSM scan；
 4. (蓝色) 和绿色部分类似，可以通过batched matmul来计算。
 
-### SSD Algorithm: Chunking and State Passing
+\#\## SSD Algorithm: Chunking and State Passing
 
 这里就是通过状态传递的视角来理解SSD。我们把序列分成size为Q的blocks/chunks，这里的chunk就会有不同的状态：
 
@@ -295,7 +295,7 @@ SSD Mode在训练和推理上都实现了适配GPU的优化。推理上，状态
 3. **Pass states**: 通过parallel或者sequential scan等方法计算所有chunk的递归状态，也就是考虑了之前时间点所有状态的最终状态；
 4. **Output states**: 对每个chunk，给定初始状态（step3 得到的），计算对从初始状态对输出的贡献。
 
-### Code
+\#\## Code
 
 我们来看一下最小版本的实现代码：[AI_analysis/mamba2_ssd.ipynb at main · ifromeast/AI_analysis (github.com)](https://link.zhihu.com/?target=https%3A//github.com/ifromeast/AI_analysis/blob/main/mamba2_ssd.ipynb)
 
@@ -350,7 +350,7 @@ a_{i: j}\^{\\times}=exp(loga_{i}+ \\cdot\\cdot\\cdot + loga_{j-1})= ((loga)_{i:T
 
      # 1. Compute the output for each intra-chunk (diagonal blocks)
     L = torch.exp(segsum(A))
-    Y_diag  = torch.einsum("bclhn,bcshn,bhcls,bcshp->bclhp", C, B, L, X)  ## orange
+    Y_diag  = torch.einsum("bclhn,bcshn,bhcls,bcshp->bclhp", C, B, L, X)  \## orange
 
 接下来的部分要结合公式理解，也就是非对角块M_{j:j',i':i} 的分解如下：M_{j:j',i':i}=\\left\[\\begin{array}{ccc} C_j\^{\\top} A_{j: i\^{\\prime}}\^{\\times} B_{i\^{\\prime}} \& \\ldots \& C_j\^{\\top} A_{j: i-1}\^{\\times} B_{i-1} \\\\ \\vdots \& \& \\vdots \\\\ C_{j\^{\\prime}-1}\^{\\top} A_{j\^{\\prime}-1: i\^{\\prime}}\^{\\times} B_{i\^{\\prime}} \& \\ldots \& C_{j\^{\\prime}-1}\^{\\top} A_{j\^{\\prime}-1: i-1}\^{\\times} B_{i-1} \\end{array}\\right\]=\\left\[\\begin{array}{c} C_j\^{\\top} A_{j: j}\^{\\times} \\\\ \\vdots \\\\ C_{j\^{\\prime}-1}\^{\\top} A_{j\^{\\prime}-1: j}\^{\\times} \\end{array}\\right\] A_{j: i-1}\^{\\times}\\left\[\\begin{array}{lll} A_{i-1: i\^{\\prime}}\^{\\times} B_{i\^{\\prime}} \& \\cdots \& A_{i-1: i-1}\^{\\times} B_{i-1} \\end{array}\\right\]\\\\其中 j'\>j\\geq i\>i'。
 
@@ -361,7 +361,7 @@ a_{i: j}\^{\\times}=exp(loga_{i}+ \\cdot\\cdot\\cdot + loga_{j-1})= ((loga)_{i:T
     # 2. Compute the state for each intra-chunk
     # (right term of low-rank factorization of off-diagonal blocks; B terms)
     decay_states = torch.exp((A_cumsum[:, :, :, -1:] - A_cumsum))
-    states = torch.einsum("bclhn,bhcl,bclhp->bchpn", B, decay_states, X)  ## green
+    states = torch.einsum("bclhn,bhcl,bclhp->bchpn", B, decay_states, X)  \## green
 
 **Part 3：计算inter-rank SSM递归states（黄色块，中心因子）**
 
@@ -373,7 +373,7 @@ decay_chunk就是黄色部分的A A_{j: i-1}\^{\\times}
         initial_states = torch.zeros_like(states[:, :1])
     states = torch.cat([initial_states, states], dim=1)
     decay_chunk = torch.exp(segsum(F.pad(A_cumsum[:, :, :, -1], (1, 0))))
-    new_states = torch.einsum("bhzc,bchpn->bzhpn", decay_chunk, states)  ## yellow
+    new_states = torch.einsum("bhzc,bchpn->bzhpn", decay_chunk, states)  \## yellow
     states, final_state = new_states[:, :-1], new_states[:, -1]
 
 **Part 4：计算从递归states到输出（蓝色块，左因子）**
@@ -388,7 +388,7 @@ decay_chunk就是黄色部分的A A_{j: i-1}\^{\\times}
     # Add output of intra-chunk and inter-chunk terms (diagonal and off-diagonal blocks)
     Y = rearrange(Y_diag+Y_off, "b c l h p -> b (c l) h p")
 
-### Computation Cost
+\#\## Computation Cost
 
 我们将符号 BMM(B, M, N, K) 定义为一个批量矩阵乘法 contract(MK, KN → MN)，其中批次（batch）维度为 B。从这个符号我们可以推断出计算的三个方面的效率：
 
@@ -419,11 +419,11 @@ decay_chunk就是黄色部分的A A_{j: i-1}\^{\\times}
 **与纯SSM和Attention的比较：**
 ![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fpic4.zhimg.com%2Fv2-44ecdf1c4e1c10407b9a1ac20576b043_1440w.jpg&valid=false)
 
-## Mamba2 Architecture
+\## Mamba2 Architecture
 
 ![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fpic4.zhimg.com%2Fv2-e49a7a7870ea6f1ae36392a2cbc39f15_1440w.jpg&valid=false)
 
-### Block Design
+\#\## Block Design
 
 **并行参数投影**
 
@@ -437,7 +437,7 @@ Mamba-1 受 SSM 为中心的观点启发，其中选择性 SSM 层被视为从 X
 
 作者发现较大模型容易出现不稳定，所以通过在块的最后输出投影之前添加一个额外的归一化层（例如 LayerNorm，GroupNorm 或 RMSNorm）来缓解这一问题。
 
-### Multihead Patterns for Sequence Transformations
+\#\## Multihead Patterns for Sequence Transformations
 
 这里我理解是说，SSD不仅可以表达经典transformers attention的各种形式（MHA，MQA），同时还延伸出了更多的表达（MVA）。
 
@@ -474,9 +474,9 @@ Attention分类：
 * 头维度 P=1：每个通道都有独立的 SSM 动态 A 。
 * 多输入 SSM（MIS）或多值注意（MVA）头结构： B,C 矩阵（对应于注意力对偶的 K,Q ）在输入 X 的所有通道之间共享（对应于注意力中的 V）。
 
-## System and Scaling Optimizations
+\## System and Scaling Optimizations
 
-### Tensor Parallel（张量并行）
+\#\## Tensor Parallel（张量并行）
 
 ![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fpic1.zhimg.com%2Fv2-ac210ee8dc9a2a13156fae1b78abff94_1440w.jpg&valid=false)
 Mamba和Mamba-2的张量并行
@@ -491,7 +491,7 @@ Mamba-2：1次allreduce
 通过投影直接从 u 获取\\Delta, B,C，而不是从 x_{c} 获取，我们只需要对投影矩阵进行切分。这意味着在不同的 GPU 上有不同的\\Delta, B,C集合，这相当于在更大的 "逻辑 GPU" 上有几个group的\\Delta, B,C。此外，在每个块内使用 GroupNorm，组数可被 TP degree整除，以便 TP 组内的 GPU 在块内不进行通信。这样只需要在块结束时候进行一次allreduce即可。
 ![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fpica.zhimg.com%2Fv2-773ea4997aa58da4532aa81b4325f392_1440w.jpg&valid=false)
 
-### Sequence Parallel（序列并行）
+\#\## Sequence Parallel（序列并行）
 
 序列并行是沿着序列长度把输入和激活分配到不同的GPU上计算，主要有两种技术：
 
@@ -501,13 +501,13 @@ Mamba-2：1次allreduce
 ![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fpic4.zhimg.com%2Fv2-843bbeb822502c85eb64504d5e847d99_1440w.jpg&valid=false)
 Mamba-2序列并行
 
-### Variable Length（可变长度）
+\#\## Variable Length（可变长度）
 
 预训练通常对批处理使用相同的序列长度，但在微调或推断过程中，模型可能需要处理不同长度的不同输入序列。最简单的处理方式是将批次中的所有序列右填充到最大长度，但如果序列长度差异很大，效率会比较差。对于 Transformer，已经有一系列技术避免填充并保证GPU 之间负载平衡，或者可以将多个序列pack到同一batch中，此时需要注意调整注意力掩码。
 
 对于 SSMs，特别是 Mamba，文章通过将整个batch视为一个长序列来处理可变序列长度，并避免在各个序列之间传递状态。这相当于把一个序列终止处的token t 简单地设置 A_{t}=0，从而不将信息传递给属于另一个序列的token t+1。
 
-## References:
+\## References:
 
 [Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality](https://link.zhihu.com/?target=https%3A//arxiv.org/pdf/2405.21060)
 

@@ -20,7 +20,7 @@ tags:
 
 ---
 
-## 📖 正文全文
+\## 📖 正文全文
 
 # SFT数据挑选方法
 
@@ -78,13 +78,13 @@ MoDS
   * 计算IFD值
   * 让模型尝试回答，并度量回答的质量
 
-## 数据质量
+\## 数据质量
 
-### MoDS
+\#\## MoDS
 
 使用OpenAssistant的[reward-model-debertav3-large-v2](https://link.zhihu.com/?target=https%3A//huggingface.co/OpenAssistant/reward-model-deberta-v3-large-v2)模型，将问题和回答送到该模型得到奖励分数，当分数高于 <math xmlns="http://www.w3.org/1998/Math/MathML"> α </math>\\alpha 时，就认为是高质量数据。
 
-### DEITA
+\#\## DEITA
 
 这里主要度量了指令的复杂性和回答的质量评分。
 
@@ -122,19 +122,19 @@ MoDS
 * 将由回答R生成的所有回答全都丢给ChatGPT，让他对这些回答进行打分排序
 * 将ChatGPT打分排序的结果，训练LLama1-7B模型，让该模型学会打分
 
-### CaR
+\#\## CaR
 
 * 使用CoachLM的专家审核数据，有修改前低质量的数据，也有修改后的高质量数据
 * 使用Sentence BERT对数据进行分类，区分出低质量和高质量数据
 
-## 数据多样性
+\## 数据多样性
 
-### MoDS
+\#\## MoDS
 
 使用BERT模型抽取数据的特征，再使用K-Center-Greedy算法找出目前样本中和目前所有中心点最远的那个点，作为新的中心点。（参考自\[3\]）
 ![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fpic4.zhimg.com%2Fv2-49a44bc6d6c5006c1725beca8e6537b1_1440w.jpg&valid=false)
 
-### DEITA
+\#\## DEITA
 
 主要步骤为：
 
@@ -147,7 +147,7 @@ MoDS
 
 ![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fpica.zhimg.com%2Fv2-f7a2a08f2521d8fedc7be0548d9d4ce0_1440w.jpg&valid=false)
 
-### CaR
+\#\## CaR
 
 * 使用sentence-transformers抽取指令的向量
 * 利用PCA降维
@@ -155,9 +155,9 @@ MoDS
 * 对每个簇中的样本进行打分
 * 挑选打分在topn的数据
 
-## 数据必要性
+\## 数据必要性
 
-### IFD
+\#\## IFD
 
 我认为IFD主要是从数据必要性出发的。首先微调base模型使其具备初步的IF能力（将数据使用K-Means聚成100个簇，每个簇挑选10条数据，共1000条微调模型）。然后使用该模型计算**IFD指标** <math xmlns="http://www.w3.org/1998/Math/MathML"> s θ ( A \| Q ) = 1 N ∑ i = 1 N log ⁡ P ( w i A \| Q , w 1 A , w 2 A , ... , w i − 1 A ; θ ) s θ ( A ) = 1 N ∑ i = 1 N log ⁡ P ( w i A \| w 1 A , ... , w i − 1 A ; θ ) . r θ ( Q , A ) = s θ ( A \| Q ) s θ ( A ) </math>s_{\\theta}(A\|Q) = \\frac{1}{N} \\sum_{i=1}\^{N} \\log P(w_i\^A \| Q, w_1\^A, w_2\^A, \\ldots, w_{i-1}\^A; \\theta) \\\\ s_{\\theta}(A) = \\frac{1}{N} \\sum_{i=1}\^{N} \\log P(w_i\^A \| w_1\^A, \\ldots, w_{i-1}\^A; \\theta). \\\\ r_{\\theta}(Q, A) = \\frac{s_{\\theta}(A\|Q)}{s_{\\theta}(A)}
 
@@ -170,7 +170,7 @@ MoDS
 
 所以这里挑选IFD指标较高的数据进行训练。但是我觉得如果一个A很合理， <math xmlns="http://www.w3.org/1998/Math/MathML"> s θ ( A ) </math>s_\\theta(A) 很低，但数据质量问题导致Q和A关联不大，即很难从Q生成A，则这部分脏数据也会被挑选出来。比如Q是计算1+2的结果，A是结果为10，明显是错误的，但是可能会被挑选出来。
 
-### MoDS
+\#\## MoDS
 
 步骤为：
 
@@ -179,7 +179,7 @@ MoDS
 * 使用奖励模型计算推理结果的奖励值，当奖励值低于 <math xmlns="http://www.w3.org/1998/Math/MathML"> β </math>\\beta 时，认为模型无法回答好该问题，就保留该数据。
 * 对于保留的数据，进行多样性筛选，得到最终数据。
 
-## 参考
+\## 参考
 
 1. IFD：[刘聪NLP：如何从数据集中自动识别高质量的指令数据-IFD指标的使用](https://zhuanlan.zhihu.com/p/658128530)
 2. MoDS：[刘聪NLP：大模型微调技巧 \| 高质量指令数据筛选方法-MoDS](https://zhuanlan.zhihu.com/p/671183709)

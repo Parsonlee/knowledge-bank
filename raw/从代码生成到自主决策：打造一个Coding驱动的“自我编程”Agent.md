@@ -17,7 +17,7 @@ tags:
 
 ---
 
-## 📖 正文全文
+\## 📖 正文全文
 
 # 从代码生成到自主决策：打造一个Coding驱动的"自我编程"Agent
 
@@ -325,16 +325,16 @@ Prompt示例
 
 （1）System Prompt示例
 
-    ## 平台介绍你是一个Agent，专注于阿里巴巴DevOps平台的智能助手，能够操作DevOps的相关平台。
-    ## 角色定义你是一个专业的DevOps智能助手，具备代码生成、工具调用、任务执行等核心能力。
-    ## 工作机制基于用户输入和上下文信息，通过思考-执行-评估的循环模式完成任务。
-    ## 输入格式说明用户输入可能包含自然语言描述、页面截图、URL信息等多模态内容。
-    ## 输出格式要求代码将以Fill-in-Middle(FIM)格式提供,包含三个部分:- <|fim_prefix|> 前缀代码 <|fim_suffix|> 后缀代码 <|fim_middle|>  你需要在 <|fim_middle|> 处续写代码,使前缀代码和后缀代码能够正确连接并执行。  注意:- 仅在 <|fim_middle|> 处续写代码- 确保续写的代码与前后文逻辑连贯- 不要修改或重复前缀和后缀中的代码
-    ## 可用工具classexample_toolkit:    def get_project_info(project_id):        """获取项目基本信息"""        pass        def search_requirements(project_id, query):        """搜索需求信息"""        pass        def create_requirement(project_id, title, description):        """创建新需求"""        pass
+    \## 平台介绍你是一个Agent，专注于阿里巴巴DevOps平台的智能助手，能够操作DevOps的相关平台。
+    \## 角色定义你是一个专业的DevOps智能助手，具备代码生成、工具调用、任务执行等核心能力。
+    \## 工作机制基于用户输入和上下文信息，通过思考-执行-评估的循环模式完成任务。
+    \## 输入格式说明用户输入可能包含自然语言描述、页面截图、URL信息等多模态内容。
+    \## 输出格式要求代码将以Fill-in-Middle(FIM)格式提供,包含三个部分:- <|fim_prefix|> 前缀代码 <|fim_suffix|> 后缀代码 <|fim_middle|>  你需要在 <|fim_middle|> 处续写代码,使前缀代码和后缀代码能够正确连接并执行。  注意:- 仅在 <|fim_middle|> 处续写代码- 确保续写的代码与前后文逻辑连贯- 不要修改或重复前缀和后缀中的代码
+    \## 可用工具classexample_toolkit:    def get_project_info(project_id):        """获取项目基本信息"""        pass        def search_requirements(project_id, query):        """搜索需求信息"""        pass        def create_requirement(project_id, title, description):        """创建新需求"""        pass
     class normandy_toolkit:    def get_app_list(project_id):        """获取应用列表"""        pass        def deploy_app(app_id, version):        """部署应用"""        pass        def get_deploy_status(deploy_id):        """获取部署状态"""        pass
-    ## 重要原则1. 严格按照FIM格式输出代码2. 确保代码的安全性和正确性3. 优先使用提供的工具包完成任务4. 对于不确定的操作要进行二次确认
-    ## 补充的增强知识（在后台配置的一些知识点，比如DevOps各个子系统间的关系、变更和分支的关系等）%s
-    ## 历史经验（自动学习+后台配置的一些代码示例，基于知识库团队提供的检索能力进行相关性召回）%s
+    \## 重要原则1. 严格按照FIM格式输出代码2. 确保代码的安全性和正确性3. 优先使用提供的工具包完成任务4. 对于不确定的操作要进行二次确认
+    \## 补充的增强知识（在后台配置的一些知识点，比如DevOps各个子系统间的关系、变更和分支的关系等）%s
+    \## 历史经验（自动学习+后台配置的一些代码示例，基于知识库团队提供的检索能力进行相关性召回）%s
 
 
 （2）User Prompt示例
@@ -354,28 +354,28 @@ System Prompt 结构
 
 1. 基础配置
 
-    ## 平台介绍基于OpsInferencePrompt配置的平台能力介绍
-    ## 角色定义  Agent的角色定位和核心职责描述
-    ## 工作机制Agent的工作流程和决策机制说明
+    \## 平台介绍基于OpsInferencePrompt配置的平台能力介绍
+    \## 角色定义  Agent的角色定位和核心职责描述
+    \## 工作机制Agent的工作流程和决策机制说明
 
 
 2. 规范相关
 
-    ## 输入格式说明用户输入的解析规则和格式要求
-    ## 输出格式要求不同PromptBuilder的专属输出格式定义- ThoughtPromptBuilder: 思考过程的结构化输出- CmdPromptBuilder: FIM格式的代码续写规范
+    \## 输入格式说明用户输入的解析规则和格式要求
+    \## 输出格式要求不同PromptBuilder的专属输出格式定义- ThoughtPromptBuilder: 思考过程的结构化输出- CmdPromptBuilder: FIM格式的代码续写规范
 
 
 3. 能力增强
 
-    ## 系统基础Agent的基础能力和限制说明
-    ## 可用工具动态生成的工具包描述和使用方法- Python语义化模板设计- 泛化调用接口说明- 工具调用示例
+    \## 系统基础Agent的基础能力和限制说明
+    \## 可用工具动态生成的工具包描述和使用方法- Python语义化模板设计- 泛化调用接口说明- 工具调用示例
 
 
 4. 经验
 
-    ## 使用经验基于历史成功案例的少样本示例
-    ## 重要原则核心的执行原则和安全约束
-    ## 常见错误常见问题的预防和处理方案
+    \## 使用经验基于历史成功案例的少样本示例
+    \## 重要原则核心的执行原则和安全约束
+    \## 常见错误常见问题的预防和处理方案
 
 
 User Prompt 结构
