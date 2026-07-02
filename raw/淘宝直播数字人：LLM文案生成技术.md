@@ -5,6 +5,7 @@ url: https://mp.weixin.qq.com/s?__biz=MzAxNDEwNjk5OQ==&mid=2650540709&idx=1&sn=a
 tags:
   - LLM
   - LLM/Multimodal
+  - AIGC
 ---
 # 淘宝直播数字人：LLM文案生成技术
 
