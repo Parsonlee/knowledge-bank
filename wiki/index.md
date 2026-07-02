@@ -195,6 +195,20 @@
 - [[中枢与网关使用指南]] — 米家智能家居：网关/中枢系统/主备中枢/从网关/盲网关概念体系（Life）
 - [[AI时代如何做独立开发]] — 艾逗笔：一年十款产品的五条感悟 + 出海 SOP/SEO/AI Wrapper + AI Coding/Agent/Infra/MCP 四方向（创业）
 
+- [[让AI_Agent实时生成个性化交互式可视化体验]] — 探讨设计规范（Design System）与大模型结合，将静态设计变量转化为 AI 驱动的实时个性化交互式 UI 生成管线（AI-Agent/coding, AI-Agent/UI）
+- [[智能体系统综述_Netflix科学家]] — Netflix 高级研究科学家 Cameron R. Wolfe 的 AI Agent 系统综述，从底层语言模型出发拆解规划、记忆与推理架构（AI-Agent, LLM/reasoning）
+- [[星流Agent超全测评与实战分析]] — 深度测评首个专注于创意与设计领域的全流程智能体工具——星流 Agent (Lovart)，分析其多模型编排与实战效率（AI-Agent/tools, AIGC）
+- [[Claude_Code完全指南]] — 全面剖析 Anthropic 官方终端编程工具 Claude Code 的架构设计、常用命令行操作与 CLAUDE.md 工程规范（Skill/claude-code, AI-Agent/coding）
+- [[垂直领域大模型的思考与实践]] — 探讨垂直领域大语言模型落地应用的核心挑战、领域数据构建、微调路线策略与成本效益评估（LLM/training）
+- [[四段核心Prompt提示词实战指南]] — 收录并深度拆解四段极具实战价值的高阶结构化提示词（Prompt），涵盖 PPT、前端网页设计与 3D 动画规划（AI-Agent/prompt-engineering, AIGC）
+- [[小红书精准运营与数据复盘实战]] — 详解自媒体小红书平台精准内容运营法则，通过关键数据指标（CTR/完播率/互动率）复盘优化选题模型（创业）
+- [[全流程备战面试开卷推理SOP]] — 少数派文章：提出将职场面试视为基于样本积累与反向推导的“开卷推理游戏”，构建结构化面试备战与复盘 SOP（面试, Life）
+- [[替代JSON省Token的序列化新格式探索]] — 对比传统 JSON 在作为大模型上下文输入时的冗余开销，探讨 YAML/TOML 等轻量级替代标记格式对节省 Token 的价值（LLM/tokenization, AI-Agent/context-engineering）
+- [[Google_Generative_UI综述]] — Google Research 官方博客关于生成式用户界面（Generative UI）的阐述，按提示词动态生成丰富的定制化交互组件（AI-Agent/UI, AI-Agent/coding）
+- [[FastAPI生产部署ASGI_WSGI避坑指南]] — 生产环境下部署 FastAPI 高并发服务的实践指南，对比 Uvicorn 与 Gunicorn 架构职责并给出 Docker 稳定调优配置（Skill/python）
+- [[RAG从入门到精通系列1_基础RAG]] — 系统梳理基础检索增强生成（Naive RAG）标准管线的技术流程与基础概念，从切分嵌入到召回全链路概括（RAG）
+- [[PyTorch标准深度学习训练代码模板]] — 精选实用的 PyTorch 深度学习训练工程实操模板，涵盖参数解析、数据集处理、网络结构定义与训练循环（DeepLearning, Skill/python）
+
 ## Concepts
 
 - [[概念_显存组成与估算]] — 显存消耗组成、各组件估算公式、估算误差
