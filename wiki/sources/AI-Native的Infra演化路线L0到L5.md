@@ -5,7 +5,7 @@ tags:
 summary: Agent Infra 创业者 Hang Huang 提出 AI-Native Infra 的 L0-L5 能力成熟度模型，论证现有后端系统隐含「人类工程师在线兜底」假设、不适合
   AI 使用，AI 需结构化错误响应与全 API 化基础设施；终极形态为 Result-as-a-Service，人类角色从工程师转为 QA。
 sources:
-- Cubox/AI-Native 的 Infra 演化路线：L0 到 L5-2025-06-10.md
+- raw/AI-Native 的 Infra 演化路线：L0 到 L5.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high

@@ -7,7 +7,7 @@ summary: 通过可视化图解讲解 Pandas 核心操作：sort_values 排序、
   连接、merge 合并、pivot_table 透视表、melt 宽转长、pivot 长转宽、stack/unstack 压栈展开、reset_index/set_index
   索引操作，每个操作配图解释执行步骤。
 sources:
-- Cubox/超强图解 Pandas，建议收藏-2022-09-18.md
+- raw/超强图解 Pandas，建议收藏.md
 created: '2026-06-30'
 updated: '2026-07-01'
 confidence: high

@@ -4,7 +4,7 @@ tags:
 - Skill/python
 summary: FastAPI 官方对异步编程、并发与并行的完整讲解。
 sources:
-- Cubox/Py中的并发 async - await - FastAPI-2025-06-27.md
+- raw/Py中的并发 async _ await - FastAPI.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high

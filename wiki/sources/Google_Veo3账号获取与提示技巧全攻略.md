@@ -5,7 +5,7 @@ tags:
 summary: '[[实体_Veo_3]] 生成的视频（水果 asmr、第一人称大脚怪探险等）很火。使用 Veo3 至少需要 Gemini Pro 账号。谷歌 Flow
   平台每月 1000 积分，每个 Veo3 视频消耗 100 积分。'
 sources:
-- Cubox/Google Veo 3 账号最新获取方式 + 提示技巧全攻略！-腾讯云开发者社区-腾讯云-2025-07-31.md
+- raw/Google Veo 3 账号最新获取方式 + 提示技巧全攻略！-腾讯云开发者社....md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high

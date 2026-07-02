@@ -4,7 +4,7 @@ tags:
 - 创业
 summary: '**核心矛盾**：业务部门在社交媒体看到的 AI"炸裂效果" vs IT 部门实际生产力的不均衡发展。CEO 和业务部门比 IT 团队还"上头"'
 sources:
-- Cubox/阿里云CIO首次系统复盘：大模型落地的RIDE方法论与RaaS实践突破-2025-09-08.md
+- raw/阿里云CIO首次系统复盘：大模型落地的RIDE方法论与RaaS实践突破.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high

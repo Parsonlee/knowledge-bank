@@ -4,7 +4,7 @@ tags:
 - LLM/arch/attention
 summary: 通过逐步图解说明 DeepSeek MLA 矩阵吸收的工程优化原理：将 K/V 升维矩阵吸收进 Q，使注意力计算时 K/V 不含头信息，利用广播减少内存访问
 sources:
-- Cubox/deepseek MLA 矩阵吸收浅谈 - 知乎-2025-04-14.md
+- raw/deepseek MLA 矩阵吸收浅谈 - 知乎.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high

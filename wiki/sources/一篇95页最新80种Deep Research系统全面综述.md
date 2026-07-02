@@ -4,7 +4,7 @@ tags:
 - AI-Agent/deep-research
 summary: 浙大研究：4维分类法分析80+个Deep Research系统，提出单体/流水线/多智能体/混合四种实现架构
 sources:
-- Cubox/一篇95页最新80种Deep Research系统全面综述-2025-06-23.md
+- raw/一篇95页最新80种Deep Research系统全面综述.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high

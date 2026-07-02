@@ -4,7 +4,7 @@ tags:
 - LLM/arch/Mamba
 summary: 从直觉出发解释 Mamba：效率/有效性 Pareto 前沿、选择机制类比、状态即压缩、State Swapping 新推理范式及可解释性分析
 sources:
-- Cubox/Mamba Explained - Kola Ayonrinde-2025-06-25.md
+- raw/Mamba Explained _ Kola Ayonrinde.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high

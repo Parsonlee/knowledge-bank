@@ -8,7 +8,7 @@ summary: OpenAI DevDay 2023 演讲总结：LLM 应用性能优化路线——Pro
   Optimization / LLM Optimization)思考框架，附 RAG 45%→98% 案例与 Fine-tuning+RAG 结合 Text-to-SQL
   案例
 sources:
-- Cubox/Prompt Engineering, Finetune, RAG？：OpenAI LLM 应用最佳实践-2025-03-05.md
+- raw/Prompt Engineering, Finetune, RAG？：OpenA....md
 created: 2026-06-29
 updated: '2026-07-01'
 confidence: high

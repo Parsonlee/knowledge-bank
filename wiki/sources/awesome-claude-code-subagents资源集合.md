@@ -4,8 +4,7 @@ tags:
 - Skill/claude-code
 summary: VoltAgent 社区维护的 Claude Code [[概念_Subagent子代理]] 资源集合，包含 100+ 个生产就绪的专用 AI 代理定义，覆盖全栈开发、DevOps、数据科学和业务运营等领域。
 sources:
-- Cubox/awesome-claude-code-subagents- Production-ready Claude subagents collection
-  with 100+ specialized AI.md
+- raw/awesome-claude-code-subagents_ Productio....md
 created: 2026-06-30
 updated: '2026-07-01'
 confidence: high

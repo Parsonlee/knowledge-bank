@@ -5,7 +5,7 @@ tags:
 - Skill/python/pytorch
 summary: 一套完整的 PyTorch 深度学习训练代码模板，涵盖超参定义、数据集、模型、早停、训练验证测试九个步骤。
 sources:
-- Cubox/PyTorch常用代码段合集-2023-03-06.md
+- raw/PyTorch常用代码段合集.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high

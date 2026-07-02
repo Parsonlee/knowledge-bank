@@ -4,7 +4,7 @@ tags:
 - RAG/eval
 summary: BLEU：n-gram 匹配 + 简短惩罚，仅关注词语匹配忽略语义，无法评估检索质量和事实一致性
 sources:
-- Cubox/用 RAGAS 精准定位 RAG 系统短板-2025-09-26.md
+- raw/用 RAGAS 精准定位 RAG 系统短板.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high

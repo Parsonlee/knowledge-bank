@@ -4,7 +4,7 @@ tags:
 - LLM/hallucination
 summary: 从技术、传播、治理三维度解构大模型幻觉的成因、危害与应对策略
 sources:
-- Cubox/万字解构“幻觉陷阱”：大模型犯的错，会摧毁互联网吗？丨 AGI 之路 04 期 - BestBlogs.dev-2025-03-11.md
+- raw/万字解构“幻觉陷阱”：大模型犯的错，会摧毁互联网吗？丨 AGI 之路 04 期 ....md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high

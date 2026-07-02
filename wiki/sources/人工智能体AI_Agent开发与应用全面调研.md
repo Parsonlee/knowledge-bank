@@ -4,7 +4,7 @@ tags:
 - AI-Agent
 summary: 2023年AI Agent全面调研：大脑/感知/行动三框架、8大开源框架（AutoGPT/LangChain/AutoGen等）、应用场景与挑战综述
 sources:
-- Cubox/人工智能体(AI Agent)开发与应用全面调研：原理及开发、应用及挑战-2024-03-09.md
+- raw/人工智能体(AI Agent)开发与应用全面调研：原理及开发、应用及挑战.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high

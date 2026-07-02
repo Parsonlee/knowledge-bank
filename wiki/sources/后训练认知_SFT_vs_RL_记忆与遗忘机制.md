@@ -4,7 +4,7 @@ tags:
 - LLM/training/post-train
 summary: 普林斯顿陈丹琦团队发现 RL 抗遗忘优于 SFT，根源在于 on-policy 数据分布，而非算法形式
 sources:
-- Cubox/后训练认知：SFT vs RL—关于记忆和遗忘机制-2025-10-28.md
+- raw/后训练认知：SFT vs RL—关于记忆和遗忘机制.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high

@@ -1,5 +1,14 @@
 # Wiki Log
 
+## 2026-07-02 refactor & verify | 架构升级与 Cubox 批注/全文大整合 (迁移至 raw/)
+- **结构升级**：正式废除 `inbox/` 概念与目录；确认 `raw/` 和 `Clippings/` 为第一层原始数据核心目录。
+- **合并执行**：智能配对并合并原 `Cubox/` (196 篇卡片批注) 与 `tmp/...205全文/` (长文全文)，统一无缝合并入 `raw/` 目录（实测 `raw/` 共 212 篇笔记）。清理废弃旧目录 `Cubox/` 与 `tmp/...205全文/`。
+- **关联修复**：全量修正 191 篇 [wiki/sources](file:///Users/ZHao/WorkSpace/knowledge-bank/wiki/sources) 摘要页中的 `sources:` 引用至 `raw/xxx.md`。
+- **独立的 QA 子智能体验收**：
+  - **目录审计**：🟢 PASS (旧目录已清除，新库规模合理达标)
+  - **YAML 语法**：🟢 PASS (212/212 篇解析成功，0 ParserError)
+  - **死链率审计**：🟢 PASS (191 次锚定引用全部命中，死链率 **0.00%**)
+  - **正文完整性**：🟢 PASS (抽检及全量覆盖 YAML 元数据 + 摘要批注 + 📖 正文全文)
 
 ## 2026-06-30 verify | Phase 5+6 验收（Skill+AIGC+创业+Life）
 - 结论：**PASS（bug 已修复）**，详见 `wiki/verify-phase5_6.md`

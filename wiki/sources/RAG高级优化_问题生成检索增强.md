@@ -5,7 +5,7 @@ tags:
 - RAG/query
 summary: 通过用相关问题丰富文本片段，显著提高识别文档中包含用户查询答案的最相关部分的准确性。
 sources:
-- Cubox/RAG高级优化：基于问题生成的文档检索增强-2024-10-25.md
+- raw/RAG高级优化：基于问题生成的文档检索增强.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high

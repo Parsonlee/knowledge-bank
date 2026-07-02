@@ -4,7 +4,7 @@ tags:
 - AIGC
 summary: '**三套 Prompt 公式**（详见 [[概念_文生视频提示词公式]]）'
 sources:
-- Cubox/超详细提示词教程｜玩转Wan2.2-2025-11-10.md
+- raw/超详细提示词教程｜玩转Wan2.2.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high
@@ -67,4 +67,4 @@ confidence: high
 ## 来源
 
 - 全文：`tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/超详细提示词教程｜玩转Wan2.2.md`
-- Cubox：`Cubox/超详细提示词教程｜玩转Wan2.2-2025-11-10.md`
+- Cubox：`raw/超详细提示词教程｜玩转Wan2.2.md`

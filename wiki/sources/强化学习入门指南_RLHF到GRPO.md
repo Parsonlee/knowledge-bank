@@ -5,7 +5,7 @@ tags:
 - LLM/reasoning
 summary: Unsloth 出品 RL 入门指南：从 RLHF/PPO 到 GRPO/RLVR，原理+奖励函数设计+实战技巧
 sources:
-- Cubox/新手必看！强化学习入门指南 - 从RLHF、PPO、GRPO到RLVR，最后到训练推理模型-2025-06-23.md
+- raw/新手必看！强化学习入门指南 _ 从RLHF、PPO、GRPO到RLVR，最后到训....md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high

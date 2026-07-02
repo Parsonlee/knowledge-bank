@@ -6,7 +6,7 @@ tags:
 summary: 文本切分五层级中针对 Markdown 的第三层级（Document Specific Splitting）实践，介绍如何借助 LangChain
   MarkdownHeaderTextSplitter 按标题进行有效切分。
 sources:
-- Cubox/RAG文本切分LV3：轻松定制Markdown切分-2024-10-25.md
+- raw/RAG文本切分LV3：轻松定制Markdown切分.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high

@@ -5,7 +5,7 @@ tags:
 summary: 企业年报问答 RAG 挑战赛冠军方案（IlyaRice）：从 PDF 解析（Docling+表格序列化）、分块向量化（FAISS 每文档独立库）、多路由器检索、LLM
   重排序、父页面检索，到 CoT+结构化输出+多查询路由的生成工程实践
 sources:
-- Cubox/RAG 挑战赛冠军方案解析：从数据解析到多路由器检索的工程实践，推荐阅读！-2025-06-09.md
+- raw/RAG 挑战赛冠军方案解析：从数据解析到多路由器检索的工程实践，推荐阅读！.md
 created: 2026-06-09
 updated: '2026-07-01'
 confidence: high

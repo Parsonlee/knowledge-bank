@@ -4,7 +4,7 @@ tags:
 - RAG
 summary: 北京大学 PKU-DAIR 综述(arXiv:2402.19473)：AIGC 场景下检索增强技术，覆盖近 300 篇论文，四大基础范式+五类提升方法+多模态应用+评估基准
 sources:
-- Cubox/最新RAG综述来了！北京大学发布AIGC的检索增强技术综述-2024-03-15.md
+- raw/最新RAG综述来了！北京大学发布AIGC的检索增强技术综述.md
 created: 2026-06-29
 updated: '2026-07-01'
 confidence: high

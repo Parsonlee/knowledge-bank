@@ -5,7 +5,7 @@ tags:
 summary: 阿里云工程师以架构师视角从 SDK 源码和开源项目剖析 MCP 本质：CHS 三组件而非 CS，Server/Client 是模型无关 RPC 中间件，Host
   才是 AI 智能承载者
 sources:
-- Cubox/别再误会MCP了！一篇写给AI工程师的硬核“辟谣”指南-2025-09-22.md
+- raw/别再误会MCP了！一篇写给AI工程师的硬核“辟谣”指南.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high

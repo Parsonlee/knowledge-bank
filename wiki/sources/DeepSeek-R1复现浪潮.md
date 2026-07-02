@@ -5,7 +5,7 @@ tags:
 - LLM/training/RL
 summary: 全球 UC伯克利/港科大/HuggingFace 等团队以极低成本成功复现 DeepSeek-R1-Zero，验证纯 RL 涌现推理能力
 sources:
-- Cubox/DeepSeek-R1复现-2025-01-26.md
+- raw/DeepSeek-R1复现.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high

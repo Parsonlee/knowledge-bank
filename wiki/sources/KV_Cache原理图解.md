@@ -4,7 +4,7 @@ tags:
 - LLM/inference/kv-cache
 summary: 图解 KV Cache 原理：Decoder 自回归推理中 K/V 可缓存复用，避免重复计算，但长序列下显存开销巨大
 sources:
-- Cubox/大模型推理加速：看图学KV Cache - 知乎-2025-02-28.md
+- raw/大模型推理加速：看图学KV Cache - 知乎.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high

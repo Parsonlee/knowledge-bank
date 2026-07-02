@@ -4,7 +4,7 @@ tags:
 - RAG/embedding
 summary: HuggingFace 俄罗斯套娃嵌入模型概述——MRL 训练原理、Sentence Transformers 实现、截断使用方法与性能实验
 sources:
-- Cubox/俄罗斯套娃 (Matryoshka) 嵌入模型概述 - HuggingFace - 博客园-2025-07-19.md
+- raw/俄罗斯套娃 (Matryoshka) 嵌入模型概述 - HuggingFace ....md
 created: 2026-06-26
 updated: '2026-07-01'
 confidence: high

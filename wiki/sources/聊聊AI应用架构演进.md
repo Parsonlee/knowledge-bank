@@ -6,7 +6,7 @@ tags:
 summary: 以《AI Engineering》为蓝本，系统梳理 AI 应用架构的 7 步演进：基础调用→上下文增强→输入输出防护→意图路由→模型网关→缓存→Agent
   模式
 sources:
-- Cubox/聊聊AI应用架构演进-2025-06-17.md
+- raw/聊聊AI应用架构演进.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high

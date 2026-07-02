@@ -5,7 +5,7 @@ tags:
 - RAG/retrieval
 summary: 介绍四种检索后处理优化手段（Long-text Reorder、Contextual Compression、Refine、Emotion Prompt），帮助大模型更好地理解上下文知识。
 sources:
-- Cubox/RAG高级优化：检索后处理模块成竹在胸-2024-10-29.md
+- raw/RAG高级优化：检索后处理模块成竹在胸.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high

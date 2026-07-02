@@ -5,7 +5,7 @@ tags:
 summary: RAG 系统问答质量提升技术路线总览：Query Translation（Multi-query/RAG-Fusion/Decomposition/Step-back/HyDE）、Routing（Logical/Semantic）、Query
   Construction、Indexing（Chunk优化/Multi-representation/ColBERT/RAPTOR）、Retrieval & Generation（CRAG/Self-RAG/Adaptive-RAG）
 sources:
-- Cubox/探索提升RAG系统问答质量的技术路线-2025-02-05.md
+- raw/探索提升RAG系统问答质量的技术路线.md
 created: 2026-02-05
 updated: '2026-07-01'
 confidence: high

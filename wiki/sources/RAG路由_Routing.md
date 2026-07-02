@@ -4,7 +4,7 @@ tags:
 - RAG
 summary: 介绍 RAG 中的 Routing 技术：通过逻辑路由（规则分类）和语义路由（向量相似性）智能选择最合适的检索路径或数据源。
 sources:
-- Cubox/RAG从入门到精通系列3：Routing（路由）-2025-01-22.md
+- raw/RAG从入门到精通系列3：Routing（路由）.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high

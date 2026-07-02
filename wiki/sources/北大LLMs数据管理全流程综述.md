@@ -5,7 +5,7 @@ tags:
 - LLM/training
 summary: 北大发布LLMs数据管理全流程综述：预训练（数据规模/质量/组合/系统）与SFT（规模/质量/任务组合）两阶段数据管理完整框架
 sources:
-- Cubox/北京大学发布LLMs（预训练+微调）数据管理全流程综述-2023-12-18.md
+- raw/北京大学发布LLMs（预训练+微调）数据管理全流程综述.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high

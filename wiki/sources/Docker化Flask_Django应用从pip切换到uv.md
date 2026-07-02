@@ -4,7 +4,7 @@ tags:
 - Skill/python
 summary: 作者分享了将 Docker 化 Python 项目从 pip 切换到 uv 的完整实践，实测约 10x 速度提升。
 sources:
-- Cubox/Switching pip to uv in a Dockerized Flask - Django App — Nick Janetakis-2025-06-25.md
+- raw/Switching pip to uv in a Dockerized Flas....md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high

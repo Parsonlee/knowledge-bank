@@ -4,7 +4,7 @@ tags:
 - Recommendation
 summary: '**论文信息**：arxiv:2310.15950，代码 github.com/HKUDS/RLMRec，已落地公司搜索业务'
 sources:
-- Cubox/即插即用、简单有效的大语言模型推荐算法！港大联合百度推出RLMRec-2024-02-07.md
+- raw/即插即用、简单有效的大语言模型推荐算法！港大联合百度推出RLMRec.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high
@@ -67,4 +67,4 @@ confidence: high
 ## 来源
 
 - 全文：`tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/即插即用、简单有效的大语言模型推荐算法！港大联合百度推出RLMRec.md`
-- Cubox：`Cubox/即插即用、简单有效的大语言模型推荐算法！港大联合百度推出RLMRec-2024-02-07.md`
+- Cubox：`raw/即插即用、简单有效的大语言模型推荐算法！港大联合百度推出RLMRec.md`

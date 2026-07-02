@@ -15,7 +15,8 @@ tags:
 
 - **目标**：你负责维护本仓库中的 `wiki/` 目录，把它变成一个可复利的知识层
 - **边界**：
-  - 原始资料（`Cubox/`、`Clippings/`）是唯一事实来源，**只读不改**
+- **边界**：
+  - 原始资料（`raw/`、`Clippings/`）是唯一事实来源，**只读不改**
   - 只在 `wiki/` 里创建、修改 Markdown 页面
   - `notes/` 是用户手写笔记，不受 LLM 管理
   - 不要动其它目录
@@ -25,8 +26,9 @@ tags:
 ## 1. 目录结构约定
 
 ### 原始资料层
-- `Cubox/`：主文章库（剪藏），**只读**
-- `Clippings/`：网页剪藏（少量），**只读**
+- `raw/`：主原始资料库（合并了原 Cubox 批注与正文），**只读**
+- `Clippings/`：网页剪藏库（由 Obsidian 官方插件自动存入），**只读**
+- `workdocs/`：工作项目原始文档，**只读**
 
 ### Wiki 维护层
 `wiki/` 由你维护，子目录：
@@ -54,8 +56,8 @@ tags:
 type: "source|entity|concept|comparison|overview"
 tags: ["tag1", "tag2"]
 summary: "一句话说明这页的核心内容"
-sources: ["Cubox/xxx.md"]
-updated: "2026-06-26"
+sources: ["raw/xxx.md"]
+updated: "2026-07-02"
 ---
 ```
 
@@ -110,9 +112,9 @@ updated: "2026-06-26"
 
 ### 3.1 Ingest（导入新资料）
 
-当我说"请基于 `Cubox/xxx` 进行 Ingest"时：
+当我说"请基于 `raw/xxx` 进行 Ingest"时：
 
-1. 阅读 `Cubox/xxx`，如正文不足则抓取原始 URL 全文，提炼要点
+1. 阅读 `raw/xxx`，提炼要点
 2. 在 `wiki/sources/` 新建或更新摘要页
 3. 根据内容更新或创建：
    - 相关实体页（`wiki/entities/`）
@@ -121,7 +123,7 @@ updated: "2026-06-26"
    - 在 `wiki/index.md` 补上新页面条目（标题、链接、一句话 summary）
    - 在 `wiki/log.md` 追加记录：
      ```
-     ## [2026-06-26] ingest | Cubox/xxx → wiki/sources/xxx.md (+ affected pages)
+     ## [2026-07-02] ingest | raw/xxx → wiki/sources/xxx.md (+ affected pages)
      ```
 
 ### 3.2 Query（基于 wiki 回答问题）

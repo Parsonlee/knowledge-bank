@@ -1,0 +1,168 @@
+---
+id: "7395013776770073311"
+cubox_url: https://cubox.pro/web/card/7395013776770073311
+url: https://www.humanlayer.dev/blog/writing-a-good-claude-md
+tags:
+  - Skill/claude-code
+---
+# 写好 CLAUDE.md | HumanLayer 博客
+
+`CLAUDE.md` is a high-leverage configuration point for Claude Code. Learning how to write a good `CLAUDE.md` (or `AGENTS.md`) is a key skill for agent-enabled software engineering.
+
+[Read in Cubox](https://cubox.pro/web/card/7395013776770073311)  
+[Read Original](https://www.humanlayer.dev/blog/writing-a-good-claude-md)  
+
+---
+
+
+---
+
+## 📖 正文全文
+
+# #写一份好的 CLAUDE.md
+
+[www.humanlayer.dev](https://www.humanlayer.dev/blog/writing-a-good-claude-md)
+
+*注意：这篇文章也适用于`AGENTS.md`* 开源的`CLAUDE.md`代理和工具，例如 OpenCode、Zed、Cursor 和 Codex。
+
+## 原则：LLM（大多）是无状态的
+
+LLM 是无状态函数。它们的权重在用于推理时就已经固定，因此不会随时间学习。模型唯一了解的代码库信息就是你输入的标记。
+
+同样，像 Claude Code 这样的编码代理工具通常需要您显式管理代理的内存。`CLAUDE.md`（或`AGENTS.md`）是唯一一个默认情况下会写入您与代理的*每次对话的文件。*
+
+**这具有三项重要意义：**
+
+1. 编码代理在每次会话开始时对您的代码库完全一无所知。
+2. 每次启动会话时，都必须将有关代码库的重要信息告知代理。
+3. `CLAUDE.md`这是首选方法。
+
+## 将`CLAUDE.md`Claude 添加到您的代码库
+
+由于 Claude 在每次会话开始时对您的代码库一无所知，因此您应该使用`CLAUDE.md`引导程序让 Claude 熟悉您的代码库。概括来说，这应该涵盖以下内容：
+
+* **内容** ：向 Claude 介绍你的技术栈、项目结构和架构。给 Claude 提供一份代码库地图。这在单体仓库中尤为重要！告诉 Claude 各个应用是什么，共享包是什么，以及所有代码的用途，以便它知道在哪里查找所需内容。
+* **原因** ：请告诉克劳德这个项目的*目的* 以及代码库中每个部分的功能。项目各个部分的用途和功能是什么？
+* **如何** ：告诉 Claude 它在项目中应该如何工作。例如，你是使用 \`\<Claude_name\>\``bun`而不是 \`\<Claude_name\>\` 吗`node`？你需要包含它实际执行项目有效工作所需的所有信息。Claude 如何验证它的更改？它如何运行测试、类型检查和编译步骤？
+
+但是方法很重要！不要试图把克劳德可能需要运行的所有命令都塞进你的`CLAUDE.md`文件中------你会得到次优的结果。
+
+## 克劳德经常忽略`CLAUDE.md`
+
+无论你使用哪个模型，你可能会注意到 Claude 经常忽略你的`CLAUDE.md`文件内容。
+
+您可以通过在 Claude Code CLI 和 Anthropic API 之间添加一个日志代理来自行调查此问题`ANTHROPIC_BASE_URL`。Claude Code 会将您的文件中的以下系统提醒注入到`CLAUDE.md`发送给代理的用户消息中：
+
+```
+<system-reminder>
+`      IMPORTANT: this context may or may not be relevant to your tasks. 
+      You should not respond to this context unless it is highly relevant to your task.
+</system-reminder>`
+```
+
+因此，`CLAUDE.md`如果 Claude 认为您的文件内容与当前任务无关，它就会忽略该文件。文件中不适**用于所有** 任务的信息越多，Claude 就越有可能忽略文件中的指令。
+
+*Anthropic为什么要添加这个？* 很难说清楚，但我们可以做一些推测。`CLAUDE.md`我们遇到的大多数文件都包含大量*不* 通用的指令。许多用户把这个文件当作一种"热修复"工具，通过添加大量不一定通用的指令来修复他们不喜欢的行为。
+
+我们只能推测，Claude Code 团队发现，通过让 Claude 忽略错误的指令，该安全装置实际上产生了更好的结果。
+
+## ##创建一份好`CLAUDE.md`文件
+
+以下部分提供了一些关于如何`CLAUDE.md`按照[上下文工程最佳实践](https://github.com/humanlayer/12-factor-agents/blob/d20c728368bf9c189d6d7aab704744decb6ec0cc/content/factor-03-own-your-context-window.md)编写优秀文件的建议。
+
+*实际情况可能有所不同。* 并非所有规则都适用于所有情况。就像其他事情一样，偶尔打破一下规则也无妨......
+
+1. 你明白什么时候以及为什么可以打破它们。
+2. 你有充分的理由这样做。
+
+### ###少即是多
+
+你可能会想把 Claude 可能需要运行的所有命令，以及你的代码规范和风格指南都塞进一个配置文件里`CLAUDE.md`。**但我们不建议这样做。**
+
+虽然这个课题还没有经过非常严谨的研究，但[一些研究](https://arxiv.org/pdf/2507.11538)表明了以下几点：
+
+1. **具有前沿思维的逻辑学习模型（LLM）能够以相当高的一致性执行约150-200条指令。** 较小的模型能够处理的指令数量少于较大的模型，而不具备思维能力的模型能够处理的指令数量少于具备思维能力的模型。
+2. **较小的模型性能下降得更快、更差** 。具体来说，随着指令数量的增加，较小的模型在指令执行性能方面往往呈现指数衰减，而较大的前沿思维模型则呈现线性衰减（见下文）。因此，我们不建议将较小的模型用于多步骤任务或复杂的实现方案。
+3. **LLM 倾向于处理提示信息边缘的指令** ：最开始的部分（Claude Code 系统消息和`CLAUDE.md`），以及最结束的部分（最新的用户消息）。
+4. **随着指令数量的增加，指令执行质量会均匀下降** 。这意味着，当你给LLM更多指令时，它并非简单地忽略较新的（"文件中更靠后的"）指令，而是开始**均匀地忽略所有指令。**
+
+![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fwww.humanlayer.dev%2Fblog%2Fwriting-a-good-claude-md%2Finstructionfollowing.png&valid=true)
+
+我们对 Claude Code 框架的分析表明，**Claude Code 的系统提示包含约 50 条独立指令** 。根据您使用的模型，这几乎占您的代理能够可靠执行的指令总数的三分之一------而且这还不包括规则、插件、技能或用户消息。
+
+这意味着你的`CLAUDE.md`文件应该包含尽可能少的指令------理想情况下，只包含那些普遍适用于你的任务的指令。
+
+### ###`CLAUDE.md`文件长度及适用性
+
+在其他条件相同的情况下，**当 LLM 的上下文窗口充满聚焦的、相关的上下文（** 包括示例、相关文件、工具调用和工具结果）时，其任务表现会比上下文窗口包含大量不相关上下文时更好。
+
+由于`CLAUDE.md`它贯穿于*每一次会议* ，因此您应该确保其内容尽可能具有普遍适用性。
+
+例如，避免包含有关（例如）如何构建新数据库模式的说明------这无关紧要，而且当您处理其他不相关的事情时会分散模型的注意力！
+
+从长度上看，也遵循"越*短越好* "的原则。虽然 Anthropic 没有官方的`CLAUDE.md`文件长度建议，但普遍认为 300 行以内最佳，越短越好。
+
+在 HumanLayer，我们的根`CLAUDE.md`文件*不到 60 行* 。
+
+### ###渐进式披露
+
+编写一份简洁明了的`CLAUDE.md`文件，涵盖你想让克劳德知道的所有内容，可能是一项挑战，尤其是在大型项目中。
+
+**为了解决这个问题，我们可以利用渐进式披露** 原则，确保 Claude 只在需要时才看到特定于任务或项目的指令。
+
+我们建议不要将所有关于构建项目、运行测试、代码约定或其他重要上下文的不同说明都放在同一个`CLAUDE.md`文件中，而是将特定于任务的说明保存在项目某个位置的、具有自描述性名称的*单独 Markdown 文件* 中。
+
+例如：
+
+```
+agent_docs/
+`  |- building_the_project.md
+  |- running_tests.md 
+  |- code_conventions.md
+  |- service_architecture.md
+  |- database_schema.md
+  |- service_communication_patterns.md`
+```
+
+然后，`CLAUDE.md`您可以在文件中列出这些文件，并简要描述每个文件，然后指示 Claude 判断哪些文件（如果有）是相关的，并在开始工作前阅读这些文件。或者，您可以要求 Claude 在阅读文件之前先向您展示它需要阅读的文件，以获得您的批准。
+
+**尽量使用指向原始文件的指针，而** 不是直接复制粘贴。如果可能，不要在这些文件中包含代码片段------它们很快就会过时。相反，应该提供`file:line`指向权威上下文的引用。
+
+[从概念上讲，这与Claude Skills 的](https://code.claude.com/docs/en/skills)运作方式非常相似，尽管 Claude Skills 更侧重于工具的使用，而不是操作说明。
+
+### 克劳德（Claude）不是昂贵的短切器
+
+我们发现用户在文件中最常见的内容之一`CLAUDE.md`就是代码风格指南。**千万不要让 LLM 来代替代码检查工具的工作** 。与传统的代码检查工具和格式化工具相比，LLM 的成本更高，速度也*更* 慢。我们建议您尽可能*使用确定性工具* 。
+
+代码风格指南不可避免地会在你的上下文窗口中添加大量指令和大多无关的代码片段，从而降低 LLM 的性能和指令遵循性，并占用你的上下文窗口空间。
+
+**LLM（逻辑学习模型）是情境学习者** ！如果你的代码遵循一套特定的风格指南或模式，你会发现，只需对你的代码库进行一些搜索（或者查阅一份好的研究文档！），你的智能体就会倾向于遵循现有的代码模式和约定，而无需被告知。
+
+如果你对此非常重视，甚至可以考虑设置一个[Claude Code `Stop`hook](https://code.claude.com/docs/en/hooks#stop)，运行你的格式化工具和代码检查工具，并将错误呈现给 Claude 进行修复。不要让 Claude 自己去查找格式问题。
+
+**加分项** ：使用可以自动修复问题的代码检查工具（我们推荐 Biome），并仔细调整规则，确保哪些问题可以安全地自动修复，从而实现最大程度（安全）的覆盖率。
+
+您还可以创建一个[斜杠命令](https://code.claude.com/docs/en/slash-commands)，其中包含您的代码规范，并指向 Claude 版本控制系统中的更改，或者指向您的 \`\<file\>\``git status`或类似位置。这样，您可以分别处理实现和格式化。**最终，您会发现两者结合使用效果更好** 。
+
+### ###请勿使用`/init`或自动生成您的`CLAUDE.md`
+
+Claude Code 和其他带有 OpenCode 的工具都提供了自动生成`CLAUDE.md`文件的方法（或`AGENTS.md`）。
+
+因为Claude 代码`CLAUDE.md`会进入*每个会话，所以它是* **该工具最重要的杠杆点** 之一------好坏取决于你如何使用它。
+
+一行糟糕的代码就是一行糟糕的代码。一个糟糕的实施方案可能会导致很多**糟糕** 的代码。一项对系统工作原理理解有误的研究可能会导致方案中出现很多糟糕的代码，进而导致**更多糟糕的代码。**
+
+但该`CLAUDE.md`文件会影响**您工作流程的每一个阶段** 以及由此产生的每一个产物。因此，我们建议您花些时间仔细考虑文件中的每一行代码：
+
+![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fwww.humanlayer.dev%2Fblog%2Fwriting-a-good-claude-md%2Fleverage.png&valid=true)
+
+## ＃＃综上所述
+
+1. `CLAUDE.md`目的是将 Claude 集成到您的代码库中。它应该定义您项目的**"为什么"** 、**"是什么"** 和**"如何做"** 。
+2. **少即是多** 。虽然你不应该省略必要的说明，但你应该在文件中尽可能减少说明的数量。
+3. 保持内容`CLAUDE.md` **简洁明了，并具有普遍适用性** 。
+4. 使用**渐进式披露** ------不要把所有你可能想让 Claude 知道的信息都告诉它。相反，告诉它*如何找到* 重要信息，以便它能够找到并使用这些信息，但只在需要时才这样做，以避免占用过多上下文窗口或指令数量。
+5. Claude 不是代码检查工具。请使用代码检查工具和代码格式化工具，并根据需要使用其他功能，例如[钩子](https://code.claude.com/docs/en/hooks)和[斜杠命令。](https://code.claude.com/docs/en/slash-commands)
+6. **`CLAUDE.md`这是整个安全带中杠杆作用最大的点** ，因此请避免自动生成。您应该精心设计其内容以获得最佳效果。
+
+[Read in Cubox](https://cubox.pro/web/card/7395013776770073311)

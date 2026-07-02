@@ -5,7 +5,7 @@ tags:
 - LLM/training
 summary: 基于Karpathy 7小时LLM教学视频的学习笔记：聊天流程→预训练→后训练（SFT/奖励建模）→RL（GRPO/CoT/Aha moment）→主流应用特性
 sources:
-- Cubox/Andrej Karpathy LLM教学-2025-05-19.md
+- raw/Andrej Karpathy LLM教学.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high

@@ -4,7 +4,7 @@ tags:
 - AI-Agent/skill
 summary: 《Agentic Design Patterns》中文翻译项目：Antonio Gulli 著，424页，涵盖21种 Agent 设计模式的完整实践指南
 sources:
-- Cubox/《Agentic Design Patterns》中文翻译版-2025-10-29.md
+- raw/《Agentic Design Patterns》中文翻译版.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high

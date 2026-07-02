@@ -4,7 +4,7 @@ tags:
 - Skill/python
 summary: 作者分享了一套在生产环境中支撑 500+ 并发用户的 FastAPI 标准项目结构。
 sources:
-- Cubox/FastAPI 架构指南：用这份模版打造可扩展又安全的系统（附实战经验）-2025-10-28.md
+- raw/FastAPI 架构指南：用这份模版打造可扩展又安全的系统（附实战经验）.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high

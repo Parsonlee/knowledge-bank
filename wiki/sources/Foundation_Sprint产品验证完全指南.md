@@ -4,7 +4,7 @@ tags:
 - 创业
 summary: '**从 Design Sprint 到 Foundation Sprint**（详见 [[概念_Design_Sprint]]、[[概念_Foundation_Sprint]]）'
 sources:
-- Cubox/7天验证产品思路、10小时找到基础共识：来自谷歌的“Foundation Sprint”完全指南-2025-09-08.md
+- raw/7天验证产品思路、10小时找到基础共识：来自谷歌的“Foundation Spr....md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high
@@ -72,4 +72,4 @@ confidence: high
 ## 来源
 
 - 全文：`tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/7天验证产品思路、10小时找到基础共识：来自谷歌的"Foundation Sprint"完全指南.md`
-- Cubox：`Cubox/7天验证产品思路、10小时找到基础共识：来自谷歌的"Foundation Sprint"完全指南-2025-09-08.md`
+- Cubox：`raw/7天验证产品思路、10小时找到基础共识：来自谷歌的"Foundation Sprint"完全指南-2025-09-08.md`

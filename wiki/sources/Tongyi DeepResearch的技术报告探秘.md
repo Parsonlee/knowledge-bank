@@ -4,7 +4,7 @@ tags:
 - AI-Agent/deep-research
 summary: 魔搭社区深度解读通义 DeepResearch：三阶段训练流程、IterResearch 范式、WebFrontier 数据合成与六大研发问题
 sources:
-- Cubox/Tongyi DeepResearch的技术报告探秘-2025-10-09.md
+- raw/Tongyi DeepResearch的技术报告探秘.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high

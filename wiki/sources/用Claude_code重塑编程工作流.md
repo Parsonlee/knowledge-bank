@@ -5,7 +5,7 @@ tags:
 summary: 厉辉（腾讯云开发者）结合 Anthropic 内部实践与个人思考，提出一套"场景化 AI 协作框架"。基于对 Anthropic 内部 9 个团队、数十个应用场景的分析，归纳出三种协作模式和三个反直觉高效技巧，将
   AI 从"编码助手"升级为"开发搭档"。
 sources:
-- Cubox/用Claude code重塑编程工作流-2025-09-08.md
+- raw/用Claude code重塑编程工作流.md
 created: 2026-06-30
 updated: '2026-07-01'
 confidence: high

@@ -4,7 +4,7 @@ tags:
 - LLM/arch/Mamba
 summary: Mamba2（ICML）SSD 框架：SSM 与 Attention 的数学等价、半可分离矩阵、分块矩阵算法、8倍推理加速与混合模型超越 Transformer
 sources:
-- Cubox/Mamba2- SSM和Transformer的大一统 - 知乎-2025-07-02.md
+- raw/Mamba2_ SSM和Transformer的大一统 - 知乎.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high

@@ -5,7 +5,7 @@ tags:
 - AI-Agent/tools
 summary: Anthropic 工程实践：多智能体研究系统从原型到生产的架构、提示词、评测与可靠性全解析，多智能体比单智能体提升 90.2%
 sources:
-- Cubox/How we built our multi-agent research system - Anthropic-2025-06-21.md
+- raw/How we built our multi-agent research sy....md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high

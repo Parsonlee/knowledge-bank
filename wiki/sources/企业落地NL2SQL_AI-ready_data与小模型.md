@@ -5,7 +5,7 @@ tags:
 summary: 矩阵起源实践：NL2SQL 生产落地需要 AI-ready data（M-Schema+约束池）+ 小模型（Qwen2.5-Coder 3B/7B
   LoRA）+ 两级 Schema Linking，结构幻觉率从7.9%降至1.3%
 sources:
-- Cubox/企业落地 NL2SQL，需要的是 AI-ready data 和 小模型-2025-08-29.md
+- raw/企业落地 NL2SQL，需要的是 AI-ready data 和 小模型.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high

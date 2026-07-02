@@ -4,7 +4,7 @@ tags:
 - LLM/arch/Mamba
 summary: 用 50+ 可视化图解 Mamba 与状态空间模型全流程：SSM 数学基础、离散化、三种表示、HiPPO 矩阵、选择扫描算法与硬件感知实现
 sources:
-- Cubox/A Visual Guide to Mamba and State Space Models-2025-06-26.md
+- raw/A Visual Guide to Mamba and State Space ....md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high

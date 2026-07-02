@@ -4,7 +4,7 @@ tags:
 - AI-Agent/memory
 summary: 系统梳理 AI 智能体 8 种记忆策略：全量记忆、滑动窗口、相关性过滤、摘要压缩、向量数据库、知识图谱、分层记忆、类OS内存管理，附模拟代码。
 sources:
-- Cubox/AI 智能体 8 种常见的记忆（Memory）策略与技术实现-2025-08-18.md
+- raw/AI 智能体 8 种常见的记忆（Memory）策略与技术实现.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high
@@ -13,7 +13,7 @@ confidence: high
 
 - 原文：[AI 智能体 8 种常见的记忆（Memory）策略与技术实现](https://mp.weixin.qq.com/s?__biz=MzIyNjM2MzQyNg==&mid=2247710475)
 - 作者：秋山墨客 / Datawhale
-- Cubox：`Cubox/AI 智能体 8 种常见的记忆（Memory）策略与技术实现-2025-08-18.md`
+- Cubox：`raw/AI 智能体 8 种常见的记忆（Memory）策略与技术实现.md`
 
 ## 核心要点
 

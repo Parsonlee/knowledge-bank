@@ -5,7 +5,7 @@ tags:
 summary: MCP+数据库实现 Text-to-SQL 式结构化检索，实测比传统 RAG 效果好，并详解 Function Call→MCP 演进与 Cline+MongoDB
   实战
 sources:
-- Cubox/MCP+数据库-2025-05-26.md
+- raw/MCP+数据库.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high

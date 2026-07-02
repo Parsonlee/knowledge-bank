@@ -4,7 +4,7 @@ tags:
 - 创业
 summary: '**公司背景**：成立 2014/2015 年，从 0 到 MVP 花近两年；切入被 Gmail/Outlook 垄断的免费邮件市场，聚焦高管/创业者/高绩效者，核心痛点是效率'
 sources:
-- Cubox/把 AI 邮件工具做到 3500 万美元 ARR，Superhuman：找到 PMF 其实有明确的方法论-2025-12-13.md
+- raw/把 AI 邮件工具做到 3500 万美元 ARR，Superhuman：找到 P....md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high

@@ -5,7 +5,7 @@ tags:
 - LLM/training/RL
 summary: DeepSeek-R1 通过大规模强化学习（GRPO）+ 多阶段训练激励推理能力，达到 OpenAI-o1 水平
 sources:
-- Cubox/万字长文详解DeepSeek-R1模型工作原理-2025-02-06.md
+- raw/万字长文详解DeepSeek-R1模型工作原理.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high

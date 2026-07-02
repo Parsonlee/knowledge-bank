@@ -4,7 +4,7 @@ tags:
 - AIGC
 summary: '[[实体_Veo_3]]（Google）从文本提示词生成带音频的视频，音频可以是对话、画外音、音效和音乐。'
 sources:
-- Cubox/How to prompt Veo 3 for the best results – Replicate blog-2025-07-31.md
+- raw/How to prompt Veo 3 for the best results....md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high

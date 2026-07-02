@@ -5,7 +5,7 @@ tags:
 - RAG/query
 summary: 介绍查询重写、Step-back 提示、子查询分解三种 query 理解方法，通过修改或扩展原始查询提高检索信息的相关性和全面性。
 sources:
-- Cubox/RAG高级优化：一文看尽query的转换之路-2024-10-29.md
+- raw/RAG高级优化：一文看尽query的转换之路.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high

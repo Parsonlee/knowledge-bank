@@ -4,7 +4,7 @@ tags:
 - RAG/embedding
 summary: Matryoshka Representation Learning (MRL) 俄罗斯套娃嵌入——在同一高维向量中嵌套学习多粒度低维表征，允许截断嵌入维度而保留语义
 sources:
-- Cubox/OpenAI新模型用的嵌入技术-俄罗斯套娃表示学习-2024-02-04.md
+- raw/OpenAI新模型用的嵌入技术-俄罗斯套娃表示学习.md
 created: 2026-06-26
 updated: '2026-07-01'
 confidence: high

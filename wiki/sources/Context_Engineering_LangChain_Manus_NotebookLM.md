@@ -4,7 +4,7 @@ tags:
 - AI-Agent/context-engineering
 summary: "LangChain 和 Manus 专家对话提炼的4条上下文工程反直觉原则：战略边界、可逆压缩、工具分层卸载、简化优先"
 sources:
-- "Cubox/AI 代理的上下文工程：LangChain 和 Manas - NotebookLM --- Context Engineering for AI Agents- LangChain and Mana.md"
+- "raw/AI 代理的上下文工程：LangChain 和 Manas - Notebook....md"
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high

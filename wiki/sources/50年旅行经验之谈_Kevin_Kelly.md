@@ -4,7 +4,7 @@ tags:
 - Life
 summary: '**退隐（Retreat / R&R）**：为逃离工作日常、放松充电、被宠爱、做有趣的事，去容易的地方——即"度假"。'
 sources:
-- Cubox/The Technium- 50 Years of Travel Tips-2025-02-26.md
+- raw/The Technium_ 50 Years of Travel Tips.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high
