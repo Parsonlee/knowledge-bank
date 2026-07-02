@@ -218,7 +218,7 @@ ToalMemory = Model/(PP\*TP) + Optimizer + Activation/TP + Gradient/PP
 
 **2.3.4 Zero方法**
 
-Zero方法对显存的优化和原理参考其论文\[[https://arxiv.org/abs/1910.02054](https://link.zhihu.com/?target=https%3A//arxiv.org/abs/1910.02054)\]，其中包含了三种策略，对显存降低的效果不一样。
+Zero方法对显存的优化和原理参考其论文\\[\[https://arxiv.org/abs/1910.02054](https://link.zhihu.com/?target=https%3A//arxiv.org/abs/1910.02054)\]，其中包含了三种策略，对显存降低的效果不一样。
 ![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fpic4.zhimg.com%2Fv2-aa047f0ead5d22b940aae49b677bac6f_1440w.jpg&valid=false)
 zero策略下显存消耗的计算变化
 
@@ -304,7 +304,7 @@ Gradient = 2 \* params / (1024 \* 1024 \* 1024)
 
 4、**消除框架副本**：在AI框架（如pytorch）中有些数据是一些由框架产生的中间副本，可以进行优化消除；缺点：游湖成本较大。
 
-5、**显存管理** ：通过显存管理的知识可知\[[PyTorch显存管理](https://zhuanlan.zhihu.com/p/680769942)\]，框架的显存管理会产生显存碎片，通过优化显存管理来优化碎片；缺点：目前可用的手段较少。
+5、**显存管理** ：通过显存管理的知识可知\\[\[PyTorch显存管理](https://zhuanlan.zhihu.com/p/680769942)\]，框架的显存管理会产生显存碎片，通过优化显存管理来优化碎片；缺点：目前可用的手段较少。
 
 6、**底层API**： 在GPU的驱动库中/CUDA算子库中，不同API显存消耗不一样，我们可以用显存消耗更小算子去替换大显存消耗算子，比如FlashAttention；有些默认的操作会产生额外系统显存，也可以考虑替换更高版本优化后的API。
 
@@ -312,10 +312,10 @@ Gradient = 2 \* params / (1024 \* 1024 \* 1024)
 
 参考文献：
 
-* Reducing Activation Recomputation in Large Transformer Models \[[arXiv:2205.05198v1](https://link.zhihu.com/?target=https%3A//arxiv.org/abs/2205.05198)\]
-* Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity\[[https://arxiv.org/pdf/2101.03961.pdf](https://link.zhihu.com/?target=https%3A//arxiv.org/pdf/2101.03961.pdf)\]
-* ZeRO: Memory Optimizations Toward Training Trillion Parameter Models \[[https://arxiv.org/abs/1910.02054](https://link.zhihu.com/?target=https%3A//arxiv.org/abs/1910.02054)\]
-* Mixed Precision Training\[[https://arxiv.org/pdf/1710.03740.pdf](https://link.zhihu.com/?target=https%3A//arxiv.org/pdf/1710.03740.pdf)\]
+* Reducing Activation Recomputation in Large Transformer Models \\[\[arXiv:2205.05198v1](https://link.zhihu.com/?target=https%3A//arxiv.org/abs/2205.05198)\]
+* Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity\\[\[https://arxiv.org/pdf/2101.03961.pdf](https://link.zhihu.com/?target=https%3A//arxiv.org/pdf/2101.03961.pdf)\]
+* ZeRO: Memory Optimizations Toward Training Trillion Parameter Models \\[\[https://arxiv.org/abs/1910.02054](https://link.zhihu.com/?target=https%3A//arxiv.org/abs/1910.02054)\]
+* Mixed Precision Training\\[\[https://arxiv.org/pdf/1710.03740.pdf](https://link.zhihu.com/?target=https%3A//arxiv.org/pdf/1710.03740.pdf)\]
 * [Transformer Inference Arithmetic \| kipply's blog](https://link.zhihu.com/?target=https%3A//kipp.ly/transformer-inference-arithmetic/)
 
 **欢迎点赞、关注、讨论、不足之处请评判指正**

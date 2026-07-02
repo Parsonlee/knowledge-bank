@@ -256,7 +256,7 @@ def test_07_v0(n):
 def test_07_v1(n):
  # Example of improved code
  # Utilize precomputed values to help speedup
- pv = [[i * j for j in range(n)] for i in range(n)]
+ pv = \[\[i * j for j in range(n)] for i in range(n)]
  result = 0
  for i in range(n):
   result += sum(pv[i][:i+1])

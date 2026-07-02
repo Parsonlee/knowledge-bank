@@ -80,12 +80,13 @@ Vault 内运行了 **Local REST API with MCP** 插件。当桌面端 Obsidian �
 3. **沉淀新知（可选）**：如果回答包含有价值的横向对比、选型分析或架构综述，主动提议将其写入 `wiki/comparisons/` 或 `wiki/overview/`；新建页面务必**在正文插链接入图谱并同步挂载至 `wiki/index.md`**，最后在 `wiki/log.md` 登记 `query | 新建 ...`。
 
 ### 3. Lint & Prune（健康检查、精简与图谱垃圾回收）
-当用户要求对知识库进行「Lint / 健康检查 / 精简 / 冲突审查 / 删除收藏」时：
-1. **常规扫描诊断**：
-   - **图谱与链审计**：检测知识库中的观点矛盾、过时表述、孤立无入链页面、低频提及实体（如仅出现 1 次的人/组织）、以及缺失的双向链接。
+当用户要求对知识库进行「Lint / 健康检查 / 精简 / 冲突审查 / 删除收藏」时，**强烈推荐使用项目中预置的自动化脚本工具 `python3 scripts/vault_lint.py`**：
+
+1. **常规扫描诊断 (`python3 scripts/vault_lint.py lint`)**：
+   - **图谱与链审计**：检测知识库中的观点矛盾、过时表述、孤立无入链页面、低频提及实体（如仅出现 1 次的人/组织）、以及缺失的双向链接与死链。
    - **漏登审计**：扫描 `wiki/sources/`、`wiki/concepts/`、`wiki/entities/` 检查是否存在漏登 `wiki/index.md` 的孤立文档。
-   - **语法污染扫描**：检测物理源文件中是否有未转义的行内伪 Tag 或矩阵伪出链。
-2. **精简与级联清理机制（Cascading Pruning SOP）**：
+   - **语法污染扫描 (`python3 scripts/vault_lint.py sanitize-raw`)**：检测并自动转义物理源文件中未转义的行内伪 Tag 或矩阵/张量伪出链 `[[...]]`。
+2. **精简与级联清理机制（`python3 scripts/vault_lint.py prune <raw_path>` / Cascading Pruning SOP）**：
    当用户主动要求删除或清理最上游原始层资料（如 `raw/xxx.md` 或 `Clippings/xxx.md`）时，**必须执行严密的图谱级联清理链条（自上而下四步法）**：
    - **第一步（精准清理摘要页）**：删除目标物理源文件时，读取所有 `wiki/sources/*.md` 的 Frontmatter，只要 `sources:` 列表中命中被删源路径，将对应的 Source 摘要页连带删除。
    - **第二步（同步更新总索引）**：打开 `wiki/index.md`，将对应分类下指向已删 Source 摘要页的索引条目自动精准剔除。
@@ -93,7 +94,9 @@ Vault 内运行了 **Local REST API with MCP** 插件。当桌面端 Obsidian �
      - **情况 A（剩余被引次数 $\ge 1$）**：说明属于通用核心知识，**保留页面**，仅在其正文末尾 `## 来源` 中摘除指向已删文章的链接。
      - **情况 B（剩余被引次数 $= 0$）**：说明其为随着该被删文产生的冷门孤立产物（Orphan Pages），**触发垃圾回收连带清理**。
    - **第四步（登记操作流水）**：在 `wiki/log.md` 登记 `lint/prune | prune raw/xxx.md (+ Cascading cleanup sources, index & gc entities/concepts)`。
-3. **先提议，再动刀 (Dry-run & Apply)**：执行大范围图谱治理或精简清理前，先向用户输出结构化的「级联清理检查报告与影响清单」，**严禁未经确认直接大规模动刀**。确认无误后方可执行。
+3. **先提议，再动刀 (`--dry-run` vs `--apply`)**：
+   运行 `python3 scripts/vault_lint.py prune <path>` 默认即为 **Dry-run 模式**，自动向用户输出结构化的「自上而下四步级联影响分析清单」。**严禁未经确认直接大规模动刀**；确认无误后方可运行追加 `--apply` 参数执行正式动刀。
+
 
 ## Tag 体系
 
