@@ -41,7 +41,6 @@ confidence: high
 
 ## 相关资源
 
-- [[三大Scaling_Law_预训练后训练推理]] — 文章 source 页
 - [[大规模神经网络优化_超参实践与规模律]] — Kaplan/Chinchilla 详细推导
 - [[概念_Fine-tuning]] — 后训练技术之一
 - [[概念_RLHF基于人类反馈的强化学习]] — 后训练技术之一

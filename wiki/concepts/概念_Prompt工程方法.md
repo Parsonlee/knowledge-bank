@@ -43,4 +43,4 @@ OpenAI 最佳实践中 Prompt Engineering 定位为第一步优化手段：
 
 ## 来源
 
-- [[浅入浅出_生成式AI]]、[[OpenAI_LLM应用最佳实践]]
+- 浅入浅出_生成式AI、[[OpenAI_LLM应用最佳实践]]

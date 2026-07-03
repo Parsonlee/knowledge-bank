@@ -18,4 +18,3 @@ tags:
 
 ## 来源
 
-- [[Agentic_Design_Patterns_中文翻译版]]

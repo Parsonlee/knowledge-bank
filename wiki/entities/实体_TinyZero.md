@@ -27,4 +27,3 @@ TinyZero 是 UC 伯克利博士生潘家怡等人开发的 DeepSeek-R1-Zero 复�
 
 - [[实体_DeepSeek-R1]] — 被复现的原始模型
 - [[概念_推理模型顿悟时刻]] — 验证的涌现现象
-- [[DeepSeek-R1复现浪潮]]

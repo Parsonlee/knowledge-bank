@@ -42,5 +42,4 @@ BPE 是一种子词（subword）级分词算法，通过迭代合并高频字节
 
 ## 相关
 
-- [[Andrej_Karpathy_LLM教学笔记]]
 - [[概念_Transformer架构]]

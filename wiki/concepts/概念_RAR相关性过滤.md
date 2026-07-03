@@ -29,4 +29,4 @@ RAR（Retrieval-Augmented Relevance，检索增强相关性）是一种生成控
 ## 关联
 
 - 相关概念：[[概念_CRAG]]、[[概念_检索后处理]]、[[概念_重排序Rerank]]
-- 来源：[[阿里RAG技术演进]]
+- 来源：阿里RAG技术演进

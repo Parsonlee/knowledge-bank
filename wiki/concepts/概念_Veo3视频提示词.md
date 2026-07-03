@@ -7,7 +7,7 @@ confidence: high
 
 # 概念_Veo3视频提示词
 
-> [[实体_Veo_3]] 的提示词方法论，来自 [[How_to_prompt_Veo3_Replicate]] 和 [[Google_Veo3账号获取与提示技巧全攻略]]。
+> [[实体_Veo_3]] 的提示词方法论，来自 How_to_prompt_Veo3_Replicate 和 Google_Veo3账号获取与提示技巧全攻略。
 
 ## 定义
 
@@ -44,5 +44,3 @@ confidence: high
 
 ## 来源
 
-- [[How_to_prompt_Veo3_Replicate]]
-- [[Google_Veo3账号获取与提示技巧全攻略]]

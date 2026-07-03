@@ -65,6 +65,4 @@ MCP（Model Context Protocol）与 Function Calling 是两个定位不同的层�
 
 ## 参考来源
 
-- [[MCP加数据库]] — Function Call 痛点与 MCP 演进关系
-- [[基于MCP的AI_Agent应用开发实践]] — MCP vs Function Call 对比与 Agent TARS 实践
 - [[别再误会MCP了辟谣指南]] — MCP 与 Function Call 概念边界辨析

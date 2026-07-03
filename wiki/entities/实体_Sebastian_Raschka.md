@@ -6,7 +6,7 @@ tags:
 
 # 实体：Sebastian Raschka
 
-机器学习研究者、技术博主，《Build a Large Language Model from Scratch》作者。来源：[[从GPT-2到gpt-oss_OpenAI开放模型进化之路]]
+机器学习研究者、技术博主，《Build a Large Language Model from Scratch》作者。来源：从GPT-2到gpt-oss_OpenAI开放模型进化之路
 
 ## 基本信息
 

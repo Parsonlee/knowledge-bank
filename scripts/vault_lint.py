@@ -6,9 +6,11 @@ Knowledge Bank Vault Lint & Cascading Pruning Tool
 
 用法:
   python3 scripts/vault_lint.py lint             # 执行图谱死链、漏登、语法污染全面审查
-  python3 scripts/vault_lint.py sanitize-raw     # 自动转义 raw/ 目录下未规范化的行内伪 Tag 和 Tensor 伪出链
-  python3 scripts/vault_lint.py prune <raw_path> # 预演（Dry-run）删除原始资料所触发的自上而下 4 步级联精简报告
-  python3 scripts/vault_lint.py prune <raw_path> --apply # 确认执行级联精简清理
+  python3 scripts/vault_lint.py sanitize-raw     # 自动转义 raw/ 目录下正文中非链接的 Tensor/矩阵 伪出链
+  python3 scripts/vault_lint.py prune <raw_path> # 预演（Dry-run）单篇原始资料的 4 步级联精简报告
+  python3 scripts/vault_lint.py prune <raw_path> --apply # 确认执行单篇级联精简清理
+  python3 scripts/vault_lint.py prune-orphans    # 预演批量清理已删 raw 物理文件对应的下游孤立 Source 与 Index
+  python3 scripts/vault_lint.py prune-orphans --apply # 确认批量清理下游孤立页面
 """
 
 import os
@@ -109,7 +111,7 @@ def cmd_lint(workspace):
 
     print(f"\n📊 【检查 2：维基图谱死链审计 (Broken Link Audit)】")
     if broken_links:
-        print(f"⚠️ 发现 {len(broken_links)} 处潜在死链（引用了不存在的笔记）：")
+        print(f"⚠️ 发现 {len(broken_links)} 处潜在死链（引用了被删除或不存在的笔记）：")
         for source_doc, target_link in broken_links[:10]:
             print(f"  - [{source_doc}] -> [[{target_link}]]")
         if len(broken_links) > 10:
@@ -126,18 +128,20 @@ def cmd_lint(workspace):
                 continue
             abs_p = os.path.join(raw_dir, f)
             content = load_file(abs_p)
-            matches = re.findall(r'\[\[(.*?)\]\]', content)
+            # 跳过 YAML Header 检查正文中的 [[数字/数组]]
+            body = re.sub(r'^---\n.*?\n---', '', content, flags=re.DOTALL)
+            matches = re.findall(r'\[\[\s*[\d\-+.,\s]+\s*\]\]', body)
             if matches:
                 bracket_pollution.append((f, len(matches)))
 
-    print(f"\n📊 【检查 3：原始资料语法净化检查 (Raw Hygiene)】")
+    print(f"\n📊 【检查 3：原始资料正文张量语法净化检查 (Raw Hygiene)】")
     if bracket_pollution:
-        print(f"⚠️ 发现 {len(bracket_pollution)} 篇 raw/ 文献中存在疑似矩阵/张量或未转义的伪双链：")
+        print(f"⚠️ 发现 {len(bracket_pollution)} 篇 raw/ 文献正文中存在疑似张量/数字矩阵未转义伪双链：")
         for f_name, count in bracket_pollution[:5]:
-            print(f"  - raw/{f_name} ({count} 处 [[...]])")
-        print("💡 建议运行: python3 scripts/vault_lint.py sanitize-raw 进行自动修复")
+            print(f"  - raw/{f_name} ({count} 处 [[矩阵]])")
+        print("💡 建议运行: python3 scripts/vault_lint.py sanitize-raw 进行自动转义")
     else:
-        print("✅ raw/ 文献语法洁净，无伪双链干扰图谱！")
+        print("✅ raw/ 文献正文洁净，无矩阵伪双链干扰图谱！")
 
     print("\n" + "=" * 60)
     print("🏁 Lint 健康扫描执行完毕。")
@@ -145,11 +149,10 @@ def cmd_lint(workspace):
 
 def cmd_sanitize(workspace):
     print("=" * 60)
-    print("🧹 [Sanitize Raw] 正在净化 raw/ 目录下的语法冲突...")
+    print("🧹 [Sanitize Raw] 正在净化 raw/ 目录正文中的张量数组伪双链...")
     print("=" * 60)
     raw_dir = os.path.join(workspace, 'raw')
     if not os.path.exists(raw_dir):
-        print("毫无待处理的文件。")
         return
 
     fixed_count = 0
@@ -158,17 +161,23 @@ def cmd_sanitize(workspace):
             continue
         abs_p = os.path.join(raw_dir, f)
         content = load_file(abs_p)
-        new_content = content.replace('[[', '\\[\\[')
-        if new_content != content:
-            save_file(abs_p, new_content)
+        m = re.match(r'^(---\n.*?\n---)(.*)', content, re.DOTALL)
+        if m:
+            fm, body = m.group(1), m.group(2)
+        else:
+            fm, body = "", content
+        # 仅将正文中形如 [[0.1, 0.2]] 的数字矩阵转义
+        new_body = re.sub(r'\[\[(\s*[\d\-+.,\s]+)\]\]', r'\\[\\[\1\\]\\]', body)
+        if new_body != body:
+            save_file(abs_p, fm + new_body)
             fixed_count += 1
-            print(f"  🛠️ 转义修复: raw/{f}")
+            print(f"  🛠️ 转义矩阵修复: raw/{f}")
 
     print(f"\n✅ 净化完成！共处理修复 {fixed_count} 篇原始资料。")
 
 def cmd_prune(workspace, target_raw, apply=False):
     print("=" * 60)
-    print(f"✂️ [Cascading Prune SOP] 级联精简清理流程")
+    print(f"✂️ [Cascading Prune SOP] 单篇级联精简清理流程")
     print(f"🎯 目标原始文献: {target_raw}")
     print(f"🛡️ 执行模式: {'【直接动刀 (APPLY)】' if apply else '【预演报告 (DRY-RUN)】'}")
     print("=" * 60)
@@ -181,7 +190,6 @@ def cmd_prune(workspace, target_raw, apply=False):
 
     target_basename = os.path.basename(target_rel)
 
-    # 第一步：查找绑定的 Source 摘要页
     sources_dir = os.path.join(workspace, 'wiki', 'sources')
     matched_sources = []
     for f in os.listdir(sources_dir):
@@ -192,7 +200,6 @@ def cmd_prune(workspace, target_raw, apply=False):
         if target_rel in content or target_basename in content:
             matched_sources.append(f)
 
-    # 第二步：排查总索引受影响条目
     index_path = os.path.join(workspace, 'wiki', 'index.md')
     index_content = load_file(index_path)
     index_lines_to_remove = []
@@ -202,7 +209,6 @@ def cmd_prune(workspace, target_raw, apply=False):
             if s_base in line:
                 index_lines_to_remove.append(line)
 
-    # 第三步：入度审计与概念 GC 预测
     all_md_files = get_all_md_files(workspace)
     in_degree = {}
     for rel, abs_p in all_md_files.items():
@@ -211,7 +217,7 @@ def cmd_prune(workspace, target_raw, apply=False):
 
     link_regex = re.compile(r'\[\[([^\]|#]+)(?:#[^\]|]+)?(?:\|[^\]]+)?\]\]')
     for rel, abs_p in all_md_files.items():
-        if rel.startswith('raw/') or 'verify-' in rel or rel == 'wiki/log.md':
+        if rel.startswith('raw/'):
             continue
         if os.path.basename(rel) in matched_sources:
             continue
@@ -254,7 +260,6 @@ def cmd_prune(workspace, target_raw, apply=False):
         return
 
     print("\n⚡ 正在正式执行级联清理...")
-    
     os.remove(target_abs)
     print(f"  ✅ 已删物理源文件: {target_rel}")
 
@@ -281,20 +286,85 @@ def cmd_prune(workspace, target_raw, apply=False):
     new_log = log_content.replace("# 维护日志\n\n", f"# 维护日志\n\n{log_msg}\n")
     save_file(log_path, new_log)
     print("  ✅ 已记录操作流水至 wiki/log.md")
-
     print("\n🏁 级联清理动刀闭环执行完毕！")
+
+def cmd_prune_orphans(workspace, apply=False):
+    print("=" * 60)
+    print("✂️ [Cascading Batch Prune] 批量清理已删 raw 物理文件对应的下游孤立 Source 与 Index")
+    print(f"🛡️ 执行模式: {'【直接动刀 (APPLY)】' if apply else '【预演报告 (DRY-RUN)】'}")
+    print("=" * 60)
+
+    sources_dir = os.path.join(workspace, 'wiki', 'sources')
+    raw_dir = os.path.join(workspace, 'raw')
+    raw_files = set(os.listdir(raw_dir)) if os.path.exists(raw_dir) else set()
+
+    orphan_sources = []
+    for f in sorted(os.listdir(sources_dir)):
+        if not f.endswith('.md'): continue
+        p = os.path.join(sources_dir, f)
+        content = load_file(p)
+        matches = re.findall(r'raw/([^\n\"\'\]]+)', content)
+        if not matches:
+            orphan_sources.append(f)
+        else:
+            exists = any((m.strip() in raw_files) for m in matches)
+            if not exists:
+                orphan_sources.append(f)
+
+    index_path = os.path.join(workspace, 'wiki', 'index.md')
+    index_content = load_file(index_path)
+    index_lines_to_remove = []
+    for s_file in orphan_sources:
+        s_base = s_file[:-3]
+        for line in index_content.split('\n'):
+            if s_base in line and line not in index_lines_to_remove:
+                index_lines_to_remove.append(line)
+
+    print("\n📑 【批量级联清理影响清单】")
+    print(f"1️⃣ 发现物理文献(raw/)已丢失的下游 Source 摘要页 : {len(orphan_sources)} 篇")
+    print(f"2️⃣ 需在总索引 wiki/index.md 中剔除的条目数 : {len(index_lines_to_remove)} 行")
+
+    if not apply:
+        print("\n" + "-" * 60)
+        print("💡 当前为 Dry-run 检查模式，未对文件作实质性修改。")
+        print("👉 若确认无误要批量清理，请运行: python3 scripts/vault_lint.py prune-orphans --apply")
+        print("-" * 60)
+        return
+
+    print("\n⚡ 正式开始清理下游孤立 Source 和 Index...")
+    removed_sources = 0
+    for s_file in orphan_sources:
+        abs_p = os.path.join(sources_dir, s_file)
+        if os.path.exists(abs_p):
+            os.remove(abs_p)
+            removed_sources += 1
+
+    new_index_lines = [l for l in index_content.split('\n') if l not in index_lines_to_remove]
+    save_file(index_path, '\n'.join(new_index_lines))
+
+    log_path = os.path.join(workspace, 'wiki', 'log.md')
+    log_content = load_file(log_path)
+    today = datetime.now().strftime("%Y-%m-%d")
+    log_msg = f"## {today} lint/prune | 批量清理物理文件丢失的下游 {removed_sources} 篇 Source 摘要及 Index 目录\n"
+    new_log = log_content.replace("# 维护日志\n\n", f"# 维护日志\n\n{log_msg}\n")
+    save_file(log_path, new_log)
+
+    print(f"✅ 成功清理 {removed_sources} 篇 Source 摘要及 {len(index_lines_to_remove)} 行 Index 记录！")
 
 def main():
     parser = argparse.ArgumentParser(description="Knowledge Bank Vault Lint & Prune CLI")
     subparsers = parser.add_subparsers(dest="subcommand")
 
-    subparsers.add_parser("lint", help="执行图谱死链、漏登、语法污染全面健康诊断")
+    subparsers.add_parser("lint", help="执行图谱死链、漏登、张量语法全面诊断")
     subparsers.add_parser("check", help="lint 命令别名")
-    subparsers.add_parser("sanitize-raw", help="自动修复 raw/ 目录下未规范化的括号与伪标签")
+    subparsers.add_parser("sanitize-raw", help="自动转义 raw/ 正文中非链接的矩阵伪出链")
 
-    prune_p = subparsers.add_parser("prune", help="执行自上而下四步级联精简清理流程")
+    prune_p = subparsers.add_parser("prune", help="执行单篇文献自上而下四步级联清理流程")
     prune_p.add_argument("path", help="待清理的 raw/ 原始资料相对路径")
-    prune_p.add_argument("--apply", action="store_true", help="确认实质动刀删除（不加此参数则仅干跑输出报告）")
+    prune_p.add_argument("--apply", action="store_true", help="确认实质动刀删除")
+
+    prune_o = subparsers.add_parser("prune-orphans", help="批量清理已被直接删去物理源文件的下游 Source 及 Index")
+    prune_o.add_argument("--apply", action="store_true", help="确认批量实质清理")
 
     args = parser.parse_args()
     workspace = get_workspace()
@@ -305,6 +375,8 @@ def main():
         cmd_sanitize(workspace)
     elif args.subcommand == "prune":
         cmd_prune(workspace, args.path, apply=args.apply)
+    elif args.subcommand == "prune-orphans":
+        cmd_prune_orphans(workspace, apply=args.apply)
     else:
         parser.print_help()
 

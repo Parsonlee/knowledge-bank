@@ -49,7 +49,6 @@ $$\text{KV Cache} = 2 \times L \times H \times D \times S \times B \times \text{
 - [[入局AI_Infra系统设计与挑战]]（来源）
 - [[KV_Cache原理图解]]（详细图解来源）
 - [[概念_MLA低秩KV压缩]]
-- [[大模型显存计算与优化]]
 - [[MiniMax_vs_Kimi_注意力路线之争]]
 - [[实体_vLLM]]
 - [[概念_自注意力复杂度]]

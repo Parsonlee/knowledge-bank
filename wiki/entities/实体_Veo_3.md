@@ -7,7 +7,7 @@ confidence: high
 
 # 实体_Veo_3
 
-> Google 的文本生成视频模型，来自 [[How_to_prompt_Veo3_Replicate]] 和 [[Google_Veo3账号获取与提示技巧全攻略]]。
+> Google 的文本生成视频模型，来自 How_to_prompt_Veo3_Replicate 和 Google_Veo3账号获取与提示技巧全攻略。
 
 ## 简介
 

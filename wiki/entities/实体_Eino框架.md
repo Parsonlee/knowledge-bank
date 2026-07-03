@@ -15,4 +15,4 @@ Golang 生态下的 LLM 应用开发框架，由字节跳动/CloudWego 开源。
 - **HITL 支持（Checkpoint）**：执行到暂停点时保存上下文，等待用户确认后恢复
 - **与 tRPC-A2A-Go 配合**：将 Agent 封装为 A2A 协议服务
 
-来源：[[万字长文深入浅出教你优雅开发复杂AI_Agent]]
+来源：万字长文深入浅出教你优雅开发复杂AI_Agent

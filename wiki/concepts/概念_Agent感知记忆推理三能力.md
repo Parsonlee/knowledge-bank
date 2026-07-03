@@ -41,4 +41,3 @@ updated: "2026-06-29"
 - [[概念_智能体能力金字塔]] — 智能体能力层次
 - [[概念_Memory_RAG]] — 长期记忆增强
 - [[概念_Agentic_RAG]] — Agent+RAG 结合
-- [[从CoT到Agent综述_上交]]

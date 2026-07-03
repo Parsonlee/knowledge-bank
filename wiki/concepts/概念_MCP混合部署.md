@@ -44,4 +44,3 @@ MCP 工具选择本质是 prompt engineering：任何模型只要能理解工具
 
 ## 来源
 
-- [[Qwen3混合部署与MCP]]

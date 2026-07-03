@@ -20,4 +20,3 @@ Open R1 是 HuggingFace 官方发起的 DeepSeek-R1 完全开源复刻项目，�
 ## 关联
 
 - [[实体_DeepSeek-R1]] — 被复现的原始模型
-- [[DeepSeek-R1复现浪潮]]

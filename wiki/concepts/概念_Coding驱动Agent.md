@@ -7,7 +7,7 @@ updated: "2026-06-29"
 
 # 概念：Coding 驱动 Agent（Code + 泛化调用）
 
-**来源**：[[从代码生成到自主决策_Coding驱动的自我编程Agent]]
+**来源**：从代码生成到自主决策_Coding驱动的自我编程Agent
 
 让 LLM 直接生成可执行 Python 代码来控制 Agent 行为，替代传统 JSON 函数调用方式，通过 Py4j 实现 Python→Java 的泛化调用。
 

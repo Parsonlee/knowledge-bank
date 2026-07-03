@@ -7,7 +7,7 @@ confidence: medium
 
 # 实体_Gemini
 
-> Google 的多模态大模型/AI 助手产品，来自 [[Gemini的PPT生成技巧与模板提示词]] 及 [[Google_Veo3账号获取与提示技巧全攻略]]。
+> Google 的多模态大模型/AI 助手产品，来自 [[Gemini的PPT生成技巧与模板提示词]] 及 Google_Veo3账号获取与提示技巧全攻略。
 
 ## 简介
 

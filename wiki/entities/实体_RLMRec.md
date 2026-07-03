@@ -35,4 +35,3 @@ confidence: high
 
 ## 来源
 
-- [[RLMRec_港大百度LLM推荐算法]]

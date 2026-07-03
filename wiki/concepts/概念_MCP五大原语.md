@@ -84,5 +84,3 @@ Web 化两大技术问题：
 ## 参考来源
 
 - [[MCP五大原语与Web化]] — 本概念核心来源，MCP 联合创建者 David Soria Parra 权威解读
-- [[MCP加数据库]] — Tools/Resources/Prompts/Sampling/Roots 五类能力维度
-- [[基于MCP的AI_Agent应用开发实践]] — Resources/Tools/Prompts 工程实践

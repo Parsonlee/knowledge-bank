@@ -35,4 +35,3 @@ confidence: high
 
 ## 来源
 
-- [[阿里云大模型落地RIDE方法论与RaaS实践]]

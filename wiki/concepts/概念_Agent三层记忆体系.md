@@ -7,7 +7,7 @@ updated: "2026-06-29"
 
 # 概念：Agent 三层记忆体系
 
-**来源**：[[从代码生成到自主决策_Coding驱动的自我编程Agent]]
+**来源**：从代码生成到自主决策_Coding驱动的自我编程Agent
 
 基于 Atkinson-Shiffrin Memory Model（1968）将记忆分为感知/短期/长期三层，在 Agent 工程侧实现持久化、结构化、可检索的记忆能力。
 

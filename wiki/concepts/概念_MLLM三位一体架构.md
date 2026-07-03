@@ -45,4 +45,3 @@ updated: "2026-06-29"
 - [[概念_AnyRes高分辨率处理]]
 - [[概念_DeepStack深度视觉融合]]
 - [[从LLaVA到Qwen3-VL_多模态架构演进]]
-- [[Florence-2_微软视觉基础模型]]

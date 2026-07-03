@@ -67,5 +67,4 @@ SWE-bench：OpenAI Prompt 引导规划提升 4%。
 
 ## 来源
 
-- [[如何让Agent规划调用工具]]
 - [[HumanInTheLoop用MCP实现]]

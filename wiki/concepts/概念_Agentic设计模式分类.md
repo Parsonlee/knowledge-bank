@@ -61,4 +61,3 @@ Agentic 设计模式（Agentic Design Patterns）是构建智能体（Agent）�
 
 ## 来源
 
-- [[Agentic_Design_Patterns_中文翻译版]]

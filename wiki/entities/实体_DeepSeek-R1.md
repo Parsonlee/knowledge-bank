@@ -46,7 +46,6 @@ DeepSeek-R1 是深度求索（DeepSeek）发布的推理模型，通过大规模
 ## 相关来源
 
 - [[DeepSeek-R1工作原理]]
-- [[DeepSeek-R1复现浪潮]]
 - [[R1复现认知与误区]]
 
 ## 关联

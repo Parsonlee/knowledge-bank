@@ -33,6 +33,5 @@ Reinforcement Learning with Verifiable Rewards。用有标准答案的问题（�
 
 ## 来源
 
-- [[GPT5通用验证器_Universal_Verifier]]
 - 相关概念：[[概念_RLVR]] | [[概念_通用验证器]] | [[概念_奖励函数与验证器]]
 - 相关实体：[[实体_DeepSeek-R1]]
