@@ -493,7 +493,6 @@
 - [[实体_MAC-SQL]] — 多智能体Text2SQL框架，Selector/Decomposer/Refiner（COLING 2025）
 - [[实体_通义千问]] — 阿里大语言模型，RAG生成/判别核心模型（medium）
 - [[实体_RAGAS]] — RAG 系统开源评估框架，多维度指标
-- [[实体_TableRAG]] — 华为云文本+表格异构问答混合推理框架
 - [[实体_Mamba]] — Mamba 选择性状态空间模型，线性时间序列建模（LLM/arch/Mamba）
 - [[实体_Mamba2]] — Mamba2 SSD 框架，SSM 与 Attention 大一统，ICML 2024（LLM/arch/Mamba）
 - [[实体_S4]] — Structured State Space for Sequences，Mamba 前置架构（LLM/arch/Mamba）
@@ -514,9 +513,6 @@
 - [[实体_Medusa]] — Medusa 推测解码框架：多 FFN Head Self-Drafting（LLM/inference）
 - [[实体_Qwen3]] — 阿里 Qwen3：SFT 混合思考 + Thinking Budget 涌现（LLM/reasoning）
 - [[实体_DeepSeek-R1]] — DeepSeek 推理模型，GRPO+四阶段训练，AIME 79.8%，与 o1-1217 相当（LLM/reasoning, LLM/training/RL）
-- [[实体_TinyZero]] — UC伯克利 $30 复现 R1-Zero，CountDown 任务验证纯 RL 涌现推理（LLM/reasoning）
-- [[实体_SimpleRL]] — 港科大 8K 数据 7B 模型复现 R1，AIME 33.3%，第44步顿悟（LLM/reasoning）
-- [[实体_Open_R1]] — HuggingFace 官方完全开源复刻 R1 全套 pipeline（LLM/training/RL）
 - [[实体_Unsloth]] — 开源高效 LLM 微调框架，支持 GRPO 训练推理模型，GitHub 4万星（LLM/training/RL, Skill/python）
 - [[实体_SmolLM3]] — HuggingFace 3B 开源模型，384×H100 训练 11T tokens，GQA+RNoPE 架构（LLM/training/pre-train）
 - [[实体_DEITA]] — SFT 数据筛选方法，复杂性×质量综合评分 + 向量相似度多样性过滤（LLM/training/post-train）
@@ -525,7 +521,6 @@
 
 ### LLM/面试/创业/RL（批次9）
 - [[实体_Jina_AI]] — 专注搜索底座模型 AI 初创，2020-2025，两次 Pivot 后被 Elastic 收购（创业）
-- [[实体_RLVR技术]] — 可验证奖励强化学习，o1/R1 推理能力核心，局限于有标准答案领域（LLM/training/RL）
 
 ### LLM/Recommendation + arch（Batch 10）
 - [[实体_蚂蚁集团NextEvo]] — 蚂蚁集团AI创新研发部门，大模型推荐系统研究与落地（LLM, Recommendation）
@@ -536,10 +531,6 @@
 
 ### LLM/training + hallucination（批次7）
 - [[实体_翁荔_Lilian_Weng]] — OpenAI 华人科学家，Agent 公式 + 幻觉 Blog 作者（LLM/hallucination）
-- [[实体_李维_出门问问]] — 出门问问大模型团队前工程副总裁，幻觉技术解析与应对建议（LLM/hallucination）
-- [[实体_Brendan_Bycroft]] — 软件工程师，bbycroft.net/llm LLM 3D 可视化作者（LLM/arch）
-- [[实体_Minimax_m1]] — Minimax 456B 开源 MoE 模型，Lightning Attention+CISPO，支持100万token上下文（LLM/arch）
-- [[实体_PaperWeekly]] — AI/ML 论文解读媒体平台，多篇综述传播渠道（LLM/tokenization）
 - [[实体_PEFT库]] — HuggingFace 参数高效微调库，LoRA/QLoRA/Adapter/Prefix 支持（LLM/training/post-train）
 
 ### LLM/training/post-train（批次6）
@@ -685,10 +676,7 @@
 ### AI-Agent/tools MCP系列（Phase 4 Batch 1）
 - [[实体_Agent_TARS]] — 字节跳动开源多模态 Agent，内置 Function Call + 用户自定义 MCP Server 双轨设计（AI-Agent/tools）
 - [[实体_David_Soria_Parra]] — Anthropic 工程师，MCP 协议联合创建者，五大原语与 Web 化主导者（AI-Agent/tools）
-- [[实体_MongoDB]] — 文档型 NoSQL 数据库，mcp-mongo-server 接入 MCP 生态，Text-to-Query 结构化检索（AI-Agent/tools）
 - [[实体_CherryStudio]] — 开源 MCP Host 应用，MCPService.ts（Client）+ ApiService.ts（Host）CHS 架构典型案例（AI-Agent/tools）
-- [[实体_Cline]] — VS Code AI 编码扩展，原生 MCP Client，npx 配置接入任意 MCP Server（AI-Agent/tools）
-- [[实体_OpenLM平台]] — 阿里巴巴智能引擎团队大模型研发平台，HITL MCP 方案落地环境（AI-Agent/tools）
 - [[实体_Anthropic_Research系统]] — Anthropic Claude Research 多智能体研究系统，Opus 4 + Sonnet 4 orchestrator-worker（AI-Agent/multi-agent）
 
 ### AI-Agent/context-engineering（Phase 4 Batch 3）
@@ -696,12 +684,8 @@
 - [[实体_Manus]] — 通用AI Agent，上下文工程实践标杆，KV缓存/分层行动空间/文件系统记忆（AI-Agent/context-engineering）
 
 ### AI-Agent/coding（Phase 4 Batch 4）
-- [[实体_Aone_Agent]] — 阿里巴巴通用 Agent 产品，类 Devin，Leader Agent + 子 Agent 容器架构，全研发生命周期提效（AI-Agent/coding）
-- [[实体_Eino框架]] — CloudWego 开源 Golang LLM 框架，泛型强类型/有向图编排/Callbacks 切面/Checkpoint HITL（AI-Agent/coding）
 
 ### AI-Agent/skill（Phase 4 Batch 5）
-- [[实体_Antonio_Gulli]] — 《Agentic Design Patterns》作者，21种 Agent 设计模式实践指南，版税捐赠救助儿童会（AI-Agent/skill）
-- [[实体_Han_Lee]] — AI 工程师/技术博主，Claude Agent Skills 源码级深度解析文章作者（AI-Agent/skill）
 
 ### AI-Agent/deep-research（Phase 4 Batch 6）
 - [[实体_通义DeepResearch]] — 阿里通义实验室开源 Web Agent，30B MoE，HLE 32.9/BrowseComp-EN 43.4，IterResearch+ReAct 双模式（AI-Agent/deep-research）
@@ -711,16 +695,12 @@
 
 ### AI-Agent/AI-BI（Phase 4 Batch 8）
 - [[实体_腾讯OlaChat]] — 腾讯 PCG 智能数据分析平台，多任务对话+DAG编排+Text2SQL(70B)+元数据RAG（AI-Agent/AI-BI）
-- [[实体_腾讯欧拉平台]] — 腾讯数据治理平台，生产即治理理念，资产工场+tMetric指标中台+数据发现三产品（AI-Agent/AI-BI）
 
 ### AI-Agent 综合 + AI-BI（Phase 4 Batch 9）
-- [[实体_AutoGPT]] — 2023年早期 Agent 代表，GitHub 最受欢迎项目，典型"能跑但不可靠"案例（AI-Agent）
-- [[实体_AutoGen]] — 微软多 Agent 对话框架，可定制/可对话/支持 Human-in-the-loop（AI-Agent）
 - [[实体_MetaGPT]] — 模仿软件公司结构的多 Agent 框架：产品经理/PM/工程师角色协作（AI-Agent）
 - [[实体_ChatDev]] — 清华/面壁开源虚拟软件公司，CEO/CTO/程序员多角色 Agent 协作（AI-Agent）
 - [[实体_LangSmith]] — LangChain 可观测性平台：可视化 Trace/调试/测试评估，Agent 复现性关键工具（AI-Agent）
 - [[实体_Qwen2.5-Coder]] — 阿里代码专用模型3B/7B，NL2SQL LoRA 精调基座，实测EX提升+6.4%（AI-Agent/AI-BI）
-- [[实体_矩阵起源]] — MatrixOne HTAP数据库 + Matrix Intelligence 平台，AI-ready data 基础设施（AI-Agent/AI-BI）
 
 ### Skill/python（Phase 5 Batch 1）
 - [[实体_FastAPI]] — Python 高性能 Web 框架，基于 Starlette/Pydantic，原生 async/await，性能与 Go 不相上下（Skill/python）
@@ -735,9 +715,6 @@
 - [[实体_评论尸]] — 中文互联网创作者，博客「虹线」，《幸福的积分》作者（Life）
 
 ### Life（Phase 6 Batch 5：旅行/驾驶/智能家居）
-- [[实体_Kevin_Kelly]] — 博客 The Technium 作者，50 年旅行经验，Laser-Back 方法提出者（Life）
-- [[实体_Waze]] — 以色列 2006 成立/Google 旗下导航 APP，中东地区市占率第一（Life）
-- [[实体_捷途Jetour]] — 奇瑞旗下中国汽车品牌，迪拜/中东市场中国车企扛把子（Life）
 
 ### AIGC（Phase 6 Batch 1）
 - [[实体_Veo_3]] — Google 文本生成带音频视频模型，物理模拟出色，需 Gemini Pro（AIGC）
@@ -754,7 +731,6 @@
 
 ### Recommendation（Phase 6 Batch 2）
 - [[实体_RLMRec]] — 港大+百度模型无关 LLM 推荐框架；互信息最大化对比/生成双范式；落地搜索业务（Recommendation）
-- [[实体_港大数据智能实验室]] — HKU-DS，RLMRec 团队，chaoh 实验室（Recommendation）
 
 ### 创业（Phase 6 Batch 3）
 - [[实体_Jake_Knapp]] — Design Sprint 创造者，前 Google Ventures 设计合伙人，Character Capital 联创（创业）
@@ -762,7 +738,6 @@
 
 ### 创业（Phase 6 Batch 4）
 - [[实体_蒋林泉]] — 阿里云 CIO & aliyun.com 负责人，RIDE 方法论提出者（创业）
-- [[实体_阿里云]] — 阿里巴巴公共云服务商，企业大模型落地实践与技术底座（创业, Infra/AI）
 - [[实体_Superhuman]] — AI 邮件客户端，PMF 引擎标杆，ARR 3500 万美元，被 Grammarly 收购（创业）
 - [[实体_Rahul_Vohra]] — Superhuman 创始人兼 CEO，PMF 引擎方法论提出者（创业）
 - [[实体_Grammarly]] — 嵌入式 AI 写作工具，年收入超 7 亿美金，收购 Coda+Superhuman 后改名（创业）

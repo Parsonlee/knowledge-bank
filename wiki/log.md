@@ -1,5 +1,11 @@
 # Wiki Log
 
+## [2026-07-06] lint/prune | 按照「0次孤立清理 + 1次保留观察」策略，精准移除 25 篇无入链孤立实体页 (+ index update)
+- **孤立实体清理**：在全库跨层级（sources/concepts/entities）入链度审计的基础上，精准识别并移除了 25 篇入度为 0（毫无外部入链引用）的孤立实体文档（包含 `实体_AutoGPT.md`、`实体_AutoGen.md`、`实体_Cline.md`、`实体_阿里云.md` 等），彻底清除了图谱中的冷门死区与外围孤点。
+- **稳健保留观察**：对 35 篇引用次数为 1 次的实体（如 `实体_DeepMind.md`、`实体_DiT.md` 等）予以完整保留，确保知识库的生长弹性与潜力。
+- **总索引联动同步**：自动在 [wiki/index.md](file:///Users/ZHao/WorkSpace/knowledge-bank/wiki/index.md) 中同步剔除已删除的 25 个实体条目，确保总索引与物理目录 100% 对准。
+- **Tag 体系决策**：经讨论决议，继续全面保留 `entities` 与 `concepts` 的 Tag 字段，以维持跨文件夹的非图谱横向聚类查询与管理能力。
+
 ## [2026-07-06] lint & refactor | 全量 Frontmatter 规范化清洗与内容补齐（涵盖 sources/entities/concepts 共 652 篇）
 - **彻底解决历史遗留无 YAML 格式问题**：对 `wiki/concepts/` 目录下 117 篇历史遗留非 YAML 页面（采用 `> tags: ...` 等 Blockquote 元数据格式）进行深度解析与结构重构，100% 转换为合规标准的 YAML Frontmatter。
 - **修复 YAML 语法解析异常**：修复 `wiki/entities/实体_LLaVA.md` 因引号与块映射冲突导致 YAML 解析失败的问题，确保全库 652 篇页面 YAML 解析错误率为 0%。
