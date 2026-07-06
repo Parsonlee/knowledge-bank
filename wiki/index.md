@@ -436,6 +436,13 @@
 - [[概念_Agent三段式记忆演进]] — Storage -> Reflection -> Experience 三阶段演进框架及驱动演进的三大根本动力（AI-Agent/memory）
 - [[概念_Agent完整轨迹评估]] — 面向复杂智能体多步规划、检索与多轮会话的高度对准人工监督与全轨迹评估（AI-Agent/eval）
 - [[概念_提示词自动优化闭环]] — 利用 DSPy GEPA/MIPROv2 算法与回放验证闭环，全自动优化系统提示词（AI-Agent/prompt-engineering）
+- [[概念_RAG与LLM_Wiki对比]] — RAG 适用大规模被动检索 vs LLM Wiki 适用知识积累与高复利主动编译（Skill/knowledge-bank）
+- [[概念_知识编译与复利]] — LLM 担任知识库编译器，解决信息存储孤岛痛点并释放连接复利（Skill/knowledge-bank）
+- [[概念_渐进式披露]] — 按总览到细节的层级动态展示信息，降低用户与大模型认知及上下文负荷（AI-Agent/UI, AI-Agent/context-engineering）
+- [[概念_系统提示词四层架构]] — 核心定义、交互接口、内部处理与全局约束四层架构，解决规则扁平堆砌痛点（AI-Agent/prompt-engineering）
+- [[概念_跨轨迹抽象与主动探索]] — 智能体在 Experience 阶段自发寻找线索并从多条交互轨迹提炼通用元策略（AI-Agent/memory）
+- [[概念_灾难性遗忘]] — 持续学习中新任务学习导致旧知识退化的经典难题及Agent分层存储应对（AI-Agent/memory, DeepLearning）
+- [[概念_LLM_as_a_Judge校准]] — 引入专家黄金集、失败编码与解释理由，用对齐框架确保AI裁判评分一致（AI-Agent/eval）
 
 ## Entities
 
@@ -763,6 +770,12 @@
 - [[实体_Claude_Code]] — Anthropic 终端 AI Coding 命令行工具，在 LLM Wiki 中担任知识编译“大脑”（AI-Agent/coding, Skill/claude-code）
 - [[实体_Obsidian]] — 本地优先 Markdown 知识库软件，通过 Graph View 图谱与 MCP 充当人类认知“IDE”（Skill/knowledge-bank）
 - [[实体_DSPy]] — 斯坦福开源的声明式框架，将提示工程转化为程序编译与 GEPA 误差驱动优化（AI-Agent/eval, AI-Agent/prompt-engineering）
+- [[实体_Andrej_Karpathy]] — 著名人工智能科学家与教育者，LLM Wiki 知识编译与复利范式提出者（DeepLearning, AI-Agent/coding）
+- [[实体_翻斗花园二蛋]] — 知名技术博主，Claude Code + Obsidian + 飞书个人自进化知识库践行者（Skill/knowledge-bank, AI-Agent/coding）
+- [[实体_AI_Online]] — 深度前沿 AI 论文与趋势传播平台，推动智能体记忆三阶演进认知（AI-Agent/memory）
+- [[实体_港中深与上海AI实验室]] — 联合提出 Agent 记忆 Storage->Reflection->Experience 演进综述与研究路线（AI-Agent/memory）
+- [[实体_Simran_Jumani]] — Dropbox ML 专家，Dash Chat 智能体基于 DSPy 评估驱动提示词优化主导者（AI-Agent/eval）
+- [[实体_Dropbox]] — 知名云同步协作与 AI 工作台公司，在 Dash Chat 中实现对准评估与自动迭代双赢（AI-Agent/eval, AI-Agent/prompt-engineering）
 
 ## Comparisons
 
