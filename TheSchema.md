@@ -3,9 +3,6 @@ created: 2026-06-26
 updated: 2026-06-26
 type: guide
 tags:
-  - schema
-  - wiki
-  - knowledge-management
 ---
 
 ## 0. 目标与边界
