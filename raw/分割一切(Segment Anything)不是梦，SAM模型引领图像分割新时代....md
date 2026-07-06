@@ -4,7 +4,7 @@ cubox_url: https://cubox.pro/web/card/7244236899362014662
 url: https://zhuanlan.zhihu.com/p/667801207
 tags:
   - CV
-
+published: 2023-11-21
 ---
 # 分割一切(Segment Anything)不是梦，SAM模型引领图像分割新时代 - 知乎
 

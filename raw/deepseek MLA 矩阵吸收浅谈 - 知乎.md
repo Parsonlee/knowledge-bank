@@ -4,6 +4,7 @@ cubox_url: https://cubox.pro/web/card/7311397260774870486
 url: https://zhuanlan.zhihu.com/p/1888290264377976190
 tags:
   - LLM/arch/attention
+published: 2025-03-26
 ---
 # deepseek MLA 矩阵吸收浅谈 - 知乎
 

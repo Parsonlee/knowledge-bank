@@ -5,6 +5,7 @@ url: https://mp.weixin.qq.com/s/wkcFxpHXaHLTm0K9Dv3ihQ?mpshare=1&scene=1&srcid=0
 tags:
   - RAG/embedding
   - RAG
+published: 2025-09-17
 ---
 # 从BM25到Multi-Vector：6种Embedding演进路线
 

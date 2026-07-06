@@ -5,6 +5,7 @@ url: https://mp.weixin.qq.com/s?__biz=Mzk0NTcyNTMzNw==&mid=2247484209&idx=1&sn=0
 tags:
   - RAG
   - RAG/retrieval
+published: 2024-09-20
 ---
 # RAG高级优化：检索后处理模块成竹在胸
 

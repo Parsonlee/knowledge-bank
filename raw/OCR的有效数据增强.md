@@ -4,6 +4,7 @@ cubox_url: https://cubox.pro/web/card/7243209533286254855
 url: https://mp.weixin.qq.com/s/y7wsvmodtm7R9bPuVpvuaA
 tags:
   - CV/data-augmentation
+published: 2024-06-24
 ---
 # OCR的有效数据增强
 

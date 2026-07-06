@@ -1,10 +1,10 @@
 ---
 title: 从提示员到系统架构师：Loop Engineering 的范式跃迁
 source: https://fengwang.github.io/posts/loop-engineering-paradigm-shift/
-created: 2026-06-29
 description: Loop Engineering 将工程师的角色从与 AI 模型逐轮对话的操作者，转变为设计自主迭代系统的架构师——这是一次人机协作契约的根本重写。
 tags:
   - AI-Agent/loop-engineering
+published: 2026-06-28
 ---
 \## 引言：你不再是对话者了
 

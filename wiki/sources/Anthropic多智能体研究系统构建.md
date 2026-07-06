@@ -67,4 +67,4 @@ confidence: high
 - [[从CoT到Agent综述_上交]]
 
 ---
-> 📎 **物理文献**：[[raw/How we built our multi-agent research sy....md]]
+> 📎 **物理文献**：[[How we built our multi-agent research system]]

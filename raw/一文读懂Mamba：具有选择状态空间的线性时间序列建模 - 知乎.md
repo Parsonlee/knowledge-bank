@@ -4,6 +4,7 @@ cubox_url: https://cubox.pro/web/card/7210560026904103335
 url: https://zhuanlan.zhihu.com/p/680846351
 tags:
   - LLM/arch/Mamba
+published: 2024-01-31
 ---
 # 一文读懂Mamba：具有选择状态空间的线性时间序列建模 - 知乎
 

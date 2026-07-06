@@ -4,6 +4,7 @@ cubox_url: https://cubox.pro/web/card/7339910235936523629
 url: https://zhuanlan.zhihu.com/p/705138777
 tags:
   - LLM/arch/Mamba
+published: 2024-07-13
 ---
 # Mamba2: SSM和Transformer的大一统 - 知乎
 

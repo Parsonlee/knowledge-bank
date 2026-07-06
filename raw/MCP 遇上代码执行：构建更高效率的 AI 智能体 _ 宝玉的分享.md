@@ -4,6 +4,7 @@ cubox_url: https://cubox.pro/web/card/7387384365380010539
 url: https://baoyu.io/blog/code-execution-with-mcp
 tags:
   - AI-Agent/tools
+published: 2025-11-05
 ---
 # MCP 遇上代码执行：构建更高效率的 AI 智能体 | 宝玉的分享
 

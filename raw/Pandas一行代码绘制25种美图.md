@@ -4,6 +4,7 @@ cubox_url: https://cubox.pro/web/card/7128378168716559893
 url: https://mp.weixin.qq.com/s/By_zRjBhjD07A9S-_pNOow
 tags:
   - Skill/data-analysis
+published: 2021-08-31
 ---
 # Pandas一行代码绘制25种美图
 

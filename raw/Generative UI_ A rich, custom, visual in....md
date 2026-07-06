@@ -4,6 +4,7 @@ cubox_url: https://cubox.pro/web/card/7398619984923987075
 url: https://research.google/blog/generative-ui-a-rich-custom-visual-interactive-user-experience-for-any-prompt/
 tags:
   - AI-Agent/UI
+published: 2025-11-28
 ---
 # Generative UI: A rich, custom, visual interactive user experience for any prompt
 

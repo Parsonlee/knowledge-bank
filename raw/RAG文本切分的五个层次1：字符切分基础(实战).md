@@ -5,6 +5,7 @@ url: https://mp.weixin.qq.com/s/SnfhuQyRmjQxDP3n5n3Upw
 tags:
   - RAG
   - RAG/chunking
+published: 2024-08-10
 ---
 # RAG文本切分的五个层次1：字符切分基础(实战)
 

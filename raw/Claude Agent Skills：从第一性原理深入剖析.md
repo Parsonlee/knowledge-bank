@@ -4,6 +4,7 @@ cubox_url: https://cubox.pro/web/card/7385928570654164664
 url: https://mp.weixin.qq.com/s/W3gmYDqqMNIKNTIa3aGeCA
 tags:
   - AI-Agent/skill
+published: 2025-11-02
 ---
 # Claude Agent Skills：从第一性原理深入剖析
 

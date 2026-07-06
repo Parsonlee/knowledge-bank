@@ -1,5 +1,12 @@
 ---
-title: "4 段 Prompt 提示词，生成PPT、生成3D动画，生成网站，生成万物..."
+title: 4 段 Prompt 提示词，生成PPT、生成3D动画，生成网站，生成万物...
+source: https://mp.weixin.qq.com/s?__biz=MzAwODIyOTQ4Mw==&mid=2649442252&idx=1&sn=869b13365a62ab0451c094b379a8b40a&scene=21
+author:
+  - "[[向阳乔木]]"
+description: 深度解析并拆解四段极具实战价值的高阶结构化提示词（Prompt），从前端工程与视觉设计视角出发，指导 AI 将任何内容转化为精美单页 HTML、网页 PPT、3D 动画及 SVG 艺术海报。
+tags:
+  - AIGC
+published: 2025-03-16
 ---
 
 # 【教程】必须收藏的 4 段 Prompt 提示词，生成PPT、生成3D动画，生成网站，生成万物...

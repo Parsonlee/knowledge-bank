@@ -6,6 +6,7 @@ tags:
   - LLM
   - LLM/reasoning
   - LLM/training/RL
+published: 2025-02-05
 ---
 # 万字长文详解DeepSeek-R1模型工作原理
 

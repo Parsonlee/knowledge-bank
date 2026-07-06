@@ -4,6 +4,7 @@ cubox_url: https://cubox.pro/web/card/7356962842102205037
 url: https://mp.weixin.qq.com/s?__biz=MzIyNjM2MzQyNg==&mid=2247710475&idx=1&sn=5fbf001c84cdaa43fd7b6519bcb119bd&poc_token=HFGcomij9F9DONGeOPbbvamJhQqfBn8pHxPKryXn
 tags:
   - AI-Agent/memory
+published: 2025-08-11
 ---
 # AI 智能体 8 种常见的记忆（Memory）策略与技术实现
 

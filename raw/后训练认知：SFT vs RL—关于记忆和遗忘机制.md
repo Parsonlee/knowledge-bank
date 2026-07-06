@@ -7,6 +7,7 @@ tags:
   - LLM/training/post-train
   - LLM/training/RL
   - LLM/training
+published: 2025-10-27
 ---
 # 后训练认知：SFT vs RL—关于记忆和遗忘机制
 

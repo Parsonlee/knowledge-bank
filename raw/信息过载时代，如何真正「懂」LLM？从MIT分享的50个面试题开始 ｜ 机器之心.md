@@ -1,11 +1,11 @@
 ---
 id: "7336041169182264849"
 cubox_url: https://cubox.pro/web/card/7336041169182264849
-url: https://www.jiqizhixin.com/articles/2025-06-18-9
+url: https://mp.weixin.qq.com/s/u7aIm6jP1Nblfjr2NvakLw
 tags:
   - LLM
   - 面试
-
+published: 2025-06-18
 ---
 # 信息过载时代，如何真正「懂」LLM？从MIT分享的50个面试题开始 ｜ 机器之心
 

@@ -4,6 +4,7 @@ cubox_url: https://cubox.pro/web/card/7213276017111074396
 url: https://blog.csdn.net/qq_27590277/article/details/135812738
 tags:
   - LLM/inference
+published: 2024-01-23
 ---
 # LLM推理加速新范式！推测解码（Speculative Decoding）最新综述-CSDN博客
 

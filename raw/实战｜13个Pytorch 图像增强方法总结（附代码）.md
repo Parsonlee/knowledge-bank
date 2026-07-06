@@ -4,6 +4,7 @@ cubox_url: https://cubox.pro/web/card/7128378762453846917
 url: https://mp.weixin.qq.com/s/Qg2wI8Ow_hYPF7LCnntDCg
 tags:
   - CV/data-augmentation
+published: 2023-08-29
 ---
 # 实战｜13个Pytorch 图像增强方法总结（附代码）
 

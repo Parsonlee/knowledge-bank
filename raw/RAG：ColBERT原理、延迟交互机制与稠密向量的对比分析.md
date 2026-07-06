@@ -5,6 +5,7 @@ url: https://mp.weixin.qq.com/s?__biz=MzkwNjcxNTc2Ng==&mid=2247485657&idx=1&sn=3
 tags:
   - RAG/embedding
   - RAG
+published: 2025-03-30
 ---
 # RAG：ColBERT原理、延迟交互机制与稠密向量的对比分析
 

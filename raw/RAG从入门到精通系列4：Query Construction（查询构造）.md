@@ -5,6 +5,7 @@ url: https://mp.weixin.qq.com/s/qG02XjSV9nuRIonGy_VOwQ
 tags:
   - RAG
   - RAG/query
+published: 2025-01-26
 ---
 # RAG从入门到精通系列4：Query Construction（查询构造）
 

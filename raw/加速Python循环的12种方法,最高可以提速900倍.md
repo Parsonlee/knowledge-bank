@@ -4,6 +4,7 @@ cubox_url: https://cubox.pro/web/card/7142179421393258886
 url: https://mp.weixin.qq.com/s/LyZtKIVhVvBP8BCKWEYqYw
 tags:
   - Skill/python
+published: 2024-01-02
 ---
 # 加速Python循环的12种方法,最高可以提速900倍
 

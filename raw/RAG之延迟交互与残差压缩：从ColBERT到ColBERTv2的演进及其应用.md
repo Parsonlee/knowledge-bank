@@ -5,6 +5,7 @@ url: https://mp.weixin.qq.com/s/2-9FqIFxgWM10X9lnora4A
 tags:
   - RAG/embedding
   - RAG
+published: 2025-03-31
 ---
 # RAG之延迟交互与残差压缩：从ColBERT到ColBERTv2的演进及其应用
 

@@ -4,6 +4,7 @@ cubox_url: https://cubox.pro/web/card/7282379762964629528
 url: https://mp.weixin.qq.com/s/MPTXRhLtL6g5rtS7Hju3SA
 tags:
   - RAG/embedding
+published: 2025-01-18
 ---
 # 一文详尽之Embedding（向量表示）！
 

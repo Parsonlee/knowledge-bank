@@ -4,6 +4,7 @@ cubox_url: https://cubox.pro/web/card/7158805860192356851
 url: https://mp.weixin.qq.com/s/zyZndz65GKUydmwBgdlSZw
 tags:
   - LLM/arch/MoE
+published: 2024-02-11
 ---
 # 手把手教你，从零开始实现一个稀疏混合专家架构语言模型（MoE）
 

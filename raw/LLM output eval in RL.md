@@ -5,6 +5,7 @@ url: https://mp.weixin.qq.com/s?__biz=Mjc1NjM3MjY2MA==&mid=2691560834&idx=1&sn=2
 tags:
   - LLM
   - LLM/training/RL
+published: 2025-09-16
 ---
 # 一文读懂GPT-5的绝招，这是决定AI未来的隐形武器
 

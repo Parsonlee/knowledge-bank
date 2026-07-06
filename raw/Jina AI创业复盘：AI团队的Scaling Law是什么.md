@@ -5,6 +5,7 @@ url: https://mp.weixin.qq.com/s/tXAUF0dZBdGhszoda3rz3A
 tags:
   - 创业
   - LLM
+published: 2025-12-02
 ---
 # Jina AI创业复盘：AI团队的Scaling Law是什么
 

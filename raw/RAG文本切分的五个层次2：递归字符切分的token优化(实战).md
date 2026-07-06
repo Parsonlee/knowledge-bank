@@ -5,6 +5,7 @@ url: https://mp.weixin.qq.com/s?__biz=Mzk0NTcyNTMzNw==&mid=2247483966&idx=1&sn=4
 tags:
   - RAG
   - RAG/chunking
+published: 2024-08-13
 ---
 # RAG文本切分的五个层次2：递归字符切分的token优化(实战)
 

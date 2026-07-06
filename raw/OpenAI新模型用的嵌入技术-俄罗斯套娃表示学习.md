@@ -4,6 +4,7 @@ cubox_url: https://cubox.pro/web/card/7153731518270016757
 url: https://mp.weixin.qq.com/s/h9K06h5YcRXXKCjhzOArBA
 tags:
   - RAG/embedding
+published: 2024-01-31
 ---
 # OpenAI新模型用的嵌入技术-俄罗斯套娃表示学习
 

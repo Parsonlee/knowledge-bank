@@ -5,6 +5,7 @@ url: https://mp.weixin.qq.com/s?__biz=MzU0NjU0ODk2Mg==&mid=2247501175&idx=1&sn=f
 tags:
   - RAG
   - AI-Agent/AI-BI
+published: 2025-08-28
 ---
 # 万字长文详解优图RAG技术
 

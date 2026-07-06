@@ -5,6 +5,7 @@ url: https://mp.weixin.qq.com/s?__biz=MzIyNjM2MzQyNg==&mid=2247707431&idx=1&sn=1
 tags:
   - RAG
 
+published: 2025-05-29
 ---
 # RAG 挑战赛冠军方案解析：从数据解析到多路由器检索的工程实践，推荐阅读！
 

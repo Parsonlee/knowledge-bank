@@ -5,6 +5,7 @@ url: https://mp.weixin.qq.com/s/TlFNOw7_3Q8qywKLpVUmfg
 tags:
   - RAG
 
+published: 2025-01-16
 ---
 # RAG从入门到精通系列1：基础RAG
 

@@ -4,6 +4,7 @@ cubox_url: https://cubox.pro/web/card/7337788111482522839
 url: https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-mamba-and-state
 tags:
   - LLM/arch/Mamba
+published: 2024-07-22
 ---
 # A Visual Guide to Mamba and State Space Models
 

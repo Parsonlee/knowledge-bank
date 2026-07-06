@@ -5,6 +5,7 @@ url: https://mp.weixin.qq.com/s/XImZp0655W5Ee-RmkD9ZKg
 tags:
   - RAG
   - RAG/query
+published: 2024-12-30
 ---
 # 腾讯: Query改写不是你RAG使用LLM查询优化的唯一方案
 

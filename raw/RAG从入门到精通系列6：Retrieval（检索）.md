@@ -5,6 +5,7 @@ url: https://mp.weixin.qq.com/s?__biz=MzI2ODUyMTQyNA==&mid=2247495615&idx=1&sn=0
 tags:
   - RAG
   - RAG/retrieval
+published: 2025-01-30
 ---
 # RAG从入门到精通系列6：Retrieval（检索）
 

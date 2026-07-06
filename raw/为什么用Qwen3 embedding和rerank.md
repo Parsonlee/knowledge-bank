@@ -5,6 +5,7 @@ url: https://mp.weixin.qq.com/s/hmJ1H9gTBmHV_dOGM7UeWg
 tags:
   - RAG/embedding
   - RAG
+published: 2025-06-22
 ---
 # 为什么用Qwen3 embedding和rerank
 

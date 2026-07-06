@@ -5,6 +5,7 @@ url: https://mp.weixin.qq.com/s/oX6JZS_INj9M8Ntkh4Jp9Q
 tags:
   - RAG
 
+published: 2025-06-06
 ---
 # RAG技巧与底层代码剖析
 

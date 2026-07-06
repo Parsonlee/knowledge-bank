@@ -5,6 +5,7 @@ url: https://baoyu.io/translations/rl-envs-real-world
 tags:
   - LLM/training/RL
   - Infra/AI
+published: 2025-11-13
 ---
 # RL 环境与智能体能力金字塔 | 宝玉的分享
 

@@ -4,7 +4,6 @@ source: https://colobu.com/2026/06/28/anthropic-official-plugins-domain-knowledg
 author:
   - 鸟窝
 published: 2026-06-28
-created: 2026-06-29
 description:
 tags:
   - Skill/claude-code

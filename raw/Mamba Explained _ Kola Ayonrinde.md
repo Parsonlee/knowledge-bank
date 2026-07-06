@@ -4,6 +4,7 @@ cubox_url: https://cubox.pro/web/card/7337459284281658876
 url: https://www.kolaayonrinde.com/blog/2024/02/11/mamba.html
 tags:
   - LLM/arch/Mamba
+published: 2024-02-11
 ---
 # Mamba Explained | Kola Ayonrinde
 

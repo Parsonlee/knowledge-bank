@@ -5,6 +5,7 @@ url: https://mp.weixin.qq.com/s?__biz=Mzk0NTcyNTMzNw==&mid=2247484218&idx=1&sn=6
 tags:
   - RAG
   - RAG/retrieval
+published: 2024-09-23
 ---
 # RAG高级优化：检索策略探讨Fusion, HyDE安排上(含代码)
 

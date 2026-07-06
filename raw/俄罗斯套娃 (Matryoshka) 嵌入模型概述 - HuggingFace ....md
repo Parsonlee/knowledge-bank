@@ -1,9 +1,10 @@
 ---
 id: "7346119674347653057"
 cubox_url: https://cubox.pro/web/card/7346119674347653057
-url: https://www.cnblogs.com/huggingface/p/18057730
+url: https://huggingface.co/blog/zh/matryoshka
 tags:
   - RAG/embedding
+published: 2024-02-23
 ---
 # 俄罗斯套娃 (Matryoshka) 嵌入模型概述 - HuggingFace - 博客园
 

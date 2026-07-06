@@ -5,6 +5,7 @@ url: https://mp.weixin.qq.com/s?__biz=Mzk0NTcyNTMzNw==&mid=2247484120&idx=1&sn=5
 tags:
   - RAG
   - RAG/chunking
+published: 2024-09-03
 ---
 # RAG文本切分LV3：轻松定制Markdown切分
 

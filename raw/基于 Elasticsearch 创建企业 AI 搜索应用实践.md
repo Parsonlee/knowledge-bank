@@ -5,6 +5,7 @@ url: https://mp.weixin.qq.com/s?__biz=MjM5MDE0Mjc4MA==&mid=2651254397&idx=2&sn=7
 tags:
   - RAG
 
+published: 2025-08-27
 ---
 # 基于 Elasticsearch 创建企业 AI 搜索应用实践
 

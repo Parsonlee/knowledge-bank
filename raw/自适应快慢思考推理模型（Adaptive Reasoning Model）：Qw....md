@@ -4,6 +4,7 @@ cubox_url: https://cubox.pro/web/card/7339186180103078460
 url: https://zhuanlan.zhihu.com/p/1910075005586346955
 tags:
   - LLM/reasoning
+published: 2025-07-25
 ---
 # 自适应快慢思考推理模型（Adaptive Reasoning Model）：Qwen3混合思考->字节AdaCoT->清华AdaThinking - 知乎
 

@@ -5,6 +5,7 @@ url: https://mp.weixin.qq.com/s/MM-XB3NrrZO-A_3R0GD6hw
 tags:
   - Skill/python
   - Skill/data-analysis
+published: 2024-02-20
 ---
 # 区区几行Python代码，就能实现全面自动探索性数据分析！
 

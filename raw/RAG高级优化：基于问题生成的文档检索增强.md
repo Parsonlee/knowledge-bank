@@ -5,6 +5,7 @@ url: https://mp.weixin.qq.com/s?__biz=Mzk0NTcyNTMzNw==&mid=2247484125&idx=1&sn=0
 tags:
   - RAG
   - RAG/query
+published: 2024-09-04
 ---
 # RAG高级优化：基于问题生成的文档检索增强
 

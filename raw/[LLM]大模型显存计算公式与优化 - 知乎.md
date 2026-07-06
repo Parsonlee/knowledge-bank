@@ -5,6 +5,7 @@ url: https://zhuanlan.zhihu.com/p/687226668
 tags:
   - LLM/inference
   - Infra/gpu
+published: 2024-03-25
 ---
 # [LLM]大模型显存计算公式与优化 - 知乎
 

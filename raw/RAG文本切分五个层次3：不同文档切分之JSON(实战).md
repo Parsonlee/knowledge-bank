@@ -5,6 +5,7 @@ url: https://mp.weixin.qq.com/s?__biz=Mzk0NTcyNTMzNw==&mid=2247483975&idx=1&sn=c
 tags:
   - RAG
   - RAG/chunking
+published: 2024-08-14
 ---
 # RAG文本切分五个层次3：不同文档切分之JSON(实战)
 

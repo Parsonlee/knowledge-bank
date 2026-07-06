@@ -5,6 +5,7 @@ url: https://mp.weixin.qq.com/s/PQF8Ka5UPYxpnEASTUSs5w
 tags:
   - RAG
   - RAG/query
+published: 2024-12-23
 ---
 # ICLR2025盲审论文DMQR-RAG：多样查询改写，查询P@5提升了14.46%，超过RAG-Fusion
 

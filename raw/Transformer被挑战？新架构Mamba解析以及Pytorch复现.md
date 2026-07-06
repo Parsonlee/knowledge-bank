@@ -4,6 +4,7 @@ cubox_url: https://cubox.pro/web/card/7172125240313513096
 url: https://mp.weixin.qq.com/s/BdT1qI4lXrA7JsFDoq5dQA
 tags:
   - LLM/arch/Mamba
+published: 2024-03-22
 ---
 # Transformer被挑战？新架构Mamba解析以及Pytorch复现
 

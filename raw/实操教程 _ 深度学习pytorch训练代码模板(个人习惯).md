@@ -5,6 +5,7 @@ url: https://mp.weixin.qq.com/s?__biz=MzU4NjIxODMyOQ==&mid=2247511189&idx=5&sn=d
 tags:
   - DeepLearning
   - Skill/python/pytorch
+published: 2022-09-15
 ---
 # 实操教程 | 深度学习pytorch训练代码模板(个人习惯)
 

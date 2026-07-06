@@ -4,6 +4,7 @@ cubox_url: https://cubox.pro/web/card/7375797183372594179
 url: https://tongyi-agent.github.io/zh/blog/introducing-tongyi-deep-research/
 tags:
   - AI-Agent/deep-research
+published: 2025-09-16
 ---
 # 通义 DeepResearch：开源 AI 智能体的新纪元 | Tongyi DeepResearch
 

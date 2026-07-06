@@ -5,6 +5,7 @@ url: https://mp.weixin.qq.com/s?__biz=MzI2ODUyMTQyNA==&mid=2247495664&idx=1&sn=2
 tags:
   - RAG
 
+published: 2025-02-02
 ---
 # 探索提升RAG系统问答质量的技术路线
 

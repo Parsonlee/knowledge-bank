@@ -5,6 +5,7 @@ url: https://baoyu.io/translations/claude-skills-deep-dive
 tags:
   - AI-Agent/context-engineering
   - AI-Agent/skill
+published: 2025-11-25
 ---
 # 从第一性原理深度拆解 Claude Agent Skill | 宝玉的分享
 

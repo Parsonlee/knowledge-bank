@@ -5,6 +5,7 @@ url: https://mp.weixin.qq.com/s/F4fediyP2in_CWW-ERMoUg
 tags:
   - LLM
   - LLM/training/RL
+published: 2025-06-22
 ---
 # 新手必看！强化学习入门指南 | 从RLHF、PPO、GRPO到RLVR，最后到训练推理模型
 

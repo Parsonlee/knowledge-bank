@@ -4,6 +4,7 @@ cubox_url: https://cubox.pro/web/card/7375796863301061356
 url: https://mp.weixin.qq.com/s?__biz=Mzk3NTc1NTU0Mw==&mid=2247501232&idx=1&sn=8a8370bfbe6a12ae5636a7f628a6496b&poc_token=HHUh52ijx4RoUrOdKbqgVNwtOcMcOWctcARoistS
 tags:
   - AI-Agent/deep-research
+published: 2025-09-29
 ---
 # Tongyi DeepResearch的技术报告探秘
 

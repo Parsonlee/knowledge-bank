@@ -6,6 +6,7 @@ tags:
   - LLM
   - LLM/Multimodal
   - AIGC
+published: 2025-06-23
 ---
 # 淘宝直播数字人：LLM文案生成技术
 

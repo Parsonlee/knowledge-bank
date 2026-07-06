@@ -5,6 +5,7 @@ url: https://mp.weixin.qq.com/s?__biz=MzAxNDEwNjk5OQ==&mid=2650540777&idx=1&sn=1
 tags:
   - TTS
   - AIGC
+published: 2025-06-27
 ---
 # 淘宝直播数字人：TTS语音合成技术
 

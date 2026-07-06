@@ -5,6 +5,7 @@ url: https://mp.weixin.qq.com/s?__biz=MjM5MDE0Mjc4MA==&mid=2651246577&idx=2&sn=e
 tags:
   - RAG
 
+published: 2025-06-03
 ---
 # 复杂场景下的 RAG 架构演进：跨模态知识联邦与统一语义推理实践
 

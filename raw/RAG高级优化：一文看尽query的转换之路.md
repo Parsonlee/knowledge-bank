@@ -5,6 +5,7 @@ url: https://mp.weixin.qq.com/s/UZV4ztL0j5k2qPV8U_wZVg
 tags:
   - RAG
   - RAG/query
+published: 2024-09-10
 ---
 # RAG高级优化：一文看尽query的转换之路
 

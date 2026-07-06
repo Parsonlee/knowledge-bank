@@ -4,6 +4,7 @@ cubox_url: https://cubox.pro/web/card/7350408999809844914
 url: https://mp.weixin.qq.com/s/YdKuIzRgmXgrz7MDPqSfig
 tags:
   - Skill/python
+published: 2025-07-31
 ---
 # 写了十年 Python，我竟然现在才知道这5个功能！
 

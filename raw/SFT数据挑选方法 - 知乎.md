@@ -7,6 +7,7 @@ tags:
   - LLM
   - LLM/training/post-train
   - LLM/training
+published: 2025-02-09
 ---
 # SFT数据挑选方法 - 知乎
 

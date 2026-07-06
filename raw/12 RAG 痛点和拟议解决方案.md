@@ -1,10 +1,10 @@
 ---
 id: "7327342715878769247"
 cubox_url: https://cubox.pro/web/card/7327342715878769247
-url: https://readmedium.com/zh/12-rag-pain-points-and-proposed-solutions-43709939a28c
+url: https://towardsdatascience.com/12-rag-pain-points-and-proposed-solutions-43709939a28c/
 tags:
   - RAG
-
+published: 2024-01-30
 ---
 # 12 RAG 痛点和拟议解决方案
 

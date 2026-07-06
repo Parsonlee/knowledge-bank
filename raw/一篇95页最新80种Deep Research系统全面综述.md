@@ -4,6 +4,7 @@ cubox_url: https://cubox.pro/web/card/7336648672257507444
 url: https://mp.weixin.qq.com/s/U5iEFpEAjqWwhCPrfvnZQQ
 tags:
   - AI-Agent/deep-research
+published: 2025-06-22
 ---
 # 一篇95页最新80种Deep Research系统全面综述
 

@@ -5,6 +5,7 @@ url: https://zhuanlan.zhihu.com/p/30201040247
 tags:
   - LLM
   - LLM/training/post-train
+published: 2025-03-14
 ---
 # LLM 后训练技术 - 知乎
 

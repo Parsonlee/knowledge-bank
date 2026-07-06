@@ -5,6 +5,7 @@ url: https://mp.weixin.qq.com/s?__biz=MzI2ODUyMTQyNA==&mid=2247495567&idx=1&sn=3
 tags:
   - RAG
   - RAG/chunking
+published: 2025-01-27
 ---
 # RAG从入门到精通系列5：Indexing（索引）
 

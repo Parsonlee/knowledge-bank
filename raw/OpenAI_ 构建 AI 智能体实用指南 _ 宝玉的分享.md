@@ -4,6 +4,7 @@ cubox_url: https://cubox.pro/web/card/7336037794973748692
 url: https://baoyu.io/translations/a-practical-guide-to-building-agents
 tags:
   - AI-Agent/multi-agent
+published: 2025-06-17
 ---
 # OpenAI: 构建 AI 智能体实用指南 | 宝玉的分享
 

@@ -4,6 +4,7 @@ cubox_url: https://cubox.pro/web/card/7371088586390637269
 url: https://mp.weixin.qq.com/s?__biz=MzkwNjcxNTc2Ng==&mid=2247484810&idx=1&sn=8a4180ab552ce9305ab5bbaead771396&scene=21&poc_token=HDgB1mijVtWay5-EXpBibHqvfKctZUjaxL_vgmCV
 tags:
   - RAG/eval
+published: 2025-03-09
 ---
 # 用 RAGAS 精准定位 RAG 系统短板
 

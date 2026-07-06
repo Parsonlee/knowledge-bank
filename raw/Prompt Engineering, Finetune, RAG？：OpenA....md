@@ -6,6 +6,7 @@ tags:
   - LLM
   - RAG
   - AI-Agent/prompt-engineering
+published: 2024-07-10
 ---
 # Prompt Engineering, Finetune, RAG？：OpenAI LLM 应用最佳实践
 

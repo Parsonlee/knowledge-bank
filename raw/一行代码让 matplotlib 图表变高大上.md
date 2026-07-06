@@ -4,6 +4,7 @@ cubox_url: https://cubox.pro/web/card/7128377660480160628
 url: https://mp.weixin.qq.com/s/6TrDtLHqBBYEfCwJobZeAg
 tags:
   - Skill/data-analysis
+published: 2021-08-11
 ---
 # 一行代码让 matplotlib 图表变高大上
 

@@ -4,6 +4,7 @@ cubox_url: https://cubox.pro/web/card/7354439971001861556
 url: https://mp.weixin.qq.com/s/bI4SEWPuL5ljCEAjkWpznw
 tags:
   - Skill/claude-code
+published: 2025-08-10
 ---
 # 一个半月高强度Claude Code使用后感受
 
