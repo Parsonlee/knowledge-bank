@@ -1,12 +1,13 @@
 # Wiki Log
 
-## 2026-07-06 ingest | Clippings/ 3 篇新文章入库与双向维基图谱构建 (+ affected pages)
+## 2026-07-06 ingest | Clippings -> raw 3 篇新文章入库与归档规范升级 (+ affected pages)
 - **深度阅读与原始净化**：完成对 `Clippings/` 下 3 篇新收藏文章的深度提取与语法净化检查（0 处伪标签/幽灵链接）。
-- **完成 3 篇文章 Ingest 闭环与 Source 摘要页生成**：
-  - `Clippings/Claude Code + Obsidian + 飞书，我搭了一套会自己长大的知识库.md` -> `wiki/sources/Claude Code与Obsidian飞书知识库搭建实践.md` (+ 新建 `[[概念_LLM_Wiki范式]]`、`[[实体_Claude_Code]]`、`[[实体_Obsidian]]`)
-  - `Clippings/LLM Agent 的记忆进化路径研究综述.md` -> `wiki/sources/LLM Agent记忆进化路径三阶段研究综述.md` (+ 新建 `[[概念_Agent三段式记忆演进]]`；补充更新 `[[概念_AI_Agent记忆策略]]`)
-  - `Clippings/我们如何利用 DSPy 将 AI 评估转化为 Dash Chat 的更优回复.md` -> `wiki/sources/Dropbox基于DSPy优化Dash Chat评估与提示词.md` (+ 新建 `[[概念_Agent完整轨迹评估]]`、`[[概念_提示词自动优化闭环]]`、`[[实体_DSPy]]`；补充更新 `[[概念_LLM应用评估体系]]`)
-- **全量同步索引与图谱互联**：同步将 3 篇 Source 摘要页、4 篇 Concept 概念页、3 篇 Entity 实体页精准挂载至 `wiki/index.md` 对应分类区，确保死链率为 0%。
+- **完成 3 篇文章 Ingest 闭环与归档移动 (Clippings -> raw)**：
+  - `Clippings/Claude Code + Obsidian + 飞书，我搭了一套会自己长大的知识库.md` -> `raw/Claude Code + Obsidian + 飞书，我搭了一套会自己长大的知识库.md` -> `wiki/sources/Claude Code与Obsidian飞书知识库搭建实践.md` (+ 新建 `[[概念_LLM_Wiki范式]]`、`[[实体_Claude_Code]]`、`[[实体_Obsidian]]`)
+  - `Clippings/LLM Agent 的记忆进化路径研究综述.md` -> `raw/LLM Agent 的记忆进化路径研究综述.md` -> `wiki/sources/LLM Agent记忆进化路径三阶段研究综述.md` (+ 新建 `[[概念_Agent三段式记忆演进]]`；补充更新 `[[概念_AI_Agent记忆策略]]`)
+  - `Clippings/我们如何利用 DSPy 将 AI 评估转化为 Dash Chat 的更优回复.md` -> `raw/我们如何利用 DSPy 将 AI 评估转化为 Dash Chat 的更优回复.md` -> `wiki/sources/Dropbox基于DSPy优化Dash Chat评估与提示词.md` (+ 新建 `[[概念_Agent完整轨迹评估]]`、`[[概念_提示词自动优化闭环]]`、`[[实体_DSPy]]`；补充更新 `[[概念_LLM应用评估体系]]`)
+- **剪藏归档与规范沉淀**：完成 Ingest 后将 3 篇原始剪藏文章自 `Clippings/` 移动至 `raw/` 永久归档，同步更新 3 篇 Source 摘要页中 `sources` 字段与文末物理文献插链为 `raw/xxx.md`。同时在 `AGENTS.md` 1.1 章节与 4.1 章节中正式记录了**「完成 Ingest 后须将文章从 Clippings 移动至 raw 归档」**的标准操作规范（确认各操作手册等已统一合并至 `AGENTS.md`）。
+- **全量同步索引与图谱互联**：同步将 3 篇 Source 摘要页、7 篇 Concept 概念页、6 篇 Entity 实体页精准挂载至 `wiki/index.md` 对应分类区，确保死链率为 0%。
 
 ## 2026-07-02 ingest | 恢复 64f7758 遗漏文章入库与 Tag 净化
 - **删除处理**：根据用户指令删除 `Clippings/Mac 外接 2k 显示器攻略.md`。

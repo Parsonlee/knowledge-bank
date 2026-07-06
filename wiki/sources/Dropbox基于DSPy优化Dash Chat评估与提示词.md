@@ -5,7 +5,7 @@ tags:
   - AI-Agent/prompt-engineering
 summary: Dropbox 介绍 Dash Chat 智能体的评估驱动工程实践，借助人工标注校准 LLM-as-judge，再使用 DSPy 的 GEPA/MIPROv2 算法自动优化系统提示词，显著降低错误率与 Token 用量。
 sources:
-  - Clippings/我们如何利用 DSPy 将 AI 评估转化为 Dash Chat 的更优回复.md
+  - raw/我们如何利用 DSPy 将 AI 评估转化为 Dash Chat 的更优回复.md
 updated: '2026-07-06'
 published: '2026-06-26'
 ---
@@ -13,7 +13,7 @@ published: '2026-06-26'
 
 - 原文：[How we used DSPy to turn AI evaluations into better responses in Dash Chat](https://dropbox.tech/machine-learning/how-we-turned-ai-evaluations-into-better-responses-in-dash-chat) / [中文翻译版](https://www.bestblogs.dev/article/c2a3404e)
 - 作者：[[实体_Simran_Jumani]] / Dropbox Tech Blog / 2026-06-26
-- 物理文献：`Clippings/我们如何利用 DSPy 将 AI 评估转化为 Dash Chat 的更优回复.md`
+- 物理文献：`raw/我们如何利用 DSPy 将 AI 评估转化为 Dash Chat 的更优回复.md`
 
 ## 核心要点与关键引文
 
@@ -41,4 +41,4 @@ published: '2026-06-26'
 - 关联概念：[[概念_LLM应用评估体系]]、[[概念_系统提示词四层架构]]
 - 关联实体：[[实体_DSPy]]、[[实体_Dropbox]]
 
-> 📎 **物理文献**：[[Clippings/我们如何利用 DSPy 将 AI 评估转化为 Dash Chat 的更优回复.md]]
+> 📎 **物理文献**：[[raw/我们如何利用 DSPy 将 AI 评估转化为 Dash Chat 的更优回复.md]]
