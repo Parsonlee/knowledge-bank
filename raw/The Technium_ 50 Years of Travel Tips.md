@@ -4,6 +4,7 @@ cubox_url: https://cubox.pro/web/card/7294315218044192235
 url: https://kk.org/thetechnium/50-years-of-travel-tips/
 tags:
   - Life
+published: 2025-01-20
 ---
 # The Technium: 50 Years of Travel Tips
 

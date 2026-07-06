@@ -3,8 +3,7 @@ title: LLM Agent 的记忆进化路径研究综述
 source: https://mp.weixin.qq.com/s/3UrrMSXV6_t-lb6Kp7CPqA
 author:
   - "[[AI Online]]"
-published:
-created: 2026-05-11
+published: 2026-05-11
 description: 在构建 LLM Agent 时，&quot;记忆&quot;往往是开发者最容易踩坑的部分——消息太多上下文爆
 tags:
   - AI-Agent/memory
