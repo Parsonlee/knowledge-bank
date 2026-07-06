@@ -97,14 +97,12 @@
 - [[MCP遇上代码执行]] — Anthropic：CodeAgent 模式调用 MCP，Token 减少 98.7%，隐私保护与 Skills 沉淀（AI-Agent/tools）
 - [[MCP五大原语与Web化]] — MCP 联合创建者 David 解构五大原语，Web 化方向 OAuth 2.1 + Streamable HTTP（AI-Agent/tools）
 - [[HumanInTheLoop用MCP实现]] — 阿里云 OpenLM：send_inquiry+MCP Notification 实现服务端 HITL，含 Proxy 代理和 YOLO 模式（AI-Agent/tools）
-- [[Anthropic多智能体研究系统构建]] — Anthropic：orchestrator-worker 研究系统，多智能体比单智能体提升 90.2%，8条提示词原则（AI-Agent/multi-agent）
 - [[Context_Engineering_LangChain_Manus_NotebookLM]] — LangChain × Manus 对话提炼：4条反直觉原则——战略边界/可逆压缩/工具分层卸载/简化优先（AI-Agent/context-engineering）
 - [[AI应用实战_搞定复杂指令和工具膨胀]] — 阿里云联调造数：单Agent→多Agent，意图识别+工具引擎+逆向推导，工具100+→5个（AI-Agent/context-engineering）
 - [[Manus创始人手把手拆解上下文工程]] — Peak 亲写：KV缓存/工具掩码/文件系统记忆/注意力复述/错误保留/Few-Shot多样性六大原则（AI-Agent/context-engineering）
 - [[浅谈上下文工程_Claude_Code_Manus_Kiro]] — 提示工程→上下文工程→环境工程演进，Claude Code/Manus/Kiro三产品实践对比（AI-Agent/context-engineering）
 - [[也许当前最好的上下文工程讲解_LangChain联合Manus]] — Lance Martin × Peak Ji 对话实录：压缩/总结两模式、隔离两模式、三层行动空间、避免过度工程化（AI-Agent/context-engineering）
 - [[Anthropic再发Agent神文_像人类工程师一样思考解决长程任务难题]] — Anthropic 双 Agent 架构解决长程 Coding 任务：初始化 Agent + 编码 Agent + 功能列表/增量进展/端到端测试三支柱（AI-Agent/coding）
-- [[awesome-claude-code-subagents资源集合]] — VoltAgent 社区维护的 Claude Code 子代理（Subagents）资源集与配置实战（Skill/claude-code）
 - [[一个半月高强度Claude_Code使用后感受]] — 王巍（喵神）：持续使用 Claude Code 的深度体验，心智模型转换与编程效率加速（Skill/claude-code）
 - [[写好CLAUDE.md_HumanLayer最佳实践]] — HumanLayer 团队编写 CLAUDE.md 最佳实践，基于上下文工程原则与模块化约束（Skill/claude-code）
 - [[Claude_Agent_Skills_从第一性原理深入剖析]] — PaperAgent：Skills 元工具架构速览，SKILL.md 结构、四种模式、纯 LLM 推理技能选择（AI-Agent/skill）
@@ -118,7 +116,6 @@
 - [[一篇95页最新80种Deep Research系统全面综述]] — 浙大综述 80+ 系统，4 维分类法与单体/流水线/多智能体/混合四种架构（AI-Agent/deep-research）
 - [[通义 DeepResearch：开源 AI 智能体的新纪元]] — 通义官方博客：全开源 Web Agent 完整技术全貌，Agentic CPT+SFT+RL 端到端训练与 Research-Synthesis 框架（AI-Agent/deep-research）
 - [[AI智能体8种Memory策略与技术实现]] — 8 种记忆策略原理+模拟代码：全量/滑动窗口/相关性过滤/摘要/向量DB/知识图谱/分层/类OS内存管理（AI-Agent/memory）
-- [[Agent记忆模块前沿研究简述]] — 机器之心综述：记忆分类体系+MemGPT/MemOS/MIRIX/G-Memory/M3-Agent前沿系统+五大挑战（AI-Agent/memory）
 - [[OpenAI_构建AI智能体实用指南]] — OpenAI 官方指南（宝玉译）：Agent 三大基石/单一+主管+去中心化编排/分层安全护栏/HITL（AI-Agent/multi-agent）
 - [[用系统架构思维告别意大利面条式系统提示词]] — 系统提示词四层架构（核心定义/交互接口/内部处理/全局约束）替代扁平规则堆砌（AI-Agent/prompt-engineering）
 - [[腾讯OlaChat_LLM智能数据分析平台实践]] — 腾讯 OlaChat：FlattenedRAG/StructuredRAG 元数据检索 + Text2SQL 微调+Agent + 多任务对话编排（AI-Agent/AI-BI）
@@ -163,6 +160,9 @@
 - [[FastAPI生产部署ASGI_WSGI避坑指南]] — 生产环境下部署 FastAPI 高并发服务的实践指南，对比 Uvicorn 与 Gunicorn 架构职责并给出 Docker 稳定调优配置（Skill/python）
 - [[RAG从入门到精通系列1_基础RAG]] — 系统梳理基础检索增强生成（Naive RAG）标准管线的技术流程与基础概念，从切分嵌入到召回全链路概括（RAG）
 - [[PyTorch标准深度学习训练代码模板]] — 精选实用的 PyTorch 深度学习训练工程实操模板，涵盖参数解析、数据集处理、网络结构定义与训练循环（DeepLearning, Skill/python）
+- [[Claude Code与Obsidian飞书知识库搭建实践]] — 基于 Karpathy 的 LLM Wiki 理念，结合 Claude Code（大脑）、Obsidian（眼睛）与飞书机器人（手），实现知识库入库与复利积累（Skill/knowledge-bank, AI-Agent/coding）
+- [[LLM Agent记忆进化路径三阶段研究综述]] — 港中深与上海 AI 实验室综述，提出 Storage -> Reflection -> Experience 三阶段演进框架及主动探索机制（AI-Agent/memory）
+- [[Dropbox基于DSPy优化Dash Chat评估与提示词]] — Dropbox Dash Chat 评估驱动实践：人工标注校准 LLM-as-a-Judge + DSPy GEPA 自动迭代系统提示词（AI-Agent/eval, AI-Agent/prompt-engineering）
 
 ## Concepts
 
@@ -432,6 +432,10 @@
 - [[概念_MCP混合部署]] — 小模型做工具选择节省 token，大模型负责生成保证质量（AI-Agent/tools）
 - [[概念_orchestrator-worker模式]] — 主智能体规划分解，子智能体并行执行，多智能体 vs 单智能体提升 90.2%（AI-Agent/multi-agent）
 - [[概念_多智能体协调]] — 多智能体协调挑战、提示词 8 原则、评测策略与生产可靠性（AI-Agent/multi-agent）
+- [[概念_LLM_Wiki范式]] — Andrej Karpathy 提出的知识管理范式，在摄入端预先结构化与关联，实现高复利知识编译（Skill/knowledge-bank）
+- [[概念_Agent三段式记忆演进]] — Storage -> Reflection -> Experience 三阶段演进框架及驱动演进的三大根本动力（AI-Agent/memory）
+- [[概念_Agent完整轨迹评估]] — 面向复杂智能体多步规划、检索与多轮会话的高度对准人工监督与全轨迹评估（AI-Agent/eval）
+- [[概念_提示词自动优化闭环]] — 利用 DSPy GEPA/MIPROv2 算法与回放验证闭环，全自动优化系统提示词（AI-Agent/prompt-engineering）
 
 ## Entities
 
@@ -756,6 +760,9 @@
 ### 创业（Phase 6 Batch 5：AI 独立开发）
 - [[实体_艾逗笔_idoubi]] — ThinkAny & MCP.so 创始人，腾讯 5 年后裸辞独立开发，AI 应用出海（创业）
 - [[实体_MCP_so]] — MCP 应用市场，月均百万访问，被 a16z 引用，程序化 SEO Google MCP 关键词第一（创业）
+- [[实体_Claude_Code]] — Anthropic 终端 AI Coding 命令行工具，在 LLM Wiki 中担任知识编译“大脑”（AI-Agent/coding, Skill/claude-code）
+- [[实体_Obsidian]] — 本地优先 Markdown 知识库软件，通过 Graph View 图谱与 MCP 充当人类认知“IDE”（Skill/knowledge-bank）
+- [[实体_DSPy]] — 斯坦福开源的声明式框架，将提示工程转化为程序编译与 GEPA 误差驱动优化（AI-Agent/eval, AI-Agent/prompt-engineering）
 
 ## Comparisons
 
