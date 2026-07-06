@@ -1,5 +1,15 @@
 # Wiki Log
 
+## [2026-07-06] ingest & lint | sources/ 与 raw/ 1对1一致性对齐闭环 (+ affected pages)
+- **处理重复映射与冗余摘要**：
+  - 修复 `wiki/sources/RAG基础_索引检索生成.md` 与 `wiki/sources/PyTorch训练代码模板.md` 中的 `sources:` 字段及物理文献链接错位问题。
+  - 移除 2 篇由错位引起的冗余短摘要页（`RAG从入门到精通系列1_基础RAG.md`、`PyTorch标准深度学习训练代码模板.md`）及对应的总索引条目。
+- **孤立文献 Ingest 补齐闭环 (raw/ -> wiki/sources/)**：
+  - `raw/How we built our multi-agent research system.md` -> `wiki/sources/Anthropic多智能体研究系统构建.md` (+ 关联 `[[概念_orchestrator-worker模式]]` 等，修复历史死链)
+  - `raw/LLM output eval in RL.md` -> `wiki/sources/GPT5通用验证器与RL探索.md` (+ 新建 `[[概念_Reward_Hacking]]`、`[[实体_OpenAI]]`、`[[实体_DeepMind]]`)
+  - `raw/[LLM]大模型显存计算公式与优化 - 知乎.md` -> `wiki/sources/大模型显存计算公式与优化.md` (+ 新建 `[[实体_NVIDIA]]`，关联并收敛至 `[[概念_激活值重计算]]`)
+- **全量同步索引**：将本次入库和新建的 3 篇 Source 摘要页、1 篇 Concept 概念页与 3 篇 Entity 实体页完整挂载至 `wiki/index.md`，实现 `sources/` 与 `raw/` 各 163 篇的 100% 1对1精准映射。
+
 ## 2026-07-06 ingest | Clippings -> raw 3 篇新文章入库与归档规范升级 (+ affected pages)
 - **深度阅读与原始净化**：完成对 `Clippings/` 下 3 篇新收藏文章的深度提取与语法净化检查（0 处伪标签/幽灵链接）。
 - **完成 3 篇文章 Ingest 闭环与归档移动 (Clippings -> raw)**：

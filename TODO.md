@@ -4,7 +4,7 @@
 
 ## wiki
 - [ ] frontmatter不一致
-- [ ] sources/ 数量和 raw/ 是否一致
+- [x] sources/ 数量和 raw/ 是否一致（已对齐，双方均为 163 篇，完成 1对1 精准映射）
 - [ ] wiki/entities 频率不高的人/组织移除，可能需要设置一个阈值。本质上是精简entites+concepts，需要深度讨论
 - [ ] entities、conceptes等，是否移除tag（需要讨论）
 

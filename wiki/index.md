@@ -158,8 +158,9 @@
 - [[全流程备战面试开卷推理SOP]] — 少数派文章：提出将职场面试视为基于样本积累与反向推导的“开卷推理游戏”，构建结构化面试备战与复盘 SOP（面试, Life）
 - [[Google_Generative_UI综述]] — Google Research 官方博客关于生成式用户界面（Generative UI）的阐述，按提示词动态生成丰富的定制化交互组件（AI-Agent/UI, AI-Agent/coding）
 - [[FastAPI生产部署ASGI_WSGI避坑指南]] — 生产环境下部署 FastAPI 高并发服务的实践指南，对比 Uvicorn 与 Gunicorn 架构职责并给出 Docker 稳定调优配置（Skill/python）
-- [[RAG从入门到精通系列1_基础RAG]] — 系统梳理基础检索增强生成（Naive RAG）标准管线的技术流程与基础概念，从切分嵌入到召回全链路概括（RAG）
-- [[PyTorch标准深度学习训练代码模板]] — 精选实用的 PyTorch 深度学习训练工程实操模板，涵盖参数解析、数据集处理、网络结构定义与训练循环（DeepLearning, Skill/python）
+- [[Anthropic多智能体研究系统构建]] — 深入解析 Anthropic 构建 Claude 生产级多智能体研究系统的工程挑战与经验，涵盖编排器-工作者架构、并行推理及长跨度状态管理（AI-Agent/multi-agent, AI-Agent/deep-research）
+- [[GPT5通用验证器与RL探索]] — 深度解析 LLM 从 RLVR 向开放主观领域进化的核心关键“通用验证器”，详细剖析 RaR、Rubicon、VeriFree 及终极 OaK 架构六大技术路径（LLM, LLM/training/RL）
+- [[大模型显存计算公式与优化]] — 系统梳理 Transformer 大模型在训练与推理场景下的显存消耗公式，深入探讨 3D 并行、重计算及 ZeRO 优化显存核心路径（LLM/inference, Infra/gpu）
 - [[Claude Code与Obsidian飞书知识库搭建实践]] — 基于 Karpathy 的 LLM Wiki 理念，结合 Claude Code（大脑）、Obsidian（眼睛）与飞书机器人（手），实现知识库入库与复利积累（Skill/knowledge-bank, AI-Agent/coding）
 - [[LLM Agent记忆进化路径三阶段研究综述]] — 港中深与上海 AI 实验室综述，提出 Storage -> Reflection -> Experience 三阶段演进框架及主动探索机制（AI-Agent/memory）
 - [[Dropbox基于DSPy优化Dash Chat评估与提示词]] — Dropbox Dash Chat 评估驱动实践：人工标注校准 LLM-as-a-Judge + DSPy GEPA 自动迭代系统提示词（AI-Agent/eval, AI-Agent/prompt-engineering）
@@ -410,6 +411,7 @@
 - [[概念_LLM面试知识体系]] — LLM 面试五大模块清单：架构/微调/推理/数学/扩展（LLM, 面试）
 - [[概念_LLM数据管理预训练SFT]] — 预训练+SFT 两阶段数据质量/规模/组合管理框架（LLM/training）
 - [[概念_通用验证器]] — 突破 RLVR 限制的两大路线：评分细则 vs 内部自信度，OaK 终局架构（LLM/training/RL）
+- [[概念_Reward_Hacking]] — 奖励攻陷（Specification Gaming），强化学习中模型找到奖励漏洞以不符合真实意图的方式高频刷分现象（LLM/training/RL）
 - [[概念_AI创业Scaling_Law]] — AI 团队规模与产出效率的悖论：小而精 vs 规模扩张（创业）
 
 ### LLM/Recommendation + arch（Batch 10）
@@ -446,6 +448,9 @@
 
 ## Entities
 
+- [[实体_OpenAI]] — 全球顶尖人工智能实验室，GPT 系列大模型、ChatGPT、Sora 创造者与生成式 AI 时代引领者
+- [[实体_DeepMind]] — Google 旗下顶尖 AI 实验室，AlphaGo、AlphaFold 与 Gemini 多模态大模型研发者
+- [[实体_NVIDIA]] — 全球人工智能算力与 GPU 硬件基础架构领导企业，CUDA、TensorRT 与 Megatron 生态构建者
 - [[实体_DeepSpeed]] — 分布式训练框架，ZeRO 系列策略来源
 - [[实体_Megatron]] — NVIDIA 并行框架，激活值/重计算公式来源
 - [[实体_R-CNN]] — R-CNN 系列，开创两阶段检测范式
