@@ -3,8 +3,6 @@ type: entity
 tags:
 - AI-Agent
 sources:
-- raw/Agent系统开发经验.md
-- raw/RAG从入门到精通系列1：基础RAG.md
 - wiki/sources/Agent系统开发经验.md
 - wiki/sources/RAG基础_索引检索生成.md
 created: '2026-06-29'

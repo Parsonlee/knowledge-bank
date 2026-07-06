@@ -3,7 +3,6 @@ type: entity
 tags:
 - LLM/training/post-train
 sources:
-- raw/SFT数据挑选方法 - 知乎.md
 - wiki/sources/SFT数据挑选方法_质量多样性必要性.md
 created: '2026-06-29'
 updated: '2026-06-29'

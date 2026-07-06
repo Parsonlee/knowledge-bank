@@ -9,12 +9,6 @@ summary: ColBERT（Contextualized Late Interaction over BERT）是一种基于�
 created: '2026-07-06'
 updated: '2026-07-06'
 sources:
-- raw/RAG之延迟交互与残差压缩：从ColBERT到ColBERTv2的演进及其应用.md
-- raw/RAG从入门到精通系列5：Indexing（索引）.md
-- raw/RAG技巧与底层代码剖析.md
-- raw/RAG：ColBERT原理、延迟交互机制与稠密向量的对比分析.md
-- raw/从BM25到Multi-Vector：6种Embedding演进路线.md
-- raw/探索提升RAG系统问答质量的技术路线.md
 - wiki/sources/ColBERTv2残差压缩演进.md
 - wiki/sources/ColBERT原理与延迟交互机制.md
 - wiki/sources/RAG系统设计_语义搜索与KG驱动选型.md

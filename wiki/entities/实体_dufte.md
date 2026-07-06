@@ -1,7 +1,6 @@
 ---
 type: entity
 sources:
-- raw/一行代码让 matplotlib 图表变高大上.md
 - wiki/sources/一行代码让matplotlib图表变高大上.md
 confidence: high
 tags:

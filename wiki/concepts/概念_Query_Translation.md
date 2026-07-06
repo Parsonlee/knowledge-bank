@@ -9,11 +9,6 @@ summary: Query Translation（查询翻译）是 RAG 高阶技巧，针对用户 
 created: '2026-07-06'
 updated: '2026-07-06'
 sources:
-- raw/RAG从入门到精通系列2：Query Translation（查询翻译）.md
-- raw/RAG从入门到精通系列3：Routing（路由）.md
-- raw/RAG从入门到精通系列5：Indexing（索引）.md
-- raw/RAG从入门到精通系列6：Retrieval（检索）.md
-- raw/探索提升RAG系统问答质量的技术路线.md
 - wiki/sources/DMQR-RAG_多样查询改写.md
 - wiki/sources/RAG_12痛点与解决方案.md
 - wiki/sources/RAG基础_索引检索生成.md

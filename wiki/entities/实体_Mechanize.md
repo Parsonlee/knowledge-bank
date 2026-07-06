@@ -6,7 +6,6 @@ tags:
 summary: Mechanize 是 RL 环境平台初创公司，提出复制训练（Replication Training）新范式——让 AI Agent 复现现有软件作为
   RL 训练任务，用单元测试做自动奖励验证。Founder 来自 Stripe 和 Epoch AI。
 sources:
-- raw/RL Infra 行业全景：环境和 RLaaS 如何加速 RL 的 GPT-3 ....md
 - wiki/sources/RL_Infra行业全景.md
 created: '2026-06-29'
 updated: '2026-06-29'

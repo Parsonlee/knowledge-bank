@@ -9,8 +9,6 @@ summary: SimCSE 是基于对比学习的句向量优化方法，是缓解 概念
 created: '2026-07-06'
 updated: '2026-07-06'
 sources:
-- raw/一文详尽之Embedding（向量表示）！.md
-- raw/美团搜索中查询改写技术的探索与实践 - 美团技术团队.md
 - wiki/sources/一文详尽之Embedding.md
 - wiki/sources/美团搜索查询改写实践.md
 ---

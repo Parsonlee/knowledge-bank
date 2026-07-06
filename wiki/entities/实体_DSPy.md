@@ -6,7 +6,6 @@ tags:
 summary: DSPy 是由斯坦福大学（Stanford NLP）开发并开源的一个颠覆性 AI 系统编程与优化框架。它的核心理念是将大语言模型的提示词工程（Prompt
   Engineering）转变为系统化的程序编译与参数优化，用“声明式模块与评估驱动优化”取代人工编写脆弱的 Prompt 文本。
 sources:
-- raw/我们如何利用 DSPy 将 AI 评估转化为 Dash Chat 的更优回复.md
 - wiki/sources/Dropbox基于DSPy优化Dash Chat评估与提示词.md
 created: '2026-07-06'
 updated: '2026-07-06'

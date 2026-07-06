@@ -6,7 +6,6 @@ created: '2026-06-29'
 updated: '2026-06-29'
 summary: M-Schema 是一种面向 NL2SQL 的增强型数据库 Schema 表示格式，在传统表/列清单基础上补充多维语义信息，显著提升字段语义可读性与模型可对齐性。
 sources:
-- raw/企业落地 NL2SQL，需要的是 AI-ready data 和 小模型.md
 - wiki/sources/企业落地NL2SQL_AI-ready_data与小模型.md
 ---
 

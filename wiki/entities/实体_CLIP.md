@@ -5,18 +5,6 @@ tags:
 summary: CLIP（Contrastive Language-Image Pre-training），OpenAI 视觉-语言对齐模型，为 SAM 提供文本
   Prompt 能力。
 sources:
-- raw/Jina AI创业复盘：AI团队的Scaling Law是什么.md
-- raw/R1 的一些认知 - 知乎.md
-- raw/RAG之延迟交互与残差压缩：从ColBERT到ColBERTv2的演进及其应用.md
-- raw/Sora的幕后功臣？详解大火的DiT：拥抱Transformer的扩散模型.md
-- raw/Transformer被挑战？新架构Mamba解析以及Pytorch复现.md
-- raw/一文读懂向量数据库，原理到应用全解析！.md
-- raw/从LLaVA到Qwen3-VL，多模态大模型主流架构的演进之路.md
-- raw/信息过载时代，如何真正「懂」LLM？从MIT分享的50个面试题开始 ｜ 机器之心.md
-- raw/分割一切(Segment Anything)不是梦，SAM模型引领图像分割新时代....md
-- raw/基于 Elasticsearch 创建企业 AI 搜索应用实践.md
-- raw/实战｜13个Pytorch 图像增强方法总结（附代码）.md
-- raw/自适应快慢思考推理模型（Adaptive Reasoning Model）：Qw....md
 - wiki/sources/LLM面试50题_MIT_CSAIL.md
 - wiki/sources/PyTorch图像增强方法总结.md
 - wiki/sources/R1复现认知与误区.md

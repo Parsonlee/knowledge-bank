@@ -5,10 +5,6 @@ tags:
 summary: RLVR（Reinforcement Learning with Verifiable Rewards）是设计可自动验证结果正确与否的任务和奖励，让
   RL 不过多依赖人类反馈、实现高度自主优化。是 RL Infra 提供商最直接和最强劲的增长动力。
 sources:
-- raw/AI-Native 的 Infra 演化路线：L0 到 L5.md
-- raw/LLM output eval in RL.md
-- raw/RL Infra 行业全景：环境和 RLaaS 如何加速 RL 的 GPT-3 ....md
-- raw/新手必看！强化学习入门指南 _ 从RLHF、PPO、GRPO到RLVR，最后到训....md
 - wiki/sources/DeepSeek-R1工作原理.md
 - wiki/sources/GPT5通用验证器与RL探索.md
 - wiki/sources/R1复现认知与误区.md

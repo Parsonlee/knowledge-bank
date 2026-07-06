@@ -6,7 +6,6 @@ created: '2026-06-29'
 updated: '2026-06-29'
 summary: 自适应长短 CoT（Adaptive Long-short Chain-of-Thought）是混元 TurboS 提出的推理机制，让单一模型根据问题复杂度自主选择"快速响应"或"深度推理"模式。
 sources:
-- raw/腾讯混元TurboS技术报告首次全公开：560B参数混合Mamba架构，自适应长....md
 - wiki/sources/腾讯混元TurboS技术报告.md
 - wiki/sources/自适应快慢思考推理模型.md
 ---

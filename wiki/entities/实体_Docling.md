@@ -4,8 +4,6 @@ tags:
 - RAG/chunking
 summary: IBM 开源的高精度复杂文档与多模态 PDF 解析切分工具库。
 sources:
-- raw/FastAPI 架构指南：用这份模版打造可扩展又安全的系统（附实战经验）.md
-- raw/RAG 挑战赛冠军方案解析：从数据解析到多路由器检索的工程实践，推荐阅读！.md
 - wiki/sources/RAG挑战赛冠军方案.md
 created: '2026-06-29'
 updated: '2026-07-01'

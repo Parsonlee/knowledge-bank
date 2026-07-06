@@ -4,8 +4,6 @@ tags:
 - RAG/embedding
 summary: 阿里基于 Qwen3 训练的 SOTA 嵌入（Embedding）与重排模型系列。
 sources:
-- raw/FastAPI 架构指南：用这份模版打造可扩展又安全的系统（附实战经验）.md
-- raw/为什么用Qwen3 embedding和rerank.md
 - wiki/sources/Jina_AI创业复盘.md
 - wiki/sources/为什么用Qwen3_embedding和rerank.md
 - wiki/sources/大模型算法岗面试百问百答.md

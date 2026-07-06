@@ -6,7 +6,6 @@ created: '2026-06-29'
 updated: '2026-06-29'
 summary: Agent 系统化工程是指将 AI Agent 从"能跑的 Demo"升级为"生产可靠系统"的工程方法论。
 sources:
-- raw/Agent系统开发经验.md
 - wiki/sources/Agent系统开发经验.md
 ---
 

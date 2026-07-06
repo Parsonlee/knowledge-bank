@@ -5,7 +5,6 @@ tags:
 - CV/detection
 summary: MobileNet 系列，基于深度可分离卷积的轻量网络，面向移动端部署。V2 引入 Inverted Residual + Linear Bottleneck。
 sources:
-- raw/目标检测入门（四）：特征复用、实时性 - 知乎.md
 - wiki/sources/目标检测入门_特征复用与实时性.md
 created: '2026-06-26'
 updated: '2026-06-26'

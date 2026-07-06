@@ -8,9 +8,6 @@ summary: CRAG（Corrective RAG，纠正型 RAG）是一种让 LLM 评估检索�
 created: '2026-07-06'
 updated: '2026-07-06'
 sources:
-- raw/Claude Agent Skills：从第一性原理深入剖析.md
-- raw/RAG从入门到精通系列6：Retrieval（检索）.md
-- raw/探索提升RAG系统问答质量的技术路线.md
 - wiki/sources/LLM_32种消除幻觉技术综述.md
 - wiki/sources/RAG检索_Retrieval入门到精通.md
 - wiki/sources/提升RAG问答质量的技术路线.md

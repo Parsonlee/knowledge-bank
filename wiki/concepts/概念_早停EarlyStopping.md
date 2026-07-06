@@ -8,8 +8,6 @@ summary: 训练中监控验证集 loss，当其连续多次不再下降时提前
 created: '2026-07-06'
 updated: '2026-07-06'
 sources:
-- raw/Agent Loop使用语义早停比max_iterations硬截断节省38% Token 且质量不降.md
-- raw/从提示员到系统架构师：Loop Engineering 的范式跃迁.md
 - wiki/sources/Agent Loop使用语义早停比max_iterations硬截断节省38% Token 且质量不降.md
 - wiki/sources/PyTorch常用代码段合集.md
 - wiki/sources/PyTorch训练代码模板.md

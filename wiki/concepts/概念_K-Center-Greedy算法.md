@@ -7,7 +7,6 @@ created: '2026-06-29'
 updated: '2026-06-29'
 summary: 一种最大化数据多样性的贪婪采样算法，目标是在高维空间中选出分布尽量均匀的样本子集。
 sources:
-- raw/SFT数据挑选方法 - 知乎.md
 - wiki/sources/SFT数据挑选方法_质量多样性必要性.md
 ---
 

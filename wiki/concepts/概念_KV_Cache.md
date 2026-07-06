@@ -6,14 +6,6 @@ tags:
 summary: KV Cache 缓存 LLM 推理中 X@W_K 和 X@W_V 的已计算结果，空间换时间，避免自回归逐 token 生成时对历史 token
   的重复计算。几乎所有 LLM 推理框架（如 vLLM）均已支持。
 sources:
-- raw/2025年七大顶流大模型架构.md
-- raw/Mamba Explained _ Kola Ayonrinde.md
-- raw/Mamba2_ SSM和Transformer的大一统 - 知乎.md
-- raw/MiniMax和Kimi为了“注意力”，隔空交手.md
-- raw/一文讲明白大模型显存占用（只考虑单卡） - 知乎.md
-- raw/入局AI Infra：程序员必须了解的AI系统设计与挑战知识.md
-- raw/大模型推理加速：看图学KV Cache - 知乎.md
-- raw/大模型算法岗，面试百问百答.md
 - wiki/sources/2025年七大顶流大模型架构.md
 - wiki/sources/DeepSeek_MLA矩阵吸收原理.md
 - wiki/sources/KV_Cache原理图解.md

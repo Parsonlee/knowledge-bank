@@ -5,10 +5,6 @@ tags:
 - CV/detection
 summary: 将不同大小的候选区域（RoI）映射为固定长度特征向量的池化操作；RoIAlign 用双线性插值消除其量化误差。
 sources:
-- raw/干货 _ 目标检测入门，看这篇就够了（已更完） - 知乎.md
-- raw/目标检测入门（三）：基础网络演进、分类与定位的权衡 - 知乎.md
-- raw/目标检测入门（二）：模型的评测与训练技巧 - 知乎.md
-- raw/目标检测入门（四）：特征复用、实时性 - 知乎.md
 - wiki/sources/目标检测入门_基础网络与分类定位权衡.md
 - wiki/sources/目标检测入门_经典模型.md
 - wiki/sources/目标检测入门_评测与训练技巧.md

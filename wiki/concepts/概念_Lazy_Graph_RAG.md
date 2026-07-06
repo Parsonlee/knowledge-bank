@@ -7,7 +7,6 @@ summary: Lazy Graph RAG 是微软研究人员提出的方法，核心思想是�
 created: '2026-07-06'
 updated: '2026-07-06'
 sources:
-- raw/RAG系统设计：揭秘语义搜索被低估的核心价值与KG驱动的架构选型策略.md
 - wiki/sources/RAG系统设计_语义搜索与KG驱动选型.md
 ---
 

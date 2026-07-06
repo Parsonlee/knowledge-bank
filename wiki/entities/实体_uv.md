@@ -2,7 +2,6 @@
 tags:
 - Skill/python
 sources:
-- raw/Switching pip to uv in a Dockerized Flas....md
 - wiki/sources/Docker化Flask_Django应用从pip切换到uv.md
 confidence: high
 type: entity

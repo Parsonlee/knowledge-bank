@@ -4,11 +4,6 @@ tags:
 - RAG/embedding
 summary: 智源推出的多语言混合嵌入模型，支持稠密检索与 ColBERT 多向量细粒度表示。
 sources:
-- raw/FastAPI 架构指南：用这份模版打造可扩展又安全的系统（附实战经验）.md
-- raw/RAG之延迟交互与残差压缩：从ColBERT到ColBERTv2的演进及其应用.md
-- raw/RAG文本切分的五个层次2：递归字符切分的token优化(实战).md
-- raw/RAG：ColBERT原理、延迟交互机制与稠密向量的对比分析.md
-- raw/用 RAGAS 精准定位 RAG 系统短板.md
 - wiki/sources/ColBERTv2残差压缩演进.md
 - wiki/sources/ColBERT原理与延迟交互机制.md
 - wiki/sources/Jina_AI创业复盘.md

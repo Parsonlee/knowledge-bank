@@ -3,11 +3,6 @@ type: entity
 tags:
 - LLM/arch/MoE
 sources:
-- raw/2025年七大顶流大模型架构.md
-- raw/Manus 创始人手把手拆解：如何系统性打造 AI Agent 的上下文工程？.md
-- raw/RL 环境与智能体能力金字塔 _ 宝玉的分享.md
-- raw/从BM25到Multi-Vector：6种Embedding演进路线.md
-- raw/从DeepSeek-V3到Kimi K2：八种现代 LLM 架构大比较.md
 - wiki/sources/2025年七大顶流大模型架构.md
 - wiki/sources/Manus创始人手把手拆解上下文工程.md
 - wiki/sources/RL环境与智能体能力金字塔.md

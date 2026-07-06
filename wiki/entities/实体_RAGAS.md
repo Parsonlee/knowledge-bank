@@ -4,11 +4,6 @@ tags:
 - RAG/eval
 summary: 专为检索增强生成（RAG）系统设计的自动化多维量化评估指标框架。
 sources:
-- raw/FastAPI 架构指南：用这份模版打造可扩展又安全的系统（附实战经验）.md
-- raw/Prompt Engineering, Finetune, RAG？：OpenA....md
-- raw/RAG之延迟交互与残差压缩：从ColBERT到ColBERTv2的演进及其应用.md
-- raw/RAG：ColBERT原理、延迟交互机制与稠密向量的对比分析.md
-- raw/用 RAGAS 精准定位 RAG 系统短板.md
 - wiki/sources/Agent Loop使用语义早停比max_iterations硬截断节省38% Token 且质量不降.md
 - wiki/sources/OpenAI_LLM应用最佳实践.md
 - wiki/sources/RAGAS评估RAG系统.md

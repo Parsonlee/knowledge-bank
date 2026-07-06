@@ -8,7 +8,6 @@ summary: Quantized Embedding（压缩版稠密向量）通过量化把高精度�
 created: '2026-07-06'
 updated: '2026-07-06'
 sources:
-- raw/从BM25到Multi-Vector：6种Embedding演进路线.md
 - wiki/sources/ES企业AI搜索实践.md
 - wiki/sources/从BM25到Multi-Vector_6种Embedding演进路线.md
 - wiki/sources/向量数据库原理与应用全解析.md

@@ -7,9 +7,6 @@ summary: Text2SQL 是一项将自然语言查询转换为 SQL 语句的技术，
 created: '2026-07-06'
 updated: '2026-07-06'
 sources:
-- raw/万字长文详解优图RAG技术.md
-- raw/腾讯在 ABI 工程领域的探索与实践.md
-- raw/腾讯基于 LLM 的智能数据分析平台 OlaChat 的落地实践.md
 - wiki/sources/TableRAG_文本表格异构问答.md
 - wiki/sources/企业落地NL2SQL_AI-ready_data与小模型.md
 - wiki/sources/优图RAG技术详解.md

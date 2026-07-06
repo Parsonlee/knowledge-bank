@@ -8,7 +8,6 @@ summary: 奇异值分解（Singular Value Decomposition）适用于任意矩阵�
 created: '2026-07-06'
 updated: '2026-07-06'
 sources:
-- raw/机器学习中SVD总结.md
 - wiki/sources/机器学习中SVD总结.md
 ---
 

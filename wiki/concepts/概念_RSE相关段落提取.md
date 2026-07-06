@@ -9,7 +9,6 @@ summary: 相关段落提取（Relevant Segment Extraction, RSE）是一种 RAG �
 created: '2026-07-06'
 updated: '2026-07-06'
 sources:
-- raw/RAG技巧与底层代码剖析.md
 - wiki/sources/RAG技巧与底层代码剖析.md
 ---
 

@@ -9,9 +9,6 @@ summary: RAG Fusion 是一种在生成阶段融合检索结果的策略，关注
 created: '2026-07-06'
 updated: '2026-07-06'
 sources:
-- raw/RAG从入门到精通系列2：Query Translation（查询翻译）.md
-- raw/RAG从入门到精通系列6：Retrieval（检索）.md
-- raw/探索提升RAG系统问答质量的技术路线.md
 - wiki/sources/DMQR-RAG_多样查询改写.md
 - wiki/sources/ES企业AI搜索实践.md
 - wiki/sources/RAG查询翻译_Query_Translation.md

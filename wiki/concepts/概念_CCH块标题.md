@@ -9,7 +9,6 @@ summary: 上下文块标题（Contextual Chunk Headers, CCH）是一种 RAG 分�
 created: '2026-07-06'
 updated: '2026-07-06'
 sources:
-- raw/RAG技巧与底层代码剖析.md
 - wiki/sources/RAG技巧与底层代码剖析.md
 ---
 

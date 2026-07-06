@@ -4,7 +4,6 @@ tags:
 - DeepLearning
 summary: 深度学习中常用的自适应梯度下降优化器，兼顾 Momentum 与 RMSProp 优点。
 sources:
-- raw/FastAPI 架构指南：用这份模版打造可扩展又安全的系统（附实战经验）.md
 - wiki/sources/梯度下降优化器可视化解释.md
 created: '2026-06-29'
 updated: '2026-07-01'

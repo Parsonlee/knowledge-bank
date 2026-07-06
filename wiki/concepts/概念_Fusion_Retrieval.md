@@ -8,7 +8,6 @@ summary: 融合检索（Fusion Retrieval）是一种文档搜索方法，结合�
 created: '2026-07-06'
 updated: '2026-07-06'
 sources:
-- raw/RAG高级优化：检索策略探讨Fusion, HyDE安排上(含代码).md
 - wiki/sources/RAG高级优化_检索策略Fusion_HyDE.md
 ---
 

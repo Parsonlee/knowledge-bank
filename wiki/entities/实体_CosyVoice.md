@@ -2,7 +2,6 @@
 tags:
 - TTS
 sources:
-- raw/淘宝直播数字人：TTS语音合成技术.md
 - wiki/sources/淘宝直播数字人_TTS语音合成技术.md
 confidence: high
 type: entity

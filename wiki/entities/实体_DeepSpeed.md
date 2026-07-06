@@ -5,10 +5,6 @@ tags:
 - Infra/gpu
 summary: 微软开源的分布式训练框架，提出 ZeRO 系列显存优化策略（Zero1/2/3）。
 sources:
-- raw/HuggingFace从决策到落地「手把手」教你训练大模型.md
-- raw/[LLM]大模型显存计算公式与优化 - 知乎.md
-- raw/企业落地 NL2SQL，需要的是 AI-ready data 和 小模型.md
-- raw/大模型算法岗，面试百问百答.md
 - wiki/sources/企业落地NL2SQL_AI-ready_data与小模型.md
 created: '2026-06-29'
 updated: '2026-06-29'

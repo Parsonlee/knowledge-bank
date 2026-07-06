@@ -4,7 +4,6 @@ tags:
 - LLM/arch/Mamba
 - LLM/arch/MoE
 sources:
-- raw/腾讯混元TurboS技术报告首次全公开：560B参数混合Mamba架构，自适应长....md
 - wiki/sources/从DeepSeek-V3到Kimi_K2_八种现代LLM架构大比较.md
 - wiki/sources/大模型面试面经_简单透彻理解MoE.md
 - wiki/sources/实测腾讯开源的 BrowserSkill：让 AI 直接用你登录好的浏览器.md

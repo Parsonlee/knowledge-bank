@@ -2,12 +2,6 @@
 tags:
 - Skill/python
 sources:
-- raw/FastAPI 架构指南：用这份模版打造可扩展又安全的系统（附实战经验）.md
-- raw/Human In the Loop竟然可以是个MCP_.md
-- raw/Py中的并发 async _ await - FastAPI.md
-- raw/Uvicorn、Gunicorn 傻傻分不清？FastAPI 生产部署避坑指南.md
-- raw/写了十年 Python，我竟然现在才知道这5个功能！.md
-- raw/区区几行Python代码，就能实现全面自动探索性数据分析！.md
 - wiki/sources/Docker化Flask_Django应用从pip切换到uv.md
 - wiki/sources/FastAPI架构指南_项目模板与实战经验.md
 - wiki/sources/FastAPI生产部署ASGI_WSGI避坑指南.md

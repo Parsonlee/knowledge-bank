@@ -2,8 +2,6 @@
 tags:
 - AIGC
 sources:
-- raw/一年上线超 10 款产品，AI 时代如何做独立开发.md
-- raw/九大主流AI PPT横测，能打的Agent只有3个半.md
 - wiki/sources/AI时代如何做独立开发.md
 - wiki/sources/九大主流AI_PPT横测.md
 confidence: medium

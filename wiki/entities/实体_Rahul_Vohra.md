@@ -4,7 +4,6 @@ tags:
 - 创业
 summary: Superhuman 创始人兼 CEO，PMF 引擎方法论提出者，前 Rapportive 创始人
 sources:
-- raw/把 AI 邮件工具做到 3500 万美元 ARR，Superhuman：找到 P....md
 - wiki/sources/Superhuman_PMF引擎方法论.md
 created: '2026-06-30'
 updated: '2026-06-30'

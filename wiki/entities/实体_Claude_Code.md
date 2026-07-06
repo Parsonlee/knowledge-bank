@@ -6,17 +6,6 @@ tags:
 summary: Claude Code 是由 Anthropic 推出的一款基于终端命令行（CLI）的深度工程化 AI Coding Agent 工具。它以顶级大模型（Claude
   3.5 Sonnet / Claude 3.7 Sonnet）为引擎，可以直接在开发者的本地代码库或知识库中深度工作。
 sources:
-- raw/Claude Agent Skills：从第一性原理深入剖析.md
-- raw/Claude Code + Obsidian + 飞书，我搭了一套会自己长大的知识库.md
-- raw/Human In the Loop竟然可以是个MCP_.md
-- raw/Jina AI创业复盘：AI团队的Scaling Law是什么.md
-- raw/MCP不止工具调用！MCP联合创建者：绝大多数人用法都太初级！曝MCP五大原语、....md
-- raw/一个半月高强度Claude Code使用后感受.md
-- raw/一年上线超 10 款产品，AI 时代如何做独立开发.md
-- raw/也许当前最好的「上下文工程」讲解_LangChain联合Manus季逸超最新分享....md
-- raw/从第一性原理深度拆解 Claude Agent Skill _ 宝玉的分享.md
-- raw/写好 CLAUDE.md _ HumanLayer 博客.md
-- raw/浅谈上下文工程｜从 Claude Code 、Manus 和 Kiro 看提示工....md
 - wiki/sources/Anthropic x ClaudeCode 官方插件：AI Agent 的领域知识插件——鸟窝.md
 - wiki/sources/Anthropic多智能体研究系统构建.md
 - wiki/sources/Claude Code与Obsidian飞书知识库搭建实践.md

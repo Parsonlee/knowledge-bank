@@ -8,9 +8,6 @@ summary: Self-RAG（Self-Reflective RAG，自我反思 RAG）是一种让 LLM �
 created: '2026-07-06'
 updated: '2026-07-06'
 sources:
-- raw/OpenAI 翁荔提出大模型「外在幻觉」：万字 blog 详解抵抗办法、产幻原因....md
-- raw/RAG从入门到精通系列6：Retrieval（检索）.md
-- raw/探索提升RAG系统问答质量的技术路线.md
 - wiki/sources/LLM_32种消除幻觉技术综述.md
 - wiki/sources/RAG检索_Retrieval入门到精通.md
 - wiki/sources/提升RAG问答质量的技术路线.md

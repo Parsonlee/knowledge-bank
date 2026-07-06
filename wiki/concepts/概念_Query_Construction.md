@@ -8,10 +8,6 @@ summary: Query Construction（查询构造）是根据用户输入的自然语�
 created: '2026-07-06'
 updated: '2026-07-06'
 sources:
-- raw/RAG从入门到精通系列4：Query Construction（查询构造）.md
-- raw/RAG从入门到精通系列5：Indexing（索引）.md
-- raw/RAG从入门到精通系列6：Retrieval（检索）.md
-- raw/探索提升RAG系统问答质量的技术路线.md
 - wiki/sources/RAG查询构造_Query_Construction.md
 - wiki/sources/RAG检索_Retrieval入门到精通.md
 - wiki/sources/RAG索引进阶_Indexing.md

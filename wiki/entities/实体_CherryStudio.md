@@ -5,8 +5,6 @@ tags:
 summary: CherryStudio 是一款开源的 MCP Host 应用，主进程 MCPService.ts 做通信代理，渲染进程 ApiService.ts
   承载 AI 逻辑，是 CHS 架构的典型实现案例
 sources:
-- raw/FastAPI 架构指南：用这份模版打造可扩展又安全的系统（附实战经验）.md
-- raw/别再误会MCP了！一篇写给AI工程师的硬核“辟谣”指南.md
 - wiki/sources/别再误会MCP了辟谣指南.md
 created: '2026-06-29'
 updated: '2026-06-29'

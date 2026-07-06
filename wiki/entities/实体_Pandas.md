@@ -5,15 +5,6 @@ tags:
 - Skill/python
 summary: Python 数据分析核心库，基于 NumPy 构建，提供 Series/DataFrame 数据结构及完整的数据操作与可视化能力。
 sources:
-- raw/Pandas一行代码绘制25种美图.md
-- raw/【有手就行】LoRA：用你自己的数据来微调大模型，让大模型真正懂你 - 程序员老....md
-- raw/一图胜千言｜图解Pandas常用操作！.md
-- raw/加速Python循环的12种方法,最高可以提速900倍.md
-- raw/区区几行Python代码，就能实现全面自动探索性数据分析！.md
-- raw/实操教程 _ 深度学习pytorch训练代码模板(个人习惯).md
-- raw/用 RAGAS 精准定位 RAG 系统短板.md
-- raw/用系统架构思维，告别“意大利面条式”系统提示词.md
-- raw/超强图解 Pandas，建议收藏.md
 - wiki/sources/Pandas一行代码绘制25种美图.md
 - wiki/sources/PyTorch训练代码模板.md
 - wiki/sources/一行代码让matplotlib图表变高大上.md

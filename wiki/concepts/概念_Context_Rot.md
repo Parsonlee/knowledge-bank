@@ -6,8 +6,6 @@ created: '2026-06-29'
 updated: '2026-06-29'
 summary: 随着Agent运行过程中上下文长度持续增长，模型性能在达到硬性上下文限制之前就已显著下降的现象。
 sources:
-- raw/AI 代理的上下文工程：LangChain 和 Manas - Notebook....md
-- raw/也许当前最好的「上下文工程」讲解_LangChain联合Manus季逸超最新分享....md
 - wiki/sources/Context_Engineering_LangChain_Manus_NotebookLM.md
 - wiki/sources/Manus创始人手把手拆解上下文工程.md
 - wiki/sources/也许当前最好的上下文工程讲解_LangChain联合Manus.md

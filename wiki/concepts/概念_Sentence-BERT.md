@@ -9,11 +9,6 @@ summary: Sentence-BERT（SBERT）通过修改预训练 BERT 结构，并在有�
 created: '2026-07-06'
 updated: '2026-07-06'
 sources:
-- raw/RAG之延迟交互与残差压缩：从ColBERT到ColBERTv2的演进及其应用.md
-- raw/RAG技巧与底层代码剖析.md
-- raw/RAG：ColBERT原理、延迟交互机制与稠密向量的对比分析.md
-- raw/一文详尽之Embedding（向量表示）！.md
-- raw/美团搜索中查询改写技术的探索与实践 - 美团技术团队.md
 - wiki/sources/ColBERTv2残差压缩演进.md
 - wiki/sources/ColBERT原理与延迟交互机制.md
 - wiki/sources/一文详尽之Embedding.md

@@ -3,14 +3,6 @@ type: entity
 tags:
 - AI-Agent/context-engineering
 sources:
-- raw/AI 代理的上下文工程：LangChain 和 Manas - Notebook....md
-- raw/AI应用实战：搞定复杂指令和工具膨胀.md
-- raw/Manus 创始人手把手拆解：如何系统性打造 AI Agent 的上下文工程？.md
-- raw/一年上线超 10 款产品，AI 时代如何做独立开发.md
-- raw/万字洞察丨100 家顶尖 AI 初创公司的 7 个真相.md
-- raw/九大主流AI PPT横测，能打的Agent只有3个半.md
-- raw/也许当前最好的「上下文工程」讲解_LangChain联合Manus季逸超最新分享....md
-- raw/浅谈上下文工程｜从 Claude Code 、Manus 和 Kiro 看提示工....md
 - wiki/sources/100家顶尖AI初创公司的7个真相.md
 - wiki/sources/AI应用实战_搞定复杂指令和工具膨胀.md
 - wiki/sources/AI时代如何做独立开发.md

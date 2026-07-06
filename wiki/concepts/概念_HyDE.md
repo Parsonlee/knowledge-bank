@@ -8,13 +8,6 @@ summary: HyDE（Hypothetical Document Embedding，假设文档嵌入）是一种
 created: '2026-07-06'
 updated: '2026-07-06'
 sources:
-- raw/12 RAG 痛点和拟议解决方案.md
-- raw/ICLR2025盲审论文DMQR-RAG：多样查询改写，查询P@5提升了14.4....md
-- raw/Prompt Engineering, Finetune, RAG？：OpenA....md
-- raw/RAG从入门到精通系列2：Query Translation（查询翻译）.md
-- raw/RAG高级优化：检索策略探讨Fusion, HyDE安排上(含代码).md
-- raw/基于 Elasticsearch 创建企业 AI 搜索应用实践.md
-- raw/探索提升RAG系统问答质量的技术路线.md
 - wiki/sources/DMQR-RAG_多样查询改写.md
 - wiki/sources/ES企业AI搜索实践.md
 - wiki/sources/OpenAI_LLM应用最佳实践.md

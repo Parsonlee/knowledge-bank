@@ -5,8 +5,6 @@ tags:
 - RAG
 summary: 腾讯优图实验室提出的面向复杂数据查询的 Text-to-SQL 多智能体协作框架。
 sources:
-- raw/FastAPI 架构指南：用这份模版打造可扩展又安全的系统（附实战经验）.md
-- raw/万字长文详解优图RAG技术.md
 - wiki/sources/优图RAG技术详解.md
 created: '2026-06-29'
 updated: '2026-07-01'

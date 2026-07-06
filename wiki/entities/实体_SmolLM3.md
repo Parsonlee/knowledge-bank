@@ -4,8 +4,6 @@ tags:
 - LLM/training/post-train
 - LLM/training/pre-train
 sources:
-- raw/HuggingFace从决策到落地「手把手」教你训练大模型.md
-- raw/从DeepSeek-V3到Kimi K2：八种现代 LLM 架构大比较.md
 - wiki/sources/2025年七大顶流大模型架构.md
 - wiki/sources/HuggingFace手把手训练大模型实战指南.md
 - wiki/sources/从DeepSeek-V3到Kimi_K2_八种现代LLM架构大比较.md

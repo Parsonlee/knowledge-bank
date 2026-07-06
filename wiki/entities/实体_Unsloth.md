@@ -4,7 +4,6 @@ tags:
 - LLM/training/RL
 - Skill/python
 sources:
-- raw/新手必看！强化学习入门指南 _ 从RLHF、PPO、GRPO到RLVR，最后到训....md
 - wiki/sources/强化学习入门指南_RLHF到GRPO.md
 created: '2026-06-29'
 updated: '2026-06-29'

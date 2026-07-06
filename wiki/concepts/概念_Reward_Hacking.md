@@ -7,8 +7,6 @@ summary: 奖励攻陷（Reward Hacking/Specification Gaming），强化学习训
 created: '2026-07-06'
 updated: '2026-07-06'
 sources:
-- raw/LLM 后训练技术 - 知乎.md
-- raw/RL Infra 行业全景：环境和 RLaaS 如何加速 RL 的 GPT-3 ....md
 - wiki/sources/GPT5通用验证器与RL探索.md
 - wiki/sources/LLM后训练技术全景解读.md
 - wiki/sources/RL_Infra行业全景.md

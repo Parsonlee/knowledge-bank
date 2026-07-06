@@ -4,7 +4,6 @@ tags:
 - LLM/arch/attention
 summary: 月之暗面开源的 48B 混合注意力模型，采用 KDA（线性）+ MLA（全注意力）3:1 混合，KV Cache 减少 75%，吞吐量提升 6.3×
 sources:
-- raw/MiniMax和Kimi为了“注意力”，隔空交手.md
 - wiki/sources/MiniMax_vs_Kimi_注意力路线之争.md
 created: '2026-06-29'
 updated: '2026-06-29'

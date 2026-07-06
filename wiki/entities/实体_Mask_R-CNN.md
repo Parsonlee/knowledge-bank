@@ -5,8 +5,6 @@ tags:
 - CV/detection
 summary: Mask R-CNN，在 Faster R-CNN 基础上增加 mask 分支实现实例分割，提出 RoIAlign。
 sources:
-- raw/目标检测入门（三）：基础网络演进、分类与定位的权衡 - 知乎.md
-- raw/目标检测入门（二）：模型的评测与训练技巧 - 知乎.md
 - wiki/sources/目标检测入门_基础网络与分类定位权衡.md
 - wiki/sources/目标检测入门_评测与训练技巧.md
 created: '2026-06-26'

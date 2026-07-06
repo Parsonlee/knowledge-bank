@@ -7,9 +7,6 @@ summary: GraphRAG 是以图结构组织知识的检索增强生成方法，通�
 created: '2026-07-06'
 updated: '2026-07-06'
 sources:
-- raw/万字长文详解优图RAG技术.md
-- raw/复杂场景下的 RAG 架构演进：跨模态知识联邦与统一语义推理实践.md
-- raw/浅谈上下文工程｜从 Claude Code 、Manus 和 Kiro 看提示工....md
 - wiki/sources/RAG系统设计_语义搜索与KG驱动选型.md
 - wiki/sources/优图RAG技术详解.md
 - wiki/sources/跨模态知识联邦与统一语义推理RAG.md

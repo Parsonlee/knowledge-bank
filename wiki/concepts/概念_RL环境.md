@@ -5,8 +5,6 @@ tags:
 - Infra/AI
 summary: RL 环境是 AI Agent 在其中行动、实验并通过逼真多步骤任务进行强化学习的虚拟世界。核心三要素：状态管理系统、任务场景、奖励/评估系统。主要形态包括应用级沙盒、通用浏览器/桌面环境、环境世界模型。
 sources:
-- raw/RL Infra 行业全景：环境和 RLaaS 如何加速 RL 的 GPT-3 ....md
-- raw/Tongyi DeepResearch的技术报告探秘.md
 - wiki/sources/RL_Infra行业全景.md
 - wiki/sources/RL环境与智能体能力金字塔.md
 - wiki/sources/Tongyi DeepResearch的技术报告探秘.md

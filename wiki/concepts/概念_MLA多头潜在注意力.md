@@ -7,7 +7,6 @@ updated: '2026-06-29'
 summary: MLA（Multi-Head Latent Attention，多头潜在注意力）是 DeepSeek-V2 首次引入的注意力变体，用于减少 KV
   Cache 内存占用，同时保持或提升建模性能。
 sources:
-- raw/2025年七大顶流大模型架构.md
 - wiki/sources/2025年七大顶流大模型架构.md
 - wiki/sources/从DeepSeek-V3到Kimi_K2_八种现代LLM架构大比较.md
 ---

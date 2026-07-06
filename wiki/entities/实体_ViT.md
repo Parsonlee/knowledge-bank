@@ -5,10 +5,6 @@ tags:
 summary: ViT（Vision Transformer），将图像分 patch 序列输入 Transformer 的视觉 Backbone；SAM 用 ViT-H
   作图像编码器。
 sources:
-- raw/RAG系统设计：揭秘语义搜索被低估的核心价值与KG驱动的架构选型策略.md
-- raw/Sora的幕后功臣？详解大火的DiT：拥抱Transformer的扩散模型.md
-- raw/一文读懂向量数据库，原理到应用全解析！.md
-- raw/从LLaVA到Qwen3-VL，多模态大模型主流架构的演进之路.md
 - wiki/sources/DiT_扩散模型与Transformer.md
 - wiki/sources/SAM_Segment_Anything模型.md
 - wiki/sources/从LLaVA到Qwen3-VL_多模态架构演进.md

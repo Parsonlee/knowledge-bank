@@ -4,7 +4,6 @@ tags:
 - CV/arch
 summary: Latent Diffusion Models（LDM）先用 AutoEncoder 把图像压缩到低维 latent 空间，再在 latent 上训练扩散模型，大幅降低高分辨率像素空间的计算量。
 sources:
-- raw/Sora的幕后功臣？详解大火的DiT：拥抱Transformer的扩散模型.md
 - wiki/sources/DiT_扩散模型与Transformer.md
 created: '2026-06-26'
 updated: '2026-06-26'

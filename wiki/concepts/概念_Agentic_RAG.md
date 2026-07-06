@@ -7,9 +7,6 @@ summary: Agentic RAG 将自主智能体与 RAG 技术结合，通过动态管理
 created: '2026-07-06'
 updated: '2026-07-06'
 sources:
-- raw/Agent系统开发经验.md
-- raw/万字长文详解优图RAG技术.md
-- raw/基于 Elasticsearch 创建企业 AI 搜索应用实践.md
 - wiki/sources/Agent系统开发经验.md
 - wiki/sources/Anthropic多智能体研究系统构建.md
 - wiki/sources/ES企业AI搜索实践.md

@@ -9,7 +9,6 @@ summary: Prompt 压缩（Prompt Compression）是在检索后、送入 LLM 前�
 created: '2026-07-06'
 updated: '2026-07-06'
 sources:
-- raw/12 RAG 痛点和拟议解决方案.md
 - wiki/sources/RAG_12痛点与解决方案.md
 ---
 

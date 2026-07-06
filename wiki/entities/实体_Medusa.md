@@ -3,7 +3,6 @@ type: entity
 tags:
 - LLM/inference
 sources:
-- raw/LLM推理加速新范式！推测解码（Speculative Decoding）最新综....md
 - wiki/sources/推测解码Speculative_Decoding综述.md
 created: '2026-06-29'
 updated: '2026-06-29'

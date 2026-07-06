@@ -5,9 +5,6 @@ tags:
 - Skill/python
 summary: 基于 Python/PyTorch 的句向量模型训练与嵌入计算推理框架（sbert）。
 sources:
-- raw/FastAPI 架构指南：用这份模版打造可扩展又安全的系统（附实战经验）.md
-- raw/为什么用Qwen3 embedding和rerank.md
-- raw/俄罗斯套娃 (Matryoshka) 嵌入模型概述 - HuggingFace ....md
 - wiki/sources/Agent Loop使用语义早停比max_iterations硬截断节省38% Token 且质量不降.md
 - wiki/sources/Matryoshka嵌入模型概述_HuggingFace.md
 - wiki/sources/一文详尽之Embedding.md

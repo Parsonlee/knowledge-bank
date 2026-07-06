@@ -3,10 +3,6 @@ type: entity
 tags:
 - LLM/arch/Mamba
 sources:
-- raw/A Visual Guide to Mamba and State Space ....md
-- raw/Attention复杂度解析与改进方向 - GRITJW - 博客园.md
-- raw/Mamba Explained _ Kola Ayonrinde.md
-- raw/一文读懂Mamba：具有选择状态空间的线性时间序列建模 - 知乎.md
 - wiki/sources/Attention复杂度解析与改进方向.md
 - wiki/sources/一文读懂Mamba_知乎.md
 created: '2026-06-29'

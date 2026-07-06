@@ -8,7 +8,6 @@ summary: Step-back 提示（退步提示 / Step-Back Prompting）是一种 Query
 created: '2026-07-06'
 updated: '2026-07-06'
 sources:
-- raw/RAG高级优化：一文看尽query的转换之路.md
 - wiki/sources/RAG技巧与底层代码剖析.md
 - wiki/sources/RAG查询翻译_Query_Translation.md
 - wiki/sources/RAG系统设计_语义搜索与KG驱动选型.md

@@ -6,13 +6,6 @@ tags:
 summary: Google 旗下全球顶级的人工智能与前沿科学研究实验室，推出 AlphaGo、AlphaFold、Gemini 系列大模型，为强化学习与 AI
   赋能科学（AI4S）的先驱。
 sources:
-- raw/2025来自斯坦福的RAG新基线.md
-- raw/LLM output eval in RL.md
-- raw/LLM推理加速新范式！推测解码（Speculative Decoding）最新综....md
-- raw/Mamba Explained _ Kola Ayonrinde.md
-- raw/一文读懂Mamba：具有选择状态空间的线性时间序列建模 - 知乎.md
-- raw/企业落地 NL2SQL，需要的是 AI-ready data 和 小模型.md
-- raw/大规模神经网络优化：超参最佳实践与规模律.md
 - wiki/sources/GPT5通用验证器与RL探索.md
 - wiki/sources/推测解码Speculative_Decoding综述.md
 created: '2026-07-06'

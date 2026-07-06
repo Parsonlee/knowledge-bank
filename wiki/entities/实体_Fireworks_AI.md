@@ -6,8 +6,6 @@ tags:
 summary: Fireworks AI 是创立三年的 AI Inference Infra 公司，近期将强化微调（RFT）产品化——用户只需提供评分函数，平台处理
   GPU 资源/训练循环/实验管理。客户用其微调开源模型效果追平闭源顶尖模型且推理快 10-40 倍。
 sources:
-- raw/RL Infra 行业全景：环境和 RLaaS 如何加速 RL 的 GPT-3 ....md
-- raw/万字洞察丨100 家顶尖 AI 初创公司的 7 个真相.md
 - wiki/sources/RL_Infra行业全景.md
 created: '2026-06-29'
 updated: '2026-06-29'

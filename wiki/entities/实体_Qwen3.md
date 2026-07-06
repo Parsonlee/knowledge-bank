@@ -4,17 +4,6 @@ tags:
 - LLM/reasoning
 - LLM/training/RL
 sources:
-- raw/HuggingFace从决策到落地「手把手」教你训练大模型.md
-- raw/LLM output eval in RL.md
-- raw/R1 的一些认知 - 知乎.md
-- raw/RL 环境与智能体能力金字塔 _ 宝玉的分享.md
-- raw/【有手就行】LoRA：用你自己的数据来微调大模型，让大模型真正懂你 - 程序员老....md
-- raw/为什么用Qwen3 embedding和rerank.md
-- raw/从DeepSeek-V3到Kimi K2：八种现代 LLM 架构大比较.md
-- raw/从LLaVA到Qwen3-VL，多模态大模型主流架构的演进之路.md
-- raw/入局AI Infra：程序员必须了解的AI系统设计与挑战知识.md
-- raw/新手必看！强化学习入门指南 _ 从RLHF、PPO、GRPO到RLVR，最后到训....md
-- raw/自适应快慢思考推理模型（Adaptive Reasoning Model）：Qw....md
 - wiki/sources/2025年七大顶流大模型架构.md
 - wiki/sources/Discrete_Tokenization多模态综述.md
 - wiki/sources/HuggingFace手把手训练大模型实战指南.md

@@ -1,5 +1,11 @@
 # Wiki Log
 
+## [2026-07-06] lint/fix-all | 全量修复 238 篇末端产物 Frontmatter 越级直连 Raw 与 3 处总索引死链
+- **架构越级治理**：全面遵循《AGENTS.md》单向推导纪律（`raw -> sources -> entities/concepts`），针对 `wiki/entities/` 与 `wiki/concepts/` 下 238 篇末端产物的 YAML Frontmatter `sources:` 字段执行冗余清理，精准移除所有越级直连 `raw/` 与 `Clippings/` 的路径，确保末端产物 100% 仅依托于 `wiki/sources/` 一级结构化摘要。
+- **孤立源格式修复**：为 `wiki/concepts/概念_知识整合.md` 修复上游来源声明，将其 Frontmatter `sources` 正确指向 `wiki/sources/关于Nano_Banana的一些浅思.md`。
+- **总索引死链清除**：自 `wiki/index.md` 中彻底移除 3 处指向已删历史文档的遗留死链（`[[迪拜华人开车完全指南]]`、`[[后训练认知_SFT_vs_RL_记忆与遗忘机制]]`、`[[MiniMax_vs_Kimi_注意力路线之争]]`），实现总索引与物理磁盘 100% 对齐。
+
+
 ## [2026-07-06] lint/clean-concepts | 针对 wiki/concepts/ 进行上游来源独立分析与深度清理 (+ index update)
 - **独立分析与接骨修护**：对 `wiki/concepts/` 下全部 340 个概念页面进行了显式与反向隐式上游来源追踪（`raw/` 与 `wiki/sources/`），为 290 个具备真实有效上游来源但 Frontmatter `sources:` 字段缺失或不全的概念页面完成了“接骨修护”与自动化回填。
 - **无源孤立虚假生成清理**：识别并物理删除 29 个既无显式来源指向、全库正文亦无任何提及引用的无上游来源虚假/孤立概念文件（包括 `概念_A2A协议.md`、`概念_AI企业数字人管理模式.md`、`概念_Coding驱动Agent.md`、`概念_LLM三大演进支柱_效率推理智能体.md`、`概念_RAG四大基础范式.md` 等）。

@@ -2,10 +2,6 @@
 tags:
 - AIGC
 sources:
-- raw/[LLM]大模型显存计算公式与优化 - 知乎.md
-- raw/九大主流AI PPT横测，能打的Agent只有3个半.md
-- raw/常用 Normalization 方法的总结与思考：BN、LN、IN、GN.md
-- raw/自适应快慢思考推理模型（Adaptive Reasoning Model）：Qw....md
 - wiki/sources/PyTorch常用代码段合集.md
 - wiki/sources/九大主流AI_PPT横测.md
 - wiki/sources/大模型显存计算公式与优化.md

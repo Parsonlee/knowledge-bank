@@ -7,7 +7,6 @@ summary: MCP 协议定义五大原语：Tool（模型主动）、Prompt（用户
 created: '2026-06-29'
 updated: '2026-06-29'
 sources:
-- raw/MCP不止工具调用！MCP联合创建者：绝大多数人用法都太初级！曝MCP五大原语、....md
 - wiki/sources/HumanInTheLoop用MCP实现.md
 - wiki/sources/MCP五大原语与Web化.md
 ---

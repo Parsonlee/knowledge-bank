@@ -73,7 +73,6 @@
 - [[从DeepSeek-V3到Kimi_K2_八种现代LLM架构大比较]] — Sebastian Raschka 对比 8 种 2025 LLM 架构：MLA/MoE/滑动窗口/Post-Norm/NoPE/Muon（LLM/arch）
 - [[2025年七大顶流大模型架构]] — 7 大旗舰开源 LLM 架构创新点综述（LLM/arch, LLM/arch/MoE）
 - [[从LLaVA到Qwen3-VL_多模态架构演进]] — LLaVA AnyRes vs Qwen3-VL DeepStack，MLLM 两大演进路线全景（LLM/arch/VLM）
-- [[MiniMax_vs_Kimi_注意力路线之争]] — MiniMax M2 回归 Full Attention，Kimi Linear KDA+MLA 3:1，路线对比（LLM/arch/attention）
 - [[DeepSeek_MLA矩阵吸收原理]] — MLA 矩阵吸收图解：K/V 升维矩阵吸收进 Q，三处广播优化（LLM/arch/attention）
 - [[KV_Cache原理图解]] — KV Cache 图解：自回归推理缓存 K/V，显存估算，仅适用 Decoder（LLM/inference/kv-cache）
 - [[推测解码Speculative_Decoding综述]] — Draft-then-Verify 无损推理加速：Independent/Self Drafting + 验证策略（LLM/inference）
@@ -147,7 +146,6 @@
 - [[Bundle_Unbundle视角看AI时代机会]] — 42章经：Grammarly 案例 + Shishir Bundle 理论(MCC/2x2) + 集装箱历史类比 AI（创业）
 - [[100家顶尖AI初创公司的7个真相]] — Leonis AI 100：高人效/倒漏斗GTM/多赢家/快速转型/阈值解锁/收入激增/研究型创始人（创业）
 - [[50年旅行经验之谈_Kevin_Kelly]] — Kevin Kelly 53 年旅行经验：Retreat/Engage 两模式 + Laser-Back 直达返回法 + 大量实操 tips（Life）
-- [[迪拜华人开车完全指南]] — 贴车文化/大转盘路权/Speed Bump/Waze 导航/重罚执法/燃油车市与中国品牌（Life）
 - [[初入投资容易犯的错误]] — laike9m：选错市场/一开始重仓/风格横跳三大错误 + 除以十/3-6月试错/固定1-2模式框架（Life）
 - [[什么是真正有效的驱蚊产品]] — 少数派：DEET/Picaridin/IR3535/OLE 四成分 + 浓度影响时长 + 安全性建议（Life）
 - [[中枢与网关使用指南]] — 米家智能家居：网关/中枢系统/主备中枢/从网关/盲网关概念体系（Life）
@@ -515,7 +513,6 @@
 - [[实体_PEFT库]] — HuggingFace 参数高效微调库，LoRA/QLoRA/Adapter/Prefix 支持（LLM/training/post-train）
 
 ### LLM/training/post-train（批次6）
-- [[后训练认知_SFT_vs_RL_记忆与遗忘机制]] — 普林斯顿研究：RL 抗遗忘优于 SFT，根源是 on-policy 数据分布（LLM/training/post-train）
 - [[HuggingFace手把手训练大模型实战指南]] — SmolLM3 端到端训练实战：Why→What→How + 架构/数据/基础设施全链路（LLM/training/pre-train, post-train）
 - [[SFT数据挑选方法_质量多样性必要性]] — SFT 数据三维度筛选：MoDS/DEITA/CaR 方法梳理（LLM/training/post-train）
 - [[375篇文献_推理大模型后训练技术综述]] — 后训练三分类综述：微调/RL/测试时扩展（LLM/training/post-train）

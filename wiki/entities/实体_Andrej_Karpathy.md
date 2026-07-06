@@ -6,11 +6,6 @@ tags:
 summary: Andrej Karpathy 是著名的人工智能科学家，曾任 OpenAI 创始成员及研究科学家、特斯拉 AI 团队高级总监（负责 Autopilot
   和 FSD 计算机视觉开发），现任 AI 教育与产品创业者（创立 Eureka Labs）。
 sources:
-- raw/Claude Code + Obsidian + 飞书，我搭了一套会自己长大的知识库.md
-- raw/一套提示词帮你实现小红书、公众号封面自由.md
-- raw/也许当前最好的「上下文工程」讲解_LangChain联合Manus季逸超最新分享....md
-- raw/手把手教你，从零开始实现一个稀疏混合专家架构语言模型（MoE）.md
-- raw/矩阵模拟！Transformer大模型3D可视化，GPT-3、Nano-GPT每....md
 - wiki/sources/Claude Code与Obsidian飞书知识库搭建实践.md
 - wiki/sources/Transformer大模型3D可视化_NanoGPT.md
 - wiki/sources/手把手教你实现稀疏MoE语言模型.md

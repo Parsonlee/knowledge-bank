@@ -3,9 +3,6 @@ type: entity
 tags:
 - LLM/arch/Mamba
 sources:
-- raw/Mamba2_ SSM和Transformer的大一统 - 知乎.md
-- raw/MiniMax和Kimi为了“注意力”，隔空交手.md
-- raw/腾讯混元TurboS技术报告首次全公开：560B参数混合Mamba架构，自适应长....md
 - wiki/sources/Mamba2_SSD_大一统.md
 - wiki/sources/腾讯混元TurboS技术报告.md
 created: '2026-06-29'

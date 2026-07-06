@@ -5,7 +5,6 @@ tags:
 summary: MiniMax 2025年发布的旗舰模型，回归 Full Attention 架构，定位 Agent/代码生成，定价为 Claude Sonnet
   4.5 的 8%
 sources:
-- raw/MiniMax和Kimi为了“注意力”，隔空交手.md
 - wiki/sources/MiniMax_vs_Kimi_注意力路线之争.md
 created: '2026-06-29'
 updated: '2026-06-29'

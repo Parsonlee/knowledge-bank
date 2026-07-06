@@ -8,7 +8,6 @@ summary: DOS RAG（Document's Original Structure RAG，保留文档原始结构�
 created: '2026-07-06'
 updated: '2026-07-06'
 sources:
-- raw/2025来自斯坦福的RAG新基线.md
 - wiki/sources/斯坦福RAG新基线_DOS_RAG.md
 ---
 
