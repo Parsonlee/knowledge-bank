@@ -1,7 +1,14 @@
+---
+tags:
+- RAG
+confidence: high
+type: concept
+summary: 知识图谱 RAG（Knowledge Graph RAG）是将知识图谱作为 RAG 系统检索基础的方法，通过构建实体-关系图结构组织知识，实现多跳推理和跨文档关联检索，突破传统向量检索的扁平化局限。
+created: '2026-07-06'
+updated: '2026-07-06'
+---
 # 概念_知识图谱RAG
 
-> tags: RAG
-> confidence: high
 
 ## 定义
 

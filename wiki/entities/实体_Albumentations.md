@@ -1,12 +1,12 @@
 ---
 type: entity
 tags:
-  - CV/data-augmentation
+- CV/data-augmentation
 summary: Albumentations 是一个 Python 图像增强库，提供丰富的变换操作和 OneOf/Compose 组合机制，支持概率控制。
 sources:
-  - "wiki/sources/OCR的有效数据增强.md"
-created: "2026-06-26"
-updated: "2026-06-26"
+- wiki/sources/OCR的有效数据增强.md
+created: '2026-06-26'
+updated: '2026-06-26'
 confidence: medium
 ---
 

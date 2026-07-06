@@ -1,13 +1,14 @@
 ---
 type: entity
 tags:
-  - CV
-  - CV/detection
-summary: ResNet（Deep Residual Learning），通过残差学习与 skip connection 实现超深网络训练，替代 VGG 成为检测标准 Backbone。
+- CV
+- CV/detection
+summary: ResNet（Deep Residual Learning），通过残差学习与 skip connection 实现超深网络训练，替代 VGG 成为检测标准
+  Backbone。
 sources:
-  - "wiki/sources/目标检测入门_基础网络与分类定位权衡.md"
-created: "2026-06-26"
-updated: "2026-06-26"
+- wiki/sources/目标检测入门_基础网络与分类定位权衡.md
+created: '2026-06-26'
+updated: '2026-06-26'
 confidence: high
 ---
 

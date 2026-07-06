@@ -1,10 +1,10 @@
 ---
 type: concept
 tags:
-  - 创业
-summary: "AI 初创以极简扁平团队实现高人效（人均百万美元 ARR），轻人力重算力重数据"
-created: "2026-06-30"
-updated: "2026-06-30"
+- 创业
+summary: AI 初创以极简扁平团队实现高人效（人均百万美元 ARR），轻人力重算力重数据
+created: '2026-06-30'
+updated: '2026-06-30'
 confidence: high
 ---
 

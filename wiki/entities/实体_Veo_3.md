@@ -1,8 +1,11 @@
 ---
-title: Veo 3
 tags:
-  - AIGC
+- AIGC
 confidence: high
+type: entity
+summary: Google Veo 3 是从文本提示词生成带音频视频的模型，音频可以是对话、画外音、音效和音乐。生成的视频（水果 ASMR、第一人称大脚怪探险等）在社交平台很火。
+created: '2026-07-06'
+updated: '2026-07-06'
 ---
 
 # 实体_Veo_3

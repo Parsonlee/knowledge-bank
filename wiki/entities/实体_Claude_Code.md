@@ -1,8 +1,12 @@
 ---
 type: entity
 tags:
-  - AI-Agent/coding
-  - Skill/claude-code
+- AI-Agent/coding
+- Skill/claude-code
+summary: Claude Code 是由 Anthropic 推出的一款基于终端命令行（CLI）的深度工程化 AI Coding Agent 工具。它以顶级大模型（Claude
+  3.5 Sonnet / Claude 3.7 Sonnet）为引擎，可以直接在开发者的本地代码库或知识库中深度工作。
+created: '2026-07-06'
+updated: '2026-07-06'
 ---
 
 # 实体：Claude Code

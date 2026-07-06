@@ -21,7 +21,6 @@ date_clipped: 2025-11-10
 - **URL**：https://mp.weixin.qq.com/s?__biz=MzU0MDk3NTUxMA==&mid=2247493410&idx=1&sn=218d4a6269cde93005745b9f3b85b454
 
 
-> 来源：歸藏的 AI 工具箱（微信公众号），[[实体_Gemini]] APP 上线 PPT 生成能力后的使用技巧与模板提示词分享。
 
 ## 核心内容
 

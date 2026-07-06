@@ -1,7 +1,11 @@
 ---
 type: concept
 tags:
-  - AI-Agent/eval
+- AI-Agent/eval
+summary: Agent 完整轨迹评估（Full Trajectory Evaluation） 是一种面向复杂大模型智能体的评估范式。由于智能体完成一个任务通常涉及多步规划、工具调用、信息检索与多轮会话，不能像传统搜索评测那样仅依据最终输出文本（Final
+  Response）打分，而必须对智能体从输入到输出的整个...
+created: '2026-07-06'
+updated: '2026-07-06'
 ---
 
 # 概念：Agent 完整轨迹评估

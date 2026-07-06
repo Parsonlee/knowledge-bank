@@ -1,13 +1,14 @@
 ---
 type: entity
 tags:
-  - CV
-  - CV/detection
-summary: R-FCN（Region-based Fully Convolutional Networks），通过 Position Sensitive Score Maps 实现全卷积位置敏感检测。
+- CV
+- CV/detection
+summary: R-FCN（Region-based Fully Convolutional Networks），通过 Position Sensitive Score
+  Maps 实现全卷积位置敏感检测。
 sources:
-  - "wiki/sources/目标检测入门_基础网络与分类定位权衡.md"
-created: "2026-06-26"
-updated: "2026-06-26"
+- wiki/sources/目标检测入门_基础网络与分类定位权衡.md
+created: '2026-06-26'
+updated: '2026-06-26'
 confidence: high
 ---
 

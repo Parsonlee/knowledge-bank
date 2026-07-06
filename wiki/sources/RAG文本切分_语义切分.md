@@ -12,9 +12,7 @@ confidence: high
 ---
 # RAG文本切分_语义切分
 
-> 来源：哎呀AIYA 微信公众号《RAG文本切分的第四个层次，基于向量模型的语义切分》
 > URL：https://mp.weixin.qq.com/s/gUyFlIzToUT-fcs8t67j1Q
-> tags: RAG, RAG/chunking
 > Cubox 高亮：2 处（见下方 [重点/高亮]）
 
 ## [重点/高亮]

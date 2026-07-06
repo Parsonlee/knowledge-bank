@@ -1,7 +1,12 @@
 ---
 type: concept
-tags: [创业]
+tags:
+- 创业
 confidence: high
+summary: Design Sprint（设计冲刺）是 实体JakeKnapp 在 Google 期间创造、后在 Google Ventures 与 John
+  Zeratsky 提炼成型的五天标准化产品验证流程。
+created: '2026-07-06'
+updated: '2026-07-06'
 ---
 
 # 概念_Design Sprint

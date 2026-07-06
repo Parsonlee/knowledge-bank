@@ -1,12 +1,12 @@
 ---
 type: concept
 tags:
-  - CV
+- CV
 summary: SAM 开创的以多种 Prompt（点/框/掩码/文本）驱动图像分割的范式。
 sources:
-  - "wiki/sources/SAM_Segment_Anything模型.md"
-created: "2026-06-26"
-updated: "2026-06-26"
+- wiki/sources/SAM_Segment_Anything模型.md
+created: '2026-06-26'
+updated: '2026-06-26'
 confidence: high
 ---
 

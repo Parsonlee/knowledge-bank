@@ -11,10 +11,7 @@ confidence: high
 ---
 # DPP 行列式点过程
 
-> 来源：Determinantal Point Process：机器学习中行列式的妙用（PaperWeekly）
 > URL：https://mp.weixin.qq.com/s/fRFiyW9peyCO2yLzTzV0BQ
-> tags: DeepLearning
-> confidence: high
 
 ## 核心问题
 

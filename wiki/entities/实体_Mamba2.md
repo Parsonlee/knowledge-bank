@@ -1,10 +1,11 @@
 ---
 type: entity
 tags:
-  - LLM/arch/Mamba
-created: "2026-06-29"
-updated: "2026-06-29"
+- LLM/arch/Mamba
+created: '2026-06-29'
+updated: '2026-06-29'
 confidence: high
+summary: Albert Gu 和 Tri Dao 于 2024 年提出，在 Mamba1 基础上引入 SSD（状态空间对偶）框架，ICML 2024 收录。
 ---
 
 # Mamba2

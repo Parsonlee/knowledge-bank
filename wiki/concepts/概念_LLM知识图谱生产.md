@@ -1,8 +1,11 @@
 ---
 type: concept
 tags:
-  - LLM
-  - Recommendation
+- LLM
+- Recommendation
+summary: 利用大模型从语料中提取新三元组、扩充知识图谱的框架。来源：蚂蚁集团大模型推荐算法与应用
+created: '2026-07-06'
+updated: '2026-07-06'
 ---
 
 # 概念：LLM知识图谱生产

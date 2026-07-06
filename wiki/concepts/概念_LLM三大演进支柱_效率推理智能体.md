@@ -1,12 +1,13 @@
 ---
 type: concept
 tags:
-  - LLM/arch
-  - LLM/reasoning
-  - AI-Agent
+- LLM/arch
+- LLM/reasoning
+- AI-Agent
 confidence: high
-created: "2026-06-29"
-updated: "2026-06-29"
+created: '2026-06-29'
+updated: '2026-06-29'
+summary: 2023-2025年 LLM 领域从"唯规模论"转向由三大正交支柱构成的多维发展策略，每个支柱是下一个的技术前提。
 ---
 
 # 概念：LLM 三大演进支柱——效率、推理、智能体
@@ -56,4 +57,3 @@ updated: "2026-06-29"
 - 闭源（OpenAI/Anthropic）：效率节省的算力投入专有能力，护城河在独特功能
 
 ## 来源
-

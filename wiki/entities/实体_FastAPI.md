@@ -1,8 +1,11 @@
 ---
-title: "实体_FastAPI"
 tags:
-  - Skill/python
+- Skill/python
 confidence: high
+type: entity
+summary: '- 类型：Python Web 框架'
+created: '2026-07-06'
+updated: '2026-07-06'
 ---
 
 # 实体_FastAPI

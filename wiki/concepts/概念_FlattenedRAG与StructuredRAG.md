@@ -1,9 +1,10 @@
 ---
 type: concept
 tags:
-  - AI-Agent/AI-BI
-created: "2026-06-29"
-updated: "2026-06-29"
+- AI-Agent/AI-BI
+created: '2026-06-29'
+updated: '2026-06-29'
+summary: 针对结构化元数据检索增强的两种方案，解决通用 RAG 无法处理层次型结构数据的问题（表→字段→维度的层次结构无自然语言前后顺序）。
 ---
 
 # 概念：FlattenedRAG 与 StructuredRAG

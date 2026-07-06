@@ -7,7 +7,7 @@ summary: ColBERT 原理与延迟交互（Late Interaction）机制——多向�
   BGE-M3 实验
 sources:
 - raw/RAG：ColBERT原理、延迟交互机制与稠密向量的对比分析.md
-created: 2026-06-26
+created: '2026-06-26'
 updated: '2026-07-01'
 confidence: high
 ---

@@ -19,7 +19,6 @@ date: 2024-01-03
 - **URL**：https://mp.weixin.qq.com/s/LyZtKIVhVvBP8BCKWEYqYw
 
 
-> 来源：Deephub Imba / AI算法与图像处理，作者 Nirmalya Ghosh
 > 测试方法：timeit 模块，10 次运行各 100K 循环，取每循环平均纳秒
 
 ## 核心内容

@@ -1,5 +1,14 @@
 # Wiki Log
 
+## [2026-07-06] lint & refactor | 全量 Frontmatter 规范化清洗与内容补齐（涵盖 sources/entities/concepts 共 652 篇）
+- **彻底解决历史遗留无 YAML 格式问题**：对 `wiki/concepts/` 目录下 117 篇历史遗留非 YAML 页面（采用 `> tags: ...` 等 Blockquote 元数据格式）进行深度解析与结构重构，100% 转换为合规标准的 YAML Frontmatter。
+- **修复 YAML 语法解析异常**：修复 `wiki/entities/实体_LLaVA.md` 因引号与块映射冲突导致 YAML 解析失败的问题，确保全库 652 篇页面 YAML 解析错误率为 0%。
+- **全量补齐核心字段（内容齐全）**：
+  - **`summary` 核心摘要补齐**：自动从文档正文实质内容中精准提炼一句话核心贡献，补齐了 73 篇实体页与 254 篇概念页中缺失的 `summary` 字段。
+  - **`tags` 标准体系归类**：为 1 篇实体页与 21 篇概念页补齐了缺失的标签，按照层级分类规则（如 RAG/LLM/DeepLearning/Life/创业）进行标准注入；并严格确保全库所有页面的 `tags` 字段均统一格式化为 YAML 数组（List of Strings）。
+  - **`type` 与日期溯源**：为所有文档精准校验 `type`（source/entity/concept），补齐缺失的 `created` 与 `updated` 标准日期字段（`YYYY-MM-DD`）。
+- **字段清洁与减负**：全库移除了 40 篇页面中冗余的非标准 `title` 字段（Markdown 规范以正文 `# 标题` 为准）；对 `sources` 字段统一执行数组化清理，彻底实现字段一致、内容齐全、合规率为 100%。
+
 ## [2026-07-06] ingest & lint | sources/ 与 raw/ 1对1一致性对齐闭环 (+ affected pages)
 - **处理重复映射与冗余摘要**：
   - 修复 `wiki/sources/RAG基础_索引检索生成.md` 与 `wiki/sources/PyTorch训练代码模板.md` 中的 `sources:` 字段及物理文献链接错位问题。

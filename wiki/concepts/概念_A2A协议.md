@@ -1,8 +1,10 @@
 ---
 tags:
-  - AI-Agent/coding
-created: "2026-06-29"
-updated: "2026-06-29"
+- AI-Agent/coding
+created: '2026-06-29'
+updated: '2026-06-29'
+type: concept
+summary: 来源：万字长文深入浅出教你优雅开发复杂AIAgent
 ---
 
 # 概念：A2A 协议（Agent to Agent）

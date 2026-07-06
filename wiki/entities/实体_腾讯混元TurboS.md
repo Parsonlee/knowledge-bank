@@ -1,10 +1,11 @@
 ---
 type: entity
 tags:
-  - LLM/arch/Mamba
-  - LLM/arch/MoE
-created: "2026-06-29"
-updated: "2026-06-29"
+- LLM/arch/Mamba
+- LLM/arch/MoE
+created: '2026-06-29'
+updated: '2026-06-29'
+summary: 腾讯混元旗舰大语言模型，业界首个大规模部署的 Hybrid Transformer-Mamba MoE 模型。
 ---
 
 # 实体_腾讯混元TurboS

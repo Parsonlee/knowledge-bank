@@ -1,9 +1,11 @@
 ---
 type: entity
 tags:
-  - AI-Agent
-created: "2026-06-29"
-updated: "2026-06-29"
+- AI-Agent
+created: '2026-06-29'
+updated: '2026-06-29'
+summary: AutoGPT 是 2023 年 3 月推出的早期 AI Agent 代表项目，由 Significant Gravitas Ltd. 的创始人
+  Toran Bruce Richards 开发。
 ---
 
 # 实体：AutoGPT

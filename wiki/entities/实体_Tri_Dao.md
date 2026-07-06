@@ -1,10 +1,11 @@
 ---
 type: entity
 tags:
-  - LLM/arch/Mamba
-created: "2026-06-29"
-updated: "2026-06-29"
+- LLM/arch/Mamba
+created: '2026-06-29'
+updated: '2026-06-29'
 confidence: high
+summary: FlashAttention 和 Mamba 系列的核心作者，硬件感知深度学习算法专家。
 ---
 
 # Tri Dao

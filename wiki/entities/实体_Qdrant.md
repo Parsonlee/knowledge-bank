@@ -1,11 +1,11 @@
 ---
 type: entity
 tags:
-  - RAG/retrieval
-  - Infra/AI
-summary: "使用 Rust 编写的高性能开源向量数据库与语义引擎。"
-created: "2026-06-29"
-updated: "2026-07-01"
+- RAG/retrieval
+- Infra/AI
+summary: 使用 Rust 编写的高性能开源向量数据库与语义引擎。
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: medium
 ---
 
@@ -26,4 +26,3 @@ Qdrant 是使用 Rust 编写的开源向量数据库 & 向量搜索引擎。在 
 
 - 相关概念：[[概念_向量数据库]]、[[概念_Embedding与向量检索]]
 - 来源：[[RAG基础_索引检索生成]]
-

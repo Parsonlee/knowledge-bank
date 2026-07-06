@@ -1,7 +1,14 @@
+---
+tags:
+- LLM
+confidence: high
+type: concept
+summary: Fine-tuning（微调）通过在特定领域/任务数据上继续训练大模型，增强 LLM 本身的能力，使其在目标场景上产出更准确/更符合格式的输出。
+created: '2026-07-06'
+updated: '2026-07-06'
+---
 # 概念_Fine-tuning
 
-> tags: LLM
-> confidence: high
 
 ## 定义
 

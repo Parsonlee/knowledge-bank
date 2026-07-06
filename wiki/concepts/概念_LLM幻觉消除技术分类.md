@@ -1,8 +1,12 @@
 ---
 type: concept
 tags:
-  - LLM/hallucination
+- LLM/hallucination
 confidence: high
+summary: 基于论文 "A Comprehensive Survey of Hallucination Mitigation Techniques in Large
+  Language Models"（arxiv 2401.01313）的系统分类框架。
+created: '2026-07-06'
+updated: '2026-07-06'
 ---
 
 # 概念：LLM 幻觉消除技术分类（32 种）

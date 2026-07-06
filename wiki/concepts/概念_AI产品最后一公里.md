@@ -1,8 +1,11 @@
 ---
-title: AI 产品的最后一公里问题
 tags:
-  - AIGC
+- AIGC
 confidence: high
+type: concept
+summary: AI 生成的物料（尤其 PPT）从初次产出到最终交付存在的「最后一公里」gap，主要体现在两个维度：
+created: '2026-07-06'
+updated: '2026-07-06'
 ---
 
 # 概念_AI产品最后一公里

@@ -1,9 +1,10 @@
 ---
 type: concept
 tags:
-  - LLM/arch/MoE
-created: "2026-06-29"
-updated: "2026-06-29"
+- LLM/arch/MoE
+created: '2026-06-29'
+updated: '2026-06-29'
+summary: MoE（Mixture of Experts，混合专家模型）是一种高效 Scaling 技术，用较少的计算量实现更大模型规模，从而获得更好性能。
 ---
 
 # 概念_MoE混合专家

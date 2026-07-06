@@ -1,7 +1,11 @@
 ---
-title: "概念_韵律情感拟人化TTS"
-tags: [TTS]
+tags:
+- TTS
 confidence: high
+type: concept
+summary: 让 TTS 生成语音更有直播感和主播风格的技术方案，通过挖掘直播数据的韵律和情感信息实现。
+created: '2026-07-06'
+updated: '2026-07-06'
 ---
 
 # 韵律情感拟人化 TTS

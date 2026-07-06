@@ -1,9 +1,10 @@
 ---
 type: concept
 tags:
-  - LLM/training/RL
-created: "2026-06-29"
-updated: "2026-06-29"
+- LLM/training/RL
+created: '2026-06-29'
+updated: '2026-06-29'
+summary: DeepSeek-R1 的四阶段多管道训练流程，解决了 R1-Zero 可读性差、语言混杂等问题，同时进一步提升推理性能。
 ---
 
 # 概念：DeepSeek-R1 训练管道

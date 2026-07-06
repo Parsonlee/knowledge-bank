@@ -1,11 +1,11 @@
 ---
 type: concept
 tags:
-  - AI-Agent/tools
-  - AI-Agent/prompt-engineering
-summary: "将'思考'封装为 MCP 工具强制模型在每次工具调用前结构化规划，比纯 Prompt 指令遵循更稳定"
-created: "2026-06-29"
-updated: "2026-06-29"
+- AI-Agent/tools
+- AI-Agent/prompt-engineering
+summary: 将'思考'封装为 MCP 工具强制模型在每次工具调用前结构化规划，比纯 Prompt 指令遵循更稳定
+created: '2026-06-29'
+updated: '2026-06-29'
 ---
 
 # 概念_Agent思考工具

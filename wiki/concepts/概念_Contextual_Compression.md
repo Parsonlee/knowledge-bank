@@ -1,7 +1,16 @@
+---
+tags:
+- RAG
+- RAG/retrieval
+confidence: high
+type: concept
+summary: 上下文压缩（Contextual Compression）是一种检索后处理方法。本质上利用 LLM 判断检索之后的文档与用户 query 的相关性，只返回相关度最高的
+  k 个文档（或文档中的相关片段），过滤掉无关内容。
+created: '2026-07-06'
+updated: '2026-07-06'
+---
 # 概念_Contextual_Compression
 
-> tags: RAG, RAG/retrieval
-> confidence: high
 
 ## 定义
 

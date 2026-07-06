@@ -1,11 +1,12 @@
 ---
 type: entity
 tags:
-  - LLM/arch
-  - LLM/reasoning
+- LLM/arch
+- LLM/reasoning
 confidence: high
-created: "2026-06-29"
-updated: "2026-06-29"
+created: '2026-06-29'
+updated: '2026-06-29'
+summary: '- 类型：开源大语言模型'
 ---
 
 # 实体：Minimax-m1

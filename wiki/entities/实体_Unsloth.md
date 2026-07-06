@@ -1,10 +1,12 @@
 ---
 type: entity
 tags:
-  - LLM/training/RL
-  - Skill/python
-created: "2026-06-29"
-updated: "2026-06-29"
+- LLM/training/RL
+- Skill/python
+created: '2026-06-29'
+updated: '2026-06-29'
+summary: Unsloth 是 Daniel Han 和 Michael Han 兄弟团队开发的开源 LLM 微调框架，专注于高效微调和强化学习训练，GitHub
+  星数超过 4 万。
 ---
 
 # 实体：Unsloth

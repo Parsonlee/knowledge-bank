@@ -3,7 +3,8 @@ type: source
 tags:
 - LLM
 - LLM/training/RL
-summary: 深度解析大语言模型从 RLVR 向开放主观领域进化的核心关键——“通用验证器”（Universal Verifier），详细剖析 RaR、Rubicon、Writing-Zero、VeriFree、INTUITOR 及终极 OaK 架构六大技术路径。
+summary: 深度解析大语言模型从 RLVR 向开放主观领域进化的核心关键——“通用验证器”（Universal Verifier），详细剖析 RaR、Rubicon、Writing-Zero、VeriFree、INTUITOR
+  及终极 OaK 架构六大技术路径。
 sources:
 - raw/LLM output eval in RL.md
 created: '2026-07-06'
@@ -12,10 +13,7 @@ confidence: high
 ---
 # GPT-5 通用验证器与强化学习范式革新
 
-> 来源：腾讯科技（博阳）
 > URL：https://mp.weixin.qq.com/s?__biz=Mjc1NjM3MjY2MA==&mid=2691560834&idx=1
-> tags: LLM, LLM/training/RL
-> confidence: high
 
 ## 摘要
 

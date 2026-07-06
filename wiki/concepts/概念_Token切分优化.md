@@ -1,7 +1,15 @@
+---
+tags:
+- RAG
+- RAG/chunking
+confidence: high
+type: concept
+summary: 在递归字符切分基础上，将长度计算从字符个数改为 token 个数，使切分结果与语言模型实际处理方式对齐。
+created: '2026-07-06'
+updated: '2026-07-06'
+---
 # 概念_Token切分优化
 
-> tags: RAG, RAG/chunking
-> confidence: high
 
 ## 定义
 

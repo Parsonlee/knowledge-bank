@@ -1,12 +1,13 @@
 ---
 type: concept
 tags:
-  - Infra/AI
-summary: Result-as-a-Service（结果即服务）是 AI-Native Infra 演化的终极形态：人类只需表达需求和验收结果，AI 负责构建/部署/运维/演化整个系统，人类角色从工程师转变为 QA。
+- Infra/AI
+summary: Result-as-a-Service（结果即服务）是 AI-Native Infra 演化的终极形态：人类只需表达需求和验收结果，AI 负责构建/部署/运维/演化整个系统，人类角色从工程师转变为
+  QA。
 sources:
-  - "wiki/sources/AI-Native的Infra演化路线L0到L5.md"
-created: "2026-06-29"
-updated: "2026-06-29"
+- wiki/sources/AI-Native的Infra演化路线L0到L5.md
+created: '2026-06-29'
+updated: '2026-06-29'
 confidence: high
 ---
 

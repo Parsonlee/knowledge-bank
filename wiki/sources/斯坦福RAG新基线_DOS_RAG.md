@@ -6,7 +6,7 @@ summary: 斯坦福 2025 新论文提出 DOS RAG（Document's Original Structure 
   QA 基准上持平或超越 ReadAgent/RAPTOR 等复杂方案
 sources:
 - raw/2025来自斯坦福的RAG新基线.md
-created: 2026-06-26
+created: '2026-06-26'
 updated: '2026-07-01'
 confidence: high
 ---

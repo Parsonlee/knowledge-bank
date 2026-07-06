@@ -11,9 +11,7 @@ confidence: high
 ---
 # RAG基础：索引、检索与生成
 
-> 来源：PyTorch研习社（南七无名式）系列教程第1篇
 > URL：https://mp.weixin.qq.com/s/TlFNOw7_3Q8qywKLpVUmfg
-> tags: RAG
 > Cubox 高亮：无
 
 ## 摘要

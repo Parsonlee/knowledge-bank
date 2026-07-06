@@ -1,10 +1,10 @@
 ---
 type: concept
 tags:
-  - AI-Agent/tools
-summary: "将 MCP Server 当'代码 API'而非直接工具调用：LLM 通过编写代码来调用 MCP，Token 消耗减少 98.7%，同时获得隐私保护与状态持久化能力"
-created: "2026-06-29"
-updated: "2026-06-29"
+- AI-Agent/tools
+summary: 将 MCP Server 当'代码 API'而非直接工具调用：LLM 通过编写代码来调用 MCP，Token 消耗减少 98.7%，同时获得隐私保护与状态持久化能力
+created: '2026-06-29'
+updated: '2026-06-29'
 ---
 
 ## 定义

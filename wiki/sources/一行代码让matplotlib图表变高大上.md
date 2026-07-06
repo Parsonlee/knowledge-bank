@@ -21,7 +21,6 @@ date_collected: 2023-11-26
 - **URL**：https://mp.weixin.qq.com/s/6TrDtLHqBBYEfCwJobZeAg
 
 
-> 来源：微信公众号「程序员的那些事」，作者费弗里。Cubox 无高亮（stub），全文基于剪藏正文。
 
 ## 概述
 

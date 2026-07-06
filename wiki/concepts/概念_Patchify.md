@@ -1,12 +1,13 @@
 ---
 type: concept
 tags:
-  - CV/arch
-summary: Patchify 是 ViT/DiT 的第一步——将图像（或 latent）切分为 patch 并经线性嵌入变为 token 序列；patch size p 决定 token 数量与计算量。
+- CV/arch
+summary: Patchify 是 ViT/DiT 的第一步——将图像（或 latent）切分为 patch 并经线性嵌入变为 token 序列；patch size
+  p 决定 token 数量与计算量。
 sources:
-  - "wiki/sources/DiT_扩散模型与Transformer.md"
-created: "2026-06-26"
-updated: "2026-06-26"
+- wiki/sources/DiT_扩散模型与Transformer.md
+created: '2026-06-26'
+updated: '2026-06-26'
 confidence: high
 ---
 

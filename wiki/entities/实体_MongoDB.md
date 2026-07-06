@@ -1,10 +1,11 @@
 ---
 type: entity
 tags:
-  - AI-Agent/tools
-summary: "MongoDB 是流行的文档型 NoSQL 数据库，在 MCP 数据库集成场景中是典型的结构化数据后端，可通过 mcp-mongo-server 接入 MCP 生态"
-created: "2026-06-29"
-updated: "2026-06-29"
+- AI-Agent/tools
+summary: MongoDB 是流行的文档型 NoSQL 数据库，在 MCP 数据库集成场景中是典型的结构化数据后端，可通过 mcp-mongo-server
+  接入 MCP 生态
+created: '2026-06-29'
+updated: '2026-06-29'
 ---
 
 ## 简介
@@ -26,4 +27,3 @@ npx -y mcp-mongo-server mongodb://localhost:27017/mydb
 ```
 
 ## 参考来源
-

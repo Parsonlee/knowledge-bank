@@ -1,10 +1,10 @@
 ---
 type: concept
 tags:
-  - Skill/data-analysis
-summary: "Pandas 通过 DataFrame.plot / Series.plot 一行代码绘制多种图表，并通过 pandas.plotting 提供安德鲁斯曲线、平行坐标等高级可视化。"
-created: "2026-06-30"
-updated: "2026-06-30"
+- Skill/data-analysis
+summary: Pandas 通过 DataFrame.plot / Series.plot 一行代码绘制多种图表，并通过 pandas.plotting 提供安德鲁斯曲线、平行坐标等高级可视化。
+created: '2026-06-30'
+updated: '2026-06-30'
 confidence: high
 ---
 

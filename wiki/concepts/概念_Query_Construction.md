@@ -1,7 +1,15 @@
+---
+tags:
+- RAG
+- RAG/query
+confidence: high
+type: concept
+summary: Query Construction（查询构造）是根据用户输入的自然语言问题，通过语义解析、上下文理解以及路由后的结果，生成特定领域数据源所需的查询语句或格式化内容。目标是最大化数据源检索的准确性和相关性。
+created: '2026-07-06'
+updated: '2026-07-06'
+---
 # 概念_Query_Construction
 
-> tags: RAG, RAG/query
-> confidence: high
 
 ## 定义
 

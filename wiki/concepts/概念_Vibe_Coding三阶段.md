@@ -1,7 +1,11 @@
 ---
-title: "概念_Vibe_Coding三阶段"
-tags: [AIGC]
+tags:
+- AIGC
 confidence: high
+type: concept
+summary: lencx 基于 Noi（Electron 应用）开发实践总结的 AI 辅助编程三个递进阶段。
+created: '2026-07-06'
+updated: '2026-07-06'
 ---
 
 # Vibe Coding 三阶段

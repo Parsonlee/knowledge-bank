@@ -1,7 +1,11 @@
 ---
-title: "实体_通义万相Wan2.2"
-tags: [AIGC]
+tags:
+- AIGC
 confidence: high
+type: entity
+summary: 阿里通义大模型团队推出的视频生成模型，支持文生视频与图生视频两种模式。
+created: '2026-07-06'
+updated: '2026-07-06'
 ---
 
 # 通义万相 Wan2.2

@@ -1,7 +1,11 @@
 ---
-title: "实体_RLMRec"
-tags: [Recommendation]
+tags:
+- Recommendation
 confidence: high
+type: entity
+summary: 港大联合百度推出的模型无关 LLM 推荐框架，通过互信息最大化对齐协同过滤表示与语义表示实现去噪增强。
+created: '2026-07-06'
+updated: '2026-07-06'
 ---
 
 # RLMRec
@@ -34,4 +38,3 @@ confidence: high
 详见 [[概念_互信息最大化去噪表征]]、[[概念_LLM用户商品画像生成]]
 
 ## 来源
-

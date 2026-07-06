@@ -1,10 +1,11 @@
 ---
 type: concept
 tags:
-  - LLM/arch/MoE
-  - LLM/arch/Mamba
-created: "2026-06-29"
-updated: "2026-06-29"
+- LLM/arch/MoE
+- LLM/arch/Mamba
+created: '2026-06-29'
+updated: '2026-06-29'
+summary: Hybrid Transformer-Mamba 架构将 Transformer 的全局上下文理解能力与 Mamba/SSM 的长序列线性效率结合，取两者之长。
 ---
 
 # 概念_混合Mamba架构

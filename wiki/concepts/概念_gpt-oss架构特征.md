@@ -1,8 +1,11 @@
 ---
 type: concept
 tags:
-  - LLM/arch/MoE
-  - LLM/arch
+- LLM/arch/MoE
+- LLM/arch
+summary: OpenAI gpt-oss-20b/120b 的关键架构设计，相比 GPT-2 的 7 项进化与和 Qwen3 的对比。来源：从GPT-2到gpt-ossOpenAI开放模型进化之路
+created: '2026-07-06'
+updated: '2026-07-06'
 ---
 
 # 概念：gpt-oss 架构特征

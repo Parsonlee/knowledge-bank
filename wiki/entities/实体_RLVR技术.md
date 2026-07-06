@@ -1,10 +1,10 @@
 ---
 type: entity
 tags:
-  - LLM/training/RL
-summary: "RLVR（可验证奖励强化学习）：以数学/编程有标准答案为基础的强化学习训练范式，DeepSeek-R1/o1 系列的核心技术"
-created: "2026-06-29"
-updated: "2026-06-29"
+- LLM/training/RL
+summary: RLVR（可验证奖励强化学习）：以数学/编程有标准答案为基础的强化学习训练范式，DeepSeek-R1/o1 系列的核心技术
+created: '2026-06-29'
+updated: '2026-06-29'
 ---
 
 # 实体：RLVR（可验证奖励强化学习）

@@ -1,8 +1,11 @@
 ---
-title: PPT 生成提示词
 tags:
-  - AIGC
+- AIGC
 confidence: high
+type: concept
+summary: 通过结构化提示词（尤其是基于 HTML/CSS 代码方式实现的工具）精细控制 PPT/视觉物料的风格、配色、排版、字体层级，从而批量生成统一风格的演示文稿或封面图。
+created: '2026-07-06'
+updated: '2026-07-06'
 ---
 
 # 概念_PPT生成提示词

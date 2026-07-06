@@ -1,10 +1,10 @@
 ---
 type: entity
 tags:
-  - RAG/retrieval
-summary: "当前业界主流的基于分层导航图结构的近似最近邻搜索（ANN）算法。"
-created: "2026-06-29"
-updated: "2026-07-01"
+- RAG/retrieval
+summary: 当前业界主流的基于分层导航图结构的近似最近邻搜索（ANN）算法。
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
 
@@ -34,4 +34,3 @@ HNSW（Hierarchical Navigable Small World）是当前业界最先进的基于图
 - 相关概念：[[概念_向量索引方法]]、[[概念_近似最近邻搜索]]、[[概念_向量数据库]]
 - 实体：[[实体_Elasticsearch]]、[[实体_Faiss]]、[[实体_Qdrant]]
 - 来源：[[向量数据库原理与应用全解析]]、[[ES企业AI搜索实践]]
-

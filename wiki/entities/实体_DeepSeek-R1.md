@@ -1,10 +1,12 @@
 ---
 type: entity
 tags:
-  - LLM/reasoning
-  - LLM/training/RL
-created: "2026-06-29"
-updated: "2026-06-29"
+- LLM/reasoning
+- LLM/training/RL
+created: '2026-06-29'
+updated: '2026-06-29'
+summary: DeepSeek-R1 是深度求索（DeepSeek）发布的推理模型，通过大规模强化学习（GRPO）激励推理能力，性能与 OpenAI-o1-1217
+  相当。
 ---
 
 # 实体：DeepSeek-R1

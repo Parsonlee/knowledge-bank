@@ -1,7 +1,10 @@
 ---
 type: concept
 tags:
-  - AI-Agent/prompt-engineering
+- AI-Agent/prompt-engineering
+summary: 阿里云服务领域总结的 Agent 构建与持续调优的渐进式路径，成本与效果随路径递增。
+created: '2026-07-06'
+updated: '2026-07-06'
 ---
 
 # 概念：Agent 调优路径
@@ -43,4 +46,3 @@ tags:
 | 部分可控 + 部分灵活 | Multi-Agent（内稳外自主 or 内自主外稳） |
 
 ## 参考来源
-

@@ -7,7 +7,7 @@ summary: Qwen3 Embedding 与 Rerank 原理剖析：三层嵌入流程、[CLS] vs
   的 LLM 化 yes/no 打分
 sources:
 - raw/为什么用Qwen3 embedding和rerank.md
-created: 2026-06-26
+created: '2026-06-26'
 updated: '2026-07-01'
 confidence: high
 ---

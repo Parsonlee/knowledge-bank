@@ -7,7 +7,7 @@ summary: ICLR2025 论文 DMQR-RAG：提出多样化多查询改写框架，四�
   RAG-Fusion
 sources:
 - raw/ICLR2025盲审论文DMQR-RAG：多样查询改写，查询P@5提升了14.4....md
-created: 2026-06-26
+created: '2026-06-26'
 updated: '2026-07-01'
 confidence: high
 ---

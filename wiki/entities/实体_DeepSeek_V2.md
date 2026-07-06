@@ -1,10 +1,11 @@
 ---
 type: entity
 tags:
-  - LLM/arch/attention
-summary: "DeepSeek V2/V3 提出的低秩 KV 压缩注意力机制，通过矩阵吸收技术使注意力计算时 K/V 不含头信息，兼具 MQA 显存效率和 MHA 表达能力"
-created: "2026-06-29"
-updated: "2026-06-29"
+- LLM/arch/attention
+summary: DeepSeek V2/V3 提出的低秩 KV 压缩注意力机制，通过矩阵吸收技术使注意力计算时 K/V 不含头信息，兼具 MQA 显存效率和 MHA
+  表达能力
+created: '2026-06-29'
+updated: '2026-06-29'
 ---
 
 # 实体：DeepSeek V2（MLA 首发）

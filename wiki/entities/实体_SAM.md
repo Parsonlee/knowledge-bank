@@ -1,12 +1,13 @@
 ---
 type: entity
 tags:
-  - CV
-summary: SAM（Segment Anything Model），Meta AI 的图像分割基础模型，支持点/框/掩码/文本 Prompt，在 SA-1B 数据集训练。
+- CV
+summary: SAM（Segment Anything Model），Meta AI 的图像分割基础模型，支持点/框/掩码/文本 Prompt，在 SA-1B
+  数据集训练。
 sources:
-  - "wiki/sources/SAM_Segment_Anything模型.md"
-created: "2026-06-26"
-updated: "2026-06-26"
+- wiki/sources/SAM_Segment_Anything模型.md
+created: '2026-06-26'
+updated: '2026-06-26'
 confidence: medium
 ---
 

@@ -1,10 +1,10 @@
 ---
 type: entity
 tags:
-  - LLM/arch/attention
-summary: "月之暗面开源的 48B 混合注意力模型，采用 KDA（线性）+ MLA（全注意力）3:1 混合，KV Cache 减少 75%，吞吐量提升 6.3×"
-created: "2026-06-29"
-updated: "2026-06-29"
+- LLM/arch/attention
+summary: 月之暗面开源的 48B 混合注意力模型，采用 KDA（线性）+ MLA（全注意力）3:1 混合，KV Cache 减少 75%，吞吐量提升 6.3×
+created: '2026-06-29'
+updated: '2026-06-29'
 ---
 
 # 实体：Kimi Linear

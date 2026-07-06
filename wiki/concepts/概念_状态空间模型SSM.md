@@ -1,10 +1,11 @@
 ---
 type: concept
 tags:
-  - LLM/arch/Mamba
-created: "2026-06-29"
-updated: "2026-06-29"
+- LLM/arch/Mamba
+created: '2026-06-29'
+updated: '2026-06-29'
 confidence: high
+summary: State Space Model，用于对序列数据建模的数学框架，源自控制理论（Kalman 1960）。
 ---
 
 # 状态空间模型 SSM

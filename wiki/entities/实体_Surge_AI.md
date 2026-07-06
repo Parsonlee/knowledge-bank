@@ -1,13 +1,14 @@
 ---
 type: entity
 tags:
-  - LLM/training/RL
-  - Infra/AI
-summary: Surge AI 是 RL 环境/数据公司，构建逼真 RL 环境（如 Corecraft 客服场景）并由领域专家贡献者（Surgers）"培育"。提出智能体能力金字塔框架，用 9 个模型 150 项任务评测智能体能力。
+- LLM/training/RL
+- Infra/AI
+summary: Surge AI 是 RL 环境/数据公司，构建逼真 RL 环境（如 Corecraft 客服场景）并由领域专家贡献者（Surgers）"培育"。提出智能体能力金字塔框架，用
+  9 个模型 150 项任务评测智能体能力。
 sources:
-  - "wiki/sources/RL环境与智能体能力金字塔.md"
-created: "2026-06-29"
-updated: "2026-06-29"
+- wiki/sources/RL环境与智能体能力金字塔.md
+created: '2026-06-29'
+updated: '2026-06-29'
 confidence: high
 ---
 

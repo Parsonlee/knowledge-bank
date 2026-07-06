@@ -1,12 +1,13 @@
 ---
 type: concept
 tags:
-  - LLM/training/RL
-summary: RLVR（Reinforcement Learning with Verifiable Rewards）是设计可自动验证结果正确与否的任务和奖励，让 RL 不过多依赖人类反馈、实现高度自主优化。是 RL Infra 提供商最直接和最强劲的增长动力。
+- LLM/training/RL
+summary: RLVR（Reinforcement Learning with Verifiable Rewards）是设计可自动验证结果正确与否的任务和奖励，让
+  RL 不过多依赖人类反馈、实现高度自主优化。是 RL Infra 提供商最直接和最强劲的增长动力。
 sources:
-  - "wiki/sources/RL_Infra行业全景.md"
-created: "2026-06-29"
-updated: "2026-06-29"
+- wiki/sources/RL_Infra行业全景.md
+created: '2026-06-29'
+updated: '2026-06-29'
 confidence: high
 ---
 

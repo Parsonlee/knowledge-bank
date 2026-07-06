@@ -1,10 +1,11 @@
 ---
 type: concept
 tags:
-  - LLM/arch/Mamba
-created: "2026-06-29"
-updated: "2026-06-29"
+- LLM/arch/Mamba
+created: '2026-06-29'
+updated: '2026-06-29'
 confidence: medium
+summary: Mamba 特有的推理范式：预先对专业数据集运行推理生成压缩 state，推理时直接注入，无需 few-shot 例子或微调。
 ---
 
 # State Swapping

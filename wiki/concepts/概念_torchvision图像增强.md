@@ -1,12 +1,13 @@
 ---
 type: concept
 tags:
-  - CV/data-augmentation
-summary: torchvision.transforms 提供的图像增强 API，包括 Resize、Grayscale、Normalize、RandomRotation、CenterCrop、RandomCrop、GaussianBlur、ColorJitter、RandomHorizontalFlip、RandomVerticalFlip 等内置操作。
+- CV/data-augmentation
+summary: torchvision.transforms 提供的图像增强 API，包括 Resize、Grayscale、Normalize、RandomRotation、CenterCrop、RandomCrop、GaussianBlur、ColorJitter、RandomHorizontalFlip、RandomVerticalFlip
+  等内置操作。
 sources:
-  - "wiki/sources/PyTorch图像增强方法总结.md"
-created: "2026-06-26"
-updated: "2026-06-26"
+- wiki/sources/PyTorch图像增强方法总结.md
+created: '2026-06-26'
+updated: '2026-06-26'
 confidence: high
 ---
 

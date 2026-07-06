@@ -1,10 +1,11 @@
 ---
 type: concept
 tags:
-  - LLM/arch/Mamba
-created: "2026-06-29"
-updated: "2026-06-29"
+- LLM/arch/Mamba
+created: '2026-06-29'
+updated: '2026-06-29'
 confidence: high
+summary: Mamba 的基本构建单元，类比 Transformer 的 decoder block，可堆叠多层。
 ---
 
 # Mamba Block 架构

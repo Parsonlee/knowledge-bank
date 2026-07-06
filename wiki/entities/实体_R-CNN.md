@@ -1,13 +1,13 @@
 ---
 type: entity
 tags:
-  - CV
-  - CV/detection
+- CV
+- CV/detection
 summary: R-CNN 系列（R-CNN / Fast R-CNN / Faster R-CNN），开创 Region-based 两阶段目标检测范式。
 sources:
-  - "wiki/sources/目标检测入门_经典模型.md"
-created: "2026-06-26"
-updated: "2026-06-26"
+- wiki/sources/目标检测入门_经典模型.md
+created: '2026-06-26'
+updated: '2026-06-26'
 confidence: high
 ---
 

@@ -19,7 +19,6 @@ date: 2025-06-25
 - **URL**：https://nickjanetakis.com/blog/switching-pip-to-uv-in-a-dockerized-flask-or-django-app
 
 
-> 来源：Nick Janetakis 博客，2025-06-17 更新
 
 ## 核心内容
 

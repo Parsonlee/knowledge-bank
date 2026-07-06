@@ -1,12 +1,13 @@
 ---
 type: concept
 tags:
-  - CV/arch
-summary: adaLN-Zero 是 DiT 中表现最优的条件注入方式——用时间步/类标签回归出归一化的缩放/移位参数及额外的缩放系数 α，初始化 α=0 使每个 Block 起始为恒等映射。
+- CV/arch
+summary: adaLN-Zero 是 DiT 中表现最优的条件注入方式——用时间步/类标签回归出归一化的缩放/移位参数及额外的缩放系数 α，初始化 α=0 使每个
+  Block 起始为恒等映射。
 sources:
-  - "wiki/sources/DiT_扩散模型与Transformer.md"
-created: "2026-06-26"
-updated: "2026-06-26"
+- wiki/sources/DiT_扩散模型与Transformer.md
+created: '2026-06-26'
+updated: '2026-06-26'
 confidence: high
 ---
 

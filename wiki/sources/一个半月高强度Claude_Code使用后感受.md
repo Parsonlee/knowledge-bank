@@ -6,7 +6,7 @@ summary: 王巍（喵神），知名 iOS/Unity 开发者，一个半月持续使
   AI 转换到命令行的思维变革、CC 的边界认知、Plan Mode 使用策略、小步迭代 vs 放飞自我、上下文管理、周边工具生态等全方位实
 sources:
 - raw/一个半月高强度Claude Code使用后感受.md
-created: 2026-06-30
+created: '2026-06-30'
 updated: '2026-07-01'
 confidence: high
 ---

@@ -1,7 +1,15 @@
+---
+tags:
+- RAG
+confidence: medium
+type: concept
+summary: Self-RAG（Self-Reflective RAG，自我反思 RAG）是一种让 LLM 生成初步答案后进行自我检查，并决定是否需要额外检索或调整答案结构的
+  RAG 生成策略。
+created: '2026-07-06'
+updated: '2026-07-06'
+---
 # 概念_Self-RAG
 
-> tags: RAG
-> confidence: medium
 
 ## 定义
 

@@ -12,9 +12,7 @@ confidence: high
 ---
 # RAG文本切分_JSON文档切分
 
-> 来源：哎呀AIYA 微信公众号《RAG文本切分五个层次3：不同文档切分之JSON(实战)》
 > URL：https://mp.weixin.qq.com/s?__biz=Mzk0NTcyNTMzNw==&mid=2247483975&idx=1&sn=c2de67cc8dcb53986ccfaed03547bab6
-> tags: RAG, RAG/chunking
 > Cubox 高亮：无
 
 ## 摘要

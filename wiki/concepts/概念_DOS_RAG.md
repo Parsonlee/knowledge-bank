@@ -1,7 +1,15 @@
+---
+tags:
+- RAG
+confidence: high
+type: concept
+summary: DOS RAG（Document's Original Structure RAG，保留文档原始结构的 RAG）是斯坦福 2025 论文提出的强基线方法。其与传统
+  RAG 的唯一区别在于排序步骤：放弃按相关性得分排序，改为将检索到的片段按其在原始文档中出现的先后顺序重新排列后输入 LLM。
+created: '2026-07-06'
+updated: '2026-07-06'
+---
 # 概念_DOS_RAG
 
-> tags: RAG
-> confidence: high
 
 ## 定义
 

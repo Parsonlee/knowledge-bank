@@ -1,7 +1,15 @@
+---
+tags:
+- RAG/eval
+confidence: high
+type: concept
+summary: RAG Diagnoser 是阿里提出的一套细粒度 RAG 评估体系，通过对模型输出每个环节的深入剖析，帮助团队从粗略判断转向精准定位问题根源，指导迭代优化。解决传统评估指标（BLEU、Rouge）无法精准捕捉
+  RAG 系统特殊缺陷的问题。
+created: '2026-07-06'
+updated: '2026-07-06'
+---
 # 概念_RAG_Diagnoser
 
-> tags: RAG/eval
-> confidence: high
 
 ## 定义
 

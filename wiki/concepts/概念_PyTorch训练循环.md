@@ -1,6 +1,15 @@
+---
+confidence: high
+type: concept
+tags:
+- Skill/python
+- DeepLearning
+summary: PyTorch 深度学习模型标准训练流程，包含训练/验证/预测三阶段及辅助组件。
+created: '2026-07-06'
+updated: '2026-07-06'
+---
 # 概念：PyTorch 训练循环
 
-> confidence: high
 
 ## 定义
 

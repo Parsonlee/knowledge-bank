@@ -1,7 +1,15 @@
+---
+tags:
+- RAG
+- RAG/query
+confidence: high
+type: concept
+summary: DMQR-RAG（Diverse Multi-Query Rewriting for RAG）是 ICLR2025 提出的多样化多查询改写框架。核心思想：基于不同信息层面设计多种改写策略，使每个改写结果提供独特信息，最大化检索文档覆盖率。
+created: '2026-07-06'
+updated: '2026-07-06'
+---
 # 概念_DMQR-RAG
 
-> tags: RAG, RAG/query
-> confidence: high
 
 ## 定义
 

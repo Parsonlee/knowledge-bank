@@ -1,9 +1,10 @@
 ---
 type: entity
 tags:
-  - AI-Agent
-created: "2026-06-29"
-updated: "2026-06-29"
+- AI-Agent
+created: '2026-06-29'
+updated: '2026-06-29'
+summary: AutoGen 是微软开源的多智能体对话框架，支持多个 Agent 相互对话协作来解决任务。
 ---
 
 # 实体：AutoGen

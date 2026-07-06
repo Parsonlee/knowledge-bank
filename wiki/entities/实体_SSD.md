@@ -1,14 +1,14 @@
 ---
 type: entity
 tags:
-  - CV
-  - CV/detection
+- CV
+- CV/detection
 summary: SSD（Single Shot MultiBox Detector），多尺度特征图单阶段检测器，兼顾速度与精度，后续单阶段工作的基础。
 sources:
-  - "wiki/sources/目标检测入门_经典模型.md"
-  - "wiki/sources/目标检测入门_特征复用与实时性.md"
-created: "2026-06-26"
-updated: "2026-06-26"
+- wiki/sources/目标检测入门_经典模型.md
+- wiki/sources/目标检测入门_特征复用与实时性.md
+created: '2026-06-26'
+updated: '2026-06-26'
 confidence: high
 ---
 

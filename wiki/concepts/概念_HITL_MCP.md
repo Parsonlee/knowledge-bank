@@ -1,10 +1,11 @@
 ---
 type: concept
 tags:
-  - AI-Agent/tools
-summary: "利用 MCP Notification 机制实现服务端 Human-in-the-Loop：send_inquiry 工具挂起等待人类答复，HTTP 接口接收回复，支持多端协同"
-created: "2026-06-29"
-updated: "2026-06-29"
+- AI-Agent/tools
+summary: 利用 MCP Notification 机制实现服务端 Human-in-the-Loop：send_inquiry 工具挂起等待人类答复，HTTP
+  接口接收回复，支持多端协同
+created: '2026-06-29'
+updated: '2026-06-29'
 ---
 
 # 概念_HITL_MCP

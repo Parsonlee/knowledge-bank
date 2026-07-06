@@ -1,9 +1,10 @@
 ---
 type: concept
 tags:
-  - LLM/arch/MoE
-created: "2026-06-29"
-updated: "2026-06-29"
+- LLM/arch/MoE
+created: '2026-06-29'
+updated: '2026-06-29'
+summary: Router（门控网络）是 MoE 架构的核心组件，决定每个 Token 被分配到哪些专家。
 ---
 
 # 概念_MoE_Router

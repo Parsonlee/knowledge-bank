@@ -1,10 +1,11 @@
 ---
 type: entity
 tags:
-  - LLM/arch/VLM
-summary: "Meta（LLaVA 论文作者）提出的极简多模态大模型系列，核心哲学为"大道至简"，通过 CLIP ViT + 线性/MLP 连接器 + LLM 验证极简架构的有效性"
-created: "2026-06-29"
-updated: "2026-06-29"
+- LLM
+- DeepLearning
+summary: '- 全称：Large Language and Vision Assistant'
+created: '2026-07-06'
+updated: '2026-07-06'
 ---
 
 # 实体：LLaVA

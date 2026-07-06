@@ -1,8 +1,11 @@
 ---
-title: HTML 代码方式生成视觉物料
 tags:
-  - AIGC
+- AIGC
 confidence: high
+type: concept
+summary: 不直接生成图片，而是让 LLM 输出 HTML + CSS（必要时 + JavaScript）代码，在浏览器中渲染为 PPT 页面或封面图，再导出/截图为最终物料。
+created: '2026-07-06'
+updated: '2026-07-06'
 ---
 
 # 概念_HTML代码方式生成视觉物料

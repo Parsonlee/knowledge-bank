@@ -1,10 +1,11 @@
 ---
 type: concept
 tags:
-  - AI-Agent/deep-research
+- AI-Agent/deep-research
 confidence: high
-created: "2026-06-29"
-updated: "2026-06-29"
+created: '2026-06-29'
+updated: '2026-06-29'
+summary: Deep Research Agent 是由 LLM 驱动的 AI 系统，核心能力在于集成了动态推理、自适应规划、多轮迭代的外部数据检索与工具使用，并能生成全面的综合性分析报告。
 ---
 
 # 概念：Deep Research Agent 定义与分类

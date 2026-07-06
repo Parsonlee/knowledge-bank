@@ -1,7 +1,11 @@
 ---
 type: concept
-tags: [创业]
+tags:
+- 创业
 confidence: high
+summary: 概念FoundationSprint 第三阶段（项目推进方法）使用的方案评估工具，用约 4 小时系统评估各执行路径。
+created: '2026-07-06'
+updated: '2026-07-06'
 ---
 
 # 概念_Magic Lenses 魔术镜头

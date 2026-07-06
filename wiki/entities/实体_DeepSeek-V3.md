@@ -1,9 +1,10 @@
 ---
 type: entity
 tags:
-  - LLM/arch/MoE
-created: "2026-06-29"
-updated: "2026-06-29"
+- LLM/arch/MoE
+created: '2026-06-29'
+updated: '2026-06-29'
+summary: DeepSeek 发布的旗舰密集 MoE 模型，架构创新（MLA + MoE）影响了后续多个顶级模型设计。
 ---
 
 # 实体_DeepSeek-V3

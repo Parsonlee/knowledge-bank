@@ -1,13 +1,13 @@
 ---
 type: entity
 tags:
-  - 创业
-  - AI-Agent
-summary: "前腾讯工程师、全职独立开发者，AI 搜索 ThinkAny 与 MCP.so 创始人。"
+- 创业
+- AI-Agent
+summary: 前腾讯工程师、全职独立开发者，AI 搜索 ThinkAny 与 MCP.so 创始人。
 sources:
-  - "wiki/sources/AI时代如何做独立开发.md"
-created: "2026-06-29"
-updated: "2026-07-01"
+- wiki/sources/AI时代如何做独立开发.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
 
@@ -39,4 +39,3 @@ confidence: high
 
 - [[概念_AI独立开发方法论]]
 - [[实体_MCP_so]]
-

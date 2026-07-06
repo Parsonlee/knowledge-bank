@@ -1,8 +1,11 @@
 ---
 type: concept
 tags:
-  - LLM/training/post-train
+- LLM/training/post-train
 confidence: high
+summary: Low-Rank Adaptation（LoRA）是一种参数高效微调（PEFT）方法，通过在预训练权重旁注入低秩分解矩阵，只训练极少量参数即可实现领域适配。
+created: '2026-07-06'
+updated: '2026-07-06'
 ---
 
 # 概念：LoRA 低秩适应微调

@@ -1,13 +1,13 @@
 ---
 type: entity
 tags:
-  - CV
-  - CV/detection
+- CV
+- CV/detection
 summary: FPN（Feature Pyramid Networks），自顶向下多尺度特征金字塔，成为检测近乎标配组件。
 sources:
-  - "wiki/sources/目标检测入门_特征复用与实时性.md"
-created: "2026-06-26"
-updated: "2026-06-26"
+- wiki/sources/目标检测入门_特征复用与实时性.md
+created: '2026-06-26'
+updated: '2026-06-26'
 confidence: high
 ---
 

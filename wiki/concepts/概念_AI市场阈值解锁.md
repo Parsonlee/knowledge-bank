@@ -1,10 +1,10 @@
 ---
 type: concept
 tags:
-  - 创业
-summary: "AI 市场按序爆发：模型性能突破关键阈值才解锁新应用品类，把握时机与执行同等重要"
-created: "2026-06-30"
-updated: "2026-06-30"
+- 创业
+summary: AI 市场按序爆发：模型性能突破关键阈值才解锁新应用品类，把握时机与执行同等重要
+created: '2026-06-30'
+updated: '2026-06-30'
 confidence: high
 ---
 

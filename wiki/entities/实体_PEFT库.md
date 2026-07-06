@@ -1,8 +1,11 @@
 ---
 type: entity
 tags:
-  - LLM/training/post-train
+- LLM/training/post-train
 confidence: high
+summary: HuggingFace 开源的参数高效微调库，集成多种 PEFT 方法。
+created: '2026-07-06'
+updated: '2026-07-06'
 ---
 
 # 实体：PEFT 库（HuggingFace Parameter-Efficient Fine-Tuning）

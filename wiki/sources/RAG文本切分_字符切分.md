@@ -12,9 +12,7 @@ confidence: high
 ---
 # RAG文本切分的五个层次1：字符切分基础
 
-> 来源：哎呀AIYA 微信公众号《RAG文本切分的五个层次1：字符切分基础(实战)》
 > URL：https://mp.weixin.qq.com/s/SnfhuQyRmjQxDP3n5n3Upw
-> tags: RAG, RAG/chunking
 > Cubox 高亮：无
 
 ## 摘要

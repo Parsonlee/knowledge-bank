@@ -1,11 +1,11 @@
 ---
 type: concept
 tags:
-  - LLM
-  - 面试
-summary: "LLM 面试高频知识点体系：架构基础/微调方法/推理技术/数学原理五大模块"
-created: "2026-06-29"
-updated: "2026-06-29"
+- LLM
+- 面试
+summary: LLM 面试高频知识点体系：架构基础/微调方法/推理技术/数学原理五大模块
+created: '2026-06-29'
+updated: '2026-06-29'
 confidence: high
 ---
 

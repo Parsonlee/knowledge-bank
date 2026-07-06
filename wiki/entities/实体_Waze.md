@@ -1,12 +1,12 @@
 ---
 type: entity
 tags:
-  - Life
-summary: "以色列创立、被 Google 收购的众包实时导航地图应用，中东地区渗透率领跑。"
+- Life
+summary: 以色列创立、被 Google 收购的众包实时导航地图应用，中东地区渗透率领跑。
 sources:
-  - "wiki/sources/迪拜华人开车完全指南.md"
-created: "2026-06-29"
-updated: "2026-07-01"
+- wiki/sources/迪拜华人开车完全指南.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
 
@@ -30,4 +30,3 @@ Waze 是一款以导航为核心功能的地图 APP，成立于 2006 年，来�
 ## 关联
 
 - [[概念_迪拜驾驶文化]]
-

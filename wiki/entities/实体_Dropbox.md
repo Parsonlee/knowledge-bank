@@ -1,8 +1,12 @@
 ---
 type: entity
 tags:
-  - AI-Agent/eval
-  - AI-Agent/prompt-engineering
+- AI-Agent/eval
+- AI-Agent/prompt-engineering
+summary: Dropbox 是一家全球闻名的美股上市公司，提供先进的云端文件存储、内容同步与智能化协作平台服务。近年来持续加大在 AI 与智能工作空间领域的研发投入，推出具备跨库搜索与深度总结能力的智能客服与生产力助手
+  Dash Chat。
+created: '2026-07-06'
+updated: '2026-07-06'
 ---
 
 # 实体：Dropbox

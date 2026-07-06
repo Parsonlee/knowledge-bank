@@ -1,9 +1,11 @@
 ---
-title: dufte
 type: entity
 confidence: high
 tags:
-  - Skill/data-analysis
+- Skill/data-analysis
+summary: dufte 是一个 Python 库，通过简短代码自动改造 matplotlib 图表的默认样式，使其具备简洁商务风格。名称来自德语"dufte"（意为"很棒的/酷的"）。
+created: '2026-07-06'
+updated: '2026-07-06'
 ---
 
 # 实体：dufte

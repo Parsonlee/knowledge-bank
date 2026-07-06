@@ -1,10 +1,10 @@
 ---
 type: entity
 tags:
-  - RAG/embedding
-summary: "阿里基于 Qwen3 训练的 SOTA 嵌入（Embedding）与重排模型系列。"
-created: "2026-06-29"
-updated: "2026-07-01"
+- RAG/embedding
+summary: 阿里基于 Qwen3 训练的 SOTA 嵌入（Embedding）与重排模型系列。
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
 
@@ -35,4 +35,3 @@ Qwen3 Embedding 与 Qwen3 Reranker 是基于 Qwen3 大语言模型训练的嵌�
 - 相关概念：[[概念_Instruct_Embedding]]、[[概念_重排序Rerank]]、[[概念_Embedding与向量检索]]
 - 实体：[[实体_Sentence_Transformers]]
 - 来源：[[为什么用Qwen3_embedding和rerank]]
-

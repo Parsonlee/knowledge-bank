@@ -1,10 +1,11 @@
 ---
 type: concept
 tags:
-  - LLM/training/post-train
-  - DeepLearning
-created: "2026-06-29"
-updated: "2026-06-29"
+- LLM/training/post-train
+- DeepLearning
+created: '2026-06-29'
+updated: '2026-06-29'
+summary: 一种最大化数据多样性的贪婪采样算法，目标是在高维空间中选出分布尽量均匀的样本子集。
 ---
 
 # 概念：K-Center-Greedy 算法

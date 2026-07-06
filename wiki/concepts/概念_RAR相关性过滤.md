@@ -1,7 +1,14 @@
+---
+tags:
+- RAG
+confidence: high
+type: concept
+summary: RAR（Retrieval-Augmented Relevance，检索增强相关性）是一种生成控制优化方法，通过赋予大模型判断检索结果"不相关"的能力，过滤掉虽然被召回但无法解决用户问题的参考信息，减少噪声对生成质量的干扰。
+created: '2026-07-06'
+updated: '2026-07-06'
+---
 # 概念_RAR相关性过滤
 
-> tags: RAG
-> confidence: high
 
 ## 定义
 

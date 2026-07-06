@@ -1,7 +1,11 @@
 ---
-title: "实体_CosyVoice"
-tags: [TTS]
+tags:
+- TTS
 confidence: high
+type: entity
+summary: 开源 TTS 模型，由阿里通义语音团队开发，实体淘天AIGC团队 在数字人直播 TTS 系统 V4 中融合使用。
+created: '2026-07-06'
+updated: '2026-07-06'
 ---
 
 # CosyVoice

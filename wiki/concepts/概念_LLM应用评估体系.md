@@ -1,7 +1,10 @@
 ---
 type: concept
 tags:
-  - AI-Agent/coding
+- AI-Agent/coding
+summary: LLM 应用评估体系是指在大模型应用开发全生命周期中，对 Prompt/RAG/Agent 输出质量进行系统性、可重复评估的方法论与工具集合。
+created: '2026-07-06'
+updated: '2026-07-06'
 ---
 
 # 概念：LLM 应用评估体系

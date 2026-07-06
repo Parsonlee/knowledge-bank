@@ -1,9 +1,10 @@
 ---
 type: concept
 tags:
-  - AI-Agent
-created: "2026-06-29"
-updated: "2026-06-29"
+- AI-Agent
+created: '2026-06-29'
+updated: '2026-06-29'
+summary: 基于自主性和适用场景，AI Agent 可分为四种主要类型。
 ---
 
 # 概念：AI Agent 四种类型

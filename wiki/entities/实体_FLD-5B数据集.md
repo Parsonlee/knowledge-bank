@@ -1,11 +1,11 @@
 ---
 type: entity
 tags:
-  - LLM/Multimodal
-  - CV/arch
-summary: "Florence-2 配套的超大规模视觉标注数据集，含 1.26 亿图像、54 亿次标注，覆盖文本/区域-文本对/文本-短语-区域三元组三种类型"
-created: "2026-06-29"
-updated: "2026-06-29"
+- LLM/Multimodal
+- CV/arch
+summary: Florence-2 配套的超大规模视觉标注数据集，含 1.26 亿图像、54 亿次标注，覆盖文本/区域-文本对/文本-短语-区域三元组三种类型
+created: '2026-06-29'
+updated: '2026-06-29'
 ---
 
 # 实体：FLD-5B 数据集

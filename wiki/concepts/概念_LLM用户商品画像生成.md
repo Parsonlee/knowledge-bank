@@ -1,7 +1,11 @@
 ---
-title: "概念_LLM用户商品画像生成"
-tags: [Recommendation]
+tags:
+- Recommendation
 confidence: high
+type: concept
+summary: 实体RLMRec 中利用 LLM 为用户和商品生成高质量文本画像的无偏流程，为互信息对齐提供文本侧信号。
+created: '2026-07-06'
+updated: '2026-07-06'
 ---
 
 # LLM 用户商品画像生成
@@ -38,4 +42,3 @@ confidence: high
 - 原论文使用 OpenAI text-embedding-ada-002
 
 ## 来源
-

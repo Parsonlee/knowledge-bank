@@ -1,14 +1,14 @@
 ---
 type: concept
 tags:
-  - CV
-  - CV/detection
+- CV
+- CV/detection
 summary: NMS（非极大抑制）用于过滤重叠检测框；Soft NMS 改为按 IoU 惩罚置信度而非硬性丢弃。
 sources:
-  - "wiki/sources/目标检测入门_经典模型.md"
-  - "wiki/sources/目标检测入门_评测与训练技巧.md"
-created: "2026-06-26"
-updated: "2026-06-26"
+- wiki/sources/目标检测入门_经典模型.md
+- wiki/sources/目标检测入门_评测与训练技巧.md
+created: '2026-06-26'
+updated: '2026-06-26'
 confidence: high
 ---
 

@@ -1,7 +1,10 @@
 ---
 type: entity
 tags:
-  - AI-Agent/eval
+- AI-Agent/eval
+summary: Simran Jumani 是知名云存储与协同科技公司 实体Dropbox 的机器学习工程专家（Machine Learning Engineer），长期致力于大语言模型在企业级生产系统中的评估架构设计、自动化反馈闭环与提示词优化实战。
+created: '2026-07-06'
+updated: '2026-07-06'
 ---
 
 # 实体：Simran Jumani

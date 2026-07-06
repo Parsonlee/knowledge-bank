@@ -7,7 +7,7 @@ summary: 从 BM25 到 Multi-Vector 的 6 种 Embedding 演进路线：Sparse/Den
   对比选型
 sources:
 - raw/从BM25到Multi-Vector：6种Embedding演进路线.md
-created: 2026-06-26
+created: '2026-06-26'
 updated: '2026-07-01'
 confidence: high
 ---

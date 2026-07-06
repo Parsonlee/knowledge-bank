@@ -1,10 +1,10 @@
 ---
 type: concept
 tags:
-  - 创业
-summary: "AI 初创 GTM 倒漏斗：PLG 先行验证价值，销售后置将已存在需求正式化"
-created: "2026-06-30"
-updated: "2026-06-30"
+- 创业
+summary: AI 初创 GTM 倒漏斗：PLG 先行验证价值，销售后置将已存在需求正式化
+created: '2026-06-30'
+updated: '2026-06-30'
 confidence: high
 ---
 

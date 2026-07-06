@@ -1,9 +1,13 @@
 ---
 type: source
-tags: [AI-Agent/tools, AI-Agent/skill]
-summary: "评测腾讯开源的本地桥接工具 BrowserSkill，通过 CLI 与现有浏览器扩展通信，赋予 AI Agent 复用用户真实登录态进行浏览器操作的能力。"
-sources: ["raw/实测腾讯开源的 BrowserSkill：让 AI 直接用你登录好的浏览器.md"]
-updated: "2026-07-02"
+tags:
+- AI-Agent/tools
+- AI-Agent/skill
+summary: 评测腾讯开源的本地桥接工具 BrowserSkill，通过 CLI 与现有浏览器扩展通信，赋予 AI Agent 复用用户真实登录态进行浏览器操作的能力。
+sources:
+- raw/实测腾讯开源的 BrowserSkill：让 AI 直接用你登录好的浏览器.md
+updated: '2026-07-02'
+created: '2026-07-02'
 ---
 
 # 实测腾讯开源的 BrowserSkill：让 AI 直接用你登录好的浏览器

@@ -1,7 +1,15 @@
+---
+tags:
+- RAG
+- RAG/embedding
+confidence: high
+type: concept
+summary: Quantized Embedding（压缩版稠密向量）通过量化把高精度浮点向量压缩为低位宽整数，降低存储和内存占用。
+created: '2026-07-06'
+updated: '2026-07-06'
+---
 # 概念_Quantized_Embedding
 
-> tags: RAG, RAG/embedding
-> confidence: high
 
 ## 定义
 

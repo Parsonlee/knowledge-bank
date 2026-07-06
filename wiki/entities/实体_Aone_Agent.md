@@ -1,8 +1,10 @@
 ---
 tags:
-  - AI-Agent/coding
-created: "2026-06-29"
-updated: "2026-06-29"
+- AI-Agent/coding
+created: '2026-06-29'
+updated: '2026-06-29'
+type: entity
+summary: 阿里巴巴代码平台开发的通用 Agent 产品，类 Devin，目标实现全研发全生命周期提效。
 ---
 
 # 实体：Aone Agent（阿里通用 Agent）

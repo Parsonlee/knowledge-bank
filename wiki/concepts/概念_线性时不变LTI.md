@@ -1,10 +1,11 @@
 ---
 type: concept
 tags:
-  - LLM/arch/Mamba
-created: "2026-06-29"
-updated: "2026-06-29"
+- LLM/arch/Mamba
+created: '2026-06-29'
+updated: '2026-06-29'
 confidence: high
+summary: Linear Time Invariance，传统 SSM（包括 S4）的一个核心属性，也是其主要局限所在。
 ---
 
 # 线性时不变 LTI

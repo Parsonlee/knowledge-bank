@@ -1,10 +1,11 @@
 ---
 type: entity
 tags:
-  - AI-Agent/tools
-summary: "Cline 是 VS Code 的 AI 编码扩展，原生支持 MCP Client，可通过配置 npx 命令接入任意 MCP Server，是 MCP 数据库集成的常用 Host 之一"
-created: "2026-06-29"
-updated: "2026-06-29"
+- AI-Agent/tools
+summary: Cline 是 VS Code 的 AI 编码扩展，原生支持 MCP Client，可通过配置 npx 命令接入任意 MCP Server，是 MCP
+  数据库集成的常用 Host 之一
+created: '2026-06-29'
+updated: '2026-06-29'
 ---
 
 ## 简介
@@ -31,4 +32,3 @@ Cline（前身 Claude-Dev）是 VS Code 的开源 AI 编码助手扩展，原生
 ```
 
 ## 参考来源
-

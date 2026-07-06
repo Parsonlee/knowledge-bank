@@ -1,10 +1,10 @@
 ---
 type: entity
 tags:
-  - 创业
-summary: "AI 邮件客户端，PMF 引擎方法论标杆，2025 ARR 3500 万美元，被 Grammarly 收购"
-created: "2026-06-30"
-updated: "2026-06-30"
+- 创业
+summary: AI 邮件客户端，PMF 引擎方法论标杆，2025 ARR 3500 万美元，被 Grammarly 收购
+created: '2026-06-30'
+updated: '2026-06-30'
 confidence: high
 ---
 

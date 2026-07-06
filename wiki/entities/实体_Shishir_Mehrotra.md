@@ -1,10 +1,10 @@
 ---
 type: entity
 tags:
-  - 创业
-summary: "Shishir Mehrotra：Coda 创始人，新 Superhuman 集团 CEO，Bundle 理论实践者"
-created: "2026-06-30"
-updated: "2026-06-30"
+- 创业
+summary: Shishir Mehrotra：Coda 创始人，新 Superhuman 集团 CEO，Bundle 理论实践者
+created: '2026-06-30'
+updated: '2026-06-30'
 confidence: high
 ---
 

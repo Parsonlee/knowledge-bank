@@ -12,10 +12,7 @@ confidence: high
 ---
 # PyTorch 训练代码模板
 
-> 来源：实操教程 | 深度学习pytorch训练代码模板(个人习惯)（视学算法/wfnian）
 > URL：https://mp.weixin.qq.com/s?__biz=MzU4NjIxODMyOQ==&mid=2247511189
-> tags: DeepLearning, Skill/python/pytorch
-> confidence: high
 
 ## 摘要
 

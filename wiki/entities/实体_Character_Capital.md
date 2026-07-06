@@ -1,7 +1,11 @@
 ---
 type: entity
-tags: [创业]
+tags:
+- 创业
 confidence: high
+summary: Character Capital — 实体JakeKnapp 与 John Zeratsky 离开 Google Ventures 后共同创立的风投公司。
+created: '2026-07-06'
+updated: '2026-07-06'
 ---
 
 # 实体_Character Capital

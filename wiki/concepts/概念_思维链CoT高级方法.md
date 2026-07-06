@@ -1,10 +1,11 @@
 ---
 type: concept
 tags:
-  - LLM/reasoning
-  - AI-Agent/prompt-engineering
-created: "2026-06-29"
-updated: "2026-06-29"
+- LLM/reasoning
+- AI-Agent/prompt-engineering
+created: '2026-06-29'
+updated: '2026-06-29'
+summary: '- 来源：DeepMind Brain 团队 2022 年论文'
 ---
 
 # 概念：思维链 CoT 高级方法

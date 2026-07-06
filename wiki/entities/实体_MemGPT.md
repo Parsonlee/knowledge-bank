@@ -1,7 +1,11 @@
 ---
 type: entity
 tags:
-  - AI-Agent/memory
+- AI-Agent/memory
+summary: 'MemGPT（Memory GPT）是论文《MemGPT: Towards LLMs as Operating Systems》（arXiv:2310.08560）提出的
+  LLM 记忆管理系统，由 Letta AI 开发。'
+created: '2026-07-06'
+updated: '2026-07-06'
 ---
 
 # 实体：MemGPT

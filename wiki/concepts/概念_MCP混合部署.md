@@ -1,10 +1,10 @@
 ---
 type: concept
 tags:
-  - AI-Agent/tools
-summary: "小模型负责 MCP 工具选择（节省 token），大模型负责结果生成（保证质量），兼顾成本与效果"
-created: "2026-06-29"
-updated: "2026-06-29"
+- AI-Agent/tools
+summary: 小模型负责 MCP 工具选择（节省 token），大模型负责结果生成（保证质量），兼顾成本与效果
+created: '2026-06-29'
+updated: '2026-06-29'
 ---
 
 # 概念_MCP混合部署
@@ -43,4 +43,3 @@ MCP 工具选择本质是 prompt engineering：任何模型只要能理解工具
 - [[实体_Qwen3]]
 
 ## 来源
-

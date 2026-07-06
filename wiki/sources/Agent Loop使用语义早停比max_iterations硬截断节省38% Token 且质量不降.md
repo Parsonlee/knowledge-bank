@@ -1,9 +1,14 @@
 ---
 type: source
-tags: [AI-Agent/coding, AI-Agent/loop-engineering]
-summary: "提出语义早停（Semantic Early-Stopping）方法，通过余弦距离收敛判断 Agent Loop 终止，替代硬迭代上限，实测节省 38% Token 且保证生成质量。"
-sources: ["raw/Agent Loop使用语义早停比max_iterations硬截断节省38% Token 且质量不降.md"]
-updated: "2026-07-02"
+tags:
+- AI-Agent/coding
+- AI-Agent/loop-engineering
+summary: 提出语义早停（Semantic Early-Stopping）方法，通过余弦距离收敛判断 Agent Loop 终止，替代硬迭代上限，实测节省 38%
+  Token 且保证生成质量。
+sources:
+- raw/Agent Loop使用语义早停比max_iterations硬截断节省38% Token 且质量不降.md
+updated: '2026-07-02'
+created: '2026-07-02'
 ---
 
 # Agent Loop使用语义早停比max_iterations硬截断节省38% Token 且质量不降

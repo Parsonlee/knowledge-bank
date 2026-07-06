@@ -1,11 +1,11 @@
 ---
 type: entity
 tags:
-  - Skill/data-analysis
-  - Skill/python
-summary: "Python 数据分析核心库，基于 NumPy 构建，提供 Series/DataFrame 数据结构及完整的数据操作与可视化能力。"
-created: "2026-06-30"
-updated: "2026-06-30"
+- Skill/data-analysis
+- Skill/python
+summary: Python 数据分析核心库，基于 NumPy 构建，提供 Series/DataFrame 数据结构及完整的数据操作与可视化能力。
+created: '2026-06-30'
+updated: '2026-06-30'
 confidence: high
 ---
 

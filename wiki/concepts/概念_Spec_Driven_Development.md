@@ -1,9 +1,10 @@
 ---
 type: concept
 tags:
-  - AI-Agent/context-engineering
-created: "2026-06-29"
-updated: "2026-06-29"
+- AI-Agent/context-engineering
+created: '2026-06-29'
+updated: '2026-06-29'
+summary: 相对于 Vibe Coding（Prompt → Code），规范驱动开发先生成结构化规范再生成代码：
 ---
 
 # 概念：Spec-Driven Development（规范驱动开发）

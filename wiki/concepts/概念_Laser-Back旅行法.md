@@ -1,6 +1,16 @@
+---
+confidence: high）
+sources:
+- wiki/sources/50年旅行经验之谈_Kevin_Kelly.md
+type: concept
+tags:
+- Life
+summary: Kevin Kelly 打磨多年的两周假期优化方法，又称"激光直达 + 蜿蜒返回"。
+created: '2026-07-06'
+updated: '2026-07-06'
+---
 # 概念_Laser-Back旅行法
 
-> 出处：[[50年旅行经验之谈_Kevin_Kelly]]（confidence: high）
 
 Kevin Kelly 打磨多年的两周假期优化方法，又称"激光直达 + 蜿蜒返回"。
 

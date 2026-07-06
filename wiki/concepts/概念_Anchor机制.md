@@ -1,14 +1,14 @@
 ---
 type: concept
 tags:
-  - CV
-  - CV/detection
+- CV
+- CV/detection
 summary: 在特征图位置上预设多种尺度与宽高比的参考框（Anchor），作为检测回归基准。
 sources:
-  - "wiki/sources/目标检测入门_经典模型.md"
-  - "wiki/sources/目标检测入门_评测与训练技巧.md"
-created: "2026-06-26"
-updated: "2026-06-26"
+- wiki/sources/目标检测入门_经典模型.md
+- wiki/sources/目标检测入门_评测与训练技巧.md
+created: '2026-06-26'
+updated: '2026-06-26'
 confidence: high
 ---
 

@@ -1,10 +1,11 @@
 ---
 type: concept
 tags:
-  - LLM/arch/Mamba
-created: "2026-06-29"
-updated: "2026-06-29"
+- LLM/arch/Mamba
+created: '2026-06-29'
+updated: '2026-06-29'
 confidence: high
+summary: 将连续时间 SSM 转换为可处理离散序列（如文本 token）的过程。
 ---
 
 # SSM 离散化

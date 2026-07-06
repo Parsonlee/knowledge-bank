@@ -1,8 +1,11 @@
 ---
 type: concept
 tags:
-  - LLM/hallucination
+- LLM/hallucination
 confidence: high
+summary: 翁荔（Lilian Weng）将 LLM 幻觉具体化为：模型输出内容是虚构的，并且不基于所提供的上下文或世界知识。
+created: '2026-07-06'
+updated: '2026-07-06'
 ---
 
 # 概念：LLM 幻觉——外在幻觉与上下文内幻觉

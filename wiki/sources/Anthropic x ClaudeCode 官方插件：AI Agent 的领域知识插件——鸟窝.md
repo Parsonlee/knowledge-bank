@@ -1,9 +1,13 @@
 ---
 type: source
-tags: [AI-Agent/skill, AI-Agent/coding]
-summary: "解析 Anthropic 官方为 Claude Code 开发的 13 个第一方领域知识插件，说明如何将静态规范转化为动态运行时检查与分阶段工程引导。"
-sources: ["raw/Anthropic x ClaudeCode 官方插件：AI Agent 的领域知识插件——鸟窝.md"]
-updated: "2026-07-02"
+tags:
+- AI-Agent/skill
+- AI-Agent/coding
+summary: 解析 Anthropic 官方为 Claude Code 开发的 13 个第一方领域知识插件，说明如何将静态规范转化为动态运行时检查与分阶段工程引导。
+sources:
+- raw/Anthropic x ClaudeCode 官方插件：AI Agent 的领域知识插件——鸟窝.md
+updated: '2026-07-02'
+created: '2026-07-02'
 ---
 
 # Anthropic x ClaudeCode 官方插件：AI Agent 的领域知识插件——鸟窝

@@ -1,7 +1,14 @@
+---
+tags:
+- RAG
+confidence: high
+type: concept
+summary: 北大 PKU-DAIR 综述根据提升方法的目标，将现有 RAG 增强方法分为五类：对输入、检索过程、生成过程、结果的提升，以及对整个流程的优化。
+created: '2026-07-06'
+updated: '2026-07-06'
+---
 # 概念_RAG五类提升方法
 
-> tags: RAG
-> confidence: high
 
 ## 定义
 

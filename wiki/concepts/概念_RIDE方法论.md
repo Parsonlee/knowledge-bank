@@ -1,10 +1,10 @@
 ---
 type: concept
 tags:
-  - 创业
-summary: "阿里云 RIDE 大模型 E2E 落地方法论：Reorganize/Identify/Define/Execute 四步"
-created: "2026-06-30"
-updated: "2026-06-30"
+- 创业
+summary: 阿里云 RIDE 大模型 E2E 落地方法论：Reorganize/Identify/Define/Execute 四步
+created: '2026-06-30'
+updated: '2026-06-30'
 confidence: high
 ---
 
@@ -40,4 +40,3 @@ confidence: high
 - E2E 归因：每个 Badcase 归因到具体环节
 
 ## 来源
-

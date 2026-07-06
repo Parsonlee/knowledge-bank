@@ -1,9 +1,10 @@
 ---
 type: entity
 tags:
-  - AI-Agent
-created: "2026-06-29"
-updated: "2026-06-29"
+- AI-Agent
+created: '2026-06-29'
+updated: '2026-06-29'
+summary: MetaGPT 是一个开源 AI Agent 框架，模仿传统软件公司结构，通过角色扮演实现多 Agent 协作。
 ---
 
 # 实体：MetaGPT

@@ -1,10 +1,12 @@
 ---
 type: concept
 tags:
-  - LLM/tokenization
+- LLM/tokenization
 confidence: high
-created: "2026-06-29"
-updated: "2026-06-29"
+created: '2026-06-29'
+updated: '2026-06-29'
+summary: 通过向量量化（Vector Quantization, VQ）等技术，将图像/音频/视频/图结构等高维连续输入压缩为紧凑的离散 token，使其与
+  LLM 原生 token 机制无缝衔接，实现多模态统一建模。
 ---
 
 # 概念：Discrete Tokenization（离散化 Token 化）

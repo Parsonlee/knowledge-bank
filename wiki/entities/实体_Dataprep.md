@@ -1,11 +1,11 @@
 ---
 type: entity
 tags:
-  - Skill/data-analysis
-  - Skill/python
-summary: "开源 Python EDA 包，基于 Pandas + Dask，10 个自动 EDA 工具中运行速度最快，几秒内生成完整分析报告。"
-created: "2026-06-30"
-updated: "2026-06-30"
+- Skill/data-analysis
+- Skill/python
+summary: 开源 Python EDA 包，基于 Pandas + Dask，10 个自动 EDA 工具中运行速度最快，几秒内生成完整分析报告。
+created: '2026-06-30'
+updated: '2026-06-30'
 confidence: high
 ---
 

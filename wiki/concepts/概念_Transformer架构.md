@@ -1,6 +1,15 @@
+---
+confidence: high
+type: concept
+tags:
+- LLM
+- DeepLearning
+summary: Google 2017 提出的深度学习模型，通过自注意力机制捕捉序列中各元素之间关系。当前大语言模型的主流架构。
+created: '2026-07-06'
+updated: '2026-07-06'
+---
 # 概念：Transformer 架构
 
-> confidence: high
 
 ## 定义
 
@@ -28,4 +37,3 @@ Google 2017 提出的深度学习模型，通过自注意力机制捕捉序列�
 - 文字接龙：用分类策略解决生成式问题
 
 ## 来源
-

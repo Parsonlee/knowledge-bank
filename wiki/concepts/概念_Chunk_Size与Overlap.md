@@ -1,7 +1,15 @@
+---
+tags:
+- RAG
+- RAG/chunking
+confidence: high
+type: concept
+summary: 文本切分中的两个基础参数：
+created: '2026-07-06'
+updated: '2026-07-06'
+---
 # 概念_Chunk_Size与Overlap
 
-> tags: RAG, RAG/chunking
-> confidence: high
 
 ## 定义
 

@@ -1,7 +1,7 @@
 ---
 type: source
 tags:
-  - AI-Agent/tools
+- AI-Agent/tools
 summary: 阿里云工程师以架构师视角从 SDK 源码和开源项目剖析 MCP 本质：CHS 三组件而非 CS，Server/Client 是模型无关 RPC 中间件，Host
   才是 AI 智能承载者
 sources:

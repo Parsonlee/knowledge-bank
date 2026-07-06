@@ -1,10 +1,11 @@
 ---
 type: concept
 tags:
-  - LLM/training/post-train
-  - LLM/training/RL
-created: "2026-06-29"
-updated: "2026-06-29"
+- LLM/training/post-train
+- LLM/training/RL
+created: '2026-06-29'
+updated: '2026-06-29'
+summary: '- on-policy 数据：训练数据由当前模型策略（当前参数）在训练时实时采样生成，数据分布与模型当前行为一致'
 ---
 
 # 概念：on-policy 与 off-policy 数据

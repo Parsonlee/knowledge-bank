@@ -1,8 +1,11 @@
 ---
-title: "概念_Python进阶特性"
 tags:
-  - Skill/python
+- Skill/python
 confidence: high
+type: concept
+summary: Python 标准库中鲜为人知但实用的进阶特性，教程中很少提及，能干净地解决实际工程问题。
+created: '2026-07-06'
+updated: '2026-07-06'
 ---
 
 # 概念_Python进阶特性

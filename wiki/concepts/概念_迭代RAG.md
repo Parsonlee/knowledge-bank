@@ -1,7 +1,14 @@
+---
+tags:
+- RAG
+confidence: high
+type: concept
+summary: 迭代 RAG（Iterative RAG）是指迭代地进行检索和生成。生成器当前轮次输出在一定程度上反映其仍然缺乏的知识，检索器可检索缺失信息作为下一轮上下文信息，提高下一轮生成质量。循环迭代直到生成内容达到标准。
+created: '2026-07-06'
+updated: '2026-07-06'
+---
 # 概念_迭代RAG
 
-> tags: RAG
-> confidence: high
 
 ## 定义
 

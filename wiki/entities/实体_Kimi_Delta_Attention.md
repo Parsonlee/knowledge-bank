@@ -1,10 +1,11 @@
 ---
 type: entity
 tags:
-  - LLM/arch/attention
-summary: "Kimi Linear 的核心注意力机制，基于 Gated DeltaNet 改进，将 scalar gate 升级为 channel-wise gate，计算效率比 DPLR 提升约 100%"
-created: "2026-06-29"
-updated: "2026-06-29"
+- LLM/arch/attention
+summary: Kimi Linear 的核心注意力机制，基于 Gated DeltaNet 改进，将 scalar gate 升级为 channel-wise
+  gate，计算效率比 DPLR 提升约 100%
+created: '2026-06-29'
+updated: '2026-06-29'
 ---
 
 # 实体：Kimi Delta Attention（KDA）

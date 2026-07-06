@@ -12,10 +12,7 @@ confidence: high
 ---
 # Anthropic 多智能体研究系统构建实践
 
-> 来源：Anthropic 官方技术博客
 > URL：https://www.anthropic.com/engineering/built-multi-agent-research-system
-> tags: AI-Agent/multi-agent, AI-Agent/deep-research
-> confidence: high
 
 ## 摘要
 

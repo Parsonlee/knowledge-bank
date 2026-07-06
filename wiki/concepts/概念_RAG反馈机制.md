@@ -1,7 +1,14 @@
+---
+tags:
+- RAG
+confidence: high
+type: concept
+summary: RAG 反馈机制（Feedback Loop）是一种使 RAG 系统从静态变为动态自适应的策略。通过收集用户反馈，持续优化检索结果的相关性和回答质量。
+created: '2026-07-06'
+updated: '2026-07-06'
+---
 # 概念_RAG反馈机制
 
-> tags: RAG
-> confidence: high
 
 ## 定义
 

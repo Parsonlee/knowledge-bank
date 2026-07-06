@@ -1,13 +1,14 @@
 ---
 type: entity
 tags:
-  - DeepLearning
-  - LLM/arch/attention
-summary: FlashAttention 是 Tri Dao 等提出的精确、I/O 感知注意力实现，已成长上下文 LLM 训练/推理的行业标准；迭代至 FA-3 利用 Hopper 新指令与 FP8。
+- DeepLearning
+- LLM/arch/attention
+summary: FlashAttention 是 Tri Dao 等提出的精确、I/O 感知注意力实现，已成长上下文 LLM 训练/推理的行业标准；迭代至 FA-3
+  利用 Hopper 新指令与 FP8。
 sources:
-  - "wiki/sources/Attention复杂度解析与改进方向.md"
-created: "2026-06-26"
-updated: "2026-06-26"
+- wiki/sources/Attention复杂度解析与改进方向.md
+created: '2026-06-26'
+updated: '2026-06-26'
 confidence: high
 ---
 

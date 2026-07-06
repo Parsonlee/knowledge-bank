@@ -1,8 +1,12 @@
 ---
-title: Gemini
 tags:
-  - AIGC
+- AIGC
 confidence: medium
+type: entity
+summary: Gemini 是 Google 的 AI 助手 APP，在本批次文章中作为 AIGC 工具出现，具备 PPT 生成、深度研究、搜索、与谷歌其他产品打通等能力。Veo
+  3 视频生成也需要 Gemini Pro 账号。
+created: '2026-07-06'
+updated: '2026-07-06'
 ---
 
 # 实体_Gemini

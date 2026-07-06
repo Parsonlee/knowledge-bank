@@ -1,10 +1,11 @@
 ---
 type: concept
 tags:
-  - LLM/training/post-train
-  - DeepLearning
-created: "2026-06-29"
-updated: "2026-06-29"
+- LLM/training/post-train
+- DeepLearning
+created: '2026-06-29'
+updated: '2026-06-29'
+summary: '- Forward KL（正向 KL 散度）：KL(目标分布 || 模型分布），最小化时模型要"覆盖"目标分布的全部区域，即 mode-covering'
 ---
 
 # 概念：Forward KL 与 Reverse KL

@@ -1,9 +1,10 @@
 ---
 type: entity
 tags:
-  - AI-Agent/context-engineering
-created: "2026-06-29"
-updated: "2026-06-29"
+- AI-Agent/context-engineering
+created: '2026-06-29'
+updated: '2026-06-29'
+summary: '- 类型：通用 AI Agent 产品'
 ---
 
 # 实体：Manus

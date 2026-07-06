@@ -1,7 +1,11 @@
 ---
 type: concept
 tags:
-  - AI-Agent/memory
+- AI-Agent/memory
+summary: Agent 三段式记忆演进是关于 AI 智能体记忆机制发展的体系化框架（由港中深与上海 AI 实验室在综述 arXiv:2605.06716 中提出），将智能体记忆的研究与落地路径划分为三个递进阶段：Storage
+  → Reflection → Experience。
+created: '2026-07-06'
+updated: '2026-07-06'
 ---
 
 # 概念：Agent 三段式记忆演进

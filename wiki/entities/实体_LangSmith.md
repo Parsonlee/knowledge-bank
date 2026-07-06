@@ -1,9 +1,10 @@
 ---
 type: entity
 tags:
-  - AI-Agent
-created: "2026-06-29"
-updated: "2026-06-29"
+- AI-Agent
+created: '2026-06-29'
+updated: '2026-06-29'
+summary: LangSmith 是 LangChain 团队开发的 AI Agent 开发者平台，用于调试、测试、评估和监控基于 LLM 的应用。
 ---
 
 # 实体：LangSmith

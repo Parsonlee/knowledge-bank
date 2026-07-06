@@ -1,9 +1,10 @@
 ---
 type: entity
 tags:
-  - LLM/training/post-train
-created: "2026-06-29"
-updated: "2026-06-29"
+- LLM/training/post-train
+created: '2026-06-29'
+updated: '2026-06-29'
+summary: '- 全称：Model-oriented Data Selection'
 ---
 
 # 实体：MoDS

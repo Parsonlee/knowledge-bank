@@ -1,10 +1,11 @@
 ---
 type: entity
 tags:
-  - LLM/arch/Mamba
-created: "2026-06-29"
-updated: "2026-06-29"
+- LLM/arch/Mamba
+created: '2026-06-29'
+updated: '2026-06-29'
 confidence: high
+summary: Albert Gu 和 Tri Dao 于 2023 年提出的选择性状态空间序列模型，是 Transformer 架构的强力竞争者。
 ---
 
 # Mamba

@@ -1,10 +1,10 @@
 ---
 type: concept
 tags:
-  - 创业
-summary: "Superhuman 将 PMF 量化优化的四步引擎：精准细分/分析反馈/规划路线图/重复迭代"
-created: "2026-06-30"
-updated: "2026-06-30"
+- 创业
+summary: Superhuman 将 PMF 量化优化的四步引擎：精准细分/分析反馈/规划路线图/重复迭代
+created: '2026-06-30'
+updated: '2026-06-30'
 confidence: high
 ---
 

@@ -1,9 +1,10 @@
 ---
 type: concept
 tags:
-  - LLM/arch
-created: "2026-06-29"
-updated: "2026-06-29"
+- LLM/arch
+created: '2026-06-29'
+updated: '2026-06-29'
+summary: QK-Norm 是在多头注意力模块内部对 Query 和 Key 向量做归一化的技术，用于提升训练稳定性。
 ---
 
 # 概念_QK_Norm

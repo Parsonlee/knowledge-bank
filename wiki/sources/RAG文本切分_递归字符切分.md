@@ -12,9 +12,7 @@ confidence: high
 ---
 # RAG文本切分_递归字符切分
 
-> 来源：哎呀AIYA 微信公众号《RAG文本切分的五个层次2：递归字符分割(实战)》
 > URL：https://mp.weixin.qq.com/s?__biz=Mzk0NTcyNTMzNw==&mid=2247483959&idx=1&sn=8805bfc48c02cc396042eed5ad5f440a
-> tags: RAG, RAG/chunking
 > Cubox 高亮：无
 
 ## 摘要

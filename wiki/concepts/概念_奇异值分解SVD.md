@@ -1,6 +1,15 @@
+---
+confidence: high
+type: concept
+tags:
+- LLM
+- DeepLearning
+summary: 奇异值分解（Singular Value Decomposition）适用于任意矩阵的分解方法：A = UΣV^T。是矩阵分解、降维、压缩、特征学习的基础工具。
+created: '2026-07-06'
+updated: '2026-07-06'
+---
 # 概念：奇异值分解（SVD）
 
-> confidence: high
 
 ## 定义
 

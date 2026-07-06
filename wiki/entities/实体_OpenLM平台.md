@@ -1,10 +1,10 @@
 ---
 type: entity
 tags:
-  - AI-Agent/tools
-summary: "阿里巴巴智能引擎团队大模型研发平台，Human-in-the-Loop MCP 方案的落地环境"
-created: "2026-06-29"
-updated: "2026-06-29"
+- AI-Agent/tools
+summary: 阿里巴巴智能引擎团队大模型研发平台，Human-in-the-Loop MCP 方案的落地环境
+created: '2026-06-29'
+updated: '2026-06-29'
 ---
 
 # 实体_OpenLM平台

@@ -1,8 +1,11 @@
 ---
 type: concept
 tags:
-  - LLM/training
+- LLM/training
 confidence: high
+summary: 大模型的三大缩放定律描述了计算资源的不同使用方式如何影响模型性能，分别对应预训练、后训练、推理三个阶段。
+created: '2026-07-06'
+updated: '2026-07-06'
 ---
 
 # 概念：Scaling Law 三大规律

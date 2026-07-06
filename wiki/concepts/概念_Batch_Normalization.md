@@ -1,13 +1,14 @@
 ---
 type: concept
 tags:
-  - DeepLearning
-  - 面试
-summary: Batch Normalization 沿通道在 batch 维度（N,H,W）计算均值方差，强迫数据为均值0方差1分布，缓解 Internal Covariate Shift 与梯度消失；用于激活函数之前。
+- DeepLearning
+- 面试
+summary: Batch Normalization 沿通道在 batch 维度（N,H,W）计算均值方差，强迫数据为均值0方差1分布，缓解 Internal
+  Covariate Shift 与梯度消失；用于激活函数之前。
 sources:
-  - "wiki/sources/Normalization方法总结_BN_LN_IN_GN.md"
-created: "2026-06-26"
-updated: "2026-06-26"
+- wiki/sources/Normalization方法总结_BN_LN_IN_GN.md
+created: '2026-06-26'
+updated: '2026-06-26'
 confidence: high
 ---
 

@@ -1,7 +1,16 @@
+---
+tags:
+- RAG
+- RAG/retrieval
+confidence: medium
+type: concept
+summary: Prompt 压缩（Prompt Compression）是在检索后、送入 LLM 前对上下文进行压缩的技术，解决长上下文场景下信息过载、噪声过多的问题（对应
+  RAG 痛点 4：未提取）。
+created: '2026-07-06'
+updated: '2026-07-06'
+---
 # 概念_Prompt_Compression
 
-> tags: RAG, RAG/retrieval
-> confidence: medium
 
 ## 定义
 

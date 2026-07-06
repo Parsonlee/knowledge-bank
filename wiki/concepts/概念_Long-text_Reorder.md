@@ -1,7 +1,16 @@
+---
+tags:
+- RAG
+- RAG/retrieval
+confidence: high
+type: concept
+summary: '长文本重排序（Long-text Reorder / Lost in the Middle Reorder）是一种检索后处理策略。基于论文 "Lost
+  in the Middle: How Language Models Use Long Contexts" 的发现：大模型更容易记忆开头和结尾的文档...'
+created: '2026-07-06'
+updated: '2026-07-06'
+---
 # 概念_Long-text_Reorder
 
-> tags: RAG, RAG/retrieval
-> confidence: high
 
 ## 定义
 

@@ -3,7 +3,8 @@ type: entity
 tags:
 - LLM
 - DeepLearning
-summary: Google 旗下全球顶级的人工智能与前沿科学研究实验室，推出 AlphaGo、AlphaFold、Gemini 系列大模型，为强化学习与 AI 赋能科学（AI4S）的先驱。
+summary: Google 旗下全球顶级的人工智能与前沿科学研究实验室，推出 AlphaGo、AlphaFold、Gemini 系列大模型，为强化学习与 AI
+  赋能科学（AI4S）的先驱。
 created: '2026-07-06'
 updated: '2026-07-06'
 ---

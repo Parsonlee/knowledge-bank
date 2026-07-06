@@ -1,7 +1,15 @@
+---
+tags:
+- RAG
+- RAG/embedding
+confidence: high
+type: concept
+summary: Sparse Embedding（关键词式稀疏向量）将文本表示为高维稀疏向量，绝大部分位置为 0，仅关键词对应维度被激活。
+created: '2026-07-06'
+updated: '2026-07-06'
+---
 # 概念_Sparse_Embedding
 
-> tags: RAG, RAG/embedding
-> confidence: high
 
 ## 定义
 

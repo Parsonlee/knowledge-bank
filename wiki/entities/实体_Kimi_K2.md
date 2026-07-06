@@ -1,9 +1,10 @@
 ---
 type: entity
 tags:
-  - LLM/arch/MoE
-created: "2026-06-29"
-updated: "2026-06-29"
+- LLM/arch/MoE
+created: '2026-06-29'
+updated: '2026-06-29'
+summary: 月之暗面（Moonshot AI）发布的万亿参数开源权重 MoE 模型，基于 DeepSeek-V3 架构扩展，以 Muon 优化器为主要创新。
 ---
 
 # 实体_Kimi_K2

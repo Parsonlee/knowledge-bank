@@ -1,13 +1,14 @@
 ---
 type: concept
 tags:
-  - Infra/AI
-  - LLM/inference
-summary: KV Cache 缓存 LLM 推理中 X@W_K 和 X@W_V 的已计算结果，空间换时间，避免自回归逐 token 生成时对历史 token 的重复计算。几乎所有 LLM 推理框架（如 vLLM）均已支持。
+- Infra/AI
+- LLM/inference
+summary: KV Cache 缓存 LLM 推理中 X@W_K 和 X@W_V 的已计算结果，空间换时间，避免自回归逐 token 生成时对历史 token
+  的重复计算。几乎所有 LLM 推理框架（如 vLLM）均已支持。
 sources:
-  - "wiki/sources/入局AI_Infra系统设计与挑战.md"
-created: "2026-06-29"
-updated: "2026-06-29"
+- wiki/sources/入局AI_Infra系统设计与挑战.md
+created: '2026-06-29'
+updated: '2026-06-29'
 confidence: high
 ---
 

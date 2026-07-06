@@ -1,13 +1,13 @@
 ---
 type: entity
 tags:
-  - Infra/AI
-  - LLM/inference
+- Infra/AI
+- LLM/inference
 summary: vLLM 是开源 LLM 推理框架，支持 KV Cache、连续批处理（Continuous Batching）、PagedAttention 等核心优化，是当前主流高吞吐低延时推理引擎。
 sources:
-  - "wiki/sources/入局AI_Infra系统设计与挑战.md"
-created: "2026-06-29"
-updated: "2026-06-29"
+- wiki/sources/入局AI_Infra系统设计与挑战.md
+created: '2026-06-29'
+updated: '2026-06-29'
 confidence: high
 ---
 

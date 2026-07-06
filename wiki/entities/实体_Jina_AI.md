@@ -1,11 +1,11 @@
 ---
 type: entity
 tags:
-  - 创业
-  - LLM
-summary: "Jina AI：专注搜索底座模型的 AI 初创公司，2020-2025年，两次 Pivot 后被 Elastic 收购"
-created: "2026-06-29"
-updated: "2026-06-29"
+- 创业
+- LLM
+summary: Jina AI：专注搜索底座模型的 AI 初创公司，2020-2025年，两次 Pivot 后被 Elastic 收购
+created: '2026-06-29'
+updated: '2026-06-29'
 ---
 
 # 实体：Jina AI

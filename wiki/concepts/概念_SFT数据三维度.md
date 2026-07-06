@@ -1,9 +1,10 @@
 ---
 type: concept
 tags:
-  - LLM/training/post-train
-created: "2026-06-29"
-updated: "2026-06-29"
+- LLM/training/post-train
+created: '2026-06-29'
+updated: '2026-06-29'
+summary: 大模型 SFT 数据清洗的三个核心维度，用于系统性筛选高价值训练数据。
 ---
 
 # 概念：SFT 数据三维度

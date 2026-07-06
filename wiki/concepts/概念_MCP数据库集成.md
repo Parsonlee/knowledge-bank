@@ -1,10 +1,10 @@
 ---
 type: concept
 tags:
-  - AI-Agent/tools
-summary: "MCP+数据库实现 Text-to-SQL 式结构化检索，在结构化数据场景明显优于传统 RAG；提供动态扩展能力和统一工具调用格式"
-created: "2026-06-29"
-updated: "2026-06-29"
+- AI-Agent/tools
+summary: MCP+数据库实现 Text-to-SQL 式结构化检索，在结构化数据场景明显优于传统 RAG；提供动态扩展能力和统一工具调用格式
+created: '2026-06-29'
+updated: '2026-06-29'
 ---
 
 ## 定义
@@ -83,4 +83,3 @@ MCP 数据库集成是指通过 MCP 协议将数据库（关系型、文档型�
 最佳实践：用 Resource 暴露 Schema，用 Tool 执行查询，两者配合使用。
 
 ## 参考来源
-

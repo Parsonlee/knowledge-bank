@@ -13,9 +13,7 @@ confidence: high
 ---
 # RAG查询翻译：Query Translation
 
-> 来源：PyTorch研习社（南七无名式）系列教程第2篇
 > URL：https://mp.weixin.qq.com/s/8aUzRjpO5ve0C5ndhgI6ng
-> tags: RAG, RAG/query
 > Cubox 高亮：无（Cubox 摘要提及 Multi-query/RAG fusion/decomposition/step-back 四种方法）
 
 ## 摘要

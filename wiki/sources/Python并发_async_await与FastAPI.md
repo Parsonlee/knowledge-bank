@@ -19,7 +19,6 @@ date: 2025-06-27
 - **URL**：https://fastapi.tiangolo.com/zh/async/
 
 
-> 来源：FastAPI 官方中文文档 https://fastapi.tiangolo.com/zh/async/
 
 ## 核心内容
 

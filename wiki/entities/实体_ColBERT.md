@@ -1,10 +1,10 @@
 ---
 type: entity
 tags:
-  - RAG/retrieval
-summary: "斯坦福提出的基于 BERT 后期交互（Late Interaction）的高精度多向量检索模型。"
-created: "2026-06-29"
-updated: "2026-07-01"
+- RAG/retrieval
+summary: 斯坦福提出的基于 BERT 后期交互（Late Interaction）的高精度多向量检索模型。
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
 
@@ -35,4 +35,3 @@ ColBERT（Contextualized Late Interaction over BERT）是斯坦福 FutureData �
 
 - 相关概念：[[概念_ColBERT]]、[[概念_ColBERTv2残差压缩]]、[[概念_Embedding与向量检索]]
 - 来源：[[RAG索引进阶_Indexing]]、[[从BM25到Multi-Vector_6种Embedding演进路线]]、[[ColBERT原理与延迟交互机制]]、[[ColBERTv2残差压缩演进]]
-

@@ -1,7 +1,14 @@
+---
+tags:
+- RAG
+confidence: high
+type: concept
+summary: 北大 PKU-DAIR 综述根据检索器如何与生成器交互，将 RAG 基础方法分为四类范式。跨越不同模态和任务，RAG 基本思想保持一致，检索器和生成器根据任务变化。
+created: '2026-07-06'
+updated: '2026-07-06'
+---
 # 概念_RAG四大基础范式
 
-> tags: RAG
-> confidence: high
 
 ## 定义
 

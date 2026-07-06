@@ -1,10 +1,11 @@
 ---
 type: concept
 tags:
-  - LLM/arch/Mamba
-created: "2026-06-29"
-updated: "2026-06-29"
+- LLM/arch/Mamba
+created: '2026-06-29'
+updated: '2026-06-29'
 confidence: high
+summary: 同一个 SSM 可以用三种等价方式表示，各有优劣，实践中按任务选择。
 ---
 
 # SSM 三种表示

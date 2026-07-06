@@ -1,11 +1,11 @@
 ---
 type: entity
 tags:
-  - RAG/embedding
-  - Skill/python
-summary: "基于 Python/PyTorch 的句向量模型训练与嵌入计算推理框架（sbert）。"
-created: "2026-06-29"
-updated: "2026-07-01"
+- RAG/embedding
+- Skill/python
+summary: 基于 Python/PyTorch 的句向量模型训练与嵌入计算推理框架（sbert）。
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
 
@@ -36,4 +36,3 @@ Sentence Transformers（sbert.net）是一个常用于训练和使用嵌入模�
 - 相关概念：[[概念_Matryoshka表示学习]]、[[概念_Instruct_Embedding]]、[[概念_Sentence-BERT]]、[[概念_Embedding与向量检索]]
 - 实体：[[实体_Qwen3_Embedding]]
 - 来源：[[Matryoshka嵌入模型概述_HuggingFace]]、[[一文详尽之Embedding]]、[[为什么用Qwen3_embedding和rerank]]
-

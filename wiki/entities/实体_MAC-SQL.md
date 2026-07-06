@@ -1,11 +1,11 @@
 ---
 type: entity
 tags:
-  - AI-Agent/multi-agent
-  - RAG
-summary: "腾讯优图实验室提出的面向复杂数据查询的 Text-to-SQL 多智能体协作框架。"
-created: "2026-06-29"
-updated: "2026-07-01"
+- AI-Agent/multi-agent
+- RAG
+summary: 腾讯优图实验室提出的面向复杂数据查询的 Text-to-SQL 多智能体协作框架。
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
 
@@ -31,4 +31,3 @@ MAC-SQL（Multi-Agent Collaborative Framework for Text-to-SQL）是腾讯优图�
 - 相关概念：[[概念_Text2SQL]]
 - 实体：[[实体_优图实验室]]
 - 来源：[[优图RAG技术详解]]
-

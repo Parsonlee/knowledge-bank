@@ -1,13 +1,13 @@
 ---
 type: concept
 tags:
-  - CV
-  - CV/detection
+- CV
+- CV/detection
 summary: 三种经典 CNN 设计范式（Repeat/Multi-path/Skip-connection）及其在检测 Backbone 中的应用。
 sources:
-  - "wiki/sources/目标检测入门_基础网络与分类定位权衡.md"
-created: "2026-06-26"
-updated: "2026-06-26"
+- wiki/sources/目标检测入门_基础网络与分类定位权衡.md
+created: '2026-06-26'
+updated: '2026-06-26'
 confidence: high
 ---
 

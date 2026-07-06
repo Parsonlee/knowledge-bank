@@ -13,9 +13,7 @@ confidence: high
 ---
 # RAG文本切分_token优化
 
-> 来源：哎呀AIYA 微信公众号《RAG文本切分的五个层次2：递归字符切分的token优化(实战)》
 > URL：https://mp.weixin.qq.com/s?__biz=Mzk0NTcyNTMzNw==&mid=2247483966&idx=1&sn=4895eeba3d51d02f83e2b96067eb9227
-> tags: RAG, RAG/chunking
 > Cubox 高亮：无
 
 ## 摘要

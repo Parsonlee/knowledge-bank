@@ -1,10 +1,10 @@
 ---
 type: concept
 tags:
-  - LLM/training
-summary: "LLM 预训练和 SFT 两阶段数据管理：数据规模/质量/组合/系统的完整框架（北大综述）"
-created: "2026-06-29"
-updated: "2026-06-29"
+- LLM/training
+summary: LLM 预训练和 SFT 两阶段数据管理：数据规模/质量/组合/系统的完整框架（北大综述）
+created: '2026-06-29'
+updated: '2026-06-29'
 confidence: high
 ---
 

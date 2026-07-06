@@ -1,9 +1,11 @@
 ---
-title: Linux 命令分类速查
 type: concept
 confidence: high
 tags:
-  - Skill/linux
+- Skill/linux
+summary: 将 Linux 命令按功能场景（系统/文件/网络/软件包等）分类组织的速查体系，便于按需快速定位命令，而非按字母或学习顺序排列。
+created: '2026-07-06'
+updated: '2026-07-06'
 ---
 
 # 概念：Linux 命令分类速查

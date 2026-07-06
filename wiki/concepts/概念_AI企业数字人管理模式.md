@@ -1,10 +1,10 @@
 ---
 type: concept
 tags:
-  - 创业
-summary: "阿里云将 AI 数字人作为正式员工管理：汇报业务部门、工号 AI 开头、效率效果双达标才上岗"
-created: "2026-06-30"
-updated: "2026-06-30"
+- 创业
+summary: 阿里云将 AI 数字人作为正式员工管理：汇报业务部门、工号 AI 开头、效率效果双达标才上岗
+created: '2026-06-30'
+updated: '2026-06-30'
 confidence: high
 ---
 
@@ -34,4 +34,3 @@ confidence: high
 - 强调真正拓展服务带宽、比人工效率效果更好，而非堆 Demo
 
 ## 来源
-

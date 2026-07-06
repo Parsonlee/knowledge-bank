@@ -1,13 +1,13 @@
 ---
 type: concept
 tags:
-  - LLM/training/RL
-  - AI-Agent
+- LLM/training/RL
+- AI-Agent
 summary: 接地气（Groundedness）是 AI 智能体始终紧贴当前上下文的能力——不幻觉 ID、不跑题、不捏造脱离现实的事实。在智能体能力金字塔中位于适应性之上、常识推理之下。
 sources:
-  - "wiki/sources/RL环境与智能体能力金字塔.md"
-created: "2026-06-29"
-updated: "2026-06-29"
+- wiki/sources/RL环境与智能体能力金字塔.md
+created: '2026-06-29'
+updated: '2026-06-29'
 confidence: high
 ---
 

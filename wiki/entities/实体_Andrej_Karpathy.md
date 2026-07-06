@@ -1,8 +1,12 @@
 ---
 type: entity
 tags:
-  - DeepLearning
-  - AI-Agent/coding
+- DeepLearning
+- AI-Agent/coding
+summary: Andrej Karpathy 是著名的人工智能科学家，曾任 OpenAI 创始成员及研究科学家、特斯拉 AI 团队高级总监（负责 Autopilot
+  和 FSD 计算机视觉开发），现任 AI 教育与产品创业者（创立 Eureka Labs）。
+created: '2026-07-06'
+updated: '2026-07-06'
 ---
 
 # 实体：Andrej Karpathy

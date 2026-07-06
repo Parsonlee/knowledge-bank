@@ -1,10 +1,10 @@
 ---
 type: concept
 tags:
-  - AI-Agent/multi-agent
-summary: "多智能体系统核心模式：主智能体（orchestrator）负责规划分解，子智能体（worker）并行执行，适合需要大量并行化的复杂任务"
-created: "2026-06-29"
-updated: "2026-06-29"
+- AI-Agent/multi-agent
+summary: 多智能体系统核心模式：主智能体（orchestrator）负责规划分解，子智能体（worker）并行执行，适合需要大量并行化的复杂任务
+created: '2026-06-29'
+updated: '2026-06-29'
 ---
 
 # 概念_orchestrator-worker模式

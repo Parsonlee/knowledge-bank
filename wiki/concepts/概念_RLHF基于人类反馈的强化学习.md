@@ -1,9 +1,10 @@
 ---
 type: concept
 tags:
-  - LLM/training/RL
-created: "2026-06-29"
-updated: "2026-06-29"
+- LLM/training/RL
+created: '2026-06-29'
+updated: '2026-06-29'
+summary: RLHF（Reinforcement Learning from Human Feedback）是 OpenAI 使 ChatGPT 等模型与人类偏好对齐的核心技术框架。
 ---
 
 # 概念：RLHF 基于人类反馈的强化学习

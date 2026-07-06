@@ -1,7 +1,16 @@
+---
+tags:
+- RAG
+- RAG/retrieval
+confidence: high
+type: concept
+summary: LLM 重排序是将向量搜索初步过滤的候选文档直接交给 LLM，让其评估文本与查询的相关性并输出 0~1 分数的重排序方法。相比交叉编码器重排序，利用
+  LLM 的推理能力实现更精准的相关性评估。
+created: '2026-07-06'
+updated: '2026-07-06'
+---
 # 概念_LLM重排序
 
-> tags: RAG, RAG/retrieval
-> confidence: high
 
 ## 定义
 

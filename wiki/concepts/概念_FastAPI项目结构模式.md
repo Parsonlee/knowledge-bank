@@ -1,8 +1,11 @@
 ---
-title: "概念_FastAPI项目结构模式"
 tags:
-  - Skill/python
+- Skill/python
 confidence: high
+type: concept
+summary: 一套生产可用的 FastAPI 标准项目组织模式，核心思想是 Routers / Schemas / Services 三层分离，按业务组件一一对应。
+created: '2026-07-06'
+updated: '2026-07-06'
 ---
 
 # 概念_FastAPI项目结构模式

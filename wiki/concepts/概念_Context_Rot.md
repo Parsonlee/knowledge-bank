@@ -1,9 +1,10 @@
 ---
 type: concept
 tags:
-  - AI-Agent/context-engineering
-created: "2026-06-29"
-updated: "2026-06-29"
+- AI-Agent/context-engineering
+created: '2026-06-29'
+updated: '2026-06-29'
+summary: 随着Agent运行过程中上下文长度持续增长，模型性能在达到硬性上下文限制之前就已显著下降的现象。
 ---
 
 # 概念：Context Rot（上下文腐化）

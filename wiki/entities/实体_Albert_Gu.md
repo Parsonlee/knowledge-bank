@@ -1,10 +1,11 @@
 ---
 type: entity
 tags:
-  - LLM/arch/Mamba
-created: "2026-06-29"
-updated: "2026-06-29"
+- LLM/arch/Mamba
+created: '2026-06-29'
+updated: '2026-06-29'
 confidence: high
+summary: Mamba 系列架构的核心研究者，SSM 领域的主要推动者。
 ---
 
 # Albert Gu

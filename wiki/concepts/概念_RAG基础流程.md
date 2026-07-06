@@ -1,7 +1,15 @@
+---
+tags:
+- RAG
+confidence: high
+type: concept
+summary: RAG（Retrieval Augmented Generation，检索增强生成）是一种将 LLM 与外部数据源（私有数据或最新数据）连接的通用方法，允许
+  LLM 使用外部数据生成输出。解决 LLM 训练数据不含任务相关数据或非最新数据的问题。
+created: '2026-07-06'
+updated: '2026-07-06'
+---
 # 概念_RAG基础流程
 
-> tags: RAG
-> confidence: high
 
 ## 定义
 

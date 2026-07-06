@@ -1,13 +1,14 @@
 ---
 type: concept
 tags:
-  - DeepLearning
-  - 面试
-summary: BN/LN/IN/GN 四种归一化在 [N,C,H,W] 不同维度上计算均值方差——BN(N,H,W)、LN(C,H,W)、IN(H,W)、GN(分组)；用途、batch 依赖性、参数维度各不同。
+- DeepLearning
+- 面试
+summary: BN/LN/IN/GN 四种归一化在 [N,C,H,W] 不同维度上计算均值方差——BN(N,H,W)、LN(C,H,W)、IN(H,W)、GN(分组)；用途、batch
+  依赖性、参数维度各不同。
 sources:
-  - "wiki/sources/Normalization方法总结_BN_LN_IN_GN.md"
-created: "2026-06-26"
-updated: "2026-06-26"
+- wiki/sources/Normalization方法总结_BN_LN_IN_GN.md
+created: '2026-06-26'
+updated: '2026-06-26'
 confidence: high
 ---
 

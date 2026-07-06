@@ -1,10 +1,10 @@
 ---
 type: concept
 tags:
-  - 创业
-summary: "红杉提出的 Result-as-a-Service：只交付工具不够，必须真正上线产生业务结果"
-created: "2026-06-30"
-updated: "2026-06-30"
+- 创业
+summary: 红杉提出的 Result-as-a-Service：只交付工具不够，必须真正上线产生业务结果
+created: '2026-06-30'
+updated: '2026-06-30'
 confidence: high
 ---
 
@@ -28,4 +28,3 @@ confidence: high
 - 技术底座成本下降+功能拓展，企业数字化转型搭上"大电梯"
 
 ## 来源
-

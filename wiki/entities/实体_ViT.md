@@ -1,12 +1,13 @@
 ---
 type: entity
 tags:
-  - CV
-summary: ViT（Vision Transformer），将图像分 patch 序列输入 Transformer 的视觉 Backbone；SAM 用 ViT-H 作图像编码器。
+- CV
+summary: ViT（Vision Transformer），将图像分 patch 序列输入 Transformer 的视觉 Backbone；SAM 用 ViT-H
+  作图像编码器。
 sources:
-  - "wiki/sources/SAM_Segment_Anything模型.md"
-created: "2026-06-26"
-updated: "2026-06-26"
+- wiki/sources/SAM_Segment_Anything模型.md
+created: '2026-06-26'
+updated: '2026-06-26'
 confidence: medium
 ---
 

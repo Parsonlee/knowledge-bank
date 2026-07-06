@@ -1,8 +1,11 @@
 ---
-title: Veo 3 视频提示词
 tags:
-  - AIGC
+- AIGC
 confidence: high
+type: concept
+summary: 使用文本提示词引导 Google Veo 3 生成带音频的视频的技巧体系。核心原则是「像电影制作人一样思考」——不是描述发生了什么，而是在导演一个场景。
+created: '2026-07-06'
+updated: '2026-07-06'
 ---
 
 # 概念_Veo3视频提示词
@@ -43,4 +46,3 @@ confidence: high
 - 加 "slightly grainy, looks very film-like" 去 AI 感
 
 ## 来源
-

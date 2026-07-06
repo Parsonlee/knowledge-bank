@@ -1,7 +1,16 @@
+---
+tags:
+- RAG
+- RAG/embedding
+confidence: high
+type: concept
+summary: Multi-Vector Retrieval（多向量检索）是用一种"代理表示"对原始内容进行索引、而非直接嵌入原始内容本身的检索模式，常用于处理低资源文件和长文件。基于
+  David Wheeler 的思想——"几乎所有复杂问题都可以通过增加一层迂回（indirection）来解决"。
+created: '2026-07-06'
+updated: '2026-07-06'
+---
 # 概念_Multi-Vector检索
 
-> tags: RAG, RAG/embedding
-> confidence: high
 
 ## 定义
 

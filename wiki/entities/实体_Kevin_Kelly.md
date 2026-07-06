@@ -1,12 +1,12 @@
 ---
 type: entity
 tags:
-  - Life
-summary: "科技专栏作家、《连线》杂志创始主编，著有《50年旅行经验之谈》等干货篇章。"
+- Life
+summary: 科技专栏作家、《连线》杂志创始主编，著有《50年旅行经验之谈》等干货篇章。
 sources:
-  - "wiki/sources/50年旅行经验之谈_Kevin_Kelly.md"
-created: "2026-06-29"
-updated: "2026-07-01"
+- wiki/sources/50年旅行经验之谈_Kevin_Kelly.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
 
@@ -32,4 +32,3 @@ Kevin Kelly（KK），博客 The Technium（kk.org）作者，本文《50 Years 
 ## 其他
 
 - 运营周更旅行 newsletter **Nomadico**（每期 4 条简短 tips，免费）。
-

@@ -1,9 +1,10 @@
 ---
 type: concept
 tags:
-  - LLM/arch/MoE
-created: "2026-06-29"
-updated: "2026-06-29"
+- LLM/arch/MoE
+created: '2026-06-29'
+updated: '2026-06-29'
+summary: MoE 训练中的关键挑战：如果 Router 训练不当，所有 Token 会集中路由到少数"热门"专家，导致其他专家欠训练，整体性能下降。
 ---
 
 # 概念_MoE负载均衡

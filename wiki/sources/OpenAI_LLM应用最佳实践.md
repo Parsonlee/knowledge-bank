@@ -9,7 +9,7 @@ summary: OpenAI DevDay 2023 演讲总结：LLM 应用性能优化路线——Pro
   案例
 sources:
 - raw/Prompt Engineering, Finetune, RAG？：OpenA....md
-created: 2026-06-29
+created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high
 ---

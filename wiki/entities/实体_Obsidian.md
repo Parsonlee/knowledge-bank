@@ -1,7 +1,11 @@
 ---
 type: entity
 tags:
-  - Skill/knowledge-bank
+- Skill/knowledge-bank
+summary: Obsidian 是一款基于本地文件系统的强大 Markdown 个人知识库与笔记管理软件。它以“离线优先、私有数据绝对掌控、双向链接（Bi-directional
+  Links）与图谱可视化”为核心特色。
+created: '2026-07-06'
+updated: '2026-07-06'
 ---
 
 # 实体：Obsidian

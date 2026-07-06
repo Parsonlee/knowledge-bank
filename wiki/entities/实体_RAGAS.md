@@ -1,10 +1,10 @@
 ---
 type: entity
 tags:
-  - RAG/eval
-summary: "专为检索增强生成（RAG）系统设计的自动化多维量化评估指标框架。"
-created: "2026-06-29"
-updated: "2026-07-01"
+- RAG/eval
+summary: 专为检索增强生成（RAG）系统设计的自动化多维量化评估指标框架。
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
 
@@ -33,4 +33,3 @@ RAGAS 是专为 RAG（检索增强生成）系统设计的开源评估框架，�
 
 - 相关概念：[[概念_RAG评估框架RAGAS]]
 - 来源：[[RAGAS评估RAG系统]]、[[OpenAI_LLM应用最佳实践]]
-

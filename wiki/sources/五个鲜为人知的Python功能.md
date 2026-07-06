@@ -19,7 +19,6 @@ date: 2025-07-31
 - **URL**：https://mp.weixin.qq.com/s/YdKuIzRgmXgrz7MDPqSfig
 
 
-> 来源：微信公众号 AI研究生 / PyTorch研习社
 
 ## 核心内容
 

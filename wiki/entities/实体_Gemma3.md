@@ -1,9 +1,10 @@
 ---
 type: entity
 tags:
-  - LLM/arch
-created: "2026-06-29"
-updated: "2026-06-29"
+- LLM/arch
+created: '2026-06-29'
+updated: '2026-06-29'
+summary: Google DeepMind 发布的 Gemma 3 系列开源 LLM，以滑动窗口注意力和双层 Norm 为主要架构特点。
 ---
 
 # 实体_Gemma3

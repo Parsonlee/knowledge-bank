@@ -1,7 +1,16 @@
+---
+tags:
+- RAG
+- RAG/query
+confidence: high
+type: concept
+summary: Query Translation（查询翻译）是 RAG 高阶技巧，针对用户 Query 模糊或复杂导致检索不准的问题（"Garbage in,
+  Garbage out"），通过改写/优化/分解原始查询提升检索和生成效果。
+created: '2026-07-06'
+updated: '2026-07-06'
+---
 # 概念_Query_Translation
 
-> tags: RAG, RAG/query
-> confidence: high
 
 ## 定义
 

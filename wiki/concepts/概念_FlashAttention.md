@@ -1,13 +1,14 @@
 ---
 type: concept
 tags:
-  - DeepLearning
-  - LLM/arch/attention
-summary: FlashAttention 是 I/O 感知的精确注意力优化，通过 Kernel 融合、分块计算（Tiling）和在线 Softmax 避免在 HBM 物化 N×N 中间矩阵，将注意力从内存密集型转为计算密集型。
+- DeepLearning
+- LLM/arch/attention
+summary: FlashAttention 是 I/O 感知的精确注意力优化，通过 Kernel 融合、分块计算（Tiling）和在线 Softmax 避免在
+  HBM 物化 N×N 中间矩阵，将注意力从内存密集型转为计算密集型。
 sources:
-  - "wiki/sources/Attention复杂度解析与改进方向.md"
-created: "2026-06-26"
-updated: "2026-06-26"
+- wiki/sources/Attention复杂度解析与改进方向.md
+created: '2026-06-26'
+updated: '2026-06-26'
 confidence: high
 ---
 

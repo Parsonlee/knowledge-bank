@@ -1,7 +1,15 @@
+---
+tags:
+- RAG
+- RAG/chunking
+confidence: high
+type: concept
+summary: Multi-representation Indexing 通过结合多种表示（文档摘要、块或完整内容），在检索和生成过程中取得最佳效果。使用不同层次和粒度的表示（简洁的摘要与详细的文档）弥补单一表示可能存在的不足。
+created: '2026-07-06'
+updated: '2026-07-06'
+---
 # 概念_Multi-representation_Indexing
 
-> tags: RAG, RAG/chunking
-> confidence: high
 
 ## 定义
 

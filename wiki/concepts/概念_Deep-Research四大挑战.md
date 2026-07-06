@@ -1,10 +1,11 @@
 ---
 type: concept
 tags:
-  - AI-Agent/deep-research
+- AI-Agent/deep-research
 confidence: high
-created: "2026-06-29"
-updated: "2026-06-29"
+created: '2026-06-29'
+updated: '2026-06-29'
+summary: 来源：华为/利物浦/牛津综述（arxiv:2506.18096）对当前 DR Agent 系统的系统性审查。
 ---
 
 # 概念：Deep Research 四大核心挑战

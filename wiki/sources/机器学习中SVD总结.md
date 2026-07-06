@@ -12,10 +12,7 @@ confidence: high
 ---
 # 机器学习中 SVD 总结
 
-> 来源：机器学习中SVD总结（Microstrong）
 > URL：https://mp.weixin.qq.com/s/Dv51K8JETakIKe5dPBAPVg
-> tags: DeepLearning, 面试
-> confidence: high
 
 ## 摘要
 

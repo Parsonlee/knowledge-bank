@@ -1,7 +1,15 @@
+---
+tags:
+- RAG
+- RAG/embedding
+confidence: high
+type: concept
+summary: 将文本表示（Text Representation）转成数值表示（Numerical Representation），以便通过相似度（如余弦相似度）衡量相关性。
+created: '2026-07-06'
+updated: '2026-07-06'
+---
 # 概念_Embedding与向量检索
 
-> tags: RAG, RAG/embedding
-> confidence: high
 
 ## 定义
 

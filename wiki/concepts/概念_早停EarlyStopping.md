@@ -1,6 +1,15 @@
+---
+confidence: high
+type: concept
+tags:
+- LLM
+- DeepLearning
+summary: 训练中监控验证集 loss，当其连续多次不再下降时提前停止训练，避免过拟合并保存最优模型。
+created: '2026-07-06'
+updated: '2026-07-06'
+---
 # 概念：早停（EarlyStopping）
 
-> confidence: high
 
 ## 定义
 

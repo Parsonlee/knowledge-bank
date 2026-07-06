@@ -1,10 +1,10 @@
 ---
 type: entity
 tags:
-  - DeepLearning
-summary: "深度学习中常用的自适应梯度下降优化器，兼顾 Momentum 与 RMSProp 优点。"
-created: "2026-06-29"
-updated: "2026-07-01"
+- DeepLearning
+summary: 深度学习中常用的自适应梯度下降优化器，兼顾 Momentum 与 RMSProp 优点。
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
 
@@ -29,4 +29,3 @@ Adam（Adaptive Moment Estimation）是深度学习中常用的梯度下降优�
 ## 来源
 
 - [[梯度下降优化器可视化解释]]
-

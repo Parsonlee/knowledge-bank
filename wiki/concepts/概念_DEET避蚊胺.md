@@ -1,6 +1,16 @@
+---
+confidence: high）
+sources:
+- wiki/sources/什么是真正有效的驱蚊产品.md
+type: concept
+tags:
+- Life
+summary: DEET（待乙妥/避蚊胺）是研究最多、应用最广的驱蚊成分，拥有 50 年以上历史，是"教科书级"驱蚊成分。在 EPA 注册的驱蚊产品中占绝大多数。
+created: '2026-07-06'
+updated: '2026-07-06'
+---
 # 概念_DEET避蚊胺
 
-> 出处：[[什么是真正有效的驱蚊产品]]（confidence: high）
 
 ## 定义
 

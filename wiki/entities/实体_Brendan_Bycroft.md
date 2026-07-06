@@ -1,10 +1,11 @@
 ---
 type: entity
 tags:
-  - LLM/arch
+- LLM/arch
 confidence: high
-created: "2026-06-29"
-updated: "2026-06-29"
+created: '2026-06-29'
+updated: '2026-06-29'
+summary: '- 作品：bbycroft.net/llm —— LLM 工作原理 3D 可视化网站'
 ---
 
 # 实体：Brendan Bycroft

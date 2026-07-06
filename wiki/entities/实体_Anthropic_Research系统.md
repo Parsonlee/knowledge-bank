@@ -1,10 +1,10 @@
 ---
 type: entity
 tags:
-  - AI-Agent/multi-agent
-summary: "Anthropic 多智能体研究系统，Claude Research 功能的底层架构，orchestrator-worker 模式实现"
-created: "2026-06-29"
-updated: "2026-06-29"
+- AI-Agent/multi-agent
+summary: Anthropic 多智能体研究系统，Claude Research 功能的底层架构，orchestrator-worker 模式实现
+created: '2026-06-29'
+updated: '2026-06-29'
 ---
 
 # 实体_Anthropic_Research系统

@@ -1,7 +1,15 @@
+---
+tags:
+- RAG
+- RAG/retrieval
+confidence: high
+type: concept
+summary: 重排序（Rerank）是检索后对候选文档按与查询的相关性进行精细排序的环节，传统方式为单塔模型输出相关性 logit 分数。
+created: '2026-07-06'
+updated: '2026-07-06'
+---
 # 概念_重排序Rerank
 
-> tags: RAG, RAG/retrieval
-> confidence: high
 
 ## 定义
 

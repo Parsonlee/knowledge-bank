@@ -1,10 +1,12 @@
 ---
 type: entity
 tags:
-  - LLM/reasoning
-  - LLM/training/RL
-created: "2026-06-29"
-updated: "2026-06-29"
+- LLM/reasoning
+- LLM/training/RL
+created: '2026-06-29'
+updated: '2026-06-29'
+summary: TinyZero 是 UC 伯克利博士生潘家怡等人开发的 DeepSeek-R1-Zero 复现项目，在 CountDown 数字游戏任务上验证了纯
+  RL 涌现自我验证和搜索能力。
 ---
 
 # 实体：TinyZero

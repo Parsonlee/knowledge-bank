@@ -1,10 +1,10 @@
 ---
 type: entity
 tags:
-  - 创业
-summary: "Leonis Capital：华人 2021 年成立的专注早期 AI 项目风投，发布 The Leonis AI 100 报告"
-created: "2026-06-30"
-updated: "2026-06-30"
+- 创业
+summary: Leonis Capital：华人 2021 年成立的专注早期 AI 项目风投，发布 The Leonis AI 100 报告
+created: '2026-06-30'
+updated: '2026-06-30'
 confidence: high
 ---
 

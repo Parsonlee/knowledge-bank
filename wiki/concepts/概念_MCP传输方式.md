@@ -1,10 +1,10 @@
 ---
 type: concept
 tags:
-  - AI-Agent/tools
-summary: "MCP 支持三种传输方式：Stdio（本地子进程）、SSE（远端流式）、Streamable HTTP（Web 化未来方向）；选型取决于部署场景和实时性需求"
-created: "2026-06-29"
-updated: "2026-06-29"
+- AI-Agent/tools
+summary: MCP 支持三种传输方式：Stdio（本地子进程）、SSE（远端流式）、Streamable HTTP（Web 化未来方向）；选型取决于部署场景和实时性需求
+created: '2026-06-29'
+updated: '2026-06-29'
 ---
 
 ## 定义

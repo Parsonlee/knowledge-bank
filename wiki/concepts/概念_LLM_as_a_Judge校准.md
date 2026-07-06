@@ -1,7 +1,11 @@
 ---
 type: concept
 tags:
-  - AI-Agent/eval
+- AI-Agent/eval
+summary: LLM-as-a-Judge 校准（Judge Calibration） 是在现代 LLM 应用与智能体评估工程中，通过引入高质量的人类监督信号与结构化反馈，对扮演“裁判”角色的大语言模型进行对齐与调优，确保
+  AI 裁判的评分标准、诊断逻辑与人类领域专家的认知保持一致的技术流程。
+created: '2026-07-06'
+updated: '2026-07-06'
 ---
 
 # 概念：LLM-as-a-Judge 校准

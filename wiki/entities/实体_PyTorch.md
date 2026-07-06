@@ -1,16 +1,16 @@
 ---
 type: entity
 tags:
-  - Skill/python/pytorch
-  - DeepLearning
-  - Infra/AI
+- Skill/python/pytorch
+- DeepLearning
+- Infra/AI
 summary: PyTorch 是深度学习框架的事实标准，核心特性为动态计算图、自动微分和丰富 Tensor 操作算子，设计哲学 Python 优先。
 sources:
-  - "wiki/sources/入局AI_Infra系统设计与挑战.md"
-  - "wiki/sources/PyTorch常用代码段合集.md"
-  - "wiki/sources/PyTorch训练代码模板.md"
-created: "2026-06-29"
-updated: "2026-06-29"
+- wiki/sources/入局AI_Infra系统设计与挑战.md
+- wiki/sources/PyTorch常用代码段合集.md
+- wiki/sources/PyTorch训练代码模板.md
+created: '2026-06-29'
+updated: '2026-06-29'
 confidence: high
 ---
 

@@ -1,7 +1,10 @@
 ---
 type: concept
 tags:
-  - AI-Agent/memory
+- AI-Agent/memory
+summary: AI 智能体的记忆策略是指在 LLM 上下文窗口有限的约束下，如何管理对话历史与长期信息的一组技术方案。
+created: '2026-07-06'
+updated: '2026-07-06'
 ---
 
 # 概念：AI Agent 记忆策略
@@ -67,4 +70,3 @@ LLM 将早期对话压缩为摘要（Running Summary），与近期对话共同�
 - [[AI智能体8种Memory策略与技术实现]]
 - [[Agent记忆模块前沿研究简述]]
 - [[LLM Agent记忆进化路径三阶段研究综述]]
-

@@ -1,8 +1,11 @@
 ---
 type: entity
 tags:
-  - LLM
-  - Recommendation
+- LLM
+- Recommendation
+summary: 蚂蚁集团提出的两级蒸馏推荐框架：GPT3.5→LLAMA2-7B→轻量序列推荐模型。来源：蚂蚁集团大模型推荐算法与应用
+created: '2026-07-06'
+updated: '2026-07-06'
 ---
 
 # 实体：DLLM2Rec

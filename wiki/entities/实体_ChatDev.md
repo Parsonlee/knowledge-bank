@@ -1,9 +1,10 @@
 ---
 type: entity
 tags:
-  - AI-Agent
-created: "2026-06-29"
-updated: "2026-06-29"
+- AI-Agent
+created: '2026-06-29'
+updated: '2026-06-29'
+summary: ChatDev 是一家虚拟软件公司，通过多个担任不同角色的 AI Agent 协作完成软件开发任务。
 ---
 
 # 实体：ChatDev

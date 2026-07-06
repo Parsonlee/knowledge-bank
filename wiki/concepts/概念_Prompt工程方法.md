@@ -1,6 +1,14 @@
+---
+confidence: high
+type: concept
+tags:
+- AI-Agent/prompt-engineering
+summary: 与大模型高效沟通的方法论。本质是解决"如何跟人高效沟通"的问题，把大模型当做新人助理。
+created: '2026-07-06'
+updated: '2026-07-06'
+---
 # 概念：Prompt 工程方法
 
-> confidence: high
 
 ## 定义
 

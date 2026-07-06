@@ -1,8 +1,11 @@
 ---
-title: "概念_Python_async_await并发"
 tags:
-  - Skill/python
+- Skill/python
 confidence: high
+type: concept
+summary: Python 现代版本通过 async / await 语法编写协程实现异步代码，让程序在等待 I/O 时切换去做其他工作。
+created: '2026-07-06'
+updated: '2026-07-06'
 ---
 
 # 概念_Python_async_await并发

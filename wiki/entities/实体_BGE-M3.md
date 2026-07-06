@@ -1,10 +1,10 @@
 ---
 type: entity
 tags:
-  - RAG/embedding
-summary: "智源推出的多语言混合嵌入模型，支持稠密检索与 ColBERT 多向量细粒度表示。"
-created: "2026-06-29"
-updated: "2026-07-01"
+- RAG/embedding
+summary: 智源推出的多语言混合嵌入模型，支持稠密检索与 ColBERT 多向量细粒度表示。
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
 
@@ -31,4 +31,3 @@ BGE-M3 是 BAAI（北京智源）推出的多语言嵌入模型，支持多种�
 
 - 相关概念：[[概念_ColBERT]]、[[概念_ColBERTv2残差压缩]]、[[概念_Dense_Embedding]]
 - 来源：[[ColBERT原理与延迟交互机制]]、[[ColBERTv2残差压缩演进]]
-

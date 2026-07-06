@@ -1,10 +1,10 @@
 ---
 type: entity
 tags:
-  - 创业
-summary: "Grammarly：年收入超 7 亿美金嵌入式 AI 写作工具，收购 Coda+Superhuman 后改名 Superhuman"
-created: "2026-06-30"
-updated: "2026-06-30"
+- 创业
+summary: Grammarly：年收入超 7 亿美金嵌入式 AI 写作工具，收购 Coda+Superhuman 后改名 Superhuman
+created: '2026-06-30'
+updated: '2026-06-30'
 confidence: high
 ---
 

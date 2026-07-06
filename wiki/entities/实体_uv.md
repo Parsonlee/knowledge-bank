@@ -1,8 +1,11 @@
 ---
-title: "实体_uv"
 tags:
-  - Skill/python
+- Skill/python
 confidence: high
+type: entity
+summary: '- 类型：Python 包管理器'
+created: '2026-07-06'
+updated: '2026-07-06'
 ---
 
 # 实体_uv

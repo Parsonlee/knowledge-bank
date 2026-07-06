@@ -3,7 +3,7 @@
 - [x] wiki/下的entities、sources的tag需要整理（已完成 191 篇 sources 与 137 篇 entities 全量合规检查与补全）
 
 ## wiki
-- [ ] frontmatter不一致
+- [x] frontmatter不一致（已全量深度重构与清洗，sources/entities/concepts 共 652 篇全部达成字段一致与内容齐全）
 - [x] sources/ 数量和 raw/ 是否一致（已对齐，双方均为 163 篇，完成 1对1 精准映射）
 - [ ] wiki/entities 频率不高的人/组织移除，可能需要设置一个阈值。本质上是精简entites+concepts，需要深度讨论
 - [ ] entities、conceptes等，是否移除tag（需要讨论）

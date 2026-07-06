@@ -1,7 +1,11 @@
 ---
 type: entity
 tags:
-  - AI-Agent/memory
+- AI-Agent/memory
+summary: 香港中文大学（深圳）（CUHK-Shenzhen） 与 上海人工智能实验室（Shanghai AI Laboratory） 是中国及全球领先的人工智能学术研究与顶级大型基础模型研发机构，在基础语言模型（如书生·浦语
+  InternLM）、多模态理解与智能体系统（Agentic Systems）方面卓有...
+created: '2026-07-06'
+updated: '2026-07-06'
 ---
 
 # 实体：港中深与上海 AI 实验室

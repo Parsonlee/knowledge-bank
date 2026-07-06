@@ -1,8 +1,11 @@
 ---
-title: "概念_Python循环优化技巧"
 tags:
-  - Skill/python
+- Skill/python
 confidence: high
+type: concept
+summary: 通过选择正确的数据结构、内置函数和编程范式，将 Python for 循环的性能提升 1.3x 到 970x。
+created: '2026-07-06'
+updated: '2026-07-06'
 ---
 
 # 概念_Python循环优化技巧

@@ -1,12 +1,12 @@
 ---
 type: entity
 tags:
-  - AI-Agent/tools
-summary: "由独立开发者创立的 MCP（Model Context Protocol）Server 发现与应用分发市场。"
+- AI-Agent/tools
+summary: 由独立开发者创立的 MCP（Model Context Protocol）Server 发现与应用分发市场。
 sources:
-  - "wiki/sources/AI时代如何做独立开发.md"
-created: "2026-06-29"
-updated: "2026-07-01"
+- wiki/sources/AI时代如何做独立开发.md
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: high
 ---
 
@@ -31,4 +31,3 @@ MCP.so 是由艾逗笔（idoubi）于 2024 年 11 月上线的 MCP 应用市场�
 - [[实体_艾逗笔_idoubi]]
 - [[概念_MCP协议]]
 - [[概念_AI独立开发方法论]]
-

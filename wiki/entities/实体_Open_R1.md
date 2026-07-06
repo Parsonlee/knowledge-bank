@@ -1,10 +1,11 @@
 ---
 type: entity
 tags:
-  - LLM/reasoning
-  - LLM/training/RL
-created: "2026-06-29"
-updated: "2026-06-29"
+- LLM/reasoning
+- LLM/training/RL
+created: '2026-06-29'
+updated: '2026-06-29'
+summary: Open R1 是 HuggingFace 官方发起的 DeepSeek-R1 完全开源复刻项目，计划将全套训练 pipeline（数据/脚本等）开源。
 ---
 
 # 实体：Open R1

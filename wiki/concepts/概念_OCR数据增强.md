@@ -1,12 +1,12 @@
 ---
 type: concept
 tags:
-  - CV/data-augmentation
+- CV/data-augmentation
 summary: OCR 任务数据增强：形态学（腐蚀/膨胀模拟笔画粗细）、噪声（黑/白像素 drop）、变换（旋转/缩放/模糊），用 OneOf 随机组合避免过度叠加。
 sources:
-  - "wiki/sources/OCR的有效数据增强.md"
-created: "2026-06-26"
-updated: "2026-06-26"
+- wiki/sources/OCR的有效数据增强.md
+created: '2026-06-26'
+updated: '2026-06-26'
 confidence: high
 ---
 

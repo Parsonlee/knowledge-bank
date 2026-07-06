@@ -1,10 +1,11 @@
 ---
 type: entity
 tags:
-  - AI-Agent/deep-research
+- AI-Agent/deep-research
 confidence: high
-created: "2026-06-29"
-updated: "2026-06-29"
+created: '2026-06-29'
+updated: '2026-06-29'
+summary: '- 发布方：阿里巴巴通义实验室（Tongyi Lab）'
 ---
 
 # 实体：通义 DeepResearch

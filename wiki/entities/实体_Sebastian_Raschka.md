@@ -1,7 +1,10 @@
 ---
 type: entity
 tags:
-  - LLM/arch
+- LLM/arch
+summary: 机器学习研究者、技术博主，《Build a Large Language Model from Scratch》作者。来源：从GPT-2到gpt-ossOpenAI开放模型进化之路
+created: '2026-07-06'
+updated: '2026-07-06'
 ---
 
 # 实体：Sebastian Raschka

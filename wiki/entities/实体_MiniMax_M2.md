@@ -1,10 +1,11 @@
 ---
 type: entity
 tags:
-  - LLM/arch/attention
-summary: "MiniMax 2025年发布的旗舰模型，回归 Full Attention 架构，定位 Agent/代码生成，定价为 Claude Sonnet 4.5 的 8%"
-created: "2026-06-29"
-updated: "2026-06-29"
+- LLM/arch/attention
+summary: MiniMax 2025年发布的旗舰模型，回归 Full Attention 架构，定位 Agent/代码生成，定价为 Claude Sonnet
+  4.5 的 8%
+created: '2026-06-29'
+updated: '2026-06-29'
 ---
 
 # 实体：MiniMax M2

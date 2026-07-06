@@ -1,8 +1,10 @@
 ---
 tags:
-  - AI-Agent/coding
-created: "2026-06-29"
-updated: "2026-06-29"
+- AI-Agent/coding
+created: '2026-06-29'
+updated: '2026-06-29'
+type: entity
+summary: Golang 生态下的 LLM 应用开发框架，由字节跳动/CloudWego 开源。
 ---
 
 # 实体：Eino 框架

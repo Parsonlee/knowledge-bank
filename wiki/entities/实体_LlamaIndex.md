@@ -1,11 +1,11 @@
 ---
 type: entity
 tags:
-  - RAG
-  - AI-Agent/tools
-summary: "专注于大模型数据连接、索引构建与检索增强的应用开发框架。"
-created: "2026-06-29"
-updated: "2026-07-01"
+- RAG
+- AI-Agent/tools
+summary: 专注于大模型数据连接、索引构建与检索增强的应用开发框架。
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: medium
 ---
 
@@ -27,4 +27,3 @@ LlamaIndex 是构建 LLM/RAG 应用的框架，与 LangChain 同类。在文本�
 
 - 相关概念：[[概念_文本切分五层级]]、[[概念_字符切分]]、[[概念_文档结构切分]]、[[概念_重排序Rerank]]、[[概念_Prompt_Compression]]、[[概念_检索后处理]]
 - 来源：[[RAG文本切分_字符切分]]、[[RAG文本切分_token优化]]、[[RAG文本切分_JSON文档切分]]、[[RAG_12痛点与解决方案]]
-

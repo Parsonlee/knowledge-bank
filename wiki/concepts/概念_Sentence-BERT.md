@@ -1,7 +1,16 @@
+---
+tags:
+- RAG/embedding
+- DeepLearning
+confidence: high
+type: concept
+summary: Sentence-BERT（SBERT）通过修改预训练 BERT 结构，并在有监督任务（自然语言推理、语义文本相似度）上微调，优化 BERT 向量直接进行相似度计算的性能。是缓解
+  概念BERT各向异性 的有监督优化代表。
+created: '2026-07-06'
+updated: '2026-07-06'
+---
 # 概念_Sentence-BERT
 
-> tags: RAG/embedding, DeepLearning
-> confidence: high
 
 ## 定义
 

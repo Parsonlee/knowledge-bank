@@ -1,10 +1,11 @@
 ---
 type: entity
 tags:
-  - LLM/training/post-train
-  - LLM/training/pre-train
-created: "2026-06-29"
-updated: "2026-06-29"
+- LLM/training/post-train
+- LLM/training/pre-train
+created: '2026-06-29'
+updated: '2026-06-29'
+summary: '- 类型：开源 LLM'
 ---
 
 # 实体：SmolLM3

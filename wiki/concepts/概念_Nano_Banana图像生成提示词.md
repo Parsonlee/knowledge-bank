@@ -1,7 +1,11 @@
 ---
-title: "概念_Nano_Banana图像生成提示词"
-tags: [AIGC]
+tags:
+- AIGC
 confidence: high
+type: concept
+summary: 实体NanoBananaPro（Gemini 2.5 Flash Image）图像生成与编辑的提示词工程方法论。
+created: '2026-07-06'
+updated: '2026-07-06'
 ---
 
 # Nano Banana 图像生成提示词

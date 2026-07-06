@@ -6,7 +6,7 @@ summary: HumanLayer 团队发布的 CLAUDE.md 编写最佳实践指南，基于�
   [[概念_CLAUDE.md最佳实践|CLAUDE.md]] 文件。
 sources:
 - raw/写好 CLAUDE.md _ HumanLayer 博客.md
-created: 2026-06-30
+created: '2026-06-30'
 updated: '2026-07-01'
 confidence: high
 ---

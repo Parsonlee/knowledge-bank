@@ -1,7 +1,14 @@
+---
+tags:
+- RAG
+confidence: medium
+type: concept
+summary: Lazy Graph RAG 是微软研究人员提出的方法，核心思想是利用语义搜索来弥补知识图谱的不足，将知识图谱和语义搜索结合（二者并非互斥而是可共存）。
+created: '2026-07-06'
+updated: '2026-07-06'
+---
 # 概念_Lazy_Graph_RAG
 
-> tags: RAG
-> confidence: medium
 
 ## 定义
 

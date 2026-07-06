@@ -1,8 +1,11 @@
 ---
 type: entity
 tags:
-  - LLM
-  - LLM/Multimodal
+- LLM
+- LLM/Multimodal
+summary: 淘天集团直播 AIGC 团队，数字人直播完整链路研发。来源：淘宝直播数字人LLM文案生成技术
+created: '2026-07-06'
+updated: '2026-07-06'
 ---
 
 # 实体：淘天AIGC团队

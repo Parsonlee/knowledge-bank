@@ -1,7 +1,16 @@
+---
+tags:
+- RAG
+- RAG/retrieval
+confidence: high
+type: concept
+summary: ColBERT（Contextualized Late Interaction over BERT）是一种基于细粒度 token 级嵌入相似性计算的检索方法。相比将整篇文档/块压缩成单一向量，ColBERT
+  对每个 token 进行嵌入，实现更精细的匹配。
+created: '2026-07-06'
+updated: '2026-07-06'
+---
 # 概念_ColBERT
 
-> tags: RAG, RAG/retrieval
-> confidence: high
 
 ## 定义
 

@@ -1,9 +1,10 @@
 ---
 type: concept
 tags:
-  - AI-Agent
-created: "2026-06-29"
-updated: "2026-06-29"
+- AI-Agent
+created: '2026-06-29'
+updated: '2026-06-29'
+summary: AI Workflow 和 AI Agent 是 LLM 时代两种主要的应用范式，核心区别在于自主性与结构化程度的权衡。
 ---
 
 # 概念：AI Workflow 与 Agent 对比

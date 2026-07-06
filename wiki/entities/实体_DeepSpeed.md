@@ -1,13 +1,13 @@
 ---
 type: entity
 tags:
-  - LLM/inference
-  - Infra/gpu
+- LLM/inference
+- Infra/gpu
 summary: 微软开源的分布式训练框架，提出 ZeRO 系列显存优化策略（Zero1/2/3）。
 sources:
-  - "wiki/sources/大模型显存计算与优化.md"
-created: "2026-06-29"
-updated: "2026-06-29"
+- wiki/sources/大模型显存计算与优化.md
+created: '2026-06-29'
+updated: '2026-06-29'
 confidence: medium
 ---
 

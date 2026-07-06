@@ -11,9 +11,7 @@ confidence: high
 ---
 # RAG路由：Routing
 
-> 来源：PyTorch研习社（南七无名式）系列教程第3篇
 > URL：https://mp.weixin.qq.com/s/4IOMT5JaL9flv6dbZjif4g
-> tags: RAG
 > Cubox 高亮：无
 
 ## 摘要

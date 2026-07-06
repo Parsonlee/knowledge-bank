@@ -1,10 +1,12 @@
 ---
 type: entity
 tags:
-  - LLM/reasoning
-  - LLM/training/RL
-created: "2026-06-29"
-updated: "2026-06-29"
+- LLM/reasoning
+- LLM/training/RL
+created: '2026-06-29'
+updated: '2026-06-29'
+summary: SimpleRL 是港科大何俊贤团队（共同一作黄裕振、Weihao Zeng）的 DeepSeek-R1 复现项目，仅用 8K MATH 数据在
+  7B 模型上复刻了 R1-Zero 和 R1 训练。
 ---
 
 # 实体：SimpleRL

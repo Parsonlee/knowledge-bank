@@ -1,7 +1,14 @@
+---
+tags:
+- RAG
+confidence: high
+type: concept
+summary: S2Dual-perception 是优图 GraphRAG 提出的社区检测算法，同时利用拓扑结构（Structure）和子图语义信息（Semantics）双重感知，生成更高质量的社区总结和发现，克服传统社区检测算法的局限性。
+created: '2026-07-06'
+updated: '2026-07-06'
+---
 # 概念_S2Dual社区检测
 
-> tags: RAG
-> confidence: high
 
 ## 定义
 

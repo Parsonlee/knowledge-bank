@@ -12,9 +12,7 @@ confidence: high
 ---
 # RAG查询构造：Query Construction
 
-> 来源：PyTorch研习社（南七无名式）系列教程第4篇
 > URL：https://mp.weixin.qq.com/s/qG02XjSV9nuRIonGy_VOwQ
-> tags: RAG, RAG/query
 > Cubox 高亮：无
 
 ## 摘要

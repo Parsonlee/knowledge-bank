@@ -1,8 +1,10 @@
 ---
 tags:
-  - AI-Agent/coding
-created: "2026-06-29"
-updated: "2026-06-29"
+- AI-Agent/coding
+created: '2026-06-29'
+updated: '2026-06-29'
+type: concept
+summary: 来源：从代码生成到自主决策Coding驱动的自我编程Agent
 ---
 
 # 概念：Coding 驱动 Agent（Code + 泛化调用）

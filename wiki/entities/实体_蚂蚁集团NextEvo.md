@@ -1,8 +1,11 @@
 ---
 type: entity
 tags:
-  - LLM
-  - Recommendation
+- LLM
+- Recommendation
+summary: 蚂蚁集团 AI 创新研发部门，负责大模型推荐系统研究与落地。来源：蚂蚁集团大模型推荐算法与应用
+created: '2026-07-06'
+updated: '2026-07-06'
 ---
 
 # 实体：蚂蚁集团NextEvo

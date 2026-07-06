@@ -1,7 +1,11 @@
 ---
-title: "实体_Nano_Banana_Pro"
-tags: [AIGC]
+tags:
+- AIGC
 confidence: high
+type: entity
+summary: Google Gemini 2.5 Flash Image 模型的别名/社区称呼，原生多模态图像生成与编辑模型。
+created: '2026-07-06'
+updated: '2026-07-06'
 ---
 
 # Nano Banana Pro

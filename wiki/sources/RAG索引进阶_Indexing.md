@@ -12,9 +12,7 @@ confidence: high
 ---
 # RAG索引进阶：Indexing
 
-> 来源：PyTorch研习社（南七无名式）系列教程第5篇
 > URL：https://mp.weixin.qq.com/s?__biz=MzI2ODUyMTQyNA==&mid=2247495567&idx=1&sn=3c2f6d114a792093f28e8a2b95851de6
-> tags: RAG, RAG/chunking
 > Cubox 高亮：3 处（见下方 [重点/高亮]）
 
 ## [重点/高亮]

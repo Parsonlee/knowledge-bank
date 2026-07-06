@@ -1,7 +1,12 @@
 ---
 type: concept
-tags: [创业]
+tags:
+- 创业
 confidence: high
+summary: Foundation Sprint 是 实体JakeKnapp 与 John Zeratsky 在 实体CharacterCapital 期间（2021-2022
+  年）创造的超早期项目战略奠基流程，作为 概念DesignSprint 的"前传"。
+created: '2026-07-06'
+updated: '2026-07-06'
 ---
 
 # 概念_Foundation Sprint

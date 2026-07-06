@@ -1,10 +1,10 @@
 ---
 type: concept
 tags:
-  - 创业
-summary: "Shishir Mehrotra 的 Bundle 理论：三种用户、MCC 分成、刚需错开非刚需重叠的捆绑策略"
-created: "2026-06-30"
-updated: "2026-06-30"
+- 创业
+summary: Shishir Mehrotra 的 Bundle 理论：三种用户、MCC 分成、刚需错开非刚需重叠的捆绑策略
+created: '2026-06-30'
+updated: '2026-06-30'
 confidence: high
 ---
 

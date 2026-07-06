@@ -1,8 +1,11 @@
 ---
 type: entity
 tags:
-  - LLM/hallucination
+- LLM/hallucination
 confidence: high
+summary: OpenAI 华人科学家，ChatGPT 贡献者之一，OpenAI 人工智能应用研究负责人。
+created: '2026-07-06'
+updated: '2026-07-06'
 ---
 
 # 实体：翁荔（Lilian Weng）

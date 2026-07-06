@@ -1,10 +1,10 @@
 ---
 type: entity
 tags:
-  - RAG/retrieval
-summary: "Cohere 提供的重排序（Rerank）API 服务，用于向量检索后的候选文档精排。"
-created: "2026-06-29"
-updated: "2026-07-01"
+- RAG/retrieval
+summary: Cohere 提供的重排序（Rerank）API 服务，用于向量检索后的候选文档精排。
+created: '2026-06-29'
+updated: '2026-07-01'
 confidence: medium
 ---
 
@@ -25,4 +25,3 @@ Cohere Rerank 是 Cohere 提供的重排序 API 服务，用于对向量检索�
 
 - 相关概念：[[概念_重排序Rerank]]、[[概念_检索后处理]]
 - 来源：[[RAG_12痛点与解决方案]]
-

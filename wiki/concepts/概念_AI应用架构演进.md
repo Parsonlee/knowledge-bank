@@ -1,9 +1,10 @@
 ---
 type: concept
 tags:
-  - AI-Agent
-created: "2026-06-29"
-updated: "2026-06-29"
+- AI-Agent
+created: '2026-06-29'
+updated: '2026-06-29'
+summary: AI 应用架构遵循"功能叠加"的演进路线，从最简单的 LLM 调用逐步增加能力层。
 ---
 
 # 概念：AI 应用架构演进

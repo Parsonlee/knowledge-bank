@@ -1,7 +1,16 @@
+---
+tags:
+- RAG
+- RAG/chunking
+confidence: high
+type: concept
+summary: 上下文块标题（Contextual Chunk Headers, CCH）是一种 RAG 分块增强方法：在将文本分块时，为每个 chunk 生成描述性标题并拼接到块开头，然后对"标题+正文"进行联合
+  Embedding 和检索。
+created: '2026-07-06'
+updated: '2026-07-06'
+---
 # 概念_CCH块标题
 
-> tags: RAG, RAG/chunking
-> confidence: high
 
 ## 定义
 

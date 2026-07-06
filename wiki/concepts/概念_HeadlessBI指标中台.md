@@ -1,9 +1,10 @@
 ---
 type: concept
 tags:
-  - AI-Agent/AI-BI
-created: "2026-06-29"
-updated: "2026-06-29"
+- AI-Agent/AI-BI
+created: '2026-06-29'
+updated: '2026-06-29'
+summary: Headless BI 是前后端分离的理念应用于数据分析领域：后端统一维护指标定义和计算逻辑，通过 SDK/API/类 SQL 向上层多个可视化应用提供服务，保障同一指标口径一致性。
 ---
 
 # 概念：Headless BI 指标中台

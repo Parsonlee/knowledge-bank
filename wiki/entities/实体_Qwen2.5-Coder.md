@@ -1,9 +1,10 @@
 ---
 type: entity
 tags:
-  - AI-Agent/AI-BI
-created: "2026-06-29"
-updated: "2026-06-29"
+- AI-Agent/AI-BI
+created: '2026-06-29'
+updated: '2026-06-29'
+summary: Qwen2.5-Coder 是阿里巴巴通义团队发布的代码专用大模型系列，在 NL2SQL 等代码生成任务上表现优异。
 ---
 
 # 实体：Qwen2.5-Coder

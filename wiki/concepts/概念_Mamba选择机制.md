@@ -1,10 +1,11 @@
 ---
 type: concept
 tags:
-  - LLM/arch/Mamba
-created: "2026-06-29"
-updated: "2026-06-29"
+- LLM/arch/Mamba
+created: '2026-06-29'
+updated: '2026-06-29'
 confidence: high
+summary: Selective State Space，Mamba 的核心创新，通过让 SSM 参数依赖输入实现内容感知推理。
 ---
 
 # Mamba 选择机制

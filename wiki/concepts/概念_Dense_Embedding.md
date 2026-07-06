@@ -1,7 +1,15 @@
+---
+tags:
+- RAG
+- RAG/embedding
+confidence: high
+type: concept
+summary: Dense Embedding（语义级稠密向量）将文本编码为低维全非零向量，捕捉语义信息。
+created: '2026-07-06'
+updated: '2026-07-06'
+---
 # 概念_Dense_Embedding
 
-> tags: RAG, RAG/embedding
-> confidence: high
 
 ## 定义
 

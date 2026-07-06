@@ -19,7 +19,6 @@ date: 2025-10-28
 - **URL**：https://mp.weixin.qq.com/s/K7bbrvMRdUejCJu-vLlE-g
 
 
-> 来源：微信公众号 PyTorch研习社，GitHub 模板 https://github.com/brianobot/fastAPI_project_structure
 
 ## 核心内容
 

@@ -1,9 +1,10 @@
 ---
 type: entity
 tags:
-  - LLM/training/post-train
-created: "2026-06-29"
-updated: "2026-06-29"
+- LLM/training/post-train
+created: '2026-06-29'
+updated: '2026-06-29'
+summary: '- 全称：Data-Efficient Instruction Tuning for Alignment'
 ---
 
 # 实体：DEITA

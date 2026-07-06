@@ -1,7 +1,15 @@
+---
+tags:
+- RAG
+- RAG/chunking
+confidence: high
+type: concept
+summary: Markdown 标题切分是文本切分 Level 3（文档结构切分）针对 Markdown 格式的具体实现。利用 Markdown 文件按标题组织的结构特点，在特定标题组中创建块，使共同上下文的文本放在一起。
+created: '2026-07-06'
+updated: '2026-07-06'
+---
 # 概念_Markdown标题切分
 
-> tags: RAG, RAG/chunking
-> confidence: high
 
 ## 定义
 

@@ -1,12 +1,13 @@
 ---
 type: entity
 tags:
-  - CV/arch
-summary: DiT（Diffusion Transformer）是用 Transformer 替换扩散模型 U-Net 的架构，作用于 latent patches；被认为是 Sora 等视频生成模型的基础架构之一。
+- CV/arch
+summary: DiT（Diffusion Transformer）是用 Transformer 替换扩散模型 U-Net 的架构，作用于 latent patches；被认为是
+  Sora 等视频生成模型的基础架构之一。
 sources:
-  - "wiki/sources/DiT_扩散模型与Transformer.md"
-created: "2026-06-26"
-updated: "2026-06-26"
+- wiki/sources/DiT_扩散模型与Transformer.md
+created: '2026-06-26'
+updated: '2026-06-26'
 confidence: high
 ---
 

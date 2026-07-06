@@ -1,6 +1,16 @@
+---
+confidence: high）
+sources:
+- wiki/sources/迪拜华人开车完全指南.md
+type: concept
+tags:
+- Life
+summary: 大转盘（Roundabout）是迪拜及整个中东（英国殖民遗留影响）解决路口交通的主要方式，除快速路立交和少数红绿灯大路口外，大小路口几乎全用 Roundabout。
+created: '2026-07-06'
+updated: '2026-07-06'
+---
 # 概念_Roundabout路权规则
 
-> 出处：[[迪拜华人开车完全指南]]（confidence: high）
 
 大转盘（Roundabout）是迪拜及整个中东（英国殖民遗留影响）解决路口交通的主要方式，除快速路立交和少数红绿灯大路口外，大小路口几乎全用 Roundabout。
 

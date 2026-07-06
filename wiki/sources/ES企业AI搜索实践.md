@@ -6,7 +6,7 @@ summary: 刘晓国（Elastic 中国社区首席布道师）QCon 演讲：基于 
   RRF、量化、HNSW+GPU 加速、Serverless 架构与 Agentic RAG 落地实践
 sources:
 - raw/基于 Elasticsearch 创建企业 AI 搜索应用实践.md
-created: 2026-06-26
+created: '2026-06-26'
 updated: '2026-07-01'
 confidence: high
 ---

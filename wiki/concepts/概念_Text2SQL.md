@@ -1,7 +1,14 @@
+---
+tags:
+- RAG
+confidence: high
+type: concept
+summary: Text2SQL 是一项将自然语言查询转换为 SQL 语句的技术，允许用户通过日常语言与数据库交互而不需要掌握专业 SQL 语法。在 RAG 系统中用于结构化数据的精准查询，与文本切片检索互补。
+created: '2026-07-06'
+updated: '2026-07-06'
+---
 # 概念_Text2SQL
 
-> tags: RAG
-> confidence: high
 
 ## 定义
 

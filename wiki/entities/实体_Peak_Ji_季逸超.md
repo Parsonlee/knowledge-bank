@@ -1,9 +1,10 @@
 ---
 type: entity
 tags:
-  - AI-Agent/context-engineering
-created: "2026-06-29"
-updated: "2026-06-29"
+- AI-Agent/context-engineering
+created: '2026-06-29'
+updated: '2026-06-29'
+summary: '- 身份：Manus 联合创始人、首席科学家'
 ---
 
 # 实体：Peak Ji 季逸超

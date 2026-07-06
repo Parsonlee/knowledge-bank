@@ -1,8 +1,11 @@
 ---
-title: AI PPT 工具的两条路径
 tags:
-  - AIGC
+- AIGC
 confidence: high
+type: concept
+summary: 九大主流AIPPT横测 将市面 AI PPT 工具归纳为两条主流路径。
+created: '2026-07-06'
+updated: '2026-07-06'
 ---
 
 # 概念_AI_PPT工具路径

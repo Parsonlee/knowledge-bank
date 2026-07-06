@@ -1,10 +1,11 @@
 ---
 type: entity
 tags:
-  - LLM/tokenization
+- LLM/tokenization
 confidence: high
-created: "2026-06-29"
-updated: "2026-06-29"
+created: '2026-06-29'
+updated: '2026-06-29'
+summary: '- 类型：学术内容媒体平台（微信公众号 + 知乎）'
 ---
 
 # 实体：PaperWeekly

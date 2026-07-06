@@ -1,7 +1,10 @@
 ---
 type: concept
 tags:
-  - Skill/knowledge-bank
+- Skill/knowledge-bank
+summary: RAG（检索增强生成） 与 LLM Wiki（大模型维基范式） 是当前 AI 知识管理与应用的两大技术路线，二者非简单的取代关系，而是适用场景与本质思维的不同。
+created: '2026-07-06'
+updated: '2026-07-06'
 ---
 
 # 概念：RAG 与 LLM Wiki 对比
