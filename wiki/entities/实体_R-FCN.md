@@ -6,6 +6,8 @@ tags:
 summary: R-FCN（Region-based Fully Convolutional Networks），通过 Position Sensitive Score
   Maps 实现全卷积位置敏感检测。
 sources:
+- raw/目标检测入门（三）：基础网络演进、分类与定位的权衡 - 知乎.md
+- raw/目标检测入门（四）：特征复用、实时性 - 知乎.md
 - wiki/sources/目标检测入门_基础网络与分类定位权衡.md
 created: '2026-06-26'
 updated: '2026-06-26'

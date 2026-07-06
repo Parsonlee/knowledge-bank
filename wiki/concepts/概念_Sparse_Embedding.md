@@ -7,7 +7,12 @@ type: concept
 summary: Sparse Embedding（关键词式稀疏向量）将文本表示为高维稀疏向量，绝大部分位置为 0，仅关键词对应维度被激活。
 created: '2026-07-06'
 updated: '2026-07-06'
+sources:
+- raw/从BM25到Multi-Vector：6种Embedding演进路线.md
+- wiki/sources/ES企业AI搜索实践.md
+- wiki/sources/从BM25到Multi-Vector_6种Embedding演进路线.md
 ---
+
 # 概念_Sparse_Embedding
 
 

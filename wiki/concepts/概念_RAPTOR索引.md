@@ -7,7 +7,13 @@ type: concept
 summary: RAPTOR（Recursive Abstractive Processing for Tree-Organized Retrieval）是一种将文档组织成分层结构的索引技术，以"树"形式组织数据，叶节点代表原始文档或文档块，高层节点代表文档经过抽象后的总结。通过分层方式提升检索效率，适应不同粒度的...
 created: '2026-07-06'
 updated: '2026-07-06'
+sources:
+- wiki/sources/RAG索引进阶_Indexing.md
+- wiki/sources/优图RAG技术详解.md
+- wiki/sources/提升RAG问答质量的技术路线.md
+- wiki/sources/斯坦福RAG新基线_DOS_RAG.md
 ---
+
 # 概念_RAPTOR索引
 
 

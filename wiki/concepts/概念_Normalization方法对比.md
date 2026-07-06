@@ -7,10 +7,12 @@ summary: BN/LN/IN/GN 四种归一化在 [N,C,H,W] 不同维度上计算均值方
   依赖性、参数维度各不同。
 sources:
 - wiki/sources/Normalization方法总结_BN_LN_IN_GN.md
+- wiki/sources/Transformer大模型3D可视化_NanoGPT.md
 created: '2026-06-26'
 updated: '2026-06-26'
 confidence: high
 ---
+
 
 # 概念：Normalization 方法对比（BN/LN/IN/GN）
 

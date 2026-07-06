@@ -6,11 +6,17 @@ tags:
 summary: Batch Normalization 沿通道在 batch 维度（N,H,W）计算均值方差，强迫数据为均值0方差1分布，缓解 Internal
   Covariate Shift 与梯度消失；用于激活函数之前。
 sources:
+- raw/PyTorch常用代码段合集.md
+- raw/信息过载时代，如何真正「懂」LLM？从MIT分享的50个面试题开始 ｜ 机器之心.md
+- raw/常用 Normalization 方法的总结与思考：BN、LN、IN、GN.md
+- raw/机器学习中SVD总结.md
 - wiki/sources/Normalization方法总结_BN_LN_IN_GN.md
+- wiki/sources/PyTorch常用代码段合集.md
 created: '2026-06-26'
 updated: '2026-06-26'
 confidence: high
 ---
+
 
 # 概念：Batch Normalization（BN）
 

@@ -10,7 +10,16 @@ This file provides guidance to Claude Code/Codex/Antigravity and other AI Agents
   - `.obsidian/` 目录下的配置、插件和主题随仓库跨端同步；`workspace.json` 等设备绑定缓存已在 `.gitignore` 中排除。
 
 ## 1. 目录结构与分层架构
-系统知识管理分为严格的三层架构，请 AI Agent 严格遵循边界执行操作：
+系统知识管理分为严格的三层架构，请 AI Agent 严格遵循边界执行操作。
+
+> [!CAUTION] 🚨 分层推导与唯一上游溯源纪律（Derivation Chain Rules）
+> 为了彻底杜绝“空中楼阁/虚假幻觉生成”与“断链越级”，全库严格遵循单向数据推导管线：**`raw/`（零级底座） 👉 `wiki/sources/`（一级产物） 👉 `wiki/entities/` 与 `wiki/concepts/` 等（末端产物）**。各层边界与上游纪律如下：
+> 1. **零级底座 (`raw/` & `Clippings/`) —— 绝对只读**：作为唯一事实来源，绝对只读不改。
+> 2. **一级产物 (`wiki/sources/`) —— 唯一上游只能是 `raw/`**：每个摘要页是物理文献的直接结构化产物，Frontmatter 中的 `sources:` 必须且只能有唯一上游 `raw/xxx.md`，做到 1对1 精准映射。
+> 3. **末端产物 (`wiki/entities/`、`wiki/concepts/`、`wiki/comparisons/`、`wiki/overview/`) —— 唯一上游只能是 `wiki/sources/`，严禁越级链接 `raw/`**：
+>    - 所有末端产物的合规事实来源，**只能并且必须来自 `wiki/sources/xxx.md`**。
+>    - **严禁越级（No Bypassing）**：末端产物绝对不能绕过 `sources/` 摘要层直接链接到 `raw/` 物理文件！
+>    - **严禁无源虚假生成（No Phantom Generation）**：任何 Frontmatter `sources:` 为空且在全库 `sources/` 中毫无支撑的末端产物，均被定性为“无源虚假生成”，在 Lint 审计与精简中一律直接物理清除。
 
 ### 1.1 原始资料层 (Raw Sources) —— 唯一事实来源，**只读不改**
 | 目录           | 用途                                     | 权限边界     |
@@ -21,11 +30,11 @@ This file provides guidance to Claude Code/Codex/Antigravity and other AI Agents
 ### 1.2 知识维护层 (Wiki Layer) —— **由 LLM / Agent 核心生成与维护**
 | 目录 / 文件 | 命名规范与用途 |
 |------|------|
-| `wiki/sources/` | 单个来源的结构化摘要页（`xxx.md`，`sources:` 字段精确指向 `raw/xxx.md` 等物理文件） |
-| `wiki/entities/` | 实体页（`实体_xxx.md`，人物、机构、书籍、开源项目等） |
-| `wiki/concepts/` | 概念页（`概念_xxx.md`，理论、算法、方法论、模型架构等） |
-| `wiki/comparisons/` | 对比分析页（`xxx_vs_yyy.md`，横向对比与技术选型） |
-| `wiki/overview/` | 综述 / 总览页（`综述_xxx.md`，体系化的专题总结） |
+| `wiki/sources/` | 单个来源的结构化摘要页（`xxx.md`，`sources:` 字段精确指向唯一上游 `raw/xxx.md`） |
+| `wiki/entities/` | 实体页（`实体_xxx.md`，人物、机构、书籍、开源项目等，`sources:` 只能指向 `wiki/sources/`） |
+| `wiki/concepts/` | 概念页（`概念_xxx.md`，理论、算法、方法论、模型架构等，`sources:` 只能指向 `wiki/sources/`） |
+| `wiki/comparisons/` | 对比分析页（`xxx_vs_yyy.md`，横向对比与技术选型，`sources:` 只能指向 `wiki/sources/`） |
+| `wiki/overview/` | 综述 / 总览页（`综述_xxx.md`，体系化的专题总结，`sources:` 只能指向 `wiki/sources/`） |
 | `wiki/index.md` | Wiki 知识库分类内容总索引 |
 | `wiki/log.md` | 操作流水日志（追溯知识库演化历史） |
 

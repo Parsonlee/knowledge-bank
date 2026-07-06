@@ -6,7 +6,10 @@ summary: AI 初创公司在技术快速迭代环境中的团队规模与产出�
 created: '2026-06-29'
 updated: '2026-06-29'
 confidence: medium
+sources:
+- wiki/sources/Jina_AI创业复盘.md
 ---
+
 
 # 概念：AI 创业团队 Scaling Law
 

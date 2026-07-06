@@ -5,7 +5,10 @@ tags:
 summary: 阿里云服务领域总结的 Agent 构建与持续调优的渐进式路径，成本与效果随路径递增。
 created: '2026-07-06'
 updated: '2026-07-06'
+sources:
+- wiki/sources/用系统架构思维告别意大利面条式系统提示词.md
 ---
+
 
 # 概念：Agent 调优路径
 

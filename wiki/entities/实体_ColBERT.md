@@ -3,6 +3,20 @@ type: entity
 tags:
 - RAG/retrieval
 summary: 斯坦福提出的基于 BERT 后期交互（Late Interaction）的高精度多向量检索模型。
+sources:
+- raw/FastAPI 架构指南：用这份模版打造可扩展又安全的系统（附实战经验）.md
+- raw/RAG之延迟交互与残差压缩：从ColBERT到ColBERTv2的演进及其应用.md
+- raw/RAG从入门到精通系列5：Indexing（索引）.md
+- raw/RAG：ColBERT原理、延迟交互机制与稠密向量的对比分析.md
+- raw/从BM25到Multi-Vector：6种Embedding演进路线.md
+- raw/探索提升RAG系统问答质量的技术路线.md
+- wiki/sources/ColBERTv2残差压缩演进.md
+- wiki/sources/ColBERT原理与延迟交互机制.md
+- wiki/sources/RAG技巧与底层代码剖析.md
+- wiki/sources/RAG系统设计_语义搜索与KG驱动选型.md
+- wiki/sources/RAG索引进阶_Indexing.md
+- wiki/sources/从BM25到Multi-Vector_6种Embedding演进路线.md
+- wiki/sources/提升RAG问答质量的技术路线.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high

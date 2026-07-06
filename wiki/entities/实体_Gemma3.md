@@ -2,6 +2,12 @@
 type: entity
 tags:
 - LLM/arch
+sources:
+- raw/2025年七大顶流大模型架构.md
+- raw/HuggingFace从决策到落地「手把手」教你训练大模型.md
+- wiki/sources/2025年七大顶流大模型架构.md
+- wiki/sources/HuggingFace手把手训练大模型实战指南.md
+- wiki/sources/从DeepSeek-V3到Kimi_K2_八种现代LLM架构大比较.md
 created: '2026-06-29'
 updated: '2026-06-29'
 summary: Google DeepMind 发布的 Gemma 3 系列开源 LLM，以滑动窗口注意力和双层 Norm 为主要架构特点。

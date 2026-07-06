@@ -6,7 +6,16 @@ summary: MCP（Model Context Protocol）是 Anthropic 制定的模型无关可�
   Agent 解耦
 created: '2026-06-29'
 updated: '2026-06-29'
+sources:
+- raw/Human In the Loop竟然可以是个MCP_.md
+- raw/别再误会MCP了！一篇写给AI工程师的硬核“辟谣”指南.md
+- wiki/sources/AI时代如何做独立开发.md
+- wiki/sources/HumanInTheLoop用MCP实现.md
+- wiki/sources/MCP五大原语与Web化.md
+- wiki/sources/MCP遇上代码执行.md
+- wiki/sources/别再误会MCP了辟谣指南.md
 ---
+
 
 ## 定义
 

@@ -1,6 +1,10 @@
 ---
 tags:
 - AIGC
+sources:
+- raw/Nano-Banana Pro 论文绘图最全教程发布.md
+- wiki/sources/Nano-Banana_Pro论文绘图教程.md
+- wiki/sources/关于Nano_Banana的一些浅思.md
 confidence: high
 type: entity
 summary: Google Gemini 2.5 Flash Image 模型的别名/社区称呼，原生多模态图像生成与编辑模型。

@@ -2,6 +2,9 @@
 type: entity
 tags:
 - LLM/arch/Mamba
+sources:
+- raw/一文读懂Mamba：具有选择状态空间的线性时间序列建模 - 知乎.md
+- wiki/sources/一文读懂Mamba_知乎.md
 created: '2026-06-29'
 updated: '2026-06-29'
 confidence: high

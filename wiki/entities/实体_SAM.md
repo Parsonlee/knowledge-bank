@@ -5,6 +5,10 @@ tags:
 summary: SAM（Segment Anything Model），Meta AI 的图像分割基础模型，支持点/框/掩码/文本 Prompt，在 SA-1B
   数据集训练。
 sources:
+- raw/12 RAG 痛点和拟议解决方案.md
+- raw/从LLaVA到Qwen3-VL，多模态大模型主流架构的演进之路.md
+- raw/分割一切(Segment Anything)不是梦，SAM模型引领图像分割新时代....md
+- raw/把 AI 邮件工具做到 3500 万美元 ARR，Superhuman：找到 P....md
 - wiki/sources/SAM_Segment_Anything模型.md
 created: '2026-06-26'
 updated: '2026-06-26'

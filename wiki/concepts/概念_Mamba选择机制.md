@@ -6,7 +6,14 @@ created: '2026-06-29'
 updated: '2026-06-29'
 confidence: high
 summary: Selective State Space，Mamba 的核心创新，通过让 SSM 参数依赖输入实现内容感知推理。
+sources:
+- wiki/sources/A_Visual_Guide_to_Mamba_and_SSM.md
+- wiki/sources/Mamba2_SSD_大一统.md
+- wiki/sources/Mamba_Explained_Kola_Ayonrinde.md
+- wiki/sources/Transformer被挑战_Mamba解析与PyTorch复现.md
+- wiki/sources/一文读懂Mamba_知乎.md
 ---
+
 
 # Mamba 选择机制
 

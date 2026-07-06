@@ -6,7 +6,10 @@ summary: Sean Ellis 提出的 PMF 领先指标：问'用不了会怎样'，回�
 created: '2026-06-30'
 updated: '2026-06-30'
 confidence: high
+sources:
+- wiki/sources/Superhuman_PMF引擎方法论.md
 ---
+
 
 # 概念：Sean Ellis PMF 指标
 

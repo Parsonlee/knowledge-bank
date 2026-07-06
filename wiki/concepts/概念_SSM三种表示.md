@@ -6,7 +6,10 @@ created: '2026-06-29'
 updated: '2026-06-29'
 confidence: high
 summary: 同一个 SSM 可以用三种等价方式表示，各有优劣，实践中按任务选择。
+sources:
+- wiki/sources/A_Visual_Guide_to_Mamba_and_SSM.md
 ---
+
 
 # SSM 三种表示
 

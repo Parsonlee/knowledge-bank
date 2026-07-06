@@ -6,7 +6,11 @@ summary: MCP 的正确架构是 Client-Host-Server 三组件，而非 CS 两组�
   是模型无关的 RPC 管道
 created: '2026-06-29'
 updated: '2026-06-29'
+sources:
+- wiki/sources/HumanInTheLoop用MCP实现.md
+- wiki/sources/别再误会MCP了辟谣指南.md
 ---
+
 
 ## 定义
 

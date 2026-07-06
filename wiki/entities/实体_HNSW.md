@@ -3,6 +3,18 @@ type: entity
 tags:
 - RAG/retrieval
 summary: 当前业界主流的基于分层导航图结构的近似最近邻搜索（ANN）算法。
+sources:
+- raw/FastAPI 架构指南：用这份模版打造可扩展又安全的系统（附实战经验）.md
+- raw/RAG 挑战赛冠军方案解析：从数据解析到多路由器检索的工程实践，推荐阅读！.md
+- raw/RAG系统设计：揭秘语义搜索被低估的核心价值与KG驱动的架构选型策略.md
+- raw/一文读懂向量数据库，原理到应用全解析！.md
+- raw/基于 Elasticsearch 创建企业 AI 搜索应用实践.md
+- wiki/sources/ES企业AI搜索实践.md
+- wiki/sources/RAG挑战赛冠军方案.md
+- wiki/sources/RAG系统设计_语义搜索与KG驱动选型.md
+- wiki/sources/向量数据库原理与应用全解析.md
+- wiki/sources/大模型算法岗面试百问百答.md
+- wiki/sources/美团搜索查询改写实践.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high

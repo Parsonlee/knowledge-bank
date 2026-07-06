@@ -3,6 +3,9 @@ type: entity
 tags:
 - 创业
 summary: Leonis Capital：华人 2021 年成立的专注早期 AI 项目风投，发布 The Leonis AI 100 报告
+sources:
+- raw/万字洞察丨100 家顶尖 AI 初创公司的 7 个真相.md
+- wiki/sources/100家顶尖AI初创公司的7个真相.md
 created: '2026-06-30'
 updated: '2026-06-30'
 confidence: high

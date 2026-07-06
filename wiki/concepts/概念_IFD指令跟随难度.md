@@ -5,7 +5,10 @@ tags:
 created: '2026-06-29'
 updated: '2026-06-29'
 summary: 衡量模型对某条 SFT 数据的"必要性"指标，用于筛选对模型真正有训练价值的样本。
+sources:
+- wiki/sources/SFT数据挑选方法_质量多样性必要性.md
 ---
+
 
 # 概念：IFD（Instruction Following Difficulty，指令跟随难度）
 

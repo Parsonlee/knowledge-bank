@@ -7,7 +7,11 @@ type: concept
 summary: Binary Embedding（极致 0/1 压缩）将浮点向量二值化为 0/1 表示，实现极致存储压缩与超快计算。
 created: '2026-07-06'
 updated: '2026-07-06'
+sources:
+- raw/从BM25到Multi-Vector：6种Embedding演进路线.md
+- wiki/sources/从BM25到Multi-Vector_6种Embedding演进路线.md
 ---
+
 # 概念_Binary_Embedding
 
 

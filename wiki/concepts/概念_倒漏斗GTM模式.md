@@ -6,7 +6,10 @@ summary: AI 初创 GTM 倒漏斗：PLG 先行验证价值，销售后置将已�
 created: '2026-06-30'
 updated: '2026-06-30'
 confidence: high
+sources:
+- wiki/sources/100家顶尖AI初创公司的7个真相.md
 ---
+
 
 # 概念：倒漏斗 GTM 模式
 

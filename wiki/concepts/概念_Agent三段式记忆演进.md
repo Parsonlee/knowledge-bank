@@ -6,7 +6,10 @@ summary: Agent 三段式记忆演进是关于 AI 智能体记忆机制发展的�
   → Reflection → Experience。
 created: '2026-07-06'
 updated: '2026-07-06'
+sources:
+- wiki/sources/LLM Agent记忆进化路径三阶段研究综述.md
 ---
+
 
 # 概念：Agent 三段式记忆演进
 

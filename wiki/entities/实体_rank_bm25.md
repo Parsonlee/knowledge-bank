@@ -4,6 +4,10 @@ tags:
 - RAG/retrieval
 - Skill/python
 summary: Python BM25 关键词匹配相关性打分算法库，常用于多路召回融合。
+sources:
+- raw/FastAPI 架构指南：用这份模版打造可扩展又安全的系统（附实战经验）.md
+- raw/RAG高级优化：检索策略探讨Fusion, HyDE安排上(含代码).md
+- wiki/sources/RAG高级优化_检索策略Fusion_HyDE.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: medium

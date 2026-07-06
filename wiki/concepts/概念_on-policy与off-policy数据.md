@@ -6,7 +6,10 @@ tags:
 created: '2026-06-29'
 updated: '2026-06-29'
 summary: '- on-policy 数据：训练数据由当前模型策略（当前参数）在训练时实时采样生成，数据分布与模型当前行为一致'
+sources:
+- wiki/sources/后训练认知_SFT_vs_RL_记忆与遗忘机制.md
 ---
+
 
 # 概念：on-policy 与 off-policy 数据
 

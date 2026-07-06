@@ -6,7 +6,10 @@ confidence: high
 created: '2026-06-29'
 updated: '2026-06-29'
 summary: BPE 是一种子词（subword）级分词算法，通过迭代合并高频字节对，在词汇表大小与序列长度之间取得平衡，是 GPT 系列的核心分词方案。
+sources:
+- wiki/sources/LLM面试50题_MIT_CSAIL.md
 ---
+
 
 # 概念：BPE 分词算法（Byte-Pair Encoding）
 

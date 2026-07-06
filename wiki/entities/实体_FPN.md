@@ -5,6 +5,7 @@ tags:
 - CV/detection
 summary: FPN（Feature Pyramid Networks），自顶向下多尺度特征金字塔，成为检测近乎标配组件。
 sources:
+- raw/目标检测入门（四）：特征复用、实时性 - 知乎.md
 - wiki/sources/目标检测入门_特征复用与实时性.md
 created: '2026-06-26'
 updated: '2026-06-26'

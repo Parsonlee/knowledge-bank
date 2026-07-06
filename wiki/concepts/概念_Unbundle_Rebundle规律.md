@@ -6,7 +6,10 @@ summary: Unbundle 提供切入市场机会，rebundle 提供捕获价值机会�
 created: '2026-06-30'
 updated: '2026-06-30'
 confidence: high
+sources:
+- wiki/sources/Bundle_Unbundle视角看AI时代机会.md
 ---
+
 
 # 概念：Unbundle / Rebundle 规律
 

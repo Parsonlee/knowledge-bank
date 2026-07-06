@@ -3,6 +3,8 @@ type: entity
 tags:
 - LLM/arch/MoE
 summary: OpenAI 于 2025 年 8 月发布的首批开放权重模型（自 GPT-2 2019 年以来），Apache 2.0 许可证。来源：从GPT-2到gpt-ossOpenAI开放模型进化之路
+sources:
+- wiki/sources/Tongyi DeepResearch的技术报告探秘.md
 created: '2026-07-06'
 updated: '2026-07-06'
 ---

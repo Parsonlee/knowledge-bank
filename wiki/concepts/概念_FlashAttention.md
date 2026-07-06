@@ -6,11 +6,27 @@ tags:
 summary: FlashAttention 是 I/O 感知的精确注意力优化，通过 Kernel 融合、分块计算（Tiling）和在线 Softmax 避免在
   HBM 物化 N×N 中间矩阵，将注意力从内存密集型转为计算密集型。
 sources:
+- raw/Attention复杂度解析与改进方向 - GRITJW - 博客园.md
+- raw/Mamba Explained _ Kola Ayonrinde.md
+- raw/[LLM]大模型显存计算公式与优化 - 知乎.md
+- raw/一文读懂Mamba：具有选择状态空间的线性时间序列建模 - 知乎.md
+- raw/从DeepSeek-V3到Kimi K2：八种现代 LLM 架构大比较.md
+- raw/大模型算法岗，面试百问百答.md
+- wiki/sources/2025年七大顶流大模型架构.md
+- wiki/sources/A_Visual_Guide_to_Mamba_and_SSM.md
 - wiki/sources/Attention复杂度解析与改进方向.md
+- wiki/sources/LLM面试50题_MIT_CSAIL.md
+- wiki/sources/Transformer大模型3D可视化_NanoGPT.md
+- wiki/sources/Transformer被挑战_Mamba解析与PyTorch复现.md
+- wiki/sources/一文读懂Mamba_知乎.md
+- wiki/sources/从DeepSeek-V3到Kimi_K2_八种现代LLM架构大比较.md
+- wiki/sources/大模型显存计算公式与优化.md
+- wiki/sources/推测解码Speculative_Decoding综述.md
 created: '2026-06-26'
 updated: '2026-06-26'
 confidence: high
 ---
+
 
 # 概念：FlashAttention
 

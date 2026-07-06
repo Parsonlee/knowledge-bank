@@ -6,7 +6,10 @@ type: concept
 summary: 强化学习优化的 NMT（Neural Machine Translation，神经网络翻译模型）查询改写是一种端到端生成式改写方法，通过将搜索系统作为环境（Environment）、NMT改写模型作为智能体（Agent），用搜索曝光和点击作为奖励（Reward）来指导模型优化，解决长尾Query覆盖...
 created: '2026-07-06'
 updated: '2026-07-06'
+sources:
+- wiki/sources/美团搜索查询改写实践.md
 ---
+
 # 概念_强化学习NMT改写
 
 

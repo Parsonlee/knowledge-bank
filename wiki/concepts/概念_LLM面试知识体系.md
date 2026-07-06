@@ -7,7 +7,11 @@ summary: LLM 面试高频知识点体系：架构基础/微调方法/推理技�
 created: '2026-06-29'
 updated: '2026-06-29'
 confidence: high
+sources:
+- wiki/sources/LLM面试50题_MIT_CSAIL.md
+- wiki/sources/大模型算法岗面试百问百答.md
 ---
+
 
 # 概念：LLM 面试知识体系
 

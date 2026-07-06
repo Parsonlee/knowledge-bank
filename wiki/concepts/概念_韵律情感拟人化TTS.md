@@ -6,7 +6,10 @@ type: concept
 summary: 让 TTS 生成语音更有直播感和主播风格的技术方案，通过挖掘直播数据的韵律和情感信息实现。
 created: '2026-07-06'
 updated: '2026-07-06'
+sources:
+- wiki/sources/淘宝直播数字人_TTS语音合成技术.md
 ---
+
 
 # 韵律情感拟人化 TTS
 

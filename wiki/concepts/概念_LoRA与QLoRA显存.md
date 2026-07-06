@@ -5,7 +5,10 @@ tags:
 created: '2026-06-29'
 updated: '2026-06-29'
 summary: '- 在原权重矩阵旁路添加低秩可训练矩阵（A: d×r，B: r×d），参数量从 d² 降为 2dr'
+sources:
+- wiki/sources/大模型显存占用单卡分析.md
 ---
+
 
 # 概念：LoRA 与 QLoRA 显存分析
 

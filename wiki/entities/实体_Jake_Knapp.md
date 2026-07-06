@@ -2,6 +2,9 @@
 type: entity
 tags:
 - 创业
+sources:
+- raw/7天验证产品思路、10小时找到基础共识：来自谷歌的“Foundation Spr....md
+- wiki/sources/Foundation_Sprint产品验证完全指南.md
 confidence: high
 summary: Jake Knapp — Design Sprint 创造者，前 Google Ventures (GV) 设计合伙人。
 created: '2026-07-06'

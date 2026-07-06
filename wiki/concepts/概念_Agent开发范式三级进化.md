@@ -5,7 +5,13 @@ created: '2026-06-29'
 updated: '2026-06-29'
 type: concept
 summary: 来源：万字长文深入浅出教你优雅开发复杂AIAgent
+sources:
+- wiki/sources/AI_Agent与AI_Workflow的区别和深度解析.md
+- wiki/sources/Agent系统开发经验.md
+- wiki/sources/Claude_Agent_Skills_从第一性原理深入剖析.md
+- wiki/sources/OpenAI_构建AI智能体实用指南.md
 ---
+
 
 # 概念：Agent 开发范式三级进化
 

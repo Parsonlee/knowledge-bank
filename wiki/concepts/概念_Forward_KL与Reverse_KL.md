@@ -6,7 +6,10 @@ tags:
 created: '2026-06-29'
 updated: '2026-06-29'
 summary: '- Forward KL（正向 KL 散度）：KL(目标分布 || 模型分布），最小化时模型要"覆盖"目标分布的全部区域，即 mode-covering'
+sources:
+- wiki/sources/后训练认知_SFT_vs_RL_记忆与遗忘机制.md
 ---
+
 
 # 概念：Forward KL 与 Reverse KL
 

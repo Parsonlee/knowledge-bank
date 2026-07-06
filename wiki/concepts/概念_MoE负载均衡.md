@@ -5,7 +5,12 @@ tags:
 created: '2026-06-29'
 updated: '2026-06-29'
 summary: MoE 训练中的关键挑战：如果 Router 训练不当，所有 Token 会集中路由到少数"热门"专家，导致其他专家欠训练，整体性能下降。
+sources:
+- wiki/sources/大模型面试面经_简单透彻理解MoE.md
+- wiki/sources/手把手教你实现稀疏MoE语言模型.md
+- wiki/sources/腾讯混元TurboS技术报告.md
 ---
+
 
 # 概念_MoE负载均衡
 

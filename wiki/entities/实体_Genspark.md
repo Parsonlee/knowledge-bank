@@ -1,6 +1,11 @@
 ---
 tags:
 - AIGC
+sources:
+- raw/一年上线超 10 款产品，AI 时代如何做独立开发.md
+- raw/九大主流AI PPT横测，能打的Agent只有3个半.md
+- wiki/sources/AI时代如何做独立开发.md
+- wiki/sources/九大主流AI_PPT横测.md
 confidence: medium
 type: entity
 summary: Genspark 是近期热度很高的通用智能体产品，将生成演示文稿的功能纳入能力版图（内部称「幻灯片」）。以任务规划和执行为主，生成幻灯片只是其功能之一。

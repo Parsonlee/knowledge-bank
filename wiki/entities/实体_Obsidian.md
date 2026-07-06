@@ -4,6 +4,10 @@ tags:
 - Skill/knowledge-bank
 summary: Obsidian 是一款基于本地文件系统的强大 Markdown 个人知识库与笔记管理软件。它以“离线优先、私有数据绝对掌控、双向链接（Bi-directional
   Links）与图谱可视化”为核心特色。
+sources:
+- raw/Claude Code + Obsidian + 飞书，我搭了一套会自己长大的知识库.md
+- raw/一套提示词帮你实现小红书、公众号封面自由.md
+- wiki/sources/Claude Code与Obsidian飞书知识库搭建实践.md
 created: '2026-07-06'
 updated: '2026-07-06'
 ---

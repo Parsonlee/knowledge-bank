@@ -6,7 +6,11 @@ type: concept
 summary: 不直接生成图片，而是让 LLM 输出 HTML + CSS（必要时 + JavaScript）代码，在浏览器中渲染为 PPT 页面或封面图，再导出/截图为最终物料。
 created: '2026-07-06'
 updated: '2026-07-06'
+sources:
+- wiki/sources/Gemini的PPT生成技巧与模板提示词.md
+- wiki/sources/一套提示词实现封面自由.md
 ---
+
 
 # 概念_HTML代码方式生成视觉物料
 

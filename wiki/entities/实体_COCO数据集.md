@@ -5,6 +5,9 @@ tags:
 - CV/detection
 summary: MS COCO（Common Objects in Context），80 类像素级实例标注数据集，目标检测/分割主流基准。
 sources:
+- raw/分割一切(Segment Anything)不是梦，SAM模型引领图像分割新时代....md
+- raw/目标检测入门（三）：基础网络演进、分类与定位的权衡 - 知乎.md
+- raw/目标检测入门（二）：模型的评测与训练技巧 - 知乎.md
 - wiki/sources/目标检测入门_评测与训练技巧.md
 created: '2026-06-26'
 updated: '2026-06-26'

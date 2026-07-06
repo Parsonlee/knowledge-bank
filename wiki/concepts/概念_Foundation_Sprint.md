@@ -7,7 +7,11 @@ summary: Foundation Sprint 是 实体JakeKnapp 与 John Zeratsky 在 实体Chara
   年）创造的超早期项目战略奠基流程，作为 概念DesignSprint 的"前传"。
 created: '2026-07-06'
 updated: '2026-07-06'
+sources:
+- raw/7天验证产品思路、10小时找到基础共识：来自谷歌的“Foundation Spr....md
+- wiki/sources/Foundation_Sprint产品验证完全指南.md
 ---
+
 
 # 概念_Foundation Sprint
 

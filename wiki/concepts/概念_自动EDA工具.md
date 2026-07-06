@@ -7,7 +7,11 @@ summary: 用几行 Python 代码完成完整探索性数据分析的工具集，
 created: '2026-06-30'
 updated: '2026-06-30'
 confidence: high
+sources:
+- wiki/sources/图解Pandas常用操作_NumPy对比与进阶.md
+- wiki/sources/自动探索性数据分析EDA_10个Python包.md
 ---
+
 
 # 概念_自动EDA工具
 

@@ -2,6 +2,11 @@
 type: entity
 tags:
 - AI-Agent
+sources:
+- raw/Agent系统开发经验.md
+- raw/RAG从入门到精通系列1：基础RAG.md
+- wiki/sources/Agent系统开发经验.md
+- wiki/sources/RAG基础_索引检索生成.md
 created: '2026-06-29'
 updated: '2026-06-29'
 summary: LangSmith 是 LangChain 团队开发的 AI Agent 开发者平台，用于调试、测试、评估和监控基于 LLM 的应用。

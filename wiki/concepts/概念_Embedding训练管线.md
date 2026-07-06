@@ -6,7 +6,11 @@ type: concept
 summary: Embedding 训练管线（Training Pipeline）是指通过多阶段策略逐步增强向量模型泛化能力和检索效果的系统化训练流程，包括弱监督对比学习、有监督对比学习、精细化数据工程、多任务均衡等环节。
 created: '2026-07-06'
 updated: '2026-07-06'
+sources:
+- wiki/sources/Jina_AI创业复盘.md
+- wiki/sources/优图RAG技术详解.md
 ---
+
 # 概念_Embedding训练管线
 
 

@@ -5,6 +5,11 @@ tags:
 - AI-Agent/prompt-engineering
 summary: Dropbox 是一家全球闻名的美股上市公司，提供先进的云端文件存储、内容同步与智能化协作平台服务。近年来持续加大在 AI 与智能工作空间领域的研发投入，推出具备跨库搜索与深度总结能力的智能客服与生产力助手
   Dash Chat。
+sources:
+- raw/万字洞察丨100 家顶尖 AI 初创公司的 7 个真相.md
+- raw/我们如何利用 DSPy 将 AI 评估转化为 Dash Chat 的更优回复.md
+- raw/把 AI 邮件工具做到 3500 万美元 ARR，Superhuman：找到 P....md
+- wiki/sources/Dropbox基于DSPy优化Dash Chat评估与提示词.md
 created: '2026-07-06'
 updated: '2026-07-06'
 ---

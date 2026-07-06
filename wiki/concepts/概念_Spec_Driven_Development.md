@@ -5,7 +5,11 @@ tags:
 created: '2026-06-29'
 updated: '2026-06-29'
 summary: 相对于 Vibe Coding（Prompt → Code），规范驱动开发先生成结构化规范再生成代码：
+sources:
+- wiki/sources/Anthropic x ClaudeCode 官方插件：AI Agent 的领域知识插件——鸟窝.md
+- wiki/sources/浅谈上下文工程_Claude_Code_Manus_Kiro.md
 ---
+
 
 # 概念：Spec-Driven Development（规范驱动开发）
 

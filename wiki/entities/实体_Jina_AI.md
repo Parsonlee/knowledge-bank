@@ -4,6 +4,9 @@ tags:
 - 创业
 - LLM
 summary: Jina AI：专注搜索底座模型的 AI 初创公司，2020-2025年，两次 Pivot 后被 Elastic 收购
+sources:
+- raw/Jina AI创业复盘：AI团队的Scaling Law是什么.md
+- wiki/sources/Jina_AI创业复盘.md
 created: '2026-06-29'
 updated: '2026-06-29'
 ---

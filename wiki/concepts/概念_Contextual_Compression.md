@@ -8,7 +8,13 @@ summary: 上下文压缩（Contextual Compression）是一种检索后处理方�
   k 个文档（或文档中的相关片段），过滤掉无关内容。
 created: '2026-07-06'
 updated: '2026-07-06'
+sources:
+- raw/RAG高级优化：检索后处理模块成竹在胸.md
+- wiki/sources/RAG_12痛点与解决方案.md
+- wiki/sources/RAG技巧与底层代码剖析.md
+- wiki/sources/RAG高级优化_检索后处理.md
 ---
+
 # 概念_Contextual_Compression
 
 

@@ -3,6 +3,11 @@ type: entity
 tags:
 - 创业
 summary: Grammarly：年收入超 7 亿美金嵌入式 AI 写作工具，收购 Coda+Superhuman 后改名 Superhuman
+sources:
+- raw/把 AI 邮件工具做到 3500 万美元 ARR，Superhuman：找到 P....md
+- raw/把世界拆成最小单元，然后重新拼装 _ 42章经 AI Newsletter.md
+- wiki/sources/Bundle_Unbundle视角看AI时代机会.md
+- wiki/sources/Superhuman_PMF引擎方法论.md
 created: '2026-06-30'
 updated: '2026-06-30'
 confidence: high

@@ -4,6 +4,18 @@ tags:
 - Infra/gpu
 - DeepLearning
 summary: 全球人工智能算力与 GPU 硬件基础架构的领导企业，构建了以 CUDA、TensorRT 和 Megatron 为核心的软硬件加速生态。
+sources:
+- raw/A Visual Guide to Mamba and State Space ....md
+- raw/Attention复杂度解析与改进方向 - GRITJW - 博客园.md
+- raw/HuggingFace从决策到落地「手把手」教你训练大模型.md
+- raw/Mamba2_ SSM和Transformer的大一统 - 知乎.md
+- raw/[LLM]大模型显存计算公式与优化 - 知乎.md
+- raw/一文讲明白大模型显存占用（只考虑单卡） - 知乎.md
+- raw/入局AI Infra：程序员必须了解的AI系统设计与挑战知识.md
+- raw/分割一切(Segment Anything)不是梦，SAM模型引领图像分割新时代....md
+- wiki/sources/PyTorch常用代码段合集.md
+- wiki/sources/入局AI_Infra系统设计与挑战.md
+- wiki/sources/大模型显存计算公式与优化.md
 created: '2026-07-06'
 updated: '2026-07-06'
 ---

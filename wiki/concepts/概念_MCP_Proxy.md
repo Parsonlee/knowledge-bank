@@ -5,7 +5,11 @@ tags:
 summary: MCP 代理模式：在每个 tool/call 前植入人类确认逻辑，现有 MCP Server 无需改动，接入 Proxy URL 即可
 created: '2026-06-29'
 updated: '2026-06-29'
+sources:
+- raw/Human In the Loop竟然可以是个MCP_.md
+- wiki/sources/HumanInTheLoop用MCP实现.md
 ---
+
 
 # 概念_MCP_Proxy
 

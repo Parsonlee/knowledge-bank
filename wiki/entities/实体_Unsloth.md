@@ -3,6 +3,9 @@ type: entity
 tags:
 - LLM/training/RL
 - Skill/python
+sources:
+- raw/新手必看！强化学习入门指南 _ 从RLHF、PPO、GRPO到RLVR，最后到训....md
+- wiki/sources/强化学习入门指南_RLHF到GRPO.md
 created: '2026-06-29'
 updated: '2026-06-29'
 summary: Unsloth 是 Daniel Han 和 Michael Han 兄弟团队开发的开源 LLM 微调框架，专注于高效微调和强化学习训练，GitHub

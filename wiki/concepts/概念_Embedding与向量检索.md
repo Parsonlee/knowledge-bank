@@ -7,7 +7,23 @@ type: concept
 summary: 将文本表示（Text Representation）转成数值表示（Numerical Representation），以便通过相似度（如余弦相似度）衡量相关性。
 created: '2026-07-06'
 updated: '2026-07-06'
+sources:
+- wiki/sources/AI智能体8种Memory策略与技术实现.md
+- wiki/sources/ES企业AI搜索实践.md
+- wiki/sources/MRL_俄罗斯套娃表示学习.md
+- wiki/sources/Matryoshka嵌入模型概述_HuggingFace.md
+- wiki/sources/RAGAS评估RAG系统.md
+- wiki/sources/RAG基础_索引检索生成.md
+- wiki/sources/RAG文本切分_语义切分.md
+- wiki/sources/RAG系统设计_语义搜索与KG驱动选型.md
+- wiki/sources/RAG高级优化_问题生成检索增强.md
+- wiki/sources/一文详尽之Embedding.md
+- wiki/sources/为什么用Qwen3_embedding和rerank.md
+- wiki/sources/从BM25到Multi-Vector_6种Embedding演进路线.md
+- wiki/sources/向量数据库原理与应用全解析.md
+- wiki/sources/大模型算法岗面试百问百答.md
 ---
+
 # 概念_Embedding与向量检索
 
 

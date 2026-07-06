@@ -168,7 +168,6 @@
 ## Concepts
 
 - [[概念_显存组成与估算]] — 显存消耗组成、各组件估算公式、估算误差
-- [[概念_训练并行策略]] — TP/SP/PP/DP/Zero、3D 并行对显存的影响
 - [[概念_激活值重计算]] — 重计算原理及不同并行组合的激活值公式
 - [[概念_Zero显存优化]] — Zero1/2/3 三种策略与计算公式
 - [[概念_两阶段检测]] — Region-based 两阶段范式：Proposal → 分类回归
@@ -305,9 +304,6 @@
 
 #### 阿里/美团/优图实践概念（批次7）
 - [[概念_知识图谱RAG]] — 图结构组织知识，多跳推理跨文档关联检索
-- [[概念_RAR相关性过滤]] — 检索增强相关性，赋予 LLM 判断"不相关"能力
-- [[概念_RAG_Diagnoser]] — 原子事实粒度的细粒度 RAG 评估体系
-- [[概念_迭代式检索]] — 首次无效时分层递进查询，避免一次性检索污染
 - [[概念_SMT查询改写]] — 统计翻译模型查询改写，噪声信道+BeamSearch+XGBoost
 - [[概念_强化学习NMT改写]] — NMT 改写以搜索系统为环境强化学习优化
 - [[概念_向量化召回改写]] — 双塔向量从候选池 ANN 召回改写词（模糊改写）
@@ -334,10 +330,7 @@
 - [[概念_查询扩展]] — 内部扩展(LLM知识)+外部扩展(知识库)提高检索效果
 - [[概念_查询消歧]] — 识别消除查询歧义，确保单一精确解释
 - [[概念_查询抽象]] — 提炼核心概念创建高层次表示，Step-back 为具体实现
-- [[概念_RAG四大基础范式]] — 基于查询/隐空间/概率/投机四种检索-生成交互方式（RAG）
-- [[概念_RAG五类提升方法]] — 输入/检索器/生成器/结果/流程五类 RAG 增强方法（RAG）
 - [[概念_自适应检索]] — 基于规则或模型判断是否需要检索，避免过度检索（RAG）
-- [[概念_迭代RAG]] — 迭代检索和生成，循环直到输出达标（RAG）
 - [[概念_LLM应用优化两轴]] — Context Optimization(RAG) + LLM Optimization(FT) 两轴并行迭代（LLM）
 - [[概念_Fine-tuning]] — 微调增强 LLM 特定领域/任务能力，蒸馏降本（LLM）
 
@@ -381,7 +374,6 @@
 - [[概念_推测解码]] — Draft-then-Verify：并行推测+验证实现无损推理加速（LLM/inference）
 - [[概念_混合精度训练]] — BF16/FP32混合训练流程，16 bytes/参数显存估算（LLM/inference）
 - [[概念_LoRA与QLoRA显存]] — LoRA 2Φ、QLoRA 0.5Φ显存估算原理（LLM/inference, 面试）
-- [[概念_语义缓存]] — 确定性规范化缓存键，语义相似查询命中同一缓存（LLM/inference）
 - [[概念_思维链CoT高级方法]] — CoT/CoT-SC/Decoding CoT/ToT+MCTS 及成本权衡（LLM/reasoning）
 - [[概念_自适应快慢思考]] — 三方案：Qwen3 SFT、AdaCoT Pareto、AdaThinking 约束优化（LLM/reasoning）
 
@@ -404,20 +396,14 @@
 - [[概念_温度参数与幻觉创造力权衡]] — 温度参数控制输出分布平滑度，高温增创意增幻觉，低温保准确减创意（LLM/hallucination, LLM/inference）
 - [[概念_Discrete_Tokenization]] — VQ将连续多模态信号压缩为离散token，8类方法，码本坍塌核心挑战（LLM/tokenization）
 - [[概念_BPE分词算法]] — 迭代合并高频字节对，平衡词汇表大小与序列长度，GPT系列标准分词（LLM/tokenization）
-- [[概念_预训练数据处理管线]] — URL采集→过滤→去重→PII移除9步流程，FineWeb 15T token标准管线（LLM/training）
-- [[概念_LLM三大演进支柱_效率推理智能体]] — 2023-2025 LLM演进：效率（MoE/MLA）→推理（Thinking/RL）→智能体（工具调用）三大正交支柱（LLM/arch）
 
 ### LLM/面试/训练/RL（批次9）
 - [[概念_LLM面试知识体系]] — LLM 面试五大模块清单：架构/微调/推理/数学/扩展（LLM, 面试）
-- [[概念_LLM数据管理预训练SFT]] — 预训练+SFT 两阶段数据质量/规模/组合管理框架（LLM/training）
 - [[概念_通用验证器]] — 突破 RLVR 限制的两大路线：评分细则 vs 内部自信度，OaK 终局架构（LLM/training/RL）
 - [[概念_Reward_Hacking]] — 奖励攻陷（Specification Gaming），强化学习中模型找到奖励漏洞以不符合真实意图的方式高频刷分现象（LLM/training/RL）
 - [[概念_AI创业Scaling_Law]] — AI 团队规模与产出效率的悖论：小而精 vs 规模扩张（创业）
 
 ### LLM/Recommendation + arch（Batch 10）
-- [[概念_大模型推荐系统]] — 大模型融入推荐的三条路径：两阶段KG/教师蒸馏/种子用户池（LLM, Recommendation）
-- [[概念_LLM知识图谱生产]] — 大模型生成三元组扩充KG：关系过滤+目标实体生成+Utility精排RAG（LLM, Recommendation）
-- [[概念_gpt-oss架构特征]] — gpt-oss 7项架构进化、宽vs深对比、MXFP4量化（LLM/arch/MoE）
 - [[概念_数字人文案生成]] — 口语化改写/多步蒸馏/图文一致/测评体系完整框架（LLM）
 
 ### AI-Agent/tools MCP系列（Phase 4 Batch 1）
@@ -427,11 +413,9 @@
 - [[概念_MCP传输方式]] — Stdio/SSE/Streamable HTTP 三种传输方式对比与选型（AI-Agent/tools）
 - [[概念_MCP与Function_Call对比]] — 协议 vs 模型特性、静态 vs 动态、碎片化痛点与 MCP 解法（AI-Agent/tools）
 - [[概念_MCP代码执行模式]] — CodeAgent 模式：按需加载工具定义，Token 消耗减少 98.7%，含隐私保护与 Skills 沉淀（AI-Agent/tools）
-- [[概念_MCP数据库集成]] — MCP+数据库 Text-to-SQL 模式，结构化检索优于 RAG，含 MongoDB 实战与局限（AI-Agent/tools）
 - [[概念_HITL_MCP]] — send_inquiry 挂起等待人类答复，MCP Notification 传凭条，HTTP 接口收答复，多端协同（AI-Agent/tools）
 - [[概念_MCP_Proxy]] — 代理模式在 tool/call 前植入确认逻辑，现有 MCP Server 零改动（AI-Agent/tools）
 - [[概念_Agent思考工具]] — think/plan/action 工具强制结构化规划，航空客服提升 54%，优于纯 Prompt（AI-Agent/tools）
-- [[概念_MCP混合部署]] — 小模型做工具选择节省 token，大模型负责生成保证质量（AI-Agent/tools）
 - [[概念_orchestrator-worker模式]] — 主智能体规划分解，子智能体并行执行，多智能体 vs 单智能体提升 90.2%（AI-Agent/multi-agent）
 - [[概念_多智能体协调]] — 多智能体协调挑战、提示词 8 原则、评测策略与生产可靠性（AI-Agent/multi-agent）
 - [[概念_LLM_Wiki范式]] — Andrej Karpathy 提出的知识管理范式，在摄入端预先结构化与关联，实现高复利知识编译（Skill/knowledge-bank）
@@ -503,7 +487,6 @@
 - [[实体_Kimi_K2]] — 月之暗面 1T 参数开源 MoE 模型，Muon 优化器，基于 DeepSeek-V3 架构（LLM/arch/MoE）
 - [[实体_Gemma3]] — Google DeepMind 开源 LLM，滑动窗口注意力+双层 Norm，27B 性能优异（LLM/arch）
 - [[实体_Florence-2]] — 微软 Azure AI 通用视觉基础模型，FLD-5B + Seq2Seq（LLM/arch/VLM）
-- [[实体_FLD-5B数据集]] — Florence-2 配套 1.26亿图像/54亿标注超大规模视觉数据集（LLM/arch/VLM）
 - [[实体_LLaVA]] — 大道至简多模态系列：极简连接器 + AnyRes（LLM/arch/VLM）
 - [[实体_Qwen3-VL]] — 阿里 DeepStack + MoE 深度融合多模态模型（LLM/arch/VLM）
 - [[实体_MiniMax_M2]] — MiniMax 2025 旗舰，回归 Full Attention，Agent/代码定位（LLM/arch/attention）
@@ -523,8 +506,6 @@
 - [[实体_Jina_AI]] — 专注搜索底座模型 AI 初创，2020-2025，两次 Pivot 后被 Elastic 收购（创业）
 
 ### LLM/Recommendation + arch（Batch 10）
-- [[实体_蚂蚁集团NextEvo]] — 蚂蚁集团AI创新研发部门，大模型推荐系统研究与落地（LLM, Recommendation）
-- [[实体_DLLM2Rec]] — 蚂蚁 GPT3.5→LLAMA2→序列模型两级蒸馏推荐框架（LLM, Recommendation）
 - [[实体_gpt-oss]] — OpenAI 首批开放权重推理模型 gpt-oss-20b/120b，Apache 2.0（LLM/arch/MoE）
 - [[实体_Sebastian_Raschka]] — LLM 架构技术博主，《Build a LLM from Scratch》作者（LLM/arch）
 - [[实体_淘天AIGC团队]] — 淘天集团直播AIGC团队，数字人直播完整链路（LLM）
@@ -549,10 +530,7 @@
 
 ### AI-Agent/coding（Phase 4 Batch 4）
 - [[概念_Agent开发范式三级进化]] — Level 1 LLM/Level 2 AI Agent/Level 3 Multi-Agent 三阶段演进，Human in the Loop 作为特殊 Agent（AI-Agent/coding）
-- [[概念_A2A协议]] — Google 2025 年发布的 Agent 间协作开放协议：Agent Card 能力发现/任务管理/消息交换，与 MCP 分层互补（AI-Agent/coding）
 - [[概念_长程Agent双Agent架构]] — Anthropic：初始化 Agent + 编码 Agent 解决跨会话长程 Coding 任务，功能列表/增量进展/端到端测试三支柱（AI-Agent/coding）
-- [[概念_Coding驱动Agent]] — LLM 直接生成 Python 代码控制 Agent 行为（Py4j 泛化调用），FIM 格式续写，支持分支/循环复杂控制流（AI-Agent/coding）
-- [[概念_Agent仿脑区功能分区架构]] — 感知区/认知区/运动区/表达区/自我评估区五功能区，运动区（TaskExecutor）多轮循环执行复杂任务（AI-Agent/coding）
 - [[概念_Agent三层记忆体系]] — 感知记忆（标签页级）/短期记忆（Session+ES）/长期记忆（知识点+用户画像+经验图谱）（AI-Agent/coding）
 
 ### AI-Agent/coding+skill（Phase 4 Batch 5）
@@ -570,18 +548,15 @@
 - [[概念_系统提示词四层架构]] — 核心定义/交互接口/内部处理/全局约束四层，解决规则冲突/维护困难/行为不可预测（AI-Agent/prompt-engineering）
 
 ### AI-Agent/AI-BI（Phase 4 Batch 8）
-- [[概念_生产即治理]] — 耗散结构理念：数据生产过程内置规范和自调节，对抗信息熵增（AI-Agent/AI-BI）
 - [[概念_FlattenedRAG与StructuredRAG]] — 元数据检索两种方案：打平为自然语言 vs 保留层次结构分步检索（AI-Agent/AI-BI）
 - [[概念_HeadlessBI指标中台]] — 前后端分离指标服务：统一指标库+API，保障多平台口径一致（AI-Agent/AI-BI）
 - [[概念_Text2DSL中间层方案]] — NL→SQL→DSL→前端指令，引入中间层解决直接转换困难，关键是无损转换（AI-Agent/AI-BI）
-- [[概念_DataOps数据工程化]] — 将 DevOps 应用于数据开发：代码化/版本/CI/CD，实现生产即治理（AI-Agent/AI-BI）
 
 ### AI-Agent 综合 + AI-BI（Phase 4 Batch 9）
 - [[概念_AI_Workflow与Agent对比]] — AI Workflow 预定义流程 vs AI Agent 自主决策：选型原则与核心区别（AI-Agent）
 - [[概念_AI_Agent四种类型]] — 反应型/目标导向型/学习型/协作型四种 Agent 分类与适用场景（AI-Agent）
 - [[概念_Agent系统化工程]] — 三层复杂度+LLM放大效应+Level 0-4认知演化+系统化方法论（AI-Agent）
 - [[概念_LLM不确定性放大]] — 多步调用的指数级错误放大数学模型及三类放大维度（AI-Agent）
-- [[概念_AI应用架构演进]] — 七步演进路线：基础调用→RAG→Guardrails→路由→网关→缓存→Agent，含TTFT/TPOT优化（AI-Agent）
 - [[概念_AI-ready_data]] — NL2SQL落地第一性问题：元数据/业务语义/权限/样例SQL的系统化准备（AI-Agent/AI-BI）
 - [[概念_M-Schema]] — NL2SQL增强Schema表示：补充类型/中文释义/真实值示例+约束池（AI-Agent/AI-BI）
 - [[概念_Schema_Linking]] — BM25粗排+SIC精排两级联接，从全量Schema筛选相关表列，幻觉率-78%（AI-Agent/AI-BI）
@@ -611,8 +586,6 @@
 ### Life（Phase 6 Batch 5：旅行/驾驶/投资/驱蚊/智能家居）
 - [[概念_Laser-Back旅行法]] — Kevin Kelly 两周假期优化法：激光直冲最远点再蜿蜒返回，12 天最佳（Life）
 - [[概念_旅行的投入与体验模式]] — Retreat（R&R 退隐）vs Engage（E&E 投入体验）两种旅行模式（Life）
-- [[概念_Roundabout路权规则]] — 大转盘"进让行出直出"路权规则，效率与安全双优（Life）
-- [[概念_迪拜驾驶文化]] — 贴车文化/重罚厉慑执法/Speed Bump/Waze/燃油车市综合特征（Life）
 - [[概念_投资反馈机制]] — 选正常市场获有效反馈，不正常市场无法纠错成长（Life）
 - [[概念_投资风格确立]] — 缩小决策解空间，固定 1-2 种最舒服模式长期精进（Life）
 - [[概念_驱蚊有效成分]] — DEET/Picaridin/IR3535/OLE 四成分，含量影响有效时间非效果（Life）
@@ -640,8 +613,6 @@
 - [[概念_韵律情感拟人化TTS]] — 显式停顿@/拖音→标签控制韵律；参考音频情感注入高低音变化；个性化韵律表（TTS）
 
 ### Recommendation（Phase 6 Batch 2）
-- [[概念_互信息最大化去噪表征]] — CF 表征含噪声，引入文本语义模态极大化共存部分；InfoNCE 变分下界优化（Recommendation）
-- [[概念_LLM用户商品画像生成]] — Item-to-User 流水线；商品先于用户生成；CoT 风格 Instruction；可并行（Recommendation）
 
 ### 创业（Phase 6 Batch 3）
 - [[概念_Foundation_Sprint]] — Jake Knapp 超早期项目战略奠基流程：10 小时三阶段，产出创始假设（创业）
@@ -651,9 +622,6 @@
 - [[概念_先思考再行动]] — AI 时代先做战略思考再开发：快是陷阱、AI 致平庸、思考不可外包（创业）
 
 ### 创业（Phase 6 Batch 4）
-- [[概念_RIDE方法论]] — 阿里云 RIDE：Reorganize/Identify/Define/Execute 大模型 E2E 落地四步法（创业）
-- [[概念_RaaS结果即服务]] — 红杉 RaaS：只交付工具不够，必须真正上线产生业务结果（创业）
-- [[概念_AI企业数字人管理模式]] — 数字人作为正式员工管理：汇报业务部门/AI 工号/效率效果双达标上岗（创业）
 - [[概念_PMF引擎]] — Superhuman 四步法：精准细分/分析反馈/规划路线图/重复迭代，量化优化 PMF（创业）
 - [[概念_Sean_Ellis_PMF指标]] — "非常失望"比例 40% 门槛：PMF 领先指标（创业）
 - [[概念_Bundle理论]] — Shishir Mehrotra：三种用户/MCC 分成/刚需错开非刚需重叠/2x2 矩阵（创业）
@@ -691,14 +659,11 @@
 - [[实体_通义DeepResearch]] — 阿里通义实验室开源 Web Agent，30B MoE，HLE 32.9/BrowseComp-EN 43.4，IterResearch+ReAct 双模式（AI-Agent/deep-research）
 
 ### AI-Agent/memory（Phase 4 Batch 7）
-- [[实体_MemGPT]] — Letta AI，专用记忆 LLM 管理工作 LLM 上下文窗口，受 OS 分页机制启发，函数链多步检索（AI-Agent/memory）
 
 ### AI-Agent/AI-BI（Phase 4 Batch 8）
 - [[实体_腾讯OlaChat]] — 腾讯 PCG 智能数据分析平台，多任务对话+DAG编排+Text2SQL(70B)+元数据RAG（AI-Agent/AI-BI）
 
 ### AI-Agent 综合 + AI-BI（Phase 4 Batch 9）
-- [[实体_MetaGPT]] — 模仿软件公司结构的多 Agent 框架：产品经理/PM/工程师角色协作（AI-Agent）
-- [[实体_ChatDev]] — 清华/面壁开源虚拟软件公司，CEO/CTO/程序员多角色 Agent 协作（AI-Agent）
 - [[实体_LangSmith]] — LangChain 可观测性平台：可视化 Trace/调试/测试评估，Agent 复现性关键工具（AI-Agent）
 - [[实体_Qwen2.5-Coder]] — 阿里代码专用模型3B/7B，NL2SQL LoRA 精调基座，实测EX提升+6.4%（AI-Agent/AI-BI）
 
@@ -717,7 +682,6 @@
 ### Life（Phase 6 Batch 5：旅行/驾驶/智能家居）
 
 ### AIGC（Phase 6 Batch 1）
-- [[实体_Veo_3]] — Google 文本生成带音频视频模型，物理模拟出色，需 Gemini Pro（AIGC）
 - [[实体_Gemini]] — Google AI 助手，PPT 生成/深度研究/搜索，Veo 3 使用前提（AIGC）
 - [[实体_Gamma]] — AI 原生 PPT 工具先行者，对话生成卡片式演示文稿（AIGC）
 - [[实体_Genspark]] — 通用型超级智能体，PPT 为附属功能，图片引用缺失问题（AIGC）
@@ -730,14 +694,12 @@
 - [[实体_CosyVoice]] — 阿里通义开源 TTS 模型，V4 融合 CosyVoice2+Qwen2.5-0.5B+vLLM，相似度 0.93（TTS）
 
 ### Recommendation（Phase 6 Batch 2）
-- [[实体_RLMRec]] — 港大+百度模型无关 LLM 推荐框架；互信息最大化对比/生成双范式；落地搜索业务（Recommendation）
 
 ### 创业（Phase 6 Batch 3）
 - [[实体_Jake_Knapp]] — Design Sprint 创造者，前 Google Ventures 设计合伙人，Character Capital 联创（创业）
 - [[实体_Character_Capital]] — Jake Knapp 与 John Zeratsky 创立的风投，专注 0 阶段超早期项目（创业）
 
 ### 创业（Phase 6 Batch 4）
-- [[实体_蒋林泉]] — 阿里云 CIO & aliyun.com 负责人，RIDE 方法论提出者（创业）
 - [[实体_Superhuman]] — AI 邮件客户端，PMF 引擎标杆，ARR 3500 万美元，被 Grammarly 收购（创业）
 - [[实体_Rahul_Vohra]] — Superhuman 创始人兼 CEO，PMF 引擎方法论提出者（创业）
 - [[实体_Grammarly]] — 嵌入式 AI 写作工具，年收入超 7 亿美金，收购 Coda+Superhuman 后改名（创业）

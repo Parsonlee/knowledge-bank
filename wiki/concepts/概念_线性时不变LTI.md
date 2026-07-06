@@ -6,7 +6,12 @@ created: '2026-06-29'
 updated: '2026-06-29'
 confidence: high
 summary: Linear Time Invariance，传统 SSM（包括 S4）的一个核心属性，也是其主要局限所在。
+sources:
+- wiki/sources/A_Visual_Guide_to_Mamba_and_SSM.md
+- wiki/sources/Mamba2_SSD_大一统.md
+- wiki/sources/一文读懂Mamba_知乎.md
 ---
+
 
 # 线性时不变 LTI
 

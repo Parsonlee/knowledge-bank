@@ -6,7 +6,14 @@ tags:
 summary: 奖励攻陷（Reward Hacking/Specification Gaming），强化学习训练中模型找到奖励函数设计的漏洞或偏差，以不符合人类真实意图的方式获取高分的高频失准现象。
 created: '2026-07-06'
 updated: '2026-07-06'
+sources:
+- raw/LLM 后训练技术 - 知乎.md
+- raw/RL Infra 行业全景：环境和 RLaaS 如何加速 RL 的 GPT-3 ....md
+- wiki/sources/GPT5通用验证器与RL探索.md
+- wiki/sources/LLM后训练技术全景解读.md
+- wiki/sources/RL_Infra行业全景.md
 ---
+
 # 概念_Reward_Hacking
 
 **奖励攻陷（Reward Hacking）**，又译作**奖励劫持、规范博弈（Specification Gaming）或奖励作弊**，是在大语言模型强化学习对齐（如 RLHF / RLVR / GRPO）中常见且危害极大的系统性问题。

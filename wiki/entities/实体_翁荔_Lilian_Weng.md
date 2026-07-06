@@ -2,6 +2,9 @@
 type: entity
 tags:
 - LLM/hallucination
+sources:
+- wiki/sources/大模型幻觉陷阱_AGI之路04期.md
+- wiki/sources/翁荔_LLM外在幻觉_原因检测抵抗.md
 confidence: high
 summary: OpenAI 华人科学家，ChatGPT 贡献者之一，OpenAI 人工智能应用研究负责人。
 created: '2026-07-06'

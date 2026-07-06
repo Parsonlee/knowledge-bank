@@ -6,7 +6,10 @@ type: concept
 summary: Memory RAG 通过引入显式记忆机制，弥补传统 RAG 系统中隐式记忆和实时检索之间的空白。在长文档理解、个性化知识管理等场景中表现出色。
 created: '2026-07-06'
 updated: '2026-07-06'
+sources:
+- wiki/sources/Anthropic多智能体研究系统构建.md
 ---
+
 # 概念_Memory_RAG
 
 

@@ -2,6 +2,8 @@
 type: entity
 tags:
 - LLM/training/post-train
+sources:
+- wiki/sources/LoRA微调实战_Qwen2.5全流程.md
 confidence: high
 summary: HuggingFace 开源的参数高效微调库，集成多种 PEFT 方法。
 created: '2026-07-06'

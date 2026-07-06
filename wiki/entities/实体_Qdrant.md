@@ -4,6 +4,14 @@ tags:
 - RAG/retrieval
 - Infra/AI
 summary: 使用 Rust 编写的高性能开源向量数据库与语义引擎。
+sources:
+- raw/FastAPI 架构指南：用这份模版打造可扩展又安全的系统（附实战经验）.md
+- raw/RAG从入门到精通系列1：基础RAG.md
+- raw/RAG从入门到精通系列6：Retrieval（检索）.md
+- raw/一文读懂向量数据库，原理到应用全解析！.md
+- wiki/sources/RAG基础_索引检索生成.md
+- wiki/sources/RAG检索_Retrieval入门到精通.md
+- wiki/sources/向量数据库原理与应用全解析.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: medium

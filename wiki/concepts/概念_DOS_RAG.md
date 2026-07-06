@@ -7,7 +7,11 @@ summary: DOS RAG（Document's Original Structure RAG，保留文档原始结构�
   RAG 的唯一区别在于排序步骤：放弃按相关性得分排序，改为将检索到的片段按其在原始文档中出现的先后顺序重新排列后输入 LLM。
 created: '2026-07-06'
 updated: '2026-07-06'
+sources:
+- raw/2025来自斯坦福的RAG新基线.md
+- wiki/sources/斯坦福RAG新基线_DOS_RAG.md
 ---
+
 # 概念_DOS_RAG
 
 

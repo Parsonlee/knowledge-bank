@@ -4,6 +4,9 @@ tags:
 - LLM
 - LLM/Multimodal
 summary: 淘天集团直播 AIGC 团队，数字人直播完整链路研发。来源：淘宝直播数字人LLM文案生成技术
+sources:
+- wiki/sources/淘宝直播数字人_LLM文案生成技术.md
+- wiki/sources/淘宝直播数字人_TTS语音合成技术.md
 created: '2026-07-06'
 updated: '2026-07-06'
 ---

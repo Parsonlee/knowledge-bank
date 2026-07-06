@@ -6,7 +6,10 @@ type: concept
 summary: SMT（Statistical Machine Translation，统计翻译模型）查询改写将查询改写任务抽象为机器翻译任务，将用户搜索词f翻译为目标改写词e，基于噪声信道模型和贝叶斯公式求解。
 created: '2026-07-06'
 updated: '2026-07-06'
+sources:
+- wiki/sources/美团搜索查询改写实践.md
 ---
+
 # 概念_SMT查询改写
 
 

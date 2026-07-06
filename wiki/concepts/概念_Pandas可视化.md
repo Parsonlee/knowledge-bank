@@ -6,7 +6,14 @@ summary: Pandas 通过 DataFrame.plot / Series.plot 一行代码绘制多种图�
 created: '2026-06-30'
 updated: '2026-06-30'
 confidence: high
+sources:
+- raw/Pandas一行代码绘制25种美图.md
+- wiki/sources/Pandas一行代码绘制25种美图.md
+- wiki/sources/图解Pandas常用操作_NumPy对比与进阶.md
+- wiki/sources/自动探索性数据分析EDA_10个Python包.md
+- wiki/sources/超强图解Pandas操作大全.md
 ---
+
 
 # 概念_Pandas可视化
 

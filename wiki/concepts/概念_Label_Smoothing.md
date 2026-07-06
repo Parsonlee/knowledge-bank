@@ -5,11 +5,13 @@ tags:
 summary: 标签平滑（Label Smoothing）将硬标签（one-hot）软化，正确类概率设为 1-ε，其余类均分 ε/(C-1)，缓解模型过度自信、提升泛化。PyTorch
   中可用自定义 LSR 类或直接构造 smoothed_labels 实现。
 sources:
+- raw/PyTorch常用代码段合集.md
 - wiki/sources/PyTorch常用代码段合集.md
 created: '2026-06-29'
 updated: '2026-06-29'
 confidence: medium
 ---
+
 
 # 概念：标签平滑（Label Smoothing）
 

@@ -6,7 +6,12 @@ type: concept
 summary: 通过结构化提示词（尤其是基于 HTML/CSS 代码方式实现的工具）精细控制 PPT/视觉物料的风格、配色、排版、字体层级，从而批量生成统一风格的演示文稿或封面图。
 created: '2026-07-06'
 updated: '2026-07-06'
+sources:
+- wiki/sources/Gemini的PPT生成技巧与模板提示词.md
+- wiki/sources/Nano-Banana_Pro论文绘图教程.md
+- wiki/sources/一套提示词实现封面自由.md
 ---
+
 
 # 概念_PPT生成提示词
 

@@ -5,7 +5,11 @@ created: '2026-06-29'
 updated: '2026-06-29'
 type: concept
 summary: 来源：从代码生成到自主决策Coding驱动的自我编程Agent
+sources:
+- wiki/sources/AI智能体8种Memory策略与技术实现.md
+- wiki/sources/LLM Agent记忆进化路径三阶段研究综述.md
 ---
+
 
 # 概念：Agent 三层记忆体系
 

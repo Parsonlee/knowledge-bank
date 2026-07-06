@@ -2,6 +2,26 @@
 type: entity
 tags:
 - LLM/arch/Mamba
+sources:
+- raw/A Visual Guide to Mamba and State Space ....md
+- raw/HuggingFace从决策到落地「手把手」教你训练大模型.md
+- raw/Mamba Explained _ Kola Ayonrinde.md
+- raw/Mamba2_ SSM和Transformer的大一统 - 知乎.md
+- raw/MiniMax和Kimi为了“注意力”，隔空交手.md
+- raw/RAG系统设计：揭秘语义搜索被低估的核心价值与KG驱动的架构选型策略.md
+- raw/Transformer被挑战？新架构Mamba解析以及Pytorch复现.md
+- raw/一文读懂Mamba：具有选择状态空间的线性时间序列建模 - 知乎.md
+- raw/腾讯混元TurboS技术报告首次全公开：560B参数混合Mamba架构，自适应长....md
+- wiki/sources/A_Visual_Guide_to_Mamba_and_SSM.md
+- wiki/sources/Discrete_Tokenization多模态综述.md
+- wiki/sources/Mamba2_SSD_大一统.md
+- wiki/sources/Mamba_Explained_Kola_Ayonrinde.md
+- wiki/sources/RAG系统设计_语义搜索与KG驱动选型.md
+- wiki/sources/Transformer被挑战_Mamba解析与PyTorch复现.md
+- wiki/sources/一文读懂Mamba_知乎.md
+- wiki/sources/从DeepSeek-V3到Kimi_K2_八种现代LLM架构大比较.md
+- wiki/sources/大模型面试面经_简单透彻理解MoE.md
+- wiki/sources/腾讯混元TurboS技术报告.md
 created: '2026-06-29'
 updated: '2026-06-29'
 confidence: high

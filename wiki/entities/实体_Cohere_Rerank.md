@@ -3,6 +3,10 @@ type: entity
 tags:
 - RAG/retrieval
 summary: Cohere 提供的重排序（Rerank）API 服务，用于向量检索后的候选文档精排。
+sources:
+- raw/12 RAG 痛点和拟议解决方案.md
+- raw/FastAPI 架构指南：用这份模版打造可扩展又安全的系统（附实战经验）.md
+- wiki/sources/RAG_12痛点与解决方案.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: medium

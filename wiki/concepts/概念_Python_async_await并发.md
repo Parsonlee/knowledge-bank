@@ -6,7 +6,11 @@ type: concept
 summary: Python 现代版本通过 async / await 语法编写协程实现异步代码，让程序在等待 I/O 时切换去做其他工作。
 created: '2026-07-06'
 updated: '2026-07-06'
+sources:
+- wiki/sources/FastAPI架构指南_项目模板与实战经验.md
+- wiki/sources/Python并发_async_await与FastAPI.md
 ---
+
 
 # 概念_Python_async_await并发
 

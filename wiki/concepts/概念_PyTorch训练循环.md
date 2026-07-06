@@ -7,7 +7,12 @@ tags:
 summary: PyTorch 深度学习模型标准训练流程，包含训练/验证/预测三阶段及辅助组件。
 created: '2026-07-06'
 updated: '2026-07-06'
+sources:
+- wiki/sources/PyTorch常用代码段合集.md
+- wiki/sources/PyTorch训练代码模板.md
+- wiki/sources/手把手教你实现稀疏MoE语言模型.md
 ---
+
 # 概念：PyTorch 训练循环
 
 

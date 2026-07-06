@@ -6,7 +6,12 @@ created: '2026-06-29'
 updated: '2026-06-29'
 confidence: high
 summary: Mamba 的基本构建单元，类比 Transformer 的 decoder block，可堆叠多层。
+sources:
+- wiki/sources/A_Visual_Guide_to_Mamba_and_SSM.md
+- wiki/sources/Mamba2_SSD_大一统.md
+- wiki/sources/Transformer被挑战_Mamba解析与PyTorch复现.md
 ---
+
 
 # Mamba Block 架构
 

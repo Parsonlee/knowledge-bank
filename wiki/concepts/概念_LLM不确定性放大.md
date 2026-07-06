@@ -5,7 +5,11 @@ tags:
 created: '2026-06-29'
 updated: '2026-06-29'
 summary: 在 Agent 系统中，单次 LLM 调用的不确定性，会随着调用链的延长被指数级放大。
+sources:
+- raw/Agent系统开发经验.md
+- wiki/sources/Agent系统开发经验.md
 ---
+
 
 # 概念：LLM 不确定性放大效应
 

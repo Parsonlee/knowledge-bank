@@ -5,8 +5,13 @@ tags:
 - CV/detection
 summary: SSD（Single Shot MultiBox Detector），多尺度特征图单阶段检测器，兼顾速度与精度，后续单阶段工作的基础。
 sources:
-- wiki/sources/目标检测入门_经典模型.md
+- raw/Mamba Explained _ Kola Ayonrinde.md
+- raw/Mamba2_ SSM和Transformer的大一统 - 知乎.md
+- raw/干货 _ 目标检测入门，看这篇就够了（已更完） - 知乎.md
+- wiki/sources/Mamba2_SSD_大一统.md
 - wiki/sources/目标检测入门_特征复用与实时性.md
+- wiki/sources/目标检测入门_经典模型.md
+- wiki/sources/腾讯混元TurboS技术报告.md
 created: '2026-06-26'
 updated: '2026-06-26'
 confidence: high

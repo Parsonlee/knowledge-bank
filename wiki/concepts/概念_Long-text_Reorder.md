@@ -8,7 +8,12 @@ summary: '长文本重排序（Long-text Reorder / Lost in the Middle Reorder）
   in the Middle: How Language Models Use Long Contexts" 的发现：大模型更容易记忆开头和结尾的文档...'
 created: '2026-07-06'
 updated: '2026-07-06'
+sources:
+- raw/RAG高级优化：检索后处理模块成竹在胸.md
+- wiki/sources/RAG_12痛点与解决方案.md
+- wiki/sources/RAG高级优化_检索后处理.md
 ---
+
 # 概念_Long-text_Reorder
 
 

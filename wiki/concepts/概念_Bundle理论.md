@@ -6,7 +6,10 @@ summary: Shishir Mehrotra 的 Bundle 理论：三种用户、MCC 分成、刚需
 created: '2026-06-30'
 updated: '2026-06-30'
 confidence: high
+sources:
+- wiki/sources/Bundle_Unbundle视角看AI时代机会.md
 ---
+
 
 # 概念：Bundle 理论
 

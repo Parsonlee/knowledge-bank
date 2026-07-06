@@ -3,6 +3,21 @@ type: entity
 tags:
 - RAG/retrieval
 summary: Meta AI 开源的高效海量向量相似度检索与聚类计算库。
+sources:
+- raw/FastAPI 架构指南：用这份模版打造可扩展又安全的系统（附实战经验）.md
+- raw/RAG 挑战赛冠军方案解析：从数据解析到多路由器检索的工程实践，推荐阅读！.md
+- raw/RAG之延迟交互与残差压缩：从ColBERT到ColBERTv2的演进及其应用.md
+- raw/RAG高级优化：基于问题生成的文档检索增强.md
+- raw/RAG：ColBERT原理、延迟交互机制与稠密向量的对比分析.md
+- raw/一文读懂向量数据库，原理到应用全解析！.md
+- raw/从BM25到Multi-Vector：6种Embedding演进路线.md
+- raw/美团搜索中查询改写技术的探索与实践 - 美团技术团队.md
+- wiki/sources/ColBERTv2残差压缩演进.md
+- wiki/sources/RAG技巧与底层代码剖析.md
+- wiki/sources/RAG挑战赛冠军方案.md
+- wiki/sources/RAG高级优化_问题生成检索增强.md
+- wiki/sources/向量数据库原理与应用全解析.md
+- wiki/sources/美团搜索查询改写实践.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high

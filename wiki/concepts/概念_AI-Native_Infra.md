@@ -5,12 +5,14 @@ tags:
 summary: AI-Native Infra 是专为 AI（而非人类工程师）设计的基础设施，去掉"人类兜底层"，所有状态/操作/错误都 API 化、结构化、机器可读，让
   AI 能自驱动地完成构建、部署、运维全流程。
 sources:
+- raw/AI-Native 的 Infra 演化路线：L0 到 L5.md
 - wiki/sources/AI-Native的Infra演化路线L0到L5.md
 - wiki/sources/入局AI_Infra系统设计与挑战.md
 created: '2026-06-29'
 updated: '2026-06-29'
 confidence: high
 ---
+
 
 # 概念：AI-Native Infra
 

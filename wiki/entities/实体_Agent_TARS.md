@@ -4,6 +4,9 @@ tags:
 - AI-Agent/tools
 summary: Agent TARS 是字节跳动开源的多模态 AI Agent，内置 MCP Server 支持（同进程 Function Call）+ 用户自定义
   MCP Server 扩展（Stdio/SSE），是 MCP 工程实践的参考实现
+sources:
+- raw/FastAPI 架构指南：用这份模版打造可扩展又安全的系统（附实战经验）.md
+- wiki/sources/HumanInTheLoop用MCP实现.md
 created: '2026-06-29'
 updated: '2026-06-29'
 ---

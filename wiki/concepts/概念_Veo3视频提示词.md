@@ -6,7 +6,10 @@ type: concept
 summary: 使用文本提示词引导 Google Veo 3 生成带音频的视频的技巧体系。核心原则是「像电影制作人一样思考」——不是描述发生了什么，而是在导演一个场景。
 created: '2026-07-06'
 updated: '2026-07-06'
+sources:
+- wiki/sources/超详细提示词教程_玩转Wan2.2.md
 ---
+
 
 # 概念_Veo3视频提示词
 

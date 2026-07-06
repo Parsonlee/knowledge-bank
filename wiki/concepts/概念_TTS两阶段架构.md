@@ -6,7 +6,10 @@ type: concept
 summary: 语音合成主流架构：语言模型（LM）阶段预测音频 token + 声学模型阶段将中间表征转为波形。
 created: '2026-07-06'
 updated: '2026-07-06'
+sources:
+- wiki/sources/淘宝直播数字人_TTS语音合成技术.md
 ---
+
 
 # TTS 两阶段架构
 

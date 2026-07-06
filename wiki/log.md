@@ -1,5 +1,15 @@
 # Wiki Log
 
+## [2026-07-06] lint/clean-concepts | 针对 wiki/concepts/ 进行上游来源独立分析与深度清理 (+ index update)
+- **独立分析与接骨修护**：对 `wiki/concepts/` 下全部 340 个概念页面进行了显式与反向隐式上游来源追踪（`raw/` 与 `wiki/sources/`），为 290 个具备真实有效上游来源但 Frontmatter `sources:` 字段缺失或不全的概念页面完成了“接骨修护”与自动化回填。
+- **无源孤立虚假生成清理**：识别并物理删除 29 个既无显式来源指向、全库正文亦无任何提及引用的无上游来源虚假/孤立概念文件（包括 `概念_A2A协议.md`、`概念_AI企业数字人管理模式.md`、`概念_Coding驱动Agent.md`、`概念_LLM三大演进支柱_效率推理智能体.md`、`概念_RAG四大基础范式.md` 等）。
+- **总索引联动同步**：同步自 `wiki/index.md` 中精准移除被删概念对应的 29 行索引条目，确保总索引与物理文件 100% 对应。
+
+## [2026-07-06] lint/prune | 针对 wiki/entities/ 进行上游来源独立分析与深度清理 (+ index update)
+- **接骨修护（回填上游来源）**：深度审查全库 124 篇实体页面，对其中 115 篇具备隐式来源或反向关联（在 Source/Raw 中被引用或提及）的实体，完成了 YAML Frontmatter `sources:` 字段的精准回填与自动修护。
+- **无源孤立/虚假生成清理**：识别并物理移除了 9 篇既无显式来源指向、且全库零提及/零引用的无源虚假生成实体文档：`实体_ChatDev.md`、`实体_DLLM2Rec.md`、`实体_FLD-5B数据集.md`、`实体_MemGPT.md`、`实体_MetaGPT.md`、`实体_RLMRec.md`、`实体_Veo_3.md`、`实体_蒋林泉.md`、`实体_蚂蚁集团NextEvo.md`。
+- **总索引联动同步**：自动自 `wiki/index.md` 中同步剔除被删除的 9 个实体条目（共移除 9 行记录），确保图谱底座与总索引 100% 对齐。
+
 ## [2026-07-06] lint/prune | 按照「0次孤立清理 + 1次保留观察」策略，精准移除 25 篇无入链孤立实体页 (+ index update)
 - **孤立实体清理**：在全库跨层级（sources/concepts/entities）入链度审计的基础上，精准识别并移除了 25 篇入度为 0（毫无外部入链引用）的孤立实体文档（包含 `实体_AutoGPT.md`、`实体_AutoGen.md`、`实体_Cline.md`、`实体_阿里云.md` 等），彻底清除了图谱中的冷门死区与外围孤点。
 - **稳健保留观察**：对 35 篇引用次数为 1 次的实体（如 `实体_DeepMind.md`、`实体_DiT.md` 等）予以完整保留，确保知识库的生长弹性与潜力。
@@ -919,3 +929,5 @@
 - 结构化重构并补全 entities 目录下 25 篇旧版无 Frontmatter（仅含 blockquote 元数据）实体页：
   - 为所有 25 篇实体规范化构建 YAML Frontmatter（title, type: entity, tags, summary, sources, created, updated, confidence），并完全继承或收敛到标准主题 Tag 分支下（包括 RAG/embedding, RAG/retrieval, RAG/chunking, AI-Agent/tools, DeepLearning, Life 等）。
 - 审计确认：当前 wiki/sources（191 篇）与 wiki/entities（137 篇）共 328 篇文档 100% 拥有标准合规的 YAML Frontmatter 与正确的层次化领域 Tag，实现全域检索互通无死角。
+
+

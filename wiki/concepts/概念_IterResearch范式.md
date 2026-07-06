@@ -6,7 +6,12 @@ confidence: high
 created: '2026-06-29'
 updated: '2026-06-29'
 summary: IterResearch 是通义 DeepResearch 提出的创新 Agent 推理范式，用于解决多步研究任务中 Agent 将所有信息堆积在单一不断扩展的上下文窗口时出现的认知瓶颈和噪音污染问题。
+sources:
+- raw/Tongyi DeepResearch的技术报告探秘.md
+- wiki/sources/Tongyi DeepResearch的技术报告探秘.md
+- wiki/sources/通义 DeepResearch：开源 AI 智能体的新纪元.md
 ---
+
 
 # 概念：IterResearch 范式
 

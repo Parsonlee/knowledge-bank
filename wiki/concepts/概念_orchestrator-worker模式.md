@@ -5,7 +5,12 @@ tags:
 summary: 多智能体系统核心模式：主智能体（orchestrator）负责规划分解，子智能体（worker）并行执行，适合需要大量并行化的复杂任务
 created: '2026-06-29'
 updated: '2026-06-29'
+sources:
+- wiki/sources/Anthropic再发Agent神文_像人类工程师一样思考解决长程任务难题.md
+- wiki/sources/Anthropic多智能体研究系统构建.md
+- wiki/sources/OpenAI_构建AI智能体实用指南.md
 ---
+
 
 # 概念_orchestrator-worker模式
 

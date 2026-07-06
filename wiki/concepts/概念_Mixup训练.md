@@ -6,11 +6,13 @@ tags:
 summary: Mixup 训练通过 Beta 分布采样混合系数 λ，对一对样本的图像和标签做线性插值（mixed = λ·a + (1-λ)·b），损失也按 λ
   加权两个标签的损失，是一种数据增强/正则化方法。
 sources:
+- raw/PyTorch常用代码段合集.md
 - wiki/sources/PyTorch常用代码段合集.md
 created: '2026-06-29'
 updated: '2026-06-29'
 confidence: medium
 ---
+
 
 # 概念：Mixup 训练
 

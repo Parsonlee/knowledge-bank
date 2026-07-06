@@ -6,7 +6,12 @@ summary: LLM-as-a-Judge 校准（Judge Calibration） 是在现代 LLM 应用与
   AI 裁判的评分标准、诊断逻辑与人类领域专家的认知保持一致的技术流程。
 created: '2026-07-06'
 updated: '2026-07-06'
+sources:
+- wiki/sources/Anthropic多智能体研究系统构建.md
+- wiki/sources/Dropbox基于DSPy优化Dash Chat评估与提示词.md
+- wiki/sources/GPT5通用验证器与RL探索.md
 ---
+
 
 # 概念：LLM-as-a-Judge 校准
 

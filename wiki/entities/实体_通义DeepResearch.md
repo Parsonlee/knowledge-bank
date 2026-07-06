@@ -2,6 +2,11 @@
 type: entity
 tags:
 - AI-Agent/deep-research
+sources:
+- raw/Tongyi DeepResearch的技术报告探秘.md
+- raw/通义 DeepResearch：开源 AI 智能体的新纪元 _ Tongyi D....md
+- wiki/sources/Tongyi DeepResearch的技术报告探秘.md
+- wiki/sources/通义 DeepResearch：开源 AI 智能体的新纪元.md
 confidence: high
 created: '2026-06-29'
 updated: '2026-06-29'

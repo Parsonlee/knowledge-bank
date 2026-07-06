@@ -7,7 +7,13 @@ type: concept
 summary: Multi-representation Indexing 通过结合多种表示（文档摘要、块或完整内容），在检索和生成过程中取得最佳效果。使用不同层次和粒度的表示（简洁的摘要与详细的文档）弥补单一表示可能存在的不足。
 created: '2026-07-06'
 updated: '2026-07-06'
+sources:
+- raw/探索提升RAG系统问答质量的技术路线.md
+- wiki/sources/RAG系统设计_语义搜索与KG驱动选型.md
+- wiki/sources/RAG索引进阶_Indexing.md
+- wiki/sources/提升RAG问答质量的技术路线.md
 ---
+
 # 概念_Multi-representation_Indexing
 
 

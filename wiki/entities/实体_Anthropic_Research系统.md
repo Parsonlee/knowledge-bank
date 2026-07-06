@@ -3,6 +3,11 @@ type: entity
 tags:
 - AI-Agent/multi-agent
 summary: Anthropic 多智能体研究系统，Claude Research 功能的底层架构，orchestrator-worker 模式实现
+sources:
+- wiki/sources/Anthropic x ClaudeCode 官方插件：AI Agent 的领域知识插件——鸟窝.md
+- wiki/sources/Anthropic再发Agent神文_像人类工程师一样思考解决长程任务难题.md
+- wiki/sources/Anthropic多智能体研究系统构建.md
+- wiki/sources/从提示员到系统架构师：Loop Engineering 的范式跃迁.md
 created: '2026-06-29'
 updated: '2026-06-29'
 ---

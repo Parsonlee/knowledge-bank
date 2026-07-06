@@ -7,7 +7,10 @@ tags:
 summary: Cholesky 分解用于加速 DPP（行列式点过程）的贪婪 MAP 推断。对称半正定矩阵 L 可分解为 L = CC^T（C 为下三角矩阵），利用增量更新避免每步重新计算行列式。
 created: '2026-07-06'
 updated: '2026-07-06'
+sources:
+- wiki/sources/DPP行列式点过程.md
 ---
+
 # 概念：Cholesky 分解与 DPP
 
 

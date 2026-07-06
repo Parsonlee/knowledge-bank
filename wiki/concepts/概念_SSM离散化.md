@@ -6,7 +6,12 @@ created: '2026-06-29'
 updated: '2026-06-29'
 confidence: high
 summary: 将连续时间 SSM 转换为可处理离散序列（如文本 token）的过程。
+sources:
+- wiki/sources/A_Visual_Guide_to_Mamba_and_SSM.md
+- wiki/sources/Mamba2_SSD_大一统.md
+- wiki/sources/Mamba_Explained_Kola_Ayonrinde.md
 ---
+
 
 # SSM 离散化
 

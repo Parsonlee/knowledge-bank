@@ -5,7 +5,10 @@ tags:
 created: '2026-06-29'
 updated: '2026-06-29'
 summary: 基于自主性和适用场景，AI Agent 可分为四种主要类型。
+sources:
+- wiki/sources/AI_Agent与AI_Workflow的区别和深度解析.md
 ---
+
 
 # 概念：AI Agent 四种类型
 

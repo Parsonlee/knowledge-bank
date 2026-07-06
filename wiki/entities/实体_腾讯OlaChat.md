@@ -2,6 +2,10 @@
 type: entity
 tags:
 - AI-Agent/AI-BI
+sources:
+- raw/腾讯基于 LLM 的智能数据分析平台 OlaChat 的落地实践.md
+- wiki/sources/腾讯ABI工程架构探索与实践.md
+- wiki/sources/腾讯OlaChat_LLM智能数据分析平台实践.md
 created: '2026-06-29'
 updated: '2026-06-29'
 summary: '- 类型：智能数据分析平台（ABI 平台）'

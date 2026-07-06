@@ -6,7 +6,16 @@ confidence: high
 created: '2026-06-29'
 updated: '2026-06-29'
 summary: Deep Research Agent 是由 LLM 驱动的 AI 系统，核心能力在于集成了动态推理、自适应规划、多轮迭代的外部数据检索与工具使用，并能生成全面的综合性分析报告。
+sources:
+- raw/DeepResearch的概念、核心挑战与进化路径.md
+- raw/Tongyi DeepResearch的技术报告探秘.md
+- raw/一篇95页最新80种Deep Research系统全面综述.md
+- wiki/sources/DeepResearch的概念、核心挑战与进化路径.md
+- wiki/sources/Tongyi DeepResearch的技术报告探秘.md
+- wiki/sources/一篇95页最新80种Deep Research系统全面综述.md
+- wiki/sources/通义 DeepResearch：开源 AI 智能体的新纪元.md
 ---
+
 
 # 概念：Deep Research Agent 定义与分类
 

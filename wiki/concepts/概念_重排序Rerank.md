@@ -7,7 +7,21 @@ type: concept
 summary: 重排序（Rerank）是检索后对候选文档按与查询的相关性进行精细排序的环节，传统方式为单塔模型输出相关性 logit 分数。
 created: '2026-07-06'
 updated: '2026-07-06'
+sources:
+- wiki/sources/ES企业AI搜索实践.md
+- wiki/sources/Jina_AI创业复盘.md
+- wiki/sources/OpenAI_LLM应用最佳实践.md
+- wiki/sources/RAG_12痛点与解决方案.md
+- wiki/sources/RAG技巧与底层代码剖析.md
+- wiki/sources/RAG挑战赛冠军方案.md
+- wiki/sources/RAG检索_Retrieval入门到精通.md
+- wiki/sources/为什么用Qwen3_embedding和rerank.md
+- wiki/sources/优图RAG技术详解.md
+- wiki/sources/向量数据库原理与应用全解析.md
+- wiki/sources/大模型算法岗面试百问百答.md
+- wiki/sources/提升RAG问答质量的技术路线.md
 ---
+
 # 概念_重排序Rerank
 
 

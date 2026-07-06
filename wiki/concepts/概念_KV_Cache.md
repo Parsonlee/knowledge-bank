@@ -6,11 +6,33 @@ tags:
 summary: KV Cache 缓存 LLM 推理中 X@W_K 和 X@W_V 的已计算结果，空间换时间，避免自回归逐 token 生成时对历史 token
   的重复计算。几乎所有 LLM 推理框架（如 vLLM）均已支持。
 sources:
+- raw/2025年七大顶流大模型架构.md
+- raw/Mamba Explained _ Kola Ayonrinde.md
+- raw/Mamba2_ SSM和Transformer的大一统 - 知乎.md
+- raw/MiniMax和Kimi为了“注意力”，隔空交手.md
+- raw/一文讲明白大模型显存占用（只考虑单卡） - 知乎.md
+- raw/入局AI Infra：程序员必须了解的AI系统设计与挑战知识.md
+- raw/大模型推理加速：看图学KV Cache - 知乎.md
+- raw/大模型算法岗，面试百问百答.md
+- wiki/sources/2025年七大顶流大模型架构.md
+- wiki/sources/DeepSeek_MLA矩阵吸收原理.md
+- wiki/sources/KV_Cache原理图解.md
+- wiki/sources/LLM面试50题_MIT_CSAIL.md
+- wiki/sources/MCP遇上代码执行.md
+- wiki/sources/Mamba_Explained_Kola_Ayonrinde.md
+- wiki/sources/Manus创始人手把手拆解上下文工程.md
+- wiki/sources/MiniMax_vs_Kimi_注意力路线之争.md
+- wiki/sources/Transformer大模型3D可视化_NanoGPT.md
+- wiki/sources/从DeepSeek-V3到Kimi_K2_八种现代LLM架构大比较.md
 - wiki/sources/入局AI_Infra系统设计与挑战.md
+- wiki/sources/大模型显存占用单卡分析.md
+- wiki/sources/大模型显存计算公式与优化.md
+- wiki/sources/推测解码Speculative_Decoding综述.md
 created: '2026-06-29'
 updated: '2026-06-29'
 confidence: high
 ---
+
 
 # 概念：KV Cache
 

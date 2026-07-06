@@ -5,7 +5,13 @@ tags:
 created: '2026-06-29'
 updated: '2026-06-29'
 summary: QK-Norm 是在多头注意力模块内部对 Query 和 Key 向量做归一化的技术，用于提升训练稳定性。
+sources:
+- raw/2025年七大顶流大模型架构.md
+- raw/从DeepSeek-V3到Kimi K2：八种现代 LLM 架构大比较.md
+- wiki/sources/2025年七大顶流大模型架构.md
+- wiki/sources/从DeepSeek-V3到Kimi_K2_八种现代LLM架构大比较.md
 ---
+
 
 # 概念_QK_Norm
 

@@ -2,6 +2,17 @@
 type: entity
 tags:
 - LLM/arch/MoE
+sources:
+- raw/2025年七大顶流大模型架构.md
+- raw/Manus 创始人手把手拆解：如何系统性打造 AI Agent 的上下文工程？.md
+- raw/RL 环境与智能体能力金字塔 _ 宝玉的分享.md
+- raw/从BM25到Multi-Vector：6种Embedding演进路线.md
+- raw/从DeepSeek-V3到Kimi K2：八种现代 LLM 架构大比较.md
+- wiki/sources/2025年七大顶流大模型架构.md
+- wiki/sources/Manus创始人手把手拆解上下文工程.md
+- wiki/sources/RL环境与智能体能力金字塔.md
+- wiki/sources/从DeepSeek-V3到Kimi_K2_八种现代LLM架构大比较.md
+- wiki/sources/大模型面试面经_简单透彻理解MoE.md
 created: '2026-06-29'
 updated: '2026-06-29'
 summary: 月之暗面（Moonshot AI）发布的万亿参数开源权重 MoE 模型，基于 DeepSeek-V3 架构扩展，以 Muon 优化器为主要创新。

@@ -5,7 +5,13 @@ tags:
 summary: 将 MCP Server 当'代码 API'而非直接工具调用：LLM 通过编写代码来调用 MCP，Token 消耗减少 98.7%，同时获得隐私保护与状态持久化能力
 created: '2026-06-29'
 updated: '2026-06-29'
+sources:
+- wiki/sources/Anthropic再发Agent神文_像人类工程师一样思考解决长程任务难题.md
+- wiki/sources/Claude_Agent_Skills_从第一性原理深入剖析.md
+- wiki/sources/MCP遇上代码执行.md
+- wiki/sources/从第一性原理深度拆解_Claude_Agent_Skill_宝玉.md
 ---
+
 
 ## 定义
 

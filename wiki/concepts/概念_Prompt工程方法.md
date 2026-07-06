@@ -6,7 +6,12 @@ tags:
 summary: 与大模型高效沟通的方法论。本质是解决"如何跟人高效沟通"的问题，把大模型当做新人助理。
 created: '2026-07-06'
 updated: '2026-07-06'
+sources:
+- wiki/sources/Claude_Agent_Skills_从第一性原理深入剖析.md
+- wiki/sources/OpenAI_LLM应用最佳实践.md
+- wiki/sources/四段核心Prompt提示词实战指南.md
 ---
+
 # 概念：Prompt 工程方法
 
 

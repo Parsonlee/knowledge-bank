@@ -3,6 +3,25 @@ type: entity
 tags:
 - LLM/reasoning
 - LLM/training/RL
+sources:
+- raw/RAG从入门到精通系列6：Retrieval（检索）.md
+- raw/RL Infra 行业全景：环境和 RLaaS 如何加速 RL 的 GPT-3 ....md
+- raw/万字长文详解DeepSeek-R1模型工作原理.md
+- raw/入局AI Infra：程序员必须了解的AI系统设计与挑战知识.md
+- raw/探索提升RAG系统问答质量的技术路线.md
+- raw/淘宝直播数字人：LLM文案生成技术.md
+- raw/腾讯混元TurboS技术报告首次全公开：560B参数混合Mamba架构，自适应长....md
+- raw/自适应快慢思考推理模型（Adaptive Reasoning Model）：Qw....md
+- wiki/sources/DeepSeek-R1工作原理.md
+- wiki/sources/LLM面试50题_MIT_CSAIL.md
+- wiki/sources/R1复现认知与误区.md
+- wiki/sources/RL_Infra行业全景.md
+- wiki/sources/Tongyi DeepResearch的技术报告探秘.md
+- wiki/sources/入局AI_Infra系统设计与挑战.md
+- wiki/sources/大模型幻觉陷阱_AGI之路04期.md
+- wiki/sources/强化学习入门指南_RLHF到GRPO.md
+- wiki/sources/淘宝直播数字人_LLM文案生成技术.md
+- wiki/sources/腾讯混元TurboS技术报告.md
 created: '2026-06-29'
 updated: '2026-06-29'
 summary: DeepSeek-R1 是深度求索（DeepSeek）发布的推理模型，通过大规模强化学习（GRPO）激励推理能力，性能与 OpenAI-o1-1217

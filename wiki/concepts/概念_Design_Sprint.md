@@ -7,7 +7,11 @@ summary: Design Sprint（设计冲刺）是 实体JakeKnapp 在 Google 期间创
   Zeratsky 提炼成型的五天标准化产品验证流程。
 created: '2026-07-06'
 updated: '2026-07-06'
+sources:
+- raw/7天验证产品思路、10小时找到基础共识：来自谷歌的“Foundation Spr....md
+- wiki/sources/Foundation_Sprint产品验证完全指南.md
 ---
+
 
 # 概念_Design Sprint
 

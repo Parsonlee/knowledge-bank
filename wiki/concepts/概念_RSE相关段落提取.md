@@ -8,7 +8,11 @@ summary: 相关段落提取（Relevant Segment Extraction, RSE）是一种 RAG �
   识别并重建连续的文本片段，为 LLM 提供更完整、有逻辑性的上下文信息。
 created: '2026-07-06'
 updated: '2026-07-06'
+sources:
+- raw/RAG技巧与底层代码剖析.md
+- wiki/sources/RAG技巧与底层代码剖析.md
 ---
+
 # 概念_RSE相关段落提取
 
 

@@ -6,7 +6,10 @@ tags:
 summary: LLM Wiki 是由 实体AndrejKarpathy 提出的一种全新知识管理范式，旨在颠覆传统 RAG（检索增强生成）“临时抱佛脚”的模式，强调在知识摄入（Ingest）阶段即完成信息的结构化与编译。
 created: '2026-07-06'
 updated: '2026-07-06'
+sources:
+- wiki/sources/Claude Code与Obsidian飞书知识库搭建实践.md
 ---
+
 
 # 概念：LLM Wiki 范式
 

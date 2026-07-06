@@ -6,7 +6,10 @@ created: '2026-06-29'
 updated: '2026-06-29'
 confidence: high
 summary: State Space Duality，Mamba2 的核心理论框架，证明了 SSM 与线性 Attention 在数学上的等价性。
+sources:
+- wiki/sources/Mamba2_SSD_大一统.md
 ---
+
 
 # 状态空间对偶 SSD
 

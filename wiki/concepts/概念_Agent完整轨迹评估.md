@@ -6,7 +6,10 @@ summary: Agent 完整轨迹评估（Full Trajectory Evaluation） 是一种面�
   Response）打分，而必须对智能体从输入到输出的整个...
 created: '2026-07-06'
 updated: '2026-07-06'
+sources:
+- wiki/sources/Dropbox基于DSPy优化Dash Chat评估与提示词.md
 ---
+
 
 # 概念：Agent 完整轨迹评估
 

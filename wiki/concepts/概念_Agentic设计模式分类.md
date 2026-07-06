@@ -5,7 +5,10 @@ tags:
 summary: Agentic 设计模式（Agentic Design Patterns）是构建智能体（Agent）系统时可复用的架构方案，覆盖从任务分解、智能路由到多智能体协作的全链路设计选择。
 created: '2026-07-06'
 updated: '2026-07-06'
+sources:
+- wiki/sources/AI_Agent与AI_Workflow的区别和深度解析.md
 ---
+
 
 # 概念：Agentic 设计模式分类
 

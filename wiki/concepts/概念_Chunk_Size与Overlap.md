@@ -7,7 +7,13 @@ type: concept
 summary: 文本切分中的两个基础参数：
 created: '2026-07-06'
 updated: '2026-07-06'
+sources:
+- wiki/sources/ES企业AI搜索实践.md
+- wiki/sources/RAG挑战赛冠军方案.md
+- wiki/sources/RAG文本切分_字符切分.md
+- wiki/sources/RAG文本切分_递归字符切分.md
 ---
+
 # 概念_Chunk_Size与Overlap
 
 

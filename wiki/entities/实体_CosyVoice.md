@@ -1,6 +1,9 @@
 ---
 tags:
 - TTS
+sources:
+- raw/淘宝直播数字人：TTS语音合成技术.md
+- wiki/sources/淘宝直播数字人_TTS语音合成技术.md
 confidence: high
 type: entity
 summary: 开源 TTS 模型，由阿里通义语音团队开发，实体淘天AIGC团队 在数字人直播 TTS 系统 V4 中融合使用。

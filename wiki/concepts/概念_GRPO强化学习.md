@@ -6,7 +6,16 @@ created: '2026-06-29'
 updated: '2026-06-29'
 summary: GRPO（Group Relative Policy Optimization，组相对策略优化）是 DeepSeek 提出的强化学习算法，被混元
   TurboS 等模型用于后训练阶段。
+sources:
+- raw/万字长文详解DeepSeek-R1模型工作原理.md
+- wiki/sources/DeepSeek-R1工作原理.md
+- wiki/sources/GPT5通用验证器与RL探索.md
+- wiki/sources/R1复现认知与误区.md
+- wiki/sources/强化学习入门指南_RLHF到GRPO.md
+- wiki/sources/腾讯混元TurboS技术报告.md
+- wiki/sources/自适应快慢思考推理模型.md
 ---
+
 
 # 概念_GRPO强化学习
 

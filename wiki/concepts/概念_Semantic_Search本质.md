@@ -8,7 +8,10 @@ summary: 语义搜索（Semantic Search）的核心是 metric embedding——将
   as index"（文件本身作为索引）。
 created: '2026-07-06'
 updated: '2026-07-06'
+sources:
+- wiki/sources/RAG系统设计_语义搜索与KG驱动选型.md
 ---
+
 # 概念_Semantic_Search本质
 
 

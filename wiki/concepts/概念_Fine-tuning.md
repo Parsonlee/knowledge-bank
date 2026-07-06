@@ -6,7 +6,28 @@ type: concept
 summary: Fine-tuning（微调）通过在特定领域/任务数据上继续训练大模型，增强 LLM 本身的能力，使其在目标场景上产出更准确/更符合格式的输出。
 created: '2026-07-06'
 updated: '2026-07-06'
+sources:
+- raw/12 RAG 痛点和拟议解决方案.md
+- raw/375篇文献，深入探究推理大模型后训练技术.md
+- raw/AI 代理的上下文工程：LangChain 和 Manas - Notebook....md
+- raw/LLM 后训练技术 - 知乎.md
+- raw/Prompt Engineering, Finetune, RAG？：OpenA....md
+- raw/RL Infra 行业全景：环境和 RLaaS 如何加速 RL 的 GPT-3 ....md
+- raw/【有手就行】LoRA：用你自己的数据来微调大模型，让大模型真正懂你 - 程序员老....md
+- raw/万字长文详解DeepSeek-R1模型工作原理.md
+- raw/基于 Elasticsearch 创建企业 AI 搜索应用实践.md
+- raw/干货 _ 目标检测入门，看这篇就够了（已更完） - 知乎.md
+- raw/探索提升RAG系统问答质量的技术路线.md
+- raw/美团搜索中查询改写技术的探索与实践 - 美团技术团队.md
+- raw/自适应快慢思考推理模型（Adaptive Reasoning Model）：Qw....md
+- wiki/sources/375篇文献_推理大模型后训练技术综述.md
+- wiki/sources/LLM面试50题_MIT_CSAIL.md
+- wiki/sources/LoRA微调实战_Qwen2.5全流程.md
+- wiki/sources/OpenAI_LLM应用最佳实践.md
+- wiki/sources/大模型算法岗面试百问百答.md
+- wiki/sources/美团搜索查询改写实践.md
 ---
+
 # 概念_Fine-tuning
 
 

@@ -1,6 +1,8 @@
 ---
 tags:
 - AIGC
+sources:
+- wiki/sources/超详细提示词教程_玩转Wan2.2.md
 confidence: high
 type: entity
 summary: 阿里通义大模型团队推出的视频生成模型，支持文生视频与图生视频两种模式。

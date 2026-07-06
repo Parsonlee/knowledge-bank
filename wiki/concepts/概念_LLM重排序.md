@@ -8,7 +8,12 @@ summary: LLM 重排序是将向量搜索初步过滤的候选文档直接交给 
   LLM 的推理能力实现更精准的相关性评估。
 created: '2026-07-06'
 updated: '2026-07-06'
+sources:
+- wiki/sources/RAG_12痛点与解决方案.md
+- wiki/sources/RAG技巧与底层代码剖析.md
+- wiki/sources/RAG挑战赛冠军方案.md
 ---
+
 # 概念_LLM重排序
 
 

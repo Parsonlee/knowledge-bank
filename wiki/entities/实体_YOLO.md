@@ -5,8 +5,12 @@ tags:
 - CV/detection
 summary: YOLO（You Only Look Once），首个单阶段检测模型，将检测视为回归问题实现实时推理。YOLOv2 全面升级。
 sources:
-- wiki/sources/目标检测入门_经典模型.md
+- raw/Human In the Loop竟然可以是个MCP_.md
+- raw/一个半月高强度Claude Code使用后感受.md
+- raw/干货 _ 目标检测入门，看这篇就够了（已更完） - 知乎.md
+- wiki/sources/HumanInTheLoop用MCP实现.md
 - wiki/sources/目标检测入门_特征复用与实时性.md
+- wiki/sources/目标检测入门_经典模型.md
 created: '2026-06-26'
 updated: '2026-06-26'
 confidence: high

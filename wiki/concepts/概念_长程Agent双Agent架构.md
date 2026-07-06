@@ -5,7 +5,10 @@ created: '2026-06-29'
 updated: '2026-06-29'
 type: concept
 summary: 来源：Anthropic再发Agent神文像人类工程师一样思考解决长程任务难题
+sources:
+- wiki/sources/Anthropic再发Agent神文_像人类工程师一样思考解决长程任务难题.md
 ---
+
 
 # 概念：长程 Agent 双 Agent 架构
 

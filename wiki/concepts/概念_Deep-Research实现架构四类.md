@@ -7,7 +7,11 @@ created: '2026-06-29'
 updated: '2026-06-29'
 summary: 来源：浙大综述《A Comprehensive Survey of Deep Research》（arxiv:2506.12594），分析 80+
   个 DR 系统后归纳的四种架构模式。
+sources:
+- raw/一篇95页最新80种Deep Research系统全面综述.md
+- wiki/sources/一篇95页最新80种Deep Research系统全面综述.md
 ---
+
 
 # 概念：Deep Research 实现架构四类
 

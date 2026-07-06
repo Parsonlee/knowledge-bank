@@ -6,7 +6,13 @@ summary: 利用 MCP Notification 机制实现服务端 Human-in-the-Loop：send_
   接口接收回复，支持多端协同
 created: '2026-06-29'
 updated: '2026-06-29'
+sources:
+- raw/Human In the Loop竟然可以是个MCP_.md
+- wiki/sources/HumanInTheLoop用MCP实现.md
+- wiki/sources/OpenAI_构建AI智能体实用指南.md
+- wiki/sources/腾讯ABI工程架构探索与实践.md
 ---
+
 
 # 概念_HITL_MCP
 

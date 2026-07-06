@@ -6,7 +6,10 @@ created: '2026-06-29'
 updated: '2026-06-29'
 summary: 将自然语言转换为 BI 平台特定 DSL（Domain Specific Language，描述数据分析条件的协议语言）时，引入 SQL 作为中间层，分两步完成转换：NL
   → SQL → DSL → 前端指令。
+sources:
+- wiki/sources/腾讯ABI工程架构探索与实践.md
 ---
+
 
 # 概念：Text2DSL 中间层方案
 

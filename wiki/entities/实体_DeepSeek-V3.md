@@ -2,6 +2,20 @@
 type: entity
 tags:
 - LLM/arch/MoE
+sources:
+- raw/2025年七大顶流大模型架构.md
+- raw/LLM output eval in RL.md
+- raw/万字长文详解DeepSeek-R1模型工作原理.md
+- raw/万字长文详解优图RAG技术.md
+- raw/从BM25到Multi-Vector：6种Embedding演进路线.md
+- raw/从DeepSeek-V3到Kimi K2：八种现代 LLM 架构大比较.md
+- raw/用 RAGAS 精准定位 RAG 系统短板.md
+- raw/腾讯混元TurboS技术报告首次全公开：560B参数混合Mamba架构，自适应长....md
+- wiki/sources/2025年七大顶流大模型架构.md
+- wiki/sources/DeepSeek-R1工作原理.md
+- wiki/sources/RAGAS评估RAG系统.md
+- wiki/sources/从DeepSeek-V3到Kimi_K2_八种现代LLM架构大比较.md
+- wiki/sources/大模型面试面经_简单透彻理解MoE.md
 created: '2026-06-29'
 updated: '2026-06-29'
 summary: DeepSeek 发布的旗舰密集 MoE 模型，架构创新（MLA + MoE）影响了后续多个顶级模型设计。
