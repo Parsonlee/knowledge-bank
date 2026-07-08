@@ -38,7 +38,7 @@ confidence: high
 - [[概念_MCP代码执行模式]] — 本文核心模式
 - [[概念_Agent技能沉淀]] — Skills 概念
 - [[概念_KV_Cache]] — Token 消耗背景
-- [[实体_Anthropic]] — 本文作者所在公司
+- [[实体_Anthropic_Research系统]] — 本文作者所在公司
 - [[实体_Cloudflare]] — 独立发现相同方法
 
 ---

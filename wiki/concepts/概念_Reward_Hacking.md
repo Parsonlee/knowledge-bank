@@ -31,5 +31,5 @@ sources:
 4. **生成式与对比式奖励模型升级**：利用 LLM-as-a-Judge 动态批判（Critique-then-score）与成对相对策略（BRPO）。
 
 ## 关联概念与实体
-- **相关概念**：[[concepts/概念_RLVR|RLVR]]、[[concepts/概念_GRPO强化学习|GRPO]]、[[concepts/概念_LLM_as_a_Judge校准|LLM-as-a-Judge]]
+- **相关概念**：[[概念_RLVR|RLVR]]、[[概念_GRPO强化学习|GRPO]]、[[概念_LLM_as_a_Judge校准|LLM-as-a-Judge]]
 - **来源引用**：[[sources/GPT5通用验证器与RL探索]]

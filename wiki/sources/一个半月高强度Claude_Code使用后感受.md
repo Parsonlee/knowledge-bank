@@ -86,7 +86,7 @@ confidence: high
 - [[概念_Subagent子代理]]
 - [[概念_CLAUDE.md最佳实践]]
 - [[概念_上下文工程]]
-- [[概念_Vibe_Coding]]
+- [[概念_Vibe_Coding三阶段]]
 
 ---
 > 📎 **物理文献**：[[raw/articles/一个半月高强度Claude Code使用后感受.md]]

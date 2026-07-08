@@ -35,7 +35,7 @@ confidence: high
 - [[概念_MCP协议]] — MCP 基础
 - [[概念_MCP传输方式]] — Streamable HTTP
 - [[概念_MCP链式调用]] — Sampling 实现的链式调用
-- [[实体_Anthropic]] — MCP 协议制定方
+- [[实体_Anthropic_Research系统]] — MCP 协议制定方
 - [[实体_David_Soria_Parra]] — MCP 联合创建者
 
 ---

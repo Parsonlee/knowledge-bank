@@ -22,7 +22,6 @@ confidence: high
 3. **Docker 容器化落地标准**：提供精简高效的 Dockerfile 编译策略及健康检查健康策略，保证高可用上线部署。
 
 ## 关联概念与实体
-- [[Skill/python]]
 
 ---
 > 📎 **物理文献**：[[raw/playbooks/Uvicorn、Gunicorn 傻傻分不清？FastAPI 生产部署避坑指南.md]]

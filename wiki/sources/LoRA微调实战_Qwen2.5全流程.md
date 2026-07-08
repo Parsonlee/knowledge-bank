@@ -28,7 +28,7 @@ confidence: high
 
 ## 关联
 
-- [[概念_LoRA微调]] — LoRA 低秩分解原理
+- [[概念_LoRA低秩适应微调]] — LoRA 低秩分解原理
 - [[概念_Fine-tuning]] — 微调方法对比
 - [[概念_大模型训练三阶段]] — 训练阶段概述
 - [[实体_Qwen系列模型]] — Qwen2.5/Qwen3 系列

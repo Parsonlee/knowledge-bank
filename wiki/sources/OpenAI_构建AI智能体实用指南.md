@@ -108,7 +108,6 @@ confidence: high
 - [[概念_Agent开发范式三级进化]] — Level 1/2/3 演进
 - [[概念_HITL_MCP]] — HITL 的技术实现
 - [[Anthropic多智能体研究系统构建]] — 类似多智能体实践
-- [[阿里云服务领域Agent构建方法论]] — 对比阿里云实战经验
 
 ---
 > 📎 **物理文献**：[[raw/articles/OpenAI_ 构建 AI 智能体实用指南 _ 宝玉的分享.md]]
