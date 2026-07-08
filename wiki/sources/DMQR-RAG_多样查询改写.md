@@ -6,7 +6,7 @@ tags:
 summary: ICLR2025 论文 DMQR-RAG：提出多样化多查询改写框架，四种改写策略（信息等同/扩展/缩减）+ 自适应策略选择，P@5 提升 14.46%，超过
   RAG-Fusion
 sources:
-- raw/ICLR2025盲审论文DMQR-RAG：多样查询改写，查询P@5提升了14.4....md
+- raw/articles/ICLR2025盲审论文DMQR-RAG：多样查询改写，查询P@5提升了14.4....md
 created: '2026-06-26'
 updated: '2026-07-01'
 confidence: high
@@ -77,4 +77,4 @@ DMQR-RAG（Diverse Multi-Query Rewriting for RAG）提出一种多样化多查�
 - 相关来源：[[RAG查询翻译_Query_Translation]]、[[RAG高级优化_query转换之路]]
 
 ---
-> 📎 **物理文献**：[[raw/ICLR2025盲审论文DMQR-RAG：多样查询改写，查询P@5提升了14.4....md]]
+> 📎 **物理文献**：[[raw/articles/ICLR2025盲审论文DMQR-RAG：多样查询改写，查询P@5提升了14.4....md]]

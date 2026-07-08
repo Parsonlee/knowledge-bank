@@ -8,7 +8,7 @@ summary: 四大部分完整图解 Pandas——Part 1 与 NumPy 对比 7 大优�
   3 DataFrame 读写 CSV、构建方式、索引、算术对齐、concat/merge/join、分组与透视；Part 4 MultiIndex 多级索引。原文为
   Pandas Illustrated 翻译版。
 sources:
-- raw/一图胜千言｜图解Pandas常用操作！.md
+- raw/playbooks/一图胜千言｜图解Pandas常用操作！.md
 created: '2026-06-30'
 updated: '2026-07-01'
 confidence: high
@@ -157,4 +157,4 @@ Pandas 相对 NumPy 的 7 大优势：
 - [[实体_Pandas]]
 
 ---
-> 📎 **物理文献**：[[raw/一图胜千言｜图解Pandas常用操作！.md]]
+> 📎 **物理文献**：[[raw/playbooks/一图胜千言｜图解Pandas常用操作！.md]]

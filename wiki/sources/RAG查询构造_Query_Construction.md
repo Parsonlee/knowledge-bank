@@ -5,7 +5,7 @@ tags:
 - RAG/query
 summary: 介绍 RAG 中 Query Construction 技术：将自然语言查询转换为结构化查询语句，结合元数据过滤提升检索准确性。
 sources:
-- raw/RAG从入门到精通系列4：Query Construction（查询构造）.md
+- raw/articles/RAG从入门到精通系列4：Query Construction（查询构造）.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high
@@ -39,4 +39,4 @@ confidence: high
 - 系列下一篇：[[RAG索引进阶_Indexing]]
 
 ---
-> 📎 **物理文献**：[[raw/RAG从入门到精通系列4：Query Construction（查询构造）.md]]
+> 📎 **物理文献**：[[raw/articles/RAG从入门到精通系列4：Query Construction（查询构造）.md]]

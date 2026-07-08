@@ -4,7 +4,7 @@ tags:
 - RAG/embedding
 summary: HuggingFace 俄罗斯套娃嵌入模型概述——MRL 训练原理、Sentence Transformers 实现、截断使用方法与性能实验
 sources:
-- raw/俄罗斯套娃 (Matryoshka) 嵌入模型概述 - HuggingFace ....md
+- raw/articles/俄罗斯套娃 (Matryoshka) 嵌入模型概述 - HuggingFace ....md
 created: '2026-06-26'
 updated: '2026-07-01'
 confidence: high
@@ -63,4 +63,4 @@ confidence: high
 - 参考论文：Kusupati et al. (2022). Matryoshka representation learning. NeurIPS 35. https://arxiv.org/abs/2205.13147
 
 ---
-> 📎 **物理文献**：[[raw/俄罗斯套娃 (Matryoshka) 嵌入模型概述 - HuggingFace ....md]]
+> 📎 **物理文献**：[[raw/articles/俄罗斯套娃 (Matryoshka) 嵌入模型概述 - HuggingFace ....md]]

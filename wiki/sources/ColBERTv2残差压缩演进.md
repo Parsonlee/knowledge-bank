@@ -6,7 +6,7 @@ tags:
 summary: 从 ColBERT 到 ColBERTv2 的演进——早期交互/延迟交互对比、表示模型与交互模型，及 ColBERTv2 的残差压缩（residual
   compression）、知识蒸馏与 BGE-M3 压缩实验
 sources:
-- raw/RAG之延迟交互与残差压缩：从ColBERT到ColBERTv2的演进及其应用.md
+- raw/articles/RAG之延迟交互与残差压缩：从ColBERT到ColBERTv2的演进及其应用.md
 created: '2026-06-26'
 updated: '2026-07-01'
 confidence: high
@@ -78,4 +78,4 @@ confidence: high
 - 来源：[[ColBERT原理与延迟交互机制]]
 
 ---
-> 📎 **物理文献**：[[raw/RAG之延迟交互与残差压缩：从ColBERT到ColBERTv2的演进及其应用.md]]
+> 📎 **物理文献**：[[raw/articles/RAG之延迟交互与残差压缩：从ColBERT到ColBERTv2的演进及其应用.md]]

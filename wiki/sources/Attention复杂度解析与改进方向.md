@@ -6,7 +6,7 @@ tags:
 summary: 系统分析标准自注意力 O(N²d) 时间 / O(N²) 空间复杂度来源与内存 I/O 瓶颈；详解 FlashAttention 1/2/3 的分块计算、在线
   Softmax、异步调度、FP8 低精度优化；简介 Hyena、线性注意力、S2-Attention 等替代方案。
 sources:
-- raw/Attention复杂度解析与改进方向 - GRITJW - 博客园.md
+- raw/articles/Attention复杂度解析与改进方向 - GRITJW - 博客园.md
 created: '2026-06-26'
 updated: '2026-07-01'
 confidence: high
@@ -72,4 +72,4 @@ FlashAttention 不改变模型结构，通过算法与硬件协同（分块、�
 - [[实体_FlashAttention]]
 
 ---
-> 📎 **物理文献**：[[raw/Attention复杂度解析与改进方向 - GRITJW - 博客园.md]]
+> 📎 **物理文献**：[[raw/articles/Attention复杂度解析与改进方向 - GRITJW - 博客园.md]]

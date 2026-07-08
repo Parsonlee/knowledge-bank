@@ -4,7 +4,7 @@ tags:
 - AI-Agent/memory
 summary: 港中深与上海 AI 实验室关于 LLM Agent 记忆机制综述，提出 Storage -> Reflection -> Experience 三阶段演进框架及前沿探索与跨轨迹抽象机制。
 sources:
-- raw/LLM Agent 的记忆进化路径研究综述.md
+- raw/articles/LLM Agent 的记忆进化路径研究综述.md
 updated: '2026-07-06'
 published: '2026-05-11'
 created: '2026-07-06'
@@ -13,7 +13,7 @@ created: '2026-07-06'
 
 - 原文：[LLM Agent 的记忆进化路径研究综述](https://mp.weixin.qq.com/s/3UrrMSXV6_t-lb6Kp7CPqA)
 - 来源：[[实体_AI_Online]] / arXiv:2605.06716 / 2026-05-11
-- 物理文献：`raw/LLM Agent 的记忆进化路径研究综述.md`
+- 物理文献：`raw/articles/LLM Agent 的记忆进化路径研究综述.md`
 
 ## 核心要点与关键引文
 
@@ -41,4 +41,4 @@ created: '2026-07-06'
 - 关联概念：[[概念_AI_Agent记忆策略]]、[[概念_Agent三层记忆体系]]、[[概念_灾难性遗忘]]
 - 相关实体：[[实体_港中深与上海AI实验室]]
 
-> 📎 **物理文献**：[[raw/LLM Agent 的记忆进化路径研究综述.md]]
+> 📎 **物理文献**：[[raw/articles/LLM Agent 的记忆进化路径研究综述.md]]

@@ -5,7 +5,7 @@ tags:
 summary: 腾讯 OlaChat ABI 工程架构：原子 Agent + DAG 编排 + 统一协议 + Text2DSL 中间层，解决 AI 能力复用、长文本幻觉、自然语言到
   BI 指令转换三大挑战
 sources:
-- raw/腾讯在 ABI 工程领域的探索与实践.md
+- raw/articles/腾讯在 ABI 工程领域的探索与实践.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high
@@ -117,4 +117,4 @@ confidence: high
 - [[腾讯欧拉数据自治系统]] — 数据治理底座
 
 ---
-> 📎 **物理文献**：[[raw/腾讯在 ABI 工程领域的探索与实践.md]]
+> 📎 **物理文献**：[[raw/articles/腾讯在 ABI 工程领域的探索与实践.md]]

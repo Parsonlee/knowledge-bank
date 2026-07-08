@@ -5,7 +5,7 @@ tags:
 summary: Mamba 架构解析 + 完整 PyTorch 复现代码：S6 模块、MambaBlock、RMSNorm、SRAM/HBM 内存优化、enwiki8
   训练流程
 sources:
-- raw/Transformer被挑战？新架构Mamba解析以及Pytorch复现.md
+- raw/playbooks/Transformer被挑战？新架构Mamba解析以及Pytorch复现.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high
@@ -40,4 +40,4 @@ confidence: high
 - [[实体_S4]] — S4 前置架构
 
 ---
-> 📎 **物理文献**：[[raw/Transformer被挑战？新架构Mamba解析以及Pytorch复现.md]]
+> 📎 **物理文献**：[[raw/playbooks/Transformer被挑战？新架构Mamba解析以及Pytorch复现.md]]

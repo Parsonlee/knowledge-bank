@@ -7,7 +7,7 @@ summary: 海外独角兽 Cage 梳理 RL Infra 行业全景：RL 环境（应用�
   RL Scaling 将把 AI 从"人类数据时代"推向"Agent 体验时代"，迎来 RL 的 GPT-3 时刻。Cubox 高亮重点：Mechanize 复制训练（Replication
   Training）范式。
 sources:
-- raw/RL Infra 行业全景：环境和 RLaaS 如何加速 RL 的 GPT-3 ....md
+- raw/insights/RL Infra 行业全景：环境和 RLaaS 如何加速 RL 的 GPT-3 ....md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high
@@ -96,4 +96,4 @@ confidence: high
 - [[实体_Fireworks_AI]]
 
 ---
-> 📎 **物理文献**：[[raw/RL Infra 行业全景：环境和 RLaaS 如何加速 RL 的 GPT-3 ....md]]
+> 📎 **物理文献**：[[raw/insights/RL Infra 行业全景：环境和 RLaaS 如何加速 RL 的 GPT-3 ....md]]

@@ -131,15 +131,13 @@ def cmd_lint(workspace):
     raw_dir = os.path.join(workspace, 'raw')
     bracket_pollution = []
     if os.path.exists(raw_dir):
-        for f in sorted(os.listdir(raw_dir)):
-            if not f.endswith('.md'):
-                continue
-            abs_p = os.path.join(raw_dir, f)
+        raw_files_map = get_all_md_files(workspace, folders=['raw'])
+        for rel_p, abs_p in sorted(raw_files_map.items()):
             content = load_file(abs_p)
             body = re.sub(r'^---\n.*?\n---', '', content, flags=re.DOTALL)
             matches = re.findall(r'\[\[\s*[\d\-+.,\s]+\s*\]\]', body)
             if matches:
-                bracket_pollution.append((f, len(matches)))
+                bracket_pollution.append((rel_p, len(matches)))
 
     print(f"\n📊 【检查 3：原始资料正文张量语法净化检查 (Raw Hygiene)】")
     if bracket_pollution:
@@ -163,10 +161,8 @@ def cmd_sanitize(workspace):
         return
 
     fixed_count = 0
-    for f in sorted(os.listdir(raw_dir)):
-        if not f.endswith('.md'):
-            continue
-        abs_p = os.path.join(raw_dir, f)
+    raw_files_map = get_all_md_files(workspace, folders=['raw'])
+    for rel_p, abs_p in sorted(raw_files_map.items()):
         content = load_file(abs_p)
         m = re.match(r'^(---\n.*?\n---)(.*)', content, re.DOTALL)
         if m:
@@ -177,7 +173,7 @@ def cmd_sanitize(workspace):
         if new_body != body:
             save_file(abs_p, fm + new_body)
             fixed_count += 1
-            print(f"  🛠️ 转义矩阵修复: raw/{f}")
+            print(f"  🛠️ 转义矩阵修复: {rel_p}")
 
     print(f"\n✅ 净化完成！共处理修复 {fixed_count} 篇原始资料。")
 
@@ -302,7 +298,14 @@ def cmd_prune_orphans(workspace, apply=False):
 
     sources_dir = os.path.join(workspace, 'wiki', 'sources')
     raw_dir = os.path.join(workspace, 'raw')
-    raw_files = set(os.listdir(raw_dir)) if os.path.exists(raw_dir) else set()
+    raw_files = set()
+    if os.path.exists(raw_dir):
+        for root, _, files in os.walk(raw_dir):
+            for file in files:
+                if file.endswith('.md'):
+                    abs_path = os.path.join(root, file)
+                    rel_path_to_raw = os.path.relpath(abs_path, raw_dir)
+                    raw_files.add(rel_path_to_raw)
 
     orphan_sources = []
     for f in sorted(os.listdir(sources_dir)):
@@ -380,7 +383,14 @@ def cmd_recover_dates(workspace, apply=False):
                 for rm in raw_matches:
                     raw_to_source_date[rm.strip()] = date_matches[0]
 
-    raw_files = [f for f in sorted(os.listdir(raw_dir)) if f.endswith('.md')]
+    raw_files = []
+    if os.path.exists(raw_dir):
+        for root, _, files in os.walk(raw_dir):
+            for file in files:
+                if file.endswith('.md'):
+                    rel_path_to_raw = os.path.relpath(os.path.join(root, file), raw_dir)
+                    raw_files.append(rel_path_to_raw)
+    raw_files.sort()
     already_has_date = 0
     recovered_from_source = []
     recovered_from_git = []
@@ -489,7 +499,14 @@ def cmd_fetch_published(workspace, apply=False, limit=None, zhihu_only=False):
     if not os.path.exists(raw_dir):
         return
 
-    raw_files = [f for f in sorted(os.listdir(raw_dir)) if f.endswith('.md')]
+    raw_files = []
+    if os.path.exists(raw_dir):
+        for root, _, files in os.walk(raw_dir):
+            for file in files:
+                if file.endswith('.md'):
+                    rel_path_to_raw = os.path.relpath(os.path.join(root, file), raw_dir)
+                    raw_files.append(rel_path_to_raw)
+    raw_files.sort()
     target_files = []
     already_published = 0
 

@@ -4,7 +4,7 @@ tags:
 - 创业
 summary: '**公司背景**：成立 2014/2015 年，从 0 到 MVP 花近两年；切入被 Gmail/Outlook 垄断的免费邮件市场，聚焦高管/创业者/高绩效者，核心痛点是效率'
 sources:
-- raw/把 AI 邮件工具做到 3500 万美元 ARR，Superhuman：找到 P....md
+- raw/articles/把 AI 邮件工具做到 3500 万美元 ARR，Superhuman：找到 P....md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high
@@ -59,4 +59,4 @@ AI 邮件工具 Superhuman 创始人 [[实体_Rahul_Vohra]] 将"找到 PMF"系�
 - [[实体_Rahul_Vohra]]
 
 ---
-> 📎 **物理文献**：[[raw/把 AI 邮件工具做到 3500 万美元 ARR，Superhuman：找到 P....md]]
+> 📎 **物理文献**：[[raw/articles/把 AI 邮件工具做到 3500 万美元 ARR，Superhuman：找到 P....md]]

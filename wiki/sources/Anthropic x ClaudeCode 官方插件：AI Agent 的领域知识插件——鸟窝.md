@@ -5,7 +5,7 @@ tags:
 - AI-Agent/coding
 summary: 解析 Anthropic 官方为 Claude Code 开发的 13 个第一方领域知识插件，说明如何将静态规范转化为动态运行时检查与分阶段工程引导。
 sources:
-- raw/Anthropic x ClaudeCode 官方插件：AI Agent 的领域知识插件——鸟窝.md
+- raw/articles/Anthropic x ClaudeCode 官方插件：AI Agent 的领域知识插件——鸟窝.md
 updated: '2026-07-02'
 created: '2026-07-02'
 ---
@@ -32,4 +32,4 @@ Anthropic 官方为 Claude Code 提供了 13 个深度集成的第一方插件�
 - 实体关联：[[实体_Anthropic_Research系统]]
 
 ---
-> 📎 **物理文献**：[[raw/Anthropic x ClaudeCode 官方插件：AI Agent 的领域知识插件——鸟窝.md]]
+> 📎 **物理文献**：[[raw/articles/Anthropic x ClaudeCode 官方插件：AI Agent 的领域知识插件——鸟窝.md]]

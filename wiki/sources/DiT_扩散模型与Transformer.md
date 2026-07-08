@@ -6,7 +6,7 @@ summary: 详解 DiT（Diffusion Transformers）：用 Transformer 替换扩散�
   上对 patches 操作；探索 Patchify、4 种条件注入方式（adaLN-Zero 最优）、模型缩放性（GFLOPs 与 FID 强相关）；DiT-XL/2
   在 ImageNet 256x256 达到 SOTA FID 2.27。
 sources:
-- raw/Sora的幕后功臣？详解大火的DiT：拥抱Transformer的扩散模型.md
+- raw/articles/Sora的幕后功臣？详解大火的DiT：拥抱Transformer的扩散模型.md
 created: '2026-06-26'
 updated: '2026-07-01'
 confidence: high
@@ -66,4 +66,4 @@ confidence: high
 - [[实体_ViT]]
 
 ---
-> 📎 **物理文献**：[[raw/Sora的幕后功臣？详解大火的DiT：拥抱Transformer的扩散模型.md]]
+> 📎 **物理文献**：[[raw/articles/Sora的幕后功臣？详解大火的DiT：拥抱Transformer的扩散模型.md]]

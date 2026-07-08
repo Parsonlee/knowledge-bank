@@ -5,7 +5,7 @@ tags:
 - Skill/python/pytorch
 summary: 一套完整的 PyTorch 深度学习训练代码模板，涵盖超参定义、数据集、模型、早停、训练验证测试九个步骤。
 sources:
-- raw/实操教程 _ 深度学习pytorch训练代码模板(个人习惯).md
+- raw/playbooks/实操教程 _ 深度学习pytorch训练代码模板(个人习惯).md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high
@@ -86,4 +86,4 @@ model.eval() 后直接预测，或定义预测集 Dataloader。
 - （无独立实体需创建）
 
 ---
-> 📎 **物理文献**：[[raw/实操教程 _ 深度学习pytorch训练代码模板(个人习惯).md]]
+> 📎 **物理文献**：[[raw/playbooks/实操教程 _ 深度学习pytorch训练代码模板(个人习惯).md]]

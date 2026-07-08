@@ -4,7 +4,7 @@ tags:
 - LLM/arch/Mamba
 summary: 知乎中文解析 Mamba 论文：选择机制动机、硬件感知算法、选择性复制与归纳头任务，作者背景（Albert Gu / Tri Dao）
 sources:
-- raw/一文读懂Mamba：具有选择状态空间的线性时间序列建模 - 知乎.md
+- raw/articles/一文读懂Mamba：具有选择状态空间的线性时间序列建模 - 知乎.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high
@@ -37,4 +37,4 @@ confidence: high
 - [[实体_Tri_Dao]] — Mamba 第二作者，FlashAttention 作者
 
 ---
-> 📎 **物理文献**：[[raw/一文读懂Mamba：具有选择状态空间的线性时间序列建模 - 知乎.md]]
+> 📎 **物理文献**：[[raw/articles/一文读懂Mamba：具有选择状态空间的线性时间序列建模 - 知乎.md]]

@@ -4,7 +4,7 @@ tags:
 - CV/data-augmentation
 summary: 13 个 PyTorch（torchvision.transforms）图像增强方法实战总结附代码：Resize、灰度、标准化、随机旋转、中心/随机裁剪、高斯模糊、ColorJitter、水平/垂直翻转、高斯噪声、随机块、中心区域。
 sources:
-- raw/实战｜13个Pytorch 图像增强方法总结（附代码）.md
+- raw/playbooks/实战｜13个Pytorch 图像增强方法总结（附代码）.md
 created: '2026-06-26'
 updated: '2026-07-01'
 confidence: high
@@ -43,4 +43,4 @@ confidence: high
 - [[概念_torchvision图像增强]]
 
 ---
-> 📎 **物理文献**：[[raw/实战｜13个Pytorch 图像增强方法总结（附代码）.md]]
+> 📎 **物理文献**：[[raw/playbooks/实战｜13个Pytorch 图像增强方法总结（附代码）.md]]

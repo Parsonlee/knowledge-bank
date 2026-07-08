@@ -6,7 +6,7 @@ tags:
 summary: 阿里云 OpenLM 实践：利用 MCP Notification + HTTP 接口实现服务端 Human-in-the-Loop，含 send_inquiry
   工具、MCP Proxy 代理、YOLO 模式三方案
 sources:
-- raw/Human In the Loop竟然可以是个MCP_.md
+- raw/articles/Human In the Loop竟然可以是个MCP_.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high
@@ -60,4 +60,4 @@ confidence: high
 - [[MCP五大原语与Web化]]
 
 ---
-> 📎 **物理文献**：[[raw/Human In the Loop竟然可以是个MCP_.md]]
+> 📎 **物理文献**：[[raw/articles/Human In the Loop竟然可以是个MCP_.md]]

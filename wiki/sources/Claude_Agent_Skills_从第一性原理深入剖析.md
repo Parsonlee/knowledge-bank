@@ -4,7 +4,7 @@ tags:
 - AI-Agent/skill
 summary: 从第一性原理拆解 Claude Agent Skills：提示词模板元工具架构，通过上下文注入扩展 LLM 能力
 sources:
-- raw/Claude Agent Skills：从第一性原理深入剖析.md
+- raw/articles/Claude Agent Skills：从第一性原理深入剖析.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high
@@ -76,4 +76,4 @@ Claude Code 扫描：`~/.config/claude/skills/`（用户）、`.claude/skills/`�
 - [[概念_Agent开发范式三级进化]]
 
 ---
-> 📎 **物理文献**：[[raw/Claude Agent Skills：从第一性原理深入剖析.md]]
+> 📎 **物理文献**：[[raw/articles/Claude Agent Skills：从第一性原理深入剖析.md]]

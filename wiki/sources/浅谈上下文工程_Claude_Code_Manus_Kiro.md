@@ -4,7 +4,7 @@ tags:
 - AI-Agent/context-engineering
 summary: 阿里云工程师全面梳理上下文工程概念与业界实践：Claude Code三层记忆+分层多Agent、Manus六大优化原则、Kiro规范驱动开发，以及提示工程→上下文工程→环境工程演进路线
 sources:
-- raw/浅谈上下文工程｜从 Claude Code 、Manus 和 Kiro 看提示工....md
+- raw/articles/浅谈上下文工程｜从 Claude Code 、Manus 和 Kiro 看提示工....md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high
@@ -103,4 +103,4 @@ confidence: high
 - [[实体_Kiro]]
 
 ---
-> 📎 **物理文献**：[[raw/浅谈上下文工程｜从 Claude Code 、Manus 和 Kiro 看提示工....md]]
+> 📎 **物理文献**：[[raw/articles/浅谈上下文工程｜从 Claude Code 、Manus 和 Kiro 看提示工....md]]

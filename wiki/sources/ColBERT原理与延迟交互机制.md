@@ -6,7 +6,7 @@ tags:
 summary: ColBERT 原理与延迟交互（Late Interaction）机制——多向量表示、MaxSim 计算流程，及其与稠密向量（Sentence-BERT）的对比与
   BGE-M3 实验
 sources:
-- raw/RAG：ColBERT原理、延迟交互机制与稠密向量的对比分析.md
+- raw/articles/RAG：ColBERT原理、延迟交互机制与稠密向量的对比分析.md
 created: '2026-06-26'
 updated: '2026-07-01'
 confidence: high
@@ -69,4 +69,4 @@ ColBERT 因逐 token 选取最大相似度而给出更高的相似度。相关�
 - 来源：[[ColBERTv2残差压缩演进]]
 
 ---
-> 📎 **物理文献**：[[raw/RAG：ColBERT原理、延迟交互机制与稠密向量的对比分析.md]]
+> 📎 **物理文献**：[[raw/articles/RAG：ColBERT原理、延迟交互机制与稠密向量的对比分析.md]]

@@ -5,7 +5,7 @@ tags:
 - LLM/Multimodal
 summary: 淘宝直播数字人LLM文案生成实践：口语化改写（DPO+难样本增强97%准确率）、多源信息多步→单步蒸馏、素材OCR+文案图文一致、多维度测评体系
 sources:
-- raw/淘宝直播数字人：LLM文案生成技术.md
+- raw/articles/淘宝直播数字人：LLM文案生成技术.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high
@@ -79,4 +79,4 @@ confidence: high
 - [[概念_LoRA低秩适应微调]] — Qwen-0.5B+LoRA Adapter实现OCR摘要+图片选择双任务
 
 ---
-> 📎 **物理文献**：[[raw/淘宝直播数字人：LLM文案生成技术.md]]
+> 📎 **物理文献**：[[raw/articles/淘宝直播数字人：LLM文案生成技术.md]]

@@ -5,7 +5,7 @@ tags:
 - 面试
 summary: MIT CSAIL 工程师整理的 50 个 LLM 核心面试题，覆盖架构、训练微调、推理、数学原理、高级系统设计五大主题
 sources:
-- raw/信息过载时代，如何真正「懂」LLM？从MIT分享的50个面试题开始 ｜ 机器之心.md
+- raw/articles/信息过载时代，如何真正「懂」LLM？从MIT分享的50个面试题开始 ｜ 机器之心.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high
@@ -97,4 +97,4 @@ confidence: high
 - [[实体_Qwen3]]
 
 ---
-> 📎 **物理文献**：[[raw/信息过载时代，如何真正「懂」LLM？从MIT分享的50个面试题开始 ｜ 机器之心.md]]
+> 📎 **物理文献**：[[raw/articles/信息过载时代，如何真正「懂」LLM？从MIT分享的50个面试题开始 ｜ 机器之心.md]]

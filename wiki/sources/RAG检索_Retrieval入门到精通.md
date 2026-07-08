@@ -5,7 +5,7 @@ tags:
 - RAG/retrieval
 summary: Re-Rank：对检索到的候选文档进行重新排序，提高生成答案的相关性和精确度
 sources:
-- raw/RAG从入门到精通系列6：Retrieval（检索）.md
+- raw/articles/RAG从入门到精通系列6：Retrieval（检索）.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high
@@ -63,4 +63,4 @@ confidence: high
 - 实体：[[实体_LangChain]]、[[实体_Qdrant]]
 
 ---
-> 📎 **物理文献**：[[raw/RAG从入门到精通系列6：Retrieval（检索）.md]]
+> 📎 **物理文献**：[[raw/articles/RAG从入门到精通系列6：Retrieval（检索）.md]]

@@ -4,7 +4,7 @@ tags:
 - RAG/embedding
 summary: Embedding 全景综述：从独热编码/词袋/主题模型/Word2Vec 到 BERT 各向异性问题及优化方法（SBERT/Bert-flow/Bert-whitening/SimCSE）
 sources:
-- raw/一文详尽之Embedding（向量表示）！.md
+- raw/articles/一文详尽之Embedding（向量表示）！.md
 created: '2026-06-26'
 updated: '2026-07-01'
 confidence: high
@@ -97,4 +97,4 @@ confidence: high
 - 实体：[[实体_Sentence_Transformers]]
 
 ---
-> 📎 **物理文献**：[[raw/一文详尽之Embedding（向量表示）！.md]]
+> 📎 **物理文献**：[[raw/articles/一文详尽之Embedding（向量表示）！.md]]

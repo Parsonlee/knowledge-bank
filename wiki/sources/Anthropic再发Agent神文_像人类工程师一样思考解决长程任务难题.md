@@ -5,7 +5,7 @@ tags:
 summary: Anthropic 为 Claude Agent SDK 开发双 Agent 架构（初始化 Agent + 编码 Agent）解决长程 Coding
   任务的跨会话状态管理难题。
 sources:
-- raw/Anthropic再发Agent神文：像人类工程师一样思考，解决「长程任务」难题.md
+- raw/articles/Anthropic再发Agent神文：像人类工程师一样思考，解决「长程任务」难题.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high
@@ -86,4 +86,4 @@ confidence: high
 - [[概念_上下文工程]]
 
 ---
-> 📎 **物理文献**：[[raw/Anthropic再发Agent神文：像人类工程师一样思考，解决「长程任务」难题.md]]
+> 📎 **物理文献**：[[raw/articles/Anthropic再发Agent神文：像人类工程师一样思考，解决「长程任务」难题.md]]

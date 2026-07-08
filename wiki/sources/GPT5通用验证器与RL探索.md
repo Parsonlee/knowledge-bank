@@ -6,7 +6,7 @@ tags:
 summary: 深度解析大语言模型从 RLVR 向开放主观领域进化的核心关键——“通用验证器”（Universal Verifier），详细剖析 RaR、Rubicon、Writing-Zero、VeriFree、INTUITOR
   及终极 OaK 架构六大技术路径。
 sources:
-- raw/LLM output eval in RL.md
+- raw/articles/LLM output eval in RL.md
 created: '2026-07-06'
 updated: '2026-07-06'
 confidence: high
@@ -50,4 +50,4 @@ confidence: high
 - **实体**：[[entities/实体_OpenAI|OpenAI]]、[[entities/实体_DeepMind|DeepMind]]
 
 ---
-> 📎 **物理文献**：[[raw/LLM output eval in RL.md]]
+> 📎 **物理文献**：[[raw/articles/LLM output eval in RL.md]]

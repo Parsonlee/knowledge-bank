@@ -6,7 +6,7 @@ tags:
 summary: 腾讯混元 TurboS：560B 参数 Hybrid Transformer-Mamba MoE 模型，业界首个大规模部署的 Mamba 架构，自适应长短
   CoT 融合
 sources:
-- raw/腾讯混元TurboS技术报告首次全公开：560B参数混合Mamba架构，自适应长....md
+- raw/articles/腾讯混元TurboS技术报告首次全公开：560B参数混合Mamba架构，自适应长....md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high
@@ -50,4 +50,4 @@ confidence: high
 - [[Mamba2_SSD_大一统]] — Mamba2 SSD 框架
 
 ---
-> 📎 **物理文献**：[[raw/腾讯混元TurboS技术报告首次全公开：560B参数混合Mamba架构，自适应长....md]]
+> 📎 **物理文献**：[[raw/articles/腾讯混元TurboS技术报告首次全公开：560B参数混合Mamba架构，自适应长....md]]

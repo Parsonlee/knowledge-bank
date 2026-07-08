@@ -6,7 +6,7 @@ tags:
 summary: 介绍 RAG 高阶查询翻译技巧，覆盖 Multi-Query、RAG Fusion、Sub-question 分解、Step-back Question
   和 HyDE 五种改写方法。
 sources:
-- raw/RAG从入门到精通系列2：Query Translation（查询翻译）.md
+- raw/articles/RAG从入门到精通系列2：Query Translation（查询翻译）.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high
@@ -55,4 +55,4 @@ confidence: high
 - 系列下一篇：[[RAG路由_Routing]]
 
 ---
-> 📎 **物理文献**：[[raw/RAG从入门到精通系列2：Query Translation（查询翻译）.md]]
+> 📎 **物理文献**：[[raw/articles/RAG从入门到精通系列2：Query Translation（查询翻译）.md]]

@@ -4,7 +4,7 @@ tags:
 - LLM/hallucination
 summary: 32 种 LLM 幻觉消除技术综述：提示工程（RAG/反馈/提示微调）与模型开发（解码策略/KG/损失函数/SFT）两大类
 sources:
-- raw/大语言模型的32种消除幻觉的技术，你都了解吗？.md
+- raw/articles/大语言模型的32种消除幻觉的技术，你都了解吗？.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high
@@ -82,4 +82,4 @@ confidence: high
 - [[翁荔_LLM外在幻觉_原因检测抵抗]] — 翁荔 Blog，详解 RARR/CoVe/SAFE/Self-RAG 等方法
 
 ---
-> 📎 **物理文献**：[[raw/大语言模型的32种消除幻觉的技术，你都了解吗？.md]]
+> 📎 **物理文献**：[[raw/articles/大语言模型的32种消除幻觉的技术，你都了解吗？.md]]

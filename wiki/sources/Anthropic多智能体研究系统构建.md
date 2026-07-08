@@ -5,7 +5,7 @@ tags:
 - AI-Agent/deep-research
 summary: 深入解析 Anthropic 构建 Claude 生产级多智能体研究系统（Research feature）的工程挑战与经验，涵盖编排器-工作者架构、提示词工程、并行推理及长时间跨度状态管理。
 sources:
-- raw/How we built our multi-agent research system.md
+- raw/articles/How we built our multi-agent research system.md
 created: '2026-07-06'
 updated: '2026-07-06'
 confidence: high
@@ -50,4 +50,4 @@ confidence: high
 - **实体**：[[entities/实体_Anthropic_Research系统|Anthropic]]、[[entities/实体_Claude_Code|Claude]]
 
 ---
-> 📎 **物理文献**：[[raw/How we built our multi-agent research system.md]]
+> 📎 **物理文献**：[[raw/articles/How we built our multi-agent research system.md]]

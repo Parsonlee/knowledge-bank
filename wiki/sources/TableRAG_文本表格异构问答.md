@@ -4,7 +4,7 @@ tags:
 - RAG
 summary: 传统 RAG 处理含表格文档的缺陷：
 sources:
-- raw/TableRAG_ 处理文本+表格异构数据.md
+- raw/articles/TableRAG_ 处理文本+表格异构数据.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high
@@ -77,4 +77,4 @@ https://arxiv.org/abs/2506.10380
 - 实体：[[实体_BGE-M3]]
 
 ---
-> 📎 **物理文献**：[[raw/TableRAG_ 处理文本+表格异构数据.md]]
+> 📎 **物理文献**：[[raw/articles/TableRAG_ 处理文本+表格异构数据.md]]

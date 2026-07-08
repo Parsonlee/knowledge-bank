@@ -4,7 +4,7 @@ tags:
 - Life
 summary: '**退隐（Retreat / R&R）**：为逃离工作日常、放松充电、被宠爱、做有趣的事，去容易的地方——即"度假"。'
 sources:
-- raw/The Technium_ 50 Years of Travel Tips.md
+- raw/articles/The Technium_ 50 Years of Travel Tips.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high
@@ -84,4 +84,4 @@ ingested: 2026-06-30
 - 作者推荐其周更旅行 newsletter **Nomadico**（每期 4 条简短 tips，免费）。
 
 ---
-> 📎 **物理文献**：[[raw/The Technium_ 50 Years of Travel Tips.md]]
+> 📎 **物理文献**：[[raw/articles/The Technium_ 50 Years of Travel Tips.md]]

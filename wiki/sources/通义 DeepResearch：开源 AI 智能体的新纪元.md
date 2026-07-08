@@ -5,7 +5,7 @@ tags:
 summary: 通义官方博客：通义 DeepResearch 全开源 Web Agent 的技术全貌——Agentic CPT+SFT+RL 训练、IterResearch
   范式、数据合成与基础设施
 sources:
-- raw/通义 DeepResearch：开源 AI 智能体的新纪元 _ Tongyi D....md
+- raw/articles/通义 DeepResearch：开源 AI 智能体的新纪元 _ Tongyi D....md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high
@@ -109,4 +109,4 @@ confidence: high
 - [[实体_通义DeepResearch]]
 
 ---
-> 📎 **物理文献**：[[raw/通义 DeepResearch：开源 AI 智能体的新纪元 _ Tongyi D....md]]
+> 📎 **物理文献**：[[raw/articles/通义 DeepResearch：开源 AI 智能体的新纪元 _ Tongyi D....md]]

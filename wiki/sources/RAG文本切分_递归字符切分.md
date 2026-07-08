@@ -5,7 +5,7 @@ tags:
 - RAG/chunking
 summary: 文本切分系列第2篇，介绍 Level 2 递归字符文本分割（RecursiveCharacterTextSplitter）：先按分隔符切分再合并至指定长度，是实践中最常用的基础切分方案。
 sources:
-- raw/RAG文本切分的五个层次2：递归字符分割(实战).md
+- raw/articles/RAG文本切分的五个层次2：递归字符分割(实战).md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high
@@ -48,4 +48,4 @@ confidence: high
 - 系列下一篇：[[RAG文本切分_token优化]]
 
 ---
-> 📎 **物理文献**：[[raw/RAG文本切分的五个层次2：递归字符分割(实战).md]]
+> 📎 **物理文献**：[[raw/articles/RAG文本切分的五个层次2：递归字符分割(实战).md]]

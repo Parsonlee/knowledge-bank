@@ -4,7 +4,7 @@ tags:
 - LLM/arch
 summary: 软件工程师Brendan Bycroft制作的LLM 3D可视化网站，逐层展示GPT-3/NanoGPT的Embedding/LN/Self-Attention/MLP/Softmax工作原理
 sources:
-- raw/矩阵模拟！Transformer大模型3D可视化，GPT-3、Nano-GPT每....md
+- raw/articles/矩阵模拟！Transformer大模型3D可视化，GPT-3、Nano-GPT每....md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high
@@ -65,4 +65,4 @@ confidence: high
 - [[实体_PyTorch]] — NanoGPT / minGPT 的实现框架
 
 ---
-> 📎 **物理文献**：[[raw/矩阵模拟！Transformer大模型3D可视化，GPT-3、Nano-GPT每....md]]
+> 📎 **物理文献**：[[raw/articles/矩阵模拟！Transformer大模型3D可视化，GPT-3、Nano-GPT每....md]]

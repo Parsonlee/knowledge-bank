@@ -4,7 +4,7 @@ tags:
 - LLM/arch/Mamba
 summary: 从直觉出发解释 Mamba：效率/有效性 Pareto 前沿、选择机制类比、状态即压缩、State Swapping 新推理范式及可解释性分析
 sources:
-- raw/Mamba Explained _ Kola Ayonrinde.md
+- raw/articles/Mamba Explained _ Kola Ayonrinde.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high
@@ -47,4 +47,4 @@ confidence: high
 - [[实体_Mamba]] — Mamba 模型
 
 ---
-> 📎 **物理文献**：[[raw/Mamba Explained _ Kola Ayonrinde.md]]
+> 📎 **物理文献**：[[raw/articles/Mamba Explained _ Kola Ayonrinde.md]]

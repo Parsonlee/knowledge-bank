@@ -4,7 +4,7 @@ tags:
 - RAG
 summary: 腾讯优图RAG全栈技术：2B级Embedding多阶段训练、Reranker分层蒸馏、Text2SQL多智能体框架MAC-SQL、自研GraphRAG（知识树+S2Dual社区检测+AgenticGraphQ）
 sources:
-- raw/万字长文详解优图RAG技术.md
+- raw/articles/万字长文详解优图RAG技术.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high
@@ -144,4 +144,4 @@ confidence: high
 - 相关来源：[[RAG综述_中科院2025]]、[[阿里RAG技术演进]]
 
 ---
-> 📎 **物理文献**：[[raw/万字长文详解优图RAG技术.md]]
+> 📎 **物理文献**：[[raw/articles/万字长文详解优图RAG技术.md]]

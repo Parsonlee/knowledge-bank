@@ -6,7 +6,7 @@ tags:
 summary: 文本切分系列第2.5篇，介绍在递归字符切分中融入 token 计数的优化方法，对比 tiktoken、SentenceTransformers 和自定义
   tokenizer 三种方案。
 sources:
-- raw/RAG文本切分的五个层次2：递归字符切分的token优化(实战).md
+- raw/articles/RAG文本切分的五个层次2：递归字符切分的token优化(实战).md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high
@@ -54,4 +54,4 @@ confidence: high
 - 系列下一篇：[[RAG文本切分_JSON文档切分]]
 
 ---
-> 📎 **物理文献**：[[raw/RAG文本切分的五个层次2：递归字符切分的token优化(实战).md]]
+> 📎 **物理文献**：[[raw/articles/RAG文本切分的五个层次2：递归字符切分的token优化(实战).md]]

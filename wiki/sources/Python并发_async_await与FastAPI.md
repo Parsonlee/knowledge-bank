@@ -4,7 +4,7 @@ tags:
 - Skill/python
 summary: FastAPI 官方对异步编程、并发与并行的完整讲解。
 sources:
-- raw/Py中的并发 async _ await - FastAPI.md
+- raw/playbooks/Py中的并发 async _ await - FastAPI.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high
@@ -58,4 +58,4 @@ FastAPI 官方对异步编程、并发与并行的完整讲解。
 - [[概念_FastAPI项目结构模式]]
 
 ---
-> 📎 **物理文献**：[[raw/Py中的并发 async _ await - FastAPI.md]]
+> 📎 **物理文献**：[[raw/playbooks/Py中的并发 async _ await - FastAPI.md]]

@@ -4,7 +4,7 @@ tags:
 - AI-Agent/deep-research
 summary: 魔搭社区深度解读通义 DeepResearch：三阶段训练流程、IterResearch 范式、WebFrontier 数据合成与六大研发问题
 sources:
-- raw/Tongyi DeepResearch的技术报告探秘.md
+- raw/articles/Tongyi DeepResearch的技术报告探秘.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high
@@ -97,4 +97,4 @@ Tongyi DeepResearch（2025年9月16日发布）是开源高性能 Web Agent，�
 - [[实体_通义DeepResearch]]
 
 ---
-> 📎 **物理文献**：[[raw/Tongyi DeepResearch的技术报告探秘.md]]
+> 📎 **物理文献**：[[raw/articles/Tongyi DeepResearch的技术报告探秘.md]]

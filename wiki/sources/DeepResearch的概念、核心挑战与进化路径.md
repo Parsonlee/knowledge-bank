@@ -4,7 +4,7 @@ tags:
 - AI-Agent/deep-research
 summary: 华为/利物浦/牛津综述：Deep Research Agent 的定义、四大核心挑战与未来进化路径
 sources:
-- raw/DeepResearch的概念、核心挑战与进化路径.md
+- raw/articles/DeepResearch的概念、核心挑战与进化路径.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high
@@ -76,4 +76,4 @@ confidence: high
 - [[概念_Deep-Research规划策略三模式]]
 
 ---
-> 📎 **物理文献**：[[raw/DeepResearch的概念、核心挑战与进化路径.md]]
+> 📎 **物理文献**：[[raw/articles/DeepResearch的概念、核心挑战与进化路径.md]]

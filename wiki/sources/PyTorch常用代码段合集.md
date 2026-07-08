@@ -6,7 +6,7 @@ tags:
 summary: PyTorch 常用代码段大全，涵盖基本配置（可复现性/显卡设置）、张量处理（类型转换/形变/拼接/矩阵乘法）、模型定义与操作（权重初始化/提取层/预训练加载/SyncBN）、数据处理（均值标准差/预处理/TSN
   采样）、模型训练与测试（分类训练/Label Smoothing/Mixup/梯度裁剪/学习率衰减/断点续训/TensorBoard 可视化）及实用 Tips。
 sources:
-- raw/PyTorch常用代码段合集.md
+- raw/playbooks/PyTorch常用代码段合集.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high
@@ -102,4 +102,4 @@ confidence: high
 - [[实体_PyTorch]]
 
 ---
-> 📎 **物理文献**：[[raw/PyTorch常用代码段合集.md]]
+> 📎 **物理文献**：[[raw/playbooks/PyTorch常用代码段合集.md]]

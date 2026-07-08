@@ -5,7 +5,7 @@ tags:
 summary: 腾讯 OlaChat 智能 BI 平台实践：多任务对话系统 + 任务编排引擎 + FlattenedRAG/StructuredRAG 结构化元数据检索
   + Text2SQL 微调+Agent 方案
 sources:
-- raw/腾讯基于 LLM 的智能数据分析平台 OlaChat 的落地实践.md
+- raw/articles/腾讯基于 LLM 的智能数据分析平台 OlaChat 的落地实践.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high
@@ -86,4 +86,4 @@ LLM 对数据分析的四点改进：语言能力 / 工具使用 / 逻辑推理 
 - [[概念_元数据RAG]] — 结构化数据 RAG 特殊性
 
 ---
-> 📎 **物理文献**：[[raw/腾讯基于 LLM 的智能数据分析平台 OlaChat 的落地实践.md]]
+> 📎 **物理文献**：[[raw/articles/腾讯基于 LLM 的智能数据分析平台 OlaChat 的落地实践.md]]

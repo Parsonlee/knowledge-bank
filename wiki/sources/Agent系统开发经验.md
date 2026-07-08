@@ -4,7 +4,7 @@ tags:
 - AI-Agent
 summary: 从系统工程视角剖析 Agent 开发的三层复杂度（可运行/可复现/可进化），批判框架封装幻觉，提出系统化是唯一解
 sources:
-- raw/Agent系统开发经验.md
+- raw/insights/Agent系统开发经验.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high
@@ -91,4 +91,4 @@ confidence: high
 - [[实体_LangSmith]]
 
 ---
-> 📎 **物理文献**：[[raw/Agent系统开发经验.md]]
+> 📎 **物理文献**：[[raw/insights/Agent系统开发经验.md]]

@@ -4,7 +4,7 @@ tags:
 - 创业
 summary: '**Grammarly 逆袭案例**："有护城河，但没有城堡"的产品'
 sources:
-- raw/把世界拆成最小单元，然后重新拼装 _ 42章经 AI Newsletter.md
+- raw/articles/把世界拆成最小单元，然后重新拼装 _ 42章经 AI Newsletter.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high
@@ -57,4 +57,4 @@ confidence: high
 - [[实体_Superhuman]]
 
 ---
-> 📎 **物理文献**：[[raw/把世界拆成最小单元，然后重新拼装 _ 42章经 AI Newsletter.md]]
+> 📎 **物理文献**：[[raw/articles/把世界拆成最小单元，然后重新拼装 _ 42章经 AI Newsletter.md]]

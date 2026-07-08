@@ -4,7 +4,7 @@ tags:
 - AI-Agent/tools
 summary: Anthropic 工程博客：将 MCP 工具以代码 API 方式调用，Token 消耗减少 98.7%，并获得隐私保护与状态持久化能力
 sources:
-- raw/MCP 遇上代码执行：构建更高效率的 AI 智能体 _ 宝玉的分享.md
+- raw/articles/MCP 遇上代码执行：构建更高效率的 AI 智能体 _ 宝玉的分享.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high
@@ -42,4 +42,4 @@ confidence: high
 - [[实体_Cloudflare]] — 独立发现相同方法
 
 ---
-> 📎 **物理文献**：[[raw/MCP 遇上代码执行：构建更高效率的 AI 智能体 _ 宝玉的分享.md]]
+> 📎 **物理文献**：[[raw/articles/MCP 遇上代码执行：构建更高效率的 AI 智能体 _ 宝玉的分享.md]]

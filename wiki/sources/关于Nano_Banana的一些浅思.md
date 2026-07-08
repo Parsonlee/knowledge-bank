@@ -4,7 +4,7 @@ tags:
 - AIGC
 summary: '**Nano Banana 定位**：Gemini 2.5 Flash Image 的别名，原生多模态快速高效模型，单步同时处理文字与图像'
 sources:
-- raw/关于 Nano Banana 的一些浅思.md
+- raw/articles/关于 Nano Banana 的一些浅思.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high
@@ -64,7 +64,7 @@ lencx 围绕 [[实体_Nano_Banana_Pro]]（Gemini 2.5 Flash Image）的功能解�
 ## 来源
 
 - 全文：`tmp/Cubox-批量导出文章-所有收藏-205 收藏-全文/关于 Nano Banana 的一些浅思.md`
-- Cubox：`raw/关于 Nano Banana 的一些浅思.md`
+- Cubox：`raw/articles/关于 Nano Banana 的一些浅思.md`
 
 ---
-> 📎 **物理文献**：[[raw/关于 Nano Banana 的一些浅思.md]]
+> 📎 **物理文献**：[[raw/articles/关于 Nano Banana 的一些浅思.md]]

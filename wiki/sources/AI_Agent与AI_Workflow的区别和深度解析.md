@@ -4,7 +4,7 @@ tags:
 - AI-Agent
 summary: 系统对比 AI Agent（自主感知决策）与 AI Workflow（预定义流程执行）的本质区别、分类特点与应用场景
 sources:
-- raw/AI Agent 与 AI Workflow 的区别和深度解析：从自动化到智能化....md
+- raw/articles/AI Agent 与 AI Workflow 的区别和深度解析：从自动化到智能化....md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high
@@ -72,4 +72,4 @@ confidence: high
 - [[概念_AI_Agent四种类型]]
 
 ---
-> 📎 **物理文献**：[[raw/AI Agent 与 AI Workflow 的区别和深度解析：从自动化到智能化....md]]
+> 📎 **物理文献**：[[raw/articles/AI Agent 与 AI Workflow 的区别和深度解析：从自动化到智能化....md]]

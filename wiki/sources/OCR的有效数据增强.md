@@ -5,7 +5,7 @@ tags:
 summary: 针对 OCR（手写金额识别）的数据增强实战：用 OpenCV + albumentations 实现三类增强——形态学（腐蚀/膨胀模拟细/粗笔画）、噪声（RandomRain/RandomShadow/PixelDropout）、变换（ShiftScaleRotate/Affine/Blur），并用
   OneOf 随机组合；附完整 augment_img 代码。
 sources:
-- raw/OCR的有效数据增强.md
+- raw/playbooks/OCR的有效数据增强.md
 created: '2026-06-26'
 updated: '2026-07-01'
 confidence: high
@@ -55,4 +55,4 @@ confidence: high
 - [[实体_Albumentations]]
 
 ---
-> 📎 **物理文献**：[[raw/OCR的有效数据增强.md]]
+> 📎 **物理文献**：[[raw/playbooks/OCR的有效数据增强.md]]

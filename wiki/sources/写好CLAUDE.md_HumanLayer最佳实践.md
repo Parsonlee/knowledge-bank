@@ -5,7 +5,7 @@ tags:
 summary: HumanLayer 团队发布的 CLAUDE.md 编写最佳实践指南，基于上下文工程原则，从 LLM 无状态特性出发，提出"少即是多"、渐进式披露等核心方法论，帮助开发者写出高质量的
   [[概念_CLAUDE.md最佳实践|CLAUDE.md]] 文件。
 sources:
-- raw/写好 CLAUDE.md _ HumanLayer 博客.md
+- raw/articles/写好 CLAUDE.md _ HumanLayer 博客.md
 created: '2026-06-30'
 updated: '2026-07-01'
 confidence: high
@@ -84,4 +84,4 @@ HumanLayer 团队发布的 CLAUDE.md 编写最佳实践指南，基于上下文�
 - [[概念_Claude_Code工作流]]
 
 ---
-> 📎 **物理文献**：[[raw/写好 CLAUDE.md _ HumanLayer 博客.md]]
+> 📎 **物理文献**：[[raw/articles/写好 CLAUDE.md _ HumanLayer 博客.md]]

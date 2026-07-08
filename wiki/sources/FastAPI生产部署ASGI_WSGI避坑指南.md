@@ -5,7 +5,7 @@ tags:
 summary: 生产环境下部署 FastAPI 高并发服务的实践指南，深入对比 Uvicorn 与 Gunicorn 架构职责，给出 Docker 与 Linux
   环境稳定调优配置。
 sources:
-- raw/Uvicorn、Gunicorn 傻傻分不清？FastAPI 生产部署避坑指南.md
+- raw/playbooks/Uvicorn、Gunicorn 傻傻分不清？FastAPI 生产部署避坑指南.md
 created: '2026-07-02'
 updated: '2026-07-02'
 confidence: high
@@ -13,7 +13,7 @@ confidence: high
 # FastAPI生产部署ASGI_WSGI避坑指南
 
 ## 来源信息
-- 物理文件：[[raw/Uvicorn、Gunicorn 傻傻分不清？FastAPI 生产部署避坑指南.md]]
+- 物理文件：[[raw/playbooks/Uvicorn、Gunicorn 傻傻分不清？FastAPI 生产部署避坑指南.md]]
 - 作者：一名程序媛呀
 
 ## 核心要点
@@ -25,4 +25,4 @@ confidence: high
 - [[Skill/python]]
 
 ---
-> 📎 **物理文献**：[[raw/Uvicorn、Gunicorn 傻傻分不清？FastAPI 生产部署避坑指南.md]]
+> 📎 **物理文献**：[[raw/playbooks/Uvicorn、Gunicorn 傻傻分不清？FastAPI 生产部署避坑指南.md]]

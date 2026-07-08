@@ -5,7 +5,7 @@ tags:
 - AI-Agent/coding
 summary: 基于 Karpathy 的 LLM Wiki 理念，结合 Claude Code（大脑）、Obsidian（可视化图谱眼睛）与飞书机器人（移动端手），实现自动化知识入库与复利积累。
 sources:
-- raw/Claude Code + Obsidian + 飞书，我搭了一套会自己长大的知识库.md
+- raw/articles/Claude Code + Obsidian + 飞书，我搭了一套会自己长大的知识库.md
 updated: '2026-07-06'
 published: '2026-04-14'
 created: '2026-07-06'
@@ -14,7 +14,7 @@ created: '2026-07-06'
 
 - 原文：[Claude Code + Obsidian + 飞书，我搭了一套会自己长大的知识库](https://mp.weixin.qq.com/s/QTSqMJm4rXKHHzPLae5xKw)
 - 作者：[[实体_翻斗花园二蛋]] / 2026-04-14
-- 物理文献：`raw/Claude Code + Obsidian + 飞书，我搭了一套会自己长大的知识库.md`
+- 物理文献：`raw/articles/Claude Code + Obsidian + 飞书，我搭了一套会自己长大的知识库.md`
 
 ## 核心要点与关键引文
 
@@ -45,4 +45,4 @@ created: '2026-07-06'
 - 对比分析：[[概念_RAG与LLM_Wiki对比]]
 - 工具链：[[实体_Claude_Code]]、[[实体_Obsidian]]、[[实体_Andrej_Karpathy]]
 
-> 📎 **物理文献**：[[raw/Claude Code + Obsidian + 飞书，我搭了一套会自己长大的知识库.md]]
+> 📎 **物理文献**：[[raw/articles/Claude Code + Obsidian + 飞书，我搭了一套会自己长大的知识库.md]]

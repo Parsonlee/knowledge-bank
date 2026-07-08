@@ -1,5 +1,12 @@
 # Wiki Log
 
+## [2026-07-08] chore/restructure-raw | 智能分类重构 raw/ 目录结构
+- **目录分类**：在 `raw/` 下创建子目录 `articles/`、`papers/`、`transcripts/`、`playbooks/`、`insights/`，并将根目录下的 163 篇物理文献智能分流：
+  - `raw/articles/`: 130 篇
+  - `raw/playbooks/`: 22 篇
+  - `raw/insights/`: 11 篇
+- **级联更新**：自动检索并更新了全库 164 个包含 `raw/` 路径引用的 markdown 文件的 YAML sources 字段及正文链接，确保图谱未发生断链。
+
 ## [2026-07-06] lint/fix-all | 全量修复 238 篇末端产物 Frontmatter 越级直连 Raw 与 3 处总索引死链
 - **架构越级治理**：全面遵循《AGENTS.md》单向推导纪律（`raw -> sources -> entities/concepts`），针对 `wiki/entities/` 与 `wiki/concepts/` 下 238 篇末端产物的 YAML Frontmatter `sources:` 字段执行冗余清理，精准移除所有越级直连 `raw/` 与 `Clippings/` 的路径，确保末端产物 100% 仅依托于 `wiki/sources/` 一级结构化摘要。
 - **孤立源格式修复**：为 `wiki/concepts/概念_知识整合.md` 修复上游来源声明，将其 Frontmatter `sources` 正确指向 `wiki/sources/关于Nano_Banana的一些浅思.md`。
@@ -36,17 +43,17 @@
   - 修复 `wiki/sources/RAG基础_索引检索生成.md` 与 `wiki/sources/PyTorch训练代码模板.md` 中的 `sources:` 字段及物理文献链接错位问题。
   - 移除 2 篇由错位引起的冗余短摘要页（`RAG从入门到精通系列1_基础RAG.md`、`PyTorch标准深度学习训练代码模板.md`）及对应的总索引条目。
 - **孤立文献 Ingest 补齐闭环 (raw/ -> wiki/sources/)**：
-  - `raw/How we built our multi-agent research system.md` -> `wiki/sources/Anthropic多智能体研究系统构建.md` (+ 关联 `[[概念_orchestrator-worker模式]]` 等，修复历史死链)
-  - `raw/LLM output eval in RL.md` -> `wiki/sources/GPT5通用验证器与RL探索.md` (+ 新建 `[[概念_Reward_Hacking]]`、`[[实体_OpenAI]]`、`[[实体_DeepMind]]`)
-  - `raw/[LLM]大模型显存计算公式与优化 - 知乎.md` -> `wiki/sources/大模型显存计算公式与优化.md` (+ 新建 `[[实体_NVIDIA]]`，关联并收敛至 `[[概念_激活值重计算]]`)
+  - `raw/articles/How we built our multi-agent research system.md` -> `wiki/sources/Anthropic多智能体研究系统构建.md` (+ 关联 `[[概念_orchestrator-worker模式]]` 等，修复历史死链)
+  - `raw/articles/LLM output eval in RL.md` -> `wiki/sources/GPT5通用验证器与RL探索.md` (+ 新建 `[[概念_Reward_Hacking]]`、`[[实体_OpenAI]]`、`[[实体_DeepMind]]`)
+  - `raw/articles/[LLM]大模型显存计算公式与优化 - 知乎.md` -> `wiki/sources/大模型显存计算公式与优化.md` (+ 新建 `[[实体_NVIDIA]]`，关联并收敛至 `[[概念_激活值重计算]]`)
 - **全量同步索引**：将本次入库和新建的 3 篇 Source 摘要页、1 篇 Concept 概念页与 3 篇 Entity 实体页完整挂载至 `wiki/index.md`，实现 `sources/` 与 `raw/` 各 163 篇的 100% 1对1精准映射。
 
 ## 2026-07-06 ingest | Clippings -> raw 3 篇新文章入库与归档规范升级 (+ affected pages)
 - **深度阅读与原始净化**：完成对 `Clippings/` 下 3 篇新收藏文章的深度提取与语法净化检查（0 处伪标签/幽灵链接）。
 - **完成 3 篇文章 Ingest 闭环与归档移动 (Clippings -> raw)**：
-  - `Clippings/Claude Code + Obsidian + 飞书，我搭了一套会自己长大的知识库.md` -> `raw/Claude Code + Obsidian + 飞书，我搭了一套会自己长大的知识库.md` -> `wiki/sources/Claude Code与Obsidian飞书知识库搭建实践.md` (+ 新建 `[[概念_LLM_Wiki范式]]`、`[[实体_Claude_Code]]`、`[[实体_Obsidian]]`)
-  - `Clippings/LLM Agent 的记忆进化路径研究综述.md` -> `raw/LLM Agent 的记忆进化路径研究综述.md` -> `wiki/sources/LLM Agent记忆进化路径三阶段研究综述.md` (+ 新建 `[[概念_Agent三段式记忆演进]]`；补充更新 `[[概念_AI_Agent记忆策略]]`)
-  - `Clippings/我们如何利用 DSPy 将 AI 评估转化为 Dash Chat 的更优回复.md` -> `raw/我们如何利用 DSPy 将 AI 评估转化为 Dash Chat 的更优回复.md` -> `wiki/sources/Dropbox基于DSPy优化Dash Chat评估与提示词.md` (+ 新建 `[[概念_Agent完整轨迹评估]]`、`[[概念_提示词自动优化闭环]]`、`[[实体_DSPy]]`；补充更新 `[[概念_LLM应用评估体系]]`)
+  - `Clippings/Claude Code + Obsidian + 飞书，我搭了一套会自己长大的知识库.md` -> `raw/articles/Claude Code + Obsidian + 飞书，我搭了一套会自己长大的知识库.md` -> `wiki/sources/Claude Code与Obsidian飞书知识库搭建实践.md` (+ 新建 `[[概念_LLM_Wiki范式]]`、`[[实体_Claude_Code]]`、`[[实体_Obsidian]]`)
+  - `Clippings/LLM Agent 的记忆进化路径研究综述.md` -> `raw/articles/LLM Agent 的记忆进化路径研究综述.md` -> `wiki/sources/LLM Agent记忆进化路径三阶段研究综述.md` (+ 新建 `[[概念_Agent三段式记忆演进]]`；补充更新 `[[概念_AI_Agent记忆策略]]`)
+  - `Clippings/我们如何利用 DSPy 将 AI 评估转化为 Dash Chat 的更优回复.md` -> `raw/articles/我们如何利用 DSPy 将 AI 评估转化为 Dash Chat 的更优回复.md` -> `wiki/sources/Dropbox基于DSPy优化Dash Chat评估与提示词.md` (+ 新建 `[[概念_Agent完整轨迹评估]]`、`[[概念_提示词自动优化闭环]]`、`[[实体_DSPy]]`；补充更新 `[[概念_LLM应用评估体系]]`)
 - **剪藏归档与规范沉淀**：完成 Ingest 后将 3 篇原始剪藏文章自 `Clippings/` 移动至 `raw/` 永久归档，同步更新 3 篇 Source 摘要页中 `sources` 字段与文末物理文献插链为 `raw/xxx.md`。同时在 `AGENTS.md` 1.1 章节与 4.1 章节中正式记录了**「完成 Ingest 后须将文章从 Clippings 移动至 raw 归档」**的标准操作规范（确认各操作手册等已统一合并至 `AGENTS.md`）。
 - **全量同步索引与图谱互联**：同步将 3 篇 Source 摘要页、7 篇 Concept 概念页、6 篇 Entity 实体页精准挂载至 `wiki/index.md` 对应分类区，确保死链率为 0%。
 
@@ -54,10 +61,10 @@
 - **删除处理**：根据用户指令删除 `Clippings/Mac 外接 2k 显示器攻略.md`。
 - **正文 Tag 净化**：深度转义 `raw/*.md` 正文中未加反斜杠转义的行内 `#xxx` 伪标签（共处理 207 篇、转义 5900 处伪标签），彻底解决合并至 raw 后正文注释/十六进制颜色码引发的全局 Tag 污染。
 - **完成 4 篇待入库文章 Ingest 闭环**：
-  - `raw/Agent Loop使用语义早停比max_iterations硬截断节省38% Token 且质量不降.md` -> `wiki/sources/Agent Loop使用语义早停比max_iterations硬截断节省38% Token 且质量不降.md` (+ 补充更新 `[[概念_早停EarlyStopping]]`)
-  - `raw/Anthropic x ClaudeCode 官方插件：AI Agent 的领域知识插件——鸟窝.md` -> `wiki/sources/Anthropic x ClaudeCode 官方插件：AI Agent 的领域知识插件——鸟窝.md` (+ 关联 `[[概念_私域知识工程]]`、`[[概念_上下文工程]]`)
-  - `raw/从提示员到系统架构师：Loop Engineering 的范式跃迁.md` -> `wiki/sources/从提示员到系统架构师：Loop Engineering 的范式跃迁.md` (+ 补充更新 `[[概念_上下文工程]]` 演进阶梯)
-  - `raw/实测腾讯开源的 BrowserSkill：让 AI 直接用你登录好的浏览器.md` -> `wiki/sources/实测腾讯开源的 BrowserSkill：让 AI 直接用你登录好的浏览器.md` (+ 关联 `[[概念_智能体能力金字塔]]`)
+  - `raw/articles/Agent Loop使用语义早停比max_iterations硬截断节省38% Token 且质量不降.md` -> `wiki/sources/Agent Loop使用语义早停比max_iterations硬截断节省38% Token 且质量不降.md` (+ 补充更新 `[[概念_早停EarlyStopping]]`)
+  - `raw/articles/Anthropic x ClaudeCode 官方插件：AI Agent 的领域知识插件——鸟窝.md` -> `wiki/sources/Anthropic x ClaudeCode 官方插件：AI Agent 的领域知识插件——鸟窝.md` (+ 关联 `[[概念_私域知识工程]]`、`[[概念_上下文工程]]`)
+  - `raw/articles/从提示员到系统架构师：Loop Engineering 的范式跃迁.md` -> `wiki/sources/从提示员到系统架构师：Loop Engineering 的范式跃迁.md` (+ 补充更新 `[[概念_上下文工程]]` 演进阶梯)
+  - `raw/articles/实测腾讯开源的 BrowserSkill：让 AI 直接用你登录好的浏览器.md` -> `wiki/sources/实测腾讯开源的 BrowserSkill：让 AI 直接用你登录好的浏览器.md` (+ 关联 `[[概念_智能体能力金字塔]]`)
 - **索引更新**：同步更新 `wiki/index.md`，追加以上 4 篇 Ingest 文章索引。
 
 ## 2026-07-02 refactor & verify | 架构升级与 Cubox 批注/全文大整合 (迁移至 raw/)

@@ -5,7 +5,7 @@ tags:
 - LLM/training/pre-train
 summary: HuggingFace 200+ 页 SmolLM3 训练实战博客，覆盖 Why→What→How、架构、数据、长周期训练、后训练与基础设施全链路
 sources:
-- raw/HuggingFace从决策到落地「手把手」教你训练大模型.md
+- raw/playbooks/HuggingFace从决策到落地「手把手」教你训练大模型.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high
@@ -56,4 +56,4 @@ confidence: high
 - [[实体_nanotron]]
 
 ---
-> 📎 **物理文献**：[[raw/HuggingFace从决策到落地「手把手」教你训练大模型.md]]
+> 📎 **物理文献**：[[raw/playbooks/HuggingFace从决策到落地「手把手」教你训练大模型.md]]

@@ -5,7 +5,7 @@ tags:
 summary: '[[实体_Gemini]] APP 新上线 PPT 生成能力，作者实测后认为「相当可以」。由于用前端代码方式实现，可以用提示词非常细粒度地控制
   PPT 风格细节，作者评价「生成质量比 Anthropic 那一坨强多了」。该能力可与 Gemini 本身及谷歌其他产品打通。'
 sources:
-- raw/Gemini 的 PPT 生成：使用技巧及模板提示词.md
+- raw/playbooks/Gemini 的 PPT 生成：使用技巧及模板提示词.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high
@@ -56,4 +56,4 @@ date_clipped: 2025-11-10
 - [[实体_Gemini]]
 
 ---
-> 📎 **物理文献**：[[raw/Gemini 的 PPT 生成：使用技巧及模板提示词.md]]
+> 📎 **物理文献**：[[raw/playbooks/Gemini 的 PPT 生成：使用技巧及模板提示词.md]]

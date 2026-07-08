@@ -4,7 +4,7 @@ tags:
 - RAG
 summary: 阿里云开发者文章：用 Python 基础库从零手撕 RAG 内核，含 10 大实战技巧——naive RAG/语义分块/上下文检索增强/块标题CCH/问题生成/Query改写/重排序/相关段落提取RSE/上下文压缩/反馈机制
 sources:
-- raw/RAG技巧与底层代码剖析.md
+- raw/playbooks/RAG技巧与底层代码剖析.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high
@@ -117,4 +117,4 @@ confidence: high
 - 参考文献：arXiv:2407.01219, arXiv:2410.12837
 
 ---
-> 📎 **物理文献**：[[raw/RAG技巧与底层代码剖析.md]]
+> 📎 **物理文献**：[[raw/playbooks/RAG技巧与底层代码剖析.md]]

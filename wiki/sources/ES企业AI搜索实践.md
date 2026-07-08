@@ -5,7 +5,7 @@ tags:
 summary: 刘晓国（Elastic 中国社区首席布道师）QCon 演讲：基于 Elasticsearch 构建企业 AI 搜索应用，涵盖稠密/稀疏向量、混合检索
   RRF、量化、HNSW+GPU 加速、Serverless 架构与 Agentic RAG 落地实践
 sources:
-- raw/基于 Elasticsearch 创建企业 AI 搜索应用实践.md
+- raw/articles/基于 Elasticsearch 创建企业 AI 搜索应用实践.md
 created: '2026-06-26'
 updated: '2026-07-01'
 confidence: high
@@ -81,4 +81,4 @@ confidence: high
 - 相关来源：[[RAG综述_中科院2025]]、[[向量数据库原理与应用全解析]]、[[从BM25到Multi-Vector_6种Embedding演进路线]]
 
 ---
-> 📎 **物理文献**：[[raw/基于 Elasticsearch 创建企业 AI 搜索应用实践.md]]
+> 📎 **物理文献**：[[raw/articles/基于 Elasticsearch 创建企业 AI 搜索应用实践.md]]

@@ -5,7 +5,7 @@ tags:
 - RAG/query
 summary: 通过用相关问题丰富文本片段，显著提高识别文档中包含用户查询答案的最相关部分的准确性。
 sources:
-- raw/RAG高级优化：基于问题生成的文档检索增强.md
+- raw/articles/RAG高级优化：基于问题生成的文档检索增强.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high
@@ -60,4 +60,4 @@ url: https://mp.weixin.qq.com/s?__biz=Mzk0NTcyNTMzNw==&mid=2247484125&idx=1&sn=0
 - 同系列：[[RAG高级优化_检索策略Fusion_HyDE]]、[[RAG高级优化_query转换之路]]、[[RAG高级优化_检索后处理]]
 
 ---
-> 📎 **物理文献**：[[raw/RAG高级优化：基于问题生成的文档检索增强.md]]
+> 📎 **物理文献**：[[raw/articles/RAG高级优化：基于问题生成的文档检索增强.md]]

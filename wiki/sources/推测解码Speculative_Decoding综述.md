@@ -4,7 +4,7 @@ tags:
 - LLM/inference
 summary: 推测解码（Speculative Decoding）综述：Draft-then-Verify 范式通过并行推测+验证实现无损推理加速
 sources:
-- raw/LLM推理加速新范式！推测解码（Speculative Decoding）最新综....md
+- raw/articles/LLM推理加速新范式！推测解码（Speculative Decoding）最新综....md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high
@@ -46,4 +46,4 @@ confidence: high
 - [[实体_vLLM]] — 工业界推理框架，集成推测解码等加速手段
 
 ---
-> 📎 **物理文献**：[[raw/LLM推理加速新范式！推测解码（Speculative Decoding）最新综....md]]
+> 📎 **物理文献**：[[raw/articles/LLM推理加速新范式！推测解码（Speculative Decoding）最新综....md]]

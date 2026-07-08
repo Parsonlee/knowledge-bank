@@ -4,7 +4,7 @@ tags:
 - LLM/arch/MoE
 summary: MoE 面试面经：结构原理、优缺点、Router 机制、PyTorch 示例代码的简明讲解
 sources:
-- raw/大模型面试面经：简单透彻理解MoE.md
+- raw/articles/大模型面试面经：简单透彻理解MoE.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high
@@ -41,4 +41,4 @@ confidence: high
 - [[腾讯混元TurboS技术报告]] — MoE + Mamba 混合架构实例
 
 ---
-> 📎 **物理文献**：[[raw/大模型面试面经：简单透彻理解MoE.md]]
+> 📎 **物理文献**：[[raw/articles/大模型面试面经：简单透彻理解MoE.md]]

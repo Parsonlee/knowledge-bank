@@ -4,7 +4,7 @@ tags:
 - 创业
 summary: 2011 武大核工程本科 → 自学平面设计+网页编程 → 取网名 idoubi 致敬 Adobe。
 sources:
-- raw/一年上线超 10 款产品，AI 时代如何做独立开发.md
+- raw/insights/一年上线超 10 款产品，AI 时代如何做独立开发.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high
@@ -120,4 +120,4 @@ ingested: 2026-06-30
 - [[概念_MCP协议]]
 
 ---
-> 📎 **物理文献**：[[raw/一年上线超 10 款产品，AI 时代如何做独立开发.md]]
+> 📎 **物理文献**：[[raw/insights/一年上线超 10 款产品，AI 时代如何做独立开发.md]]

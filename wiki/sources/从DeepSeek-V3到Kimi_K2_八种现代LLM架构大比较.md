@@ -5,7 +5,7 @@ tags:
 - LLM/arch/MoE
 summary: Sebastian Raschka 对比 8 种 2024-2025 年现代 LLM 架构的创新点：MLA/MoE/滑动窗口/Post-Norm/NoPE/Muon
 sources:
-- raw/从DeepSeek-V3到Kimi K2：八种现代 LLM 架构大比较.md
+- raw/articles/从DeepSeek-V3到Kimi K2：八种现代 LLM 架构大比较.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high
@@ -70,4 +70,4 @@ confidence: high
 - [[腾讯混元TurboS技术报告]] — Mamba+MoE 混合架构
 
 ---
-> 📎 **物理文献**：[[raw/从DeepSeek-V3到Kimi K2：八种现代 LLM 架构大比较.md]]
+> 📎 **物理文献**：[[raw/articles/从DeepSeek-V3到Kimi K2：八种现代 LLM 架构大比较.md]]

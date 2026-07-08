@@ -4,7 +4,7 @@ tags:
 - DeepLearning
 summary: 介绍行列式点过程（DPP）在推荐系统中实现高质量且多样化子集采样的原理与贪婪算法实现。
 sources:
-- raw/Determinantal Point Process：机器学习中行列式的妙用.md
+- raw/articles/Determinantal Point Process：机器学习中行列式的妙用.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high
@@ -68,4 +68,4 @@ confidence: high
 - （无独立实体需创建）
 
 ---
-> 📎 **物理文献**：[[raw/Determinantal Point Process：机器学习中行列式的妙用.md]]
+> 📎 **物理文献**：[[raw/articles/Determinantal Point Process：机器学习中行列式的妙用.md]]

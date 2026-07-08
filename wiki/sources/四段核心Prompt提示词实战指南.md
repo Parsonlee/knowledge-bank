@@ -5,7 +5,7 @@ tags:
 - AIGC
 summary: 收录并深度拆解四段极具实战价值的高阶结构化提示词（Prompt），涵盖 PPT 生成、前端网页设计、3D 动画规划等复杂输出场景。
 sources:
-- raw/4 段 Prompt 提示词，生成PPT、生成3D动画，生成网站，生成万物....md
+- raw/articles/4 段 Prompt 提示词，生成PPT、生成3D动画，生成网站，生成万物....md
 created: '2026-07-02'
 updated: '2026-07-02'
 confidence: high
@@ -13,7 +13,7 @@ confidence: high
 # 四段核心Prompt提示词实战指南
 
 ## 来源信息
-- 物理文件：[[raw/4 段 Prompt 提示词，生成PPT、生成3D动画，生成网站，生成万物....md]]
+- 物理文件：[[raw/articles/4 段 Prompt 提示词，生成PPT、生成3D动画，生成网站，生成万物....md]]
 - 作者：向阳乔木 / 歸藏
 
 ## 核心要点
@@ -26,4 +26,4 @@ confidence: high
 - [[概念_结构化输出]]
 
 ---
-> 📎 **物理文献**：[[raw/4 段 Prompt 提示词，生成PPT、生成3D动画，生成网站，生成万物....md]]
+> 📎 **物理文献**：[[raw/articles/4 段 Prompt 提示词，生成PPT、生成3D动画，生成网站，生成万物....md]]

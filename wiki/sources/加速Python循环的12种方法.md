@@ -4,7 +4,7 @@ tags:
 - Skill/python
 summary: 12 种优化 Python for 循环的方法，提速 1.3x 到 970x。
 sources:
-- raw/加速Python循环的12种方法,最高可以提速900倍.md
+- raw/articles/加速Python循环的12种方法,最高可以提速900倍.md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high
@@ -60,4 +60,4 @@ date: 2024-01-03
 - [[概念_Python函数式工具]]
 
 ---
-> 📎 **物理文献**：[[raw/加速Python循环的12种方法,最高可以提速900倍.md]]
+> 📎 **物理文献**：[[raw/articles/加速Python循环的12种方法,最高可以提速900倍.md]]

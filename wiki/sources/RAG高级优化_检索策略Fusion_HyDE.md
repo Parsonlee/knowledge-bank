@@ -5,7 +5,7 @@ tags:
 - RAG/retrieval
 summary: 介绍 Fusion Retrieval、HyDE、RAG-Fusion 三种检索优化方法，结合可创建更健壮准确的检索系统，并给出实现代码。
 sources:
-- raw/RAG高级优化：检索策略探讨Fusion, HyDE安排上(含代码).md
+- raw/articles/RAG高级优化：检索策略探讨Fusion, HyDE安排上(含代码).md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high
@@ -78,4 +78,4 @@ def rrf_fusion(rankings, k=60):
 - 同系列：[[RAG高级优化_query转换之路]]、[[RAG高级优化_问题生成检索增强]]、[[RAG高级优化_检索后处理]]
 
 ---
-> 📎 **物理文献**：[[raw/RAG高级优化：检索策略探讨Fusion, HyDE安排上(含代码).md]]
+> 📎 **物理文献**：[[raw/articles/RAG高级优化：检索策略探讨Fusion, HyDE安排上(含代码).md]]

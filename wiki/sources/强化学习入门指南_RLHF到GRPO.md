@@ -5,7 +5,7 @@ tags:
 - LLM/reasoning
 summary: Unsloth 出品 RL 入门指南：从 RLHF/PPO 到 GRPO/RLVR，原理+奖励函数设计+实战技巧
 sources:
-- raw/新手必看！强化学习入门指南 _ 从RLHF、PPO、GRPO到RLVR，最后到训....md
+- raw/articles/新手必看！强化学习入门指南 _ 从RLHF、PPO、GRPO到RLVR，最后到训....md
 created: '2026-06-29'
 updated: '2026-07-01'
 confidence: high
@@ -72,4 +72,4 @@ confidence: high
 - [[实体_Unsloth]] — 本文出品方，开源微调框架
 
 ---
-> 📎 **物理文献**：[[raw/新手必看！强化学习入门指南 _ 从RLHF、PPO、GRPO到RLVR，最后到训....md]]
+> 📎 **物理文献**：[[raw/articles/新手必看！强化学习入门指南 _ 从RLHF、PPO、GRPO到RLVR，最后到训....md]]

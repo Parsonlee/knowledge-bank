@@ -6,7 +6,7 @@ tags:
 summary: Qwen3 Embedding 与 Rerank 原理剖析：三层嵌入流程、[CLS] vs [EOS] 池化、Instruct 指令机制、Reranker
   的 LLM 化 yes/no 打分
 sources:
-- raw/为什么用Qwen3 embedding和rerank.md
+- raw/articles/为什么用Qwen3 embedding和rerank.md
 created: '2026-06-26'
 updated: '2026-07-01'
 confidence: high
@@ -87,4 +87,4 @@ Qwen3 Embedding 在 MTEB 排行榜上开源闭源现在都是第一，Rerank 同
 - 实体：[[实体_Qwen3_Embedding]]、[[实体_Sentence_Transformers]]
 
 ---
-> 📎 **物理文献**：[[raw/为什么用Qwen3 embedding和rerank.md]]
+> 📎 **物理文献**：[[raw/articles/为什么用Qwen3 embedding和rerank.md]]

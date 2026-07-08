@@ -4,7 +4,7 @@ tags:
 - RAG
 summary: 12 个 RAG 痛点及对应解决方案：涵盖内容缺失、排名遗漏、上下文不足、未提取、格式错误、粒度不当、不完整、数据摄取扩展性、结构化数据QA、复杂PDF提取、后备模型、LLM安全
 sources:
-- raw/12 RAG 痛点和拟议解决方案.md
+- raw/articles/12 RAG 痛点和拟议解决方案.md
 created: '2026-06-26'
 updated: '2026-07-01'
 confidence: high
@@ -104,4 +104,4 @@ confidence: high
 - 相关来源：[[RAG高级优化_检索后处理]]、[[RAG查询翻译_Query_Translation]]
 
 ---
-> 📎 **物理文献**：[[raw/12 RAG 痛点和拟议解决方案.md]]
+> 📎 **物理文献**：[[raw/articles/12 RAG 痛点和拟议解决方案.md]]

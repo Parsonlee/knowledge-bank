@@ -5,7 +5,7 @@ tags:
 - AI-Agent/coding
 summary: Google Research 官方博客发布关于生成式用户界面（Generative UI）的架构阐述，探讨如何按提示词动态生成丰富的定制化交互组件。
 sources:
-- raw/Generative UI_ A rich, custom, visual in....md
+- raw/articles/Generative UI_ A rich, custom, visual in....md
 created: '2026-07-02'
 updated: '2026-07-02'
 confidence: high
@@ -13,7 +13,7 @@ confidence: high
 # Google Generative UI 综述
 
 ## 来源信息
-- 物理文件：[[raw/Generative UI_ A rich, custom, visual in....md]]
+- 物理文件：[[raw/articles/Generative UI_ A rich, custom, visual in....md]]
 - 来源：Google Research Blog
 
 ## 核心要点
@@ -25,4 +25,4 @@ confidence: high
 - [[概念_智能体能力金字塔]]
 
 ---
-> 📎 **物理文献**：[[raw/Generative UI_ A rich, custom, visual in....md]]
+> 📎 **物理文献**：[[raw/articles/Generative UI_ A rich, custom, visual in....md]]
