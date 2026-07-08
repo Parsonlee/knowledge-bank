@@ -7,6 +7,7 @@
 - [x] sources/ 数量和 raw/ 是否一致（已对齐，双方均为 163 篇，完成 1对1 精准映射）
 - [x] wiki/entities 频率不高的人/组织移除，可能需要设置一个阈值。本质上是精简entites+concepts，需要深度讨论（已按照「0次孤立清理 + 1次保留观察」策略，精准移除 25 篇无入链孤立实体页）
 - [x] entities、conceptes等，是否移除tag（经讨论决定保留 Tag 字段，维持跨文件夹的多维度横向标签聚类能力）
+- [ ] entites、concepts的frontmatter中的上游sources需要仔细审查，比如：实体_Gamma 的 sources
 
 ## others
 - [ ] workdocs/ 存放了工作期间的项目文档docx，需要解析并入库
