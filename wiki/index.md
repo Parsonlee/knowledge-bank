@@ -162,6 +162,8 @@
 - [[Claude Code与Obsidian飞书知识库搭建实践]] — 基于 Karpathy 的 LLM Wiki 理念，结合 Claude Code（大脑）、Obsidian（眼睛）与飞书机器人（手），实现知识库入库与复利积累（Skill/knowledge-bank, AI-Agent/coding）
 - [[LLM Agent记忆进化路径三阶段研究综述]] — 港中深与上海 AI 实验室综述，提出 Storage -> Reflection -> Experience 三阶段演进框架及主动探索机制（AI-Agent/memory）
 - [[Dropbox基于DSPy优化Dash Chat评估与提示词]] — Dropbox Dash Chat 评估驱动实践：人工标注校准 LLM-as-a-Judge + DSPy GEPA 自动迭代系统提示词（AI-Agent/eval, AI-Agent/prompt-engineering）
+- [[MiniMax_vs_Kimi_注意力路线之争]] — MiniMax M2 回归 Full Attention，Kimi 发布开源混合注意力模型 Kimi Linear（KDA+MLA 3:1），两条技术路线的工程视角对比（LLM/arch/attention）
+- [[后训练认知_SFT_vs_RL_记忆与遗忘机制]] — 普林斯顿陈丹琦团队发现 RL 抗遗忘优于 SFT，根源在于 on-policy 数据分布，而非算法形式（LLM/training/post-train）
 
 ## Concepts
 

@@ -130,6 +130,16 @@ def analyze_all_concepts(workspace):
             if s_clean in target_to_relpaths:
                 for matched_rel in target_to_relpaths[s_clean]:
                     fm_sources_matched.add(matched_rel)
+            else:
+                base = os.path.basename(s_clean)
+                if base in target_to_relpaths:
+                    for matched_rel in target_to_relpaths[base]:
+                        fm_sources_matched.add(matched_rel)
+                else:
+                    base_no_ext = base[:-3] if base.endswith('.md') else base
+                    if base_no_ext in target_to_relpaths:
+                        for matched_rel in target_to_relpaths[base_no_ext]:
+                            fm_sources_matched.add(matched_rel)
                     
         body_sources_matched = set()
         # (a) 正文中的所有 wikilink 是否指向真实 Source/Raw

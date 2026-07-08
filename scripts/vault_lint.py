@@ -59,6 +59,43 @@ def get_all_md_files(workspace, folders=None):
                     files_map[rel_path] = abs_path
     return files_map
 
+def extract_raw_references(content):
+    """
+    从 markdown 文本中安全且无偏地提取所有 raw/ 的路径引用（去除 raw/ 前缀），
+    防止中括号文件名被截断。
+    """
+    sources_list = []
+    fm_m = re.match(r'^(---\n.*?\n---)', content, re.DOTALL)
+    if fm_m:
+        fm_str = fm_m.group(1)
+        sources_block = re.search(r'^sources:\s*\n((?:\s*-\s*[^\n]+\n)+)', fm_str, re.MULTILINE)
+        if sources_block:
+            lines = sources_block.group(1).strip().split('\n')
+            for line in lines:
+                match_item = re.search(r'-\s*(.+)', line)
+                if match_item:
+                    val = match_item.group(1).strip(' \'"')
+                    sources_list.append(val)
+        else:
+            inline_sources = re.search(r'^sources:\s*\[([^\]]+)\]', fm_str, re.MULTILINE)
+            if inline_sources:
+                items = inline_sources.group(1).split(',')
+                for item in items:
+                    sources_list.append(item.strip(' \'"'))
+            else:
+                single_source = re.search(r'^sources:\s*([^\s\[\]]+)', fm_str, re.MULTILINE)
+                if single_source:
+                    sources_list.append(single_source.group(1).strip(' \'"'))
+                    
+    wikilinks = re.findall(r'\[\[(raw/.*?)(?:\]\]|\||#)', content)
+    
+    refs = []
+    for s in (sources_list + wikilinks):
+        s_clean = s.strip()
+        if s_clean.startswith('raw/'):
+            refs.append(s_clean[4:])
+    return refs
+
 def cmd_lint(workspace):
     print("=" * 60)
     print("🔍 [Vault Lint] 正在执行知识库全量图谱健康扫描...")
@@ -85,10 +122,8 @@ def cmd_lint(workspace):
     print(f"\n📊 【检查 1：总索引挂载审计 (Index Registration)】")
     if unindexed:
         print(f"⚠️ 发现 {len(unindexed)} 个漏登 index.md 的孤立页面：")
-        for u in unindexed[:10]:
+        for u in unindexed:
             print(f"  - {u}")
-        if len(unindexed) > 10:
-            print(f"  ...等共 {len(unindexed)} 个")
     else:
         print("✅ 所有 Sources / Concepts / Entities 均已 100% 注册至 wiki/index.md！")
 
@@ -120,14 +155,72 @@ def cmd_lint(workspace):
     print(f"\n📊 【检查 2：维基图谱死链审计 (Broken Link Audit)】")
     if broken_links:
         print(f"⚠️ 发现 {len(broken_links)} 处潜在死链（引用了被删除或不存在的笔记）：")
-        for source_doc, target_link in broken_links[:10]:
-            print(f"  - [{source_doc}] -> [[{target_link}]]")
-        if len(broken_links) > 10:
-            print(f"  ...等共 {len(broken_links)} 处")
+        
+        # 统计失效链接分类
+        raw_broken = []
+        concept_entity_broken = {}
+        other_broken = []
+        for src_doc, target_link in broken_links:
+            if target_link.startswith('raw/'):
+                raw_broken.append((src_doc, target_link))
+            elif target_link.startswith('概念_') or target_link.startswith('实体_'):
+                concept_entity_broken[target_link] = concept_entity_broken.get(target_link, 0) + 1
+            else:
+                other_broken.append((src_doc, target_link))
+                
+        if raw_broken:
+            print(f"  ❌ raw/ 相关失效引用 (共 {len(raw_broken)} 处)：")
+            for src_doc, target_link in raw_broken:
+                print(f"    - [{src_doc}] -> [[{target_link}]]")
+        else:
+            print("  ✅ 未发现 raw/ 目录的失效双链引用！")
+            
+        if concept_entity_broken:
+            sorted_concepts = sorted(concept_entity_broken.items(), key=lambda x: x[1], reverse=True)
+            print(f"  ❌ 概念/实体 相关的缺失链接 (共 {len(broken_links) - len(raw_broken) - len(other_broken)} 处，按被引频次降序，显示前30个)：")
+            for name, cnt in sorted_concepts[:30]:
+                # 寻找是哪个页面引用的
+                refs = [r for r, t in broken_links if t == name]
+                print(f"    - [[{name}]] 被引 {cnt} 次 (引用者: {refs[:5]})")
+            if len(sorted_concepts) > 30:
+                print(f"    ... 还有 {len(sorted_concepts) - 30} 个缺失概念未列出。")
+        
+        if other_broken:
+            print(f"  ❌ 其他失效链接 (共 {len(other_broken)} 处)：")
+            for src_doc, target_link in other_broken[:20]:
+                print(f"    - [{src_doc}] -> [[{target_link}]]")
     else:
         print("✅ 维基层未发现任何死链引用！")
 
-    # 3. 语法污染检查 (Raw Syntax Pollution Check)
+    # 3. 验证 sources YAML 字段的相对路径
+    print(f"\n📊 【检查 2.5：YAML Sources 引用完整性审计】")
+    raw_files_rel = {}
+    raw_dir = os.path.join(workspace, 'raw')
+    for root, _, files in os.walk(raw_dir):
+        for f in files:
+            if f.endswith('.md'):
+                abs_path = os.path.join(root, f)
+                rel_to_workspace = os.path.relpath(abs_path, workspace)
+                raw_files_rel[rel_to_workspace] = abs_path
+                raw_files_rel[rel_to_workspace[:-3]] = abs_path
+                
+    broken_sources_count = 0
+    for rel, abs_p in all_md_files.items():
+        if rel.startswith('raw/') or 'verify-' in rel or rel == 'wiki/log.md':
+            continue
+        content = load_file(abs_p)
+        refs = extract_raw_references(content)
+        for ref in refs:
+            src_clean = f"raw/{ref}"
+            if src_clean not in raw_files_rel:
+                print(f"  ❌ YAML/双链 引用失效: [{rel}] 里的 sources 包含 '{src_clean}'，但该物理文件不存在！")
+                broken_sources_count += 1
+    if broken_sources_count == 0:
+        print("✅ 全库 YAML sources 字段路径 100% 存在，无失效引用！")
+    else:
+        print(f"⚠️ 共发现 {broken_sources_count} 处 YAML sources 引用失效！")
+
+    # 4. 语法污染检查 (Raw Syntax Pollution Check)
     raw_dir = os.path.join(workspace, 'raw')
     bracket_pollution = []
     if os.path.exists(raw_dir):
@@ -306,17 +399,19 @@ def cmd_prune_orphans(workspace, apply=False):
                     abs_path = os.path.join(root, file)
                     rel_path_to_raw = os.path.relpath(abs_path, raw_dir)
                     raw_files.add(rel_path_to_raw)
+                    if rel_path_to_raw.endswith('.md'):
+                        raw_files.add(rel_path_to_raw[:-3])
 
     orphan_sources = []
     for f in sorted(os.listdir(sources_dir)):
         if not f.endswith('.md'): continue
         p = os.path.join(sources_dir, f)
         content = load_file(p)
-        matches = re.findall(r'raw/([^\n\"\'\]]+)', content)
-        if not matches:
+        refs = extract_raw_references(content)
+        if not refs:
             orphan_sources.append(f)
         else:
-            exists = any((m.strip() in raw_files) for m in matches)
+            exists = any((ref in raw_files) for ref in refs)
             if not exists:
                 orphan_sources.append(f)
 
@@ -331,7 +426,11 @@ def cmd_prune_orphans(workspace, apply=False):
 
     print("\n📑 【批量级联清理影响清单】")
     print(f"1️⃣ 发现物理文献(raw/)已丢失的下游 Source 摘要页 : {len(orphan_sources)} 篇")
+    for o in orphan_sources:
+        print(f"    - wiki/sources/{o}")
     print(f"2️⃣ 需在总索引 wiki/index.md 中剔除的条目数 : {len(index_lines_to_remove)} 行")
+    for l in index_lines_to_remove:
+        print(f"    - {l.strip()}")
 
     if not apply:
         print("\n" + "-" * 60)
@@ -377,11 +476,22 @@ def cmd_recover_dates(workspace, apply=False):
             if not f.endswith('.md'): continue
             sp = os.path.join(sources_dir, f)
             content = load_file(sp)
-            raw_matches = re.findall(r'raw/([^\n\"\'\]]+)', content)
+            refs = extract_raw_references(content)
             date_matches = re.findall(r'(?:created|updated):\s*[\'\"]?(\d{4}-\d{2}-\d{2})', content)
-            if raw_matches and date_matches:
-                for rm in raw_matches:
-                    raw_to_source_date[rm.strip()] = date_matches[0]
+            if refs and date_matches:
+                for ref in refs:
+                    key = ref
+                    raw_to_source_date[key] = date_matches[0]
+                    if key.endswith('.md'):
+                        raw_to_source_date[key[:-3]] = date_matches[0]
+                    else:
+                        raw_to_source_date[key + '.md'] = date_matches[0]
+                    raw_key = f"raw/{key}"
+                    raw_to_source_date[raw_key] = date_matches[0]
+                    if raw_key.endswith('.md'):
+                        raw_to_source_date[raw_key[:-3]] = date_matches[0]
+                    else:
+                        raw_to_source_date[raw_key + '.md'] = date_matches[0]
 
     raw_files = []
     if os.path.exists(raw_dir):
