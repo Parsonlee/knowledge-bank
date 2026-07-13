@@ -3,7 +3,7 @@ id: "7398058308050881507"
 cubox_url: https://cubox.pro/web/card/7398058308050881507
 url: https://mp.weixin.qq.com/s/V5cb4HAufxvbNackr8aLVg
 tags:
-  - AI-Agent/tools
+  - AI-Agent/tool-calling
 published: 2025-12-09
 ---
 # Human In the Loop竟然可以是个MCP?

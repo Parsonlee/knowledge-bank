@@ -1,7 +1,7 @@
 ---
 type: entity
 tags:
-- AI-Agent/tools
+- AI-Agent/tool-calling
 summary: CherryStudio 是一款开源的 MCP Host 应用，主进程 MCPService.ts 做通信代理，渲染进程 ApiService.ts
   承载 AI 逻辑，是 CHS 架构的典型实现案例
 sources:

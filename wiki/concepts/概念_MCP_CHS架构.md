@@ -1,7 +1,7 @@
 ---
 type: concept
 tags:
-- AI-Agent/tools
+- AI-Agent/tool-calling
 summary: MCP 的正确架构是 Client-Host-Server 三组件，而非 CS 两组件；Host 是 AI 智能唯一承载者，Server/Client
   是模型无关的 RPC 管道
 created: '2026-06-29'

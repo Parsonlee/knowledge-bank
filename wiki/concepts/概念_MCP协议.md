@@ -1,7 +1,7 @@
 ---
 type: concept
 tags:
-- AI-Agent/tools
+- AI-Agent/tool-calling
 summary: MCP（Model Context Protocol）是 Anthropic 制定的模型无关可互操作 AI 应用工程协议，标准化工具调用格式，将工具层从
   Agent 解耦
 created: '2026-06-29'

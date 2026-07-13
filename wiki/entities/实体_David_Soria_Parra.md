@@ -1,7 +1,7 @@
 ---
 type: entity
 tags:
-- AI-Agent/tools
+- AI-Agent/tool-calling
 summary: David Soria Parra 是 Anthropic 的工程师，MCP 协议联合创建者，主导 MCP 五大原语设计与 Web 化（Streamable
   HTTP + OAuth 2.1）方向
 sources:

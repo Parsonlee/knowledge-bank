@@ -92,10 +92,10 @@
 - [[大模型算法岗面试百问百答]] — 大模型算法岗面试知识点：RAG 体系/LLaMA 架构/SFT 方法/幻觉复读机（LLM, 面试）
 - [[Jina_AI创业复盘]] — Jina AI 创始人肖涵六年复盘：两次 Pivot、AI 团队 Scaling Law 困惑、被 Elastic 收购（创业）
 - [[淘宝直播数字人_LLM文案生成技术]] — 淘宝直播数字人口语化改写(DPO 97%)、多源信息单步蒸馏、素材图文一致（LLM, LLM/arch/VLM）
-- [[别再误会MCP了辟谣指南]] — 阿里云工程师以 SDK 源码法证 MCP CHS 三组件，Host 是 AI 智能唯一承载者（AI-Agent/tools）
-- [[MCP遇上代码执行]] — Anthropic：CodeAgent 模式调用 MCP，Token 减少 98.7%，隐私保护与 Skills 沉淀（AI-Agent/tools）
-- [[MCP五大原语与Web化]] — MCP 联合创建者 David 解构五大原语，Web 化方向 OAuth 2.1 + Streamable HTTP（AI-Agent/tools）
-- [[HumanInTheLoop用MCP实现]] — 阿里云 OpenLM：send_inquiry+MCP Notification 实现服务端 HITL，含 Proxy 代理和 YOLO 模式（AI-Agent/tools）
+- [[别再误会MCP了辟谣指南]] — 阿里云工程师以 SDK 源码法证 MCP CHS 三组件，Host 是 AI 智能唯一承载者（AI-Agent/tool-calling）
+- [[MCP遇上代码执行]] — Anthropic：CodeAgent 模式调用 MCP，Token 减少 98.7%，隐私保护与 Skills 沉淀（AI-Agent/tool-calling）
+- [[MCP五大原语与Web化]] — MCP 联合创建者 David 解构五大原语，Web 化方向 OAuth 2.1 + Streamable HTTP（AI-Agent/tool-calling）
+- [[HumanInTheLoop用MCP实现]] — 阿里云 OpenLM：send_inquiry+MCP Notification 实现服务端 HITL，含 Proxy 代理和 YOLO 模式（AI-Agent/tool-calling）
 - [[Context_Engineering_LangChain_Manus_NotebookLM]] — LangChain × Manus 对话提炼：4条反直觉原则——战略边界/可逆压缩/工具分层卸载/简化优先（AI-Agent/context-engineering）
 - [[AI应用实战_搞定复杂指令和工具膨胀]] — 阿里云联调造数：单Agent→多Agent，意图识别+工具引擎+逆向推导，工具100+→5个（AI-Agent/context-engineering）
 - [[Manus创始人手把手拆解上下文工程]] — Peak 亲写：KV缓存/工具掩码/文件系统记忆/注意力复述/错误保留/Few-Shot多样性六大原则（AI-Agent/context-engineering）
@@ -109,7 +109,7 @@
 - [[Agent Loop使用语义早停比max_iterations硬截断节省38% Token 且质量不降]] — 提出语义早停方法，通过余弦距离收敛判断 Agent Loop 终止，替代硬迭代上限，节省 38% Token 且保证质量（AI-Agent/loop-engineering, AI-Agent/coding）
 - [[Anthropic x ClaudeCode 官方插件：AI Agent 的领域知识插件——鸟窝]] — 解析 Anthropic 官方 13 个领域知识插件，将 CLAUDE.md 等静态规范转化为动态运行时检查与分阶段引导（AI-Agent/skill, AI-Agent/coding）
 - [[从提示员到系统架构师：Loop Engineering 的范式跃迁]] — 剖析从 Prompt 到 Loop 工程的四层抽象跃迁，工程师从与 AI 逐轮对话的操作员转变为设计自主循环的架构师（AI-Agent/loop-engineering, AI-Agent/coding）
-- [[实测腾讯开源的 BrowserSkill：让 AI 直接用你登录好的浏览器]] — 评测腾讯开源 BrowserSkill CLI，复用日常真实浏览器与登录态进行 Agent 自动化操作，纯本地不隔离（AI-Agent/tools, AI-Agent/skill）
+- [[实测腾讯开源的 BrowserSkill：让 AI 直接用你登录好的浏览器]] — 评测腾讯开源 BrowserSkill CLI，复用日常真实浏览器与登录态进行 Agent 自动化操作，纯本地不隔离（AI-Agent/tool-calling, AI-Agent/skill）
 - [[DeepResearch的概念、核心挑战与进化路径]] — 华为/利物浦/牛津综述：DR Agent 定义、四大核心挑战与未来进化路径（AI-Agent/deep-research）
 - [[Tongyi DeepResearch的技术报告探秘]] — 魔搭社区解读：通义 DeepResearch 三阶段训练、IterResearch 范式、WebFrontier 数据合成与六大研发问题（AI-Agent/deep-research）
 - [[一篇95页最新80种Deep Research系统全面综述]] — 浙大综述 80+ 系统，4 维分类法与单体/流水线/多智能体/混合四种架构（AI-Agent/deep-research）
@@ -406,16 +406,16 @@
 ### LLM/Recommendation + arch（Batch 10）
 - [[概念_数字人文案生成]] — 口语化改写/多步蒸馏/图文一致/测评体系完整框架（LLM）
 
-### AI-Agent/tools MCP系列（Phase 4 Batch 1）
-- [[概念_MCP协议]] — MCP 定义、CHS 架构、五大原语、传输方式、与 Function Call 关系全景（AI-Agent/tools）
-- [[概念_MCP_CHS架构]] — Client-Host-Server 三组件精确界定：Host 是 AI 智能唯一承载者，Server/Client 是模型无关 RPC 管道（AI-Agent/tools）
-- [[概念_MCP五大原语]] — Tool/Prompt/Resource/Sampling/Roots 五类原语：触发方、用途、高阶玩法与 Web 化方向（AI-Agent/tools）
-- [[概念_MCP传输方式]] — Stdio/SSE/Streamable HTTP 三种传输方式对比与选型（AI-Agent/tools）
-- [[概念_MCP与Function_Call对比]] — 协议 vs 模型特性、静态 vs 动态、碎片化痛点与 MCP 解法（AI-Agent/tools）
-- [[概念_MCP代码执行模式]] — CodeAgent 模式：按需加载工具定义，Token 消耗减少 98.7%，含隐私保护与 Skills 沉淀（AI-Agent/tools）
-- [[概念_HITL_MCP]] — send_inquiry 挂起等待人类答复，MCP Notification 传凭条，HTTP 接口收答复，多端协同（AI-Agent/tools）
-- [[概念_MCP_Proxy]] — 代理模式在 tool/call 前植入确认逻辑，现有 MCP Server 零改动（AI-Agent/tools）
-- [[概念_Agent思考工具]] — think/plan/action 工具强制结构化规划，航空客服提升 54%，优于纯 Prompt（AI-Agent/tools）
+### AI-Agent/tool-calling MCP系列（Phase 4 Batch 1）
+- [[概念_MCP协议]] — MCP 定义、CHS 架构、五大原语、传输方式、与 Function Call 关系全景（AI-Agent/tool-calling）
+- [[概念_MCP_CHS架构]] — Client-Host-Server 三组件精确界定：Host 是 AI 智能唯一承载者，Server/Client 是模型无关 RPC 管道（AI-Agent/tool-calling）
+- [[概念_MCP五大原语]] — Tool/Prompt/Resource/Sampling/Roots 五类原语：触发方、用途、高阶玩法与 Web 化方向（AI-Agent/tool-calling）
+- [[概念_MCP传输方式]] — Stdio/SSE/Streamable HTTP 三种传输方式对比与选型（AI-Agent/tool-calling）
+- [[概念_MCP与Function_Call对比]] — 协议 vs 模型特性、静态 vs 动态、碎片化痛点与 MCP 解法（AI-Agent/tool-calling）
+- [[概念_MCP代码执行模式]] — CodeAgent 模式：按需加载工具定义，Token 消耗减少 98.7%，含隐私保护与 Skills 沉淀（AI-Agent/tool-calling）
+- [[概念_HITL_MCP]] — send_inquiry 挂起等待人类答复，MCP Notification 传凭条，HTTP 接口收答复，多端协同（AI-Agent/tool-calling）
+- [[概念_MCP_Proxy]] — 代理模式在 tool/call 前植入确认逻辑，现有 MCP Server 零改动（AI-Agent/tool-calling）
+- [[概念_Agent思考工具]] — think/plan/action 工具强制结构化规划，航空客服提升 54%，优于纯 Prompt（AI-Agent/tool-calling）
 - [[概念_orchestrator-worker模式]] — 主智能体规划分解，子智能体并行执行，多智能体 vs 单智能体提升 90.2%（AI-Agent/multi-agent）
 - [[概念_多智能体协调]] — 多智能体协调挑战、提示词 8 原则、评测策略与生产可靠性（AI-Agent/multi-agent）
 - [[概念_LLM_Wiki范式]] — Andrej Karpathy 提出的知识管理范式，在摄入端预先结构化与关联，实现高复利知识编译（Skill/knowledge-bank）
@@ -640,10 +640,10 @@
 - [[概念_IterResearch范式]] — 通义 DeepResearch 创新范式：精简工作空间+核心报告迭代重构，解决上下文认知瓶颈（AI-Agent/deep-research）
 - [[概念_WebFrontier数据合成]] — 种子-扩展-评估三步数据合成，知识图谱随机游走+原子操作难度建模（AI-Agent/deep-research）
 
-### AI-Agent/tools MCP系列（Phase 4 Batch 1）
-- [[实体_Agent_TARS]] — 字节跳动开源多模态 Agent，内置 Function Call + 用户自定义 MCP Server 双轨设计（AI-Agent/tools）
-- [[实体_David_Soria_Parra]] — Anthropic 工程师，MCP 协议联合创建者，五大原语与 Web 化主导者（AI-Agent/tools）
-- [[实体_CherryStudio]] — 开源 MCP Host 应用，MCPService.ts（Client）+ ApiService.ts（Host）CHS 架构典型案例（AI-Agent/tools）
+### AI-Agent/tool-calling MCP系列（Phase 4 Batch 1）
+- [[实体_Agent_TARS]] — 字节跳动开源多模态 Agent，内置 Function Call + 用户自定义 MCP Server 双轨设计（AI-Agent/tool-calling）
+- [[实体_David_Soria_Parra]] — Anthropic 工程师，MCP 协议联合创建者，五大原语与 Web 化主导者（AI-Agent/tool-calling）
+- [[实体_CherryStudio]] — 开源 MCP Host 应用，MCPService.ts（Client）+ ApiService.ts（Host）CHS 架构典型案例（AI-Agent/tool-calling）
 - [[实体_Anthropic_Research系统]] — Anthropic Claude Research 多智能体研究系统，Opus 4 + Sonnet 4 orchestrator-worker（AI-Agent/multi-agent）
 
 ### AI-Agent/context-engineering（Phase 4 Batch 3）

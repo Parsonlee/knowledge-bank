@@ -1,7 +1,7 @@
 ---
 type: source
 tags:
-- AI-Agent/tools
+- AI-Agent/tool-calling
 summary: MCP 联合创建者 David 解构五大原语（Prompt/Resource/Tool/Sampling/Roots），并阐述 MCP Web 化（OAuth
   2.1 + Streamable HTTP）的未来方向
 sources:

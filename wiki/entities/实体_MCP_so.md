@@ -1,7 +1,7 @@
 ---
 type: entity
 tags:
-- AI-Agent/tools
+- AI-Agent/tool-calling
 summary: 由独立开发者创立的 MCP（Model Context Protocol）Server 发现与应用分发市场。
 sources:
 - wiki/sources/AI时代如何做独立开发.md

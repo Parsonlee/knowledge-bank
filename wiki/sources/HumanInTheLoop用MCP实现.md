@@ -1,7 +1,7 @@
 ---
 type: source
 tags:
-- AI-Agent/tools
+- AI-Agent/tool-calling
 - AI-Agent/multi-agent
 summary: 阿里云 OpenLM 实践：利用 MCP Notification + HTTP 接口实现服务端 Human-in-the-Loop，含 send_inquiry
   工具、MCP Proxy 代理、YOLO 模式三方案

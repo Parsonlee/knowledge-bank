@@ -1,7 +1,7 @@
 ---
 type: concept
 tags:
-- AI-Agent/tools
+- AI-Agent/tool-calling
 summary: MCP 协议定义五大原语：Tool（模型主动）、Prompt（用户主动）、Resource（应用主动）、Sampling（服务器发起补全）、Roots（环境感知），绝大多数人只用到
   Tool
 created: '2026-06-29'

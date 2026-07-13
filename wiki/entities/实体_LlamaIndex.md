@@ -2,7 +2,7 @@
 type: entity
 tags:
 - RAG
-- AI-Agent/tools
+- AI-Agent/tool-calling
 summary: 专注于大模型数据连接、索引构建与检索增强的应用开发框架。
 sources:
 - wiki/sources/RAG_12痛点与解决方案.md

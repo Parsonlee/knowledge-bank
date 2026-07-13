@@ -1,7 +1,7 @@
 ---
 type: entity
 tags:
-- AI-Agent/tools
+- AI-Agent/tool-calling
 - RAG
 summary: 业界主流的大模型应用流水线与 RAG 链式编排框架。
 sources:

@@ -1,7 +1,7 @@
 ---
 type: concept
 tags:
-- AI-Agent/tools
+- AI-Agent/tool-calling
 summary: MCP 代理模式：在每个 tool/call 前植入人类确认逻辑，现有 MCP Server 无需改动，接入 Proxy URL 即可
 created: '2026-06-29'
 updated: '2026-06-29'

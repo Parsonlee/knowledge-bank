@@ -23,13 +23,15 @@ This file provides guidance to Claude Code/Codex/Antigravity and other AI Agents
 
 ### 1.1 原始资料层 (Raw Sources) —— 唯一事实来源，**只读不改**
 作为知识库的底座，所有外部输入均首先归档于此，严格保持只读。
-| 目录           | 用途                                     | 权限边界     |
-| ------------ | -------------------------------------- | -------- |
-| `raw/`       | 主文章库——原 Cubox 导入笔记与由 Clippings 剪藏归档的文献全文 100% 收纳于此 | **只读不改** |
+
+| 目录           | 用途                                                             | 权限边界     |
+| ------------ | -------------------------------------------------------------- | -------- |
+| `raw/`       | 主文章库——原 Cubox 导入笔记与由 Clippings 剪藏归档的文献全文 100% 收纳于此             | **只读不改** |
 | `Clippings/` | 网页剪藏缓冲区（Staging）——由官方剪藏插件自动保存，**完成 Ingest 入库后必须移动至 `raw/` 归档** | **只读不改** |
 
 ### 1.2 知识图谱维护层 (Wiki Layer) —— **由 LLM / Agent 核心生成与维护**
 整个 `wiki/` 目录是 LLM 结构化输出的核心图谱仓库，通过严密的网状双链建立起可复利的知识网络。
+
 | 目录 / 文件 | 命名规范与用途 |
 |------|------|
 | `wiki/sources/` | 单个来源的结构化摘要页（`xxx.md`，`sources:` 字段精确指向唯一上游 `raw/xxx.md`） |
@@ -42,6 +44,7 @@ This file provides guidance to Claude Code/Codex/Antigravity and other AI Agents
 
 ### 1.3 独立工作文档与静态资源层 (Assets & Docs Layer)
 针对日常职场业务交付、用户个人手写思考以及多媒体附件，设定专有的独立管理空间，与 `wiki/` 知识层解耦：
+
 | 目录 | 功能作用与设计意图 | 权限边界 |
 |------|------|------|
 | `assets/` | **离线多媒体资源库**：仅存放用户手写原创笔记、离线导入或业务文档依赖的本地图片（如 `.png`, `.jpg`）和 `.pdf` 文档。**注意**：为控制 Git 仓库体积，网页剪藏或抓取的网络文章图一律保留公网 Markdown 外链 URL，严禁下载到本目录。 | 静态资源管理 |
@@ -50,6 +53,7 @@ This file provides guidance to Claude Code/Codex/Antigravity and other AI Agents
 
 ### 1.4 自动化工程、脚本与运维支撑层 (Engineering & Maintenance Layer)
 当前项目本质上是一个面向 AI 协同的 **LLM Wiki Repository 工程体系**。为保障 Agent 能够进行持续集成、健康度审查与自动化运维，设立了专有的工程工具与缓冲空间：
+
 | 目录 / 文件 | 功能作用与设计意图 | Agent 操作规范 |
 |------|------|------|
 | `scripts/` | **图谱运维与自动化治理库**：为 LLM Wiki 定制的 Python 工具集。包括全库健康诊断与级联清理核心工具 `vault_lint.py`、概念与来源链接校验审查 `concept_source_lint.py`、原始资料重组归档工具 `restructure_raw.py` 等。 | Agent 在执行 `lint`、`prune` 等复杂整顿与级联清理操作时，**强烈推荐直接调用此目录下预置的 Python 工具**，绝不臆造写删逻辑 |
@@ -158,7 +162,7 @@ AI Agent 在处理日常任务时，必须遵守以下三大核心操作闭环�
 Tag 统一存放在 YAML frontmatter 的 `tags:` 数组中。严格沿用主库已有的分层 Tag 体系（使用 `/` 分隔），**不另起一套**。主要分支如下：
 
 - `LLM/` — arch, training, inference, reasoning, hallucination, tokenization
-- `AI-Agent/` — coding, tools, context-engineering, deep-research, AI-BI, skill, prompt-engineering, multi-agent, memory, UI
+- `AI-Agent/` — coding, tool-calling, context-engineering, deep-research, AI-BI, skill, prompt-engineering, multi-agent, memory, UI
 - `RAG/` — embedding, query, chunking, retrieval, eval
 - `Skill/` — python, data-analysis, claude-code, linux
 - `CV/` — detection, data-augmentation, arch
