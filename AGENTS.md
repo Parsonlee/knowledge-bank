@@ -22,12 +22,14 @@ This file provides guidance to Claude Code/Codex/Antigravity and other AI Agents
 >    - **严禁无源虚假生成（No Phantom Generation）**：任何 Frontmatter `sources:` 为空且在全库 `sources/` 中毫无支撑的末端产物，均被定性为“无源虚假生成”，在 Lint 审计与精简中一律直接物理清除。
 
 ### 1.1 原始资料层 (Raw Sources) —— 唯一事实来源，**只读不改**
+作为知识库的底座，所有外部输入均首先归档于此，严格保持只读。
 | 目录           | 用途                                     | 权限边界     |
 | ------------ | -------------------------------------- | -------- |
 | `raw/`       | 主文章库——原 Cubox 导入笔记与由 Clippings 剪藏归档的文献全文 100% 收纳于此 | **只读不改** |
 | `Clippings/` | 网页剪藏缓冲区（Staging）——由官方剪藏插件自动保存，**完成 Ingest 入库后必须移动至 `raw/` 归档** | **只读不改** |
 
-### 1.2 知识维护层 (Wiki Layer) —— **由 LLM / Agent 核心生成与维护**
+### 1.2 知识图谱维护层 (Wiki Layer) —— **由 LLM / Agent 核心生成与维护**
+整个 `wiki/` 目录是 LLM 结构化输出的核心图谱仓库，通过严密的网状双链建立起可复利的知识网络。
 | 目录 / 文件 | 命名规范与用途 |
 |------|------|
 | `wiki/sources/` | 单个来源的结构化摘要页（`xxx.md`，`sources:` 字段精确指向唯一上游 `raw/xxx.md`） |
@@ -38,12 +40,28 @@ This file provides guidance to Claude Code/Codex/Antigravity and other AI Agents
 | `wiki/index.md` | Wiki 知识库分类内容总索引 |
 | `wiki/log.md` | 操作流水日志（追溯知识库演化历史） |
 
-### 1.3 用户手写与静态资源层
-| 目录 | 用途 | 权限边界 |
+### 1.3 独立工作文档与静态资源层 (Assets & Docs Layer)
+针对日常职场业务交付、用户个人手写思考以及多媒体附件，设定专有的独立管理空间，与 `wiki/` 知识层解耦：
+| 目录 | 功能作用与设计意图 | 权限边界 |
 |------|------|------|
-| `notes/` | 用户手写的原创笔记、指南、独立思考文章 | **Agent 不主动修改** |
-| `assets/` | 离线资源库——仅存放离线导入 / 手写原创笔记产生的本地图片或 PDF（网页剪藏图片一律使用公网外链 URL，不下载到本目录） | 静态资源管理 |
-| `tmp/` | 已 gitignore 的临时空间 | 不存放持久化正文 |
+| `assets/` | **离线多媒体资源库**：仅存放用户手写原创笔记、离线导入或业务文档依赖的本地图片（如 `.png`, `.jpg`）和 `.pdf` 文档。**注意**：为控制 Git 仓库体积，网页剪藏或抓取的网络文章图一律保留公网 Markdown 外链 URL，严禁下载到本目录。 | 静态资源管理 |
+| `workdocs/` | **业务与专题工作文档库**：存放个人的工作交付物、专题调研报告、Word 原始文档（如 `.docx`）及其转化的 Markdown 产物（如 `workdoc-md/`），作为独立于 `wiki/` 图谱的业务资产。 | **Agent 不主动修改原文**，仅可按指令做读取、提炼或归纳沉淀 |
+| `notes/` | **个人随想与手写笔记库**：用户手写的原创独立思考、技术总结与日常心得。 | **Agent 绝对不主动修改** |
+
+### 1.4 自动化工程、脚本与运维支撑层 (Engineering & Maintenance Layer)
+当前项目本质上是一个面向 AI 协同的 **LLM Wiki Repository 工程体系**。为保障 Agent 能够进行持续集成、健康度审查与自动化运维，设立了专有的工程工具与缓冲空间：
+| 目录 / 文件 | 功能作用与设计意图 | Agent 操作规范 |
+|------|------|------|
+| `scripts/` | **图谱运维与自动化治理库**：为 LLM Wiki 定制的 Python 工具集。包括全库健康诊断与级联清理核心工具 `vault_lint.py`、概念与来源链接校验审查 `concept_source_lint.py`、原始资料重组归档工具 `restructure_raw.py` 等。 | Agent 在执行 `lint`、`prune` 等复杂整顿与级联清理操作时，**强烈推荐直接调用此目录下预置的 Python 工具**，绝不臆造写删逻辑 |
+| `tmp/` | **临时缓冲与调试空间**：已被 `.gitignore` 排除的临时文件交换区。存放 Agent 的中间计算产物、临时测试脚本或转码临时缓存。 | 允许 Agent 自由读写与清理，**禁止在此目录中存放任何需要持久化的正文或 Wiki 页面** |
+
+### 1.5 系统元数据与 Agent 生态层 (Config & Ecosystem Layer)
+| 目录 / 文件 | 功能作用与设计意图 | 说明 |
+|------|------|------|
+| `AGENTS.md` / `TODO.md` | `AGENTS.md` 为系统架构设计与 Agent 行为核心宪法（本文件）；`TODO.md` 为本系统演化路线与待办需求清单。 | 核心指导与协作指南 |
+| `.agents/` | **Agent 技能扩展库（Skills）**：存放预置或扩展的特定任务能力定义（如 `.agents/skills/docx/SKILL.md`，用于指导 Agent 读写处理 Word 文档）。 | Agent 能力插件层 |
+| `.obsidian/` | **Obsidian 本地环境与 MCP 服务配置库**：维护图谱样式、工作区配置与 `Local REST API` 插件运行参数，随 Git 跨终端自动同步。 | 系统元数据区，不随便删改 |
+| `.claude/` / `CLAUDE.md` | **工具生态兼容配置**：针对相关 AI Coding Agent 工具的引导指针与工作区配置。 | 兼容适配区 |
 
 ## 2. 页面类型与 Frontmatter 规范
 所有 wiki 页面使用 Markdown，顶部 YAML frontmatter 格式严格遵守规范示例如下：
