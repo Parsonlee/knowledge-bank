@@ -1,13 +1,14 @@
 ---
-title: "Karpathy发了一条推文2000万人看了，我照着他的方法搭了个知识库"
-source: "https://mp.weixin.qq.com/s/pqv5nnbUfIDiMdu3EvnoBA?poc_token=HLLKRGqjNiUVAaUDnfjjVBcxP0c5RefovwH0z0Hb"
+title: Karpathy发了一条推文2000万人看了，我照着他的方法搭了个知识库
+source: https://mp.weixin.qq.com/s/pqv5nnbUfIDiMdu3EvnoBA?poc_token=HLLKRGqjNiUVAaUDnfjjVBcxP0c5RefovwH0z0Hb
 author:
   - "[[wuhiufan]]"
 published: 2026-06-25
 created: 2026-07-08
-description: "不是RAG检索，是LLM编译：三层架构+四个核心操作+80年思想谱系，从Memex到Karpathy的知识管理革命"
+description: 不是RAG检索，是LLM编译：三层架构+四个核心操作+80年思想谱系，从Memex到Karpathy的知识管理革命
 tags:
-  - "clippings"
+  - clippings
+  - Skill/knowledge-bank
 ---
 wuhiufan hu晓帆 *2026年6月25日 10:35*
 

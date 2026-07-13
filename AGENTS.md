@@ -169,6 +169,17 @@ Tag 统一存放在 YAML frontmatter 的 `tags:` 数组中。严格沿用主库�
 - `Infra/` — AI, gpu
 - 顶层独立 — `DeepLearning`, `AIGC`, `创业`, `面试`, `Life`, `Recommendation`, `TTS`
 
+> [!CAUTION] 🚨 Tag 排他性定界与消歧纪律（Disambiguation Rules）
+> 为杜绝 AI Agent 产生分类混淆与池化泛化，所有 Agent 在录入或校验文献及笔记时，务必严格遵守以下排他性边界铁律：
+> 
+> 1. **`AI-Agent/skill` vs `Skill/*` 绝不混用（理论机制 vs 人类实操）**：
+>    - **`AI-Agent/skill`**：仅限 **智能体原生能力扩展的底层工程规范与运行机制**（如 `SKILL.md` 双消息注入规范、动态工具发现机制、Claude Agent Skills 元工具源码剖析等理论/机制文献）。
+>    - **`Skill/*`**：仅限 **人类开发者/业务日常使用中的实操 SOP 与技巧心得**（如 `Skill/claude-code` 专指人类使用 Claude Code CLI 的快捷键/配置指南，`Skill/python` 指日常开发笔记）。**严禁将人类工具实操笔记打入 `AI-Agent/skill`**。
+> 
+> 2. **细分叶子优先纪律（No Top-level Pooling）**：
+>    - 在 `RAG/`、`LLM/`、`AI-Agent/` 体系下，**必须优先精准锚定末端细分叶子分类**（如 `RAG/chunking`、`LLM/arch`）；
+>    - 严禁出于省事把垂直领域的文章笼统丢入顶层单分类（如 `RAG`、`LLM`），顶层分类仅供覆盖全局框架的宏观综述文使用。
+
 ## 6. Git 与通用约定
 > [!tip] 操作原则
 > 不确定时，先提议再执行，不做大规模自动改动。每次完成 Ingest 后建议建立 Git 提交，便于历史回溯。
