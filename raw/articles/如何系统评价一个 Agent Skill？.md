@@ -1,21 +1,20 @@
 ---
-title: "如何系统评价一个 Agent Skill？"
-source: "https://mp.weixin.qq.com/s/y2px6sE2N57xrzbQwiHNVQ"
+title: 如何系统评价一个 Agent Skill？
+source: https://mp.weixin.qq.com/s/y2px6sE2N57xrzbQwiHNVQ
 author:
   - "[[Coggle]]"
 published: 2026-07-14
 created: 2026-07-22
-description:
+description: 随着大模型 Agent 从简单问答拓展到复杂工作流，Skill 成为智能体能力工程化的核心载体。本文提出覆盖触发、执行、结果、效率、鲁棒性与安全性的系统化评价框架。
 tags:
-  - "clippings"
+  - clippings
+  - AI-Agent/skill
 ---
 Coggle Coggle数据科学 *2026年7月14日 17:42*
 
 随着大模型 Agent 从简单问答逐渐发展为能够调用工具、操作文件、执行代码和完成复杂工作流的智能系统，Skill 正在成为 Agent 能力工程化的重要载体。
 
 **一个 Skill 通常不只是几段提示词，而是由触发描述、执行说明、脚本、模板、参考资料和验证规则组成的可复用能力包。** 它解决的核心问题是：如何将某个领域中的知识、流程和经验封装起来，使通用 Agent 在特定任务上表现得更加稳定、专业和高效。
-
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/U2KthBqSEeibZpfEuavgibSR9rbng0c3OtELf3wnNiaaNiaPTBMadhKP99YEib841pkffg8HILiciaZJzDLnOaGJpejUIRAjsN3dhys7DxXM4lsVn4/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1#imgIndex=0)
 
 但 Skill 能够成功运行一次，并不代表它是一个高质量 Skill。它可能只在某一种表达方式下触发，可能执行了错误的工具，也可能虽然得到了正确结果，却消耗了大量 Token、产生了多余文件，甚至引入安全风险。
 
@@ -29,7 +28,6 @@ Coggle Coggle数据科学 *2026年7月14日 17:42*
 - 执行策略：Skill 被触发后应该执行哪些步骤。
 - 终止条件：什么时候可以认为任务已经完成。
 - 复用接口：它如何与其他 Skill、工具和工作流组合。
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/U2KthBqSEe8IiaHGw0bJcM2T0OupCM249NbzXoWU9OTojGQaYg7fFCa5mzabloTKrS6xMpC9nVweMZhTN6ddJ9rsP1h7HVAMbo5fgLTib5ex4/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1#imgIndex=1)
 
 因此，评价 Skill 实际上是在回答四个问题：
 
@@ -320,14 +318,8 @@ eval-workspace/
 
 \# *学习大模型 & 讨论Kaggle* #
 
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_jpg/uoTGEibAZUEgGtr0ib3fibjtZGGiawJxeZb8NEPR0DibUlaMhD1mD7NiajMfbiaBiarSpbLMkrct2I5dsSVoOnCFD7zElg/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp#imgIndex=5)
-
 △长按添加竞赛小助手
 
 每天大模型、算法竞赛、干货资讯
 
-与 36000+来自竞赛爱好者一起交流~ ![图片](https://mmbiz.qpic.cn/mmbiz_png/uoTGEibAZUEgjVMpibbLcunLvNOo6YlvekSTegqBSKoMSyrUbWVDkq5jNG5Hf3uwt71tAq11staN0STb2VPxa1CA/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp#imgIndex=6)
-
-闪记
-
-复制 LaTeX 公式
+与 36000+来自竞赛爱好者一起交流~

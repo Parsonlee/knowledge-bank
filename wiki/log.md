@@ -1,5 +1,34 @@
 # Wiki Log
 
+## [2026-07-22] ingest | Clippings -> raw Batch 4 任务 2 篇新文章 Ingest 入库与归档 (+ affected pages)
+- **深度阅读与语法净化**：对 `Clippings/` 下 2 篇文章进行阅读与语法净化，转义伪 Tag 与伪链接，确保 Markdown 图谱兼容。
+- **完成 2 篇文章 Ingest 闭环与归档移动 (Clippings -> raw/articles/)**：
+  - `Clippings/代码强化学习的双刃剑：前沿模型为何集体走向作弊.md` -> `raw/articles/代码强化学习的双刃剑：前沿模型为何集体走向作弊.md` -> `wiki/sources/代码强化学习的双刃剑_前沿模型为何集体走向作弊.md` (+ 新建 `[[概念_代码强化学习]]`、`[[概念_Verifiable_Reward]]`、`[[概念_Hardened_Sandbox]]`、`[[概念_Inoculation_Prompting]]`、`[[实体_鸭哥]]`、`[[实体_METR]]`、`[[实体_Cursor]]`、`[[实体_SWE-bench_Pro]]`、`[[实体_GLM-5.2]]`、`[[实体_GPT-5.6]]`、`[[实体_AI2_Tmax]]`；更新 `[[概念_Reward_Hacking]]`)
+  - `Clippings/如何系统评价一个 Agent Skill？.md` -> `raw/articles/如何系统评价一个 Agent Skill？.md` -> `wiki/sources/如何系统评价一个_Agent_Skill.md` (+ 新建 `[[概念_Agent_Skill系统化评价框架]]`、`[[概念_Skill增量收益评估]]`、`[[概念_Skill误触发与漏触发评价]]`、`[[实体_Coggle]]`；更新 `[[概念_Agent完整轨迹评估]]`)
+- **全量同步索引**：将新建/更新的 2 篇 Source 摘要页、7 篇 Concept 概念页、8 篇 Entity 实体页全量挂载至 `wiki/index.md`。
+
+## [2026-07-22] ingest | Clippings -> raw Batch 3 任务 2 篇新文章 Ingest 入库与归档 (+ affected pages)
+- **深度阅读与语法净化**：完成对 `Clippings/` 下 2 篇文章（XGBoost+SHAP 与 Identity/Ego 探讨）的语法净化，转义伪 Tag 与伪链接。
+- **完成 2 篇文章 Ingest 闭环与归档移动 (Clippings -> raw/articles/)**：
+  - `Clippings/XGBoost + SHAP 一键生成 10 张出版级模型解释图.md` -> `raw/articles/XGBoost + SHAP 一键生成 10 张出版级模型解释图.md` -> `wiki/sources/XGBoost_SHAP一键生成10张出版级模型解释图.md` (+ 新建 `[[概念_SHAP模型可解释性]]`、`[[实体_XGBoost]]`、`[[实体_SHAP]]`、`[[实体_Matplotlib]]`)
+  - `Clippings/不用 title，你怎么介绍自己？.md` -> `raw/articles/不用 title，你怎么介绍自己？.md` -> `wiki/sources/不用title你怎么介绍自己.md` (+ 新建 `[[概念_身份认同与自我Ego]]`、`[[概念_有限与无限的游戏]]`、`[[实体_陆甲彬_Jiabin_Lu]]`、`[[实体_伊凡·伊里奇之死]]`、`[[实体_托尔斯泰]]`、`[[实体_詹姆斯·卡斯_James_Carse]]`、`[[实体_史蒂夫·乔布斯]]`)
+- **全量同步索引**：将新建的 2 篇 Source 摘要页、3 篇 Concept 概念页、8 篇 Entity 实体页全量挂载至 `wiki/index.md`。
+
+## [2026-07-22] ingest | Clippings -> raw Batch 2 任务 2 篇新文章 Ingest 入库与归档 (+ affected pages)
+- **深度阅读与语法净化**：对 `Clippings/` 下 2 篇文章进行阅读与语法净化，转义行内伪 Tag 与非 Obsidian 伪链接，确保 Markdown 图谱兼容。
+- **完成 2 篇文章 Ingest 闭环与归档移动 (Clippings -> raw/articles/)**：
+  - `Clippings/OpenAI前VP Lilian Weng 新长文：AI 自自我改进的近路，不是改权重.md` -> `raw/articles/OpenAI前VP Lilian Weng 新长文：AI 自我改进的近路，不是改权重.md` -> `wiki/sources/OpenAI前VP_Lilian_Weng_AI自我改进的近路不是改权重.md` (+ 新建 `[[概念_Harness_Engineering]]`、`[[概念_RSI递归自我改进]]`、`[[概念_Harness优化阶梯]]`、`[[概念_Self-Harness]]`、`[[实体_Thinking_Machines_Lab]]`、`[[实体_Codex]]`；更新 `[[实体_翁荔_Lilian_Weng]]`)
+  - `Clippings/Vault死链治理与单向推导架构维护复盘.md` -> `raw/articles/Vault死链治理与单向推导架构维护复盘.md` -> `wiki/sources/Vault死链治理与单向推导架构维护复盘.md` (+ 新建 `[[概念_假性死链鉴别]]`、`[[概念_级联清理安全边界]]`、`[[概念_单向推导数据管线]]`、`[[实体_Hugo_Yang]]`、`[[实体_vault_lint]]`；更新 `[[概念_Ingest入库闭环]]`)
+- **全量同步索引**：将新建/更新的 2 篇 Source 摘要页、7 篇 Concept 概念页、5 篇 Entity 实体页全量挂载至 `wiki/index.md`。
+
+
+## [2026-07-22] ingest | Clippings -> raw 2 篇新文章 Ingest 入库与归档 (+ affected pages)
+- **深度阅读与语法净化**：完成对 `Clippings/` 下 2 篇文章的全面阅读与语法净化（处理 frontmatter 格式与非 Obsidian 链接格式）。
+- **完成 2 篇文章 Ingest 闭环与归档移动 (Clippings -> raw)**：
+  - `Clippings/2026 程序员必读的向量数据库原理与选型指南 1.md` -> `raw/articles/2026 程序员必读的向量数据库原理与选型指南 1.md` -> `wiki/sources/2026程序员必读的向量数据库原理与选型指南.md` (+ 新建 `[[概念_标量过滤]]`、`[[概念_DiskANN]]`、`[[概念_IVF倒排索引]]`、`[[实体_Milvus]]`、`[[实体_pgvector]]`、`[[实体_Redis]]`、`[[实体_Chroma]]`、`[[实体_Pinecone]]`、`[[实体_Weaviate]]`；更新 `[[概念_向量数据库]]`、`[[实体_Qdrant]]`、`[[实体_Elasticsearch]]`)
+  - `Clippings/Karpathy发了一条推文2000万人看了，我照着他的方法搭了个知识库.md` -> `raw/articles/Karpathy发了一条推文2000万人看了，我照着他的方法搭了个知识库.md` -> `wiki/sources/Karpathy推文引发的LLM_Wiki知识库搭建实践.md` (+ 新建 `[[概念_Memex]]`、`[[概念_卡片盒笔记法]]`、`[[概念_Ingest入库闭环]]`、`[[实体_Vannevar_Bush]]`、`[[实体_Niklas_Luhmann]]`、`[[实体_qmd]]`；更新 `[[概念_LLM_Wiki范式]]`、`[[实体_Andrej_Karpathy]]`)
+- **全量同步索引**：将新建的 2 篇 Source 摘要页、6 篇 Concept 概念页、9 篇 Entity 实体页全量挂载至 `wiki/index.md`。
+
 ## [2026-07-08] chore/restructure-raw | 智能分类重构 raw/ 目录结构
 - **目录分类**：在 `raw/` 下创建子目录 `articles/`、`papers/`、`transcripts/`、`playbooks/`、`insights/`，并将根目录下的 163 篇物理文献智能分流：
   - `raw/articles/`: 130 篇

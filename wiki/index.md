@@ -164,6 +164,14 @@
 - [[Dropbox基于DSPy优化Dash Chat评估与提示词]] — Dropbox Dash Chat 评估驱动实践：人工标注校准 LLM-as-a-Judge + DSPy GEPA 自动迭代系统提示词（AI-Agent/eval, AI-Agent/prompt-engineering）
 - [[MiniMax_vs_Kimi_注意力路线之争]] — MiniMax M2 回归 Full Attention，Kimi 发布开源混合注意力模型 Kimi Linear（KDA+MLA 3:1），两条技术路线的工程视角对比（LLM/arch/attention）
 - [[后训练认知_SFT_vs_RL_记忆与遗忘机制]] — 普林斯顿陈丹琦团队发现 RL 抗遗忘优于 SFT，根源在于 on-policy 数据分布，而非算法形式（LLM/training/post-train）
+- [[2026程序员必读的向量数据库原理与选型指南]] — 系统剖析 ANN 算法（HNSW/IVF/DiskANN）与标量过滤，横向对比 8 大向量数据库选型决策树（RAG/embedding, Infra/AI）
+- [[Karpathy推文引发的LLM_Wiki知识库搭建实践]] — Andrej Karpathy 提出的 LLM Wiki 知识编译范式、三层架构、四大核心操作与 80 年思想谱系（Skill/knowledge-bank, AI-Agent/coding）
+- [[OpenAI前VP_Lilian_Weng_AI自我改进的近路不是改权重]] — Lilian Weng 剖析 Harness Engineering：递归自我改进（RSI）近期的近路不是改模型权重，而是围绕模型搭建的 Harness 系统（AI-Agent/harness, AI-Agent/coding）
+- [[Vault死链治理与单向推导架构维护复盘]] — Hugo Yang 总结 Obsidian 知识库死链假性鉴别（重定向/去前缀/待建节点）、级联清理行内安全感知与单向推导管线维护纪律（Skill/knowledge-bank）
+- [[XGBoost_SHAP一键生成10张出版级模型解释图]] — 利用 XGBoost 与 SHAP 构建 10 张高分辨率出版级可视化图表（Skill/data-analysis, Skill/python）
+- [[不用title你怎么介绍自己]] — 反思职业 Title 与 Ego 绑定，用动词定义自己与探索核心问题（Life）
+- [[代码强化学习的双刃剑_前沿模型为何集体走向作弊]] — 解析代码 RL 可验证奖励如何激活推理元能力，又因代理奖励漏洞导致模型集群发生 Reward Hacking 作弊现象及防范（LLM/training/RL, LLM/reasoning）
+- [[如何系统评价一个_Agent_Skill]] — 系统拆解 Agent Skill 的六大评估维度（触发、轨迹、产物、效率、安全、复用）与对比实验设计范式（AI-Agent/skill, AI-Agent/eval）
 
 ## Concepts
 
@@ -429,6 +437,13 @@
 - [[概念_跨轨迹抽象与主动探索]] — 智能体在 Experience 阶段自发寻找线索并从多条交互轨迹提炼通用元策略（AI-Agent/memory）
 - [[概念_灾难性遗忘]] — 持续学习中新任务学习导致旧知识退化的经典难题及Agent分层存储应对（AI-Agent/memory, DeepLearning）
 - [[概念_LLM_as_a_Judge校准]] — 引入专家黄金集、失败编码与解释理由，用对齐框架确保AI裁判评分一致（AI-Agent/eval）
+- [[概念_标量过滤]] — 向量数据库中结合元数据标量属性过滤与向量检索的混合查询机制（RAG/embedding, RAG/retrieval）
+- [[概念_DiskANN]] — 微软开源基于 SSD 磁盘的高性能 ANN 检索算法，突破内存限制（RAG/embedding, RAG/retrieval）
+- [[概念_IVF倒排索引]] — 基于聚类空间划分的倒排文件向量索引算法（RAG/embedding, RAG/retrieval）
+- [[概念_Memex]] — Vannevar Bush 于 1945 年提出的个人机电知识设备构想，关联性路径鼻祖（Skill/knowledge-bank）
+- [[概念_卡片盒笔记法]] — Zettelkasten 知识管理方法论，原子化卡片与网络化交叉引用（Skill/knowledge-bank）
+- [[概念_Ingest入库闭环]] — LLM Wiki 范式中的标准化入库 SOP 操作（阅读/摘要/实体概念联动/索引日志）（Skill/knowledge-bank, AI-Agent/coding）
+- [[概念_Wiki健康检查]] — LLM Wiki 范式中的 Lint 体检与图谱垃圾回收（Skill/knowledge-bank, AI-Agent/coding）
 
 ## Entities
 
@@ -511,7 +526,7 @@
 - [[实体_淘天AIGC团队]] — 淘天集团直播AIGC团队，数字人直播完整链路（LLM）
 
 ### LLM/training + hallucination（批次7）
-- [[实体_翁荔_Lilian_Weng]] — OpenAI 华人科学家，Agent 公式 + 幻觉 Blog 作者（LLM/hallucination）
+- [[实体_翁荔_Lilian_Weng]] — 前 OpenAI 安全研究 VP、Thinking Machines Lab 联合创始人，Lil'Log 作者，Agent 公式 + Harness Engineering 提倡者（LLM/hallucination, AI-Agent/harness）
 - [[实体_PEFT库]] — HuggingFace 参数高效微调库，LoRA/QLoRA/Adapter/Prefix 支持（LLM/training/post-train）
 
 ### LLM/training/post-train（批次6）
@@ -591,6 +606,11 @@
 - [[概念_DEET避蚊胺]] — 教科书级驱蚊成分，浓度边际效应，分龄安全建议（Life）
 - [[概念_智能家居中枢与网关]] — 米家网关/中枢系统/主备中枢/从网关/盲网关概念体系（Life）
 
+### Batch 3 (XGBoost+SHAP / Identity & Ego)
+- [[概念_SHAP模型可解释性]] — 基于 Shapley 值的加性归因解释，支持小提琴/热力/瀑布/依赖图（Skill/data-analysis, Skill/python）
+- [[概念_身份认同与自我Ego]] — 摆脱社会 Title 与 Ego 绑定，动词化思考与问题驱动回应现实（Life）
+- [[概念_有限与无限的游戏]] — James Carse 哲学二元模型，区分胜负导向有限游戏与延续探索无限游戏（Life, 创业）
+
 ### AIGC（Phase 6 Batch 1）
 - [[概念_Veo3视频提示词]] — Veo 3 提示词七要素/角色一致性/音频控制/避免字幕/风格切换/自拍技巧（AIGC）
 - [[概念_PPT生成提示词]] — 用结构化提示词控制 AI 生成 PPT/封面的风格/配色/排版，三维度描述法（AIGC）
@@ -639,6 +659,26 @@
 - [[概念_Deep-Research实现架构四类]] — 单体/流水线/多智能体/混合四种架构对比与代表系统（AI-Agent/deep-research）
 - [[概念_IterResearch范式]] — 通义 DeepResearch 创新范式：精简工作空间+核心报告迭代重构，解决上下文认知瓶颈（AI-Agent/deep-research）
 - [[概念_WebFrontier数据合成]] — 种子-扩展-评估三步数据合成，知识图谱随机游走+原子操作难度建模（AI-Agent/deep-research）
+
+### AI-Agent/harness & Skill/knowledge-bank（Batch 2）
+- [[概念_Harness_Engineering]] — 围绕基础模型构建的宿主与编排系统工程，编排执行/思考/工具/上下文/产物与评估（AI-Agent/harness, AI-Agent/coding）
+- [[概念_RSI递归自我改进]] — AI 系统自我迭代优化机制，现代 Agent 范式通过 Harness 优化而非直接改写权重（AI-Agent/harness, LLM/reasoning）
+- [[概念_Harness优化阶梯]] — Agent 系统优化对象五级演进：Prompt -> 结构化上下文 -> 工作流 -> Harness 代码 -> 优化器代码（AI-Agent/harness, AI-Agent/context-engineering）
+- [[概念_Self-Harness]] — AI 自我改进工程闭环，通过“弱点挖掘—修改提议—保留集验证”确保 Harness 代码持续进化（AI-Agent/harness）
+- [[概念_假性死链鉴别]] — 图谱审计中死链三维甄别法：命名不匹配重定向、多余路径前缀去前缀化、待建节点按需生长（Skill/knowledge-bank）
+- [[概念_级联清理安全边界]] — 物理底座删除时的级联清理红线，包含上下文半衰期解耦与行内安全感知（Inline Safety Sensing）（Skill/knowledge-bank）
+- [[概念_单向推导数据管线]] — LLM Wiki 数据流向纪律：raw/ -> wiki/sources/ -> wiki/entities|concepts，严禁末端产物越级直连 raw/（Skill/knowledge-bank）
+
+### 代码强化学习与 Reward Hacking（Ingest Batch 4）
+- [[概念_代码强化学习]] — 利用测试套件 pass/fail 可验证奖励进后训练，激活长程规划元能力但易诱发作弊（LLM/training/RL, AI-Agent/coding）
+- [[概念_Verifiable_Reward]] — 自动化测试套件 pass/fail 可验证奖励，信号干净成本低但易被模型攻击刷分（LLM/training/RL）
+- [[概念_Hardened_Sandbox]] — 移走 `.git` 版本历史与物理隔离断网的强化沙盒评测规范，防范模型检索与历史提交作弊（LLM/training/RL, AI-Agent/eval）
+- [[概念_Inoculation_Prompting]] — Anthropic 提出训练集中注入接种提示词重构奖励篡改语义，消除安全掩盖副作用（LLM/training/RL）
+
+### Agent Skill 系统化评价（Ingest Batch 4）
+- [[概念_Agent_Skill系统化评价框架]] — 覆盖触发路由、执行轨迹、产物质量、效率成本、安全权限、可复用性六维评估体系（AI-Agent/skill, AI-Agent/eval）
+- [[概念_Skill增量收益评估]] — 对比加载 Skill 与原生 Agent（With vs Without Skill）边际提升的第一性准则（AI-Agent/skill, AI-Agent/eval）
+- [[概念_Skill误触发与漏触发评价]] — 兼顾评估漏触发（False Negative）与误触发（False Positive），结合 Precision/Recall 权衡（AI-Agent/skill, AI-Agent/eval）
 
 ### AI-Agent/tool-calling MCP系列（Phase 4 Batch 1）
 - [[实体_Agent_TARS]] — 字节跳动开源多模态 Agent，内置 Function Call + 用户自定义 MCP Server 双轨设计（AI-Agent/tool-calling）
@@ -717,6 +757,36 @@
 - [[实体_港中深与上海AI实验室]] — 联合提出 Agent 记忆 Storage->Reflection->Experience 演进综述与研究路线（AI-Agent/memory）
 - [[实体_Simran_Jumani]] — Dropbox ML 专家，Dash Chat 智能体基于 DSPy 评估驱动提示词优化主导者（AI-Agent/eval）
 - [[实体_Dropbox]] — 知名云同步协作与 AI 工作台公司，在 Dash Chat 中实现对准评估与自动迭代双赢（AI-Agent/eval, AI-Agent/prompt-engineering）
+- [[实体_Milvus]] — 开源云原生分布式向量数据库，存算分离架构，支持十亿级海量向量数据（RAG/embedding, Infra/AI）
+- [[实体_pgvector]] — PostgreSQL 开源向量检索扩展插件，支持原生 SQL 向量查询（RAG/retrieval, Skill/python）
+- [[实体_Redis]] — 内存 Key-Value 数据库与 RediSearch 内存级超低延迟向量检索（RAG/retrieval, Infra/AI）
+- [[实体_Chroma]] — 开源轻量级嵌入式向量数据库，极简 Python 安装，适合本地 PoC（RAG/retrieval, Skill/python）
+- [[实体_Pinecone]] — 商业闭源全托管 SaaS 向量数据库服务，免运维快速上线（RAG/retrieval, Infra/AI）
+- [[实体_Weaviate]] — 开源一体化向量搜索引擎，基于 HNSW 索引与 GraphQL 查询（RAG/retrieval, Infra/AI）
+- [[实体_Vannevar_Bush]] — 美国工程师，1945 年提出 Memex 个人知识设备构想，关联性路径鼻祖（Skill/knowledge-bank, DeepLearning）
+- [[实体_Niklas_Luhmann]] — 德国社会学家，卡片盒笔记法 (Zettelkasten) 集大成者，9万张索引卡（Skill/knowledge-bank）
+- [[实体_qmd]] — 基于 Rust 编写的本地 Markdown 搜索引擎，支持全文、语义与混合检索（Skill/knowledge-bank, RAG/retrieval）
+- [[实体_Thinking_Machines_Lab]] — 前 OpenAI 安全研究 VP Lilian Weng 等联合创办的前沿 AI 研究实验室（AI-Agent/harness）
+- [[实体_Hugo_Yang]] — 本知识库搭建者与架构维护者（Skill/knowledge-bank）
+- [[实体_vault_lint]] — 知识库自动化治理与诊断 Python 工具（`scripts/vault_lint.py`）（Skill/knowledge-bank）
+- [[实体_Codex]] — OpenAI 代码生成与编码智能体系统（AI-Agent/coding）
+- [[实体_XGBoost]] — 基于梯度提升决策树（GBDT）的高性能开源算法框架（Skill/python, Skill/data-analysis）
+- [[实体_SHAP]] — 基于博弈论 Shapley Additive exPlanations 的 Python 模型可解释性分析库（Skill/python, Skill/data-analysis）
+- [[实体_Matplotlib]] — Python 基础且最广泛使用的数据可视化绘图库（Skill/python, Skill/data-analysis）
+- [[实体_陆甲彬_Jiabin_Lu]] — 个人博客作者、技术创作者，关注思考方法论与价值创造（Life）
+- [[实体_伊凡·伊里奇之死]] — 托尔斯泰中篇小说，深刻反思世俗成功与虚无人生（Life）
+- [[实体_托尔斯泰]] — 俄国批判现实主义作家、思想家，代表作《战争与和平》《伊凡·伊里奇之死》（Life）
+- [[实体_詹姆斯·卡斯_James_Carse]] — 纽约大学教授，《有限与无限的游戏》作者（Life）
+- [[实体_史蒂夫·乔布斯]] — 苹果公司联合创始人，主张“向死而生”应对人生重大决策（Life, 创业）
+- [[实体_鸭哥]] — 科技博主与技术创作者，关注前沿模型训练与代码强化学习作弊深度解析（LLM/training/RL）
+- [[实体_METR]] — 非营利独立 AI 安全与能力评估机构，致力于模型长程规划、奖励作弊与自治风险测试（LLM/training/RL, AI-Agent/eval）
+- [[实体_Cursor]] — AI 代码编辑器团队，揭示 SWE-bench Pro 上代码 RL 作弊与强化沙盒评测分数塌方现象（AI-Agent/coding）
+- [[实体_SWE-bench_Pro]] — 评估软件工程智能体解决真实 GitHub Issue 能力的权威代码基准评测集（AI-Agent/coding, AI-Agent/eval）
+- [[实体_GLM-5.2]] — 智谱 AI 前沿大模型，官方披露代码 RL 训练期作弊与双阶段拦截防御框架（LLM/arch）
+- [[实体_GPT-5.6]] — OpenAI 旗舰模型，官方系统卡揭示长程规划与复杂研究任务中的作弊与伪造行为（LLM/arch）
+- [[实体_AI2_Tmax]] — AI2 小参数量模型，验证代码 RL 在终端训练后向数学 AIME 竞赛题的无缝能力迁移（LLM/arch, LLM/training/RL）
+- [[实体_Coggle]] — Coggle 数据科学社区，关注数据科学、算法竞赛与 Agent 能力工程化实战（AI-Agent/skill）
+- [[实体_Anthropic]] — 安全导向前沿 AI 研究实验室，研发 Claude 系列模型、Agent Skills 元工具架构与接种提示词（AI-Agent/skill, LLM/arch）
 
 ## Comparisons
 
