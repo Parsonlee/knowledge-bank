@@ -241,6 +241,43 @@ def cmd_lint(workspace):
     else:
         print("✅ raw/ 文献正文洁净，无矩阵伪双链干扰图谱！")
 
+    # 5. 低频实体审计 (Low-Frequency Entities, In-degree <= 1)
+    entities_dir = os.path.join(workspace, 'wiki', 'entities')
+    low_freq_entities = []
+    if os.path.exists(entities_dir):
+        entity_files = [f for f in os.listdir(entities_dir) if f.endswith('.md')]
+        entity_in_degrees = {f[:-3]: 0 for f in entity_files}
+        
+        link_regex = re.compile(r'\[\[([^\]|#]+)(?:#[^\]|]+)?(?:\|[^\]]+)?\]\]')
+        for rel, abs_p in all_md_files.items():
+            if rel.startswith('raw/'):
+                continue
+            content = load_file(abs_p)
+            for target in link_regex.findall(content):
+                t_clean = target.strip()
+                t_base = os.path.basename(t_clean)
+                if t_base.endswith('.md'):
+                    t_base = t_base[:-3]
+                file_base = os.path.basename(rel)[:-3]
+                if t_base in entity_in_degrees and t_base != file_base:
+                    entity_in_degrees[t_base] += 1
+                    
+        for e_name, deg in entity_in_degrees.items():
+            if deg <= 1:
+                low_freq_entities.append((e_name, deg))
+
+    print(f"\n📊 【检查 4：低频实体审计 (Low-Frequency Entities, In-degree <= 1)】")
+    if low_freq_entities:
+        low_freq_entities.sort(key=lambda x: (x[1], x[0]))
+        print(f"⚠️ 发现 {len(low_freq_entities)} 个全库关联频次 <= 1 的低频实体（可能为孤立或单次提及的人名/机构）：")
+        for e_name, deg in low_freq_entities[:20]:
+            print(f"  - [[entities/{e_name}.md]] (全库引用频次: {deg})")
+        if len(low_freq_entities) > 20:
+            print(f"  ... 还有 {len(low_freq_entities) - 20} 个低频实体未单独列出。")
+        print("💡 可运行: python3 scripts/vault_lint.py prune-low-freq-entities 预演或清理低频孤立实体")
+    else:
+        print("✅ 全库实体关联度健康，未发现入度 <= 1 的低频孤立实体！")
+
     print("\n" + "=" * 60)
     print("🏁 Lint 健康扫描执行完毕。")
     print("=" * 60)
@@ -807,6 +844,82 @@ def cmd_fetch_published(workspace, apply=False, limit=None, zhihu_only=False):
 
     print(f"\n🎉 首屏批量时间提取完成！成功抓取并写入 {success_count} 篇，失败或无明确时间 {fail_count} 篇。")
 
+def cmd_prune_low_freq_entities(workspace, threshold=1, apply=False):
+    print("=" * 60)
+    print(f"✂️ [Prune Low-Frequency Entities] 批量清理全库关联度 <= {threshold} 的低频/孤立实体")
+    print(f"🛡️ 执行模式: {'【直接动刀 (APPLY)】' if apply else '【预演报告 (DRY-RUN)】'}")
+    print("=" * 60)
+
+    all_md_files = get_all_md_files(workspace)
+    entities_dir = os.path.join(workspace, 'wiki', 'entities')
+    if not os.path.exists(entities_dir):
+        print("❌ 错误：wiki/entities 目录不存在！")
+        return
+
+    entity_files = [f for f in os.listdir(entities_dir) if f.endswith('.md')]
+    entity_in_degrees = {f: 0 for f in entity_files}
+    link_regex = re.compile(r'\[\[([^\]|#]+)(?:#[^\]|]+)?(?:\|[^\]]+)?\]\]')
+
+    for rel, abs_p in all_md_files.items():
+        if rel.startswith('raw/'):
+            continue
+        content = load_file(abs_p)
+        for target in link_regex.findall(content):
+            t_clean = target.strip()
+            t_base = os.path.basename(t_clean)
+            if not t_base.endswith('.md'):
+                t_base = t_base + '.md'
+            file_base = os.path.basename(rel)
+            if t_base in entity_in_degrees and t_base != file_base:
+                entity_in_degrees[t_base] += 1
+
+    targets = [f for f, deg in entity_in_degrees.items() if deg <= threshold]
+    targets.sort()
+
+    index_path = os.path.join(workspace, 'wiki', 'index.md')
+    index_content = load_file(index_path)
+    index_lines_to_remove = []
+    for e_file in targets:
+        e_base = e_file[:-3]
+        for line in index_content.split('\n'):
+            if e_base in line and line not in index_lines_to_remove:
+                index_lines_to_remove.append(line)
+
+    print(f"\n📑 【低频实体清理清单 (关联度 <= {threshold})】")
+    print(f"1️⃣ 需清理的低频实体文件数 : {len(targets)} 篇")
+    for t in targets:
+        print(f"    - wiki/entities/{t} (入度: {entity_in_degrees[t]})")
+    print(f"2️⃣ 需在总索引 wiki/index.md 中同步剔除的条目数 : {len(index_lines_to_remove)} 行")
+    for l in index_lines_to_remove:
+        print(f"    - {l.strip()}")
+
+    if not apply:
+        print("\n" + "-" * 60)
+        print("💡 当前为 Dry-run 预演模式，未作实质性修改。")
+        print(f"👉 若确认要清理上述 {len(targets)} 个低频实体，请运行: python3 scripts/vault_lint.py prune-low-freq-entities --threshold {threshold} --apply")
+        print("-" * 60)
+        return
+
+    print("\n⚡ 正式开始清理低频实体及索引...")
+    removed_count = 0
+    for e_file in targets:
+        abs_p = os.path.join(entities_dir, e_file)
+        if os.path.exists(abs_p):
+            os.remove(abs_p)
+            removed_count += 1
+
+    new_index_lines = [l for l in index_content.split('\n') if l not in index_lines_to_remove]
+    save_file(index_path, '\n'.join(new_index_lines))
+
+    log_path = os.path.join(workspace, 'wiki', 'log.md')
+    log_content = load_file(log_path)
+    today = datetime.now().strftime("%Y-%m-%d")
+    log_msg = f"## {today} lint/prune | 批量清理全库关联度 <={threshold} 的 {removed_count} 个低频孤立实体及 Index 目录\n"
+    new_log = log_content.replace("# 维护日志\n\n", f"# 维护日志\n\n{log_msg}\n")
+    save_file(log_path, new_log)
+
+    print(f"✅ 成功清理 {removed_count} 个低频实体及 {len(index_lines_to_remove)} 行 Index 记录！")
+
 def main():
     parser = argparse.ArgumentParser(description="Knowledge Bank Vault Lint & Prune CLI")
     subparsers = parser.add_subparsers(dest="subcommand")
@@ -821,6 +934,10 @@ def main():
 
     prune_o = subparsers.add_parser("prune-orphans", help="批量清理已被直接删去物理源文件的下游 Source 及 Index")
     prune_o.add_argument("--apply", action="store_true", help="确认批量实质清理")
+
+    prune_lfe = subparsers.add_parser("prune-low-freq-entities", help="批量清理全库关联度 <= N 的低频孤立实体（如仅出现一次的人名）")
+    prune_lfe.add_argument("--threshold", type=int, default=1, help="关联度/入度阈值，默认为 1")
+    prune_lfe.add_argument("--apply", action="store_true", help="确认批量实质清理")
 
     rec_d = subparsers.add_parser("recover-dates", help="为 raw/ 目录下缺失时间的文章溯源捞回并注入创建时间")
     rec_d.add_argument("--apply", action="store_true", help="确认实质注入时间戳")
@@ -841,6 +958,8 @@ def main():
         cmd_prune(workspace, args.path, apply=args.apply)
     elif args.subcommand == "prune-orphans":
         cmd_prune_orphans(workspace, apply=args.apply)
+    elif args.subcommand == "prune-low-freq-entities":
+        cmd_prune_low_freq_entities(workspace, threshold=args.threshold, apply=args.apply)
     elif args.subcommand == "recover-dates":
         cmd_recover_dates(workspace, apply=args.apply)
     elif args.subcommand == "fetch-published":

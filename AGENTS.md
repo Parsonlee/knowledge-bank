@@ -133,29 +133,53 @@ AI Agent 在处理日常任务时，必须遵守以下三大核心操作闭环�
    - 打开 `wiki/index.md`，在对应分类下同步挂载**所有本次新建的 Source、Concept 与 Entity 页面**（严禁只登摘要漏登新建概念 / 实体）。
    - 打开 `wiki/log.md` 追加一笔日志记录：
      `## [YYYY-MM-DD] ingest | raw/xxx -> wiki/sources/xxx.md (+ affected pages)`
+7. **产物事实性核查与验收（Factuality Audit）**：
+   - 不仅要通过 `vault_lint` 自动化脚本进行系统层面的死链与索引挂载审计；
+   - **必须对生成的 Source 摘要、Entity 实体及 Concept 概念页面执行句级事实性核查**：严格对照 `raw/` 原始文献与 `wiki/` 提炼页面，核验数据指标、核心观点、算法逻辑、选型特征与事件脉络，确保 100% 符实，坚决杜绝 LLM 幻觉、数值夸大、算法特征错配或无源虚估。
 
-### 4.2 Query（知识查询与沉淀）
+### 4.2 Batch Ingest（批量 Ingest 批次调度与串行验收 SOP）
+当 `Clippings/` 缓冲区中存在多篇文章，或用户要求执行「批量 Ingest / batch-ingest」时，**必须严格遵守以下批次划分与串行验收 SOP**：
+
+1. **容量限制与批次分组**：
+   - 必须对待处理的剪藏文章进行分组，**每个 Subagent 最多只能负责 2 篇文章**，严禁单个 Subagent 贪多处理导致提炼质量下降。
+2. **严格串行调度 (Sequential Dispatch)**：
+   - 必须采用**单线程串行执行**模式。一次仅启动派发 1 个 Subagent 处理当前批次（最多 2 篇）。
+   - **严禁并发/并行派发多组 Subagent**，防止不同 Agent 并发修改 `wiki/index.md` 或同一实体/概念页面造成 Git / 文件冲突或逻辑竞争。
+3. **Subagent 闭环职责**：
+   - 派出的 Subagent 必须完整执行 `4.1 Ingest` 的七步闭环 SOP（读取净化、归档至 `raw/articles/`、生成 Source 摘要、联动 Entity/Concept、挂载 `wiki/index.md`、记录 `wiki/log.md` 及事实性自查）。
+4. **主 Agent 逐批硬性验收 (Mandatory Inspection & Fix)**：
+   - 每个 Subagent 任务完成后，**主 Agent 必须立即对该批次产物进行双重验收**：
+     - **系统层 Lint 扫描**：运行 `python3 scripts/vault_lint.py lint`，核验总索引挂载率 100%、YAML sources 路径 100% 存在、无未转义伪双链；
+     - **句级物理事实性核查 (Factuality Audit)**：将生成产物与 `raw/` 物理原文进行 1:1 比对，核查数值、图表、指标、人名、算法与选型结论是否 100% 符实。
+     - **主 Agent 现场修复**：如发现任何格式不对、双链断裂、错别字或事实性偏差，**必须由主 Agent 亲自进行代码/文本修复**。
+5. **批次推进与全量总结**：
+   - 仅当主 Agent 确认当前批次验收合格且修复完成后，方可派出下一个 Subagent 处理接下来的 2 篇文章。重复此闭环直至所有 Clippings 移交归档完毕，最后向用户汇报总结报告。
+
+### 4.3 Query（知识查询与沉淀）
 当用户提问或检索专题知识时：
 1. **精准定位**：优先通过 MCP 搜索或读取 `wiki/index.md` 快速定位候选页面。
 2. **综合解答**：基于页面内容回答，并给出具体来源引用（如 `如 [[wiki/sources/xxx]] 所述...`）。
 3. **沉淀新知（可选）**：如果回答包含有价值的横向对比、选型分析或架构综述，主动提议将其写入 `wiki/comparisons/` 或 `wiki/overview/`；新建页面务必**在正文插链接入图谱并同步挂载至 `wiki/index.md`**，最后在 `wiki/log.md` 登记 `query | 新建 ...`。
 
-### 4.3 Lint & Prune（健康检查、精简与图谱垃圾回收）
+### 4.4 Lint & Prune（健康检查、精简与图谱垃圾回收）
 当用户要求对知识库进行「Lint / 健康检查 / 精简 / 冲突审查 / 删除收藏」时，**强烈推荐使用项目中预置的自动化脚本工具 `python3 scripts/vault_lint.py`**：
 
 1. **常规扫描诊断 (`python3 scripts/vault_lint.py lint`)**：
    - **图谱与链审计**：检测知识库中的观点矛盾、过时表述、孤立无入链页面、低频提及实体（如仅出现 1 次的人 / 组织）、以及缺失的双向链接与死链。
+   - **低频实体审计 (Low-Frequency Entity Audit)**：扫描 `wiki/entities/` 目录下所有实体，计算全库关联引用频次（In-degree）。对于关联引用次数 $\le 1$ 的实体（通常为仅在单篇文章中偶然提到一次的人名、冷门次要机构或临时项目），进行专门的诊断罗列与清理提示。
    - **漏登审计**：扫描 `wiki/sources/`、`wiki/concepts/`、`wiki/entities/` 检查是否存在漏登 `wiki/index.md` 的孤立文档。
    - **语法污染扫描 (`python3 scripts/vault_lint.py sanitize-raw`)**：检测并自动转义物理源文件中未转义的行内伪 Tag 或矩阵 / 张量伪出链 `[[...]]`。
 2. **精简与级联清理机制（`python3 scripts/vault_lint.py prune <raw_path>` / Cascading Pruning SOP）**：
-   当用户主动要求删除或清理最上游原始层资料（如 `raw/xxx.md` 或 `Clippings/xxx.md`）时，**必须执行严密的图谱级联清理链条（自上而下四步法）**：
+   当用户主动要求删除或清理最上游原始层资料（如 `raw/xxx.md` 或 `Clippings/xxx.md`），或对全库执行精简垃圾回收时，**必须执行严密的图谱级联清理链条**：
    - **第一步（精准清理摘要页）**：删除目标物理源文件时，读取所有 `wiki/sources/*.md` 的 Frontmatter，只要 `sources:` 列表中命中被删源路径，将对应的 Source 摘要页连带删除。
    - **第二步（同步更新总索引）**：打开 `wiki/index.md`，将对应分类下指向已删 Source 摘要页的索引条目自动精准剔除。
    - **第三步（入度审计与垃圾回收 GC）**：解析被删 Source 页中引用过的所有实体 `[[entities/...]]` 和概念 `[[concepts/...]]`，对它们在全库执行引用度（In-degree）检查：
-     - **情况 A（剩余被引次数 $\ge 1$）**：说明属于通用核心知识，**保留页面**，仅在其正文末尾 `## 来源` 中摘除指向已删文章的链接。
-     - **情况 B（剩余被引次数 $= 0$）**：说明其为随着该被删文产生的冷门孤立产物（Orphan Pages），**触发垃圾回收连带清理**。
+     - **情况 A（剩余被引次数 $\ge 2$）**：说明属于通用核心知识，**保留页面**，仅在其正文末尾 `## 来源` 中摘除指向已删文章的链接。
+     - **情况 B（剩余被引次数 $\le 1$）**：说明其为随着具体文章产生的低频冷门产物（如仅出现一次的人名），**触发垃圾回收连带清理**。
    - **第四步（登记操作流水）**：在 `wiki/log.md` 登记 `lint/prune | prune raw/xxx.md (+ Cascading cleanup sources, index & gc entities/concepts)`。
-3. **先提议，再动刀 (`--dry-run` vs `--apply`)**：
+3. **低频实体专项清理 (`python3 scripts/vault_lint.py prune-low-freq-entities`)**：
+   - 可针对全库扫描出来的入度 $\le 1$ 的实体页面（尤其是只出现过 1 次的人名实体）进行批量/定向精简清理，同步从 `wiki/index.md` 剔除，保持图谱的高质量与低噪声。
+4. **先提议，再动刀 (`--dry-run` vs `--apply`)**：
    运行 `python3 scripts/vault_lint.py prune <path>` 默认即为 **Dry-run 模式**，自动向用户输出结构化的「自上而下四步级联影响分析清单」。**严禁未经确认直接大规模动刀**；确认无误后方可运行追加 `--apply` 参数执行正式动刀。
 
 ## 5. Tag 体系
