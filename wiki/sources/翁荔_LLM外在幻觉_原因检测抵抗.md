@@ -55,7 +55,7 @@ confidence: high
 
 - [[概念_LLM外在幻觉与上下文内幻觉]] — 外在幻觉定义与两种类型
 - [[概念_幻觉检测方法]] — FActScore/SAFE/SelfCheckGPT 检测框架
-- [[概念_幻觉产生原因]] — 预训练数据/微调新知识两大根因
+- 幻觉产生原因 — 预训练数据/微调新知识两大根因
 - [[概念_抗幻觉方法]] — RAG/CoVe/FLAME/Self-RAG 抵抗方案
 - [[实体_翁荔_Lilian_Weng]] — OpenAI 科学家，Agent 公式 / 幻觉 Blog 作者
 - [[概念_Self-RAG]] — 自我反思 RAG，同时也是幻觉抵抗方法

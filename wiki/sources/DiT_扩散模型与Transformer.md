@@ -56,8 +56,8 @@ confidence: high
 
 - [[概念_扩散模型]]
 - [[概念_Latent_Diffusion]]
-- [[概念_Patchify]]
-- [[概念_adaLN_Zero]]
+- Patchify
+- adaLN_Zero
 - [[概念_Vision_Transformer]]
 
 ## 关联实体

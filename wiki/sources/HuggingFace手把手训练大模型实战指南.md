@@ -47,13 +47,13 @@ confidence: high
 ## 关联
 
 - [[概念_多阶段训练策略]]
-- [[概念_退火阶段数据配方]]
-- [[概念_消融实验方法论]]
-- [[概念_GQA分组查询注意力]]
-- [[概念_RNoPE混合位置编码]]
+- 退火阶段数据配方
+- 消融实验方法论
+- GQA分组查询注意力
+- RNoPE混合位置编码
 - [[实体_SmolLM3]]
-- [[实体_HuggingFace]]
-- [[实体_nanotron]]
+- HuggingFace
+- nanotron
 
 ---
 > 📎 **物理文献**：[[raw/playbooks/HuggingFace从决策到落地「手把手」教你训练大模型.md]]

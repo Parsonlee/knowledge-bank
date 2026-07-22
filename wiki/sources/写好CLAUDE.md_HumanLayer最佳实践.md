@@ -81,7 +81,7 @@ HumanLayer 团队发布的 CLAUDE.md 编写最佳实践指南，基于上下文�
 - [[概念_CLAUDE.md最佳实践]]
 - [[概念_上下文工程]]
 - [[概念_Agent_Skills元工具架构]]
-- [[概念_Claude_Code工作流]]
+- Claude_Code工作流
 
 ---
 > 📎 **物理文献**：[[raw/articles/写好 CLAUDE.md _ HumanLayer 博客.md]]

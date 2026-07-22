@@ -68,8 +68,8 @@ confidence: high
 - [[概念_Agent开发范式三级进化]]
 - [[概念_Agentic设计模式分类]]
 - [[实体_LangChain]]
-- [[概念_AI_Workflow与Agent对比]]
-- [[概念_AI_Agent四种类型]]
+- AI_Workflow与Agent对比
+- AI_Agent四种类型
 
 ---
 > 📎 **物理文献**：[[raw/articles/AI Agent 与 AI Workflow 的区别和深度解析：从自动化到智能化....md]]

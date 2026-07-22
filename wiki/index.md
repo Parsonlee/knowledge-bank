@@ -197,8 +197,6 @@
 - [[概念_Focal_Loss]] — 下调简单样本权重解决类别不平衡
 - [[概念_扩散模型]] — 前向加噪 + 反向去噪生成；DDPM 开创
 - [[概念_Latent_Diffusion]] — 先 AutoEncoder 压缩到 latent 再训扩散模型
-- [[概念_Patchify]] — 图像/latent 切 patch 经线性嵌入为 token
-- [[概念_adaLN_Zero]] — DiT 最优条件注入，初始化为恒等映射
 - [[概念_OCR数据增强]] — OCR 形态学/噪声/变换 + OneOf 组合
 - [[概念_torchvision图像增强]] — torchvision.transforms 增强 API 清单
 - [[概念_自注意力复杂度]] — 自注意力 O(N²d)/O(N²)，瓶颈在内存 I/O
@@ -206,10 +204,8 @@
 - [[概念_Normalization方法对比]] — BN/LN/IN/GN 维度与用途对比
 - [[概念_Batch_Normalization]] — BN 动机/算法/作用/问题
 - [[概念_Cholesky分解与DPP]] — Cholesky 分解加速 DPP 贪婪 MAP 推断，O(N·k²)
-- [[概念_行列式与多样性采样]] — 行列式=超平行体体积=多样性度量，DPP 数学基础
 - [[概念_特征值分解]] — EVD 方阵分解，特征值/特征向量/几何意义
 - [[概念_奇异值分解SVD]] — 任意矩阵分解 A=UΣV^T，降维/压缩基础工具
-- [[概念_矩阵分解方法]] — PCA/SVD/NMF/LDA/PMF 等方法清单与作用
 - [[概念_Transformer架构]] — Transformer 5 步流程：Tokenization/Embedding/Attention/FFN/Output
 - [[概念_大模型训练三阶段]] — Pre-train/Instruction FT/RLHF 训练流程
 - [[概念_Prompt工程方法]] — 有效 Prompt 方法：补充前提/范例/拆解/自我反省/Self-Consistency
@@ -231,7 +227,6 @@
 - [[概念_RLaaS]] — 强化学习即服务，Palantir 式企业深度定制
 - [[概念_复制训练]] — 复现现有软件作为 RL 任务，单元测试验证奖励
 - [[概念_RLVR]] — 可自动验证奖励的强化学习
-- [[概念_Forward_KL与Reverse_KL]] — 对齐中的两种 KL 散度行为差异与优化特性
 - [[概念_IFD指令跟随难度]] — Instruction-Following Difficulty，通过困惑度挑选高价值 SFT 样本
 - [[概念_K-Center-Greedy算法]] — 基于核心集策略的贪心样本选择算法
 - [[概念_Reward_Hacking]] — 奖励黑客：利用奖励模型漏洞取高分而非真正满足意图
@@ -240,13 +235,10 @@
 - [[概念_on-policy与off-policy数据]] — 强化学习训练中采样模型与目标优化策略的同源匹配关系
 - [[概念_多阶段训练策略]] — 从通用领域到垂直任务能力的退火精调流转路径
 - [[概念_灾难性遗忘]] — 微调新任务时导致原有预训练通用知识与能力退化
-- [[概念_过程奖励与结果奖励]] — PRM（每步推理评估）与 ORM（最终结果评估）对比
 - [[概念_智能体能力金字塔]] — 工具/规划/适应/接地气/常识推理五层能力
 - [[概念_接地气Groundedness]] — 智能体紧贴上下文、不幻觉不捏造的能力
 
 ### RAG
-- [[概念_CCH块标题]] — Contextual Chunk Headers：为每个切片添加层级化标题增强独立语义
-- [[概念_RAG反馈机制]] — 收集用户与系统隐/显式反馈迭代优化 RAG 检索管线
 - [[概念_RSE相关段落提取]] — Relevant Segment Extraction：定位并提取文档连续相关段落
 - [[概念_上下文增强检索]] — 检索前增强块上下文，提高切片独立理解能力
 - [[概念_RAG基础流程]] — RAG 三步：Indexing/Retrieval/Generation
@@ -297,7 +289,6 @@
 - [[概念_向量量化]] — float32→int8/INT4/BBQ/PQ/残差量化压缩方法
 - [[概念_Agentic_RAG]] — 智能体+RAG：查询规划/工具利用/推理优化
 - [[概念_Memory_RAG]] — 显式记忆增强 RAG：Memory3/MemoRAG/CAG
-- [[概念_知识整合]] — 输入层/中间层/输出层三种外部知识整合方式
 - [[概念_DOS_RAG]] — 保留文档原始结构：检索后按原文顺序排列片段
 - [[概念_DMQR-RAG]] — 多样化多查询改写：GQR/KWR/PAR/CCE 四策略 + 自适应选择
 - [[概念_LLM重排序]] — 让 LLM 给文本相关性打分(0~1)的精排方法
@@ -326,7 +317,6 @@
 #### 语义搜索/系统设计/评估概念（批次8）
 - [[概念_Semantic_Search本质]] — metric embedding，document as index，无结构即灵活
 - [[概念_Multi-Vector检索]] — 用代理表示（自然语言/总结）索引低资源/长文件
-- [[概念_对比损失与三元组损失]] — Contrastive/Triplet Loss 按类内方差选择
 - [[概念_距离函数选择]] — 余弦(非度量)/欧氏(度量)距离选型与三角不等式
 - [[概念_Lazy_Graph_RAG]] — 语义搜索弥补 KG 不足，索引成本降至 0.1%（medium）
 - [[概念_迭代式表格推理]] — TableRAG 在线推理：拆解/检索/SQL/组合四步
@@ -338,7 +328,6 @@
 - [[概念_查询扩展]] — 内部扩展(LLM知识)+外部扩展(知识库)提高检索效果
 - [[概念_查询消歧]] — 识别消除查询歧义，确保单一精确解释
 - [[概念_查询抽象]] — 提炼核心概念创建高层次表示，Step-back 为具体实现
-- [[概念_自适应检索]] — 基于规则或模型判断是否需要检索，避免过度检索（RAG）
 - [[概念_LLM应用优化两轴]] — Context Optimization(RAG) + LLM Optimization(FT) 两轴并行迭代（LLM）
 - [[概念_Fine-tuning]] — 微调增强 LLM 特定领域/任务能力，蒸馏降本（LLM）
 
@@ -379,6 +368,7 @@
 - [[概念_MLA低秩KV压缩]] — DeepSeek MLA：低秩压缩 + 矩阵吸收广播优化（LLM/arch/attention）
 
 ### LLM/inference + reasoning（批次4）
+- [[概念_量化]] — 通过降低权重和激活值的数据位宽以显著减少模型显存占用及加速推理的技术 (LLM/inference)
 - [[概念_推测解码]] — Draft-then-Verify：并行推测+验证实现无损推理加速（LLM/inference）
 - [[概念_混合精度训练]] — BF16/FP32混合训练流程，16 bytes/参数显存估算（LLM/inference）
 - [[概念_LoRA与QLoRA显存]] — LoRA 2Φ、QLoRA 0.5Φ显存估算原理（LLM/inference, 面试）
@@ -390,24 +380,21 @@
 - [[概念_PPO近端策略优化]] — 生成策略+参考策略+价值模型三组件，RLHF 核心算法（LLM/training/RL）
 - [[概念_RLHF基于人类反馈的强化学习]] — 人类偏好→奖励模型→PPO 对齐流程，RLVR 演进方向（LLM/training/RL）
 - [[概念_奖励函数与验证器]] — 验证器判对错、奖励函数给分值，GRPO 奖励设计原则（LLM/training/RL）
-- [[概念_推理模型顿悟时刻]] — RL 训练中自发涌现的反思/重评估行为，1.5B 起可观察（LLM/reasoning）
 - [[概念_Agent感知记忆推理三能力]] — CoT 赋能 Agent：感知CoT/记忆CoT（树搜索+矢量检索）/推理CoT（AI-Agent, LLM/reasoning）
 
 ### LLM/training + hallucination（批次7）
+- [[概念_训练并行策略]] — 解决大规模语言模型训练内存与计算瓶颈的基础并行化方法集合（含 DP/TP/PP） (LLM/training)
 - [[概念_LoRA低秩适应微调]] — LoRA 低秩分解原理、r/alpha/dropout 超参、QLoRA 变体与端侧适用场景（LLM/training/post-train）
 - [[概念_Scaling_Law三大规律]] — 预训练/后训练/推理三大 Scaling Law 定义、技术手段与 Kaplan/Chinchilla 关系（LLM/training）
 - [[概念_LLM外在幻觉与上下文内幻觉]] — 翁荔框架：两种幻觉类型、预训练/微调新知识两大根因（LLM/hallucination）
 - [[概念_幻觉检测方法]] — FActScore/SAFE/SelfCheckGPT/TruthfulQA 检测体系（LLM/hallucination）
 - [[概念_LLM幻觉消除技术分类]] — 32 种技术两大分类：提示工程（RAG/反馈/提示微调）vs 模型开发（LLM/hallucination）
 - [[概念_抗幻觉方法]] — RARR/FAVA/Self-RAG/CoVe/FLAME/WebGPT 抵抗方法体系（LLM/hallucination）
-- [[概念_幻觉的社会传播影响]] — 后真相时代幻觉放大机制：专家之死、衔尾蛇、责任归属与对齐税（LLM/hallucination）
 - [[概念_温度参数与幻觉创造力权衡]] — 温度参数控制输出分布平滑度，高温增创意增幻觉，低温保准确减创意（LLM/hallucination, LLM/inference）
-- [[概念_Discrete_Tokenization]] — VQ将连续多模态信号压缩为离散token，8类方法，码本坍塌核心挑战（LLM/tokenization）
 - [[概念_BPE分词算法]] — 迭代合并高频字节对，平衡词汇表大小与序列长度，GPT系列标准分词（LLM/tokenization）
 
 ### LLM/面试/训练/RL（批次9）
 - [[概念_LLM面试知识体系]] — LLM 面试五大模块清单：架构/微调/推理/数学/扩展（LLM, 面试）
-- [[概念_通用验证器]] — 突破 RLVR 限制的两大路线：评分细则 vs 内部自信度，OaK 终局架构（LLM/training/RL）
 - [[概念_Reward_Hacking]] — 奖励攻陷（Specification Gaming），强化学习中模型找到奖励漏洞以不符合真实意图的方式高频刷分现象（LLM/training/RL）
 - [[概念_AI创业Scaling_Law]] — AI 团队规模与产出效率的悖论：小而精 vs 规模扩张（创业）
 
@@ -415,6 +402,7 @@
 - [[概念_数字人文案生成]] — 口语化改写/多步蒸馏/图文一致/测评体系完整框架（LLM）
 
 ### AI-Agent/tool-calling MCP系列（Phase 4 Batch 1）
+- [[概念_CLAUDE.md最佳实践]] — 编写 CLAUDE.md 工程宪法以约束 Agent 行为的高级指南与规范范式 (AI-Agent/coding)
 - [[概念_MCP协议]] — MCP 定义、CHS 架构、五大原语、传输方式、与 Function Call 关系全景（AI-Agent/tool-calling）
 - [[概念_MCP_CHS架构]] — Client-Host-Server 三组件精确界定：Host 是 AI 智能唯一承载者，Server/Client 是模型无关 RPC 管道（AI-Agent/tool-calling）
 - [[概念_MCP五大原语]] — Tool/Prompt/Resource/Sampling/Roots 五类原语：触发方、用途、高阶玩法与 Web 化方向（AI-Agent/tool-calling）
@@ -434,7 +422,6 @@
 - [[概念_知识编译与复利]] — LLM 担任知识库编译器，解决信息存储孤岛痛点并释放连接复利（Skill/knowledge-bank）
 - [[概念_渐进式披露]] — 按总览到细节的层级动态展示信息，降低用户与大模型认知及上下文负荷（AI-Agent/UI, AI-Agent/context-engineering）
 - [[概念_系统提示词四层架构]] — 核心定义、交互接口、内部处理与全局约束四层架构，解决规则扁平堆砌痛点（AI-Agent/prompt-engineering）
-- [[概念_跨轨迹抽象与主动探索]] — 智能体在 Experience 阶段自发寻找线索并从多条交互轨迹提炼通用元策略（AI-Agent/memory）
 - [[概念_灾难性遗忘]] — 持续学习中新任务学习导致旧知识退化的经典难题及Agent分层存储应对（AI-Agent/memory, DeepLearning）
 - [[概念_LLM_as_a_Judge校准]] — 引入专家黄金集、失败编码与解释理由，用对齐框架确保AI裁判评分一致（AI-Agent/eval）
 - [[概念_标量过滤]] — 向量数据库中结合元数据标量属性过滤与向量检索的混合查询机制（RAG/embedding, RAG/retrieval）
@@ -530,6 +517,7 @@
 - [[实体_PEFT库]] — HuggingFace 参数高效微调库，LoRA/QLoRA/Adapter/Prefix 支持（LLM/training/post-train）
 
 ### LLM/training/post-train（批次6）
+- [[概念_DPO]] — 直接偏好优化，无需显式训练奖励模型，直接通过人类偏好数据优化策略模型 (LLM/training/post-train)
 - [[HuggingFace手把手训练大模型实战指南]] — SmolLM3 端到端训练实战：Why→What→How + 架构/数据/基础设施全链路（LLM/training/pre-train, post-train）
 - [[SFT数据挑选方法_质量多样性必要性]] — SFT 数据三维度筛选：MoDS/DEITA/CaR 方法梳理（LLM/training/post-train）
 - [[375篇文献_推理大模型后训练技术综述]] — 后训练三分类综述：微调/RL/测试时扩展（LLM/training/post-train）
@@ -539,12 +527,10 @@
 - [[概念_上下文工程]] — 动态系统填充恰好合适的信息给LLM，四类操作：Offload/Retrieve/Reduce/Isolate（AI-Agent/context-engineering）
 - [[概念_Context_Rot]] — 上下文腐化：长度增长导致性能下降，预腐化阈值128K-200K，触发压缩/总结（AI-Agent/context-engineering）
 - [[概念_分层行动空间]] — Manus三层工具架构：函数调用/沙盒工具集/软件包API，稳定接口+无限能力（AI-Agent/context-engineering）
-- [[概念_上下文隔离两种模式]] — 通信模式（干净上下文）vs 共享上下文模式，借鉴Go语言哲学（AI-Agent/context-engineering）
 - [[概念_Spec_Driven_Development]] — 规范驱动开发：Prompt→Requirements→Design→Tasks→Code，Kiro 实现（AI-Agent/context-engineering）
 
 ### AI-Agent/coding（Phase 4 Batch 4）
 - [[概念_Agent开发范式三级进化]] — Level 1 LLM/Level 2 AI Agent/Level 3 Multi-Agent 三阶段演进，Human in the Loop 作为特殊 Agent（AI-Agent/coding）
-- [[概念_长程Agent双Agent架构]] — Anthropic：初始化 Agent + 编码 Agent 解决跨会话长程 Coding 任务，功能列表/增量进展/端到端测试三支柱（AI-Agent/coding）
 - [[概念_Agent三层记忆体系]] — 感知记忆（标签页级）/短期记忆（Session+ES）/长期记忆（知识点+用户画像+经验图谱）（AI-Agent/coding）
 
 ### AI-Agent/coding+skill（Phase 4 Batch 5）
@@ -557,18 +543,12 @@
 - [[概念_AI_Agent记忆策略]] — 8 种主要策略原理（全量/滑动窗口/相关性过滤/摘要/向量DB/知识图谱/分层/类OS），翁荔学术分类框架与前沿系统（AI-Agent/memory）
 
 ### AI-Agent/prompt-engineering（Phase 4 Batch 7）
-- [[概念_Agent调优路径]] — 阿里云实战四级调优路径：提示词原型→Workflow→Multi-Agent→模型训练，选型原则表（AI-Agent/prompt-engineering）
 - [[概念_编程提示工程实战]] — 程序员向 10 种技巧+7 条基础原则+调试/重构/功能三场景策略+常见反模式（AI-Agent/prompt-engineering）
 - [[概念_系统提示词四层架构]] — 核心定义/交互接口/内部处理/全局约束四层，解决规则冲突/维护困难/行为不可预测（AI-Agent/prompt-engineering）
 
 ### AI-Agent/AI-BI（Phase 4 Batch 8）
-- [[概念_FlattenedRAG与StructuredRAG]] — 元数据检索两种方案：打平为自然语言 vs 保留层次结构分步检索（AI-Agent/AI-BI）
-- [[概念_HeadlessBI指标中台]] — 前后端分离指标服务：统一指标库+API，保障多平台口径一致（AI-Agent/AI-BI）
-- [[概念_Text2DSL中间层方案]] — NL→SQL→DSL→前端指令，引入中间层解决直接转换困难，关键是无损转换（AI-Agent/AI-BI）
 
 ### AI-Agent 综合 + AI-BI（Phase 4 Batch 9）
-- [[概念_AI_Workflow与Agent对比]] — AI Workflow 预定义流程 vs AI Agent 自主决策：选型原则与核心区别（AI-Agent）
-- [[概念_AI_Agent四种类型]] — 反应型/目标导向型/学习型/协作型四种 Agent 分类与适用场景（AI-Agent）
 - [[概念_Agent系统化工程]] — 三层复杂度+LLM放大效应+Level 0-4认知演化+系统化方法论（AI-Agent）
 - [[概念_LLM不确定性放大]] — 多步调用的指数级错误放大数学模型及三类放大维度（AI-Agent）
 - [[概念_AI-ready_data]] — NL2SQL落地第一性问题：元数据/业务语义/权限/样例SQL的系统化准备（AI-Agent/AI-BI）
@@ -595,24 +575,18 @@
 ### Life（Phase 5 Batch 3）
 - [[概念_幸福积分模型]] — 幸福总量=曲线下面积（积分），时间度量衡，等周不等式类比（Life）
 - [[概念_天职Calling]] — 本身能带来快乐的工作，三条筛选标准，天职不是"钱多事少离家近"（Life）
-- [[概念_习得性快乐]] — A型（多巴胺驱动）vs B型（社会建构），被动习得→习得性不快乐的风险（Life）
 
 ### Life（Phase 6 Batch 5：旅行/驾驶/投资/驱蚊/智能家居）
-- [[概念_Laser-Back旅行法]] — Kevin Kelly 两周假期优化法：激光直冲最远点再蜿蜒返回，12 天最佳（Life）
-- [[概念_旅行的投入与体验模式]] — Retreat（R&R 退隐）vs Engage（E&E 投入体验）两种旅行模式（Life）
 - [[概念_投资反馈机制]] — 选正常市场获有效反馈，不正常市场无法纠错成长（Life）
 - [[概念_投资风格确立]] — 缩小决策解空间，固定 1-2 种最舒服模式长期精进（Life）
 - [[概念_驱蚊有效成分]] — DEET/Picaridin/IR3535/OLE 四成分，含量影响有效时间非效果（Life）
 - [[概念_DEET避蚊胺]] — 教科书级驱蚊成分，浓度边际效应，分龄安全建议（Life）
-- [[概念_智能家居中枢与网关]] — 米家网关/中枢系统/主备中枢/从网关/盲网关概念体系（Life）
 
 ### Batch 3 (XGBoost+SHAP / Identity & Ego)
 - [[概念_SHAP模型可解释性]] — 基于 Shapley 值的加性归因解释，支持小提琴/热力/瀑布/依赖图（Skill/data-analysis, Skill/python）
-- [[概念_身份认同与自我Ego]] — 摆脱社会 Title 与 Ego 绑定，动词化思考与问题驱动回应现实（Life）
 - [[概念_有限与无限的游戏]] — James Carse 哲学二元模型，区分胜负导向有限游戏与延续探索无限游戏（Life, 创业）
 
 ### AIGC（Phase 6 Batch 1）
-- [[概念_Veo3视频提示词]] — Veo 3 提示词七要素/角色一致性/音频控制/避免字幕/风格切换/自拍技巧（AIGC）
 - [[概念_PPT生成提示词]] — 用结构化提示词控制 AI 生成 PPT/封面的风格/配色/排版，三维度描述法（AIGC）
 - [[概念_HTML代码方式生成视觉物料]] — LLM 输出 HTML+CSS 代码渲染视觉物料，可控性强、可复用（AIGC）
 - [[概念_AI_PPT工具路径]] — AI 原生派（Gamma 对话生成）vs 传统革新派（WPS AI 润物细无声）（AIGC）

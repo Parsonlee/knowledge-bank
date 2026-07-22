@@ -29,6 +29,6 @@ updated: "2026-07-22"
 
 ## 4. 关联实体与概念
 - **实体**：[[entities/实体_陆甲彬_Jiabin_Lu]]、[[entities/实体_伊凡·伊里奇之死]]、[[entities/实体_托尔斯泰]]、[[entities/实体_詹姆斯·卡斯_James_Carse]]、[[entities/实体_史蒂夫·乔布斯]]
-- **概念**：[[concepts/概念_身份认同与自我Ego]]、[[concepts/概念_有限与无限的游戏]]
+- **概念**：身份认同与自我Ego、[[concepts/概念_有限与无限的游戏]]
 
 > 📎 **物理文献**：[[raw/articles/不用 title，你怎么介绍自己？.md]]

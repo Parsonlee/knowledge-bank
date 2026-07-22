@@ -15,30 +15,34 @@ This file provides guidance to Claude Code/Codex/Antigravity and other AI Agents
 > [!CAUTION] 🚨 分层推导与唯一上游溯源纪律（Derivation Chain Rules）
 > 为了彻底杜绝“空中楼阁/虚假幻觉生成”与“断链越级”，全库严格遵循单向数据推导管线：**`raw/`（零级底座） 👉 `wiki/sources/`（一级产物） 👉 `wiki/entities/` 与 `wiki/concepts/` 等（末端产物）**。各层边界与上游纪律如下：
 > 1. **零级底座 (`raw/` & `Clippings/`) —— 绝对只读**：作为唯一事实来源，绝对只读不改。
-> 2. **一级产物 (`wiki/sources/`) —— 唯一上游只能是 `raw/`**：每个摘要页是物理文献的直接结构化产物，Frontmatter 中的 `sources:` 必须且只能有唯一上游 `raw/xxx.md`，做到 1对1 精准映射。
+> 2. **一级产物 (`wiki/sources/`) —— 唯一上游只能是 `raw/`**：每个摘要页是物理文献的直接结构化产物，Frontmatter 中的 `sources:` 必须且只能有唯一上游 `raw/<子目录>/xxx.md`（如 `raw/articles/xxx.md`），做到 1对1 精准映射。
 > 3. **末端产物 (`wiki/entities/`、`wiki/concepts/`、`wiki/comparisons/`、`wiki/overview/`) —— 唯一上游只能是 `wiki/sources/`，严禁越级链接 `raw/`**：
 >    - 所有末端产物的合规事实来源，**只能并且必须来自 `wiki/sources/xxx.md`**。
 >    - **严禁越级（No Bypassing）**：末端产物绝对不能绕过 `sources/` 摘要层直接链接到 `raw/` 物理文件！
 >    - **严禁无源虚假生成（No Phantom Generation）**：任何 Frontmatter `sources:` 为空且在全库 `sources/` 中毫无支撑的末端产物，均被定性为“无源虚假生成”，在 Lint 审计与精简中一律直接物理清除。
 
 ### 1.1 原始资料层 (Raw Sources) —— 唯一事实来源，**只读不改**
-作为知识库的底座，所有外部输入均首先归档于此，严格保持只读。
+作为知识库的底座，所有外部输入均首先归档于此，严格保持只读。`raw/` 按内容类型分设子目录：
 
-| 目录           | 用途                                                             | 权限边界     |
-| ------------ | -------------------------------------------------------------- | -------- |
-| `raw/`       | 主文章库——原 Cubox 导入笔记与由 Clippings 剪藏归档的文献全文 100% 收纳于此             | **只读不改** |
-| `Clippings/` | 网页剪藏缓冲区（Staging）——由官方剪藏插件自动保存，**完成 Ingest 入库后必须移动至 `raw/` 归档** | **只读不改** |
+| 目录 | 用途 | 权限边界 |
+|------|------|------|
+| `raw/articles/` | 博客文章、技术分享、新闻报道（**默认归档目录**，Clippings 剪藏的网页文章均归入此处） | **只读不改** |
+| `raw/insights/` | 个人洞察与短篇思考（非完整长文的碎片化观点或短评） | **只读不改** |
+| `raw/papers/` | 学术论文与研究报告（带有明确学术格式的文献） | **只读不改** |
+| `raw/playbooks/` | 操作手册、教程与实战指南（步骤化 SOP 或 How-to 内容） | **只读不改** |
+| `raw/transcripts/` | 讲座、播客、视频的文字版本 | **只读不改** |
+| `Clippings/` | 网页剪藏缓冲区（Staging）——由官方剪藏插件自动保存，**完成 Ingest 入库后必须移动至 `raw/` 对应子目录归档** | **仅限归档移动** |
 
 ### 1.2 知识图谱维护层 (Wiki Layer) —— **由 LLM / Agent 核心生成与维护**
 整个 `wiki/` 目录是 LLM 结构化输出的核心图谱仓库，通过严密的网状双链建立起可复利的知识网络。
 
 | 目录 / 文件 | 命名规范与用途 |
 |------|------|
-| `wiki/sources/` | 单个来源的结构化摘要页（`xxx.md`，`sources:` 字段精确指向唯一上游 `raw/xxx.md`） |
-| `wiki/entities/` | 实体页（`实体_xxx.md`，人物、机构、书籍、开源项目等，`sources:` 只能指向 `wiki/sources/`） |
-| `wiki/concepts/` | 概念页（`概念_xxx.md`，理论、算法、方法论、模型架构等，`sources:` 只能指向 `wiki/sources/`） |
-| `wiki/comparisons/` | 对比分析页（`xxx_vs_yyy.md`，横向对比与技术选型，`sources:` 只能指向 `wiki/sources/`） |
-| `wiki/overview/` | 综述 / 总览页（`综述_xxx.md`，体系化的专题总结，`sources:` 只能指向 `wiki/sources/`） |
+| `wiki/sources/` | 单个来源的结构化摘要页（`xxx.md`，`sources:` 字段精确指向唯一上游 `raw/<子目录>/xxx.md`） |
+| `wiki/entities/` | 实体页（`实体_xxx.md`，人物、机构、书籍、开源项目等） |
+| `wiki/concepts/` | 概念页（`概念_xxx.md`，理论、算法、方法论、模型架构等） |
+| `wiki/comparisons/` | 对比分析页（`xxx_vs_yyy.md`，横向对比与技术选型，`sources:` 只能指向 `wiki/sources/`）**〔按需创建〕** |
+| `wiki/overview/` | 综述 / 总览页（`综述_xxx.md`，体系化的专题总结，`sources:` 只能指向 `wiki/sources/`）**〔按需创建〕** |
 | `wiki/index.md` | Wiki 知识库分类内容总索引 |
 | `wiki/log.md` | 操作流水日志（追溯知识库演化历史） |
 
@@ -49,7 +53,7 @@ This file provides guidance to Claude Code/Codex/Antigravity and other AI Agents
 |------|------|------|
 | `assets/` | **离线多媒体资源库**：仅存放用户手写原创笔记、离线导入或业务文档依赖的本地图片（如 `.png`, `.jpg`）和 `.pdf` 文档。**注意**：为控制 Git 仓库体积，网页剪藏或抓取的网络文章图一律保留公网 Markdown 外链 URL，严禁下载到本目录。 | 静态资源管理 |
 | `workdocs/` | **业务与专题工作文档库**：存放个人的工作交付物、专题调研报告、Word 原始文档（如 `.docx`）及其转化的 Markdown 产物（如 `workdoc-md/`），作为独立于 `wiki/` 图谱的业务资产。 | **Agent 不主动修改原文**，仅可按指令做读取、提炼或归纳沉淀 |
-| `notes/` | **个人随想与手写笔记库**：用户手写的原创独立思考、技术总结与日常心得。 | **Agent 绝对不主动修改** |
+| `notes/` | **个人随想与手写笔记库**：用户手写的原创独立思考、技术总结与日常心得。**〔按需创建〕** | **Agent 绝对不主动修改** |
 
 ### 1.4 自动化工程、脚本与运维支撑层 (Engineering & Maintenance Layer)
 当前项目本质上是一个面向 AI 协同的 **LLM Wiki Repository 工程体系**。为保障 Agent 能够进行持续集成、健康度审查与自动化运维，设立了专有的工程工具与缓冲空间：
@@ -75,35 +79,94 @@ This file provides guidance to Claude Code/Codex/Antigravity and other AI Agents
 type: "source|entity|concept|comparison|overview"
 tags: ["LLM/arch", "AI-Agent/coding"] # 需选用标准 Tag 体系
 summary: "一句话说明这页的核心内容/贡献"
-sources: ["raw/xxx.md"] # 100% 精准锚定物理文件路径
+sources: ["raw/articles/xxx.md"] # 100% 精准锚定物理文件路径（含 raw/ 子目录）
 updated: "YYYY-MM-DD"
 ---
 ```
 
 ### 2.1 Source Summary（来源摘要页）
 - **路径**：`wiki/sources/xxx.md`
+- **Frontmatter 示例**：
+```yaml
+---
+type: "source"
+tags: ["RAG/embedding"]
+summary: "ColBERT 多向量延迟交互机制原理解析"
+sources: ["raw/articles/ColBERT原理与延迟交互机制.md"]
+updated: "2026-07-22"
+---
+```
 - **内容要求**：
   - 来源信息（标题、作者、时间、链接）
   - 核心要点（3–7 条 bullet）与关键引文（可选）
   - 关联实体 / 概念链接（`[[entities/实体_xxx]]` / `[[concepts/概念_yyy]]`）
 - **正文末尾物理文献插链**：为打通 Obsidian 关系图谱可视化连接（避免底层全文呈现为外围孤散点），必须在 Source 摘要页正文最末尾追加双向链接：
-  `> 📎 **物理文献**：[[raw/xxx.md]]`
+  `> 📎 **物理文献**：[[raw/articles/xxx.md]]`（子目录按实际分类调整）
 
 ### 2.2 Entity Page（实体页）
 - **路径**：`wiki/entities/实体_xxx.md`
+- **Frontmatter 示例**：
+```yaml
+---
+type: "entity"
+tags: ["LLM/arch"]
+summary: "OpenAI 联合创始人，Tesla AI 前总监，AI 教育与开源倡导者"
+sources: ["wiki/sources/Karpathy推文引发的LLM_Wiki知识库搭建实践.md"]
+updated: "2026-07-22"
+---
+```
 - **内容要求**：基本信息、行为 / 特征 / 状态、相关事件 / 计划 / 实验链接、来自哪些来源（列出 `sources`）。
 
 ### 2.3 Concept Page（概念页）
 - **路径**：`wiki/concepts/概念_xxx.md`
+- **Frontmatter 示例**：
+```yaml
+---
+type: "concept"
+tags: ["RAG/retrieval"]
+summary: "通过多向量 token 级表示与 MaxSim 延迟交互实现高精度语义检索"
+sources: ["wiki/sources/ColBERT原理与延迟交互机制.md", "wiki/sources/ColBERTv2残差压缩演进.md"]
+updated: "2026-07-22"
+---
+```
 - **内容要求**：定义、使用场景 / 步骤、在本知识库中的应用示例、关联实体 / 其它概念。
 
 ### 2.4 Comparison Page（对比分析页）
 - **路径**：`wiki/comparisons/xxx_vs_yyy.md`
-- **内容要求**：比较对象简介、相同点、不同点（目标、成本、适用场景等）、结论 / 选择建议。
+- **Frontmatter 示例**：
+```yaml
+---
+type: "comparison"
+tags: ["RAG/embedding"]
+summary: "稠密单向量 vs 稀疏词袋 vs 多向量延迟交互三种检索范式对比"
+sources: ["wiki/sources/从BM25到Multi-Vector_6种Embedding演进路线.md"]
+updated: "2026-07-22"
+---
+```
+- **内容要求与正文结构**：
+  1. `## 1. 对比对象概述`：简要说明各对比选型 / 范式的主要定位。
+  2. `## 2. 核心维度对比`：Markdown 横向对比表格（目标场景、性能/成本、优势、局限性等）。
+  3. `## 3. 选型建议与适用场景`：给出明确的决策依据与选型推荐路径。
+  4. `## 4. 支撑来源`：列出所有支撑该对比的 `[[wiki/sources/xxx]]` 摘要页链接。
 
 ### 2.5 Overview / Synthesis（综述 / 总览页）
 - **路径**：`wiki/overview/综述_xxx.md`
-- **内容要求**：一句话结论（Summary）、当前理解 / 总体框架、支撑它的主要来源和页面链接、未决问题 / 待验证假设。
+- **Frontmatter 示例**：
+```yaml
+---
+type: "overview"
+tags: ["RAG"]
+summary: "RAG 技术栈全景：索引、检索、生成三阶段方法论与选型指南"
+sources: ["wiki/sources/RAG基础_索引检索生成.md", "wiki/sources/RAG_12痛点与解决方案.md"]
+updated: "2026-07-22"
+---
+```
+- **内容要求与正文结构**：
+  1. `## 1. 核心结论 (Executive Summary)`：1-3 句话总结该专题的核心框架与未来演进趋势。
+  2. `## 2. 技术全景 / 体系框架`：结构化展开该专题的关键技术模块、演化路线与方法论。
+  3. `## 3. 关联概念与实体图谱`：聚合主要概念 `[[concepts/概念_xxx]]` 与关键实体 `[[entities/实体_yyy]]`。
+  4. `## 4. 待验证问题与未来方向`：列出当前知识库中未解决或有争议的疑问。
+  5. `## 5. 支撑来源树`：分类整理支撑本综述的所有 `[[wiki/sources/xxx]]` 摘要页链接。
 
 ## 3. MCP 集成与工具选择
 Vault 内运行了 **Local REST API with MCP** 插件。当桌面端 Obsidian 打开时，AI Agent 可通过 MCP 工具（`mcp__obsidian__*`）直接读写与搜索 vault。连接配置在根目录 `.mcp.json`（project 范围，已 gitignore）。
@@ -111,24 +174,34 @@ Vault 内运行了 **Local REST API with MCP** 插件。当桌面端 Obsidian �
 - **认证**：Bearer token 在 `.mcp.json` 中
 - **前提**：桌面端 Obsidian 运行中，Local REST API 插件已启用
 
-> [!tip] 优先使用 MCP 工具
-> 对 vault 的实时操作优先使用 MCP 工具（如 `vault_read`、`vault_write`、`vault_patch`、`search_query`、`search_simple`、`tag_list`），因为它们能直接访问 Obsidian 的实时元数据和图谱链接结构。批量处理或脚本自动化场景可直接操作本地 `.md` 物理文件。
-> - `vault_patch`：精准修改 frontmatter（如替换 `tags`：`contentType: application/json`, `operation: replace`）或指定标题下的内容。
+> [!tip] 工具选择与权衡边界
+> AI Agent 在选择操作方式时，必须严格区分 **MCP 工具** 与 **本地 Python/Shell 脚本** 的适用场景：
+> 
+> | 场景类型 | 推荐工具 | 选型依据与典型示例 |
+> |------|------|------|
+> | **单篇 Wiki 检索与交互** | **MCP 工具** (`mcp__obsidian__*`) | 借助 Obsidian 引擎查询实时元数据、Tag 匹配与单页 Frontmatter 补丁（如 `vault_patch`）。 |
+> | **批量治理与图谱工程** | **本地 Python 脚本** (`scripts/*.py`) | 涉及到全库死链诊断、级联精简清理 (`vault_lint.py`)、文本批量正则表达式清洗等高性能操作。 |
+> | **文件归档与物理移动** | **标准 Shell / 文件工具** | 如 Ingest 入库后将剪藏文件从 `Clippings/` 物理移动至 `raw/<子目录>/` 归档。 |
 
 ## 4. 核心工作流（Operations）
-AI Agent 在处理日常任务时，必须遵守以下三大核心操作闭环：
+AI Agent 在处理日常任务时，必须遵守以下核心操作闭环：
 
 ### 4.1 Ingest（新资料入库操作）
 当用户要求把新收藏、新文章或文档进行「入库 / Ingest」时，**必须完整执行以下闭环动作**：
-1. **深度阅读与原始净化**：阅读原始资料（如 `raw/xxx.md` 或 `Clippings/xxx.md`），若正文不足则抓取 URL 全文。提炼 3-7 条核心要点与关键引文。同时顺带执行**语法净化**（转义正文行内 `#xxx` 防止全局 Tag 污染，转义矩阵/张量等非链接的 `[[` 防止幽灵出链）。
-2. **生成 Source 摘要页**：在 `wiki/sources/` 目录下创建对应的 `.md` 摘要页（严格遵守 Frontmatter 格式并在文末追加物理文献链接 `> 📎 **物理文献**：[[raw/xxx.md]]`）。
+1. **深度阅读与原始净化**：阅读原始资料（如 `raw/articles/xxx.md` 或 `Clippings/xxx.md`），若正文不足则抓取 URL 全文。提炼 3-7 条核心要点与关键引文。同时顺带执行**语法净化**：
+   - 行内伪 Tag 转义：正文中非标题的 `#word` → `\#word`（仅转义行内，行首标题 `#` 不动）
+   - 伪双链转义：数学矩阵/张量等非 Obsidian 链接的 `[[...]]` → `\[\[...\]\]`
+2. **生成 Source 摘要页**：在 `wiki/sources/` 目录下创建对应的 `.md` 摘要页（严格遵守 Frontmatter 格式并在文末追加物理文献链接 `> 📎 **物理文献**：[[raw/articles/xxx.md]]`，子目录按实际分类调整）。
 3. **构建双向维基网络**：在 Source 摘要页正文中，凡提及重要技术概念、人物、机构或项目，一律使用 Obsidian 链接格式 `[[entities/实体_xxx]]` 或 `[[concepts/概念_yyy]]` 与知识库产生关联。
 4. **联动 Entities & Concepts**：检查被引用的 `wiki/entities/` 或 `wiki/concepts/` 页面是否存在：
    - 若存在：打开该实体 / 概念页，将新要点或进展更新进去，并在正文或来源中补充关联。
-   - 若不存在但概念核心且高频：在对应目录下创建新页面。
-5. **剪藏文章归档移动（Clippings -> raw）**：
-   - 如果本次 Ingest 的原始文章来源于 `Clippings/` 剪藏缓冲库，**在完成摘要提炼与维基图谱构建后，必须将原始 Markdown 文件从 `Clippings/xxx.md` 移动到 `raw/xxx.md`（作为唯一归档永久保存）**。
-   - 同步确保对应的 `wiki/sources/xxx.md` 摘要页中，Frontmatter 的 `sources:` 字段及文末物理文献插链统一精准指向 `raw/xxx.md`。
+   - 若不存在：**严格依据以下创建门槛判断是否新建页面**（宁缺勿滥）：
+     - **实体创建门槛**：①该人物/机构/项目在文中被深入讨论（≥3 句话），而非仅被顺带提及一次；②预期在知识库其他文章中有交叉引用价值。仅被一笔带过的人名、工具名、数据集名**不创建**。
+     - **概念创建门槛**：①该概念是文章的核心创新点或主要论述对象；②具有跨文章的通用价值，非单篇文章的特有临时命名。通用常识性概念（如"深度学习"）和文章一次性术语**不创建**。
+     - **替代方案**：对于不满足创建门槛但仍值得标记的引用，在 Source 摘要页正文中使用普通文本提及即可，无需创建 `[[]]` 出链。
+5. **剪藏文章归档移动（Clippings → raw）**：
+   - 如果本次 Ingest 的原始文章来源于 `Clippings/` 剪藏缓冲库，**在完成摘要提炼与维基图谱构建后，必须将原始 Markdown 文件从 `Clippings/xxx.md` 移动到 `raw/` 对应子目录（默认 `raw/articles/`）归档永久保存**。分类规则参见 §1.1 子目录表。
+   - 同步确保对应的 `wiki/sources/xxx.md` 摘要页中，Frontmatter 的 `sources:` 字段及文末物理文献插链统一精准指向 `raw/<子目录>/xxx.md`。
 6. **全量同步索引与日志**：
    - 打开 `wiki/index.md`，在对应分类下同步挂载**所有本次新建的 Source、Concept 与 Entity 页面**（严禁只登摘要漏登新建概念 / 实体）。
    - 打开 `wiki/log.md` 追加一笔日志记录：
@@ -146,20 +219,24 @@ AI Agent 在处理日常任务时，必须遵守以下三大核心操作闭环�
    - 必须采用**单线程串行执行**模式。一次仅启动派发 1 个 Subagent 处理当前批次（最多 2 篇）。
    - **严禁并发/并行派发多组 Subagent**，防止不同 Agent 并发修改 `wiki/index.md` 或同一实体/概念页面造成 Git / 文件冲突或逻辑竞争。
 3. **Subagent 闭环职责**：
-   - 派出的 Subagent 必须完整执行 `4.1 Ingest` 的七步闭环 SOP（读取净化、归档至 `raw/articles/`、生成 Source 摘要、联动 Entity/Concept、挂载 `wiki/index.md`、记录 `wiki/log.md` 及事实性自查）。
+   - 派出的 Subagent 必须完整执行 `4.1 Ingest` 的七步闭环 SOP（读取净化、归档至 `raw/` 对应子目录、生成 Source 摘要、联动 Entity/Concept、挂载 `wiki/index.md`、记录 `wiki/log.md` 及事实性自查）。
 4. **主 Agent 逐批硬性验收 (Mandatory Inspection & Fix)**：
-   - 每个 Subagent 任务完成后，**主 Agent 必须立即对该批次产物进行双重验收**：
+   - 每个 Subagent 任务完成后，**主 Agent 必须立即对该批次产物进行三重验收**：
      - **系统层 Lint 扫描**：运行 `python3 scripts/vault_lint.py lint`，核验总索引挂载率 100%、YAML sources 路径 100% 存在、无未转义伪双链；
      - **句级物理事实性核查 (Factuality Audit)**：将生成产物与 `raw/` 物理原文进行 1:1 比对，核查数值、图表、指标、人名、算法与选型结论是否 100% 符实。
-     - **主 Agent 现场修复**：如发现任何格式不对、双链断裂、错别字或事实性偏差，**必须由主 Agent 亲自进行代码/文本修复**。
+     - **创建产出比审查 (Creation Ratio Audit)**：如果单篇文章创建 ≥4 个实体或 ≥4 个概念，主 Agent 应逐个审查必要性，对不符合 §4.1 第4步创建门槛的产物予以清理。
+     - **主 Agent 现场修复**：如发现任何格式不对、双链断裂、错别字、事实性偏差或过度创建，**必须由主 Agent 亲自进行代码/文本修复**。
 5. **批次推进与全量总结**：
    - 仅当主 Agent 确认当前批次验收合格且修复完成后，方可派出下一个 Subagent 处理接下来的 2 篇文章。重复此闭环直至所有 Clippings 移交归档完毕，最后向用户汇报总结报告。
 
 ### 4.3 Query（知识查询与沉淀）
 当用户提问或检索专题知识时：
-1. **精准定位**：优先通过 MCP 搜索或读取 `wiki/index.md` 快速定位候选页面。
+1. **精准定位**：优先通过 MCP 搜索或读取 `wiki/index.md` 快速定位候选页面。若涉及多个关键词，使用多维度交叉检索。
 2. **综合解答**：基于页面内容回答，并给出具体来源引用（如 `如 [[wiki/sources/xxx]] 所述...`）。
-3. **沉淀新知（可选）**：如果回答包含有价值的横向对比、选型分析或架构综述，主动提议将其写入 `wiki/comparisons/` 或 `wiki/overview/`；新建页面务必**在正文插链接入图谱并同步挂载至 `wiki/index.md`**，最后在 `wiki/log.md` 登记 `query | 新建 ...`。
+   - **来源标注纪律**：明确区分"基于库内事实的回答"与"基于 Agent 自身知识的补充"，后者必须标注 `[Agent 知识补充]`。
+   - **跨源综合**：当查询涉及多个 sources 时，对信息进行聚合与去重，标注各来源的一致性或分歧点。
+3. **知识缺口检测（可选）**：若发现用户查询的领域在知识库中覆盖薄弱，主动向用户提示"当前库中关于 XXX 的资料较少，建议补充相关文章收藏"。
+4. **沉淀新知（可选）**：如果回答包含有价值的横向对比、选型分析或架构综述，主动提议将其写入 `wiki/comparisons/` 或 `wiki/overview/`；新建页面务必**在正文插链接入图谱并同步挂载至 `wiki/index.md`**，最后在 `wiki/log.md` 登记 `query | 新建 ...`。
 
 ### 4.4 Lint & Prune（健康检查、精简与图谱垃圾回收）
 当用户要求对知识库进行「Lint / 健康检查 / 精简 / 冲突审查 / 删除收藏」时，**强烈推荐使用项目中预置的自动化脚本工具 `python3 scripts/vault_lint.py`**：
@@ -179,8 +256,26 @@ AI Agent 在处理日常任务时，必须遵守以下三大核心操作闭环�
    - **第四步（登记操作流水）**：在 `wiki/log.md` 登记 `lint/prune | prune raw/xxx.md (+ Cascading cleanup sources, index & gc entities/concepts)`。
 3. **低频实体专项清理 (`python3 scripts/vault_lint.py prune-low-freq-entities`)**：
    - 可针对全库扫描出来的入度 $\le 1$ 的实体页面（尤其是只出现过 1 次的人名实体）进行批量/定向精简清理，同步从 `wiki/index.md` 剔除，保持图谱的高质量与低噪声。
-4. **先提议，再动刀 (`--dry-run` vs `--apply`)**：
-   运行 `python3 scripts/vault_lint.py prune <path>` 默认即为 **Dry-run 模式**，自动向用户输出结构化的「自上而下四步级联影响分析清单」。**严禁未经确认直接大规模动刀**；确认无误后方可运行追加 `--apply` 参数执行正式动刀。
+4. **先提议，再动刀与高危动刀门槛 (`--dry-run` vs `--apply`)**：
+   - 运行 `python3 scripts/vault_lint.py prune <path>` 默认即为 **Dry-run 模式**，自动向用户输出结构化的「自上而下四步级联影响分析清单」。
+   - **高危动刀门槛**：只要某次精简/清理预计影响 **$\ge 5$ 个页面**，Agent **绝对禁止**直接执行带 `--apply` 的动刀命令。必须先向人类报告预演分析清单，获得人类明确许可后方可执行。
+
+### 4.5 Update（已有知识增量更新）
+当已入库的文章原始内容发生更新（如博客追加续篇、论文发布新版），或用户要求对某篇 Source 摘要重新提炼时：
+1. **定位与重读**：定位对应的 `raw/` 原文与 `wiki/sources/` 摘要页，重新阅读更新后的原文内容。
+2. **增量更新摘要**：对 `wiki/sources/` 摘要页进行增量修订（追加新要点、修正过时表述），而非删除重建。更新 Frontmatter 的 `updated` 日期。
+3. **级联同步**：检查摘要页中引用的 `wiki/entities/` 和 `wiki/concepts/` 页面，若原文更新涉及这些实体/概念的新进展或修正，同步更新对应页面。
+4. **登记日志**：在 `wiki/log.md` 追加 `update | wiki/sources/xxx.md (reason: 原文更新/重新提炼)`。
+
+### 4.6 Merge（知识去重与页面合并）
+当发现知识库中存在重复或高度重叠的页面（如同一概念的中英文命名、同一实体的不同表述）时：
+1. **确定保留页与消歧**：优先保留中文主名称、内容更丰富、入链更多的页面作为合并目标（如 `[[concepts/概念_检索增强生成]]` vs `[[concepts/概念_RAG]]` 统一合并至规范页）。
+2. **内容迁移与 Sources 无损合并**：
+   - 将被合并页面的独有要点与引文迁入保留页面。
+   - **Sources 数组无损合并**：合并两页面的 Frontmatter `sources:` 列表并去重，确保上游溯源链断线零丢失。
+3. **全库链接替换**：搜索全库所有引用被合并页面的 `[[]]` 链接，统一自动替换为保留页面的双链。
+4. **清理与索引同步**：删除被合并页面，从 `wiki/index.md` 中剔除对应条目。
+5. **登记日志**：在 `wiki/log.md` 追加 `merge | 概念_A + 概念_B → 概念_A`。
 
 ## 5. Tag 体系
 Tag 统一存放在 YAML frontmatter 的 `tags:` 数组中。严格沿用主库已有的分层 Tag 体系（使用 `/` 分隔），**不另起一套**。主要分支如下：
@@ -212,9 +307,12 @@ Tag 统一存放在 YAML frontmatter 的 `tags:` 数组中。严格沿用主库�
 - **提交信息**：中英文均可，建议带规范类型前缀（如 `docs:`, `chore:`, `feat:` 等）。
 - **Obsidian Git 插件自动提交格式**：`vault backup: {{date}}`
 - **安全红线**：永远不要提交 `.mcp.json`（内含 API Token，已严格在 `.gitignore` 中排除）。
+- **高危动刀防护**：大规模批量修改或清理前，确保 Git 工作区已 commit 干净。影响页面 $\ge 5$ 篇时须强制执行 `--dry-run` 审批。
+- **错误恢复**：Agent 操作出错时（如误删文件、写入错误内容），优先使用 `git checkout -- <file>` 恢复单文件，或 `git reset HEAD~1` 回退最近一次提交。**严禁在出错后继续盲目操作**，应先评估影响范围再决定恢复策略。
 
 ## 7. 关键文件索引
 - `AGENTS.md` — 系统全局架构设计、分层规范与 AI Agent 核心操作总纲（本文件）
-- `HANDOFF.md` — 项目当前进度、近期里程碑与下一步任务
+- `TODO.md` — 系统演化路线、待办需求与里程碑进度
+- `HANDOFF.md` — 项目当前进度、近期里程碑与下一步任务（按需创建）
 - `wiki/index.md` — Wiki 知识层总分类索引
 - `wiki/log.md` — 知识库维护操作流水日志

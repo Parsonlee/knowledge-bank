@@ -71,17 +71,17 @@ confidence: high
 
 ## 关联
 
-- [[概念_PEFT参数高效微调]]
+- PEFT参数高效微调
 - [[概念_LoRA低秩适应微调]]
 - [[概念_LoRA与QLoRA显存]]
-- [[概念_Prefix_Tuning]]
+- Prefix_Tuning
 - [[概念_PPO近端策略优化]]
 - [[概念_DPO]]
 - [[概念_GRPO强化学习]]
-- [[概念_过程奖励与结果奖励]]
-- [[概念_测试时扩展]]
+- 过程奖励与结果奖励
+- 测试时扩展
 - [[概念_Reward_Hacking]]
-- [[实体_TRL框架]]
+- TRL框架
 - [[实体_vLLM]]
 
 ---

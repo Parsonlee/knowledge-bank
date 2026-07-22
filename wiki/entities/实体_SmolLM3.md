@@ -38,6 +38,6 @@ summary: '- 类型：开源 LLM'
 ## 关联
 
 - [[HuggingFace手把手训练大模型实战指南]]
-- [[实体_HuggingFace]]
+- HuggingFace
 - [[概念_多阶段训练策略]]
-- [[概念_GQA分组查询注意力]]
+- GQA分组查询注意力

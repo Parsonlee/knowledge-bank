@@ -47,6 +47,6 @@ sources:
 ## 关联
 
 - [[概念_Agent感知记忆推理三能力]]
-- [[概念_Coding驱动Agent]]
-- [[概念_Agent仿脑区功能分区架构]]
+- Coding驱动Agent
+- Agent仿脑区功能分区架构
 - [[概念_Context_Rot]]

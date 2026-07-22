@@ -36,10 +36,10 @@ confidence: high
 
 - [[概念_MCP协议]] — MCP 基础
 - [[概念_MCP代码执行模式]] — 本文核心模式
-- [[概念_Agent技能沉淀]] — Skills 概念
+- Agent技能沉淀 — Skills 概念
 - [[概念_KV_Cache]] — Token 消耗背景
 - [[实体_Anthropic_Research系统]] — 本文作者所在公司
-- [[实体_Cloudflare]] — 独立发现相同方法
+- Cloudflare — 独立发现相同方法
 
 ---
 > 📎 **物理文献**：[[raw/articles/MCP 遇上代码执行：构建更高效率的 AI 智能体 _ 宝玉的分享.md]]

@@ -27,7 +27,7 @@ confidence: high
 
 ### Vibe Coding 迭代速度
 - CC 本身是 Anthropic 内部 dogfooding 产物，更新极快
-- 一个半月内出现：自定义命令、Hooks、[[概念_Subagent子代理|Subagent]]
+- 一个半月内出现：自定义命令、Hooks、Subagent
 - 悖论：所有人都开上"法拉利"，竞争更激烈
 - 核心忠告：**在 vibe coding 时代，千万别让工具把自己逼死**
 
@@ -82,8 +82,8 @@ confidence: high
 
 ## 关联概念
 
-- [[概念_Claude_Code工作流]]
-- [[概念_Subagent子代理]]
+- Claude_Code工作流
+- Subagent子代理
 - [[概念_CLAUDE.md最佳实践]]
 - [[概念_上下文工程]]
 - [[概念_Vibe_Coding三阶段]]

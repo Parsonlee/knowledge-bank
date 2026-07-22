@@ -100,7 +100,7 @@ confidence: high
 - [[概念_Spec_Driven_Development]]
 - [[实体_Claude_Code]]
 - [[实体_Manus]]
-- [[实体_Kiro]]
+- Kiro
 
 ---
 > 📎 **物理文献**：[[raw/articles/浅谈上下文工程｜从 Claude Code 、Manus 和 Kiro 看提示工....md]]

@@ -1,5 +1,7 @@
 # Wiki Log
 
+## [2026-07-22] lint/prune | 批复审批降级清理 30 篇低频/易过期概念 (含 Veo3 提示词等)，完成 22 处双链降级还原，剔除 Index 索引 30 行
+
 ## [2026-07-22] ingest | Clippings -> raw Batch 4 任务 2 篇新文章 Ingest 入库与归档 (+ affected pages)
 - **深度阅读与语法净化**：对 `Clippings/` 下 2 篇文章进行阅读与语法净化，转义伪 Tag 与伪链接，确保 Markdown 图谱兼容。
 - **完成 2 篇文章 Ingest 闭环与归档移动 (Clippings -> raw/articles/)**：

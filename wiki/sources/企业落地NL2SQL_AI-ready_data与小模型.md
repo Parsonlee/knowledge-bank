@@ -90,9 +90,9 @@ confidence: high
 - [[概念_AI-ready_data]]
 - [[概念_Schema_Linking]]
 - [[概念_M-Schema]]
-- [[概念_AST约束解码]]
+- AST约束解码
 - [[实体_Qwen2.5-Coder]]
-- [[实体_MatrixOne]]
+- MatrixOne
 
 ---
 > 📎 **物理文献**：[[raw/articles/企业落地 NL2SQL，需要的是 AI-ready data 和 小模型.md]]

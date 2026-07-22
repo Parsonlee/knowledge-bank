@@ -40,10 +40,10 @@ confidence: high
 - [[概念_on-policy与off-policy数据]]
 - [[概念_灾难性遗忘]]
 - [[概念_alignment_tax]]
-- [[概念_Forward_KL与Reverse_KL]]
+- Forward_KL与Reverse_KL
 - [[概念_GRPO强化学习]]
 - [[实体_陈丹琦团队]]
-- [[实体_Llama-3]]
+- Llama-3
 - [[实体_Qwen2.5-Coder]]
 
 ---

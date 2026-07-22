@@ -39,4 +39,4 @@ Gemini 是 Google 的 AI 助手 APP，在本批次文章中作为 AIGC 工具出
 
 - [[概念_PPT生成提示词]]
 - [[概念_HTML代码方式生成视觉物料]]
-- [[实体_Veo_3]]
+- Veo_3

@@ -71,6 +71,6 @@ sources:
 
 - [[概念_Prompt工程方法]]
 - [[概念_自适应长短CoT]]
-- [[概念_Decoding_CoT]]
-- [[概念_ToT树状推理]]
-- [[概念_Agent推理规划]]
+- Decoding_CoT
+- ToT树状推理
+- Agent推理规划

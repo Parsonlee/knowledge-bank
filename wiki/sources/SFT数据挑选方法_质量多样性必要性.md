@@ -50,7 +50,7 @@ confidence: high
 - [[概念_SFT数据三维度]]
 - [[实体_DEITA]]
 - [[实体_MoDS]]
-- [[实体_CaR]]
+- CaR
 
 ---
 > 📎 **物理文献**：[[raw/articles/SFT数据挑选方法 - 知乎.md]]

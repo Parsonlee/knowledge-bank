@@ -65,7 +65,7 @@ confidence: high
 - [[概念_Muon优化器]] — Kimi K2 训练创新
 - [[实体_DeepSeek-V3]] — DeepSeek 模型实体
 - [[实体_Kimi_K2]] — Kimi K2 模型实体
-- [[实体_Llama4]] — Meta Llama 4 模型实体
+- Llama4 — Meta Llama 4 模型实体
 - [[2025年七大顶流大模型架构]] — 同主题互补文章
 - [[腾讯混元TurboS技术报告]] — Mamba+MoE 混合架构
 

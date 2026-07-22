@@ -39,7 +39,7 @@ confidence: high
 ## 关联
 
 - [[概念_推测解码]] — Draft-then-Verify 推理加速范式
-- [[概念_自回归解码]] — 推测解码的加速对象
+- 自回归解码 — 推测解码的加速对象
 - [[概念_KV_Cache]] — 推理显存优化的互补技术
 - [[概念_FlashAttention]] — 推理加速另一关键方向
 - [[实体_Medusa]] — Self-Drafting 代表工作，多 FFN Head 并行解码

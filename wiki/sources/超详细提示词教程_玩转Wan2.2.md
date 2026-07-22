@@ -58,7 +58,7 @@ confidence: high
 
 - [[概念_文生视频提示词公式]]
 - [[概念_视频美学控制词典]]
-- [[概念_Veo3视频提示词]]
+- Veo3视频提示词
 
 ## Related Entities
 
