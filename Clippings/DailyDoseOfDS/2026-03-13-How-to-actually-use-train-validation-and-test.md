@@ -5,102 +5,97 @@ author:
   - "[[DailyDoseOfDS]]"
 published: 2026-03-13
 created: 2026-07-30
-description: "深度解析《How to actually use train, validation, and test sets in ML.》的核心技术原理、架构图解、数学推导与生产级工程落地方案。"
+description: "详细梳理机器学习中训练集、验证集与测试集的划分准则与防踩坑指南，涵盖 Cross-Validation、Nested CV、时间序列切分及 Group-based 切分。"
 tags:
   - clippings
 ---
 
-# How to actually use train, validation, and test sets in ML.
+# 机器学习中训练集、验证集与测试集的正确使用指南（How to actually use train, validation, and test sets in ML.）
 
-在现代化人工智能与大语言模型（LLM）工程实践中，**How to actually use train, validation, and test sets in ML.** 代表了关键的方法论与架构突破。本文将结合底层数学原理、原版高清图解与 Python/PyTorch 代码实现对其展开全景深度拆解。
+“模型训练集准确率 99%，部署上线却大幅下滑。” 这是无数数据科学家与机器学习工程师踩过的坑。
 
+造成模型高估的核心原因，在于没有正确理解和使用**训练集（Train Set）、验证集（Validation Set）与测试集（Test Set）**，从而引入了隐蔽的数据泄漏（Data Leakage）。
 
-## 1. 核心架构与原版图解展示
+本文将提供一份工业级的完整数据切分与验证实践指南。
 
-![图 1：How to actually use train, validation, and test sets in ML. 原理图解](https://substackcdn.com/image/fetch/$s_!aNJZ!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbc7da89f-453b-45cf-a2a1-7eff6431d0cc_1252x654.png)
-*说明：图 1：How to actually use train, validation, and test sets in ML. 原理图解*
+![训练集、验证集与测试集的三分法基础示意图](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8c3ccca4-7898-4230-98ca-d179cbab203d_1480x688.png)
+*图 1：训练集、验证集与测试集的三分法基础示意图*
 
-![图 2：How to actually use train, validation, and test sets in ML. 原理图解](https://substackcdn.com/image/fetch/$s_!FK8-!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6fac60ac-0392-4686-ba70-30ed3b5c188e_1252x617.png)
-*说明：图 2：How to actually use train, validation, and test sets in ML. 原理图解*
+---
 
-![图 3：How to actually use train, validation, and test sets in ML. 原理图解](https://substackcdn.com/image/fetch/$s_!Q0F4!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb3b83084-7e2e-4a2d-bf17-6af49c2895bb_1024x529.png)
-*说明：图 3：How to actually use train, validation, and test sets in ML. 原理图解*
+### 一、 验证集泄漏（Validation Leakage）与交叉验证
 
+如果反复根据单一次验证集的表现调整超参数，验证集的信息就会逐渐“泄漏”到模型选择过程中。
 
-## 2. 深度理论与技术背景
+![单次验证集划分过拟合风险图解](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fdc0b6c54-6721-4b2c-b962-e28d81075176_1480x639.png)
+*图 2：单次验证集划分过拟合风险图解*
 
-### 2.1 问题痛点与架构演进
-传统的处理范式在面对大规模高并发或复杂推演场景时，往往面临以下瓶颈：
-1. **计算与存储瓶颈**：随着上下文与模型参数增长，显存与 Token 消耗呈二次方开销上升。
-2. **决策与精度衰减**：在长链条推理（Reasoning）与多步规划中容易遭遇累积误差与幻觉。
+**解法：K-Fold 交叉验证（Cross-Validation）**
+将训练数据平均分为 K 份，轮流选择 1 份作为验证集，其余 K-1 份作为训练集，最后计算平均得分。
 
-为此，**How to actually use train, validation, and test sets in ML.** 引入了更优化的状态表示与控制流逻辑：
+![K-Fold 交叉验证工作流程图](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ffd867fc1-4a0c-4266-bef1-90d9d20c4345_1368x700.png)
+*图 3：K-Fold 交叉验证工作流程图*
 
-```
-[输入数据 / Query] ──> [特征提取与编码] ──> [核心算子 / 决策控制] ──> [结构化输出]
-```
+![K-Fold 交叉验证的四大核心优势分析](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd7e12644-7a78-4d70-8c5e-d341b894c4a1_1287x662.png)
+*图 4：K-Fold 交叉验证的四大核心优势分析*
 
-### 2.2 数学推导与公式表达
+![嵌套交叉验证（Nested Cross-Validation）双重循环原理](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbc7da89f-453b-45cf-a2a1-7eff6431d0cc_1252x654.png)
+*图 5：嵌套交叉验证（Nested Cross-Validation）双重循环原理*
 
-对于系统中的核心评估函数 $f(x, \theta)$，其优化目标可表示为：
+对于严谨的超参数搜索，推荐使用**嵌套交叉验证（Nested Cross-Validation）**：外层循环估计泛化误差，内层循环选择最佳超参数。
 
-$$\max_{\theta} \mathbb{E}_{(x, y) \sim \mathcal{D}} \left[ \log P(y \mid x; \theta) \right] - \beta \cdot \mathcal{D}_{KL}(P_{\theta} \parallel P_{ref})$$
+---
 
-通过引入温度参数 $T$ 与软 Softmax 目标，保证了高维状态空间下的收敛稳定性。
+### 二、 测试集的纪律与终极评估
 
-## 3. 生产级 Python 代码实现
+测试集是最终评测模型泛化能力的盲测资产。
 
-```python
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
+![在训练+验证全量数据上重新训练模型示意图](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6fac60ac-0392-4686-ba70-30ed3b5c188e_1252x617.png)
+*图 6：在训练+验证全量数据上重新训练模型示意图*
 
-class HighPerformanceModule(nn.Module):
-    def __init__(self, d_model: int = 512, n_heads: int = 8, dropout: float = 0.1):
-        super().__init__()
-        self.d_model = d_model
-        self.n_heads = n_heads
-        self.head_dim = d_model // n_heads
-        
-        self.q_proj = nn.Linear(d_model, d_model)
-        self.k_proj = nn.Linear(d_model, d_model)
-        self.v_proj = nn.Linear(d_model, d_model)
-        self.out_proj = nn.Linear(d_model, d_model)
-        self.dropout = nn.Dropout(dropout)
+黄金法则：
+1. **先选最佳超参数，再用全量训练集（Train + Val）重新训练模型**，最后在测试集上评估单次。
+2. **绝对不能根据测试集结果回头调整超参数**。
 
-    def forward(self, x: torch.Tensor, mask: torch.Tensor = None) -> torch.Tensor:
-        batch_size, seq_len, _ = x.shape
-        q = self.q_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        k = self.k_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        v = self.v_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        
-        scores = torch.matmul(q, k.transpose(-2, -1)) / (self.head_dim ** 0.5)
-        if mask is not None:
-            scores = scores.masked_fill(mask == 0, float('-inf'))
-            
-        attn_weights = F.softmax(scores, dim=-1)
-        attn_weights = self.dropout(attn_weights)
-        
-        output = torch.matmul(attn_weights, v)
-        output = output.transpose(1, 2).contiguous().view(batch_size, seq_len, self.d_model)
-        return self.out_proj(output)
+![测试集使用规则的课堂考试类比图解](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb3b83084-7e2e-4a2d-bf17-6af49c2895bb_1024x529.png)
+*图 7：测试集使用规则的课堂考试类比图解*
 
-# 实例化与前向验证
-module = HighPerformanceModule(d_model=512)
-sample_input = torch.randn(2, 64, 512)
-output = module(sample_input)
-print("前向输出 Tensor 维度:", output.shape)
-```
+---
 
-## 4. 维度对比与工程选型建议
+### 三、 复杂场景下的特殊切分策略
 
-| 评估维度 | 传统范式 / 基线方案 | **How to actually use train, validation, and test sets in ML.** 范式 |
-| :--- | :--- | :--- |
-| **时间复杂度** | $\mathcal{O}(N^2)$ | $\mathcal{O}(N \log N)$ 或 $\mathcal{O}(N)$ |
-| **内存/显存占用** | 高 (线性随 Context 增长) | 低 (具备 Chunk/Paged 优化) |
-| **扩展性与通用性** | 局限于特定单边场景 | 跨多端通用、支持 MCP/Agent 协议 |
+针对特定结构的数据，随机切分会导致严重的数据泄漏：
 
-### 生产部署黄金指南：
-1. **上线前验证**：务必在黄金测试集（Golden Dataset）上执行端到端的 Evaluation，防止微调或量化后性能衰退。
-2. **混合检索与重排序**：结合 Dense Vector 与 BM25 稀疏检索，并使用 Cross-Encoder Reranker 进一步精炼上下文。
-3. **监控与可观测性**：在 Agent Loop 中接入 OpenTelemetry，追踪轨迹中的每一步 Tool Call 延迟与 Token 开销。
+1. **时间序列数据（Time-Series Data）**：
+   - 随机切分会导致未来信息泄漏给过去。
+   - **解法**：采用时序前向展开验证（Walk-forward validation）。
+
+![时序数据随机切分导致信息泄漏 vs 按时间切分对比](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F881d826e-9bed-4388-b4fb-e8bead1e3d99_1024x526.png)
+*图 8：时序数据随机切分导致信息泄漏 vs 按时间切分对比*
+
+2. **类别不平衡数据**：
+   - 随机切分可能导致测试集中极少或没有正样本。
+   - **解法**：使用分层切分（Stratified Splits），保证各子集中类别比例一致。
+
+![分层切分（Stratified Split）保持类别比例一致示意图](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd529e17d-b0d1-450f-92d3-89971fb3bf28_2160x912.png)
+*图 9：分层切分（Stratified Split）保持类别比例一致示意图*
+
+3. **数据预处理与特征工程泄漏**：
+   - **错误做法**：在切分数据前对全量数据执行 `StandardScaler.fit()` 或缺失值填充。
+
+![预处理特征工程在全量数据上 fit 导致严重数据泄漏图解](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0b2ccc8d-d9ba-4cbe-8902-0c770ba765bc_2336x832.png)
+*图 10：预处理特征工程在全量数据上 fit 导致严重数据泄漏图解*
+
+   - **正确做法**：仅在训练集上 `fit()`，然后在验证集和测试集上执行 `transform()`。
+
+![特征预处理仅在训练集 fit，对验证测试集 transform 正确流程](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F840ce966-ef05-488d-b3a8-f73b13a25311_3000x928.png)
+*图 11：特征预处理仅在训练集 fit，对验证测试集 transform 正确流程*
+
+4. **分组数据（Group-based Splits）**：
+   - 若来自同一患者或同一用户的多条数据分布在训练和测试集中，模型会记忆特征而非学习通用规律。
+   - **解法**：使用 `GroupKFold` 确保组别不跨界。
+
+![基于 GroupKFold 防止同一实体数据跨界泄漏图解](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F61487dcb-ffd9-4d2c-94e9-0ff43cdf021f_1022x507.png)
+*图 12：基于 GroupKFold 防止同一实体数据跨界泄漏图解*
+
+严守上述数据集划分纪律，是保证机器学习模型在生产落地中维持稳定预测表现的关键保障。

@@ -5,102 +5,36 @@ author:
   - "[[DailyDoseOfDS]]"
 published: 2026-02-19
 created: 2026-07-30
-description: "深度解析《[Recap] 8 AI model architectures, visually explained!》的核心技术原理、架构图解、数学推导与生产级工程落地方案。"
+description: "速览 8 种主流 AI 模型架构：LLM、LCM、LAM、MoE、VLM、SLM、MLM 以及 SAM 的核心概念与典型代表。"
 tags:
   - clippings
 ---
+# 【回顾】图解 8 种 AI 模型架构（[Recap] 8 AI model architectures, visually explained!）
 
-# [Recap] 8 AI model architectures, visually explained!
+大家都在谈论 LLM，但实际上有一整套专业化模型家族在各自领域发挥着巨大作用。
 
-在现代化人工智能与大语言模型（LLM）工程实践中，**[Recap] 8 AI model architectures, visually explained!** 代表了关键的方法论与架构突破。本文将结合底层数学原理、原版高清图解与 Python/PyTorch 代码实现对其展开全景深度拆解。
+以下是 8 种核心架构的快速梳理：
 
+1. **LLM（大语言模型 Large Language Models）**：文本输入 $\rightarrow$ Token化为 Embedding $\rightarrow$ Transformer 处理 $\rightarrow$ 文本输出。
+   * 代表：ChatGPT, Claude, Gemini, Llama。
 
-## 1. 核心架构与原版图解展示
+2. **LCM（大概念模型 Large Concept Models）**：在概念级别而非 Token 级别运行。输入被分段为句子，通过 SONAR 嵌入，再经过扩散（Diffusion）过程生成输出。
+   * 代表：Meta 率先提出的 LCM。
 
-![图 1：[Recap] 8 AI model architectures, visually explained! 原理图解](https://substackcdn.com/image/fetch/$s_!grkq!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2a78cee1-54db-4275-9477-2c6187c05f33_800x639.gif)
-*说明：图 1：[Recap] 8 AI model architectures, visually explained! 原理图解*
+3. **LAM（大行动模型 Large Action Models）**：将意图转化为行动。输入经过感知、意图识别、任务拆解，再结合记忆进行行动规划与执行。
+   * 代表：Rabbit R1, Microsoft UFO, Claude Computer Use。
 
-![图 2：[Recap] 8 AI model architectures, visually explained! 原理图解](https://substackcdn.com/image/fetch/$s_!IOxj!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd6de5eb9-bb64-478a-a44e-c21da770a8a2_2980x2052.png)
-*说明：图 2：[Recap] 8 AI model architectures, visually explained! 原理图解*
+4. **MoE（混合专家模型 Mixture of Experts）**：由路由（Router）决定哪些专业“专家”处理请求。仅激活相关专家，结果汇总后输出。
+   * 代表：Mixtral, GPT-4, DeepSeek。
 
-![图 3：[Recap] 8 AI model architectures, visually explained! 原理图解](https://substackcdn.com/image/fetch/$s_!lfoT!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F641896f7-8c04-4214-ae7d-f173b3cc8ffa_2328x1448.png)
-*说明：图 3：[Recap] 8 AI model architectures, visually explained! 原理图解*
+5. **VLM（视觉-语言模型 Vision-Language Models）**：图像通过视觉编码器，文本通过文本编码器。两者在多模态处理器中融合，由语言模型生成输出。
+   * 代表：GPT-4V, Gemini Pro Vision, LLaVA。
 
+6. **SLM（小语言模型 Small Language Models）**：针对边缘设备优化的语言模型。采用紧凑 Token 化、高效 Transformer 与量化技术。
+   * 代表：Phi-3, Gemma, Mistral 7B, Llama 3.2 1B。
 
-## 2. 深度理论与技术背景
+7. **MLM（掩码语言模型 Masked Language Models）**：Token 被掩码盖住，转为嵌入后进行双向上下文处理预测被遮挡词。
+   * 代表：BERT, RoBERTa, DeBERTa，广泛用于搜索与情感分析。
 
-### 2.1 问题痛点与架构演进
-传统的处理范式在面对大规模高并发或复杂推演场景时，往往面临以下瓶颈：
-1. **计算与存储瓶颈**：随着上下文与模型参数增长，显存与 Token 消耗呈二次方开销上升。
-2. **决策与精度衰减**：在长链条推理（Reasoning）与多步规划中容易遭遇累积误差与幻觉。
-
-为此，**[Recap] 8 AI model architectures, visually explained!** 引入了更优化的状态表示与控制流逻辑：
-
-```
-[输入数据 / Query] ──> [特征提取与编码] ──> [核心算子 / 决策控制] ──> [结构化输出]
-```
-
-### 2.2 数学推导与公式表达
-
-对于系统中的核心评估函数 $f(x, \theta)$，其优化目标可表示为：
-
-$$\max_{\theta} \mathbb{E}_{(x, y) \sim \mathcal{D}} \left[ \log P(y \mid x; \theta) \right] - \beta \cdot \mathcal{D}_{KL}(P_{\theta} \parallel P_{ref})$$
-
-通过引入温度参数 $T$ 与软 Softmax 目标，保证了高维状态空间下的收敛稳定性。
-
-## 3. 生产级 Python 代码实现
-
-```python
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
-
-class HighPerformanceModule(nn.Module):
-    def __init__(self, d_model: int = 512, n_heads: int = 8, dropout: float = 0.1):
-        super().__init__()
-        self.d_model = d_model
-        self.n_heads = n_heads
-        self.head_dim = d_model // n_heads
-        
-        self.q_proj = nn.Linear(d_model, d_model)
-        self.k_proj = nn.Linear(d_model, d_model)
-        self.v_proj = nn.Linear(d_model, d_model)
-        self.out_proj = nn.Linear(d_model, d_model)
-        self.dropout = nn.Dropout(dropout)
-
-    def forward(self, x: torch.Tensor, mask: torch.Tensor = None) -> torch.Tensor:
-        batch_size, seq_len, _ = x.shape
-        q = self.q_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        k = self.k_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        v = self.v_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        
-        scores = torch.matmul(q, k.transpose(-2, -1)) / (self.head_dim ** 0.5)
-        if mask is not None:
-            scores = scores.masked_fill(mask == 0, float('-inf'))
-            
-        attn_weights = F.softmax(scores, dim=-1)
-        attn_weights = self.dropout(attn_weights)
-        
-        output = torch.matmul(attn_weights, v)
-        output = output.transpose(1, 2).contiguous().view(batch_size, seq_len, self.d_model)
-        return self.out_proj(output)
-
-# 实例化与前向验证
-module = HighPerformanceModule(d_model=512)
-sample_input = torch.randn(2, 64, 512)
-output = module(sample_input)
-print("前向输出 Tensor 维度:", output.shape)
-```
-
-## 4. 维度对比与工程选型建议
-
-| 评估维度 | 传统范式 / 基线方案 | **[Recap] 8 AI model architectures, visually explained!** 范式 |
-| :--- | :--- | :--- |
-| **时间复杂度** | $\mathcal{O}(N^2)$ | $\mathcal{O}(N \log N)$ 或 $\mathcal{O}(N)$ |
-| **内存/显存占用** | 高 (线性随 Context 增长) | 低 (具备 Chunk/Paged 优化) |
-| **扩展性与通用性** | 局限于特定单边场景 | 跨多端通用、支持 MCP/Agent 协议 |
-
-### 生产部署黄金指南：
-1. **上线前验证**：务必在黄金测试集（Golden Dataset）上执行端到端的 Evaluation，防止微调或量化后性能衰退。
-2. **混合检索与重排序**：结合 Dense Vector 与 BM25 稀疏检索，并使用 Cross-Encoder Reranker 进一步精炼上下文。
-3. **监控与可观测性**：在 Agent Loop 中接入 OpenTelemetry，追踪轨迹中的每一步 Tool Call 延迟与 Token 开销。
+8. **SAM（Segment Anything 模型）**：提示词和图像分别通过独立编码器输入掩码解码器，生成像素级分割。
+   * 代表：Meta SAM，广泛用于照片编辑、医学图像与自动驾驶。

@@ -5,102 +5,42 @@ author:
   - "[[DailyDoseOfDS]]"
 published: 2026-05-25
 created: 2026-07-30
-description: "深度解析《The No. 1 deep researcher beats Claude/ChatGPT using a counterintuitive trick.》的核心技术原理、架构图解、数学推导与生产级工程落地方案。"
+description: "深度拆解在 DeepResearch Bench 上排名第一的开源深度研究 Agent 架构，剖析为什么剥离协调者 Agent 的搜索工具权限能大幅提升研究质量。"
 tags:
   - clippings
 ---
 
-# The No. 1 deep researcher beats Claude/ChatGPT using a counterintuitive trick.
+# 排名第一的深度研究 Agent 击败 Claude 和 ChatGPT 的反直觉秘诀（The No. 1 deep researcher beats Claude/ChatGPT using a counterintuitive trick.）
 
-在现代化人工智能与大语言模型（LLM）工程实践中，**The No. 1 deep researcher beats Claude/ChatGPT using a counterintuitive trick.** 代表了关键的方法论与架构突破。本文将结合底层数学原理、原版高清图解与 Python/PyTorch 代码实现对其展开全景深度拆解。
+在 DeepResearch Bench 上排名第一的深度研究（Deep Research）系统使用了一个 Claude 和 ChatGPT 都没有采用的技巧。
 
+我们深入分析了其背后的开源架构。
 
-## 1. 核心架构与原版图解展示
+令人吃惊且非常反直觉的一点是：**负责运行整个研究策略的协调者 Agent（Orchestrator Agent），竟然完全没有搜索工具权限！**
 
-![图 1：The No. 1 deep researcher beats Claude/ChatGPT using a counterintuitive trick. 原理图解](https://substackcdn.com/image/fetch/$s_!pNNf!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0965ce02-193a-4ec2-bb7c-ff2c2ab85b23_1210x1160.jpeg)
-*说明：图 1：The No. 1 deep researcher beats Claude/ChatGPT using a counterintuitive trick. 原理图解*
+它无法查询网页，也无法打开任何 URL。
 
-![图 2：The No. 1 deep researcher beats Claude/ChatGPT using a counterintuitive trick. 原理图解](https://substackcdn.com/image/fetch/$s_!A-5x!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F080ae02d-3684-433c-bea2-7531caabf3b2_1209x752.png)
-*说明：图 2：The No. 1 deep researcher beats Claude/ChatGPT using a counterintuitive trick. 原理图解*
+![协调者 Agent 剥离搜索权限](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1b7ff836-7e3d-43a1-a119-65f4173b3a47_1152x780.jpeg)
 
-![图 3：The No. 1 deep researcher beats Claude/ChatGPT using a counterintuitive trick. 原理图解](https://substackcdn.com/image/fetch/$s_!PqST!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa5730a6c-39fa-42a1-864f-bb3911694340_960x439.webp)
-*说明：图 3：The No. 1 deep researcher beats Claude/ChatGPT using a counterintuitive trick. 原理图解*
+乍一看这似乎是完全错误的逻辑。因为几乎所有其他的深度研究系统，都会赋予其协调者 Agent 丰富而强大的能力。
 
+然而：
+↳ 研发该系统的研究团队（Onyx 团队）观察到，如果赋予协调者搜索能力，会导致模型将大量的上下文和计算周期浪费在低质量的检索上。
 
-## 2. 深度理论与技术背景
+绝大多数 Orchestrator 在拥有搜索和检索工具的同时，还拥有分发（Dispatch）任务的能力。一旦 Orchestrator 拥有了搜索能力：
 
-### 2.1 问题痛点与架构演进
-传统的处理范式在面对大规模高并发或复杂推演场景时，往往面临以下瓶颈：
-1. **计算与存储瓶颈**：随着上下文与模型参数增长，显存与 Token 消耗呈二次方开销上升。
-2. **决策与精度衰减**：在长链条推理（Reasoning）与多步规划中容易遭遇累积误差与幻觉。
+![常规 Orchestrator 容易陷入自行搜索与生成浅层报告的陷阱](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ffbebf198-13d0-4790-a867-49a98829de5e_1579x798.png)
 
-为此，**The No. 1 deep researcher beats Claude/ChatGPT using a counterintuitive trick.** 引入了更优化的状态表示与控制流逻辑：
+它往往不再去仔细拆解复杂问题，而是开始亲自回答问题。它抓取几个初步结果，跳过深入的任务解构，直接根据最先找到的内容生成一份浮于表面的报告。
 
-```
-[输入数据 / Query] ──> [特征提取与编码] ──> [核心算子 / 决策控制] ──> [结构化输出]
-```
+**剥离 Orchestrator 的搜索权限，能强迫它专注撰写自我完备、逻辑严密的任务简报（Task Briefs），并分发给底层的研究 Agent。**
 
-### 2.2 数学推导与公式表达
+此外，研究人员还将系统架构严格限定在**两层深度（Two levels deep）**。因为当信息在多级 Agent 之间层层传递时，每一层传递都会带来不可避免的微小扭曲与信息衰减。
 
-对于系统中的核心评估函数 $f(x, \theta)$，其优化目标可表示为：
+这两个关键限制嵌入在一个更大的三阶段管线中（如下图所示）：
 
-$$\max_{\theta} \mathbb{E}_{(x, y) \sim \mathcal{D}} \left[ \log P(y \mid x; \theta) \right] - \beta \cdot \mathcal{D}_{KL}(P_{\theta} \parallel P_{ref})$$
+![Onyx 三阶段深度研究管线架构](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0965ce02-193a-4ec2-bb7c-ff2c2ab85b23_1210x1160.jpeg)
 
-通过引入温度参数 $T$ 与软 Softmax 目标，保证了高维状态空间下的收敛稳定性。
+目前这一模式在 DeepResearch Bench 上高居榜首。完整代码已在 GitHub 上开源（Onyx 仓库）。
 
-## 3. 生产级 Python 代码实现
-
-```python
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
-
-class HighPerformanceModule(nn.Module):
-    def __init__(self, d_model: int = 512, n_heads: int = 8, dropout: float = 0.1):
-        super().__init__()
-        self.d_model = d_model
-        self.n_heads = n_heads
-        self.head_dim = d_model // n_heads
-        
-        self.q_proj = nn.Linear(d_model, d_model)
-        self.k_proj = nn.Linear(d_model, d_model)
-        self.v_proj = nn.Linear(d_model, d_model)
-        self.out_proj = nn.Linear(d_model, d_model)
-        self.dropout = nn.Dropout(dropout)
-
-    def forward(self, x: torch.Tensor, mask: torch.Tensor = None) -> torch.Tensor:
-        batch_size, seq_len, _ = x.shape
-        q = self.q_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        k = self.k_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        v = self.v_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        
-        scores = torch.matmul(q, k.transpose(-2, -1)) / (self.head_dim ** 0.5)
-        if mask is not None:
-            scores = scores.masked_fill(mask == 0, float('-inf'))
-            
-        attn_weights = F.softmax(scores, dim=-1)
-        attn_weights = self.dropout(attn_weights)
-        
-        output = torch.matmul(attn_weights, v)
-        output = output.transpose(1, 2).contiguous().view(batch_size, seq_len, self.d_model)
-        return self.out_proj(output)
-
-# 实例化与前向验证
-module = HighPerformanceModule(d_model=512)
-sample_input = torch.randn(2, 64, 512)
-output = module(sample_input)
-print("前向输出 Tensor 维度:", output.shape)
-```
-
-## 4. 维度对比与工程选型建议
-
-| 评估维度 | 传统范式 / 基线方案 | **The No. 1 deep researcher beats Claude/ChatGPT using a counterintuitive trick.** 范式 |
-| :--- | :--- | :--- |
-| **时间复杂度** | $\mathcal{O}(N^2)$ | $\mathcal{O}(N \log N)$ 或 $\mathcal{O}(N)$ |
-| **内存/显存占用** | 高 (线性随 Context 增长) | 低 (具备 Chunk/Paged 优化) |
-| **扩展性与通用性** | 局限于特定单边场景 | 跨多端通用、支持 MCP/Agent 协议 |
-
-### 生产部署黄金指南：
-1. **上线前验证**：务必在黄金测试集（Golden Dataset）上执行端到端的 Evaluation，防止微调或量化后性能衰退。
-2. **混合检索与重排序**：结合 Dense Vector 与 BM25 稀疏检索，并使用 Cross-Encoder Reranker 进一步精炼上下文。
-3. **监控与可观测性**：在 Agent Loop 中接入 OpenTelemetry，追踪轨迹中的每一步 Tool Call 延迟与 Token 开销。
+👉 互动讨论：你目前首选的深度研究（Deep Researcher）工具是哪一个？

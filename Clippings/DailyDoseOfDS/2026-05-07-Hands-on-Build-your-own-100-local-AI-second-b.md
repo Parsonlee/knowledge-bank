@@ -5,102 +5,89 @@ author:
   - "[[DailyDoseOfDS]]"
 published: 2026-05-07
 created: 2026-07-30
-description: "深度解析《[Hands-on] Build your own 100% local AI second brain.》的核心技术原理、架构图解、数学推导与生产级工程落地方案。"
+description: "实战指南：使用开源工具 Rowboat 构建 100% 本地运行的 AI 第二大脑，将 Gmail、日历与会议记录转化为自演进的知识图谱。"
 tags:
   - clippings
 ---
 
-# [Hands-on] Build your own 100% local AI second brain.
+# [实战] 构建 100% 本地的 AI 第二大脑（[Hands-on] Build your own 100% local AI second brain.）
 
-在现代化人工智能与大语言模型（LLM）工程实践中，**[Hands-on] Build your own 100% local AI second brain.** 代表了关键的方法论与架构突破。本文将结合底层数学原理、原版高清图解与 Python/PyTorch 代码实现对其展开全景深度拆解。
+Karpathy 曾提出过利用 LLM 构建个人 Wiki 知识库的模式。本文将介绍如何使用开源项目 **Rowboat** 在本地构建一个 100% 私密、自动演进的 AI 第二大脑。
 
+与传统 Wiki 编译静态概念页面不同，Rowboat 捕捉的是真实工作流中不断演进的人际、项目与决策关联。
 
-## 1. 核心架构与原版图解展示
+---
 
-![图 1：[Hands-on] Build your own 100% local AI second brain. 原理图解](https://substackcdn.com/image/fetch/$s_!c-15!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F59c609d6-420b-445c-a1d7-0623a2c37f11_680x445.png)
-*说明：图 1：[Hands-on] Build your own 100% local AI second brain. 原理图解*
+### 结构与配置
 
-![图 2：[Hands-on] Build your own 100% local AI second brain. 原理图解](https://substackcdn.com/image/fetch/$s_!O_Tx!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbeb31673-1dc4-4299-8cd1-39c041dfae9e_680x419.png)
-*说明：图 2：[Hands-on] Build your own 100% local AI second brain. 原理图解*
+Rowboat 将所有数据以标准 Markdown 格式保存在本地目录 `~/.rowboat/` 中，零格式锁定：
 
-![图 3：[Hands-on] Build your own 100% local AI second brain. 原理图解](https://substackcdn.com/image/fetch/$s_!7wEU!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc4db3dce-d50e-4994-8b77-1e1c768cb875_680x419.png)
-*说明：图 3：[Hands-on] Build your own 100% local AI second brain. 原理图解*
+![Rowboat CLI 启动与配置](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa6a742ee-e6f1-4a6a-bb03-5119f0d662ca_679x212.png)
 
+你可以随意选择本地模型（如 Ollama、LM Studio）或云端 LLM Provider（OpenAI, Anthropic, OpenRouter）：
 
-## 2. 深度理论与技术背景
+![模型 Provider 配置](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1b5a8a77-a753-47ab-b057-fb20f6905b01_679x579.png)
 
-### 2.1 问题痛点与架构演进
-传统的处理范式在面对大规模高并发或复杂推演场景时，往往面临以下瓶颈：
-1. **计算与存储瓶颈**：随着上下文与模型参数增长，显存与 Token 消耗呈二次方开销上升。
-2. **决策与精度衰减**：在长链条推理（Reasoning）与多步规划中容易遭遇累积误差与幻觉。
+![托管 API 配置](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb6021554-ff5e-4377-a876-f4a42d0c5bf7_680x571.png)
 
-为此，**[Hands-on] Build your own 100% local AI second brain.** 引入了更优化的状态表示与控制流逻辑：
+![UI 设置中的密钥绑定](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6daff8a0-5159-4db8-b90a-98afa7588eda_680x467.png)
 
-```
-[输入数据 / Query] ──> [特征提取与编码] ──> [核心算子 / 决策控制] ──> [结构化输出]
-```
+连接 Google OAuth 凭据后，系统能安全无缝地同步 Gmail、Calendar 以及 Drive 数据：
 
-### 2.2 数学推导与公式表达
+![Google OAuth 同步流程](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4e072a61-28be-4ff4-a169-85888533eb65_680x635.png)
 
-对于系统中的核心评估函数 $f(x, \theta)$，其优化目标可表示为：
+首次同步完成后，知识图谱开始构建：
 
-$$\max_{\theta} \mathbb{E}_{(x, y) \sim \mathcal{D}} \left[ \log P(y \mid x; \theta) \right] - \beta \cdot \mathcal{D}_{KL}(P_{\theta} \parallel P_{ref})$$
+![同步完成图谱准备就绪](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F59c609d6-420b-445c-a1d7-0623a2c37f11_680x445.png)
 
-通过引入温度参数 $T$ 与软 Softmax 目标，保证了高维状态空间下的收敛稳定性。
+---
 
-## 3. 生产级 Python 代码实现
+### 本地 Vault 目录结构
 
-```python
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
+同步后，`~/.rowboat/` 目录正式生效：
 
-class HighPerformanceModule(nn.Module):
-    def __init__(self, d_model: int = 512, n_heads: int = 8, dropout: float = 0.1):
-        super().__init__()
-        self.d_model = d_model
-        self.n_heads = n_heads
-        self.head_dim = d_model // n_heads
-        
-        self.q_proj = nn.Linear(d_model, d_model)
-        self.k_proj = nn.Linear(d_model, d_model)
-        self.v_proj = nn.Linear(d_model, d_model)
-        self.out_proj = nn.Linear(d_model, d_model)
-        self.dropout = nn.Dropout(dropout)
+![磁盘上的 Vault 结构](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbeb31673-1dc4-4299-8cd1-39c041dfae9e_680x419.png)
 
-    def forward(self, x: torch.Tensor, mask: torch.Tensor = None) -> torch.Tensor:
-        batch_size, seq_len, _ = x.shape
-        q = self.q_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        k = self.k_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        v = self.v_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        
-        scores = torch.matmul(q, k.transpose(-2, -1)) / (self.head_dim ** 0.5)
-        if mask is not None:
-            scores = scores.masked_fill(mask == 0, float('-inf'))
-            
-        attn_weights = F.softmax(scores, dim=-1)
-        attn_weights = self.dropout(attn_weights)
-        
-        output = torch.matmul(attn_weights, v)
-        output = output.transpose(1, 2).contiguous().view(batch_size, seq_len, self.d_model)
-        return self.out_proj(output)
+核心知识沉淀在 `knowledge/` 目录中：
 
-# 实例化与前向验证
-module = HighPerformanceModule(d_model=512)
-sample_input = torch.randn(2, 64, 512)
-output = module(sample_input)
-print("前向输出 Tensor 维度:", output.shape)
-```
+![knowledge 目录架构](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc4db3dce-d50e-4994-8b77-1e1c768cb875_680x419.png)
 
-## 4. 维度对比与工程选型建议
+包含了 `People/`, `Organizations/`, `Projects/`, `Topics/` 等子文件夹：
 
-| 评估维度 | 传统范式 / 基线方案 | **[Hands-on] Build your own 100% local AI second brain.** 范式 |
-| :--- | :--- | :--- |
-| **时间复杂度** | $\mathcal{O}(N^2)$ | $\mathcal{O}(N \log N)$ 或 $\mathcal{O}(N)$ |
-| **内存/显存占用** | 高 (线性随 Context 增长) | 低 (具备 Chunk/Paged 优化) |
-| **扩展性与通用性** | 局限于特定单边场景 | 跨多端通用、支持 MCP/Agent 协议 |
+![实体分类文件夹](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa5d4cf07-32e6-4e13-bfc8-40bb8d9e7f89_680x283.png)
 
-### 生产部署黄金指南：
-1. **上线前验证**：务必在黄金测试集（Golden Dataset）上执行端到端的 Evaluation，防止微调或量化后性能衰退。
-2. **混合检索与重排序**：结合 Dense Vector 与 BM25 稀疏检索，并使用 Cross-Encoder Reranker 进一步精炼上下文。
-3. **监控与可观测性**：在 Agent Loop 中接入 OpenTelemetry，追踪轨迹中的每一步 Tool Call 延迟与 Token 开销。
+**精妙的设计抉择**：Rowboat 不会盲目为垃圾邮件或营销链接创建实体，只有积累了实质信号后才会创建对应的实体 Markdown 文件。
+
+---
+
+### 知识图谱查询与交互
+
+你可以对构建好的图谱进行自然语言查询：
+
+![查询 Sarah 的最新进展与返回简报](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff8530385-d0db-4e75-af52-a1acfaeddd6a_680x428.png)
+
+在返回的简报中，所有 `[[entity]]` 均为可点击的双向链接，点击可跳转至底层实体节点：
+
+![点击双向链接查看实体节点细节](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe97f9824-21f1-4c5e-b892-5a4cbf0d4ac7_680x428.png)
+
+询问日程会议上下文：
+
+![查询今日会议背景信息](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff43c9ad2-232a-45ed-9cd9-8225d67aa9bb_680x359.png)
+
+---
+
+### 知识图谱随时间演进
+
+随着新邮件与会议不断涌入，新信号会自动附加到现有实体节点上：
+
+![知识图谱随时间增长不断变密](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9c189cd4-baaa-496f-82e6-8b356de31ac0_679x370.png)
+
+当联系人发送最新反馈时，更新会直接追加至原有的实体节点中，而不会生成重复文件：
+
+![实体节点动态追加与演进](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F73f5b093-ceef-4175-b293-2bfd6189e112_680x187.png)
+
+Rowboat 完全本地运行、Apache-2.0 开源，所有文件纯 Markdown 存储，保证了极高的隐私防护与自主可控性：
+
+![安全架构与总结](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1a28fe2f-0085-4f14-871e-7d15fb7fd47e_680x370.png)
+
+GitHub 开源地址：`github.com/rowboatlabs/rowboat`

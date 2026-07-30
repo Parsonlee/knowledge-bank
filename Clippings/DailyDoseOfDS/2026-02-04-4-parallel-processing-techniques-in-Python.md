@@ -1,106 +1,90 @@
 ---
-title: "4 parallel processing techniques in Python."
+title: "4 parallel processing techniques in Python"
 source: "https://mail.google.com/mail/u/0/#inbox/19c2a80854fc31f8"
 author:
   - "[[DailyDoseOfDS]]"
 published: 2026-02-04
 created: 2026-07-30
-description: "深度解析《4 parallel processing techniques in Python.》的核心技术原理、架构图解、数学推导与生产级工程落地方案。"
+description: "对比 Python 中的 4 种并行处理技术：多线程、多进程、协程以及子解释器，并解析无 GIL（Free-threaded）Python 3.13+ 的未来趋势。"
 tags:
   - clippings
 ---
+# Python 中的 4 种并行处理技术（4 parallel processing techniques in Python）
 
-# 4 parallel processing techniques in Python.
+为了解锁真正的并行计算，Python 开发者通常使用 4 种截然不同的技术：多线程（Threads）、多进程（Multiprocessing）、协程（Coroutines）和子解释器（Subinterpreters）。每种技术解决不同的问题，选错技术可能会浪费大量精力。
 
-在现代化人工智能与大语言模型（LLM）工程实践中，**4 parallel processing techniques in Python.** 代表了关键的方法论与架构突破。本文将结合底层数学原理、原版高清图解与 Python/PyTorch 代码实现对其展开全景深度拆解。
+### 理解核心问题与 GIL
 
+默认情况下，即便你的机器拥有 8 核或 16 核 CPU，Python 代码也只在单个 CPU 核心上运行。
 
-## 1. 核心架构与原版图解展示
+原因在于：**全局解释器锁（GIL，Global Interpreter Lock）**。
 
-![图 1：4 parallel processing techniques in Python. 原理图解](https://substackcdn.com/image/fetch/$s_!cJ94!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9da59be7-af15-4a4c-bac5-884d92c0e368_1456x507.png)
-*说明：图 1：4 parallel processing techniques in Python. 原理图解*
+GIL 确保同一时刻只有一个线程执行 Python 字节码，这防止了竞态条件，但同时也阻碍了 CPU 密集型任务的真正并行执行。
 
-![图 2：4 parallel processing techniques in Python. 原理图解](https://substackcdn.com/image/fetch/$s_!0NME!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F49c0a84a-d19a-46e3-a5d5-87d33d737fd5_1456x1010.png)
-*说明：图 2：4 parallel processing techniques in Python. 原理图解*
+![Python 单核与 GIL 限制](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F82a6bba4-26c3-4210-ba2e-70cf07cb913d_1456x507.png)
 
-![图 3：4 parallel processing techniques in Python. 原理图解](https://substackcdn.com/image/fetch/$s_!u64R!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff6f3954e-a443-4da6-9aa5-7bfa8c7afb59_1024x323.png)
-*说明：图 3：4 parallel processing techniques in Python. 原理图解*
+基准单线程代码示例如下：
 
+![单线程基准代码示例](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff12912bf-3ee4-471c-a8fa-8ef17f7eb2ea_1456x1048.png)
 
-## 2. 深度理论与技术背景
+## 4 种主流并行技术
 
-### 2.1 问题痛点与架构演进
-传统的处理范式在面对大规模高并发或复杂推演场景时，往往面临以下瓶颈：
-1. **计算与存储瓶颈**：随着上下文与模型参数增长，显存与 Token 消耗呈二次方开销上升。
-2. **决策与精度衰减**：在长链条推理（Reasoning）与多步规划中容易遭遇累积误差与幻觉。
+### 1. 多线程（Threads）
 
-为此，**4 parallel processing techniques in Python.** 引入了更优化的状态表示与控制流逻辑：
+线程是运行在同一进程内存空间内的轻量级工作者。但在传统 Python 中，由于 GIL 的限制，同一时间只能有一个线程在执行：
 
-```
-[输入数据 / Query] ──> [特征提取与编码] ──> [核心算子 / 决策控制] ──> [结构化输出]
-```
+![多线程示意图](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9da59be7-af15-4a4c-bac5-884d92c0e368_1456x507.png)
 
-### 2.2 数学推导与公式表达
+多线程代码示例：
 
-对于系统中的核心评估函数 $f(x, \theta)$，其优化目标可表示为：
+![多线程代码示例](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F49c0a84a-d19a-46e3-a5d5-87d33d737fd5_1456x1010.png)
 
-$$\max_{\theta} \mathbb{E}_{(x, y) \sim \mathcal{D}} \left[ \log P(y \mid x; \theta) \right] - \beta \cdot \mathcal{D}_{KL}(P_{\theta} \parallel P_{ref})$$
+**结果：完全没有提速。** 线程在 GIL 约束下交替顺序运行。GIL 在 I/O 操作期间会释放，因此多线程对于 I/O 密集型有效，但对 CPU 密集型任务无效。
 
-通过引入温度参数 $T$ 与软 Softmax 目标，保证了高维状态空间下的收敛稳定性。
+### 2. 多进程（Multiprocessing）
 
-## 3. 生产级 Python 代码实现
+每个进程都有独立的内存空间和独立的 GIL，这使得它们能够在不同的 CPU 核心上真正并行运行：
 
-```python
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
+![多进程示意图](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff6f3954e-a443-4da6-9aa5-7bfa8c7afb59_1024x323.png)
 
-class HighPerformanceModule(nn.Module):
-    def __init__(self, d_model: int = 512, n_heads: int = 8, dropout: float = 0.1):
-        super().__init__()
-        self.d_model = d_model
-        self.n_heads = n_heads
-        self.head_dim = d_model // n_heads
-        
-        self.q_proj = nn.Linear(d_model, d_model)
-        self.k_proj = nn.Linear(d_model, d_model)
-        self.v_proj = nn.Linear(d_model, d_model)
-        self.out_proj = nn.Linear(d_model, d_model)
-        self.dropout = nn.Dropout(dropout)
+多进程代码示例：
 
-    def forward(self, x: torch.Tensor, mask: torch.Tensor = None) -> torch.Tensor:
-        batch_size, seq_len, _ = x.shape
-        q = self.q_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        k = self.k_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        v = self.v_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        
-        scores = torch.matmul(q, k.transpose(-2, -1)) / (self.head_dim ** 0.5)
-        if mask is not None:
-            scores = scores.masked_fill(mask == 0, float('-inf'))
-            
-        attn_weights = F.softmax(scores, dim=-1)
-        attn_weights = self.dropout(attn_weights)
-        
-        output = torch.matmul(attn_weights, v)
-        output = output.transpose(1, 2).contiguous().view(batch_size, seq_len, self.d_model)
-        return self.out_proj(output)
+![多进程代码示例](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6c277862-fc67-4bc1-aef3-70f8a5e08185_1456x1053.png)
 
-# 实例化与前向验证
-module = HighPerformanceModule(d_model=512)
-sample_input = torch.randn(2, 64, 512)
-output = module(sample_input)
-print("前向输出 Tensor 维度:", output.shape)
-```
+两个进程同时运行，获得了接近 **6 倍** 的加速效果：
 
-## 4. 维度对比与工程选型建议
+![多进程执行加速效果](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8fb36fee-c3bd-462e-b6ea-3c5477e54244_1024x268.png)
 
-| 评估维度 | 传统范式 / 基线方案 | **4 parallel processing techniques in Python.** 范式 |
-| :--- | :--- | :--- |
-| **时间复杂度** | $\mathcal{O}(N^2)$ | $\mathcal{O}(N \log N)$ 或 $\mathcal{O}(N)$ |
-| **内存/显存占用** | 高 (线性随 Context 增长) | 低 (具备 Chunk/Paged 优化) |
-| **扩展性与通用性** | 局限于特定单边场景 | 跨多端通用、支持 MCP/Agent 协议 |
+**注意事项**：进程创建开销大于线程；由于没有共享内存，交换数据需要进程间通信（IPC，如 Pipe、Queue），增加了复杂度。
 
-### 生产部署黄金指南：
-1. **上线前验证**：务必在黄金测试集（Golden Dataset）上执行端到端的 Evaluation，防止微调或量化后性能衰退。
-2. **混合检索与重排序**：结合 Dense Vector 与 BM25 稀疏检索，并使用 Cross-Encoder Reranker 进一步精炼上下文。
-3. **监控与可观测性**：在 Agent Loop 中接入 OpenTelemetry，追踪轨迹中的每一步 Tool Call 延迟与 Token 开销。
+### 3. 协程（Coroutines）
+
+协程在单线程内实现协作式多任务。代码在 `await` 点显式交出控制权：
+
+![协程工作示意图](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7a255bc2-5763-4d5c-a24e-c30c265c988c_1024x268.png)
+
+协程代码示例：
+
+![协程代码示例](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F01ef2268-7ea1-4ca0-8bbb-893538209731_1456x1329.png)
+
+协程提供的是**并发（Concurrency）**而非**并行（Parallelism）**，对纯 CPU 计算无收益，但在处理高并发网络或数据库 I/O 时表现极为优异。
+
+### 4. 子解释器（Subinterpreters）
+
+子解释器是在单个进程内创建隔离的执行环境。每个环境拥有独立的内存空间和独立的 GIL，比多进程开销小：
+
+![子解释器架构图](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2c84d423-4b6e-4e7f-9ff7-41ef1cd000e9_1024x559.png)
+
+子解释器代码示例：
+
+![子解释器代码示例](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4fea7c10-aebd-4621-9fdf-d6004b01f0f0_1456x922.png)
+
+子解释器在 Python 3.12+ 引入，在 3.14+ 结合 `InterpreterPoolExecutor` 可以取得优异的加速。
+
+### 无 GIL Python（Free-threaded Python）与技术选型总结
+
+Python 3.13 引入了可禁用 GIL 的自由线程构建版本。禁用 GIL 后，线程即可直接用于 CPU 密集型并行任务。
+
+技术选型总结决策图：
+
+![Python 并行技术决策指南图](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3f9496a5-b3d5-4b20-8494-6a496340b078_1456x1087.png)

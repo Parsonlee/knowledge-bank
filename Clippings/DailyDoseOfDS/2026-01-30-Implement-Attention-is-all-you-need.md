@@ -1,106 +1,128 @@
 ---
-title: "Implement \"Attention is all you need\""
+title: "Implement "Attention is all you need""
 source: "https://mail.google.com/mail/u/0/#inbox/19c102bf0ed3e544"
 author:
   - "[[DailyDoseOfDS]]"
 published: 2026-01-30
 created: 2026-07-30
-description: "深度解析《Implement \\"Attention is all you need\\"》的核心技术原理、架构图解、数学推导与生产级工程落地方案。"
+description: "从零开始用 Python 实现经典的 Transformer 架构，深入解析编码器-解码器结构、多头自注意力机制、位置编码、Teacher Forcing 训练与自回归生成。"
 tags:
   - clippings
 ---
+# 从零实现《Attention Is All You Need》论文架构（Implement "Attention is all you need"）
 
-# Implement "Attention is all you need"
+这篇论文彻底改变了人工智能领域！
 
-在现代化人工智能与大语言模型（LLM）工程实践中，**Implement "Attention is all you need"** 代表了关键的方法论与架构突破。本文将结合底层数学原理、原版高清图解与 Python/PyTorch 代码实现对其展开全景深度拆解。
+![Transformer 论文背景与介绍](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff4e5c7ab-2fa0-4927-81db-606a2e7bbd07_680x470.png)
 
+今天我们将一步步构建完整的 Transformer 模型：
 
-## 1. 核心架构与原版图解展示
+![Transformer 完整架构全景图](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F63d5a19d-4aaf-4644-b840-6f936f83f3d3_680x409.png)
 
-![图 1：Implement "Attention is all you need" 原理图解](https://substackcdn.com/image/fetch/$s_!0Q5B!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3489744b-e209-41a7-9510-b9764b216e36_680x441.png)
-*说明：图 1：Implement "Attention is all you need" 原理图解*
+关键核心组件包含：
+* 编码器与解码器堆叠（Encoder & Decoder stacks）
+* 多头注意力层（Multi-head attention layers）
+* 逐位置前馈网络（Position-wise feed-forward networks）
+* 位置编码（Positional encoding）
 
-![图 2：Implement "Attention is all you need" 原理图解](https://substackcdn.com/image/fetch/$s_!0JEu!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb63cd858-550d-4609-a61e-d79b182be500_680x408.png)
-*说明：图 2：Implement "Attention is all you need" 原理图解*
+接下来让我们逐一拆解！
 
-![图 3：Implement "Attention is all you need" 原理图解](https://substackcdn.com/image/fetch/$s_!u9jo!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fba71d4dd-6238-4cdd-b094-d52d51f3c27b_680x441.png)
-*说明：图 3：Implement "Attention is all you need" 原理图解*
+## 1️⃣ 核心两大组件：Encoder 与 Decoder
 
+![Encoder 与 Decoder 大图展示](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F139a27f1-6933-485f-82d9-d155e2061849_680x441.png)
 
-## 2. 深度理论与技术背景
+* **Encoder**：处理输入序列（如英文句子）；
+* **Decoder**：生成目标输出序列（如西班牙语翻译）。
 
-### 2.1 问题痛点与架构演进
-传统的处理范式在面对大规模高并发或复杂推演场景时，往往面临以下瓶颈：
-1. **计算与存储瓶颈**：随着上下文与模型参数增长，显存与 Token 消耗呈二次方开销上升。
-2. **决策与精度衰减**：在长链条推理（Reasoning）与多步规划中容易遭遇累积误差与幻觉。
+架构中各包含 6 个相同的块堆叠而成。
 
-为此，**Implement "Attention is all you need"** 引入了更优化的状态表示与控制流逻辑：
+## 2️⃣ 编码器层：自注意力 + FFN
 
-```
-[输入数据 / Query] ──> [特征提取与编码] ──> [核心算子 / 决策控制] ──> [结构化输出]
-```
+每个编码器层有两个子层：
 
-### 2.2 数学推导与公式表达
+![Encoder 层结构图](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fce7db420-2efa-4308-9f4e-115458aad59e_680x441.png)
 
-对于系统中的核心评估函数 $f(x, \theta)$，其优化目标可表示为：
+* 多头自注意力（关注输入序列整体上下文）；
+* 逐位置前馈网络（Position-wise Feed-Forward Network）。
 
-$$\max_{\theta} \mathbb{E}_{(x, y) \sim \mathcal{D}} \left[ \log P(y \mid x; \theta) \right] - \beta \cdot \mathcal{D}_{KL}(P_{\theta} \parallel P_{ref})$$
+每个子层外侧均包含残差连接与层归一化（Layer Normalization）。
 
-通过引入温度参数 $T$ 与软 Softmax 目标，保证了高维状态空间下的收敛稳定性。
+## 3️⃣ 解码器层结构
 
-## 3. 生产级 Python 代码实现
+解码器层包含三个子层：
 
-```python
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
+![Decoder 层结构图](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F92659555-38e6-468a-a314-027d9c13b793_680x441.png)
 
-class HighPerformanceModule(nn.Module):
-    def __init__(self, d_model: int = 512, n_heads: int = 8, dropout: float = 0.1):
-        super().__init__()
-        self.d_model = d_model
-        self.n_heads = n_heads
-        self.head_dim = d_model // n_heads
-        
-        self.q_proj = nn.Linear(d_model, d_model)
-        self.k_proj = nn.Linear(d_model, d_model)
-        self.v_proj = nn.Linear(d_model, d_model)
-        self.out_proj = nn.Linear(d_model, d_model)
-        self.dropout = nn.Dropout(dropout)
+* 掩码自注意力（Masked self-attention，遮挡未来 Token）；
+* 编码器-解码器交叉注意力（Encoder-Decoder cross-attention）；
+* 逐位置前馈网络。
 
-    def forward(self, x: torch.Tensor, mask: torch.Tensor = None) -> torch.Tensor:
-        batch_size, seq_len, _ = x.shape
-        q = self.q_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        k = self.k_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        v = self.v_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        
-        scores = torch.matmul(q, k.transpose(-2, -1)) / (self.head_dim ** 0.5)
-        if mask is not None:
-            scores = scores.masked_fill(mask == 0, float('-inf'))
-            
-        attn_weights = F.softmax(scores, dim=-1)
-        attn_weights = self.dropout(attn_weights)
-        
-        output = torch.matmul(attn_weights, v)
-        output = output.transpose(1, 2).contiguous().view(batch_size, seq_len, self.d_model)
-        return self.out_proj(output)
+生成过程在此发生！
 
-# 实例化与前向验证
-module = HighPerformanceModule(d_model=512)
-sample_input = torch.randn(2, 64, 512)
-output = module(sample_input)
-print("前向输出 Tensor 维度:", output.shape)
-```
+## 4️⃣ 多头注意力机制（Multi-Head Attention）
 
-## 4. 维度对比与工程选型建议
+![多头注意力机制结构](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa8a032fb-f5d5-4279-94c4-4cba0cbf33bc_680x394.png)
 
-| 评估维度 | 传统范式 / 基线方案 | **Implement "Attention is all you need"** 范式 |
-| :--- | :--- | :--- |
-| **时间复杂度** | $\mathcal{O}(N^2)$ | $\mathcal{O}(N \log N)$ 或 $\mathcal{O}(N)$ |
-| **内存/显存占用** | 高 (线性随 Context 增长) | 低 (具备 Chunk/Paged 优化) |
-| **扩展性与通用性** | 局限于特定单边场景 | 跨多端通用、支持 MCP/Agent 协议 |
+更多的注意力头意味着更多的参数与更强的模式学习灵活性：
 
-### 生产部署黄金指南：
-1. **上线前验证**：务必在黄金测试集（Golden Dataset）上执行端到端的 Evaluation，防止微调或量化后性能衰退。
-2. **混合检索与重排序**：结合 Dense Vector 与 BM25 稀疏检索，并使用 Cross-Encoder Reranker 进一步精炼上下文。
-3. **监控与可观测性**：在 Agent Loop 中接入 OpenTelemetry，追踪轨迹中的每一步 Tool Call 延迟与 Token 开销。
+![不同 Attention Head 捕获的不同语义特征关系](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe1bc1a3e-1d46-4597-8735-e8513146d248_680x441.png)
+
+* Head 1：学习主谓关系；
+* Head 2：学习形容词与名词修饰关系；
+* Head 3：学习长距离依赖……最后将所有头的输出拼接。
+
+## 5️⃣ 核心算法：自注意力（Self-attention）
+
+这是整个架构的灵魂！
+
+![Self-Attention 公式推导与计算过程图](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3489744b-e209-41a7-9510-b9764b216e36_680x441.png)
+
+著名的计算公式：
+$$\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V$$
+
+* **Q (Query)**：“我在寻找什么信息？”
+* **K (Key)**：“可提供哪些信息？”
+* **V (Value)**：“实际返回的信息内容是什么？”
+
+## 6️⃣ 前馈网络：思考层（FFN）
+
+注意力计算完成后，每个位置将被独立处理：
+
+![FFN 网络逻辑图](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb63cd858-550d-4609-a61e-d79b182be500_680x408.png)
+
+$$\text{FFN}(x) = \max(0, xW_1 + b_1)W_2 + b_2$$
+
+即：线性变换 $\rightarrow$ ReLU 激活 $\rightarrow$ 线性变换。
+
+## 7️⃣ 位置编码（Positional Encoding）
+
+由于注意力机制本身没有位置顺序感，我们需要显式注入位置信息：
+
+![位置编码函数变化关系图](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fba71d4dd-6238-4cdd-b094-d52d51f3c27b_680x441.png)
+
+通过不同频率的正弦和余弦函数生成唯一的位置模式。
+
+## 8️⃣ 训练机制（Training）
+
+在训练阶段：
+
+![Transformer 训练过程图](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0a6a4c16-9e60-4cf5-94fe-96fe7cb0d511_680x448.png)
+
+编码器编码源语言句子，解码器获得右移（Shift Right）后的目标语句进行 Teacher Forcing：
+
+![Right-Shift 机制与 Masking](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1c7ecc54-6b12-4063-8e97-1fb40bba9dea_680x408.png)
+
+![Cross-entropy 损失对比与梯度反传](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0c14ec22-8aa2-4813-bd47-fb8c1e071b80_680x408.png)
+
+右移能够让解码器利用历史正解 Token 进行下一 Token 的并行训练预测。
+
+## 9️⃣ 推理过程：自回归生成（Autoregressive Generation）
+
+在推理测试阶段，生成是按步进行的自回归过程：
+
+![自回归推理预测图](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7f2225e9-8fdc-4643-9d82-127a61dea7d7_680x599.png)
+
+编码器只运行一次，解码器运行多次：
+* Step 1: $\rightarrow$ "Hola"
+* Step 2: , Hola $\rightarrow$ "mi"
+* 依次推进，每一步结合之前的预测结果！

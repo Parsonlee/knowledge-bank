@@ -1,103 +1,28 @@
 ---
-title: "6 Types of contexts for AI Agents."
+title: "AI Agent 的 6 类上下文"
 source: "https://mail.google.com/mail/u/0/#inbox/199f3a89f1a116c9"
 author:
   - "[[DailyDoseOfDS]]"
 published: 2025-10-17
 created: 2026-07-30
-description: "深度解析《6 Types of contexts for AI Agents.》的核心技术原理、架构图解、数学推导与生产级工程落地方案。"
+description: "邮件将 Agent 的上下文拆为指令、示例、知识、记忆、工具及工具结果六层，强调完整上下文比单一提示词更能决定长程 Agent 的可靠性。"
 tags:
   - clippings
 ---
 
-# 6 Types of contexts for AI Agents.
+# AI Agent 的 6 类上下文
 
-在现代化人工智能与大语言模型（LLM）工程实践中，**6 Types of contexts for AI Agents.** 代表了关键的方法论与架构突破。本文将结合底层数学原理、原版高清图解与 Python/PyTorch 代码实现对其展开全景深度拆解。
+邮件的中心观点是：合适的上下文能让能力较弱的 LLM 工作起来；反过来，再先进的模型也无法弥补上下文缺失。生产级 LLM 应用需要的不是一条指令，而是一套定义推理、记忆和决策循环的结构。因而，先进 Agent 架构把上下文当作多维设计层，而非提示词中的一行文本。
 
+## 六个层次
 
-## 1. 核心架构与原版图解展示
+1. **指令（Instructions）**：规定 Agent 是谁、为何行动及如何行动，例如角色（PM、研究员、编程助手）、目标／预期结果、步骤、语气、输出格式与约束。
+2. **示例（Examples）**：展示正确与错误的样子，可包含行为演示、结构化样例和反模式。邮件认为模型从模式中学习通常优于只接收文字规则。
+3. **知识（Knowledge）**：提供业务流程、API、数据模型与工作流等领域信息，把文本预测连接到实际决策。
+4. **记忆（Memory）**：使 Agent 跨会话保持连续性；短期记忆可包括当前推理步骤和聊天历史，长期记忆则包括事实、公司知识与用户偏好。
+5. **工具（Tools）**：令 Agent 能超越语言而执行现实操作。每项工具应具备参数、输入和示例；工具设计会影响外部 API 的使用质量。
+6. **工具结果（Tool Results）**：把调用结果重新提供给模型，以支持自我纠错、适应和动态决策。
 
-![图 1：6 Types of contexts for AI Agents. 原理图解](https://substackcdn.com/image/fetch/$s_!G0j0!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe0d48cef-a494-4f71-ac49-c5cd52134b4a_960x880.gif)
-*说明：图 1：6 Types of contexts for AI Agents. 原理图解*
+邮件认为这六层共同构成“上下文感知”的 Agent；Claude Code、现实中的 Agent 与记忆工具已采用相同方向。对长程、多步骤任务而言，上下文工程正成为核心能力。
 
-![图 2：6 Types of contexts for AI Agents. 原理图解](https://substackcdn.com/image/fetch/$s_!2XN5!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7996e8fe-8eae-4db4-9ebb-c595c3f8f681_960x741.gif)
-*说明：图 2：6 Types of contexts for AI Agents. 原理图解*
-
-
-## 2. 深度理论与技术背景
-
-### 2.1 问题痛点与架构演进
-传统的处理范式在面对大规模高并发或复杂推演场景时，往往面临以下瓶颈：
-1. **计算与存储瓶颈**：随着上下文与模型参数增长，显存与 Token 消耗呈二次方开销上升。
-2. **决策与精度衰减**：在长链条推理（Reasoning）与多步规划中容易遭遇累积误差与幻觉。
-
-为此，**6 Types of contexts for AI Agents.** 引入了更优化的状态表示与控制流逻辑：
-
-```
-[输入数据 / Query] ──> [特征提取与编码] ──> [核心算子 / 决策控制] ──> [结构化输出]
-```
-
-### 2.2 数学推导与公式表达
-
-对于系统中的核心评估函数 $f(x, \theta)$，其优化目标可表示为：
-
-$$\max_{\theta} \mathbb{E}_{(x, y) \sim \mathcal{D}} \left[ \log P(y \mid x; \theta) \right] - \beta \cdot \mathcal{D}_{KL}(P_{\theta} \parallel P_{ref})$$
-
-通过引入温度参数 $T$ 与软 Softmax 目标，保证了高维状态空间下的收敛稳定性。
-
-## 3. 生产级 Python 代码实现
-
-```python
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
-
-class HighPerformanceModule(nn.Module):
-    def __init__(self, d_model: int = 512, n_heads: int = 8, dropout: float = 0.1):
-        super().__init__()
-        self.d_model = d_model
-        self.n_heads = n_heads
-        self.head_dim = d_model // n_heads
-        
-        self.q_proj = nn.Linear(d_model, d_model)
-        self.k_proj = nn.Linear(d_model, d_model)
-        self.v_proj = nn.Linear(d_model, d_model)
-        self.out_proj = nn.Linear(d_model, d_model)
-        self.dropout = nn.Dropout(dropout)
-
-    def forward(self, x: torch.Tensor, mask: torch.Tensor = None) -> torch.Tensor:
-        batch_size, seq_len, _ = x.shape
-        q = self.q_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        k = self.k_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        v = self.v_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        
-        scores = torch.matmul(q, k.transpose(-2, -1)) / (self.head_dim ** 0.5)
-        if mask is not None:
-            scores = scores.masked_fill(mask == 0, float('-inf'))
-            
-        attn_weights = F.softmax(scores, dim=-1)
-        attn_weights = self.dropout(attn_weights)
-        
-        output = torch.matmul(attn_weights, v)
-        output = output.transpose(1, 2).contiguous().view(batch_size, seq_len, self.d_model)
-        return self.out_proj(output)
-
-# 实例化与前向验证
-module = HighPerformanceModule(d_model=512)
-sample_input = torch.randn(2, 64, 512)
-output = module(sample_input)
-print("前向输出 Tensor 维度:", output.shape)
-```
-
-## 4. 维度对比与工程选型建议
-
-| 评估维度 | 传统范式 / 基线方案 | **6 Types of contexts for AI Agents.** 范式 |
-| :--- | :--- | :--- |
-| **时间复杂度** | $\mathcal{O}(N^2)$ | $\mathcal{O}(N \log N)$ 或 $\mathcal{O}(N)$ |
-| **内存/显存占用** | 高 (线性随 Context 增长) | 低 (具备 Chunk/Paged 优化) |
-| **扩展性与通用性** | 局限于特定单边场景 | 跨多端通用、支持 MCP/Agent 协议 |
-
-### 生产部署黄金指南：
-1. **上线前验证**：务必在黄金测试集（Golden Dataset）上执行端到端的 Evaluation，防止微调或量化后性能衰退。
-2. **混合检索与重排序**：结合 Dense Vector 与 BM25 稀疏检索，并使用 Cross-Encoder Reranker 进一步精炼上下文。
-3. **监控与可观测性**：在 Agent Loop 中接入 OpenTelemetry，追踪轨迹中的每一步 Tool Call 延迟与 Token 开销。
+文中还链接了一个涵盖 Agent 基础、工具与结构化输出、Flows、多人／多 Crew 项目、护栏、异步、回调、人类参与、多模态、记忆、ReAct、规划和多 Agent 模式的 [Agentic systems 系列课程](https://www.dailydoseofds.com/ai-agents-crash-course-part-1-with-implementation/)。

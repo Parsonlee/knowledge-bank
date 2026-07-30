@@ -1,106 +1,78 @@
 ---
-title: "Anatomy of the .claude/ folder."
+title: "Anatomy of the .claude/ folder"
 source: "https://mail.google.com/mail/u/0/#inbox/19d1c347f366b9ac"
 author:
   - "[[DailyDoseOfDS]]"
 published: 2026-03-23
 created: 2026-07-30
-description: "深度解析《Anatomy of the .claude/ folder.》的核心技术原理、架构图解、数学推导与生产级工程落地方案。"
+description: "全面剖析 Claude Code 项目中的 .claude/ 目录结构，详解 CLAUDE.md、rules/、commands/、skills/、agents/ 和 settings.json 的配置最佳实践。"
 tags:
   - clippings
 ---
+# .claude/ 文件夹的剖析（Anatomy of the .claude/ folder）
 
-# Anatomy of the .claude/ folder.
+![.claude 文件夹全景](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc772fb7f-94c1-42e6-83f9-c040ab875309_1068x600.png)
 
-在现代化人工智能与大语言模型（LLM）工程实践中，**Anatomy of the .claude/ folder.** 代表了关键的方法论与架构突破。本文将结合底层数学原理、原版高清图解与 Python/PyTorch 代码实现对其展开全景深度拆解。
+对于许多 Claude Code 用户来说，项目根目录下的 `.claude` 文件夹就像一个黑盒——大家都知道它的存在，但鲜有人主动打开它并搞清楚里面每个文件的作用。
 
+实际上，**`.claude` 文件夹是调教和控制 Claude Code 在你项目中行为的指挥中心。** 它保存着团队规范、自定义斜杠命令、安全权限策略乃至跨 Session 的持久化记忆。
 
-## 1. 核心架构与原版图解展示
+---
 
-![图 1：Anatomy of the .claude/ folder. 原理图解](https://substackcdn.com/image/fetch/$s_!fLrt!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F692fdd01-f40d-4d30-9947-de28aec0bad7_680x369.png)
-*说明：图 1：Anatomy of the .claude/ folder. 原理图解*
+## 两个目录，而非一个
 
-![图 2：Anatomy of the .claude/ folder. 原理图解](https://substackcdn.com/image/fetch/$s_!tVYn!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9b9ba300-beed-43b3-a6cd-919715885bdb_680x370.png)
-*说明：图 2：Anatomy of the .claude/ folder. 原理图解*
+在深入细节前，首先需要区分两个不同的 `.claude` 目录：
 
-![图 3：Anatomy of the .claude/ folder. 原理图解](https://substackcdn.com/image/fetch/$s_!ZHzE!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fefd043e5-89f6-4538-9a50-f0a8e2c41047_680x370.png)
-*说明：图 3：Anatomy of the .claude/ folder. 原理图解*
+![双目录示意图](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3b81cc25-df87-4ea8-a11b-9a719d5836b1_1166x1176.png)
 
+1. **项目级目录（`<project-root>/.claude/`）**：存放团队共享配置，必须提交到 Git。确保团队中的每位成员拥有完全统一的编码规范、自定义命令与安全策略。
+2. **全局用户级目录（`~/.claude/`）**：存放个人偏好设置与本地状态，如历史 Session 记录和自动记忆。
 
-## 2. 深度理论与技术背景
+---
 
-### 2.1 问题痛点与架构演进
-传统的处理范式在面对大规模高并发或复杂推演场景时，往往面临以下瓶颈：
-1. **计算与存储瓶颈**：随着上下文与模型参数增长，显存与 Token 消耗呈二次方开销上升。
-2. **决策与精度衰减**：在长链条推理（Reasoning）与多步规划中容易遭遇累积误差与幻觉。
+## `CLAUDE.md`：Claude 的核心操作手册
 
-为此，**Anatomy of the .claude/ folder.** 引入了更优化的状态表示与控制流逻辑：
+这是整个系统中最关键的文件。每次启动 Claude Code 会话时，系统读取的第一份文件就是 `CLAUDE.md`，并将其直接注入 System Prompt。
 
-```
-[输入数据 / Query] ──> [特征提取与编码] ──> [核心算子 / 决策控制] ──> [结构化输出]
-```
+### 推荐写入的内容（Do's）：
+* **构建、测试与 Lint 命令**：例如 `npm run test`, `make build`；
+* **关键架构决策**：例如“我们使用 Turborepo 架构”；
+* **非显性编码规定**：例如“TypeScript strict mode 开启，禁止使用 `any`”；
+* **模块目录规范**：主模块的文件组织风格。
 
-### 2.2 数学推导与公式表达
+### 切勿写入的内容（Don'ts）：
+* 应该由 Formatter/Linter 自动处理的代码格式细节；
+* 冗长的外部文档抄录；
+* 理论推导长篇大论。
 
-对于系统中的核心评估函数 $f(x, \theta)$，其优化目标可表示为：
+> **最佳实践**：保持 `CLAUDE.md` 在 **200 行以内**。超出 200 行后不仅浪费 Context，模型的指令遵循率也会显著下降。
 
-$$\max_{\theta} \mathbb{E}_{(x, y) \sim \mathcal{D}} \left[ \log P(y \mid x; \theta) \right] - \beta \cdot \mathcal{D}_{KL}(P_{\theta} \parallel P_{ref})$$
+---
 
-通过引入温度参数 $T$ 与软 Softmax 目标，保证了高维状态空间下的收敛稳定性。
+## `.claude/` 内部子目录结构拆解
 
-## 3. 生产级 Python 代码实现
+![子目录结构](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0bddbd7c-d987-4c70-a38b-44db8104f8d7_680x369.png)
 
-```python
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
+### 1. `CLAUDE.local.md`
+用于覆盖个人本地的特殊指令（自动加入 `.gitignore`）。
 
-class HighPerformanceModule(nn.Module):
-    def __init__(self, d_model: int = 512, n_heads: int = 8, dropout: float = 0.1):
-        super().__init__()
-        self.d_model = d_model
-        self.n_heads = n_heads
-        self.head_dim = d_model // n_heads
-        
-        self.q_proj = nn.Linear(d_model, d_model)
-        self.k_proj = nn.Linear(d_model, d_model)
-        self.v_proj = nn.Linear(d_model, d_model)
-        self.out_proj = nn.Linear(d_model, d_model)
-        self.dropout = nn.Dropout(dropout)
+### 2. `rules/` 目录
+放置模块化的工程指令集，支持按文件路径或触发条件动态加载，避免单个 `CLAUDE.md` 过载。
 
-    def forward(self, x: torch.Tensor, mask: torch.Tensor = None) -> torch.Tensor:
-        batch_size, seq_len, _ = x.shape
-        q = self.q_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        k = self.k_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        v = self.v_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        
-        scores = torch.matmul(q, k.transpose(-2, -1)) / (self.head_dim ** 0.5)
-        if mask is not None:
-            scores = scores.masked_fill(mask == 0, float('-inf'))
-            
-        attn_weights = F.softmax(scores, dim=-1)
-        attn_weights = self.dropout(attn_weights)
-        
-        output = torch.matmul(attn_weights, v)
-        output = output.transpose(1, 2).contiguous().view(batch_size, seq_len, self.d_model)
-        return self.out_proj(output)
+### 3. `commands/` 目录
+放置自定义的斜杠命令脚本（Slash Commands）。你可以定义 `/deploy` 或 `/check-api`，并支持传递动态参数。
 
-# 实例化与前向验证
-module = HighPerformanceModule(d_model=512)
-sample_input = torch.randn(2, 64, 512)
-output = module(sample_input)
-print("前向输出 Tensor 维度:", output.shape)
-```
+### 4. `skills/` 目录
+存放可复用的复杂工作流与 Agent 工具技能（Skills）。
 
-## 4. 维度对比与工程选型建议
+### 5. `agents/` 目录
+配置专门的 Subagent 人设（Personas），例如专精 Code Review、安全审计或文档撰写的分离角色。
 
-| 评估维度 | 传统范式 / 基线方案 | **Anatomy of the .claude/ folder.** 范式 |
-| :--- | :--- | :--- |
-| **时间复杂度** | $\mathcal{O}(N^2)$ | $\mathcal{O}(N \log N)$ 或 $\mathcal{O}(N)$ |
-| **内存/显存占用** | 高 (线性随 Context 增长) | 低 (具备 Chunk/Paged 优化) |
-| **扩展性与通用性** | 局限于特定单边场景 | 跨多端通用、支持 MCP/Agent 协议 |
+### 6. `settings.json`
+配置权限管控（Permissions）、自动批准命令白名单与工程设置。
 
-### 生产部署黄金指南：
-1. **上线前验证**：务必在黄金测试集（Golden Dataset）上执行端到端的 Evaluation，防止微调或量化后性能衰退。
-2. **混合检索与重排序**：结合 Dense Vector 与 BM25 稀疏检索，并使用 Cross-Encoder Reranker 进一步精炼上下文。
-3. **监控与可观测性**：在 Agent Loop 中接入 OpenTelemetry，追踪轨迹中的每一步 Tool Call 延迟与 Token 开销。
+---
+
+## 总结
+
+搞懂 `.claude/` 目录的解构，你就能把 Claude Code 从一个通用的代码生成助手，打造成完全契合你团队架构理念的自动化 AI 工程师。

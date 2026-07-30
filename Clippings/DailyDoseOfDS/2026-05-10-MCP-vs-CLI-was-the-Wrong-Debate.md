@@ -5,99 +5,61 @@ author:
   - "[[DailyDoseOfDS]]"
 published: 2026-05-10
 created: 2026-07-30
-description: "深度解析《MCP vs CLI was the wrong debate.》的核心技术原理、架构图解、数学推导与生产级工程落地方案。"
+description: "深入剖析 Agent 工具调用领域的“MCP vs CLI”争论，解释为什么真正的范式革新是 Anthropic 提出的 Code Mode（代码模式）。"
 tags:
   - clippings
 ---
 
-# MCP vs CLI was the wrong debate.
+# MCP 与 CLI 之争是一个错误的辩题（MCP vs CLI was the wrong debate.）
 
-在现代化人工智能与大语言模型（LLM）工程实践中，**MCP vs CLI was the wrong debate.** 代表了关键的方法论与架构突破。本文将结合底层数学原理、原版高清图解与 Python/PyTorch 代码实现对其展开全景深度拆解。
+在 2025 年的大部分时间里，AI 工程师们都在为 Agent 应该如何调用工具而争论不休。
 
+一方主张使用 **MCP（Model Context Protocol）**——Anthropic 推出的用于将 Agent 连接到外部服务的通用协议；另一方则主张使用传统的 **CLI（命令行工具）**。
 
-## 1. 核心架构与原版图解展示
+双方都有各自切实的依据，但双方也都忽略了最核心的焦点。
 
-![图 1：MCP vs CLI was the wrong debate. 原理图解](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F437225d5-c382-4f8e-9ea3-88bb9b0e78b5_1554x274.gif)
-*说明：图 1：MCP vs CLI was the wrong debate. 原理图解*
+---
 
-![图 2：MCP vs CLI was the wrong debate. 原理图解](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fcfdae765-ee44-49e5-a16b-ff8df6cb4e51_2884x1139.png)
-*说明：图 2：MCP vs CLI was the wrong debate. 原理图解*
+### 双方各自看对了什么
 
+- **质疑 MCP 的工程师** 测量了 MCP 服务器在 Context 中占用的真实开销：把每一个工具的完整 JSON Schema 都载入 Prompt 中，还没开始提问就已经消耗了上万 Token。
+- **支持 MCP 的工程师** 则强调多租户与类型安全：在企业级场景下，需要统一的标准规范、鉴权机制与类型约束。
 
-## 2. 深度理论与技术背景
+如果你在思考“究竟哪一种方式会赢？”，那你就掉入了错误的思维陷阱中。
 
-### 2.1 问题痛点与架构演进
-传统的处理范式在面对大规模高并发或复杂推演场景时，往往面临以下瓶颈：
-1. **计算与存储瓶颈**：随着上下文与模型参数增长，显存与 Token 消耗呈二次方开销上升。
-2. **决策与精度衰减**：在长链条推理（Reasoning）与多步规划中容易遭遇累积误差与幻觉。
+---
 
-为此，**MCP vs CLI was the wrong debate.** 引入了更优化的状态表示与控制流逻辑：
+### 问题的重构：Code Mode 的诞生
 
-```
-[输入数据 / Query] ──> [特征提取与编码] ──> [核心算子 / 决策控制] ──> [结构化输出]
-```
+2025 年 11 月 4 日，Anthropic 发表了 *《Code execution with MCP》*，一举改变了整个对话格局。
 
-### 2.2 数学推导与公式表达
+**问题从来不在于协议本身，而在于过去习惯于在 Agent 一启动时就将每一个工具的全量描述一股脑塞进 Context 中。**
 
-对于系统中的核心评估函数 $f(x, \theta)$，其优化目标可表示为：
+如果加上这些工具返回的原始数据，并在每一步推理中反复跨模型传递，单个工作流的 Token 消耗就会瞬间爆炸。
 
-$$\max_{\theta} \mathbb{E}_{(x, y) \sim \mathcal{D}} \left[ \log P(y \mid x; \theta) \right] - \beta \cdot \mathcal{D}_{KL}(P_{\theta} \parallel P_{ref})$$
+Anthropic 提出的解决方案是**颠覆模型的工作机制**：模型不再直接通过上下文环境去单步调用工具，而是直接**编写代码（Write Code）**来组合与调用它们。
 
-通过引入温度参数 $T$ 与软 Softmax 目标，保证了高维状态空间下的收敛稳定性。
+在 Anthropic 的示例中，需要将 Google Drive 中的会议转录记录同步更新到 Salesforce CRM。传统做法是将两个 Tool 的 Schema 全部载入 Context 中；而新的做法是让 Agent 编写一段小脚本来完成数据拉取与转化。
 
-## 3. 生产级 Python 代码实现
+Cloudflare 随后将这一模式推向了极致：他们将其包含 2,500 个端点的庞大 API 从 **117 万 Token 的 Schema 载入量，一举缩减到了仅 1K Token！**
 
-```python
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
+---
 
-class HighPerformanceModule(nn.Module):
-    def __init__(self, d_model: int = 512, n_heads: int = 8, dropout: float = 0.1):
-        super().__init__()
-        self.d_model = d_model
-        self.n_heads = n_heads
-        self.head_dim = d_model // n_heads
-        
-        self.q_proj = nn.Linear(d_model, d_model)
-        self.k_proj = nn.Linear(d_model, d_model)
-        self.v_proj = nn.Linear(d_model, d_model)
-        self.out_proj = nn.Linear(d_model, d_model)
-        self.dropout = nn.Dropout(dropout)
+### 新的 Code Mode 范式
 
-    def forward(self, x: torch.Tensor, mask: torch.Tensor = None) -> torch.Tensor:
-        batch_size, seq_len, _ = x.shape
-        q = self.q_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        k = self.k_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        v = self.v_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        
-        scores = torch.matmul(q, k.transpose(-2, -1)) / (self.head_dim ** 0.5)
-        if mask is not None:
-            scores = scores.masked_fill(mask == 0, float('-inf'))
-            
-        attn_weights = F.softmax(scores, dim=-1)
-        attn_weights = self.dropout(attn_weights)
-        
-        output = torch.matmul(attn_weights, v)
-        output = output.transpose(1, 2).contiguous().view(batch_size, seq_len, self.d_model)
-        return self.out_proj(output)
+Code Mode 是一种全新的运行时，Agent 在其中编写融合了以下两大原语的代码：
 
-# 实例化与前向验证
-module = HighPerformanceModule(d_model=512)
-sample_input = torch.randn(2, 64, 512)
-output = module(sample_input)
-print("前向输出 Tensor 维度:", output.shape)
-```
+1. **Bash**：适用于系统已安装的经典命令行工具（如 `git`, `curl`, `grep`）。模型在预训练数据中早已见过这些命令，完全不需要额外载入工具定义 Schema，Shell 会自动高效执行。
+2. **带类型的模块导入（Typed module imports）**：适用于专有 API（如 Salesforce, Stripe 或公司内部微服务）。类型签名随着 import 动态引入，Agent 在严格的类型契约下编写代码。
 
-## 4. 维度对比与工程选型建议
+类型契约随导入生效，Agent 在明确的接口约束下编写代码，不仅绝无幻觉，而且中间处理过程（如过滤、循环、数组转换）全都在代码运行时中完成，无需模型多次 Round-trip。
 
-| 评估维度 | 传统范式 / 基线方案 | **MCP vs CLI was the wrong debate.** 范式 |
-| :--- | :--- | :--- |
-| **时间复杂度** | $\mathcal{O}(N^2)$ | $\mathcal{O}(N \log N)$ 或 $\mathcal{O}(N)$ |
-| **内存/显存占用** | 高 (线性随 Context 增长) | 低 (具备 Chunk/Paged 优化) |
-| **扩展性与通用性** | 局限于特定单边场景 | 跨多端通用、支持 MCP/Agent 协议 |
+---
 
-### 生产部署黄金指南：
-1. **上线前验证**：务必在黄金测试集（Golden Dataset）上执行端到端的 Evaluation，防止微调或量化后性能衰退。
-2. **混合检索与重排序**：结合 Dense Vector 与 BM25 稀疏检索，并使用 Cross-Encoder Reranker 进一步精炼上下文。
-3. **监控与可观测性**：在 Agent Loop 中接入 OpenTelemetry，追踪轨迹中的每一步 Tool Call 延迟与 Token 开销。
+### 总结
+
+MCP 赋予了我们严谨的类型契约，而 CLI 赋予了我们按需延迟加载的能力。**Code Mode 并没有取代它们，而是将两者的优点有机融合在了一起。**
+
+“MCP 已死”是对这场讨论的错误误读。协议不仅没有死亡，反而使用率暴增。真正走向终结的是“在启动时把所有工具描述装载进上下文”的陈旧做法。
+
+在 2026 年构建 Agent 时，黄金法则非常明确：**工具定义属于代码，而非上下文。模型编写代码来驱动工具，运行时负责高效执行。**

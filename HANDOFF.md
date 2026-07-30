@@ -1,6 +1,6 @@
 # HANDOFF.md — DailyDoseOfDS 方案 C 执行交接文档
 
-> 最后更新：2026-07-30T21:03 by Antigravity (Opus 4.6)
+> 最后确认：2026-07-30 by Codex
 
 ---
 
@@ -30,7 +30,23 @@
 | **Batch 2** | ✅ 完成 | Agents Web Search / Small Models / Four Agent Loops / KV Caching | 11 | ✅ 9 通过 + 2 广告标记 |
 | **Batch 3** | ✅ 完成 | Prompt/Context/Loop Eng / AI Master Stack / Loop Eng / Turn Website API | 12 | ✅ 9 通过 + 3 广告标记 |
 | **Batch 4** | ✅ 完成 | PPO in RL / 8 Layer Production AI / Agent Harness Repair / 3D Weather Globe | 11 | ✅ 10 通过 + 1 广告标记 |
-| **Batch 5-19** | ⏳ 待执行 | 剩余 61 封邮件 | — | — |
+| **Batch 5** | ✅ 完成 | Hermes Agent / Deep Researcher / Bellman Eqs / Local AI Brain | 11 | ✅ 9 通过 + 2 广告标记 |
+| **Batch 6** | ✅ 完成 | Train Classical ML / MDP in RL / Beat GRPO / RL Agents 2026 | 8 | ✅ 8 通过 |
+| **Batch 7** | ✅ 完成 | Agent Memory Trick / LLM Opt Techniques / Claude Code Slash / Diffusion LLMs | 11 | ✅ 11 通过 |
+| **Batch 8** | ✅ 完成 | Agent Harness / GPU vs TPU / AI OS / .claude Folder | 10 | ✅ 7 通过 + 3 广告标记 |
+| **Batch 9** | ✅ 完成 | LLM Inference / Fine-tuning / ML Sets / NN Train Opt | 10 | ✅ 10 通过 |
+| **Batch 10** | ✅ 完成 | Error Monitoring Agent / Object Detection / Parallel Processing / ML Phases | 13 | ✅ 12 通过 + 1 广告标记 |
+| **Batch 11** | ✅ 完成 | Generative UI / Test Agents / Trace App / BM25 Algorithm | 13 | ✅ 12 通过 + 1 广告标记 |
+| **Batch 12** | ✅ 完成 | ML 6 Steps / RAG & Fine-tuning / LLM on Phone / 8 AI Architectures | 13 | ✅ 9 通过 + 4 广告标记 |
+| **Batch 13** | ✅ 完成 | Categorical Encoding / kNN Imbalanced / MiniMax vs Sonnet / Verbalized Sampling | 13 | ✅ 10 通过 + 3 广告标记 |
+| **Batch 14** | ✅ 完成 | Federated Data Engine / Anthropic MCP / Gradient Boosting / PCA | 10 | ✅ 10 通过 |
+| **Batch 15-19** | ⏳ 待执行 | 剩余 21 封邮件 | — | — |
+
+### 本次现场确认
+
+- 当前工作树**尚未提交**：`git status` 显示 116 个已修改文件、6 个删除记录及 9 个新增文件，主要是 Batch 1–14 对 `Clippings/DailyDoseOfDS/` 的正文重生结果；其中的删除/新增记录用于修正文件名与替换旧文件。
+- `HANDOFF.md` 已处于已修改但未提交状态；不要执行会覆盖工作树的 Git 恢复或重置操作。
+- 交接文档中的批次表与工作树规模相符：已完成 Batch 1–14，下一执行单元是 **Batch 15**；仍待处理 21 封邮件，并另有 1 封无映射新邮件需要在收尾阶段新建。
 
 ### 新增/新建文件（Batch 1-2 产出中与旧文件名不同的）
 
@@ -65,12 +81,12 @@
 
 ## 🚀 Next Steps (接手行动指南)
 
-### 阶段一：继续串行执行 Batch 3-19
+### 阶段一：继续串行执行 Batch 15-19
 
 接手 Agent 按以下模式逐批执行：
 
 ```
-循环 for batch_id in 3..19:
+循环 for batch_id in 15..19:
   1. 从 batch_plan.json 读取本批 4 封邮件的 ID、Subject、现有文件名
   2. 派发 ddods_translator Subagent (Flash 模型)，附带：
      - 邮件 ID 列表

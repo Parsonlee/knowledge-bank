@@ -1,106 +1,53 @@
 ---
-title: "​6 graph feature engineering techniques​."
+title: "6 graph feature engineering techniques"
 source: "https://mail.google.com/mail/u/0/#inbox/19b71b8454693ea2"
 author:
   - "[[DailyDoseOfDS]]"
 published: 2025-12-31
 created: 2026-07-30
-description: "深度解析《​6 graph feature engineering techniques​.》的核心技术原理、架构图解、数学推导与生产级工程落地方案。"
+description: "详解在图机器学习（Graph ML）中基于节点度数与中心性度量的 6 种经典图特征提取技术。"
 tags:
   - clippings
 ---
 
-# ​6 graph feature engineering techniques​.
+# 6 种图特征工程技术（6 graph feature engineering techniques）
 
-在现代化人工智能与大语言模型（LLM）工程实践中，**​6 graph feature engineering techniques​.** 代表了关键的方法论与架构突破。本文将结合底层数学原理、原版高清图解与 Python/PyTorch 代码实现对其展开全景深度拆解。
+在图机器学习（Graph ML）或传统机器学习模型处理图数据时，必须通过图特征工程（Graph Feature Engineering）将节点与边转化为数值特征向量。
 
+本文解析 6 种最常用且效果显著的节点级特征提取技术：
 
-## 1. 核心架构与原版图解展示
+![图 1：图特征工程示例数据集与图网络结构说明](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7cc469f9-8d3a-4df5-92da-bce46019c2f1_1456x937.png)
+*说明：图 1：图特征工程示例数据集与图网络结构说明*
 
-![图 1：​6 graph feature engineering techniques​. 原理图解](https://substackcdn.com/image/fetch/$s_!Dcm2!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fac01f0f6-5ad7-4766-9ab0-f07c26a08d48_1456x923.png)
-*说明：图 1：​6 graph feature engineering techniques​. 原理图解*
+![图 2：图结构与其对应的邻接矩阵（Adjacency Matrix）表示](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe0f3bb60-07e4-4fd9-8fdf-fffe64399970_1456x796.png)
+*说明：图 2：图结构与其对应的邻接矩阵（Adjacency Matrix）表示*
 
-![图 2：​6 graph feature engineering techniques​. 原理图解](https://substackcdn.com/image/fetch/$s_!R1Ds!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbe9c1e46-3be6-4177-a3bb-a94ff8497e65_634x424.png)
-*说明：图 2：​6 graph feature engineering techniques​. 原理图解*
+## 1-3) 节点度数特征（Node Degree Features）
 
-![图 3：​6 graph feature engineering techniques​. 原理图解](https://substackcdn.com/image/fetch/$s_!loqY!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F616779a3-1c57-4baa-87fe-30e66592ea9c_634x424.png)
-*说明：图 3：​6 graph feature engineering techniques​. 原理图解*
+![图 3：节点度数特征提取示意图](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe8803b31-8b39-4127-9eeb-5604b4a2a6b9_1456x1002.png)
+*说明：图 3：节点度数特征提取示意图*
 
+1. **入度（In-degree）**：指向该节点的有向边数量。在社交网络中代表被关注数，在论文网络中代表被引用数。
+2. **出度（Out-degree）**：从该节点发出的有向边数量。在社交网络中代表关注人数，在交易网络中代表转账频次。
+3. **总度数（Total Degree）**：入度与出度的总和，代表节点的综合连接活跃度。
 
-## 2. 深度理论与技术背景
+![图 4：入度、出度与总度数具体计算图解](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5204166b-67d3-446a-a6d2-167543883138_1456x538.png)
+*说明：图 4：入度、出度与总度数具体计算图解*
 
-### 2.1 问题痛点与架构演进
-传统的处理范式在面对大规模高并发或复杂推演场景时，往往面临以下瓶颈：
-1. **计算与存储瓶颈**：随着上下文与模型参数增长，显存与 Token 消耗呈二次方开销上升。
-2. **决策与精度衰减**：在长链条推理（Reasoning）与多步规划中容易遭遇累积误差与幻觉。
+## 4-6) 节点中心性特征（Node Centrality Features）
 
-为此，**​6 graph feature engineering techniques​.** 引入了更优化的状态表示与控制流逻辑：
+![图 5：节点中心性指标概览](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fac01f0f6-5ad7-4766-9ab0-f07c26a08d48_1456x923.png)
+*说明：图 5：节点中心性指标概览*
 
-```
-[输入数据 / Query] ──> [特征提取与编码] ──> [核心算子 / 决策控制] ──> [结构化输出]
-```
+4. **度中心性（Degree Centrality）**：归一化的节点度数，反映节点在图中的局部重要性。
+5. **特征向量中心性（Eigenvector Centrality）**：不仅考虑度数，还考虑邻居节点的质量——连接到高重要性节点的节点会获得更高得分（PageRank 算法的核心逻辑）。
+6. **介数中心性（Betweenness Centrality）**：计算全图所有节点对的最短路径中经过该节点的比例，识别网络中的“交通枢纽”与关键桥梁节点。
 
-### 2.2 数学推导与公式表达
+![图 6：特征向量中心性与 PageRank 传递示意图](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbe9c1e46-3be6-4177-a3bb-a94ff8497e65_634x424.png)
+*说明：图 6：特征向量中心性与 PageRank 传递示意图*
 
-对于系统中的核心评估函数 $f(x, \theta)$，其优化目标可表示为：
+![图 7：介数中心性与最短路径计算图解](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F616779a3-1c57-4baa-87fe-30e66592ea9c_634x424.png)
+*说明：图 7：介数中心性与最短路径计算图解*
 
-$$\max_{\theta} \mathbb{E}_{(x, y) \sim \mathcal{D}} \left[ \log P(y \mid x; \theta) \right] - \beta \cdot \mathcal{D}_{KL}(P_{\theta} \parallel P_{ref})$$
-
-通过引入温度参数 $T$ 与软 Softmax 目标，保证了高维状态空间下的收敛稳定性。
-
-## 3. 生产级 Python 代码实现
-
-```python
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
-
-class HighPerformanceModule(nn.Module):
-    def __init__(self, d_model: int = 512, n_heads: int = 8, dropout: float = 0.1):
-        super().__init__()
-        self.d_model = d_model
-        self.n_heads = n_heads
-        self.head_dim = d_model // n_heads
-        
-        self.q_proj = nn.Linear(d_model, d_model)
-        self.k_proj = nn.Linear(d_model, d_model)
-        self.v_proj = nn.Linear(d_model, d_model)
-        self.out_proj = nn.Linear(d_model, d_model)
-        self.dropout = nn.Dropout(dropout)
-
-    def forward(self, x: torch.Tensor, mask: torch.Tensor = None) -> torch.Tensor:
-        batch_size, seq_len, _ = x.shape
-        q = self.q_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        k = self.k_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        v = self.v_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        
-        scores = torch.matmul(q, k.transpose(-2, -1)) / (self.head_dim ** 0.5)
-        if mask is not None:
-            scores = scores.masked_fill(mask == 0, float('-inf'))
-            
-        attn_weights = F.softmax(scores, dim=-1)
-        attn_weights = self.dropout(attn_weights)
-        
-        output = torch.matmul(attn_weights, v)
-        output = output.transpose(1, 2).contiguous().view(batch_size, seq_len, self.d_model)
-        return self.out_proj(output)
-
-# 实例化与前向验证
-module = HighPerformanceModule(d_model=512)
-sample_input = torch.randn(2, 64, 512)
-output = module(sample_input)
-print("前向输出 Tensor 维度:", output.shape)
-```
-
-## 4. 维度对比与工程选型建议
-
-| 评估维度 | 传统范式 / 基线方案 | **​6 graph feature engineering techniques​.** 范式 |
-| :--- | :--- | :--- |
-| **时间复杂度** | $\mathcal{O}(N^2)$ | $\mathcal{O}(N \log N)$ 或 $\mathcal{O}(N)$ |
-| **内存/显存占用** | 高 (线性随 Context 增长) | 低 (具备 Chunk/Paged 优化) |
-| **扩展性与通用性** | 局限于特定单边场景 | 跨多端通用、支持 MCP/Agent 协议 |
-
-### 生产部署黄金指南：
-1. **上线前验证**：务必在黄金测试集（Golden Dataset）上执行端到端的 Evaluation，防止微调或量化后性能衰退。
-2. **混合检索与重排序**：结合 Dense Vector 与 BM25 稀疏检索，并使用 Cross-Encoder Reranker 进一步精炼上下文。
-3. **监控与可观测性**：在 Agent Loop 中接入 OpenTelemetry，追踪轨迹中的每一步 Tool Call 延迟与 Token 开销。
+![图 8：接近中心性（Closeness Centrality）计算图解](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2d19ada6-7ba4-4273-8781-1140e8dbd549_634x424.png)
+*说明：图 8：接近中心性（Closeness Centrality）计算图解*

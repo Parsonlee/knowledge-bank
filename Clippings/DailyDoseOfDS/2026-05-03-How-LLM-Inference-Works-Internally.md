@@ -5,96 +5,57 @@ author:
   - "[[DailyDoseOfDS]]"
 published: 2026-05-03
 created: 2026-07-30
-description: "深度解析《How LLM inference works internally.》的核心技术原理、架构图解、数学推导与生产级工程落地方案。"
+description: "全景拆解 LLM 推理的两阶段机制（计算受限的 Prefill 阶段与内存带宽受限的 Decode 阶段），分析 KV Cache 瓶颈与架构演进。"
 tags:
   - clippings
 ---
 
-# How LLM inference works internally.
+# LLM 推理底层工作原理深度拆解（How LLM inference works internally.）
 
-在现代化人工智能与大语言模型（LLM）工程实践中，**How LLM inference works internally.** 代表了关键的方法论与架构突破。本文将结合底层数学原理、原版高清图解与 Python/PyTorch 代码实现对其展开全景深度拆解。
+对大语言模型执行的每一次 `generate()` 调用，都会在同一块 GPU 上经历两个截然不同的计算阶段：
+- **Prefill（预填充/ Prompt 处理阶段）**：属于**算力受限型（Compute-bound）**。
+- **Decode（解码/ 逐 Token 生成阶段）**：属于**内存带宽受限型（Memory-bound）**。
 
+绝大多数推理优化技术都针对其中某一个阶段展开，诊断哪个阶段是性能瓶颈是加速部署的第一步。
 
-## 1. 核心架构与原版图解展示
+---
 
-![图 1：How LLM inference works internally. 原理图解](https://substackcdn.com/image/fetch/$s_!GMnh!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fde58166a-cecf-479c-97fe-d5d9d78913d1_1549x885.png)
-*说明：图 1：How LLM inference works internally. 原理图解*
+### 1. 分词与嵌入（Tokenization and Embedding）
+BPE 分词器将原始文本转换为词表中的整数 ID。每个 ID 映射到形状为 `[vocab_size, hidden_dim]` 的嵌入矩阵行。位置信息通过 **RoPE（旋转位置编码）** 注入，通过旋转嵌入向量而非加算位置向量来编码位置。
 
+---
 
-## 2. 深度理论与技术背景
+### 2. Transformer 层前向传播
+嵌入后的序列通过多层 Transformer：
+1. **自注意力机制（Self-Attention）**：计算 $Q, K, V$ 投影。每个 Token 的 Query 对所有 Token 的 Key 进行打分，经 Softmax 加权后混合 Value。
+2. **前馈网络（FFN）**：通过两层 MLP 独立处理每个 Token 的向量。注意力机制在位置间传递信息，FFN 负责特征转换。
 
-### 2.1 问题痛点与架构演进
-传统的处理范式在面对大规模高并发或复杂推演场景时，往往面临以下瓶颈：
-1. **计算与存储瓶颈**：随着上下文与模型参数增长，显存与 Token 消耗呈二次方开销上升。
-2. **决策与精度衰减**：在长链条推理（Reasoning）与多步规划中容易遭遇累积误差与幻觉。
+---
 
-为此，**How LLM inference works internally.** 引入了更优化的状态表示与控制流逻辑：
+### 3. Prefill 阶段 vs Decode 阶段
 
-```
-[输入数据 / Query] ──> [特征提取与编码] ──> [核心算子 / 决策控制] ──> [结构化输出]
-```
+#### Prefill 阶段（Compute-bound）
+并行处理所有输入 Token，计算大矩阵乘法。GPU 算力利用率极高。核心衡量指标为 **TTFT（Time to First Token，首 Token 延迟）**。在此阶段，系统会初始化并填充 **KV Cache**。
 
-### 2.2 数学推导与公式表达
+#### Decode 阶段（Memory-bound）
+每次仅生成一个 Token，只为新 Token 计算 $Q, K, V$。虽然每步算力极小，但 GPU 必须为极小的计算量反复将整个模型权重和全部 KV Cache 从显存加载到算力核心中，瓶颈翻转为**内存带宽**。核心指标为 **ITL（Inter-Token Latency，Token 间延迟）**。
 
-对于系统中的核心评估函数 $f(x, \theta)$，其优化目标可表示为：
+---
 
-$$\max_{\theta} \mathbb{E}_{(x, y) \sim \mathcal{D}} \left[ \log P(y \mid x; \theta) \right] - \beta \cdot \mathcal{D}_{KL}(P_{\theta} \parallel P_{ref})$$
+### 4. KV Cache 的挑战与工程优化
+若无 Cache，生成 $N$ 个 Token 的注意力计算复杂度将呈 $O(N^2)$ 二次增长。KV Cache 带来了巨大的加速（可达 5 倍以上），但也带来了显存开销：例如 13B 模型下每 Token 约占用 1 MB，4K 上下文直接消耗 4 GB VRAM。
 
-通过引入温度参数 $T$ 与软 Softmax 目标，保证了高维状态空间下的收敛稳定性。
+主流优化路线包括：
+- **KV 缓存量化**（INT8/INT4）
+- **滑动窗口注意力（Sliding Window Attention）**
+- **分组查询注意力（Grouped-Query Attention, GQA）**
+- **PagedAttention**（vLLM 采用的分页内存管理技术）
 
-## 3. 生产级 Python 代码实现
+---
 
-```python
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
+### 5. 前沿突破：围绕 Cache 重新设计注意力机制
+DeepSeek V4 系列通过结构化设计直接减小 Cache 体积：
+- **CSA（Compressed Sparse Attention，压缩稀疏注意力）**：将 KV 压缩 4 倍后执行稀疏注意力。
+- **HCA（Heavily Compressed Attention，强力压缩注意力）**：将 128 个 Token 的 KV 压至单个表示后执行密集注意力。
 
-class HighPerformanceModule(nn.Module):
-    def __init__(self, d_model: int = 512, n_heads: int = 8, dropout: float = 0.1):
-        super().__init__()
-        self.d_model = d_model
-        self.n_heads = n_heads
-        self.head_dim = d_model // n_heads
-        
-        self.q_proj = nn.Linear(d_model, d_model)
-        self.k_proj = nn.Linear(d_model, d_model)
-        self.v_proj = nn.Linear(d_model, d_model)
-        self.out_proj = nn.Linear(d_model, d_model)
-        self.dropout = nn.Dropout(dropout)
-
-    def forward(self, x: torch.Tensor, mask: torch.Tensor = None) -> torch.Tensor:
-        batch_size, seq_len, _ = x.shape
-        q = self.q_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        k = self.k_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        v = self.v_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        
-        scores = torch.matmul(q, k.transpose(-2, -1)) / (self.head_dim ** 0.5)
-        if mask is not None:
-            scores = scores.masked_fill(mask == 0, float('-inf'))
-            
-        attn_weights = F.softmax(scores, dim=-1)
-        attn_weights = self.dropout(attn_weights)
-        
-        output = torch.matmul(attn_weights, v)
-        output = output.transpose(1, 2).contiguous().view(batch_size, seq_len, self.d_model)
-        return self.out_proj(output)
-
-# 实例化与前向验证
-module = HighPerformanceModule(d_model=512)
-sample_input = torch.randn(2, 64, 512)
-output = module(sample_input)
-print("前向输出 Tensor 维度:", output.shape)
-```
-
-## 4. 维度对比与工程选型建议
-
-| 评估维度 | 传统范式 / 基线方案 | **How LLM inference works internally.** 范式 |
-| :--- | :--- | :--- |
-| **时间复杂度** | $\mathcal{O}(N^2)$ | $\mathcal{O}(N \log N)$ 或 $\mathcal{O}(N)$ |
-| **内存/显存占用** | 高 (线性随 Context 增长) | 低 (具备 Chunk/Paged 优化) |
-| **扩展性与通用性** | 局限于特定单边场景 | 跨多端通用、支持 MCP/Agent 协议 |
-
-### 生产部署黄金指南：
-1. **上线前验证**：务必在黄金测试集（Golden Dataset）上执行端到端的 Evaluation，防止微调或量化后性能衰退。
-2. **混合检索与重排序**：结合 Dense Vector 与 BM25 稀疏检索，并使用 Cross-Encoder Reranker 进一步精炼上下文。
-3. **监控与可观测性**：在 Agent Loop 中接入 OpenTelemetry，追踪轨迹中的每一步 Tool Call 延迟与 Token 开销。
+在 1M Context 上下文中，对比 DeepSeek-V3.2，V4 仅需 27% 的单 Token 推理 FLOPs 和 10% 的 KV Cache 显存占用，彻底重塑了推理服务架构。

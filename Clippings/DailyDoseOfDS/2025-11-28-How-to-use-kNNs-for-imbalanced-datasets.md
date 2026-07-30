@@ -1,106 +1,59 @@
 ---
-title: "How to use kNNs for imbalanced datasets."
+title: "How to use kNNs for imbalanced datasets"
 source: "https://mail.google.com/mail/u/0/#inbox/19acc373a89bc8c4"
 author:
   - "[[DailyDoseOfDS]]"
 published: 2025-11-28
 created: 2026-07-30
-description: "深度解析《How to use kNNs for imbalanced datasets.》的核心技术原理、架构图解、数学推导与生产级工程落地方案。"
+description: "探讨如何通过距离加权 kNN 与动态调整 k 值优化不平衡数据集下的 kNN 分类性能。"
 tags:
   - clippings
 ---
 
-# How to use kNNs for imbalanced datasets.
+# 如何在不平衡数据集上高效使用 kNN（How to use kNNs for imbalanced datasets）
 
-在现代化人工智能与大语言模型（LLM）工程实践中，**How to use kNNs for imbalanced datasets.** 代表了关键的方法论与架构突破。本文将结合底层数学原理、原版高清图解与 Python/PyTorch 代码实现对其展开全景深度拆解。
+在 K-近邻（kNN）算法中，超参数 $ 的选择对预测结果至关重要，而在类别不平衡（Imbalanced Datasets）场景下，传统的 kNN 往往表现欠佳。
 
+![二维数据集与测试样本示意图](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F872e7be0-cee5-43b1-8746-e4f8b48add43_1672x864.png)
 
-## 1. 核心架构与原版图解展示
+![标准 kNN 在 k=7 下的投票流程](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2b360269-f208-4d82-a539-625cd8deda17_1456x699.png)
 
-![图 1：How to use kNNs for imbalanced datasets. 原理图解](https://substackcdn.com/image/fetch/$s_!KZlp!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9924e4f5-7a87-488a-b255-c9b92bfe591d_1432x654.png)
-*说明：图 1：How to use kNNs for imbalanced datasets. 原理图解*
+### 传统 kNN 在不平衡数据下的缺陷
 
-![图 2：How to use kNNs for imbalanced datasets. 原理图解](https://substackcdn.com/image/fetch/$s_!89cv!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F99785e04-cdce-4ead-a333-d0423794db31_1432x654.png)
-*说明：图 2：How to use kNNs for imbalanced datasets. 原理图解*
+如上图所示，当 =7$ 时，测试点寻找最近的 7 个邻居进行多数投票（Majority Voting）。在不平衡数据集中，由于多数类样本在数据空间中占据主导地位，测试点附近的 7 个邻居很可能绝大多数都是多数类样本，即便该测试点距离少数类样本非常接近。这会导致模型强烈偏向多数类，严重误判少数类。
 
-![图 3：How to use kNNs for imbalanced datasets. 原理图解](https://substackcdn.com/image/fetch/$s_!yFCr!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F33ac222e-129e-423e-b7a7-c7f64947b722_989x498.png)
-*说明：图 3：How to use kNNs for imbalanced datasets. 原理图解*
+![多数类占优导致误判示意图](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa60b3e8e-ece3-4bc1-a6c5-7c6f4791023a_1456x708.png)
 
+为了解决这一难题，可以采用以下两种改进方案：
 
-## 2. 深度理论与技术背景
+### 解决方案 1：使用距离加权 kNN（Distance-weighted kNN）
 
-### 2.1 问题痛点与架构演进
-传统的处理范式在面对大规模高并发或复杂推演场景时，往往面临以下瓶颈：
-1. **计算与存储瓶颈**：随着上下文与模型参数增长，显存与 Token 消耗呈二次方开销上升。
-2. **决策与精度衰减**：在长链条推理（Reasoning）与多步规划中容易遭遇累积误差与幻觉。
+![距离加权 kNN 权重计算公式](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ffdb2357e-8717-421f-9b50-24dfa43a3b74_1456x708.png)
 
-为此，**How to use kNNs for imbalanced datasets.** 引入了更优化的状态表示与控制流逻辑：
+距离加权 kNN 不再对所有邻居一视同仁，而是根据邻居与测试点之间的距离计算权重 $：
+15624w = rac{1}{d} \quad 	ext{或} \quad w = rac{1}{d^2}15624
 
-```
-[输入数据 / Query] ──> [特征提取与编码] ──> [核心算子 / 决策控制] ──> [结构化输出]
-```
+![距离较近的少数类获得更高投票权重](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9924e4f5-7a87-488a-b255-c9b92bfe591d_1432x654.png)
 
-### 2.2 数学推导与公式表达
+![加权投票计算结果示意图](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F99785e04-cdce-4ead-a333-d0423794db31_1432x654.png)
 
-对于系统中的核心评估函数 $f(x, \theta)$，其优化目标可表示为：
+距离越近的样本获得的投票权重越大。因此，即便 7 个邻居中有 4 个多数类和 3 个少数类，由于 3 个少数类距离更近，它们的总加权权重也会超过远距离的多数类，从而正确预测为少数类。
 
-$$\max_{\theta} \mathbb{E}_{(x, y) \sim \mathcal{D}} \left[ \log P(y \mid x; \theta) \right] - \beta \cdot \mathcal{D}_{KL}(P_{\theta} \parallel P_{ref})$$
+### 解决方案 2：动态更新超参数 k（Dynamically update k）
 
-通过引入温度参数 $T$ 与软 Softmax 目标，保证了高维状态空间下的收敛稳定性。
+第二种策略是根据数据集的偏斜比例动态调整邻居数量 $。
 
-## 3. 生产级 Python 代码实现
+![计算不平衡比例计算公式](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F33ac222e-129e-423e-b7a7-c7f64947b722_989x498.png)
 
-```python
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
+![计算动态邻居数 k' 公式](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7c2ed832-98fd-4d97-883a-094bb75719f1_1456x592.png)
 
-class HighPerformanceModule(nn.Module):
-    def __init__(self, d_model: int = 512, n_heads: int = 8, dropout: float = 0.1):
-        super().__init__()
-        self.d_model = d_model
-        self.n_heads = n_heads
-        self.head_dim = d_model // n_heads
-        
-        self.q_proj = nn.Linear(d_model, d_model)
-        self.k_proj = nn.Linear(d_model, d_model)
-        self.v_proj = nn.Linear(d_model, d_model)
-        self.out_proj = nn.Linear(d_model, d_model)
-        self.dropout = nn.Dropout(dropout)
+![动态缩减邻居窗口范围图解](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1a0214c7-85de-480f-8d02-6e8cd1c1eec9_2840x700.png)
 
-    def forward(self, x: torch.Tensor, mask: torch.Tensor = None) -> torch.Tensor:
-        batch_size, seq_len, _ = x.shape
-        q = self.q_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        k = self.k_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        v = self.v_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        
-        scores = torch.matmul(q, k.transpose(-2, -1)) / (self.head_dim ** 0.5)
-        if mask is not None:
-            scores = scores.masked_fill(mask == 0, float('-inf'))
-            
-        attn_weights = F.softmax(scores, dim=-1)
-        attn_weights = self.dropout(attn_weights)
-        
-        output = torch.matmul(attn_weights, v)
-        output = output.transpose(1, 2).contiguous().view(batch_size, seq_len, self.d_model)
-        return self.out_proj(output)
+![仅在前 k' 个邻居中执行多数投票](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc70e7336-f577-4644-913c-0ab093c6f94a_347x105.png)
 
-# 实例化与前向验证
-module = HighPerformanceModule(d_model=512)
-sample_input = torch.randn(2, 64, 512)
-output = module(sample_input)
-print("前向输出 Tensor 维度:", output.shape)
-```
+**操作逻辑：**
+1. 首先计算少数类与多数类的数量比例（Imbalance Ratio）。
+2. 根据此比例计算缩减后的局部邻居窗口 '$。
+3. 仅在前 '$ 个最近邻居中执行多数投票。
 
-## 4. 维度对比与工程选型建议
-
-| 评估维度 | 传统范式 / 基线方案 | **How to use kNNs for imbalanced datasets.** 范式 |
-| :--- | :--- | :--- |
-| **时间复杂度** | $\mathcal{O}(N^2)$ | $\mathcal{O}(N \log N)$ 或 $\mathcal{O}(N)$ |
-| **内存/显存占用** | 高 (线性随 Context 增长) | 低 (具备 Chunk/Paged 优化) |
-| **扩展性与通用性** | 局限于特定单边场景 | 跨多端通用、支持 MCP/Agent 协议 |
-
-### 生产部署黄金指南：
-1. **上线前验证**：务必在黄金测试集（Golden Dataset）上执行端到端的 Evaluation，防止微调或量化后性能衰退。
-2. **混合检索与重排序**：结合 Dense Vector 与 BM25 稀疏检索，并使用 Cross-Encoder Reranker 进一步精炼上下文。
-3. **监控与可观测性**：在 Agent Loop 中接入 OpenTelemetry，追踪轨迹中的每一步 Tool Call 延迟与 Token 开销。
+其内在逻辑在于：如果少数类样本确实出现在局部区域内，由于该区域离少数类很近，在更小的邻居窗口 '$ 范围中，少数类更容易占据多数地位，从而避免被更外围的多数类洪水淹没。

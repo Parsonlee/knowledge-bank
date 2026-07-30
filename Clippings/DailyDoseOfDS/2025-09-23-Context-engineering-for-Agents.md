@@ -1,106 +1,90 @@
 ---
-title: "​Context engineering for Agents​."
+title: "Context engineering for Agents"
 source: "https://mail.google.com/mail/u/0/#inbox/199785061541447a"
 author:
   - "[[DailyDoseOfDS]]"
 published: 2025-09-23
 created: 2026-07-30
-description: "深度解析《​Context engineering for Agents​.》的核心技术原理、架构图解、数学推导与生产级工程落地方案。"
+description: "系统阐述上下文工程（Context Engineering）的概念、核心定义、4 个基本阶段（写入、读取、压缩、隔离）及其与特征工程的类比。"
 tags:
   - clippings
 ---
+# Agent 的上下文工程（Context engineering for Agents）
 
-# ​Context engineering for Agents​.
+上下文工程越来越重要，但许多人仍然难以真正理解它的具体含义。
 
-在现代化人工智能与大语言模型（LLM）工程实践中，**​Context engineering for Agents​.** 代表了关键的方法论与架构突破。本文将结合底层数学原理、原版高清图解与 Python/PyTorch 代码实现对其展开全景深度拆解。
+简单来说，**上下文工程（Context Engineering）是一门艺术与科学，旨在将正确的信息、以正确的格式、在正确的时间提供给你的 LLM**。
 
+![Andrej Karpathy 对上下文工程的评价](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd3c57039-25e1-400e-aaae-9bff25f2ce8b_1200x1349.png)
 
-## 1. 核心架构与原版图解展示
+要理解上下文工程，首先需要理解上下文的含义。
 
-![图 1：​Context engineering for Agents​. 原理图解](https://sub//substackcdn.com/image/fetch/$s_!gngo!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd3c57039-25e1-400e-aaae-9bff25f2ce8b_1200x1349.png)
-*说明：图 1：​Connect any LLM to any MCP server ! 原理图解*
+如今的 Agent 已经演变为远超越聊天机器人的存在。
 
-![图 2：​Connect any LLM to any MCP server ! 原理图解](https://substackcdn.com/image/fetch/$s_!TAsd!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa5baedfc-1c6a-4446-84a2-bcf269d402d1_1200x983.png)
-*说明：图 2：​Connect any LLM to any MCP server ! 原理图解*
+下图总结了 Agent 正常运行所需的 6 种上下文类型：
 
-![图 3：​Connect any LLM to any MCP server ! 原理图解](https://substackcdn.com/image/fetch/$s_!RuxA!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7e7bae65-5e25-412c-b612-b8e4d7b70733_1700x1153.png)
-*说明：图 3：​Connect any LLM to any MCP server ! 原理图解*
+![Agent 所需的 6 种上下文类型](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa5baedfc-1c6a-4446-84a2-bcf269d402d1_1200x983.png)
 
+* 指令（Instructions）
+* 示例（Examples）
+* 知识（Knowledge）
+* 记忆（Memory）
+* 工具（Tools）
+* 护栏（Guardrails）
 
-## 2. 深度理论与技术背景
+这表明仅仅对其进行“Prompt 提示”是不够的，你必须对输入（上下文）进行工程化设计。
 
-### 2.1 问题痛点与架构演进
-传统的处理范式在面对大规模高并发或复杂推演场景时，往往面临以下瓶颈：
-1. **计算与存储瓶颈**：随着上下文与模型参数增长，显存与 Token 消耗呈二次方开销上升。
-2. **决策与精度衰减**：在长链条推理（Reasoning）与多步规遭遇累积误差与幻觉。
+思考模型：
+* 如果 LLM 是 CPU。
+* 那么上下文窗口就是 RAM。
 
-为此，**​Context engineering for Agents​.** 引入了更优化的状态表示与控制流逻辑：
+![LLM 与 Context Window 类比为 CPU 与 RAM](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7e7bae65-5e25-412c-b612-b8e4d7b70733_1700x1153.png)
 
-```
-[输入数据 / Query] ──> [特征提取与编码] ──> [核心算子 / 决策控制] ──> [结构化输出]
-```
+---
 
-### 2.2 数学推导与公式表达
+## 上下文工程的 4 个核心阶段
 
-对于系统中的核心评估函数 $f(x, \theta)$，其优化目标可表示为：
+上下文工程可以拆解为 4 个基本阶段：
 
-$$\max_{\theta} \mathbb{E}_{(x, y) \sim \mathcal{D}} \left[ \log P(y \mid x; \theta) \right] - \beta \cdot \mathcal{D}_{KL}(P_{\theta} \parallel P_{ref})$$
+![上下文工程的 4 个阶段](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F69186a3b-68d8-4aa7-9e71-3b9dc67bf2b9_1338x964.gif)
 
-通过引入温度参数 $T$ 与软 Softmax 目标，保证了高维状态空间下的收敛稳定性。
+### 1. 写入上下文（Writing Context）
+将上下文保存到上下文窗口外部，以帮助 Agent 完成任务。
 
-## 3. 生产级 Python 代码实现
+![写入上下文机制](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F56019299-003f-4d6e-a0c3-415095a0f9ca_1200x290.png)
 
-```python
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
+可以将其写入：
+* 长期记忆（跨会话持久化）
+* 短期记忆（会话内持久化）
+* 状态对象（State Object）
 
-class HighPerformanceModule(nn.Module):
-    def __init__(self, d_model: int = 512, n_heads: int = 8, dropout: float = 0.1):
-        super().__init__()
-        self.d_model = d_model
-        self.n_heads = n_heads
-        self.head_dim = d_model // n_heads
-        
-        self.q_proj = nn.Linear(d_model, d_model)
-        self.k_proj = nn.Linear(d_model, d_model)
-        self.v_proj = nn.Linear(d_model, d_model)
-        self.out_proj = nn.Linear(d_model, d_model)
-        self.dropout = nn.Dropout(dropout)
+### 2. 读取上下文（Reading Context）
+将上下文拉取到上下文窗口中，以帮助 Agent 执行任务。
 
-    def forward(self, x: torch.Tensor, mask: torch.Tensor = None) -> torch.Tensor:
-        batch_size, seq_len, _ = x.shape
-        q = self.q_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        k = self.k_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        v = self.v_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        
-        scores = torch.matmul(q, k.transpose(-2, -1)) / (self.head_dim ** 0.5)
-        if mask is not None:
-            scores = scores.masked_fill(mask == 0, float('-inf'))
-            
-        attn_weights = F.softmax(scores, dim=-1)
-        attn_weights = self.dropout(attn_weights)
-        
-        output = torch.matmul(attn_weights, v)
-        output = output.transpose(1, 2).contiguous().view(batch_size, seq_len, self.d_model)
-        return self.out_proj(output)
+![读取上下文机制](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff19053e8-c69c-486a-a5bc-484ca40d8ef8_1200x286.png)
 
-# 实例化与前向验证
-module = HighPerformanceModule(d_model=512)
-sample_input = torch.randn(2, 64, 512)
-output = module(sample_input)
-print("前向输出 Tensor 维度:", output.shape)
-```
+上下文可从以下位置拉取：
+* 工具
+* 记忆系统
+* 知识库（文档、向量数据库）
 
-## 4. 维度对比与工程选型建议
+### 3. 压缩上下文（Compressing Context）
+仅保留任务所需的 Token。
 
-| 评估维度 | 传统范式 / 基线方案 | **​Context engineering for Agents​.** 范式 |
-| :--- | :--- | :--- |
-| **时间复杂度** | $\mathcal{O}(N^2)$ | $\mathcal{O}(N \log N)$ 或 $\mathcal{O}(N)$ |
-| **内存/显存占用** | 高 (线性随 Context 增长) | 低 (具备 Chunk/Paged 优化) |
-| **扩展性与通用性** | 局限于特定单边场景 | 跨多端通用、支持 MCP/Agent 协议 |
+![压缩上下文机制](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F14562048-09f3-4a24-94a5-fce76f3bb58c_1200x286.png)
 
-### 生产部署黄金指南：
-1. **上线前验证**：务必在黄金测试集（Golden Dataset）上执行端到端的 Evaluation，防止微调或量化后性能衰退。
-2. **混合检索与重排序**：结合 Dense Vector 与 BM25 稀疏检索，并使用 Cross-Encoder Reranker 进一步精炼上下文。
-3. **监控与可观测性**：在 Agent Loop 中接入 OpenTelemetry，追踪轨迹中的每一步 Tool Call 延迟与 Token 开销。
+检索到的上下文可能包含重复或冗余信息（例如多轮工具调用），导致额外的 Token 消耗与成本上升。上下文摘要（Summarization）在此能发挥关键作用。
+
+### 4. 隔离上下文（Isolating Context）
+将上下文拆分，以协助 Agent 更好地执行任务。
+
+![隔离上下文机制](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F52ba59c8-4291-4116-ad91-a750639ca218_1200x286.png)
+
+常见隔离手段：
+* 使用多个 Agent（或子 Agent），每个拥有独立上下文
+* 使用沙箱环境（Sandbox）存储与执行代码
+* 使用状态对象（State Object）控制作用域
+
+---
+
+就像在传统机器学习中构建特征（Feature Engineering）以使模型生效一样——移除对输出没有贡献的特征、注意高度相关特征未必有帮助——在 LLM 领域也需要工程化设计上下文，使模型更准确地响应。

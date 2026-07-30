@@ -5,102 +5,106 @@ author:
   - "[[DailyDoseOfDS]]"
 published: 2025-12-24
 created: 2026-07-30
-description: "深度解析《[Hands-on] Deploy and Run LLMs on your Phone!》的核心技术原理、架构图解、数学推导与生产级工程落地方案。"
+description: "实操演示使用 UnslothAI 微调 Qwen3，结合 TorchAO 量化导出为 .pte 格式，并在 iOS 设备上基于 ExecuTorch 100% 本地高效运行。"
 tags:
   - clippings
 ---
 
-# [Hands-on] Deploy and Run LLMs on your Phone!
+# 实战：在手机上部署并运行大语言模型！（[Hands-on] Deploy and Run LLMs on your Phone!）
 
-在现代化人工智能与大语言模型（LLM）工程实践中，**[Hands-on] Deploy and Run LLMs on your Phone!** 代表了关键的方法论与架构突破。本文将结合底层数学原理、原版高清图解与 Python/PyTorch 代码实现对其展开全景深度拆解。
+现在，你可以对 LLM 进行微调，并直接将其部署到手机上运行。
 
+今天，我们将通过一份逐步实战指南，展示如何微调 Qwen3，并将其导出为适用于移动端的格式，从而在 iOS 或 Android 设备上实现 100% 本地离线运行。
 
-## 1. 核心架构与原版图解展示
+我们将使用以下工具链：
+* **UnslothAI**：用于高效微调
+* **TorchAO**：用于手机友好的量化（Quantization）
+* **ExecuTorch**：用于在 iOS/Android 设备上高效推理
 
-![图 1：[Hands-on] Deploy and Run LLMs on your Phone! 原理图解](https://substackcdn.com/image/fetch/$s_!MMkx!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F54f49c9e-6d30-4c6c-871a-bc27aecd160d_3020x2168.png)
-*说明：图 1：[Hands-on] Deploy and Run LLMs on your Phone! 原理图解*
+让我们开始吧！
 
-![图 2：[Hands-on] Deploy and Run LLMs on your Phone! 原理图解](https://substackcdn.com/image/fetch/$s_!TE_H!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9782233d-43ae-4f15-aac4-5fe90db5792c_2628x1136.png)
-*说明：图 2：[Hands-on] Deploy and Run LLMs on your Phone! 原理图解*
+---
 
-![图 3：[Hands-on] Deploy and Run LLMs on your Phone! 原理图解](https://substackcdn.com/image/fetch/$s_!m1vp!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F82a2b93e-9833-4c37-9829-c0da549a89df_2500x1888.png)
-*说明：图 3：[Hands-on] Deploy and Run LLMs on your Phone! 原理图解*
+### 1️⃣ 加载模型（Load the model）
 
+首先，我们在“手机部署模式”下加载 Qwen3-0.6B。
 
-## 2. 深度理论与技术背景
+这会启用量化感知训练（Quantization-aware training），从而确保后续导出时与移动端完全兼容。
 
-### 2.1 问题痛点与架构演进
-传统的处理范式在面对大规模高并发或复杂推演场景时，往往面临以下瓶颈：
-1. **计算与存储瓶颈**：随着上下文与模型参数增长，显存与 Token 消耗呈二次方开销上升。
-2. **决策与精度衰减**：在长链条推理（Reasoning）与多步规划中容易遭遇累积误差与幻觉。
+![加载 Qwen3 模型](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5bb89520-2d90-486a-b286-daee3d75f793_2604x1080.png)
 
-为此，**[Hands-on] Deploy and Run LLMs on your Phone!** 引入了更优化的状态表示与控制流逻辑：
+---
 
-```
-[输入数据 / Query] ──> [特征提取与编码] ──> [核心算子 / 决策控制] ──> [结构化输出]
-```
+### 2️⃣ 加载数据集（Load datasets）
 
-### 2.2 数学推导与公式表达
+接下来，决定模型需要学习什么。
 
-对于系统中的核心评估函数 $f(x, \theta)$，其优化目标可表示为：
+我们加载：
+* 推理数据集（Reasoning dataset）：增强逻辑推理能力
+* 对话数据集（Chat dataset）：使其表现得像一个随手可用的助手
 
-$$\max_{\theta} \mathbb{E}_{(x, y) \sim \mathcal{D}} \left[ \log P(y \mid x; \theta) \right] - \beta \cdot \mathcal{D}_{KL}(P_{\theta} \parallel P_{ref})$$
+在此阶段，两个数据集都是原始状态。
 
-通过引入温度参数 $T$ 与软 Softmax 目标，保证了高维状态空间下的收敛稳定性。
+![加载原始数据集](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F622e0ac2-1ba9-4a54-b790-a3f1d96c23d0_2384x1292.png)
 
-## 3. 生产级 Python 代码实现
+---
 
-```python
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
+### 3️⃣ 转换推理数据（Convert reasoning data）
 
-class HighPerformanceModule(nn.Module):
-    def __init__(self, d_model: int = 512, n_heads: int = 8, dropout: float = 0.1):
-        super().__init__()
-        self.d_model = d_model
-        self.n_heads = n_heads
-        self.head_dim = d_model // n_heads
-        
-        self.q_proj = nn.Linear(d_model, d_model)
-        self.k_proj = nn.Linear(d_model, d_model)
-        self.v_proj = nn.Linear(d_model, d_model)
-        self.out_proj = nn.Linear(d_model, d_model)
-        self.dropout = nn.Dropout(dropout)
+现在我们将推理数据转换为 `User -> Assistant` 的对话格式。
 
-    def forward(self, x: torch.Tensor, mask: torch.Tensor = None) -> torch.Tensor:
-        batch_size, seq_len, _ = x.shape
-        q = self.q_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        k = self.k_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        v = self.v_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        
-        scores = torch.matmul(q, k.transpose(-2, -1)) / (self.head_dim ** 0.5)
-        if mask is not None:
-            scores = scores.masked_fill(mask == 0, float('-inf'))
-            
-        attn_weights = F.softmax(scores, dim=-1)
-        attn_weights = self.dropout(attn_weights)
-        
-        output = torch.matmul(attn_weights, v)
-        output = output.transpose(1, 2).contiguous().view(batch_size, seq_len, self.d_model)
-        return self.out_proj(output)
+这能教会模型如何一步步思考推理，而不仅仅是输出最终答案。
 
-# 实例化与前向验证
-module = HighPerformanceModule(d_model=512)
-sample_input = torch.randn(2, 64, 512)
-output = module(sample_input)
-print("前向输出 Tensor 维度:", output.shape)
-```
+![转换推理数据格式](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F54f49c9e-6d30-4c6c-871a-bc27aecd160d_3020x2168.png)
 
-## 4. 维度对比与工程选型建议
+---
 
-| 评估维度 | 传统范式 / 基线方案 | **[Hands-on] Deploy and Run LLMs on your Phone!** 范式 |
-| :--- | :--- | :--- |
-| **时间复杂度** | $\mathcal{O}(N^2)$ | $\mathcal{O}(N \log N)$ 或 $\mathcal{O}(N)$ |
-| **内存/显存占用** | 高 (线性随 Context 增长) | 低 (具备 Chunk/Paged 优化) |
-| **扩展性与通用性** | 局限于特定单边场景 | 跨多端通用、支持 MCP/Agent 协议 |
+### 4️⃣ 标准化对话数据（Standardize chat data）
 
-### 生产部署黄金指南：
-1. **上线前验证**：务必在黄金测试集（Golden Dataset）上执行端到端的 Evaluation，防止微调或量化后性能衰退。
-2. **混合检索与重排序**：结合 Dense Vector 与 BM25 稀疏检索，并使用 Cross-Encoder Reranker 进一步精炼上下文。
-3. **监控与可观测性**：在 Agent Loop 中接入 OpenTelemetry，追踪轨迹中的每一步 Tool Call 延迟与 Token 开销。
+接着，将对话数据集同样标准化为统一的 Schema 格式。
+
+这确保了两个数据集在模型视角下拥有完全一致的数据结构。
+
+![标准化对话数据](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9782233d-43ae-4f15-aac4-5fe90db5792c_2628x1136.png)
+
+---
+
+### 5️⃣ 混合数据集（Mix datasets）
+
+现在，决定模型进行深度推理与常规对话的比例。
+
+我们保持 75% 的推理数据以赋予模型思考能力，25% 的对话数据以保持自然的交流语气。
+
+这为我们提供了一个兼具两者优势的干净数据集。
+
+![混合数据集比例](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F82a2b93e-9833-4c37-9829-c0da549a89df_2500x1888.png)
+
+---
+
+### 6️⃣ 训练模型（Train the model）
+
+配置 Trainer 并开始微调。损失函数（Loss）持续下降，表明模型正在正确地学习与拟合。
+
+![训练模型过程](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fdc8f0e9e-bf87-4266-886b-a6db44429b15_1200x892.png)
+
+---
+
+### 7️⃣ 保存模型（Save the model）
+
+训练完成后，将模型保存为 TorchAO 格式。这正是 ExecuTorch 后续步骤所期待的格式。
+
+![保存 TorchAO 格式模型](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff4034417-075e-446a-8d09-6b9d3365a5f0_2459x1838.png)
+
+---
+
+### 8️⃣ 导出为 .pte 文件（Export to .pte）
+
+现在导出可由 iOS 加载的单一 `.pte` 文件。包括：转换权重、读取模型配置以及导出最终文件。导出的 `.pte` 文件大小约为 470 MB，这完全符合端侧模型的预期。
+
+![导出 .pte 移动端模型](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4717ec87-2be9-4b11-89bb-d31e59289f04_1200x678.png)
+
+---
+
+### 9️⃣ 在 iOS 上运行（Run on iOS）
+
+最后，使用 ExecuTorch iOS Demo App 运行模型。在 Simulator 上复制 `.pte` 和 tokenizer，即可在 App 中加载并实时对话。在真实 iPhone 上运行速度可达 ~25 tokens/s，底座由 Meta 在 Instagram、WhatsApp 中使用的生产级 ExecuTorch 运行时驱动。

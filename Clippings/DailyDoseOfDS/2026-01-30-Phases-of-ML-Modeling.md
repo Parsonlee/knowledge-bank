@@ -5,102 +5,64 @@ author:
   - "[[DailyDoseOfDS]]"
 published: 2026-01-30
 created: 2026-07-30
-description: "深度解析《Phases of ML Modeling》的核心技术原理、架构图解、数学推导与生产级工程落地方案。"
+description: "解析机器学习建模的四个演进阶段：从启发式规则基线，到最简 ML 模型，再到模型优化与复杂深度学习模型，降低系统风险。"
 tags:
   - clippings
 ---
+# 机器学习建模的四个阶段（Phases of ML Modeling）
 
-# Phases of ML Modeling
+大多数机器学习系统并不会直接跳到深度学习，而是遵循渐进演化的阶段。
 
-在现代化人工智能与大语言模型（LLM）工程实践中，**Phases of ML Modeling** 代表了关键的方法论与架构突破。本文将结合底层数学原理、原版高清图解与 Python/PyTorch 代码实现对其展开全景深度拆解。
+一种实用的思考方式是将这一过程拆分为多个阶段，从最简单的解决方案开始，仅在必要时才增加复杂度。因为不必要的复杂度等于低实用性。
 
+![ML 建模阶段概述图](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F33dc6716-4847-43bc-aa16-72de11bcb06b_797x267.png)
 
-## 1. 核心架构与原版图解展示
+分阶段方法可以降低风险，提高可调试性，并且非常契合 MLOps 的最佳实践。
 
-![图 1：Phases of ML Modeling 原理图解](https://substackcdn.com/image/fetch/$s_!Fw9u!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F63d5a19d-4aaf-4644-b840-6f936f83f3d3_680x409.png)
-*说明：图 1：Phases of ML Modeling 原理图解*
+下面让我们走过 ML 模型开发的各个阶段：
 
-![图 2：Phases of ML Modeling 原理图解](https://substackcdn.com/image/fetch/$s_!q5Kt!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F139a27f1-6933-485f-82d9-d155e2061849_680x441.png)
-*说明：图 2：Phases of ML Modeling 原理图解*
+## 阶段 1：在 ML 之前（启发式规则）
 
-![图 3：Phases of ML Modeling 原理图解](https://substackcdn.com/image/fetch/$s_!wypE!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fce7db420-2efa-4308-9f4e-115458aad59e_680x441.png)
-*说明：图 3：Phases of ML Modeling 原理图解*
+如果是第一次解决某个问题，请抵制一上来就构建模型的冲动。先从非 ML 基线开始：规则、启发式策略或简单的确定性算法。
 
+例如，在电影推荐系统中，阶段 1 的解决方案可以简单到向每位用户推荐 Top-10 最受欢迎的电影。
 
-## 2. 深度理论与技术背景
+虽然这听起来很天真，但此类启发式规则往往出奇地强强。这些基线构建快速、易于理解，并确立了最低性能门槛。如果复杂的 ML 模型打败不了简单启发式规则，那说明流程存在问题或 ML 根本没有带来价值。
 
-### 2.1 问题痛点与架构演进
-传统的处理范式在面对大规模高并发或复杂推演场景时，往往面临以下瓶颈：
-1. **计算与存储瓶颈**：随着上下文与模型参数增长，显存与 Token 消耗呈二次方开销上升。
-2. **决策与精度衰减**：在长链条推理（Reasoning）与多步规划中容易遭遇累积误差与幻觉。
+![阶段 1 启发式规则映射](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9158da26-a336-4cc6-ad30-777b80fb8294_1024x505.png)
 
-为此，**Phases of ML Modeling** 引入了更优化的状态表示与控制流逻辑：
+## 阶段 2：最简 ML 模型
 
-```
-[输入数据 / Query] ──> [特征提取与编码] ──> [核心算子 / 决策控制] ──> [结构化输出]
-```
+一旦启发式基线建立（或确定规则不够用），下一步仍然不是深度模型，而是**最简单可行的 ML 模型**。
 
-### 2.2 数学推导与公式表达
+想想逻辑回归、浅层决策树、k 近邻（kNN）或简单线性模型。这些模型易于训练、解释和部署。
 
-对于系统中的核心评估函数 $f(x, \theta)$，其优化目标可表示为：
+本阶段的目标不是追求巅峰准确率，而是回答基础问题：
+* 能否基于历史数据训练并得到合理的预测？
+* 特征是否有效？
+* 模型泛化性能是否优于启发式规则？
 
-$$\max_{\theta} \mathbb{E}_{(x, y) \sim \mathcal{D}} \left[ \log P(y \mid x; \theta) \right] - \beta \cdot \mathcal{D}_{KL}(P_{\theta} \parallel P_{ref})$$
+这也是验证端到端 ML 流水线（数据接入、特征提取、训练、评估、服务）的关键阶段。
 
-通过引入温度参数 $T$ 与软 Softmax 目标，保证了高维状态空间下的收敛稳定性。
+![阶段 2 最简 ML 模型验证](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F15940d4d-0f8c-4bee-b280-09e04b27f5f6_1024x504.png)
 
-## 3. 生产级 Python 代码实现
+## 阶段 3：优化简单模型
 
-```python
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
+基础模型工作后，在不改变模型族的前提下，往往还有巨大的性能提升空间。阶段 3 致力于从现有方法中榨取尽可能多的价值：
 
-class HighPerformanceModule(nn.Module):
-    def __init__(self, d_model: int = 512, n_heads: int = 8, dropout: float = 0.1):
-        super().__init__()
-        self.d_model = d_model
-        self.n_heads = n_heads
-        self.head_dim = d_model // n_heads
-        
-        self.q_proj = nn.Linear(d_model, d_model)
-        self.k_proj = nn.Linear(d_model, d_model)
-        self.v_proj = nn.Linear(d_model, d_model)
-        self.out_proj = nn.Linear(d_model, d_model)
-        self.dropout = nn.Dropout(dropout)
+常见杠杆包括：
+* **特征工程**：创建更好的输入数据表达；
+* **超参数调优**：系统地搜索更好的配置；
+* **扩充数据**：扩大数据集或提高数据质量。
 
-    def forward(self, x: torch.Tensor, mask: torch.Tensor = None) -> torch.Tensor:
-        batch_size, seq_len, _ = x.shape
-        q = self.q_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        k = self.k_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        v = self.v_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        
-        scores = torch.matmul(q, k.transpose(-2, -1)) / (self.head_dim ** 0.5)
-        if mask is not None:
-            scores = scores.masked_fill(mask == 0, float('-inf'))
-            
-        attn_weights = F.softmax(scores, dim=-1)
-        attn_weights = self.dropout(attn_weights)
-        
-        output = torch.matmul(attn_weights, v)
-        output = output.transpose(1, 2).contiguous().view(batch_size, seq_len, self.d_model)
-        return self.out_proj(output)
+这一阶段的投资回报率（ROI）往往最高。
 
-# 实例化与前向验证
-module = HighPerformanceModule(d_model=512)
-sample_input = torch.randn(2, 64, 512)
-output = module(sample_input)
-print("前向输出 Tensor 维度:", output.shape)
-```
+![阶段 3 模型优化循环图](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb4a6eb4b-9e63-4790-9af1-93a82f66fa1d_1511x782.png)
 
-## 4. 维度对比与工程选型建议
+## 阶段 4：复杂模型
 
-| 评估维度 | 传统范式 / 基线方案 | **Phases of ML Modeling** 范式 |
-| :--- | :--- | :--- |
-| **时间复杂度** | $\mathcal{O}(N^2)$ | $\mathcal{O}(N \log N)$ 或 $\mathcal{O}(N)$ |
-| **内存/显存占用** | 高 (线性随 Context 增长) | 低 (具备 Chunk/Paged 优化) |
-| **扩展性与通用性** | 局限于特定单边场景 | 跨多端通用、支持 MCP/Agent 协议 |
+只有当简单方法被彻底穷尽后，才应当转向 fundamentally 更加复杂的模型（如深度神经网络、Transformer 或大规模预训练架构）。
 
-### 生产部署黄金指南：
-1. **上线前验证**：务必在黄金测试集（Golden Dataset）上执行端到端的 Evaluation，防止微调或量化后性能衰退。
-2. **混合检索与重排序**：结合 Dense Vector 与 BM25 稀疏检索，并使用 Cross-Encoder Reranker 进一步精炼上下文。
-3. **监控与可观测性**：在 Agent Loop 中接入 OpenTelemetry，追踪轨迹中的每一步 Tool Call 延迟与 Token 开销。
+![阶段 4 复杂深度模型演进](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe52e4e5f-0806-4e2d-97f3-bed894de2c88_1257x617.png)
+
+复杂模型带来了高表达能力，但也带来了高工程成本。进入阶段 4 的决策应当由证据驱动。在每个阶段，前一阶段的最佳模型都将成为新的基线。

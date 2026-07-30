@@ -1,106 +1,55 @@
 ---
-title: "72 techniques to optimize LLMs in production."
+title: "72 techniques to optimize LLMs in production"
 source: "https://mail.google.com/mail/u/0/#inbox/19d9d1a7d44f86a9"
 author:
   - "[[DailyDoseOfDS]]"
 published: 2026-04-17
 created: 2026-07-30
-description: "深度解析《72 techniques to optimize LLMs in production.》的核心技术原理、架构图解、数学推导与生产级工程落地方案。"
+description: "系统梳理生产环境中优化大语言模型（LLM）的 72 种核心技术，涵盖模型选择、提示词工程、检索增强、量化微调、KV缓存与推理调度等九大优化支柱。"
 tags:
   - clippings
 ---
+# 生产环境中优化 LLM 的 72 种技术全景指南（72 techniques to optimize LLMs in production）
 
-# 72 techniques to optimize LLMs in production.
+在配备 H100 显卡运行 Llama 70B 的服务器上，单个推理请求在 **Prefill（预填充/Prompt处理）阶段**的 GPU 计算利用率可以达到 92%；然而片刻之后在同一个硬件上进入 **Decode（解码/逐字生成）阶段**时，利用率却骤降至 28%。
 
-在现代化人工智能与大语言模型（LLM）工程实践中，**72 techniques to optimize LLMs in production.** 代表了关键的方法论与架构突破。本文将结合底层数学原理、原版高清图解与 Python/PyTorch 代码实现对其展开全景深度拆解。
+硬件本身没有变化，变的是工作负载属性：Prefill 是**计算受限（Compute-bound）**的，而 Decode 则是**内存带宽受限（Memory bandwidth-bound）**的。
 
+![](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff5fb820e-1081-4e0e-84e3-462ebf765a4c_1200x781.png)
 
-## 1. 核心架构与原版图解展示
+要在生产环境中真正实现高性能、高性价比的 LLM 部署，必须深入理解并统筹九大核心支柱中的 72 种优化技术：
 
-![图 1：72 techniques to optimize LLMs in production. 原理图解](https://substackcdn.com/image/fetch/$s_!ACmf!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F941e3f74-4a21-4901-81a4-9e52ff76bce2_1540x307.png)
-*说明：图 1：72 techniques to optimize LLMs in production. 原理图解*
+![](https://substackcdn.com/image/fetch/w_1456,c_limit,F_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F31cad8a2-a37a-4588-9343-a9094c04ad2c_1200x475.png)
 
-![图 2：72 techniques to optimize LLMs in production. 原理图解](https://substackcdn.com/image/fetch/$s_!5YvD!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5a7b7511-b108-4c10-8dc3-b7a33e3ced1b_1540x307.png)
-*说明：图 2：72 techniques to optimize LLMs in production. 原理图解*
+### 生产环境 LLM 优化的九大支柱
 
-![图 3：72 techniques to optimize LLMs in production. 原理图解](https://substackcdn.com/image/fetch/$s_!SpQ5!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F90b925cd-3327-4430-ab7e-f1872063b26a_1250x1250.gif)
-*说明：图 3：72 techniques to optimize LLMs in production. 原理图解*
+1. **业务逻辑与模型解耦（Model Selection & Task Offloading）**：
+   - 并非所有任务都需要顶级大模型。通过分类路由器（Classifier Router）将简单任务打到轻量模型（如 7B/8B），或使用函数调用（Function Calling）将确定性计算下推给代码逻辑。
 
+2. **提示词工程与压缩（Prompt Engineering & Compression）**：
+   - 优化 Prompt 表达，利用 Prompt Compression 技术裁剪长检索上下文中的无效 Token。
 
-## 2. 深度理论与技术背景
+3. **检索增强与数据 Payload 瘦身（RAG Optimization）**：
+   - 采用 Blockify 等去重手段减少冗余检索 Payload，防止上下文膨胀。
 
-### 2.1 问题痛点与架构演进
-传统的处理范式在面对大规模高并发或复杂推演场景时，往往面临以下瓶颈：
-1. **计算与存储瓶颈**：随着上下文与模型参数增长，显存与 Token 消耗呈二次方开销上升。
-2. **决策与精度衰减**：在长链条推理（Reasoning）与多步规划中容易遭遇累积误差与幻觉。
+4. **模型压缩与权重量化（Quantization & Compression）**：
+   - 模型权重时刻占用 GPU 显存（例如 70B 模型在 FP16 下未载入任何上下文即占 140GB）。
+   - 采用 AWQ、GPTQ、FP8 或 INT4 极小化显存占用，提升 Memory-bound 阶段的带宽吞吐。
 
-为此，**72 techniques to optimize LLMs in production.** 引入了更优化的状态表示与控制流逻辑：
+5. **KV 缓存优化（KV Cache Management）**：
+   - KV Cache 随上下文长度线性增长，长会话中极易挤爆显存。
+   - 使用 PagedAttention、Grouped-Query Attention (GQA)、FlashAttention 算子优化显存碎片与读写。
 
-```
-[输入数据 / Query] ──> [特征提取与编码] ──> [核心算子 / 决策控制] ──> [结构化输出]
-```
+6. **推理与计算调度（Scheduling & Disaggregation）**：
+   - 引入连续批处理（Continuous Batching）提升并发吞吐。
+   - 实施 Prefill-Decode 分离（Disaggregation），让计算密集型和带宽密集型任务在独立节点运行。
 
-### 2.2 数学推导与公式表达
+7. **缓存策略（Caching Strategies）**：
+   - 应用 Prefix Caching 缓存固定的 System Prompt。
+   - 部署 Semantic Caching（语义缓存）在应用层直接拦截并复用近义查询的回答。
 
-对于系统中的核心评估函数 $f(x, \theta)$，其优化目标可表示为：
+8. **智能路由与降级回退（Routing & Multi-provider Failover）**：
+   - 多 API 跨提供商自动容灾与分流，基于 QoS 等级保障核心业务速度。
 
-$$\max_{\theta} \mathbb{E}_{(x, y) \sim \mathcal{D}} \left[ \log P(y \mid x; \theta) \right] - \beta \cdot \mathcal{D}_{KL}(P_{\theta} \parallel P_{ref})$$
-
-通过引入温度参数 $T$ 与软 Softmax 目标，保证了高维状态空间下的收敛稳定性。
-
-## 3. 生产级 Python 代码实现
-
-```python
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
-
-class HighPerformanceModule(nn.Module):
-    def __init__(self, d_model: int = 512, n_heads: int = 8, dropout: float = 0.1):
-        super().__init__()
-        self.d_model = d_model
-        self.n_heads = n_heads
-        self.head_dim = d_model // n_heads
-        
-        self.q_proj = nn.Linear(d_model, d_model)
-        self.k_proj = nn.Linear(d_model, d_model)
-        self.v_proj = nn.Linear(d_model, d_model)
-        self.out_proj = nn.Linear(d_model, d_model)
-        self.dropout = nn.Dropout(dropout)
-
-    def forward(self, x: torch.Tensor, mask: torch.Tensor = None) -> torch.Tensor:
-        batch_size, seq_len, _ = x.shape
-        q = self.q_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        k = self.k_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        v = self.v_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        
-        scores = torch.matmul(q, k.transpose(-2, -1)) / (self.head_dim ** 0.5)
-        if mask is not None:
-            scores = scores.masked_fill(mask == 0, float('-inf'))
-            
-        attn_weights = F.softmax(scores, dim=-1)
-        attn_weights = self.dropout(attn_weights)
-        
-        output = torch.matmul(attn_weights, v)
-        output = output.transpose(1, 2).contiguous().view(batch_size, seq_len, self.d_model)
-        return self.out_proj(output)
-
-# 实例化与前向验证
-module = HighPerformanceModule(d_model=512)
-sample_input = torch.randn(2, 64, 512)
-output = module(sample_input)
-print("前向输出 Tensor 维度:", output.shape)
-```
-
-## 4. 维度对比与工程选型建议
-
-| 评估维度 | 传统范式 / 基线方案 | **72 techniques to optimize LLMs in production.** 范式 |
-| :--- | :--- | :--- |
-| **时间复杂度** | $\mathcal{O}(N^2)$ | $\mathcal{O}(N \log N)$ 或 $\mathcal{O}(N)$ |
-| **内存/显存占用** | 高 (线性随 Context 增长) | 低 (具备 Chunk/Paged 优化) |
-| **扩展性与通用性** | 局限于特定单边场景 | 跨多端通用、支持 MCP/Agent 协议 |
-
-### 生产部署黄金指南：
-1. **上线前验证**：务必在黄金测试集（Golden Dataset）上执行端到端的 Evaluation，防止微调或量化后性能衰退。
-2. **混合检索与重排序**：结合 Dense Vector 与 BM25 稀疏检索，并使用 Cross-Encoder Reranker 进一步精炼上下文。
-3. **监控与可观测性**：在 Agent Loop 中接入 OpenTelemetry，追踪轨迹中的每一步 Tool Call 延迟与 Token 开销。
+9. **全栈工程复合效应（Putting It Together）**：
+   - 单一技术通常只能提升 5%-15%，但将 FP8 权重、FlashAttention、PagedAttention、Prefill-Decode 分离、Prefix Caching 以及语义缓存叠加起来时，**整体每 Token 成本能够实现 5 到 8 倍的巨大降幅**。

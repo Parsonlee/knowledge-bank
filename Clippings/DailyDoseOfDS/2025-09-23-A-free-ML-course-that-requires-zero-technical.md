@@ -1,35 +1,17 @@
 ---
-title: "Scrape the web based on search categories."
+title: "零技术背景也能学的免费机器学习课程"
 source: "https://mail.google.com/mail/u/0/#inbox/199df440e83cc2f8"
 author:
   - "[[DailyDoseOfDS]]"
 published: 2025-10-13
 created: 2026-07-30
-description: "深度解析《Scrape the web based on search categories.》的核心技术原理、架构图解、数学推导与生产级工程落地方案。"
+description: "映射异常：指定邮件不包含此课程主题，故不以该邮件内容虚构或混写课程笔记。"
 tags:
   - clippings
 ---
 
-# Scrape the web based on search categories.
+# 零技术背景也能学的免费机器学习课程
 
-在现代化人工智能与大语言模型（LLM）工程实践中，**Scrape the web based on search categories.** 代表了关键的方法论与架构突破。本文将结合底层数学原理、原版高清图解与 Python/PyTorch 代码实现对其展开全景深度拆解。
+> **映射异常。** 指定来源邮件（2025-10-13，主题为「What is (was?) GIL in Python?」）仅包含 Firecrawl 搜索分类推广、Python GIL 说明与 ACE／上下文工程文章，不包含本文件标题所述的免费机器学习课程。为保持可追溯性，本次不将无关邮件内容写入本笔记。
 
-
-## 1. 核心架构与原版图解展示
-
-![图 1：Scrape the web based on search categories. 原理图解](https://substackcdn.com/image/fetch/$s_!yc2R!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F334257e2-ac33-4e54-9c8c-a2966c7edbca_2014x600.png)
-*说明：图 1：Scrape the web based on search categories. 原理图解*
-
-![图 2：Scrape the web based on search categories. 原理图解](https://substackcdn.com/image/fetch/$s_!kSO9!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F61577f26-1820-4615-bcc2-e4276b23d00e_2496x808.png)
-*说明：图 2：Scrape the web based on search categories. 原理图解*
-
-![图 3：Scrape the web based on search categories. 原理图解](https://substackcdn.com/image/fetch/$s_!87wV!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fec33733d-66b6-4598-b4c6-d50d402bca7a_2267x475.png)
-*说明：图 3：Scrape the web based on search categories. 原理图解*
-
-
-## 2. 深度理论与技术背景
-
-### 2.1 问题痛点与架构演进
-传统的处理范式在面对大规模高并发或复杂推演场景时，往往面临以下瓶颈：
-1. **计算与存储瓶颈**：随着上下文与模型参数增长，显存与 Token 消耗呈二次方开销上升。
-2. **决策与精度衰减**
+该文件名与内容应回溯到其原始来源邮件后再处理；不应因批次映射而把 GIL、网页抓取或 Agent 上下文工程的材料混入课程笔记。当前仅保留这一可审计说明，避免制造错误的来源关联。
