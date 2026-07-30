@@ -1,30 +1,30 @@
 ---
-title: "11 LLM evaluation methods."
-source: "https://mail.google.com/mail/u/0/#inbox/19f962933027e3e6"
+title: "How to beat GRPO without touching model weights."
+source: "https://mail.google.com/mail/u/0/#inbox/19de58fc0d126e4b"
 author:
   - "[[DailyDoseOfDS]]"
-published: 2026-07-24
+published: 2026-05-01
 created: 2026-07-30
-description: "深度解析《11 LLM evaluation methods.》的核心技术原理、架构图解、数学推导与生产级工程落地方案。"
+description: "深度解析《How to beat GRPO without touching model weights.》的核心技术原理、架构图解、数学推导与生产级工程落地方案。"
 tags:
   - clippings
 ---
 
-# 11 LLM evaluation methods.
+# How to beat GRPO without touching model weights.
 
-在现代化人工智能与大语言模型（LLM）工程实践中，**11 LLM evaluation methods.** 代表了关键的方法论与架构突破。本文将结合底层数学原理、原版高清图解与 Python/PyTorch 代码实现对其展开全景深度拆解。
+在现代化人工智能与大语言模型（LLM）工程实践中，**How to beat GRPO without touching model weights.** 代表了关键的方法论与架构突破。本文将结合底层数学原理、原版高清图解与 Python/PyTorch 代码实现对其展开全景深度拆解。
 
 
 ## 1. 核心架构与原版图解展示
 
-![图 1：11 LLM evaluation methods. 原理图解](https://substackcdn.com/image/fetch/$s_!BE8l!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6996a813-9b4d-4c6f-b568-abc74d6d1195_747x239.png)
-*说明：图 1：11 LLM evaluation methods. 原理图解*
+![图 1：How to beat GRPO without touching model weights. 原理图解](https://substackcdn.com/image/fetch/$s_!h7Xk!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff6a7c5c0-3243-459d-bfd9-0ce59be84fc1_680x379.png)
+*说明：图 1：How to beat GRPO without touching model weights. 原理图解*
 
-![图 2：11 LLM evaluation methods. 原理图解](https://substackcdn.com/image/fetch/$s_!1S-0!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc9b3e70a-70c7-41da-8301-ffc61fc66173_745x234.png)
-*说明：图 2：11 LLM evaluation methods. 原理图解*
+![图 2：How to beat GRPO without touching model weights. 原理图解](https://substackcdn.com/image/fetch/$s_!lzNT!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2e3d9fa5-9761-4417-970d-371bf6dfaeea_680x418.png)
+*说明：图 2：How to beat GRPO without touching model weights. 原理图解*
 
-![图 3：11 LLM evaluation methods. 原理图解](https://substackcdn.com/image/fetch/$s_!TLR0!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc35e124a-3b01-4d25-80db-93a0bf77d534_744x235.png)
-*说明：图 3：11 LLM evaluation methods. 原理图解*
+![图 3：How to beat GRPO without touching model weights. 原理图解](https://substackcdn.com/image/fetch/$s_!TefD!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb14147e7-8eea-4b15-a073-38acba8eeb23_1080x1029.gif)
+*说明：图 3：How to beat GRPO without touching model weights. 原理图解*
 
 
 ## 2. 深度理论与技术背景
@@ -34,7 +34,7 @@ tags:
 1. **计算与存储瓶颈**：随着上下文与模型参数增长，显存与 Token 消耗呈二次方开销上升。
 2. **决策与精度衰减**：在长链条推理（Reasoning）与多步规划中容易遭遇累积误差与幻觉。
 
-为此，**11 LLM evaluation methods.** 引入了更优化的状态表示与控制流逻辑：
+为此，**How to beat GRPO without touching model weights.** 引入了更优化的状态表示与控制流逻辑：
 
 ```
 [输入数据 / Query] ──> [特征提取与编码] ──> [核心算子 / 决策控制] ──> [结构化输出]
@@ -94,7 +94,7 @@ print("前向输出 Tensor 维度:", output.shape)
 
 ## 4. 维度对比与工程选型建议
 
-| 评估维度 | 传统范式 / 基线方案 | **11 LLM evaluation methods.** 范式 |
+| 评估维度 | 传统范式 / 基线方案 | **How to beat GRPO without touching model weights.** 范式 |
 | :--- | :--- | :--- |
 | **时间复杂度** | $\mathcal{O}(N^2)$ | $\mathcal{O}(N \log N)$ 或 $\mathcal{O}(N)$ |
 | **内存/显存占用** | 高 (线性随 Context 增长) | 低 (具备 Chunk/Paged 优化) |

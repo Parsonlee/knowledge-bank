@@ -1,23 +1,23 @@
 ---
-title: "​RAG & Fine-tuning, explained visually​."
+title: "The right way to use multiple embedding models."
 source: "https://mail.google.com/mail/u/0/#inbox/19b5c7637722a2ba"
 author:
   - "[[DailyDoseOfDS]]"
 published: 2025-12-26
 created: 2026-07-30
-description: "深度解析《​RAG & Fine-tuning, explained visually​.》的核心技术原理、架构图解、数学推导与生产级工程落地方案。"
+description: "深度解析《The right way to use multiple embedding models.》的核心技术原理、架构图解、数学推导与生产级工程落地方案。"
 tags:
   - clippings
 ---
 
-# ​RAG & Fine-tuning, explained visually​.
+# The right way to use multiple embedding models.
 
-在现代化人工智能与大语言模型（LLM）工程实践中，**​RAG & Fine-tuning, explained visually​.** 代表了关键的方法论与架构突破。本文将结合底层数学原理、原版高清图解与 Python/PyTorch 代码实现对其展开全景深度拆解。
+在现代化人工智能与大语言模型（LLM）工程实践中，**The right way to use multiple embedding models.** 代表了关键的方法论与架构突破。本文将结合底层数学原理、原版高清图解与 Python/PyTorch 代码实现对其展开全景深度拆解。
 
 
 ## 1. 核心架构与原版图解展示
 
-![图 1：​RAG & Fine-tuning, explained visually​. 原理图解](https://substackcdn.com/image/fetch/$s_!1a3L!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa087ec4e-141a-477e-87fb-58cd5f07dfd0_960x995.gif)
+![图 1：The right way to use muually​. 原理图解](https://substackcdn.com/image/fetch/$s_!1a3L!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa087ec4e-141a-477e-87fb-58cd5f07dfd0_960x995.gif)
 *说明：图 1：​RAG & Fine-tuning, explained visually​. 原理图解*
 
 ![图 2：​RAG & Fine-tuning, explained visually​. 原理图解](https://substackcdn.com/image/fetch/$s_!tfnf!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6856e33e-5983-4a03-a344-9135ea6f5b50_2400x1317.png)

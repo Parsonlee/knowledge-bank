@@ -1,21 +1,23 @@
 ---
-title: "How top AI labs are building RL Agents in 2026:* Introduction"
-source: "https://mail.google.com/mail/u/0/#inbox/19dd11ff55feb3f6"
+title: "Markov decision processes and value functions in RL."
+source: "https://mail.google.com/mail/u/0/#inbox/19deeeb458239986"
 author:
   - "[[DailyDoseOfDS]]"
-published: 2026-04-27
+published: 2026-05-03
 created: 2026-07-30
-description: "深度解析《How top AI labs are building RL Agents in 2026:* Introduction》的核心技术原理、架构图解、数学推导与生产级工程落地方案。"
+description: "深度解析《Markov decision processes and value functions in RL.》的核心技术原理、架构图解、数学推导与生产级工程落地方案。"
 tags:
   - clippings
 ---
 
-# How top AI labs are building RL Agents in 2026:* Introduction
+# Markov decision processes and value functions in RL.
 
-在现代化人工智能与大语言模型（LLM）工程实践中，**How top AI labs are building RL Agents in 2026:* Introduction** 代表了关键的方法论与架构突破。本文将结合底层数学原理、原版高清图解与 Python/PyTorch 代码实现对其展开全景深度拆解。
+在现代化人工智能与大语言模型（LLM）工程实践中，**Markov decision processes and value functions in RL.** 代表了关键的方法论与架构突破。本文将结合底层数学原理、原版高清图解与 Python/PyTorch 代码实现对其展开全景深度拆解。
 
 
 ## 1. 核心架构与原版图解展示
+
+![图 1：Mar与原版图解展示
 
 ![图 1：How top AI labs are building RL Agents in 2026:* Introduction 原理图解](https://substackcdn.com/image/fetch/$s_!jhge!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fccdf09c7-4c52-4478-bda7-6af84f4f9614_1200x670.png)
 *说明：图 1：How top AI labs are building RL Agents in 2026:* Introduction 原理图解*

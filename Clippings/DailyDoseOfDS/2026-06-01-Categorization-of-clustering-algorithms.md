@@ -17,14 +17,14 @@ tags:
 
 ## 1. 核心架构与原版图解展示
 
-![图 1：Categorization of clustering algorithms.​ 原理图解](https://substackcdn.com/image/fetch/$s_!sGB0!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0274fe54-fda1-4ffe-be74-bc19107013f8_2412x1426.png)
-*说明：图 1：Categorization of clustering algorithms.​ 原理图解*
+![图 1：Categorization of clustering alinearity of ReLU. 原理图解](https://substackcdn.com/image/fetch/$s_!D0nO!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa323bb08-0368-49d7-bb19-59d2b73633e4_579x290.png)
+*说明：图 1：An intuitive guide to non-linearity of ReLU. 原理图解*
 
-![图 2：Categorization of clustering algorithms.​ 原理图解](https://substackcdn.com/image/fetch/$s_!N-0b!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F74e64a66-02af-490f-9371-55286fa09cf0_1566x788.png)
-*说明：图 2：Categorization of clustering algorithms.​ 原理图解*
+![图 2：An intuitive guide to non-linearity of ReLU. 原理图解](https://substackcdn.com/image/fetch/$s_!S1Zr!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F141beb46-2264-41ba-b178-8a1b14acdbfc_1020x500.png)
+*说明：图 2：An intuitive guide to non-linearity of ReLU. 原理图解*
 
-![图 3：Categorization of clustering algorithms.​ 原理图解](https://substackcdn.com/image/fetch/$s_!PHoD!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fea0dbf24-dec6-468f-bf36-8f4470cfeeec_965x562.png)
-*说明：图 3：Categorization of clustering algorithms.​ 原理图解*
+![图 3：An intuitive guide to non-linearity of ReLU. 原理图解](https://substackcdn.com/image/fetch/$s_!4FQ9!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8ce4378b-7574-4443-8371-c7462c3c5aa7_888x395.png)
+*说明：图 3：An intuitive guide to non-linearity of ReLU. 原理图解*
 
 
 ## 2. 深度理论与技术背景
@@ -32,7 +32,7 @@ tags:
 ### 2.1 问题痛点与架构演进
 传统的处理范式在面对大规模高并发或复杂推演场景时，往往面临以下瓶颈：
 1. **计算与存储瓶颈**：随着上下文与模型参数增长，显存与 Token 消耗呈二次方开销上升。
-2. **决策与精度衰减**：在长链条推理（Reasoning）与多步规划中容易遭遇累积误差与幻觉。
+2. **决策衰减**：在长链条推理（Reasoning）与多步规划中容易遭遇累积误差与幻觉。
 
 为此，**Categorization of clustering algorithms.​** 引入了更优化的状态表示与控制流逻辑：
 

@@ -1,30 +1,30 @@
 ---
-title: "Linkup achieves SOTA performance on SimpleQA."
-source: "https://mail.google.com/mail/u/0/#inbox/1971dcca96aa74c3"
+title: "Memory Pinning to accelerate model training."
+source: "https://mail.google.com/mail/u/0/#inbox/196ac3a283f20357"
 author:
   - "[[DailyDoseOfDS]]"
-published: 2025-05-29
+published: 2025-05-07
 created: 2026-07-30
-description: "深度解析《Linkup achieves SOTA performance on SimpleQA.》的核心技术原理、架构图解、数学推导与生产级工程落地方案。"
+description: "深度解析《Memory Pinning to accelerate model training.》的核心技术原理、架构图解、数学推导与生产级工程落地方案。"
 tags:
   - clippings
 ---
 
-# Linkup achieves SOTA performance on SimpleQA.
+# Memory Pinning to accelerate model training.
 
-在现代化人工智能与大语言模型（LLM）工程实践中，**Linkup achieves SOTA performance on SimpleQA.** 代表了关键的方法论与架构突破。本文将结合底层数学原理、原版高清图解与 Python/PyTorch 代码实现对其展开全景深度拆解。
+在现代化人工智能与大语言模型（LLM）工程实践中，**Memory Pinning to accelerate model training.** 代表了关键的方法论与架构突破。本文将结合底层数学原理、原版高清图解与 Python/PyTorch 代码实现对其展开全景深度拆解。
 
 
 ## 1. 核心架构与原版图解展示
 
-![图 1：Linkup achieves SOTA performance on SimpleQA. 原理图解](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F75bc4e2b-33de-419f-83f8-7dcc4011a7e6_720x403.png)
-*说明：图 1：Linkup achieves SOTA performance on SimpleQA. 原理图解*
+![图 1：Memory Pinning to accelerate model training. 原理图解](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F00a246a7-bcd3-4fb6-91f2-8e0bf76e56f7_1916x676.png)
+*说明：图 1：Memory Pinning to accelerate model training. 原理图解*
 
-![图 2：Linkup achieves SOTA performance on SimpleQA. 原理图解](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Feed92d2a-dde5-4755-b30f-366a7ad6d606_1240x514.gif)
-*说明：图 2：Linkup achieves SOTA performance on SimpleQA. 原理图解*
+![图 2：Memory Pinning to accelerate model training. 原理图解](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7fc81815-cdf2-40d1-a623-04d758221ee8_1456x458.png)
+*说明：图 2：Memory Pinning to accelerate model training. 原理图解*
 
-![图 3：Linkup achieves SOTA performance on SimpleQA. 原理图解](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F92c70184-ba0f-4877-9a55-e4add0e311ad_870x1116.gif)
-*说明：图 3：Linkup achieves SOTA performance on SimpleQA. 原理图解*
+![图 3：Memory Pinning to accelerate model training. 原理图解](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F85ca03e3-8876-4137-97fa-4e726b48f94b_1456x770.png)
+*说明：图 3：Memory Pinning to accelerate model training. 原理图解*
 
 
 ## 2. 深度理论与技术背景
@@ -34,7 +34,7 @@ tags:
 1. **计算与存储瓶颈**：随着上下文与模型参数增长，显存与 Token 消耗呈二次方开销上升。
 2. **决策与精度衰减**：在长链条推理（Reasoning）与多步规划中容易遭遇累积误差与幻觉。
 
-为此，**Linkup achieves SOTA performance on SimpleQA.** 引入了更优化的状态表示与控制流逻辑：
+为此，**Memory Pinning to accelerate model training.** 引入了更优化的状态表示与控制流逻辑：
 
 ```
 [输入数据 / Query] ──> [特征提取与编码] ──> [核心算子 / 决策控制] ──> [结构化输出]
@@ -94,7 +94,7 @@ print("前向输出 Tensor 维度:", output.shape)
 
 ## 4. 维度对比与工程选型建议
 
-| 评估维度 | 传统范式 / 基线方案 | **Linkup achieves SOTA performance on SimpleQA.** 范式 |
+| 评估维度 | 传统范式 / 基线方案 | **Memory Pinning to accelerate model training.** 范式 |
 | :--- | :--- | :--- |
 | **时间复杂度** | $\mathcal{O}(N^2)$ | $\mathcal{O}(N \log N)$ 或 $\mathcal{O}(N)$ |
 | **内存/显存占用** | 高 (线性随 Context 增长) | 低 (具备 Chunk/Paged 优化) |

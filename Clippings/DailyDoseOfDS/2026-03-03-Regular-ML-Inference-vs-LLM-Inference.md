@@ -1,30 +1,30 @@
 ---
-title: "4 parallel processing techniques in Python."
-source: "https://mail.google.com/mail/u/0/#inbox/19c2a80854fc31f8"
+title: "Regular ML Inference vs. LLM Inference."
+source: "https://mail.google.com/mail/u/0/#inbox/19cb52ae130cbc14"
 author:
   - "[[DailyDoseOfDS]]"
-published: 2026-02-04
+published: 2026-03-03
 created: 2026-07-30
-description: "深度解析《4 parallel processing techniques in Python.》的核心技术原理、架构图解、数学推导与生产级工程落地方案。"
+description: "深度解析《Regular ML Inference vs. LLM Inference.》的核心技术原理、架构图解、数学推导与生产级工程落地方案。"
 tags:
   - clippings
 ---
 
-# 4 parallel processing techniques in Python.
+# Regular ML Inference vs. LLM Inference.
 
-在现代化人工智能与大语言模型（LLM）工程实践中，**4 parallel processing techniques in Python.** 代表了关键的方法论与架构突破。本文将结合底层数学原理、原版高清图解与 Python/PyTorch 代码实现对其展开全景深度拆解。
+在现代化人工智能与大语言模型（LLM）工程实践中，**Regular ML Inference vs. LLM Inference.** 代表了关键的方法论与架构突破。本文将结合底层数学原理、原版高清图解与 Python/PyTorch 代码实现对其展开全景深度拆解。
 
 
 ## 1. 核心架构与原版图解展示
 
-![图 1：4 parallel processing techniques in Python. 原理图解](https://substackcdn.com/image/fetch/$s_!cJ94!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9da59be7-af15-4a4c-bac5-884d92c0e368_1456x507.png)
-*说明：图 1：4 parallel processing techniques in Python. 原理图解*
+![图 1：Regular ML Inference vs. LLM Inference. 原理图解](https://substackcdn.com/image/fetch/$s_!emXD!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F870313d3-6afb-4573-adec-ed767fd38f6d_1227x807.png)
+*说明：图 1：Regular ML Inference vs. LLM Inference. 原理图解*
 
-![图 2：4 parallel processing techniques in Python. 原理图解](https://substackcdn.com/image/fetch/$s_!0NME!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F49c0a84a-d19a-46e3-a5d5-87d33d737fd5_1456x1010.png)
-*说明：图 2：4 parallel processing techniques in Python. 原理图解*
+![图 2：Regular ML Inference vs. LLM Inference. 原理图解](https://substackcdn.com/image/fetch/$s_!vvO7!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb3d247ef-5945-4107-bb9b-03fc7ac12531_2452x676.png)
+*说明：图 2：Regular ML Inference vs. LLM Inference. 原理图解*
 
-![图 3：4 parallel processing techniques in Python. 原理图解](https://substackcdn.com/image/fetch/$s_!u64R!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff6f3954e-a443-4da6-9aa5-7bfa8c7afb59_1024x323.png)
-*说明：图 3：4 parallel processing techniques in Python. 原理图解*
+![图 3：Regular ML Inference vs. LLM Inference. 原理图解](https://substackcdn.com/image/fetch/$s_!UurJ!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F41885dc8-c398-473c-b39e-a3c186099e44_1440x1490.png)
+*说明：图 3：Regular ML Inference vs. LLM Inference. 原理图解*
 
 
 ## 2. 深度理论与技术背景
@@ -34,7 +34,7 @@ tags:
 1. **计算与存储瓶颈**：随着上下文与模型参数增长，显存与 Token 消耗呈二次方开销上升。
 2. **决策与精度衰减**：在长链条推理（Reasoning）与多步规划中容易遭遇累积误差与幻觉。
 
-为此，**4 parallel processing techniques in Python.** 引入了更优化的状态表示与控制流逻辑：
+为此，**Regular ML Inference vs. LLM Inference.** 引入了更优化的状态表示与控制流逻辑：
 
 ```
 [输入数据 / Query] ──> [特征提取与编码] ──> [核心算子 / 决策控制] ──> [结构化输出]
@@ -94,7 +94,7 @@ print("前向输出 Tensor 维度:", output.shape)
 
 ## 4. 维度对比与工程选型建议
 
-| 评估维度 | 传统范式 / 基线方案 | **4 parallel processing techniques in Python.** 范式 |
+| 评估维度 | 传统范式 / 基线方案 | **Regular ML Inference vs. LLM Inference.** 范式 |
 | :--- | :--- | :--- |
 | **时间复杂度** | $\mathcal{O}(N^2)$ | $\mathcal{O}(N \log N)$ 或 $\mathcal{O}(N)$ |
 | **内存/显存占用** | 高 (线性随 Context 增长) | 低 (具备 Chunk/Paged 优化) |

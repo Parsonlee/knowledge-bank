@@ -17,14 +17,14 @@ tags:
 
 ## 1. 核心架构与原版图解展示
 
-![图 1：​Context engineering for Agents​. 原理图解](https://substackcdn.com/image/fetch/$s_!3E9w!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F69186a3b-68d8-4aa7-9e71-3b9dc67bf2b9_1338x964.gif)
-*说明：图 1：​Context engineering for Agents​. 原理图解*
+![图 1：​Context engineering for Agents​. 原理图解](https://sub//substackcdn.com/image/fetch/$s_!gngo!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd3c57039-25e1-400e-aaae-9bff25f2ce8b_1200x1349.png)
+*说明：图 1：​Connect any LLM to any MCP server ! 原理图解*
 
-![图 2：​Context engineering for Agents​. 原理图解](https://substackcdn.com/image/fetch/$s_!5R1A!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F97dcd5a7-37f4-4ab6-ab39-55a02dc97f32_1080x1080.gif)
-*说明：图 2：​Context engineering for Agents​. 原理图解*
+![图 2：​Connect any LLM to any MCP server ! 原理图解](https://substackcdn.com/image/fetch/$s_!TAsd!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa5baedfc-1c6a-4446-84a2-bcf269d402d1_1200x983.png)
+*说明：图 2：​Connect any LLM to any MCP server ! 原理图解*
 
-![图 3：​Context engineering for Agents​. 原理图解](https://substackcdn.com/image/fetch/$s_!KIzE!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F56019299-003f-4d6e-a0c3-415095a0f9ca_1200x290.png)
-*说明：图 3：​Context engineering for Agents​. 原理图解*
+![图 3：​Connect any LLM to any MCP server ! 原理图解](https://substackcdn.com/image/fetch/$s_!RuxA!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7e7bae65-5e25-412c-b612-b8e4d7b70733_1700x1153.png)
+*说明：图 3：​Connect any LLM to any MCP server ! 原理图解*
 
 
 ## 2. 深度理论与技术背景
@@ -32,7 +32,7 @@ tags:
 ### 2.1 问题痛点与架构演进
 传统的处理范式在面对大规模高并发或复杂推演场景时，往往面临以下瓶颈：
 1. **计算与存储瓶颈**：随着上下文与模型参数增长，显存与 Token 消耗呈二次方开销上升。
-2. **决策与精度衰减**：在长链条推理（Reasoning）与多步规划中容易遭遇累积误差与幻觉。
+2. **决策与精度衰减**：在长链条推理（Reasoning）与多步规遭遇累积误差与幻觉。
 
 为此，**​Context engineering for Agents​.** 引入了更优化的状态表示与控制流逻辑：
 

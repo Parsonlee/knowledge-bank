@@ -1,30 +1,30 @@
 ---
-title: "Automated release docs for engineering teams."
-source: "https://mail.google.com/mail/u/0/#inbox/19ef7234678feae5"
+title: "Agent memory and state are not the same thing!​"
+source: "https://mail.google.com/mail/u/0/#inbox/19fa5754b2a0ee28"
 author:
   - "[[DailyDoseOfDS]]"
-published: 2026-06-24
+published: 2026-07-27
 created: 2026-07-30
-description: "深度解析《Automated release docs for engineering teams.》的核心技术原理、架构图解、数学推导与生产级工程落地方案。"
+description: "深度解析《Agent memory and state are not the same thing!​》的核心技术原理、架构图解、数学推导与生产级工程落地方案。"
 tags:
   - clippings
 ---
 
-# Automated release docs for engineering teams.
+# Agent memory and state are not the same thing!​
 
-在现代化人工智能与大语言模型（LLM）工程实践中，**Automated release docs for engineering teams.** 代表了关键的方法论与架构突破。本文将结合底层数学原理、原版高清图解与 Python/PyTorch 代码实现对其展开全景深度拆解。
+在现代化人工智能与大语言模型（LLM）工程实践中，**Agent memory and state are not the same thing!​** 代表了关键的方法论与架构突破。本文将结合底层数学原理、原版高清图解与 Python/PyTorch 代码实现对其展开全景深度拆解。
 
 
 ## 1. 核心架构与原版图解展示
 
-![图 1：Automated release docs for engineering teams. 原理图解](https://substackcdn.com/image/fetch/$s_!2lFy!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F65d6f843-efd7-48cf-84ac-a025e76b4476_1672x941.png)
-*说明：图 1：Automated release docs for engineering teams. 原理图解*
+![图 1：Agent memory and state are not the same thing!​ 原理图解](https://substackcdn.com/image/fetch/$s_!Lzo1!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F106d2285-d15a-448a-a41a-8af78537eca3_1199x654.png)
+*说明：图 1：Agent memory and state are not the same thing!​ 原理图解*
 
-![图 2：Automated release docs for engineering teams. 原理图解](https://substackcdn.com/image/fetch/$s_!IXQ_!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe73db735-ddb7-4ca2-a88c-8594ca858a52_1341x644.jpeg)
-*说明：图 2：Automated release docs for engineering teams. 原理图解*
+![图 2：Agent memory and state are not the same thing!​ 原理图解](https://substackcdn.com/image/fetch/$s_!ikeR!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F05413595-9081-4608-b60c-74fd3c4f90e0_1199x654.png)
+*说明：图 2：Agent memory and state are not the same thing!​ 原理图解*
 
-![图 3：Automated release docs for engineering teams. 原理图解](https://substackcdn.com/image/fetch/$s_!__Zs!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F86e114e0-5516-4951-b39f-c6c6131ab27b_2752x1536.jpeg)
-*说明：图 3：Automated release docs for engineering teams. 原理图解*
+![图 3：Agent memory and state are not the same thing!​ 原理图解](https://substackcdn.com/image/fetch/$s_!QU09!,w_1456,c_limit,f_auto,q_auto:good,fl_lossy/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1aaf3481-1c6f-4f39-80c6-a3ffc4e7ffa0_1312x1034.gif)
+*说明：图 3：Agent memory and state are not the same thing!​ 原理图解*
 
 
 ## 2. 深度理论与技术背景
@@ -34,7 +34,7 @@ tags:
 1. **计算与存储瓶颈**：随着上下文与模型参数增长，显存与 Token 消耗呈二次方开销上升。
 2. **决策与精度衰减**：在长链条推理（Reasoning）与多步规划中容易遭遇累积误差与幻觉。
 
-为此，**Automated release docs for engineering teams.** 引入了更优化的状态表示与控制流逻辑：
+为此，**Agent memory and state are not the same thing!​** 引入了更优化的状态表示与控制流逻辑：
 
 ```
 [输入数据 / Query] ──> [特征提取与编码] ──> [核心算子 / 决策控制] ──> [结构化输出]
@@ -94,7 +94,7 @@ print("前向输出 Tensor 维度:", output.shape)
 
 ## 4. 维度对比与工程选型建议
 
-| 评估维度 | 传统范式 / 基线方案 | **Automated release docs for engineering teams.** 范式 |
+| 评估维度 | 传统范式 / 基线方案 | **Agent memory and state are not the same thing!​** 范式 |
 | :--- | :--- | :--- |
 | **时间复杂度** | $\mathcal{O}(N^2)$ | $\mathcal{O}(N \log N)$ 或 $\mathcal{O}(N)$ |
 | **内存/显存占用** | 高 (线性随 Context 增长) | 低 (具备 Chunk/Paged 优化) |
