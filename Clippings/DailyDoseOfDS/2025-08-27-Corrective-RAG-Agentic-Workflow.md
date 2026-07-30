@@ -1,71 +1,65 @@
 ---
-title: "​Deploy any ML model, RAG or Agent as an MCP server​."
-source: "https://mail.google.com/mail/u/0/#inbox/198fc6ca70584770"
+title: "实战：纠错式 RAG（CRAG）智能体工作流"
+source: "https://mail.google.com/mail/u/0/#inbox/198ed2e36353fdf7"
 author:
   - "[[DailyDoseOfDS]]"
-published: 2025-08-30
+published: 2025-08-27
 created: 2026-07-30
-description: "深度解析《​Deploy any ML model, RAG or Agent as an MCP server​.》的核心技术原理、架构图解、数学推导与生产级工程落地方案。"
+description: "以 LlamaIndex 工作流编排 CRAG：先检索用户文档，再用 LLM 评估上下文相关性；必要时转向 Firecrawl 网络搜索，最后聚合上下文生成回答。"
 tags:
   - clippings
 ---
 
-# ​Deploy any ML model, RAG or Agent as an MCP server​.
+# 实战：纠错式 RAG（CRAG）智能体工作流
 
-在现代化人工智能与大语言模型（LLM）工程实践中，**​Deploy any ML model, RAG or Agent as an MCP server​.** 代表了关键的方法论与架构突破。本文将结合底层数学原理、原版高清图解与 Python/PyTorch 代码实现对其展开全景深度拆解。
+纠错式检索增强生成（Corrective RAG，CRAG）是改善 RAG 系统的常见技术。它为检索到的文档加入自我评估步骤，以保留与回答真正相关的上下文。
 
+工作流如下：
 
-## 1. 核心架构与原版图解展示
+1. 用用户查询检索文档。
+2. 使用 LLM 评估检索到的上下文是否相关。
+3. 只保留相关上下文。
+4. 如有需要，执行网络搜索。
+5. 聚合上下文并生成回答。
 
-![图 1：​Deploy any ML model, RAG or Agent as an MCP server​. 原理图解](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F13a87bfd-ec8f-48f8-99c0-9673fdb3044c_1200x684.png)
-*说明：图 1：​Deploy any ML model, RAG or Agent as an MCP server​. 原理图解*
+该演示的技术栈包括：
 
-![图 2：​Deploy any ML model, RAG or Agent as an MCP server​. 原理图解](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb111ea55-4ca3-4163-8793-9a4345daa4a3_2768x2776.png)
-*说明：图 2：​Deploy any ML model, RAG or Agent as an MCP server​. 原理图解*
+- [Firecrawl](https://firecrawl.link/avi-chawla)：用于深度网络搜索；
+- [Milvus](https://github.com/milvus-io/milvus)：自托管向量数据库；
+- [Beam](https://github.com/beam-cloud/beta9/)：部署；
+- [CometML Opik](https://www.dailydoseofds.com/a-practical-guide-to-integrate-evaluation-and-observability-into-llm-apps/)：追踪和监控；
+- LlamaIndex workflows：工作流编排。
 
+## 工作流组件
 
-## 2. 深度理论与技术背景
+### 配置 LLM
 
-### 2.1 问题痛点与架构演进
-传统的处理范式在面对大规模高并发或复杂推演场景时，往往面临以下瓶颈：
-1. **计算与存储瓶颈**：随着上下文与模型参数增长，显存与 Token 消耗呈二次方开销上升。
-2. **决策与精度衰减**：在长链条推理（Reasoning）与多步规划中容易遭遇累积误差与幻觉。
+演示使用通过 Ollama 在本地提供服务的 `gpt-oss` 作为 LLM。
 
-为此，**​Deploy any ML model, RAG or Agent as an MCP server​.** 引入了更优化的状态表示与控制流逻辑：
+### 配置向量数据库
 
-```
-[输入数据 / Query] ──> [特征提取与编码] ──> [核心算子 / 决策控制] ──> [结构化输出]
-```
+用户文档被索引并存储在 Milvus 向量数据库集合中。用户输入查询时，这个本地知识源是首先被调用来提取上下文的来源。
 
-### 2.2 数学推导与公式表达
+### 配置网络搜索工具
 
-对于系统中的核心评估函数 $f(x, \theta)$，其优化目标可表示为：
+若向量数据库取得的上下文不相关，系统会借助 Firecrawl 转向网络搜索。邮件提到其最新 v2 端点提供更快的抓取、语义爬取、新闻与图片搜索等能力。
 
-$$\max_{\theta} \mathbb{E}_{(x, y) \sim \mathcal{D}} \left[ \log P(y \mid x; \theta) \right] - \beta \cdot \mathcal{D}_{KL}(P_{\theta} \parallel P_{ref})$$
+### 追踪与可观测性
 
-通过引入温度参数 $T$ 与软 Softmax 目标，保证了高维状态空间下的收敛稳定性。
+LlamaIndex 可与 CometML 的 Opik 集成，用于追踪每次 LLM 调用、监控并评估 LLM 应用。
 
-## 3. 生产级 Python 代码实现
+### 创建并运行工作流
 
-```python
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
+把 LLM、向量索引和网络搜索工具传入工作流，初始化事件驱动的智能体工作流；一切就绪后再启动它。
 
-class HighPerformanceModule(nn.Module):
-    def __init__(self, d_model: int = 512, n_heads: int = 8, dropout: float = 0.1):
-        super().__init__()
-        self.d_model = d_model
-        self.n_heads = n_heads
-        self.head_dim = d_model // n_heads
-        
-        self.q_proj = nn.Linear(d_model, d_model)
-        self.k_proj = nn.Linear(d_model, d_model)
-        self.v_proj = nn.Linear(d_model, d_model)
-        self.out_proj = nn.Linear(d_model, d_model)
-        self.dropout = nn.Dropout(dropout)
+### 使用 Beam 部署
 
-    def forward(self, x: torch.Tensor, mask: torch.Tensor = None) -> torch.Tensor:
-        batch_size, seq_len, _ = x.shape
-        q = self.q_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        k = self.k_proj(x).view(batch_size, seq_len, self.n_heads, self
+系统被包装成 Streamlit 界面，并声明容器所需 Python 库与计算规格。Beam 将容器部署成可通过浏览器访问的 HTTPS Streamlit 服务。邮件中的演示显示：当问题与用户文档无关时，评估步骤会使工作流转用网络搜索，因而仍能回答该问题。
+
+[查看演示视频](https://api.filekitcdn.com/e/k7YHPN24SoxyM8nGKZnDxa/o8qDqNFuJPYyvf8DHZTYB8/player)
+
+实现代码位于 [ai-engineering-hub 的 firecrawl-agent 示例](https://github.com/patchy631/ai-engineering-hub/tree/main/firecrawl-agent)。
+
+## 广告 / 推广
+
+邮件推广 RAG 速成课程（基础、评估、优化、多模态、Graph RAG、ColBERT 多向量检索和 ColPali 文档 RAG 等）以及 Daily Dose of Data Science 会员资源；另含广告投放招揽信息。

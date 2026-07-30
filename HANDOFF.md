@@ -40,13 +40,15 @@
 | **Batch 12** | ✅ 完成 | ML 6 Steps / RAG & Fine-tuning / LLM on Phone / 8 AI Architectures | 13 | ✅ 9 通过 + 4 广告标记 |
 | **Batch 13** | ✅ 完成 | Categorical Encoding / kNN Imbalanced / MiniMax vs Sonnet / Verbalized Sampling | 13 | ✅ 10 通过 + 3 广告标记 |
 | **Batch 14** | ✅ 完成 | Federated Data Engine / Anthropic MCP / Gradient Boosting / PCA | 10 | ✅ 10 通过 |
-| **Batch 15-19** | ⏳ 待执行 | 剩余 21 封邮件 | — | — |
+| **Batch 15** | ✅ 完成 | 6 Types of Contexts / GIL in Python / Context Engineering / Clustering Evaluation | 12 | ✅ 12 通过；1 个历史映射异常已显式标注 |
+| **Batch 16-19** | ⏳ 待执行 | 剩余 17 封邮件（含 1 封无映射新邮件） | — | — |
 
 ### 本次现场确认
 
-- 当前工作树**尚未提交**：`git status` 显示 116 个已修改文件、6 个删除记录及 9 个新增文件，主要是 Batch 1–14 对 `Clippings/DailyDoseOfDS/` 的正文重生结果；其中的删除/新增记录用于修正文件名与替换旧文件。
-- `HANDOFF.md` 已处于已修改但未提交状态；不要执行会覆盖工作树的 Git 恢复或重置操作。
-- 交接文档中的批次表与工作树规模相符：已完成 Batch 1–14，下一执行单元是 **Batch 15**；仍待处理 21 封邮件，并另有 1 封无映射新邮件需要在收尾阶段新建。
+- Batch 15 已按「每个子代理最多两封邮件」的串行限制拆为两段处理，并完成主验收：`verify_batch.py` 对 12 个文件均返回通过；未发现 `$s_!` 图片 URL 残留。
+- 历史映射存在一处异常：`2025-09-23-A-free-ML-course-that-requires-zero-technical.md` 并不在指定的 GIL 邮件中。页面已明确写为待回溯的映射异常，未填入无关主题内容。
+- Obsidian Git 已将 Batch 1–15 的工作树自动备份为提交 `8c11987`（`vault backup: 2026-07-30 23:18:04`）。本次更新 HANDOFF 后会产生新的未提交文档改动；不要使用会覆盖工作树的 Git 恢复或重置操作。
+- 下一执行单元为 **Batch 16**；仍待处理 17 封邮件（包括收尾阶段需新建的无映射邮件）。
 
 ### 新增/新建文件（Batch 1-2 产出中与旧文件名不同的）
 
@@ -81,12 +83,12 @@
 
 ## 🚀 Next Steps (接手行动指南)
 
-### 阶段一：继续串行执行 Batch 15-19
+### 阶段一：继续串行执行 Batch 16-19
 
 接手 Agent 按以下模式逐批执行：
 
 ```
-循环 for batch_id in 15..19:
+循环 for batch_id in 16..19:
   1. 从 batch_plan.json 读取本批 4 封邮件的 ID、Subject、现有文件名
   2. 派发 ddods_translator Subagent (Flash 模型)，附带：
      - 邮件 ID 列表

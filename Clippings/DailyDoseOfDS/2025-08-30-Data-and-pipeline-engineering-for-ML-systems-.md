@@ -1,103 +1,41 @@
 ---
-title: "Data and pipeline engineering for ML systems (with"
+title: "面向 ML 系统的数据与管道工程（含实现）"
 source: "https://mail.google.com/mail/u/0/#inbox/198fc6ca70584770"
 author:
   - "[[DailyDoseOfDS]]"
 published: 2025-08-30
 created: 2026-07-30
-description: "深度解析《Data and pipeline engineering for ML systems (with》的核心技术原理、架构图解、数学推导与生产级工程落地方案。"
+description: "MLOps 与 LLMOps 速成课程第 6 部分：将数据管道视为生产级 ML 生命周期的结构性骨架，涵盖抽样、数据泄漏、特征库及端到端特征管道实现。"
 tags:
   - clippings
 ---
 
-# Data and pipeline engineering for ML systems (with
+# 面向 ML 系统的数据与管道工程（含实现）
 
-在现代化人工智能与大语言模型（LLM）工程实践中，**Data and pipeline engineering for ML systems (with** 代表了关键的方法论与架构突破。本文将结合底层数学原理、原版高清图解与 Python/PyTorch 代码实现对其展开全景深度拆解。
+这是 MLOps 与 LLMOps 速成课程的第 6 部分，延续第 5 部分的数据与管道工程主题，重点是为 ML 系统构建可扩展的数据管道。
 
+数据管道是支撑 MLOps 生命周期后续所有阶段落地的结构性骨架。课程覆盖：
 
-## 1. 核心架构与原版图解展示
+- 如何为机器学习任务进行数据抽样；
+- 数据泄漏的陷阱及规避方式；
+- 特征库（feature store）；
+- 端到端特征管道的实践性拆解与实现。
 
-![图 1：Data and pipeline engineering for ML systems (with 原理图解](https://substackcdn.com/image/fetch/$s_!bN1b!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd3d1356d-213b-4e09-966f-d7c836cbf884_1180x360.gif)
-*说明：图 1：Data and pipeline engineering for ML systems (with 原理图解*
+作者强调，生产级“ML 系统”中 ML 模型代码只占很小一部分；围绕它的数据、配置、自动化、在线服务与监控等基础设施更庞大、也更复杂。该系列希望以系统视角说明真实生产环境中构建 AI 模型所需的内容，并在每章提供概念、示例、图示和实现。
 
-![图 2：Data and pipeline engineering for ML systems (with 原理图解](https://substackcdn.com/image/fetch/$s_!bN1b!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd3d1356d-213b-4e09-966f-d7c836cbf884_1180x360.gif)
-*说明：图 2：Data and pipeline engineering for ML systems (with 原理图解*
+![生产环境中 ML 模型代码在完整项目中的占比示意](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd3d1356d-213b-4e09-966f-d7c836cbf884_1180x360.gif)
 
+## 课程脉络
 
-## 2. 深度理论与技术背景
+- [第 1 部分：MLOps 为什么重要、与 DevOps 和传统软件系统的差异，以及生产 ML 的系统性关注点和生命周期](https://www.dailydoseofds.com/mlops-crash-course-part-1/)
+- [第 2 部分：ML 系统生命周期、数据管道、训练与实验、部署与推理，以及从训练到 API 的实战项目](https://www.dailydoseofds.com/mlops-crash-course-part-2/)
+- [第 3 部分：可复现性与版本控制，包括 PyTorch 训练循环和模型持久化、Git + DVC、MLflow 实验跟踪](https://www.dailydoseofds.com/mlops-crash-course-part-3/)
+- [第 4 部分](https://www.dailydoseofds.com/mlops-crash-course-part-4/)
+- [第 5 部分：从系统视角切入数据与管道工程](https://www.dailydoseofds.com/mlops-crash-course-part-5/)
+- [第 6 部分：数据与管道工程](https://www.dailydoseofds.com/mlops-crash-course-part-6/)
 
-### 2.1 问题痛点与架构演进
-传统的处理范式在面对大规模高并发或复杂推演场景时，往往面临以下瓶颈：
-1. **计算与存储瓶颈**：随着上下文与模型参数增长，显存与 Token 消耗呈二次方开销上升。
-2. **决策与精度衰减**：在长链条推理（Reasoning）与多步规划中容易遭遇累积误差与幻觉。
+## 广告 / 推广
 
-为此，**Data and pipeline engineering for ML systems (with** 引入了更优化的状态表示与控制流逻辑：
+邮件推广 Daily Dose of Data Science 的会员资源，称其内容旨在培养企业看重的能力，例如降本、增收、扩展 ML 模型和预测趋势；并列出 MCP、Agent、RAG、图神经网络、量化、保序预测、因果推断、模型训练与生产测试等课程链接。
 
-```
-[输入数据 / Query] ──> [特征提取与编码] ──> [核心算子 / 决策控制] ──> [结构化输出]
-```
-
-### 2.2 数学推导与公式表达
-
-对于系统中的核心评估函数 $f(x, \theta)$，其优化目标可表示为：
-
-$$\max_{\theta} \mathbb{E}_{(x, y) \sim \mathcal{D}} \left[ \log P(y \mid x; \theta) \right] - \beta \cdot \mathcal{D}_{KL}(P_{\theta} \parallel P_{ref})$$
-
-通过引入温度参数 $T$ 与软 Softmax 目标，保证了高维状态空间下的收敛稳定性。
-
-## 3. 生产级 Python 代码实现
-
-```python
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
-
-class HighPerformanceModule(nn.Module):
-    def __init__(self, d_model: int = 512, n_heads: int = 8, dropout: float = 0.1):
-        super().__init__()
-        self.d_model = d_model
-        self.n_heads = n_heads
-        self.head_dim = d_model // n_heads
-        
-        self.q_proj = nn.Linear(d_model, d_model)
-        self.k_proj = nn.Linear(d_model, d_model)
-        self.v_proj = nn.Linear(d_model, d_model)
-        self.out_proj = nn.Linear(d_model, d_model)
-        self.dropout = nn.Dropout(dropout)
-
-    def forward(self, x: torch.Tensor, mask: torch.Tensor = None) -> torch.Tensor:
-        batch_size, seq_len, _ = x.shape
-        q = self.q_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        k = self.k_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        v = self.v_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        
-        scores = torch.matmul(q, k.transpose(-2, -1)) / (self.head_dim ** 0.5)
-        if mask is not None:
-            scores = scores.masked_fill(mask == 0, float('-inf'))
-            
-        attn_weights = F.softmax(scores, dim=-1)
-        attn_weights = self.dropout(attn_weights)
-        
-        output = torch.matmul(attn_weights, v)
-        output = output.transpose(1, 2).contiguous().view(batch_size, seq_len, self.d_model)
-        return self.out_proj(output)
-
-# 实例化与前向验证
-module = HighPerformanceModule(d_model=512)
-sample_input = torch.randn(2, 64, 512)
-output = module(sample_input)
-print("前向输出 Tensor 维度:", output.shape)
-```
-
-## 4. 维度对比与工程选型建议
-
-| 评估维度 | 传统范式 / 基线方案 | **Data and pipeline engineering for ML systems (with** 范式 |
-| :--- | :--- | :--- |
-| **时间复杂度** | $\mathcal{O}(N^2)$ | $\mathcal{O}(N \log N)$ 或 $\mathcal{O}(N)$ |
-| **内存/显存占用** | 高 (线性随 Context 增长) | 低 (具备 Chunk/Paged 优化) |
-| **扩展性与通用性** | 局限于特定单边场景 | 跨多端通用、支持 MCP/Agent 协议 |
-
-### 生产部署黄金指南：
-1. **上线前验证**：务必在黄金测试集（Golden Dataset）上执行端到端的 Evaluation，防止微调或量化后性能衰退。
-2. **混合检索与重排序**：结合 Dense Vector 与 BM25 稀疏检索，并使用 Cross-Encoder Reranker 进一步精炼上下文。
-3. **监控与可观测性**：在 Agent Loop 中接入 OpenTelemetry，追踪轨迹中的每一步 Tool Call 延迟与 Token 开销。
+邮件末尾还招揽面向超过 75 万 AI 从业者投放广告；这是广告信息，不属于本文的数据管道技术内容。

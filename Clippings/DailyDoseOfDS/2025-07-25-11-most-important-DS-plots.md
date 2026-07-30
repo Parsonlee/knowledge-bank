@@ -1,35 +1,23 @@
 ---
-title: "Simplify Python imports with explicit packaging."
+title: "映射异常：11 个最重要的数据科学图表"
 source: "https://mail.google.com/mail/u/0/#inbox/198fc6ca70584770"
 author:
   - "[[DailyDoseOfDS]]"
 published: 2025-08-30
 created: 2026-07-30
-description: "深度解析《Simplify Python imports with explicit packaging.》的核心技术原理、架构图解、数学推导与生产级工程落地方案。"
+description: "此文件名指向 2025-07-25 的“11 个最重要的数据科学图表”，但指定邮件 198fc6ca70584770 的实际内容并不包含该主题；为避免将无关内容混入，保留异常记录待重新映射。"
 tags:
   - clippings
 ---
 
-# Simplify Python imports with explicit packaging.
+# 映射异常：11 个最重要的数据科学图表
 
-在现代化人工智能与大语言模型（LLM）工程实践中，**Simplify Python imports with explicit packaging.** 代表了关键的方法论与架构突破。本文将结合底层数学原理、原版高清图解与 Python/PyTorch 代码实现对其展开全景深度拆解。
+## 异常说明
 
+文件名为 `2025-07-25-11-most-important-DS-plots.md`，但本批指定的邮件 **198fc6ca70584770** 发送于 2025-08-30，实际仅包含下列三个主题：
 
-## 1. 核心架构与原版图解展示
+- Data and pipeline engineering for ML systems
+- Deploy any ML model, RAG or Agent as an MCP server
+- Simplify Python imports with explicit packaging
 
-![图 1：Simplify Python imports with explicit packaging. 原理图解](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F22bac41c-d25e-4d5c-8be2-f7f7867d16b3_2304x1112.png)
-*说明：图 1：Simplify Python imports with explicit packaging. 原理图解*
-
-![图 2：Simplify Python imports with explicit packaging. 原理图解](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc766bb29-7db3-4006-8603-a9f2ea4cd327_1348x676.png)
-*说明：图 2：Simplify Python imports with explicit packaging. 原理图解*
-
-![图 3：Simplify Python imports with explicit packaging. 原理图解](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F657f3794-6644-49eb-a67c-f3eded6a8b4a_1348x1076.png)
-*说明：图 3：Simplify Python imports with explicit packaging. 原理图解*
-
-
-## 2. 深度理论与技术背景
-
-### 2.1 问题痛点与架构演进
-传统的处理范式在面对大规模高并发或复杂推演场景时，往往面临以下瓶颈：
-1. **计算与存储瓶颈**：随着上下文与模型参数增长，显存与 Token 消耗呈二次方开销上升。
-2. **
+该邮件没有“11 个最重要的数据科学图表”的正文。因此本文件不重写为上述任何一个主题，也不保留原有无来源模板内容；应在后续处理中为该文件重新定位正确的 Gmail 邮件。
