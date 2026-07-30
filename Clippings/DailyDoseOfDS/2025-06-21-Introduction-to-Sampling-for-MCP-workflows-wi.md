@@ -1,106 +1,67 @@
 ---
-title: "Introduction to Sampling for MCP workflows (with"
+title: "MCP 工作流中的 Sampling 入门（含实现）"
 source: "https://mail.google.com/mail/u/0/#inbox/197941692c48e0a4"
 author:
   - "[[DailyDoseOfDS]]"
 published: 2025-06-21
 created: 2026-07-30
-description: "深度解析《Introduction to Sampling for MCP workflows (with》的核心技术原理、架构图解、数学推导与生产级工程落地方案。"
+description: "MCP 速成课第 5 部分介绍如何将 Sampling 集成进 MCP 工作流，并回顾前四部分的主题与实现内容。"
 tags:
   - clippings
 ---
 
-# Introduction to Sampling for MCP workflows (with
+# MCP 工作流中的 Sampling 入门（含实现）
 
-在现代化人工智能与大语言模型（LLM）工程实践中，**Introduction to Sampling for MCP workflows (with** 代表了关键的方法论与架构突破。本文将结合底层数学原理、原版高清图解与 Python/PyTorch 代码实现对其展开全景深度拆解。
+[MCP 速成课第 5 部分](https://www.dailydoseofds.com/model-context-protocol-crash-course-part-5)现已发布，讲解把 Sampling 集成到 MCP 工作流的过程。该部分涵盖：
 
+- 什么是 Sampling，以及它为何有用；
+- FastMCP 中对 Sampling 的支持；
+- 服务端如何工作；
+- 如何在客户端编写 sampling handler；
+- 模型偏好（model preferences）；
+- Sampling 的使用场景；
+- 错误处理和一些最佳实践。
 
-## 1. 核心架构与原版图解展示
+和此前关于 [RAG](https://www.dailydoseofds.com/a-crash-course-on-building-rag-systems-part-1-with-implementations/) 与 [AI Agent](https://www.dailydoseofds.com/ai-agents-crash-course-part-1-with-implementation/) 的系列一样，这个系列兼顾基础与实现，逐步带领读者完成学习。
 
-![图 1：Introduction to Sampling for MCP workflows (with 原理图解](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa4f78352-b092-471f-a81b-a947def13463_1462x1078.gif)
-*说明：图 1：Introduction to Sampling for MCP workflows (with 原理图解*
+## 前四部分回顾
 
-![图 2：Introduction to Sampling for MCP workflows (with 原理图解](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff38c93c7-6912-406e-9300-ea7e770984e4_800x666.gif)
-*说明：图 2：Introduction to Sampling for MCP workflows (with 原理图解*
+### 第 1 部分
 
-![图 3：Introduction to Sampling for MCP workflows (with 原理图解](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F757090f0-b2df-484a-87c6-af85e1979c7d_1490x1042.gif)
-*说明：图 3：Introduction to Sampling for MCP workflows (with 原理图解*
+[MCP 速成课第 1 部分](https://www.dailydoseofds.com/model-context-protocol-crash-course-part-1/) 介绍：
 
+- LLM 中上下文管理为什么重要；
+- 提示、链式调用和函数调用的局限；
+- 工具集成中的 M×N 问题；
+- MCP 如何通过结构化的 Host–Client–Server 模型解决这个问题。
 
-## 2. 深度理论与技术背景
+### 第 2 部分
 
-### 2.1 问题痛点与架构演进
-传统的处理范式在面对大规模高并发或复杂推演场景时，往往面临以下瓶颈：
-1. **计算与存储瓶颈**：随着上下文与模型参数增长，显存与 Token 消耗呈二次方开销上升。
-2. **决策与精度衰减**：在长链条推理（Reasoning）与多步规划中容易遭遇累积误差与幻觉。
+[MCP 速成课第 2 部分](https://www.dailydoseofds.com/model-context-protocol-crash-course-part-2/) 进入实践，涵盖：
 
-为此，**Introduction to Sampling for MCP workflows (with** 引入了更优化的状态表示与控制流逻辑：
+- MCP 的核心能力：Tools、Resources 与 Prompts；
+- JSON-RPC 如何驱动通信；
+- 传输机制：Stdio、HTTP + SSE；
+- 一个可运行的、与 Claude 和 Cursor 配合的完整 MCP 服务器；
+- 函数调用与 MCP 的比较。
 
-```
-[输入数据 / Query] ──> [特征提取与编码] ──> [核心算子 / 决策控制] ──> [结构化输出]
-```
+### 第 3 部分
 
-### 2.2 数学推导与公式表达
+[MCP 速成课第 3 部分](https://www.dailydoseofds.com/model-context-protocol-crash-course-part-3/) 从零构建了一个完全自定义的 MCP 客户端：
 
-对于系统中的核心评估函数 $f(x, \theta)$，其优化目标可表示为：
+- 如何构建不依赖 Cursor 或 Claude 等预构建方案的自定义 MCP 客户端；
+- 完整 MCP 生命周期实际运行时的样子；
+- 通过实际集成揭示 MCP 作为客户端—服务器架构的本质；
+- 通过动手实现说明 MCP 与传统 API、函数调用的区别。
 
-$$\max_{\theta} \mathbb{E}_{(x, y) \sim \mathcal{D}} \left[ \log P(y \mid x; \theta) \right] - \beta \cdot \mathcal{D}_{KL}(P_{\theta} \parallel P_{ref})$$
+### 第 4 部分
 
-通过引入温度参数 $T$ 与软 Softmax 目标，保证了高维状态空间下的收敛稳定性。
+[MCP 速成课第 4 部分](https://www.dailydoseofds.com/model-context-protocol-crash-course-part-4/) 使用工具、资源和提示构建完整 MCP 工作流，内容包括：
 
-## 3. 生产级 Python 代码实现
+- MCP 中 resources 和 prompts 的具体含义；
+- 在服务端实现 resources 与 prompts；
+- tools、resources 和 prompts 之间的区别；
+- 在 Claude Desktop 内使用 resources 与 prompts；
+- 一个通过 tools、prompts 与 resources 协同驱动的完整真实场景用例。
 
-```python
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
-
-class HighPerformanceModule(nn.Module):
-    def __init__(self, d_model: int = 512, n_heads: int = 8, dropout: float = 0.1):
-        super().__init__()
-        self.d_model = d_model
-        self.n_heads = n_heads
-        self.head_dim = d_model // n_heads
-        
-        self.q_proj = nn.Linear(d_model, d_model)
-        self.k_proj = nn.Linear(d_model, d_model)
-        self.v_proj = nn.Linear(d_model, d_model)
-        self.out_proj = nn.Linear(d_model, d_model)
-        self.dropout = nn.Dropout(dropout)
-
-    def forward(self, x: torch.Tensor, mask: torch.Tensor = None) -> torch.Tensor:
-        batch_size, seq_len, _ = x.shape
-        q = self.q_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        k = self.k_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        v = self.v_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        
-        scores = torch.matmul(q, k.transpose(-2, -1)) / (self.head_dim ** 0.5)
-        if mask is not None:
-            scores = scores.masked_fill(mask == 0, float('-inf'))
-            
-        attn_weights = F.softmax(scores, dim=-1)
-        attn_weights = self.dropout(attn_weights)
-        
-        output = torch.matmul(attn_weights, v)
-        output = output.transpose(1, 2).contiguous().view(batch_size, seq_len, self.d_model)
-        return self.out_proj(output)
-
-# 实例化与前向验证
-module = HighPerformanceModule(d_model=512)
-sample_input = torch.randn(2, 64, 512)
-output = module(sample_input)
-print("前向输出 Tensor 维度:", output.shape)
-```
-
-## 4. 维度对比与工程选型建议
-
-| 评估维度 | 传统范式 / 基线方案 | **Introduction to Sampling for MCP workflows (with** 范式 |
-| :--- | :--- | :--- |
-| **时间复杂度** | $\mathcal{O}(N^2)$ | $\mathcal{O}(N \log N)$ 或 $\mathcal{O}(N)$ |
-| **内存/显存占用** | 高 (线性随 Context 增长) | 低 (具备 Chunk/Paged 优化) |
-| **扩展性与通用性** | 局限于特定单边场景 | 跨多端通用、支持 MCP/Agent 协议 |
-
-### 生产部署黄金指南：
-1. **上线前验证**：务必在黄金测试集（Golden Dataset）上执行端到端的 Evaluation，防止微调或量化后性能衰退。
-2. **混合检索与重排序**：结合 Dense Vector 与 BM25 稀疏检索，并使用 Cross-Encoder Reranker 进一步精炼上下文。
-3. **监控与可观测性**：在 Agent Loop 中接入 OpenTelemetry，追踪轨迹中的每一步 Tool Call 延迟与 Token 开销。
+该协议已经在真实世界的 Agent 系统中发挥作用；本速成课将从第一性原理到生产使用，说明如何实现和扩展它。

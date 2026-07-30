@@ -1,100 +1,68 @@
 ---
-title: "4 Layers of Agentic AI, explained visually."
+title: "智能体 AI 的四层架构：可视化解读"
 source: "https://mail.google.com/mail/u/0/#inbox/198e2e9234d8b09f"
 author:
   - "[[DailyDoseOfDS]]"
 published: 2025-08-25
 created: 2026-07-30
-description: "深度解析《4 Layers of Agentic AI, explained visually.》的核心技术原理、架构图解、数学推导与生产级工程落地方案。"
+description: "从 LLM 基座、单个 AI Agent、多智能体系统到智能体基础设施，分层说明 Agentic AI 生态中的能力边界与生产要求。"
 tags:
   - clippings
 ---
 
-# 4 Layers of Agentic AI, explained visually.
+# 智能体 AI 的四层架构：可视化解读
 
-在现代化人工智能与大语言模型（LLM）工程实践中，**4 Layers of Agentic AI, explained visually.** 代表了关键的方法论与架构突破。本文将结合底层数学原理、原版高清图解与 Python/PyTorch 代码实现对其展开全景深度拆解。
+![智能体 AI 四层架构图](https://substack-post-media.s3.amazonaws.com/public/images/64170104-73b3-4417-9157-a3ddddc1d514_1000x1094.png)
 
+下图以分层方式展示了 Agentic AI 概念：从底层的 LLM，一直到更高层的编排与智能体基础设施。每一外层都在内层能力之上增加可靠性、协同能力和治理机制。
 
-## 1. 核心架构与原版图解展示
+## 1. LLM：基础层
 
-![图 1：4 Layers of Agentic AI, explained visually. 原理图解](https://substackcdn.com/image/fetch/$s_!_bSm!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F64170104-73b3-4417-9157-a3ddddc1d514_1000x1094.png)
-*说明：图 1：4 Layers of Agentic AI, explained visually. 原理图解*
+最核心的一层是 GPT、DeepSeek 等大语言模型。其关键概念包括：
 
+- **分词与推理参数**：文本如何被拆成 token 并由模型处理；
+- **提示词工程**：通过设计输入获得更好的输出；
+- **LLM API**：以编程方式与模型交互的接口。
 
-## 2. 深度理论与技术背景
+这一层是其余一切能力的引擎。
 
-### 2.1 问题痛点与架构演进
-传统的处理范式在面对大规模高并发或复杂推演场景时，往往面临以下瓶颈：
-1. **计算与存储瓶颈**：随着上下文与模型参数增长，显存与 Token 消耗呈二次方开销上升。
-2. **决策与精度衰减**：在长链条推理（Reasoning）与多步规划中容易遭遇累积误差与幻觉。
+## 2. AI Agent：构建在 LLM 之上
 
-为此，**4 Layers of Agentic AI, explained visually.** 引入了更优化的状态表示与控制流逻辑：
+Agent 在 LLM 外围增加了自主行动能力。其主要职责包括：
 
-```
-[输入数据 / Query] ──> [特征提取与编码] ──> [核心算子 / 决策控制] ──> [结构化输出]
-```
+- **工具使用与函数调用**：把 LLM 连接到外部 API 或工具；
+- **Agent 推理**：使用 ReAct（推理 + 行动）、Chain-of-Thought 等推理方法；
+- **任务规划与拆解**：把大型任务分解成更小的步骤；
+- **记忆管理**：维护历史记录、当前上下文和长期信息。
 
-### 2.2 数学推导与公式表达
+这一层让 LLM 能在真实工作流中发挥作用。
 
-对于系统中的核心评估函数 $f(x, \theta)$，其优化目标可表示为：
+## 3. 智能体系统：多智能体协作
 
-$$\max_{\theta} \mathbb{E}_{(x, y) \sim \mathcal{D}} \left[ \log P(y \mid x; \theta) \right] - \beta \cdot \mathcal{D}_{KL}(P_{\theta} \parallel P_{ref})$$
+将多个 Agent 组合起来，便形成智能体系统。该层的特征包括：
 
-通过引入温度参数 $T$ 与软 Softmax 目标，保证了高维状态空间下的收敛稳定性。
+- **Agent 间通信**：Agent 可以互相交流，必要时使用 ACP、A2A 等协议；
+- **路由与调度**：决定由哪个 Agent 在何时处理哪项工作；
+- **状态协调**：在多 Agent 协作时保持状态一致；
+- **多智能体 RAG**：在多个 Agent 之间使用检索增强生成；
+- **角色与专长划分**：为 Agent 指定不同目的与能力；
+- **编排框架**：例如 CrewAI 等，用于构建工作流的工具。
 
-## 3. 生产级 Python 代码实现
+这一层关注的是 Agent 之间的协作和协调。
 
-```python
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
+## 4. 智能体基础设施
 
-class HighPerformanceModule(nn.Module):
-    def __init__(self, d_model: int = 512, n_heads: int = 8, dropout: float = 0.1):
-        super().__init__()
-        self.d_model = d_model
-        self.n_heads = n_heads
-        self.head_dim = d_model // n_heads
-        
-        self.q_proj = nn.Linear(d_model, d_model)
-        self.k_proj = nn.Linear(d_model, d_model)
-        self.v_proj = nn.Linear(d_model, d_model)
-        self.out_proj = nn.Linear(d_model, d_model)
-        self.dropout = nn.Dropout(dropout)
+最上层用于让系统可靠、可扩展且安全地运行，包含：
 
-    def forward(self, x: torch.Tensor, mask: torch.Tensor = None) -> torch.Tensor:
-        batch_size, seq_len, _ = x.shape
-        q = self.q_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        k = self.k_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        v = self.v_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        
-        scores = torch.matmul(q, k.transpose(-2, -1)) / (self.head_dim ** 0.5)
-        if mask is not None:
-            scores = scores.masked_fill(mask == 0, float('-inf'))
-            
-        attn_weights = F.softmax(scores, dim=-1)
-        attn_weights = self.dropout(attn_weights)
-        
-        output = torch.matmul(attn_weights, v)
-        output = output.transpose(1, 2).contiguous().view(batch_size, seq_len, self.d_model)
-        return self.out_proj(output)
+- **可观测性与日志**：追踪性能与输出，例如使用 DeepEval 一类框架；
+- **错误处理与重试**：提高面对失败时的韧性；
+- **安全与访问控制**：避免 Agent 超越授权范围；
+- **限流与成本管理**：控制资源消耗；
+- **工作流自动化**：把 Agent 集成进更广泛的管线；
+- **人在回路控制**：允许人工监督与干预。
 
-# 实例化与前向验证
-module = HighPerformanceModule(d_model=512)
-sample_input = torch.randn(2, 64, 512)
-output = module(sample_input)
-print("前向输出 Tensor 维度:", output.shape)
-```
+这层为企业或生产环境提供信任、安全和可扩展性保障。
 
-## 4. 维度对比与工程选型建议
+## 延伸阅读
 
-| 评估维度 | 传统范式 / 基线方案 | **4 Layers of Agentic AI, explained visually.** 范式 |
-| :--- | :--- | :--- |
-| **时间复杂度** | $\mathcal{O}(N^2)$ | $\mathcal{O}(N \log N)$ 或 $\mathcal{O}(N)$ |
-| **内存/显存占用** | 高 (线性随 Context 增长) | 低 (具备 Chunk/Paged 优化) |
-| **扩展性与通用性** | 局限于特定单边场景 | 跨多端通用、支持 MCP/Agent 协议 |
-
-### 生产部署黄金指南：
-1. **上线前验证**：务必在黄金测试集（Golden Dataset）上执行端到端的 Evaluation，防止微调或量化后性能衰退。
-2. **混合检索与重排序**：结合 Dense Vector 与 BM25 稀疏检索，并使用 Cross-Encoder Reranker 进一步精炼上下文。
-3. **监控与可观测性**：在 Agent Loop 中接入 OpenTelemetry，追踪轨迹中的每一步 Tool Call 延迟与 Token 开销。
+- [构建 Agentic 系统的 14 部分速成课程](https://www.dailydoseofds.com/ai-agents-crash-course-part-1-with-implementation/)

@@ -1,106 +1,48 @@
 ---
-title: "Where did the GPU memory go?"
+title: "GPU 显存都去哪了？"
 source: "https://mail.google.com/mail/u/0/#inbox/1980063d889e559c"
 author:
   - "[[DailyDoseOfDS]]"
 published: 2025-07-12
 created: 2026-07-30
-description: "深度解析《Where did the GPU memory go?》的核心技术原理、架构图解、数学推导与生产级工程落地方案。"
+description: "以 GPT-2 XL 为例拆解训练显存：模型参数、梯度与 Adam 状态约占 24GB，激活值经 checkpointing 后仍需约 8–9GB，另有碎片化等开销。"
 tags:
   - clippings
 ---
 
-# Where did the GPU memory go?
+# GPU 显存都去哪了？
 
-在现代化人工智能与大语言模型（LLM）工程实践中，**Where did the GPU memory go?** 代表了关键的方法论与架构突破。本文将结合底层数学原理、原版高清图解与 Python/PyTorch 代码实现对其展开全景深度拆解。
+GPT-2 XL 有 15 亿个参数；其参数以 16 位精度存储时约占 **3GB**。但在单张 32GB GPU 上，训练这样一个“3GB 模型”依然已相当勉强。
 
+![GPT-2 XL 的训练设置](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3da036e0-1aa8-40d0-a886-b39f1ae64c7f_1860x704.png)
 
-## 1. 核心架构与原版图解展示
+设置为：优化器 Adam、batch size 32、48 个 Transformer 层、序列长度 1000。下面计算显存构成。
 
-![图 1：Where did the GPU memory go? 原理图解](https://substackcdn.com/image/fetch/$s_!lVDF!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe8cb1e60-4bad-48a4-9143-e9bb44fda61a_2272x676.png)
-*说明：图 1：Where did the GPU memory go? 原理图解*
+## 1. 优化器状态、梯度与参数
 
-![图 2：Where did the GPU memory go? 原理图解](https://substackcdn.com/image/fetch/$s_!H4b_!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8dc0a50d-618a-409c-babc-182bb46338cd_1376x676.png)
-*说明：图 2：Where did the GPU memory go? 原理图解*
+混合精度训练会同时使用较低精度的 `float16` 和 `float32`。若模型有 $\Phi$ 个参数：
 
-![图 3：Where did the GPU memory go? 原理图解](https://substackcdn.com/image/fetch/$s_!_NaW!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F89819588-72a5-4ae4-b430-09c7f7b74d20_3222x450.jpeg)
-*说明：图 3：Where did the GPU memory go? 原理图解*
+- 权重占用 $2\Phi$ 字节；
+- 梯度占用 $2\Phi$ 字节；
+- 为有效计算，反向传播结束时的更新以 32 位进行，模型参数还需 $4\Phi$ 字节；
+- Adam 为更新保存两个 32 位状态：动量 $4\Phi$ 字节、梯度方差再占 $4\Phi$ 字节。
 
+其中 2 和 4 分别表示每个参数在 16 位与 32 位精度下占用的字节数。合计为 $16\Phi$，对 GPT-2 XL 约为 **24GB**。
 
-## 2. 深度理论与技术背景
+![Adam 更新规则示意](https://embed.filekitcdn.com/e/k7YHPN24SoxyM8nGKZnDxa/BNwnDA18MXkAcMr8btFdG/email)
 
-### 2.1 问题痛点与架构演进
-传统的处理范式在面对大规模高并发或复杂推演场景时，往往面临以下瓶颈：
-1. **计算与存储瓶颈**：随着上下文与模型参数增长，显存与 Token 消耗呈二次方开销上升。
-2. **决策与精度衰减**：在长链条推理（Reasoning）与多步规划中容易遭遇累积误差与幻觉。
+## 2. 激活值
 
-为此，**Where did the GPU memory go?** 引入了更优化的状态表示与控制流逻辑：
+邮件给出 GPT-2 每个 Transformer block 的激活值计算，并将其累加至所有 block。代入 GPT-2 XL 的参数后，约得到 **300 亿个激活值**；每个激活值为 16 位，因此需要约 **60GB** 显存。
 
-```
-[输入数据 / Query] ──> [特征提取与编码] ──> [核心算子 / 决策控制] ──> [结构化输出]
-```
+![Transformer block 激活值计算](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F89819588-72a5-4ae4-b430-09c7f7b74d20_3222x450.jpeg)
 
-### 2.2 数学推导与公式表达
+使用[激活检查点](https://www.dailydoseofds.com/15-ways-to-optimize-neural-network-training-with-implementation/)可将激活值显存降至约 **8–9GB**，代价是运行时间增加 **25–30%**。至此总显存消耗已接近 **32–35GB**。
 
-对于系统中的核心评估函数 $f(x, \theta)$，其优化目标可表示为：
+## 3. 其他开销
 
-$$\max_{\theta} \mathbb{E}_{(x, y) \sim \mathcal{D}} \left[ \log P(y \mid x; \theta) \right] - \beta \cdot \mathcal{D}_{KL}(P_{\theta} \parallel P_{ref})$$
+内存碎片化会在已分配块之间产生未使用的间隙，使得即使总剩余内存足够，也可能无法获得连续块来满足新的分配请求。约 **5–15%** 的显存可能因碎片化而未被有效利用。
 
-通过引入温度参数 $T$ 与软 Softmax 目标，保证了高维状态空间下的收敛稳定性。
+## 结论
 
-## 3. 生产级 Python 代码实现
-
-```python
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
-
-class HighPerformanceModule(nn.Module):
-    def __init__(self, d_model: int = 512, n_heads: int = 8, dropout: float = 0.1):
-        super().__init__()
-        self.d_model = d_model
-        self.n_heads = n_heads
-        self.head_dim = d_model // n_heads
-        
-        self.q_proj = nn.Linear(d_model, d_model)
-        self.k_proj = nn.Linear(d_model, d_model)
-        self.v_proj = nn.Linear(d_model, d_model)
-        self.out_proj = nn.Linear(d_model, d_model)
-        self.dropout = nn.Dropout(dropout)
-
-    def forward(self, x: torch.Tensor, mask: torch.Tensor = None) -> torch.Tensor:
-        batch_size, seq_len, _ = x.shape
-        q = self.q_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        k = self.k_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        v = self.v_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        
-        scores = torch.matmul(q, k.transpose(-2, -1)) / (self.head_dim ** 0.5)
-        if mask is not None:
-            scores = scores.masked_fill(mask == 0, float('-inf'))
-            
-        attn_weights = F.softmax(scores, dim=-1)
-        attn_weights = self.dropout(attn_weights)
-        
-        output = torch.matmul(attn_weights, v)
-        output = output.transpose(1, 2).contiguous().view(batch_size, seq_len, self.d_model)
-        return self.out_proj(output)
-
-# 实例化与前向验证
-module = HighPerformanceModule(d_model=512)
-sample_input = torch.randn(2, 64, 512)
-output = module(sample_input)
-print("前向输出 Tensor 维度:", output.shape)
-```
-
-## 4. 维度对比与工程选型建议
-
-| 评估维度 | 传统范式 / 基线方案 | **Where did the GPU memory go?** 范式 |
-| :--- | :--- | :--- |
-| **时间复杂度** | $\mathcal{O}(N^2)$ | $\mathcal{O}(N \log N)$ 或 $\mathcal{O}(N)$ |
-| **内存/显存占用** | 高 (线性随 Context 增长) | 低 (具备 Chunk/Paged 优化) |
-| **扩展性与通用性** | 局限于特定单边场景 | 跨多端通用、支持 MCP/Agent 协议 |
-
-### 生产部署黄金指南：
-1. **上线前验证**：务必在黄金测试集（Golden Dataset）上执行端到端的 Evaluation，防止微调或量化后性能衰退。
-2. **混合检索与重排序**：结合 Dense Vector 与 BM25 稀疏检索，并使用 Cross-Encoder Reranker 进一步精炼上下文。
-3. **监控与可观测性**：在 Agent Loop 中接入 OpenTelemetry，追踪轨迹中的每一步 Tool Call 延迟与 Token 开销。
+这说明训练约 3GB 的 GPT-2 模型也几乎需要 **36GB** GPU 显存。模型再增加一层，显存需求就可能额外增加数 GB；多 GPU 训练因此很关键。可进一步阅读[多 GPU 模型训练入门](https://www.dailydoseofds.com/a-beginner-friendly-guide-to-multi-gpu-model-training/)以及[从零实现大规模并行 CUDA 程序](https://www.dailydoseofds.com/implementing-massively-parallelized-cuda-programs-from-scratch-using-cuda-programming/)。
