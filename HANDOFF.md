@@ -44,7 +44,8 @@
 | **Batch 16** | ✅ 完成 | Data & Pipeline Engineering / Corrective RAG / 4 Layers of Agentic AI / Qwen 3 Coder vs. Sonnet 4 | 12 | ✅ 12 通过；1 个历史映射异常已显式标注 |
 | **Batch 17** | ✅ 完成 | MCP Integration / uv Guide / Component-level Evals / Neural-network Training Optimization | 11 | ✅ 11 通过 |
 | **Batch 18** | ✅ 完成 | MCP Sampling / Bi-encoder & ColBERT / RAG Chunking / Memory Pinning | 13 | ✅ 13 通过 |
-| **Batch 19** | ⏳ 待执行 | 剩余 5 封邮件（含 1 封无映射新邮件） | — | — |
+| **Batch 19** | ✅ 完成 | Variables / Active Learning / ML Production Testing / Python Underscore | 7 | ✅ 7 通过 |
+| **收尾补充** | ⏳ 待执行 | 无映射新邮件：Serverless vs. On-prem vs. Edge Deployment | — | — |
 
 ### 本次现场确认
 
@@ -53,8 +54,9 @@
 - Batch 16 已完成主验收：`verify_batch.py` 对 12 个文件均返回通过；其中 `2025-07-25-11-most-important-DS-plots.md` 不在其映射邮件中，已改为可审计异常说明。Beam 与 Factory 推广页已明确标注为广告内容。
 - Batch 17 已完成主验收：`verify_batch.py` 对 11 个文件均返回通过。Factory MCP 推广页已显式标注为广告；验收脚本必须接收绝对路径，传相对路径会误报文件不存在。
 - Batch 18 已完成主验收：`verify_batch.py` 对 13 个文件均返回通过。计划中缺失主题和日期的 ID `196ac3a283f20357` 可正常读取，实际主题为「Memory Pinning to Accelerate Model Training」，因此无需创建映射异常说明；Linkup、Browserbase 与 Rovo Dev CLI 推广页已显式标注。
+- Batch 19 已完成主验收：`verify_batch.py` 对 7 个文件均返回通过。曾中断的两篇旧模板文件已重新派发并通过验收；Maxim 页面被明确处理为同封邮件中的赞助主题，未混入邮件主文的无关内容。
 - Obsidian Git 已将 Batch 1–15 的工作树自动备份为提交 `8c11987`（`vault backup: 2026-07-30 23:18:04`）。本次更新 HANDOFF 后会产生新的未提交文档改动；不要使用会覆盖工作树的 Git 恢复或重置操作。
-- 下一执行单元为 **Batch 19**；仍待处理 5 封邮件（包括收尾阶段需新建的无映射邮件）。
+- 所有 19 个计划批次均已完成；下一执行单元为**收尾补充**：为 ID `19faa9c1ec5cf9ba` 新建对应笔记，随后对全目录进行最终验收。
 
 ### 新增/新建文件（Batch 1-2 产出中与旧文件名不同的）
 
@@ -89,13 +91,13 @@
 
 ## 🚀 Next Steps (接手行动指南)
 
-### 阶段一：继续串行执行 Batch 19
+### 阶段一：完成无映射新邮件与最终验收
 
 接手 Agent 按以下模式逐批执行：
 
 ```
-循环 for batch_id in 19..19:
-  1. 从 batch_plan.json 读取本批 4 封邮件的 ID、Subject、现有文件名
+处理无映射邮件 ID `19faa9c1ec5cf9ba`：
+  1. 读取 Gmail 原文，按邮件内独立主题创建符合命名规范的新文件
   2. 派发 ddods_translator Subagent (Flash 模型)，附带：
      - 邮件 ID 列表
      - CDN URL 修复提醒（去除 $s_!xxx!, 占位符）
