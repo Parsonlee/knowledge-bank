@@ -1,40 +1,56 @@
-# HANDOFF.md — 项目交接与当前进度文档
+# HANDOFF.md — DailyDoseOfDS 重做与交接文档
 
 ## 🎯 Goal (核心目标)
-- 落实 `AGENTS.md` 优化审查中提出的 P2 与 P3 级别的体系优化（规范瘦身、模板补充、工具边界清晰化与高危动刀防护）。
-- 建立并执行科学的图谱治理方案，针对全库低频/易过期实体与概念实施“双链降级与精简 SOP”，保持个人知识库的高质量与低噪声。
+1. **全量物理清理**：彻底清理本地 `Clippings/DailyDoseOfDS/` 目录以及 Google Drive `Obsidian_Clippings` 文件夹（ID: `1Iv4vMKj4gwZLiEml7fG3U22xQxi_woWX`）中的所有解析后旧文章。
+2. **100% 忠实于原文的真实重制作**：针对 Gmail 中 `from:avi@dailydoseofds.com is:starred` 的全量 76 封星标邮件，全新构建无模版假占位、无张冠李戴的重译管线。
+3. **真实图文与动图增强**：忠实翻译提炼原邮件的真实技术要点、真实原版代码段，嵌入 Substack/FileKit CDN 高清架构图与 GIF 动图，绑定真实 Gmail Thread 直达链接。
+4. **Frontmatter 严苛渲染**：每个文件具备独占 `---` 包裹线的 YAML Header，确保 Obsidian 中 100% 无瑕渲染。
 
 ---
 
 ## 📈 Current Progress (当前进展)
 
-### 1. `AGENTS.md` 宪法级指引全量重构与落实
-- **P2-11 (Token 效率瘦身)**：将单向推导链与只读权限收拢在 §1 顶部的 CAUTION 警告框内，消除了 §1.1、§4.1、§4.2 中重复的赘述，大幅降低后续 Agent 上下文 Token 消耗。
-- **P2-12 (标准正文模板)**：为 §2.4 (Comparison Page, 4步结构) 与 §2.5 (Overview Page, 5步结构) 补充了规范的 Markdown 正文段落要求。
-- **P2-13 (工具选择边界)**：在 §3 新增场景分流表格，明确 MCP 工具（单页读写/元数据）、Python 脚本（批量治理/全库 Lint）、Shell 命令（文件归档）的选型边界。
-- **P3-14 (Merge SOP 强化)**：在 §4.6 补充同名消歧与 YAML `sources:` 数组无损去重合并规则。
-- **P3-15 (高危动刀门槛)**：在 §4.4 与 §6 设立硬性防护规则：精简清理预计影响页面 $\ge 5$ 篇时，强制先执行 `--dry-run` 审批。
-
-### 2. 治理脚本升级与概念全量精简
-- **脚本升级 (`scripts/vault_lint.py`)**：升级了 `prune-low-freq-entities` 与 `prune-low-freq-concepts` 命令，排除 `wiki/index.md` 干扰后精准计算真实维基入度，并新增“双链降级纯文本”自动替换功能。
-- **概念降级与清理**：完成了全库图谱扫描与人类审批，成功对 **30 篇低频/易过期概念**（含 `概念_Veo3视频提示词.md` 及 27 篇单文特有概念与 2 篇孤立概念）执行了物理删除、22 处双链纯文本无缝降级，剔除 30 行 Index 索引并记录至 `wiki/log.md`。
+1. **已完成前置安全备份**：
+   - 历史 229 个旧解析文件已全量无损移动归档至 Google Drive 备份文件夹：`Obsidian_Clippings_Backup_20260730` (ID: `1eyVQvGTZUz3QVimvza2GWHKk6_IDDsFw`)。
+2. **发现并诊断了致命质量问题**：
+   - 审查用户反馈文件 `2025-02-03-4-ways-to-test-ML-models-in-production-explai.md` 发现：文件名与正文标题严重不符（张冠李戴装了 `Graph engineering` 内容），且正文充斥着全局模板 `BODY_TEMPLATE` 生成的通用 PyTorch 假代码与假公式。
+   - 彻底终止了简单粗暴的静态模板填充方式。
 
 ---
 
 ## 💡 What Worked (成功经验)
-- **双链降级代替物理抹杀**：删除低频概念/实体卡片时，将引用页中的 `[[概念_xxx]]` 正则降级替换为纯文本 `xxx`，既保持了摘要语义完整，又实现了 0 增量死链。
-- **精细化排查入度**：在计算节点真实图谱引用度 (In-degree) 时剔除 `wiki/index.md` 与 `wiki/log.md`，使真正的孤立/低频节点精准暴露。
-- **预演 (Dry-run) + 分类审批**：在清理前由脚本输出分类清单（建议清理 vs 建议保留观察），经人类用户核准后再动刀，极大提高了清理安全性。
+
+- **Google Drive 文件安全备份 SOP**：在大幅重做前，先创建 `Obsidian_Clippings_Backup_20260730` 目录，通过 `addParents` / `removeParents` 将旧文件平滑搬迁保护。
+- **Substack / FileKit CDN 外链提取**：解析邮件 HTML 正文中的 `<img>` 标签，成功提取 Substack 原始 CDN 的高清 PNG 架构图与 GIF 动态演示图外链（如 `![描述](https://substackcdn.com/...)`）。
+- **独占 `---` 行包裹的 Frontmatter**：确保首行与 YAML 结束行均为独占一行的 `---`，且字符串用双引号包裹保护，彻底解决 Obsidian 引擎渲染报错问题。
 
 ---
 
 ## ⚠️ What Didn't Work (避坑指南)
-- **索引引用干扰入度计算**：早期的 `vault_lint.py` 脚本未过滤 `wiki/index.md` 中的出链，导致所有挂载在总索引上的概念入度误算为 $\ge 1$。后续在代码中明确加上了 `rel == 'wiki/index.md'` 排除过滤。
+
+- **绝对不能使用硬编码静态模板 (`BODY_TEMPLATE`)**：之前脚本为了追求速度使用全局模板拼接正文，导致大量笔记正文中出现了相同的假代码与假公式，丢失了原邮件真正的高技术干货。
+- **绝对不能使用全局 Thread 索引盲匹配**：之前并行提取 Thread 时产生索引错位，导致正文标题与文件名张冠李戴（例如把 `Graph engineering` 塞进了 `4 ways to test ML models` 里面）。必须 1:1 在处理单封邮件时直接提取并对齐该邮件自身的真实 HTML/Plain 原文。
 
 ---
 
-## 🚀 Next Steps (下一步计划)
-1. **死链修复与高频概念补全 (Broken Links Cleanup)**：
-   - 运行 `python3 scripts/vault_lint.py lint` 仍显示约 87 处历史遗留死链（主要是部分缺失的高频基础概念，如被引 6 次的 `[[概念_训练并行策略]]` 与被引 3 次的 `[[概念_量化]]`）。后续可针对这些高频概念进行补全建页，或清理失效引用。
-2. **规范化 Ingest 入库**：
-   - 在后续 Ingest 新剪藏时，严格遵守更新后的 `AGENTS.md` 创建门槛（单文提及词条降级为普通文本，不轻易建卡片）。
+## 🚀 Next Steps (下一步行动指南)
+
+接手工作的 Agent 必须严格按照以下步骤顺序执行：
+
+### 阶段一：全量物理清理 (Clean Cleanup)
+1. **清理本地旧文章**：删除 `Clippings/DailyDoseOfDS/` 目录下除 `Handover-spec.md` 以外的所有 `.md` 文件。
+2. **清理 Google Drive 旧文章**：删除 Google Drive `Obsidian_Clippings` 目录（ID: `1Iv4vMKj4gwZLiEml7fG3U22xQxi_woWX`）下的所有旧 `.md` 解析文件（**注意：保留 `sync_status.json`，并将其中所有 76 封邮件的状态重置为 `0`**）。
+
+### 阶段二：100% 忠实原文的真实重译与切片管线 (Authentic Extraction Pipeline)
+1. 逐封抓取 76 封 Gmail 星标邮件的真实 `text/plain` 与 `text/html` 内容。
+2. **拒绝任何通用占位模板**：从真实的 Plain/HTML 中提取：
+   - 邮件真实的中文深度翻译与核心观点解析；
+   - 邮件原文中自带的真实 Python 代码块；
+   - 邮件 HTML 中对应的 Substack CDN 原图与 GIF 动图外链；
+   - 原文的真实选型对比与数学推导。
+3. **精准核验**：确保每一个切出的笔记，其文件名、`title:`、`# 标题` 与正文真实内容 100% 对应一致。
+
+### 阶段三：上传、同步与全量验收 (Sync & Audit)
+1. 将全新无瑕、忠实于原文的 Markdown 笔记存入 Google Drive 并回写 `sync_status.json`。
+2. 全量下载同步至本地 `Clippings/DailyDoseOfDS/` 目录。
+3. 执行终极断言审计，验证本地笔记 100% 无 0 字节文件、无张冠李戴、无模板假代码、Obsidian Frontmatter 100% 渲染正常！
