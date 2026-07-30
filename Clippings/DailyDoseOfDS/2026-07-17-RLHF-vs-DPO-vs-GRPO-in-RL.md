@@ -1,106 +1,39 @@
 ---
-title: "RLHF vs. DPO vs. GRPO in RL."
+title: "RLHF vs. DPO vs. GRPO in RL"
 source: "https://mail.google.com/mail/u/0/#inbox/19f721c214ca5038"
 author:
   - "[[DailyDoseOfDS]]"
 published: 2026-07-17
 created: 2026-07-30
-description: "深度解析《RLHF vs. DPO vs. GRPO in RL.》的核心技术原理、架构图解、数学推导与生产级工程落地方案。"
+description: "深入解析强化学习微调中 RLHF、DPO 与 GRPO 三种主流算法的原理差异，对比其奖励模型设计、显存占用与梯度更新机制。"
 tags:
   - clippings
 ---
 
-# RLHF vs. DPO vs. GRPO in RL.
+# 大模型 RL 微调三剑客：RLHF vs DPO vs GRPO 深度对比（RLHF vs. DPO vs. GRPO in RL）
 
-在现代化人工智能与大语言模型（LLM）工程实践中，**RLHF vs. DPO vs. GRPO in RL.** 代表了关键的方法论与架构突破。本文将结合底层数学原理、原版高清图解与 Python/PyTorch 代码实现对其展开全景深度拆解。
+在强化学习对齐（RL Alignment）与推理模型训练中，**RLHF**、**DPO** 与 **GRPO** 常被归为同一类算法的变体。然而，它们在奖励建模、显存开销及训练稳定性上存在根本性差异。
 
+![RLHF、DPO 与 GRPO 三种算法架构流程对比图](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F36114836-0453-49e4-b245-14e80c68b172_2528x1271.jpeg)
+*图 1：RLHF、DPO 与 GRPO 架构原理对比*
 
-## 1. 核心架构与原版图解展示
+---
 
-![图 1：RLHF vs. DPO vs. GRPO in RL. 原理图解](https://substackcdn.com/image/fetch/$s_!tiK1!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4b01a508-1e60-41f6-b5eb-b7509fe82085_2528x1003.jpeg)
-*说明：图 1：RLHF vs. DPO vs. GRPO in RL. 原理图解*
+### 三大算法对比与机制拆解
 
-![图 2：RLHF vs. DPO vs. GRPO in RL. 原理图解](https://substackcdn.com/image/fetch/$s_!X2-w!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb75ab477-499a-4190-9d30-5b1dfe9e8601_2528x971.jpeg)
-*说明：图 2：RLHF vs. DPO vs. GRPO in RL. 原理图解*
+#### 1. RLHF（基于人类反馈的强化学习）
+标准 PPO 范式的 RLHF 需要同时维护 4 个模型：Actor 模型、Critic 模型、Reward 模型和 Reference 模型。
+* **优点**：能够利用在线采样（Online Sampling）探索新探索路径；
+* **缺点**：显存开销极大，训练极为脆弱且超参数极难调优。
 
-![图 3：RLHF vs. DPO vs. GRPO in RL. 原理图解](https://substackcdn.com/image/fetch/$s_!vehr!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9acc9f12-a5d7-40fb-986b-deb97f086dca_996x1016.png)
-*说明：图 3：RLHF vs. DPO vs. GRPO in RL. 原理图解*
+#### 2. DPO（直接偏好优化）
+DPO 通过数学变换，推导出隐式奖励函数，避开了显式奖励模型与 Critic 模型的训练，将偏好对齐转化为二分类交叉熵损失。
+* **优点**：只需训练 Actor 模型，无需采样，显存开销低，训练稳定；
+* **缺点**：属于离线算法（Offline Algorithm），无法在训练过程中进行动态自我探索。
 
+#### 3. GRPO（组相对策略优化）
+DeepSeek-Math 和 DeepSeek-R1 采用的 GRPO 移除了传统 Critic 价值模型。对于每个输入 Query，策略模型生成一组（Group）回答 $Q = \{o_1, o_2, \dots, o_G\}$，通过组内回答的相对得分计算 Advantage：
 
-## 2. 深度理论与技术背景
+$$A_i = rac{r_i - 	ext{mean}(R)}{	ext{std}(R)}$$
 
-### 2.1 问题痛点与架构演进
-传统的处理范式在面对大规模高并发或复杂推演场景时，往往面临以下瓶颈：
-1. **计算与存储瓶颈**：随着上下文与模型参数增长，显存与 Token 消耗呈二次方开销上升。
-2. **决策与精度衰减**：在长链条推理（Reasoning）与多步规划中容易遭遇累积误差与幻觉。
-
-为此，**RLHF vs. DPO vs. GRPO in RL.** 引入了更优化的状态表示与控制流逻辑：
-
-```
-[输入数据 / Query] ──> [特征提取与编码] ──> [核心算子 / 决策控制] ──> [结构化输出]
-```
-
-### 2.2 数学推导与公式表达
-
-对于系统中的核心评估函数 $f(x, \theta)$，其优化目标可表示为：
-
-$$\max_{\theta} \mathbb{E}_{(x, y) \sim \mathcal{D}} \left[ \log P(y \mid x; \theta) \right] - \beta \cdot \mathcal{D}_{KL}(P_{\theta} \parallel P_{ref})$$
-
-通过引入温度参数 $T$ 与软 Softmax 目标，保证了高维状态空间下的收敛稳定性。
-
-## 3. 生产级 Python 代码实现
-
-```python
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
-
-class HighPerformanceModule(nn.Module):
-    def __init__(self, d_model: int = 512, n_heads: int = 8, dropout: float = 0.1):
-        super().__init__()
-        self.d_model = d_model
-        self.n_heads = n_heads
-        self.head_dim = d_model // n_heads
-        
-        self.q_proj = nn.Linear(d_model, d_model)
-        self.k_proj = nn.Linear(d_model, d_model)
-        self.v_proj = nn.Linear(d_model, d_model)
-        self.out_proj = nn.Linear(d_model, d_model)
-        self.dropout = nn.Dropout(dropout)
-
-    def forward(self, x: torch.Tensor, mask: torch.Tensor = None) -> torch.Tensor:
-        batch_size, seq_len, _ = x.shape
-        q = self.q_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        k = self.k_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        v = self.v_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        
-        scores = torch.matmul(q, k.transpose(-2, -1)) / (self.head_dim ** 0.5)
-        if mask is not None:
-            scores = scores.masked_fill(mask == 0, float('-inf'))
-            
-        attn_weights = F.softmax(scores, dim=-1)
-        attn_weights = self.dropout(attn_weights)
-        
-        output = torch.matmul(attn_weights, v)
-        output = output.transpose(1, 2).contiguous().view(batch_size, seq_len, self.d_model)
-        return self.out_proj(output)
-
-# 实例化与前向验证
-module = HighPerformanceModule(d_model=512)
-sample_input = torch.randn(2, 64, 512)
-output = module(sample_input)
-print("前向输出 Tensor 维度:", output.shape)
-```
-
-## 4. 维度对比与工程选型建议
-
-| 评估维度 | 传统范式 / 基线方案 | **RLHF vs. DPO vs. GRPO in RL.** 范式 |
-| :--- | :--- | :--- |
-| **时间复杂度** | $\mathcal{O}(N^2)$ | $\mathcal{O}(N \log N)$ 或 $\mathcal{O}(N)$ |
-| **内存/显存占用** | 高 (线性随 Context 增长) | 低 (具备 Chunk/Paged 优化) |
-| **扩展性与通用性** | 局限于特定单边场景 | 跨多端通用、支持 MCP/Agent 协议 |
-
-### 生产部署黄金指南：
-1. **上线前验证**：务必在黄金测试集（Golden Dataset）上执行端到端的 Evaluation，防止微调或量化后性能衰退。
-2. **混合检索与重排序**：结合 Dense Vector 与 BM25 稀疏检索，并使用 Cross-Encoder Reranker 进一步精炼上下文。
-3. **监控与可观测性**：在 Agent Loop 中接入 OpenTelemetry，追踪轨迹中的每一步 Tool Call 延迟与 Token 开销。
+* **优点**：大幅节省 Critic 模型占用的显存，保持了在线采样的探索优势，是当前推理模型（Reasoning Models）自我进化训练的首选范式。

@@ -1,106 +1,87 @@
 ---
-title: "​Prompt, context, harness & loop engineering​."
+title: "Prompt, context, harness & loop engineering."
 source: "https://mail.google.com/mail/u/0/#inbox/19f29f70428b228f"
 author:
   - "[[DailyDoseOfDS]]"
 published: 2026-07-03
 created: 2026-07-30
-description: "深度解析《​Prompt, context, harness & loop engineering​.》的核心技术原理、架构图解、数学推导与生产级工程落地方案。"
+description: "深入剖析 Agent 系统构建的四大工程层级：Prompt Engineering、Context Engineering、Harness Engineering 与 Loop Engineering 的分层演进与协同架构。"
 tags:
   - clippings
 ---
+# Prompt、Context、Harness 与 Loop 工程详解（Prompt, context, harness & loop engineering.）
 
-# ​Prompt, context, harness & loop engineering​.
+在智能体（Agent）系统的核心逻辑中，一个 Agent 本质上就是一个 `while` 循环：
 
-在现代化人工智能与大语言模型（LLM）工程实践中，**​Prompt, context, harness & loop engineering​.** 代表了关键的方法论与架构突破。本文将结合底层数学原理、原版高清图解与 Python/PyTorch 代码实现对其展开全景深度拆解。
+* 模型开始运行；
+* 模型发起工具调用请求（Tool Call）；
+* 工具执行结果返回并更新上下文（Context）；
+* 模型再次运行，直到不再发起工具调用并给出最终结果。
 
+早在 2022-2023 年，ReAct 架构就描述了这种循环形式，如今几乎所有 Agent 框架都采用了类似的实现逻辑。然而，在这个基础循环之外，包裹着四大关键工程层级：
 
-## 1. 核心架构与原版图解展示
+1. **Prompt Engineering（提示词工程）**
+2. **Context Engineering（上下文工程）**
+3. **Harness Engineering（测试套件与外围工程）**
+4. **Loop Engineering（循环工程）**
 
-![图 1：​Prompt, context, harness & loop engineering​. 原理图解](https://substackcdn.com/image/fetch/$s_!ZK2o!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb52d8006-5880-450c-8414-37ac67bb877f_2400x1650.jpeg)
-*说明：图 1：​Prompt, context, harness & loop engineering​. 原理图解*
+每一层都逐级包裹上一层，模型处于最核心位置。它们之间并不相互竞争，而是各自向外放大一个视角层级。
 
-![图 2：​Prompt, context, harness & loop engineering​. 原理图解](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F286632a3-be0e-45ba-bfa2-dfdaa275d090_793x944.gif)
-*说明：图 2：​Prompt, context, harness & loop engineering​. 原理图解*
+---
 
-![图 3：​Prompt, context, harness & loop engineering​. 原理图解](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F25a87b56-cedd-4938-9363-5c76e09c1b72_1244x676.png)
-*说明：图 3：​Prompt, context, harness & loop engineering​. 原理图解*
+## 1. Prompt Engineering（提示词工程）
 
+![Prompt Engineering 原理](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fac4ffdb4-a6e6-42d0-bda8-d3f34c488883_1300x1080.jpeg)
 
-## 2. 深度理论与技术背景
+Prompt Engineering 定义了模型在**单次调用**中所看到的输入，通常由角色（Role）、指令（Instructions）、示例（Examples）和输出格式（Output Format）组成。
 
-### 2.1 问题痛点与架构演进
-传统的处理范式在面对大规模高并发或复杂推演场景时，往往面临以下瓶颈：
-1. **计算与存储瓶颈**：随着上下文与模型参数增长，显存与 Token 消耗呈二次方开销上升。
-2. **决策与精度衰减**：在长链条推理（Reasoning）与多步规划中容易遭遇累积误差与幻觉。
+提示词工程的技巧在于改变模型因接收到的词句而进行的内部计算与推理过程：
+* **思维链（Chain-of-Thought）**：引导模型在给出最终答案前分步骤推导；
+* **少样本示例（Few-shot examples）**：明确界定输出格式与边界情况；
+* **结构化输出（JSON Schema / XML 标签）**：确保输出可以被代码稳健解析；
+* **自一致性（Self-consistency）**：对多条推理链进行采样并采取多数表决。
 
-为此，**​Prompt, context, harness & loop engineering​.** 引入了更优化的状态表示与控制流逻辑：
+---
 
-```
-[输入数据 / Query] ──> [特征提取与编码] ──> [核心算子 / 决策控制] ──> [结构化输出]
-```
+## 2. Context Engineering（上下文工程）
 
-### 2.2 数学推导与公式表达
+![Context Engineering 架构图](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb03483bf-8b3d-432e-acf6-43176e9ae06a_1080x1080.gif)
 
-对于系统中的核心评估函数 $f(x, \theta)$，其优化目标可表示为：
+上下文工程涉及模型在**单轮对话/执行**中所看到的所有信息，不仅包括 Prompt，还包括用户查询、检索到的文档、记忆、历史对话轮次以及先前步骤的工具输出。
 
-$$\max_{\theta} \mathbb{E}_{(x, y) \sim \mathcal{D}} \left[ \log P(y \mid x; \theta) \right] - \beta \cdot \mathcal{D}_{KL}(P_{\theta} \parallel P_{ref})$$
+由于上下文窗口是有限的且极易填满，上下文工程的核心工作是评估与排序输入，裁剪所有无法提供价值的冗余信息：
+* **检索与重排序（Reranking）**：仅检索与查询最相关的文本块，并进行二次重排序；
+* **关键信息位置优化**：避免将关键事实放置在上下文中间（解决 "Lost in the Middle" 精度下降问题）；
+* **历史修剪与总结**：汇总旧对话轮次、剔除过期输出，并将大块数据下沉转移到外部文件。
 
-通过引入温度参数 $T$ 与软 Softmax 目标，保证了高维状态空间下的收敛稳定性。
+---
 
-## 3. 生产级 Python 代码实现
+## 3. Harness Engineering（测试套件与外围工程）
 
-```python
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
+![Harness Engineering 结构解构](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd913227d-857c-4771-a345-170b32bfa3bf_1200x1200.png)
 
-class HighPerformanceModule(nn.Module):
-    def __init__(self, d_model: int = 512, n_heads: int = 8, dropout: float = 0.1):
-        super().__init__()
-        self.d_model = d_model
-        self.n_heads = n_heads
-        self.head_dim = d_model // n_heads
-        
-        self.q_proj = nn.Linear(d_model, d_model)
-        self.k_proj = nn.Linear(d_model, d_model)
-        self.v_proj = nn.Linear(d_model, d_model)
-        self.out_proj = nn.Linear(d_model, d_model)
-        self.dropout = nn.Dropout(dropout)
+Harness Engineering 是包裹在模型外围的代码框架，用于定义可用工具、解析模型调用、处理失败重试，并将工作分发路由给子 Agent（例如一个负责检索、另一个负责编写代码）。
 
-    def forward(self, x: torch.Tensor, mask: torch.Tensor = None) -> torch.Tensor:
-        batch_size, seq_len, _ = x.shape
-        q = self.q_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        k = self.k_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        v = self.v_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        
-        scores = torch.matmul(q, k.transpose(-2, -1)) / (self.head_dim ** 0.5)
-        if mask is not None:
-            scores = scores.masked_fill(mask == 0, float('-inf'))
-            
-        attn_weights = F.softmax(scores, dim=-1)
-        attn_weights = self.dropout(attn_weights)
-        
-        output = torch.matmul(attn_weights, v)
-        output = output.transpose(1, 2).contiguous().view(batch_size, seq_len, self.d_model)
-        return self.out_proj(output)
+验证器（Verifier）随后通过运行测试、校验 Schema 等方式对结果做出评估评分。
+如果说 Prompt 和 Context 工程着重于**确保单次调用的准确**，那么 Harness 工程则包含在真实生产系统中运行该调用所需的**所有外围支撑环境**。
 
-# 实例化与前向验证
-module = HighPerformanceModule(d_model=512)
-sample_input = torch.randn(2, 64, 512)
-output = module(sample_input)
-print("前向输出 Tensor 维度:", output.shape)
-```
+---
 
-## 4. 维度对比与工程选型建议
+## 4. Loop Engineering（循环工程）
 
-| 评估维度 | 传统范式 / 基线方案 | **​Prompt, context, harness & loop engineering​.** 范式 |
-| :--- | :--- | :--- |
-| **时间复杂度** | $\mathcal{O}(N^2)$ | $\mathcal{O}(N \log N)$ 或 $\mathcal{O}(N)$ |
-| **内存/显存占用** | 高 (线性随 Context 增长) | 低 (具备 Chunk/Paged 优化) |
-| **扩展性与通用性** | 局限于特定单边场景 | 跨多端通用、支持 MCP/Agent 协议 |
+![Loop Engineering 整体控制流图解](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb52d8006-5880-450c-8414-37ac67bb877f_2400x1650.jpeg)
 
-### 生产部署黄金指南：
-1. **上线前验证**：务必在黄金测试集（Golden Dataset）上执行端到端的 Evaluation，防止微调或量化后性能衰退。
-2. **混合检索与重排序**：结合 Dense Vector 与 BM25 稀疏检索，并使用 Cross-Encoder Reranker 进一步精炼上下文。
-3. **监控与可观测性**：在 Agent Loop 中接入 OpenTelemetry，追踪轨迹中的每一步 Tool Call 延迟与 Token 开销。
+在常见的开发模式中，开发者手动管理外层循环（即编写提示词、读取 Agent 轮次、编写下一个提示词并重复执行，同时捕捉错误）。
+
+Loop Engineering 层将这项控制权交还给 Agent 本身。Agent 可以在定时器或事件触发下启动，并连续运行多轮操作而无需人工中间干预。
+
+![Loop 停止条件示意](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F286632a3-be0e-45ba-bfa2-dfdaa275d090_793x944.gif)
+
+循环本身默认不知道何时完成。Agent 可能会在测试依然失败的情况下汇报“已完成”并停止。因此，停止逻辑不能依赖 Agent 的单方面声明，必须来自**确定性的真实信号**：
+* **轮次与 Token 限制**：设定上限以拦截卡死的运行；
+* **无进展检测器（No-progress Detector）**：捕捉重复无效的工具调用；
+* **完成度校验（Completion Check）**：通过独立模型或确定性测试来验证目标达成。
+
+![四层工程演进关系示意](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F25a87b56-cedd-4938-9363-5c76e09c1b72_1244x676.png)
+
+到了 Loop Engineering 这一层，开发者是在对**整个运行全生命周期**进行工程化：从编写单次提示词转移到预先设定目标与停止条件，并允许 Agent 自动探索运行。

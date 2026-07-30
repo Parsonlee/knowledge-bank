@@ -1,106 +1,61 @@
 ---
-title: "RAG, Agentic RAG, and AI Memory."
+title: "RAG, Agentic RAG, and AI Memory"
 source: "https://mail.google.com/mail/u/0/#inbox/19f6ca0f2c928ca3"
 author:
   - "[[DailyDoseOfDS]]"
 published: 2026-07-16
 created: 2026-07-30
-description: "深度解析《RAG, Agentic RAG, and AI Memory.》的核心技术原理、架构图解、数学推导与生产级工程落地方案。"
+description: "梳理 AI 检索架构从传统 RAG（单次只读检索）到 Agentic RAG（基于工具调用的动态检索），再到 AI Memory（读写结合与持续学习）的演进脉络。"
 tags:
   - clippings
 ---
 
-# RAG, Agentic RAG, and AI Memory.
+# RAG、Agentic RAG 与 AI Memory 演进全景（RAG, Agentic RAG, and AI Memory）
 
-在现代化人工智能与大语言模型（LLM）工程实践中，**RAG, Agentic RAG, and AI Memory.** 代表了关键的方法论与架构突破。本文将结合底层数学原理、原版高清图解与 Python/PyTorch 代码实现对其展开全景深度拆解。
+RAG 从来都不是终点。
 
+**AI Agent 的记忆（Memory）才是所有技术的演进方向。**
 
-## 1. 核心架构与原版图解展示
+让我们用最简单的方式拆解这一演进过程。
 
-![图 1：RAG, Agentic RAG, and AI Memory. 原理图解](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbcf833bc-f2b3-49f7-aba6-23ec2738bdd3_788x243.png)
-*说明：图 1：RAG, Agentic RAG, and AI Memory. 原理图解*
+![RAG, Agentic RAG 与 AI Memory 架构对比](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd9f7cfaf-2340-4084-8eb2-147bb9361d06_1478x1371.gif)
 
-![图 2：RAG, Agentic RAG, and AI Memory. 原理图解](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbe96be1a-0267-4cc2-a299-20b71982c24f_1456x736.png)
-*说明：图 2：RAG, Agentic RAG, and AI Memory. 原理图解*
+* **RAG (2020-2023)**：
+  * 单次检索信息，生成回答
+  * 无决策能力，仅执行“获取并回答”
+  * 痛点：经常检索出无关的上下文
 
-![图 3：RAG, Agentic RAG, and AI Memory. 原理图解](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F89c5900b-5f2b-44b9-8603-4e6a169f1666_1456x486.png)
-*说明：图 3：RAG, Agentic RAG, and AI Memory. 原理图解*
+* **Agentic RAG**：
+  * Agent 自行决定*是否*需要检索
+  * Agent 挑选*哪一个*数据源进行查询
+  * Agent 验证检索结果*是否*有用
+  * 痛点：依然是纯只读模式，无法从交互中学习
 
+* **AI Memory**：
+  * 对外部知识库同时进行**读取与写入**
+  * 从过往对话中不断学习
+  * 记住用户偏好与历史上下文
+  * 实现真正意义上的个性化
 
-## 2. 深度理论与技术背景
+思维模型非常直化：
+* **RAG**：只读（Read-only），单次交互（One-shot）
+* **Agentic RAG**：通过工具调用实现只读（Read-only via tool calls）
+* **Agent Memory**：通过工具调用实现读写（Read-write via tool calls）
 
-### 2.1 问题痛点与架构演进
-传统的处理范式在面对大规模高并发或复杂推演场景时，往往面临以下瓶颈：
-1. **计算与存储瓶颈**：随着上下文与模型参数增长，显存与 Token 消耗呈二次方开销上升。
-2. **决策与精度衰减**：在长链条推理（Reasoning）与多步规划中容易遭遇累积误差与幻觉。
+---
 
-为此，**RAG, Agentic RAG, and AI Memory.** 引入了更优化的状态表示与控制流逻辑：
+### 赋予 Agent 记忆力的强大之处
 
-```
-[输入数据 / Query] ──> [特征提取与编码] ──> [核心算子 / 决策控制] ──> [结构化输出]
-```
+Agent 现在可以“记住”事情，例如用户偏好、历史对话以及重要日期。所有这些信息都被存储起来，并可在未来的交互中随时检索。
 
-### 2.2 数学推导与公式表达
+这解锁了更宏大的能力：**持续学习（Continual Learning）**。
 
-对于系统中的核心评估函数 $f(x, \theta)$，其优化目标可表示为：
+Agent 不再冻结在训练完成的那一刻，而是能够从每一次交互中积累知识。它们不需要重新训练就能随着时间的推移不断进化。
 
-$$\max_{\theta} \mathbb{E}_{(x, y) \sim \mathcal{D}} \left[ \log P(y \mid x; \theta) \right] - \beta \cdot \mathcal{D}_{KL}(P_{\theta} \parallel P_{ref})$$
+记忆是将静态模型转变为真正自适应 AI 系统的桥梁。
 
-通过引入温度参数 $T$ 与软 Softmax 目标，保证了高维状态空间下的收敛稳定性。
+但这也并非一帆风顺。
 
-## 3. 生产级 Python 代码实现
+记忆引入了传统 RAG 从未遇到过的新挑战：**记忆污染/损坏（Memory Corruption）**、**决定该遗忘什么（Deciding what to forget）**，以及**管理多种记忆类型（程序性记忆 Procedural、情境性记忆 Episodic 和语义记忆 Semantic）**。
 
-```python
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
-
-class HighPerformanceModule(nn.Module):
-    def __init__(self, d_model: int = 512, n_heads: int = 8, dropout: float = 0.1):
-        super().__init__()
-        self.d_model = d_model
-        self.n_heads = n_heads
-        self.head_dim = d_model // n_heads
-        
-        self.q_proj = nn.Linear(d_model, d_model)
-        self.k_proj = nn.Linear(d_model, d_model)
-        self.v_proj = nn.Linear(d_model, d_model)
-        self.out_proj = nn.Linear(d_model, d_model)
-        self.dropout = nn.Dropout(dropout)
-
-    def forward(self, x: torch.Tensor, mask: torch.Tensor = None) -> torch.Tensor:
-        batch_size, seq_len, _ = x.shape
-        q = self.q_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        k = self.k_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        v = self.v_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        
-        scores = torch.matmul(q, k.transpose(-2, -1)) / (self.head_dim ** 0.5)
-        if mask is not None:
-            scores = scores.masked_fill(mask == 0, float('-inf'))
-            
-        attn_weights = F.softmax(scores, dim=-1)
-        attn_weights = self.dropout(attn_weights)
-        
-        output = torch.matmul(attn_weights, v)
-        output = output.transpose(1, 2).contiguous().view(batch_size, seq_len, self.d_model)
-        return self.out_proj(output)
-
-# 实例化与前向验证
-module = HighPerformanceModule(d_model=512)
-sample_input = torch.randn(2, 64, 512)
-output = module(sample_input)
-print("前向输出 Tensor 维度:", output.shape)
-```
-
-## 4. 维度对比与工程选型建议
-
-| 评估维度 | 传统范式 / 基线方案 | **RAG, Agentic RAG, and AI Memory.** 范式 |
-| :--- | :--- | :--- |
-| **时间复杂度** | $\mathcal{O}(N^2)$ | $\mathcal{O}(N \log N)$ 或 $\mathcal{O}(N)$ |
-| **内存/显存占用** | 高 (线性随 Context 增长) | 低 (具备 Chunk/Paged 优化) |
-| **扩展性与通用性** | 局限于特定单边场景 | 跨多端通用、支持 MCP/Agent 协议 |
-
-### 生产部署黄金指南：
-1. **上线前验证**：务必在黄金测试集（Golden Dataset）上执行端到端的 Evaluation，防止微调或量化后性能衰退。
-2. **混合检索与重排序**：结合 Dense Vector 与 BM25 稀疏检索，并使用 Cross-Encoder Reranker 进一步精炼上下文。
-3. **监控与可观测性**：在 Agent Loop 中接入 OpenTelemetry，追踪轨迹中的每一步 Tool Call 延迟与 Token 开销。
+从头解决这些问题非常困难。如果你想为你的 Agent 赋予类人的记忆能力，可以了解一下 [Graphiti](https://github.com/getzep/graphiti)——一个用于构建实时知识图谱的开源框架。

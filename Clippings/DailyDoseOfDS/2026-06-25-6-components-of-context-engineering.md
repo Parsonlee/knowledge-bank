@@ -5,102 +5,70 @@ author:
   - "[[DailyDoseOfDS]]"
 published: 2026-06-25
 created: 2026-07-30
-description: "深度解析《6 components of context engineering.》的核心技术原理、架构图解、数学推导与生产级工程落地方案。"
+description: "深度拆解上下文工程的六大核心组件：检索重排、记忆管理、Prompt 结构化、压缩总结、工具输出格式化与窗口预算管理。"
 tags:
   - clippings
 ---
+# 上下文工程的六大核心组件（6 components of context engineering.）
 
-# 6 components of context engineering.
+在现代化 AI 智能体与大语言模型应用构建中，人们逐渐认识到：**决定大模型输出质量上限的不是提示词的措辞，而是整个上下文信息流水线（Context Pipeline）的设计**。这就是上下文工程（Context Engineering）。
 
-在现代化人工智能与大语言模型（LLM）工程实践中，**6 components of context engineering.** 代表了关键的方法论与架构突破。本文将结合底层数学原理、原版高清图解与 Python/PyTorch 代码实现对其展开全景深度拆解。
+上下文工程包含以下六大核心组件：
 
+---
 
-## 1. 核心架构与原版图解展示
+## 1. 动态检索与重排序（Retrieval & Reranking）
 
-![图 1：6 components of context engineering. 原理图解](https://substackcdn.com/image/fetch/$s_!9ys0!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2c345a35-7c26-40ad-bafe-3cb9b396a319_1478x1371.gif)
-*说明：图 1：6 components of context engineering. 原理图解*
+![检索与重排序](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F029fa969-ee3a-45a6-972f-6d7edbe6129b_1930x1852.png)
 
-![图 2：6 components of context engineering. 原理图解](https://substackcdn.com/image/fetch/$s_!TOwO!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F351b396c-aca5-46f9-9f98-0fa8541e764c_957x266.png)
-*说明：图 2：6 components of context engineering. 原理图解*
+仅从向量数据库中检索高相关性切片不足以满足需求。需要通过交叉编码器（Cross-encoder）重排序模型对 Top-K 结果进行二次精细打分，剔除无关噪点。
 
-![图 3：6 components of context engineering. 原理图解](https://substackcdn.com/image/fetch/$s_!Onav!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff3275ca7-7198-4d6c-be2f-a60c0edad4d2_960x955.gif)
-*说明：图 3：6 components of context engineering. 原理图解*
+---
 
+## 2. 状态与记忆管理（Memory Management）
 
-## 2. 深度理论与技术背景
+![记忆管理机制](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F733113ce-f515-4f91-a7e5-0f2ef4822869_2008x751.png)
 
-### 2.1 问题痛点与架构演进
-传统的处理范式在面对大规模高并发或复杂推演场景时，往往面临以下瓶颈：
-1. **计算与存储瓶颈**：随着上下文与模型参数增长，显存与 Token 消耗呈二次方开销上升。
-2. **决策与精度衰减**：在长链条推理（Reasoning）与多步规划中容易遭遇累积误差与幻觉。
+区分短期会话记忆（Working Memory）与长期记忆（Long-term Knowledge）。将跨轮次的关键事实抽取并固化至用户画像或结构化键值数据库中。
 
-为此，**6 components of context engineering.** 引入了更优化的状态表示与控制流逻辑：
+---
 
-```
-[输入数据 / Query] ──> [特征提取与编码] ──> [核心算子 / 决策控制] ──> [结构化输出]
-```
+## 3. 上下文结构化摆放（Context Layout & Ordering）
 
-### 2.2 数学推导与公式表达
+![上下文结构摆放](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9cf66394-2d29-4ecf-80ab-55deb54dc559_1280x968.gif)
 
-对于系统中的核心评估函数 $f(x, \theta)$，其优化目标可表示为：
+模型对窗口两端（开头与结尾）的注意力最高，对中间部分的注意力会发生衰减（Lost in the Middle 现象）。因此需要将最重要的指令和核心检索切片放置在窗口首尾。
 
-$$\max_{\theta} \mathbb{E}_{(x, y) \sim \mathcal{D}} \left[ \log P(y \mid x; \theta) \right] - \beta \cdot \mathcal{D}_{KL}(P_{\theta} \parallel P_{ref})$$
+---
 
-通过引入温度参数 $T$ 与软 Softmax 目标，保证了高维状态空间下的收敛稳定性。
+## 4. 历史总结与上下文压缩（Summarization & Compression）
 
-## 3. 生产级 Python 代码实现
+![上下文压缩示例](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0d2733c3-db89-4900-a596-7551248233e5_994x201.gif)
 
-```python
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
+当多轮对话导致上下文接近上限时，自动触发总结算子，将陈旧的中间步骤压缩为摘要，清理失效的临时变量。
 
-class HighPerformanceModule(nn.Module):
-    def __init__(self, d_model: int = 512, n_heads: int = 8, dropout: float = 0.1):
-        super().__init__()
-        self.d_model = d_model
-        self.n_heads = n_heads
-        self.head_dim = d_model // n_heads
-        
-        self.q_proj = nn.Linear(d_model, d_model)
-        self.k_proj = nn.Linear(d_model, d_model)
-        self.v_proj = nn.Linear(d_model, d_model)
-        self.out_proj = nn.Linear(d_model, d_model)
-        self.dropout = nn.Dropout(dropout)
+---
 
-    def forward(self, x: torch.Tensor, mask: torch.Tensor = None) -> torch.Tensor:
-        batch_size, seq_len, _ = x.shape
-        q = self.q_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        k = self.k_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        v = self.v_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        
-        scores = torch.matmul(q, k.transpose(-2, -1)) / (self.head_dim ** 0.5)
-        if mask is not None:
-            scores = scores.masked_fill(mask == 0, float('-inf'))
-            
-        attn_weights = F.softmax(scores, dim=-1)
-        attn_weights = self.dropout(attn_weights)
-        
-        output = torch.matmul(attn_weights, v)
-        output = output.transpose(1, 2).contiguous().view(batch_size, seq_len, self.d_model)
-        return self.out_proj(output)
+## 5. 工具输出规范化（Tool Output Formatting）
 
-# 实例化与前向验证
-module = HighPerformanceModule(d_model=512)
-sample_input = torch.randn(2, 64, 512)
-output = module(sample_input)
-print("前向输出 Tensor 维度:", output.shape)
-```
+![工具输出规范化](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd19ad755-521e-40e5-bfd0-4806f21ec5f7_1024x559.png)
 
-## 4. 维度对比与工程选型建议
+工具（如 API 调用、代码执行结果）返回的原始数据往往包含大量冗余 HTML/JSON。需要清洗并转换为极简格式后再填入上下文，避免浪费计算资源。
 
-| 评估维度 | 传统范式 / 基线方案 | **6 components of context engineering.** 范式 |
-| :--- | :--- | :--- |
-| **时间复杂度** | $\mathcal{O}(N^2)$ | $\mathcal{O}(N \log N)$ 或 $\mathcal{O}(N)$ |
-| **内存/显存占用** | 高 (线性随 Context 增长) | 低 (具备 Chunk/Paged 优化) |
-| **扩展性与通用性** | 局限于特定单边场景 | 跨多端通用、支持 MCP/Agent 协议 |
+---
 
-### 生产部署黄金指南：
-1. **上线前验证**：务必在黄金测试集（Golden Dataset）上执行端到端的 Evaluation，防止微调或量化后性能衰退。
-2. **混合检索与重排序**：结合 Dense Vector 与 BM25 稀疏检索，并使用 Cross-Encoder Reranker 进一步精炼上下文。
-3. **监控与可观测性**：在 Agent Loop 中接入 OpenTelemetry，追踪轨迹中的每一步 Tool Call 延迟与 Token 开销。
+## 6. 上下文窗口预算与配额管理（Context Window Budgeting）
+
+![窗口预算控制图解](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2c345a35-7c26-40ad-bafe-3cb9b396a319_1478x1371.gif)
+
+按比例分配系统 Prompt、历史记录、检索文档和输出留白（Reserve for Generation）。
+
+![MCP 协议接入架构图解](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F351b396c-aca5-46f9-9f98-0fa8541e764c_957x266.png)
+
+![网络架构拓扑图](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff3275ca7-7198-4d6c-be2f-a60c0edad4d2_960x955.gif)
+
+![模型通信流图解](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2c38b38e-7c30-4a2e-a39f-a023d6092076_1024x559.png)
+
+![MCP 工具标准协议对比](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F40f3cb2a-84b5-4556-8bcc-026f43f393d9_1024x559.png)
+
+通过结合 MCP（Model Context Protocol）协议，将传统工具调用的 $N 	imes M$ 点对点工程转化为标准的 $N + M$ 协议对接，实现了上下文基础设施的大幅简化。

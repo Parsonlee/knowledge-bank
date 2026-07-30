@@ -5,102 +5,108 @@ author:
   - "[[DailyDoseOfDS]]"
 published: 2026-07-03
 created: 2026-07-30
-description: "深度解析《11 most important plots in DS/ML.》的核心技术原理、架构图解、数学推导与生产级工程落地方案。"
+description: "全面总结数据科学与机器学习领域最核心的 11 种可视化图表及其在模型评估、解释性与特征工程中的关键应用。"
 tags:
   - clippings
 ---
+# 数据科学与机器学习中最核心的 11 种可视化图表（11 most important plots in DS/ML.）
 
-# 11 most important plots in DS/ML.
+在数据科学（DS）与机器学习（ML）实践中，可视化图表对于模型诊断、特征选择和结果解释至关重要。本文整理了 11 种必须掌握的关键图表及其核心应用场景。
 
-在现代化人工智能与大语言模型（LLM）工程实践中，**11 most important plots in DS/ML.** 代表了关键的方法论与架构突破。本文将结合底层数学原理、原版高清图解与 Python/PyTorch 代码实现对其展开全景深度拆解。
+![数据科学 11 种核心图表全景图](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7d9a3c85-2d42-4453-9dad-20ae24da3994_1208x776.png)
+*说明：数据科学 11 种核心图表全景指南*
 
+---
 
-## 1. 核心架构与原版图解展示
+## 1) KS 曲线（KS Plot / Kolmogorov-Smirnov Curve）
 
-![图 1：11 most important plots in DS/ML. 原理图解](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0725182f-9dbd-41ca-880e-7d789abc8bc5_1272x704.png)
-*说明：图 1：11 most important plots in DS/ML. 原理图解*
+![KS Plot 图解](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F474c275c-114a-4e25-a35a-d87199b799b8_1200x716.png)
 
-![图 2：11 most important plots in DS/ML. 原理图解](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa79c8fc6-4092-403b-aba9-a5b6b38e04d8_1468x688.png)
-*说明：图 2：11 most important plots in DS/ML. 原理图解*
+* **作用**：评估二分类模型对正负样本的区分能力（Separation Power）。
+* **解读**：KS 统计量表示累积正样本曲线与累积负样本曲线之间的最大垂直距离。KS 值越高，模型的区分能力越强（常见于风控信用评分卡评估）。
 
-![图 3：11 most important plots in DS/ML. 原理图解](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fccf1a5ed-bdbd-4543-a993-7f27f5ace198_1336x688.png)
-*说明：图 3：11 most important plots in DS/ML. 原理图解*
+---
 
+## 2) SHAP 摘要图（SHAP Plot）
 
-## 2. 深度理论与技术背景
+![SHAP Plot 图解](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe1827901-140d-440e-ad1a-399bfab36e0f_1448x676.png)
 
-### 2.1 问题痛点与架构演进
-传统的处理范式在面对大规模高并发或复杂推演场景时，往往面临以下瓶颈：
-1. **计算与存储瓶颈**：随着上下文与模型参数增长，显存与 Token 消耗呈二次方开销上升。
-2. **决策与精度衰减**：在长链条推理（Reasoning）与多步规划中容易遭遇累积误差与幻觉。
+* **作用**：展示特征对模型预测结果的贡献度与影响方向。
+* **解读**：结合特征重要性（纵轴按影响排序）与特征取值高低（颜色深浅），直观呈现每个特征是正向推高还是负向拉低预测值。
 
-为此，**11 most important plots in DS/ML.** 引入了更优化的状态表示与控制流逻辑：
+---
 
-```
-[输入数据 / Query] ──> [特征提取与编码] ──> [核心算子 / 决策控制] ──> [结构化输出]
-```
+## 3) ROC 曲线（ROC Curve）
 
-### 2.2 数学推导与公式表达
+![ROC Curve 图解](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0725182f-9dbd-41ca-880e-7d789abc8bc5_1272x704.png)
 
-对于系统中的核心评估函数 $f(x, \theta)$，其优化目标可表示为：
+* **作用**：衡量分类模型在不同决策阈值下的综合表现。
+* **解读**：横轴为假正率（FPR），纵轴为真正率（TPR）。曲线下包围的面积（AUC）越大，模型的整体分类性能越好。
 
-$$\max_{\theta} \mathbb{E}_{(x, y) \sim \mathcal{D}} \left[ \log P(y \mid x; \theta) \right] - \beta \cdot \mathcal{D}_{KL}(P_{\theta} \parallel P_{ref})$$
+---
 
-通过引入温度参数 $T$ 与软 Softmax 目标，保证了高维状态空间下的收敛稳定性。
+## 4) 精确率-召回率曲线（Precision-Recall Curve / PR Curve）
 
-## 3. 生产级 Python 代码实现
+![Precision-Recall Curve 图解](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa79c8fc6-4092-403b-aba9-a5b6b38e04d8_1468x688.png)
 
-```python
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
+* **作用**：在极度不平衡数据集（Imbalanced Datasets）中评估模型性能。
+* **解读**：对比精确率（Precision）与召回率（Recall）之间的权衡，在正样本极少时比 ROC 曲线更具针对性。
 
-class HighPerformanceModule(nn.Module):
-    def __init__(self, d_model: int = 512, n_heads: int = 8, dropout: float = 0.1):
-        super().__init__()
-        self.d_model = d_model
-        self.n_heads = n_heads
-        self.head_dim = d_model // n_heads
-        
-        self.q_proj = nn.Linear(d_model, d_model)
-        self.k_proj = nn.Linear(d_model, d_model)
-        self.v_proj = nn.Linear(d_model, d_model)
-        self.out_proj = nn.Linear(d_model, d_model)
-        self.dropout = nn.Dropout(dropout)
+---
 
-    def forward(self, x: torch.Tensor, mask: torch.Tensor = None) -> torch.Tensor:
-        batch_size, seq_len, _ = x.shape
-        q = self.q_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        k = self.k_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        v = self.v_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        
-        scores = torch.matmul(q, k.transpose(-2, -1)) / (self.head_dim ** 0.5)
-        if mask is not None:
-            scores = scores.masked_fill(mask == 0, float('-inf'))
-            
-        attn_weights = F.softmax(scores, dim=-1)
-        attn_weights = self.dropout(attn_weights)
-        
-        output = torch.matmul(attn_weights, v)
-        output = output.transpose(1, 2).contiguous().view(batch_size, seq_len, self.d_model)
-        return self.out_proj(output)
+## 5) QQ 图（Quantile-Quantile Plot / QQ Plot）
 
-# 实例化与前向验证
-module = HighPerformanceModule(d_model=512)
-sample_input = torch.randn(2, 64, 512)
-output = module(sample_input)
-print("前向输出 Tensor 维度:", output.shape)
-```
+![QQ Plot 图解](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fccf1a5ed-bdbd-4543-a993-7f27f5ace198_1336x688.png)
 
-## 4. 维度对比与工程选型建议
+* **作用**：检验数据分布是否符合某种理论分布（如正态分布）。
+* **解读**：若数据点紧密贴合 45 度对角线，则说明实际分布与目标理论分布高度吻合。
 
-| 评估维度 | 传统范式 / 基线方案 | **11 most important plots in DS/ML.** 范式 |
-| :--- | :--- | :--- |
-| **时间复杂度** | $\mathcal{O}(N^2)$ | $\mathcal{O}(N \log N)$ 或 $\mathcal{O}(N)$ |
-| **内存/显存占用** | 高 (线性随 Context 增长) | 低 (具备 Chunk/Paged 优化) |
-| **扩展性与通用性** | 局限于特定单边场景 | 跨多端通用、支持 MCP/Agent 协议 |
+---
 
-### 生产部署黄金指南：
-1. **上线前验证**：务必在黄金测试集（Golden Dataset）上执行端到端的 Evaluation，防止微调或量化后性能衰退。
-2. **混合检索与重排序**：结合 Dense Vector 与 BM25 稀疏检索，并使用 Cross-Encoder Reranker 进一步精炼上下文。
-3. **监控与可观测性**：在 Agent Loop 中接入 OpenTelemetry，追踪轨迹中的每一步 Tool Call 延迟与 Token 开销。
+## 6) 累积解释方差图（Cumulative Explained Variance Plot - PCA）
+
+![Cumulative Explained Variance Plot 图解](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ffd0676d3-17cc-40eb-8928-b3f0a8f931f2_1456x1380.png)
+
+* **作用**：帮助确定主成分分析（PCA）降维时的最佳主成分保留数量。
+* **解读**：展示前 $k$ 个主成分对原始数据总方差的累积解释比例（例如达到 90% 或 95% 所需的维数）。
+
+---
+
+## 7) 肘部法则曲线（Elbow Curve）
+
+![Elbow Curve 图解](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc1dd132d-25f8-4091-854d-2d5eb6e5381d_1308x676.png)
+
+* **作用**：辅助确定 K-means 聚类算法中的最佳簇数量（Cluster Count $K$）。
+* **解读**：随着 $K$ 增加，簇内平方和（WCSS）逐渐降低，曲线拐折处的“肘部”点通常对应最佳聚类数。
+
+---
+
+## 8) 轮廓系数曲线（Silhouette Curve）
+
+![Silhouette Curve 图解](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc0437d11-f1b1-4ef2-ac24-05522e472593_1496x676.png)
+
+* **作用**：当肘部法则不够清晰时，替代或补充用于聚类质量评估。
+* **解读**：衡量样本在同簇内的紧密程度与异簇间的分离程度，轮廓系数越接近 1 说明聚类效果越好。
+
+---
+
+## 9) 基尼不纯度与熵对比图（Gini-Impurity and Entropy）
+
+![Gini-Impurity and Entropy 图解](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F727cfc1e-bb11-4961-8938-176bbe8f6bfa_1276x676.png)
+
+* **作用**：度量决策树节点分裂时的不纯度（Impurity）与混乱程度。
+* **解读**：展示在不同节点类别比例下，基尼系数与信息熵的曲率差异及其对树生长决策的影响。
+
+---
+
+## 10) 偏差-方差权衡图（Bias-Variance Tradeoff）
+
+* **作用**：指导机器学习模型复杂度的选择，防止欠拟合与过拟合。
+* **解读**：随着模型复杂度增加，偏差（Bias）降低而方差（Variance）上升，总误差曲线的最低点代表最优模型复杂度。
+
+---
+
+## 11) 部分依赖图（Partial Dependency Plots / PDP）
+
+* **作用**：展示一个或两个特征与预测目标之间的边际效应关系。
+* **解读**：1-way PDP 呈现单一特征对目标的影响轨迹，2-way PDP 呈现特征交互项对目标的作用。

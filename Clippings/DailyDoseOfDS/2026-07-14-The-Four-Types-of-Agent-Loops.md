@@ -1,103 +1,85 @@
 ---
-title: "The four types of agent loops."
+title: "The four types of agent loops"
 source: "https://mail.google.com/mail/u/0/#inbox/19f6174c7b5adc67"
 author:
   - "[[DailyDoseOfDS]]"
 published: 2026-07-14
 created: 2026-07-30
-description: "深度解析《The four types of agent loops.》的核心技术原理、架构图解、数学推导与生产级工程落地方案。"
+description: "系统化拆解 Agent 循环工程（Loop Engineering）的四种核心模式：对话轮次驱动、目标评价驱动、时间定时驱动与主动事件驱动，帮助开发者根据任务特性选择最佳控制流结构。"
 tags:
   - clippings
 ---
 
-# The four types of agent loops.
+# Agent 循环工程的四种核心架构（The four types of agent loops）
 
-在现代化人工智能与大语言模型（LLM）工程实践中，**The four types of agent loops.** 代表了关键的方法论与架构突破。本文将结合底层数学原理、原版高清图解与 Python/PyTorch 代码实现对其展开全景深度拆解。
+“循环工程”（Loop Engineering）经常被人们当作单一的技术概念来讨论，但它实际上是**四种不同架构结构之间的选择**，每种结构适应于不同类型的任务。
 
+循环工程的核心是设计控制与引导 Agent 的系统，而不是人工一步一步手控。
 
-## 1. 核心架构与原版图解展示
+该系统始终需要回答两个基本问题：
+1. **是什么触发了一次运行？**
+2. **由谁来判断工作已经完成？**
 
-![图 1：The four types of agent loops. 原理图解](https://substackcdn.com/image/fetch/$s_!-hZp!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F03f8a20d-3be6-4667-b9b1-528e817e4ca6_1188x308.png)
-*说明：图 1：The four types of agent loops. 原理图解*
+在人工手动的会话中，人类在每一步都回答了这两个问题。而每一种循环类型，都是将更多的此类职责交由系统自动化处理。
 
-![图 2：The four types of agent loops. 原理图解](https://substackcdn.com/image/fetch/$s_!SDSi!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbc34a00c-adcd-4197-941b-56457404e9e3_1187x236.png)
-*说明：图 2：The four types of agent loops. 原理图解*
+![Agent 四种循环模式对比总览](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6296b4b4-3f8c-4d3e-b193-24b456d14b03_960x922.gif)
 
+---
 
-## 2. 深度理论与技术背景
+### 一、 轮次驱动型循环（Turn-based loops）
 
-### 2.1 问题痛点与架构演进
-传统的处理范式在面对大规模高并发或复杂推演场景时，往往面临以下瓶颈：
-1. **计算与存储瓶颈**：随着上下文与模型参数增长，显存与 Token 消耗呈二次方开销上升。
-2. **决策与精度衰减**：在长链条推理（Reasoning）与多步规划中容易遭遇累积误差与幻觉。
+**触发机制**：由用户输入的 Prompt 触发。
 
-为此，**The four types of agent loops.** 引入了更优化的状态表示与控制流逻辑：
+![轮次驱动型循环架构图](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F03f8a20d-3be6-4667-b9b1-528e817e4ca6_1188x308.png)
 
-```
-[输入数据 / Query] ──> [特征提取与编码] ──> [核心算子 / 决策控制] ──> [结构化输出]
-```
+Agent 在单个 Turn 内部收集上下文、执行动作并检查自己的工作。随后由人类审查输出结果，并编写下一个 Prompt。
 
-### 2.2 数学推导与公式表达
+* **适用场景**：当需求尚不明确、且每一次的输出都会改变下一个 Prompt 的提问方向时使用。
 
-对于系统中的核心评估函数 $f(x, \theta)$，其优化目标可表示为：
+---
 
-$$\max_{\theta} \mathbb{E}_{(x, y) \sim \mathcal{D}} \left[ \log P(y \mid x; \theta) \right] - \beta \cdot \mathcal{D}_{KL}(P_{\theta} \parallel P_{ref})$$
+### 二、 目标驱动型循环（Goal-based loops）
 
-通过引入温度参数 $T$ 与软 Softmax 目标，保证了高维状态空间下的收敛稳定性。
+**触发机制**：由携带成功标准与预算控制的 `/goal` 指令触发（例如：“将首页 Lighthouse 得分提升至 90，最多尝试 5 次”）。
 
-## 3. 生产级 Python 代码实现
+![目标驱动型循环架构图](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbc34a00c-adcd-4197-941b-56457404e9e3_1187x236.png)
 
-```python
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
+当 Agent 尝试停止时，一个评估器模型（Evaluator Model）会检查目标是否达成。若未达成，则将其打回继续工作。
 
-class HighPerformanceModule(nn.Module):
-    def __init__(self, d_model: int = 512, n_heads: int = 8, dropout: float = 0.1):
-        super().__init__()
-        self.d_model = d_model
-        self.n_heads = n_heads
-        self.head_dim = d_model // n_heads
-        
-        self.q_proj = nn.Linear(d_model, d_model)
-        self.k_proj = nn.Linear(d_model, d_model)
-        self.v_proj = nn.Linear(d_model, d_model)
-        self.out_proj = nn.Linear(d_model, d_model)
-        self.dropout = nn.Dropout(dropout)
+* **适用场景**：当最终输出结果是可量化测量的，但具体实现路径不需要人类干预时使用。
 
-    def forward(self, x: torch.Tensor, mask: torch.Tensor = None) -> torch.Tensor:
-        batch_size, seq_len, _ = x.shape
-        q = self.q_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        k = self.k_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        v = self.v_proj(x).view(batch_size, seq_len, self.n_heads, self.head_dim).transpose(1, 2)
-        
-        scores = torch.matmul(q, k.transpose(-2, -1)) / (self.head_dim ** 0.5)
-        if mask is not None:
-            scores = scores.masked_fill(mask == 0, float('-inf'))
-            
-        attn_weights = F.softmax(scores, dim=-1)
-        attn_weights = self.dropout(attn_weights)
-        
-        output = torch.matmul(attn_weights, v)
-        output = output.transpose(1, 2).contiguous().view(batch_size, seq_len, self.d_model)
-        return self.out_proj(output)
+---
 
-# 实例化与前向验证
-module = HighPerformanceModule(d_model=512)
-sample_input = torch.randn(2, 64, 512)
-output = module(sample_input)
-print("前向输出 Tensor 维度:", output.shape)
-```
+### 三、 时间驱动型循环（Time-based loops）
 
-## 4. 维度对比与工程选型建议
+**触发机制**：由系统时钟（Clock）定时触发。
 
-| 评估维度 | 传统范式 / 基线方案 | **The four types of agent loops.** 范式 |
-| :--- | :--- | :--- |
-| **时间复杂度** | $\mathcal{O}(N^2)$ | $\mathcal{O}(N \log N)$ 或 $\mathcal{O}(N)$ |
-| **内存/显存占用** | 高 (线性随 Context 增长) | 低 (具备 Chunk/Paged 优化) |
-| **扩展性与通用性** | 局限于特定单边场景 | 跨多端通用、支持 MCP/Agent 协议 |
+![时间驱动型循环架构图](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fedda4aa4-0acd-44b6-831a-6e875f9b76a9_1187x228.png)
 
-### 生产部署黄金指南：
-1. **上线前验证**：务必在黄金测试集（Golden Dataset）上执行端到端的 Evaluation，防止微调或量化后性能衰退。
-2. **混合检索与重排序**：结合 Dense Vector 与 BM25 稀疏检索，并使用 Cross-Encoder Reranker 进一步精炼上下文。
-3. **监控与可观测性**：在 Agent Loop 中接入 OpenTelemetry，追踪轨迹中的每一步 Tool Call 延迟与 Token 开销。
+时间间隔触发后，Agent 运行固定的 Prompt（如“检查 PR 并修复 CI”），然后等待下一个周期。`/loop` 命令在本地运行，而 `/schedule` 会将其移至云端以在断网/关机后继续生存。
+
+* **适用场景**：用于重复性工作，其任务内容预先已知，仅仅是执行时间定期重复。
+
+---
+
+### 四、 主动事件驱动型循环（Proactive loops）
+
+**触发机制**：由外部事件或排程触发，全程无人类在场。
+
+![主动事件驱动型循环架构图](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F67dc6ddc-7ee4-4a4d-b96d-73b7b1d5943f_1187x275.png)
+
+后台进程监控通道，当有需要处理的事件时自动派生工作流。该工作流包含分诊 Agent（Triage）、修复 Agent（Fix）以及在任务关闭前进行对抗性评审的审查者（Reviewer）。
+
+* **适用场景**：用于常驻责任体系，无法预知会有什么事件进来，只确定一定会发生。
+
+---
+
+### 五、 选型映射总结
+
+每种循环类型相较前一种都交出了更多的工作控制权：
+* **Turn-based** 将触发与评价双重职责均保留给人类；
+* **Goal-based** 实现了评价检查的自动化；
+* **Time-based** 实现了触发周期的自动化；
+* **Proactive** 则将两者全部自动化，并在运行时动态决定工作流形状。
+
+因此，技术选型的问题不是哪种循环最先进，而是你的任务属于**探索性（Exploratory）**、**可测量（Measurable）**、**周期性（Recurring）**还是**常驻型（Standing）**。放手交出的控制权越多，你需要手动监控的工作量就越少。
