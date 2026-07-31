@@ -1,5 +1,5 @@
 ---
-title: "Implement "Attention is all you need""
+title: "Implement 'Attention is all you need"
 source: "https://mail.google.com/mail/u/0/#inbox/19c102bf0ed3e544"
 author:
   - "[[DailyDoseOfDS]]"

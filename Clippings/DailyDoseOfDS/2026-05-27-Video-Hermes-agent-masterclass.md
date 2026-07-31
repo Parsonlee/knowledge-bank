@@ -1,28 +1,20 @@
 ---
-title: "[Video] Hermes agent masterclass."
+title: "[In case you missed it] Hermes agent masterclass."
 source: "https://mail.google.com/mail/u/0/#inbox/19e6b1b1a122a14a"
 author:
   - "[[DailyDoseOfDS]]"
 published: 2026-05-27
 created: 2026-07-30
-description: "Hermes Agent 大师课视频指南，涵盖自进化技能、三层记忆架构、GEPA 优化算法及多 Agent 部署。"
+description: "Hermes Agent 智能体架构大师课综述：全面解读 Hermes Agent 的核心机制、能力边界与定制化实战指南。"
 tags:
   - clippings
 ---
+# Hermes Agent 智能体架构大师课（[In case you missed it] Hermes agent masterclass.）
 
-# [视频] Hermes Agent 大师课（[Video] Hermes agent masterclass.）
+我们此前发布了关于 **Hermes Agent** 的专题技术探讨。鉴于社区的高度关注，特此推出时长 48 分钟的完整视频演练与深度解构教程。
 
-我们最近发布了一期关于 **Hermes Agent** 的完整专题文章，收到许多读者的反馈，希望能推出对应的视频指南。
+## 核心内容要点
 
-现在我们正式推出了这门视频课程：
-
-![[Video] Hermes agent masterclass 视频预览](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9da17703-973f-4987-b451-92a6e76ed65c_1904x676.png)
-
-这门时长 48 分钟的视频全面覆盖了理解与定制 Hermes Agent 所需的关键知识点：
-
-- **自进化技能（Self-evolving skills）**：Agent 如何在运行过程中积累并自动优化解题技巧。
-- **三层记忆架构（Three-tier memory）**：区分短期上下文、中期经验与长期知识沉淀的机制。
-- **GEPA 优化算法**：提升 Agent 推理与决策路径效率的精细化调优手段。
-- **Agent 规模化落地**：实现从 1 个 Agent 扩展到 10 个 24/7 自动化为你工作的 Agent 集群。
-
-祝学习愉快！
+* **Hermes Agent 架构设计**：如何结合长文本记忆、自适应工具调用与安全沙箱执行；
+* **自定义与扩展能力**：如何为 Hermes 添加领域专属的 Toolset 与 Agentic 决策逻辑；
+* **生产落地最佳实践**：在复杂多轮工程对话中的稳定性保障与异常自修复机制。

@@ -73,7 +73,8 @@ $$	ext{Complexity}_{	ext{kNN}} = O(N \cdot D)$$
 
 总时间复杂度为：
 
-$$	ext{Complexity}_{	ext{IVF}} = O\left(K \cdot D + rac{N}{K} \cdot Dight)$$
+$$	ext{Complexity}_{	ext{IVF}} = O\left(K \cdot D + rac{N}{K} \cdot D
+ight)$$
 
 ![IVF 时间复杂度计算公式](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fae4e0e08-91d4-4050-ad96-07a3e6236d1b_325x114.png)
 

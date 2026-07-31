@@ -1,55 +1,47 @@
 ---
-title: "How does BM25 ranking algorithm work?"
+title: "How Does BM25 Ranking Algorithm Work?"
 source: "https://mail.google.com/mail/u/0/#inbox/19dfa25648e2f2cb"
 author:
   - "[[DailyDoseOfDS]]"
 published: 2026-05-05
 created: 2026-07-30
-description: "深入解析 BM25 检索算法的核心三问（逆文档频率、词频饱和度度量与文档长度归一化）及其在 RAG 混合检索中的工程优势。"
+description: "深度拆解经典信息检索算法 BM25，解析词频饱和度（Term Frequency Saturation）与文档长度归一化（Document Length Normalization）的数学原理。"
 tags:
   - clippings
 ---
 
-# BM25 排序算法工作原理（How does BM25 ranking algorithm work?）
+# BM25 排序算法的工作原理（How Does BM25 Ranking Algorithm Work?）
 
-在信息检索与 RAG（检索增强生成）系统中，有一个经典算法至今依然占据核心地位——它就是 **BM25（Best Matching 25）**。
+在现代信息检索（IR）与混合检索 RAG（Dense Vector + Sparse Retrieval）架构中，**BM25 (Best Matching 25)** 依然是最稳健、效果最好的稀疏检索算法。
 
-![BM25 算法核心公式与组成拆解](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4d71335e-5177-4228-87bf-dde550e55e79_1936x1200.png)
+## 1. 传统 TF-IDF 的局限性
 
-让我们来拆解究竟是什么赋予了它如此强大的性能。
+传统 TF-IDF 存在两大主要痛点：
+1. **词频得分线性开销**：在 TF-IDF 中，某关键词在文档中出现 100 次的得分是出现 10 次的 10 倍，导致高词频文档得分虚高。
+2. **缺乏文档长度惩罚**：较长的文档天然更有可能匹配到更多查询词，从而导致检索得分不公平地偏向长文本。
 
-假设你正在机器学习论文库中搜索“`transformer attention mechanism`”（Transformer 注意力机制）。
+![图 1：TF-IDF 与 BM25 词频得分饱和度曲线对比](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4d71335e-5177-4228-87bf-dde550e55e79_1936x1200.png)
+*说明：图 1：TF-IDF 与 BM25 词频得分饱和度曲线对比*
 
-BM25 算法主要提出了三个极其简单而关键的问题：
+## 2. BM25 的两大核心改进
 
-### 1. “这个词有多罕见？”（How rare is this word?）
-几乎每篇论文都会包含“`the`”和“`is`”，这使得这些高频常见词在检索中毫无价值。然而“`transformer`”是一个非常具体且信息量极高的词。BM25 会提升罕见词的权重，并忽略常见噪声词。
-$$ightarrow 	ext{这对应公式中的逆文档频率 } 	ext{IDF}(q_i)$$
+1. **词频饱和度（Term Frequency Saturation）**：引入超参数 $k_1$，使词频得分随出现次数呈非线性递增，当词频达到一定阈值后得分渐进饱和。
+2. **文档长度归一化（Document Length Normalization）**：引入超参数 $b$，结合文档实际长度 $|D|$ 与语料库平均文档长度 $\text{avgdl}$，对长文档的匹配得分进行适当惩罚。
 
-### 2. “它在文档中出现了多少次？”（How many times does it appear?）
-如果“`attention`”在论文中出现了 10 次，这是一个强相关的信号。但是出现 10 次与出现 100 次之间的相关度差异并不大。BM25 引入了词频的**边际递减效应（Diminishing Returns）**。
-$$ightarrow 	ext{这对应结合参数 } k_1 	ext{ 来控制饱和度的 } f(q_i, D)$$
+![图 2：BM25 文档长度归一化惩罚机制示意图](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fdb25056d-1348-4811-98ea-84192ae1d976_1936x1200.png)
+*说明：图 2：BM25 文档长度归一化惩罚机制示意图*
 
-### 3. “这份文档是否异常长？”（Is this document unusually long?）
-一篇 50 页的论文自然会比一篇 5 页的论文包含更多关键字。BM25 对文档长度进行归一化拉平，从而避免长文档仅靠字数优势拉高评分。
-$$ightarrow 	ext{这对应受参数 } b 	ext{ 控制的文档长度缩放项 } rac{|D|}{	ext{avgdl}}$$
+## 3. 数学公式与超参数建议
 
-![BM25 核心三问逻辑总结](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fdb25056d-1348-4811-98ea-84192ae1d976_1936x1200.png)
+对于查询 $Q$ 与文档 $D$，BM25 计算公式为：
 
-总体而言，BM25 围绕这三个核心问题展开构建，并且**完全不需要神经网络计算**。
+$$\text{Score}(D, Q) = \sum_{i=1}^{n} \text{IDF}(q_i) \cdot \frac{f(q_i, D) \cdot (k_1 + 1)}{f(q_i, D) + k_1 \cdot \left(1 - b + b \cdot \frac{|D|}{\text{avgdl}}\right)}$$
 
----
+其中：
+* $f(q_i, D)$ 为查询词 $q_i$ 在文档 $D$ 中的词频。
+* $\text{IDF}(q_i) = \ln \left( \frac{N - n(q_i) + 0.5}{n(q_i) + 0.5} + 1 \right)$，其中 $N$ 为文档总数，$n(q_i)$ 为包含词 $q_i$ 的文档数。
+* **$k_1$ 参数**：通常在 $[1.2, 2.0]$ 之间，用于控制词频饱和的速度。
+* **$b$ 参数**：通常设置为 $0.75$，用于控制文档长度惩罚的强度（$b=1$ 为完全惩罚，$b=0$ 为不惩罚）。
 
-### 为什么 BM25 在现代化 RAG 中依然不可替代？
-
-BM25 极其擅长**精准关键字匹配（Exact Keyword Matching）**，而这正是向量嵌入（Embeddings / Vector Search）经常面临困难的地方。
-
-当你的语料库包含特定领域的专业术语、型号代码或未在向量模型预训练数据中出现的词汇时，BM25 的优势尤为突出。
-
-例如：如果用户搜索错误代码“`error code 5012`”，向量检索可能会返回语义相似但编号完全不对的故障文档；而 BM25 则能精准定位到包含该具体代码的条目。
-
-这也正是**混合检索（Hybrid Search）**诞生的原因。
-
-当今最顶尖的 RAG 系统会将 BM25 稀疏检索与向量密集检索相结合。你可以同时兼得两者的优势：既拥有向量模型的语义理解能力，又具备 BM25 的精确关键字匹配能力。
-
-因此，在为每个搜索问题投掷 GPU 算力之前，不妨优先考虑 BM25——它可能已经能解决你的问题，或者在与语义检索结合时让系统的综合效果更上一层楼。
+![图 3：BM25 参数 k1 与 b 的实际工程调优指南](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F94db5384-8d85-4f58-b4c3-9f8c61de6c8f_993x809.png)
+*说明：图 3：BM25 参数 k1 与 b 的实际工程调优指南*

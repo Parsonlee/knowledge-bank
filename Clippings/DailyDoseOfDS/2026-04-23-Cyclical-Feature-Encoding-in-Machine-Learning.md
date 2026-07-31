@@ -35,9 +35,11 @@ tags:
 
 以将“一天中的小时”（0-23）映射为周期特征为例，中心角（$2\pi$ 弧度）代表完整的 24 小时：
 
-$$x_{\sin} = \sin\left(rac{2\pi \cdot 	ext{hour}}{24}ight)$$
+$$x_{\sin} = \sin\left(rac{2\pi \cdot 	ext{hour}}{24}
+ight)$$
 
-$$x_{\cos} = \cos\left(rac{2\pi \cdot 	ext{hour}}{24}ight)$$
+$$x_{\cos} = \cos\left(rac{2\pi \cdot 	ext{hour}}{24}
+ight)$$
 
 通过正弦和余弦的双维度联合编码，特征被均匀分布在一个二维单位圆周上：
 

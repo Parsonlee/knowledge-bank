@@ -43,5 +43,6 @@ tags:
 ![ColBERT MaxSim 匹配图解](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fcfff0681-bc0f-416e-89b7-436e21f8c52e_933x348.gif)
 
 * **原理**：结合了前两者的优势。Query 和 Document 分别独立编码生成 **多向量序列（Multi-vector sequence）**。在最终打分阶段，通过 MaxSim 算子计算局部注意力相似度：
-  $$	ext{Score}(Q, D) = \sum_{i \in |Q|} \max_{j \in |D|} \left( \mathbf{E}_{q_i} \cdot \mathbf{E}_{d_j}^T ight)$$
+  $$	ext{Score}(Q, D) = \sum_{i \in |Q|} \max_{j \in |D|} \left( \mathbf{E}_{q_i} \cdot \mathbf{E}_{d_j}^T 
+ight)$$
 * **优势**：既保持了预编码索引的快速检索能力，又获得了接近 Cross-encoder 的 Token 级丰富匹配精度。

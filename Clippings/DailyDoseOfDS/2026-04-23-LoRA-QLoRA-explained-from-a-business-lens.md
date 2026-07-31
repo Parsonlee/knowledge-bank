@@ -1,63 +1,53 @@
 ---
-title: "LoRA/QLoRA explained from a business lens"
+title: "从商业视角解释 LoRA/QLoRA（LoRA/QLoRA explained from a business lens.）"
 source: "https://mail.google.com/mail/u/0/#inbox/19dbca56ab454b95"
 author:
   - "[[DailyDoseOfDS]]"
 published: 2026-04-23
 created: 2026-07-30
-description: "从商业成本与资源效率的角度深入剖析 LoRA 和 QLoRA 技术，阐明其如何通过冻结原模型权重并训练低秩矩阵，大幅削减大语言模型微调与多租户部署的显存及存储开销。"
+description: "解释 LoRA/QLoRA 是如何解决为海量用户提供大型语言模型微调服务的商业及资源难题的。"
 tags:
   - clippings
 ---
-# 商业视角下的 LoRA/QLoRA 解读（LoRA/QLoRA explained from a business lens）
 
-商业的核心关切永远在于**业务影响（Impact）**：你是否能够降低成本？能否驱动营收？能否扩展 ML 模型？能否在趋势发生前做出预测？
+# 从商业视角解释 LoRA/QLoRA（LoRA/QLoRA explained from a business lens.）
 
-本文将从商业与工程资源效率的角度，重新审视大语言模型（LLM）微调技术中的 LoRA 和 QLoRA。
+考虑一下 BERT-large 和 GPT-3 之间的大小差异：
 
-### 大模型微调的商业成本困境
+GPT-4（未在此显示）比 GPT-3 大 10 倍。
+我们曾经在单张 GPU 上使用传统微调方法对 BERT-large 进行了多次微调：
 
-对比 BERT-large 与 GPT-3 的参数量差异：
+但这对于拥有 1750 亿参数的 GPT-3 来说是不可能的。
+在 float16 精度下，仅仅存储模型权重就需要 350GB 的内存。
 
-![](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff9afd2f9-892b-4640-8a57-4da5d4ca6bcd_807x400.png)
+这意味着，如果 OpenAI 在其微调 API 中使用传统微调，他们将不得不为每个用户维护一份模型副本：
 
-在传统微调模式下，我们可以轻松在单张 GPU 上对 BERT-large（约 3.4 亿参数）进行多次全参数微调。然而，面对拥有 1750 亿参数的 GPT-3，全参数微调在商业上变得极度昂贵甚至不可行——单是在 float16 精度下加载模型权重就需要 **350 GB** 的显存。
+* 如果 10 个用户微调 GPT-3 → 他们需要 3500 GB 来存储模型权重。
+* 如果 1000 个用户微调 GPT-3 → 他们需要 35 万 GB 来存储模型权重。
+* 如果 10 万个用户微调 GPT-3 → 他们需要 3500 万 GB 来存储模型权重。
 
-这意味着，如果像 OpenAI 这样的平台在提供微调 API 时采用传统全参数微调，就必须为每个用户单独保存一份完整的模型副本：
+问题不仅于此：
 
-![](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3585f1a2-20c1-4b93-b76f-860e253af000_1069x427.png)
+* OpenAI 完全基于使用量计费。如果有人为了娱乐或学习目的微调了模型却从未使用它怎么办？
+* 因为请求随时可能到来，他们应该始终将微调后的模型加载在内存中吗？既然几个模型可能永远不会被使用，这难道不是对资源的浪费吗？
 
-- 如果有 10 个用户微调 GPT-3 $ightarrow$ 需储存 **3,500 GB** 模型权重。
-- 如果有 1,000 个用户微调 GPT-3 $ightarrow$ 需储存 **350,000 GB** 模型权重。
-- 如果有 100,000 个用户微调 GPT-3 $ightarrow$ 需储存 **3,500 万 GB** 模型权重！
+LoRA (+ QLoRA 及其它变体) 巧妙地解决了这个关键的商业问题。
 
-此外，还面临两大严峻的资源管理挑战：
-1. **长尾闲置开销**：OpenAI 仅按实际调用量计费。若用户仅出于学习或测试目的微调了模型却很少调用，平台依然要为其储存海量权重。
-2. **常驻显存浪费**：由于用户请求随时可能到达，平台是否需要将每个微调模型时刻加载在显存中？这无疑会造成极大的算力资源浪费。
+其核心思想围绕着相对于基础模型训练少量的参数。
 
-### LoRA 的破解之道
+例如，如果原始模型有一个权重矩阵 W (形状为 d*d)，我们可以定义对应的 LoRA 矩阵 A (d*r) 和 B (r*d)。
 
-**LoRA（Low-Rank Adaptation，低秩适应）** 及 QLoRA 等衍生技术优雅地解决了这一关键商业难题。
+↳ 其中 r (通常，r 是一个个位数)。
 
-其核心思想在于：**在微调过程中仅训练极少量的附加参数，而保持原始基础模型的权重冻结**。
+在微调期间，冻结权重矩阵 W 并更新 LoRA 矩阵的权重。
 
-![](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F573e5773-bd17-426f-886d-1761660447bf_1042x986.gif)
+在推理阶段，LoRA 矩阵的乘积会产生一个与 W 形状相同的矩阵。因此，可以按照以下方式获得输出：
 
-具体实现上：
-- 假设原始模型某个权重矩阵为 $W$（形状为 $d 	imes d$）。
-- LoRA 定义两个对应的低秩分解矩阵 $A$（形状为 $d 	imes r$）与 $B$（形状为 $r 	imes d$），其中秩 $r$ 通常为很小的单位数（如 $r=4$ 或 $8$）。
-- 在微调期间，完全冻结权重矩阵 $W$，仅更新低秩矩阵 $A$ 和 $B$ 的权重。
+通过这种方式，每个用户都有自己的 LoRA 矩阵，而 OpenAI 只需要维护一个全局/公共模型。
 
-在推理阶段，低秩矩阵相乘 $B \cdot A$ 会相乘产生一个与原矩阵 $W$ 同等形状（$d 	imes d$）的增量矩阵，因此最终输出为：
+另一个好处是，每个用户的 LoRA 矩阵通常不需要超过 20-25 MB 的内存。这比我们从传统微调中得到的文件要小得多。
 
-$$h = W x + \Delta W x = W x + B A x$$
+最后，这也解决了我们前面提到的其他两个问题：
 
-![](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc2cee578-7726-47f6-b280-faaf85b76560_1200x428.png)
-
-### 商业优势总结
-
-![](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F106a35c8-b8bd-40ad-a8f2-889b281a2137_1200x1244.png)
-
-1. **极其微小的存储开销**：每个用户的 LoRA 附加矩阵通常不超过 **20-25 MB**。相比传统全参数微调的数百 GB，存储需求降低了几个数量级。
-2. **高效的多租户共享**：OpenAI/云厂商仅需在 GPU 内存中常驻一份共享的基础模型权重 $W$，并在推理请求到达时动态加载轻量的 LoRA 矩阵。
-3. **彻底消解闲置与冷启动成本**：即使大部分微调模型使用率较低，极小的存储占用也不会造成明显的资金压力。
+* 如果有人只是为了娱乐或学习目的微调了模型而从未使用，没关系；LoRA 矩阵依然易于管理。
+* 从磁盘加载小型的 LoRA 矩阵也一点不繁琐。这些小矩阵如果一段时间不被使用，就可以卸载，并在需要时重新加载。

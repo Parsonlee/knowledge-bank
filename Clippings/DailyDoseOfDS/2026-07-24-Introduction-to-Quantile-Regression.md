@@ -25,7 +25,8 @@ tags:
 
 分位数回归通过优化 **Pinball Loss（或称 Check Loss）** 来估计第 $q$ 个分位数 $	au$：
 
-$$\mathcal{L}_{	au}(y, \hat{y}) = \max \left( 	au (y - \hat{y}), (	au - 1)(y - \hat{y}) ight)$$
+$$\mathcal{L}_{	au}(y, \hat{y}) = \max \left( 	au (y - \hat{y}), (	au - 1)(y - \hat{y}) 
+ight)$$
 
 * 当 $	au = 0.5$ 时，Pinball Loss 退化为平均绝对误差（MAE），预测中位数；
 * 当 $	au = 0.9$ 时，对高估（Overestimation）惩罚较轻，对低估（Underestimation）施加较重惩罚，从而拟合第 90 分位数。
