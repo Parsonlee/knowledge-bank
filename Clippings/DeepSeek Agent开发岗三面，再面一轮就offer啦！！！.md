@@ -1,0 +1,672 @@
+---
+title: "DeepSeek Agent开发岗三面，再面一轮就offer啦！！！"
+source: "https://mp.weixin.qq.com/s/5jWTFwlMAr12q2y49KcCNw"
+author:
+  - "[[AIGC小白入门记]]"
+published: 2026-08-02
+created: 2026-08-02
+description:
+tags:
+  - "clippings"
+---
+AIGC小白入门记 AIGC小白入门记 *2026年8月2日 00:00*
+
+## 点击下方卡片，关注“AIGC小白入门记”公众号
+
+### AI/CV重磅干货，第一时间送达
+
+**👇 2026年面试交流群成立**
+
+**(添加小编：yangyiya2002)**
+
+![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/DPz1Hc6WicplxZmxe4PocBQPQreQ6U0hUOFwrd9LPyljIgt6AAibll5qleoJfMibBPD2z3gzgQNLQI0ibrgdiaGlO16wbQzBmbxkF2n3b60ciaiboE/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1#imgIndex=0)
+
+## DeepSeek Agent开发岗三面，再面一轮就offer啦！！！
+
+> 面完出来，我在地铁上反复回味了两个小时。
+
+这次的面试体验跟之前高德那次完全不同。高德是压力感拉满，DeepSeek这轮面完反而有点上头。面试官像一个经验丰富的技术合伙人，全程在跟我"聊设计"，而不是"考知识点"。
+
+整个面试接近一个半小时，从项目架构一路深挖到评测体系、Badcase回流、Loop Engineering，中间还穿插了一道手撕算法。能感觉到对方是真的在评估你能不能独立负责一个Agent项目。
+
+说实话面到后半程我已经有点兴奋了，因为讨论的问题正好是我最近一直在琢磨的方向。
+
+下面整理一下还记得的问题和自己的一些复盘。
+
+---
+
+## 1\. 自我介绍
+
+开门见山问了这个问题。我大概花了两分钟，把自己的技术背景、最近一年主要做的事情、以及对Agent开发这个方向的兴趣点说了一下。
+
+**要点** ：不要背简历，要突出"你解决了什么问题"和"你为什么想做这个方向"。
+
+---
+
+## 2\. 重点介绍AI私人助理项目
+
+面试官对这个项目很感兴趣，让我详细讲一下。
+
+我介绍的是一个 **AI私人助理** ，能接入日历、邮件、待办事项、知识库，帮用户做日程管理和信息汇总。用户可以说"帮我整理一下下周的日程并提醒我准备会议材料"，Agent会自动查询日历、生成待办、设置提醒。
+
+面试官没有打断我，等我介绍完之后才开始提问。
+
+---
+
+## 3\. AI私人助理整体架构怎么设计？解决什么问题？
+
+这个问题要求我站在全局视角把架构说清楚。
+
+**我的回答** ：
+
+整体分四层：
+
+- **用户交互层** ：接收自然语言输入，做意图识别和实体抽取
+- **Agent调度层** ：根据意图选择合适的Agent或工作流
+- **工具执行层** ：调用日历API、邮件API、知识库检索等
+- **记忆层** ：短期记忆保存当前会话，长期记忆存储用户偏好和历史事实
+
+解决的核心问题是： **让AI能主动帮用户管理个人事务，而不是被动回答** 。
+
+架构示意图：
+
+![图片](https://mmbiz.qpic.cn/mmbiz_png/DPz1Hc6WicpmibCHI1zzWhGfPcURa7rhG3GwbQ4apUnVIP638MhiaTia8OKM0ia5jwspDb54MAVMGoLaWyOy7SGGjpRbBvw9U72q2jbf35NLMeIg/640?wx_fmt=png&from=appmsg&watermark=1#imgIndex=1)
+
+---
+
+## 4\. 高准确性场景怎么控制幻觉？
+
+这个问题问的是Agent在需要精确输出的场景下如何保证可靠性。
+
+**我的回答** ：
+
+控制幻觉有几种手段：
+
+1. **约束解码** ：对于特定输出格式，用JSON Schema约束LLM的输出结构
+2. **检索增强** ：所有事实性内容必须来自检索结果，而不是依赖模型参数记忆
+3. **引用溯源** ：每个事实点都带上来源引用
+4. **自我反思** ：生成后让模型自检一遍，或者用另一个模型做验证
+
+最核心的一点： **凡是涉及具体数据（时间、地点、数字）的，必须从工具返回结果中提取，不允许模型自己编。**
+
+![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/DPz1Hc6WicpkonPM1NjkiaCib7Sic0RN0pDwXBLkVRVsWMZN74EAEEOxDbBs3rEreA0sZhZ9qazvPjVe3FvfuyJZ8icIAotcWlkZeL56ibHol1qO8/640?wx_fmt=png&from=appmsg#imgIndex=2)
+
+---
+
+## 5\. 幻觉率和引用错误率多少？业务上能否接受？
+
+这道题问的是 **实际指标** 。
+
+**我的回答** ：
+
+在我们的评测集上，幻觉率大概在3%-5%，引用错误率在2%左右。
+
+业务上能不能接受取决于场景：
+
+- 日程提醒类： **不能接受** ，错了就是事故
+- 信息汇总类：可以接受一定容错，但要有 **人工确认环节**
+
+面试官追问：怎么定义幻觉和引用错误？
+
+我说：幻觉是"模型说了检索结果中没有的内容"，引用错误是"引用了文档但内容对不上"。前者更严重。
+
+---
+
+## 6\. AI生成代码安全性问题如何解决？
+
+这道题问的是代码执行的安全边界。
+
+**我的回答（跟面试官确认了一下理解）** ：
+
+AI生成的代码不能直接在宿主环境里跑，必须用 **沙箱隔离** 。具体来说：
+
+- 用Docker容器限制资源（CPU、内存、磁盘）
+- 设置网络隔离，禁止访问内网
+- 限制系统调用，不允许文件写入和进程创建
+- 设置超时和内存上限，防止死循环和OOM
+
+**面试官追问** ：Python的 `exec` 和 `eval` 能直接用吗？
+
+我说：不能。 `exec` 在Python里是不安全的，可以执行任意代码。即使限制了globals，仍然有办法绕过。必须用沙箱，比如 `pypy` 在受限环境中运行，或者用 `nsjail` 这种系统级隔离。
+
+---
+
+## 7\. 定制了哪些能力？任务调度/状态回退/checkpoint/trace回放？
+
+这个问题问的是Agent系统的 **可观测性和可恢复性** 。
+
+**我的回答** ：
+
+我们在Agent框架里定制了四个核心能力：
+
+- **任务调度** ：支持串行、并行、条件分支、循环四种执行模式
+- **状态回退** ：当某个步骤失败时，回退到上一个稳定状态重试
+- **Checkpoint** ：每执行完一个关键步骤就保存快照，包含当前上下文、已执行动作列表、中间结果
+- **Trace回放** ：记录完整执行轨迹，用于离线调试和Badcase分析
+
+Checkpoint的数据结构大致是：
+
+```
+{
+  "session_id": "xxx",
+  "step": 5,
+  "state": {
+    "messages": [...],
+    "tool_results": {...},
+    "current_task": "查询日历"
+  },
+  "checkpoint_at": "2026-07-29T14:32:00Z"
+}
+```
+
+Trace回放特别有用。有时候Agent跑飞了，你不知道它怎么走到那一步的，有了完整轨迹才能定位问题。
+
+---
+
+**2026年求职群和升学群成立**
+
+![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/DPz1Hc6WicploYT4aNndEaN1Ftb7zuibwic7FsRrXgL6kyp3ZicxbYs6RhwNGsVBTPicRQ9CVt3qKWDOupK8evruW23SOFtUBvC2gdcPMPMJADic8/640?wx_fmt=png&from=appmsg&watermark=1#imgIndex=3)
+
+## 8\. 长期/中期/短期记忆分别怎么设计？
+
+这道题考的是记忆分层。
+
+**我的回答** ：
+
+- **短期记忆** ：当前会话的消息列表 + 工具调用结果，存在内存里
+- **中期记忆** ：跨会话但近期（比如过去7天）的对话摘要，存在Redis里
+- **长期记忆** ：用户偏好、历史事实、周期性任务等，存在向量数据库里
+
+每次新请求来了之后：
+
+![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/DPz1Hc6Wicpkia4OjIHIbkUFf1F6hwAsyPoUR2ibb4xmWztxjsolARRiapfuPNEibibks7vOUibWrxDgian4ibGnZI0kjgMRR1hTHAJmgItwF9ibJOpWo/640?wx_fmt=png&from=appmsg#imgIndex=4)
+
+**面试官追问** ：三个记忆怎么分层存储？
+
+我说：短期用内存（快），中期用Redis（持久化+快），长期用向量库+MySQL（持久化+检索）。
+
+---
+
+## 9\. 记忆滚动更新、摘要压缩、结构化压缩怎么做的？
+
+这道题问的是记忆维护的具体机制。
+
+**我的回答** ：
+
+**滚动更新** ：当对话轮次超过阈值（比如20轮），用滑动窗口丢掉最早的消息，但保留系统指令和关键事实。
+
+**摘要压缩** ：每N轮对话触发一次摘要：
+
+```
+旧摘要 + 最近N轮对话 → LLM → 新摘要
+```
+
+**结构化压缩** ：把对话中的事实抽取成结构化三元组：
+
+```
+"明天下午三点有会" → {type: "schedule", time: "2026-07-30T15:00", event: "会议"}
+```
+
+三种方式配合使用：滚动更新保证不超窗口，摘要压缩保留语义，结构化压缩便于检索。
+
+---
+
+## 10\. Multi-Agent如何协作？ReAct、Path-Act
+
+这道题问的是多Agent协同模式。
+
+**我的回答** ：
+
+我们主要用了两种协作模式：
+
+**ReAct模式** ：单个Agent内部循环执行"推理→行动→观察"。适用于一个Agent独立完成任务的场景。
+
+**Path-Act模式** ：多个Agent按路径串行或并行执行。主Agent负责任务分解和路由，子Agent分别处理子任务，最后汇总结果。
+
+协作流程：
+
+![图片](https://mmbiz.qpic.cn/mmbiz_png/DPz1Hc6WicplX2ibfiaJsPBC4OKCOpAjibcqodiciaPfUKyCns8xPu7bLZicGjiaticicymLib45SY398B4T7ibdJhhfdHNnIV4tbGJzbjWPAD5tF8TJ55E/640?wx_fmt=png&from=appmsg&watermark=1#imgIndex=5)
+
+不同点是：
+
+- ReAct：单Agent，循环迭代
+- Path-Act：多Agent，路径编排
+
+---
+
+## 11\. Badcase怎么定义？review拒绝/用户不采纳/高质量样本分别怎么处理？
+
+这道题问的是Badcase管理。
+
+**我的回答** ：
+
+我们把Badcase分成几类：
+
+- **Review拒绝** ：业务审核人员直接打回的案例 → 立即分析原因，修复
+- **用户不采纳** ：用户对结果不满意或点了"没用" → 定期抽样分析
+- **高质量样本** ：用户明确点了"有用" → 标记为正样本，入库
+
+处理流程：
+
+```
+Badcase → 分类 → 分析根因 → 修复策略
+    ├── 检索问题 → 优化检索策略
+    ├── 模型问题 → 收集训练数据 → SFT
+    └── 规则问题 → 修改Prompt或业务流程
+```
+
+**面试官追问** ：用户不采纳和review拒绝的区别？
+
+我说：review拒绝是"内容有硬伤"，用户不采纳可能是"内容没问题但不符合预期"。前者必须修，后者需要进一步理解用户真实需求。
+
+---
+
+## 12\. Badcase回流到SFT的完整链路？
+
+这道题问的是 **数据闭环** 。
+
+**我的回答** ：
+
+完整链路是这样的：
+
+```
+线上Badcase → 人工标注修正 → 构造训练样本 → SFT微调 → 离线评测 → 灰度上线 → 线上验证
+```
+
+每一步：
+
+1. **Badcase收集** ：从线上日志里捞取review拒绝、用户低评分、自动检测异常（如幻觉）
+2. **标注修正** ：人工改写正确答案，形成{问题, 错误输出, 正确输出}三元组
+3. **样本构造** ：把修正后的数据混入训练集，注意不要过拟合
+4. **SFT** ：用修正数据微调模型
+5. **评测** ：在Badcase集合上验证修复效果，同时做回归测试确保不引入新问题
+6. **灰度上线** ：小流量验证，观察Badcase率变化
+
+---
+
+## 13\. 评测体系谁搭的？检索评测/生成评测/链路评测/线上评测怎么做的？
+
+这道题问的是 **评测体系建设** 。
+
+**我的回答** ：
+
+评测体系是我主导搭建的，分了四个维度：
+
+**检索评测** ：
+
+- 指标：Recall@K、MRR、NDCG
+- 方法：人工标注Query-Doc对，自动化跑分
+
+**生成评测** ：
+
+- 指标：准确率、幻觉率、引用正确率
+- 方法：LLM-as-Judge + 人工抽检
+
+**链路评测** ：
+
+- 端到端任务完成率
+- 方法：用标准Case集跑完整流程，人工判定结果
+
+**线上评测** ：
+
+- A/B测试：新旧版本对比
+- 用户行为指标：采纳率、满意度评分
+![图片](https://mmbiz.qpic.cn/mmbiz_png/DPz1Hc6Wicpm6QcLicDIJhCia0ykZN9afPXmOTxlaIgEGtOosBvxtJiaXEZjDrFbwrM5nkTKHxIhQiavicx2hCUyrqkOdMm5YSicYjmrMfeicl5kYmE/640?wx_fmt=png&from=appmsg&watermark=1#imgIndex=6)
+
+---
+
+## 14\. MCP和Skills如何注册和使用
+
+这道题问的是能力接入机制。
+
+**我的回答** ：
+
+**MCP注册** ：
+
+```
+# 伪代码
+mcp.register_tool(
+    name="get_calendar_events",
+    description="获取指定日期范围内的日历事件",
+    input_schema={...},
+    handler=get_calendar_events_impl
+)
+```
+
+**Skill注册** ：
+
+```
+skill = Skill(
+    name="daily_summary",
+    description="生成每日工作摘要",
+    steps=[query_calendar, query_todos, summarize],
+    triggers=["每天早上8点", "用户说'总结今天'"]
+)
+skill_registry.register(skill)
+```
+
+使用流程：Agent通过MCP发现工具，调用时通过协议传递参数；Skill则是在调度层被调用，执行一个完整的工作流。
+
+---
+
+## 15\. Hermes是什么？如何加入？
+
+这道题问的是内部工具或框架。
+
+**我的回答** ：
+
+Hermes（面试官提到的一个内部工具，我询问了一下具体含义）。
+
+面试官解释后我理解了——在DeepSeek的上下文里，Hermes应该是他们内部的一个Agent开发框架或平台。
+
+关于"如何加入"：需要申请权限，接入Hermes的SDK，注册Agent后通过标准化接口与平台通信。平台负责提供基础设施（日志、监控、配额管理等）。
+
+---
+
+**2026年求职群和升学群成立**
+
+![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/DPz1Hc6WicploYT4aNndEaN1Ftb7zuibwic7FsRrXgL6kyp3ZicxbYs6RhwNGsVBTPicRQ9CVt3qKWDOupK8evruW23SOFtUBvC2gdcPMPMJADic8/640?wx_fmt=png&from=appmsg&watermark=1#imgIndex=7)
+
+## 16\. Loop Engineering是什么？
+
+这道题问的是Agent循环控制。
+
+**我的回答** ：
+
+Loop Engineering指的是对Agent循环执行过程的 **精细化控制工程** 。
+
+核心要素：
+
+1. **循环条件** ：什么时候继续、什么时候终止
+2. **步数限制** ：最大迭代次数
+3. **状态管理** ：每次迭代更新上下文
+4. **异常处理** ：工具超时、返回错误时的策略
+5. **观察裁剪** ：工具返回内容太长时如何截断
+
+其实就是把Agent的循环从"while true"变成一个 **可控、可观测、可终止** 的工程系统。
+
+---
+
+## 17\. Graph Engineering是什么？和Loop Engineering有什么区别？
+
+这道题问的是两个工程概念的对比。
+
+**我的回答** ：
+
+**Graph Engineering** ：把Agent任务流程组织成 **有向图** ，节点是步骤（推理、工具调用、条件判断），边是流转路径。支持分支、并行、循环、合并。
+
+**Loop Engineering** ：关注的是单个Agent的 **循环迭代** 控制，强调的是"步数管理"和"状态维护"。
+
+区别：
+
+|  | Graph Engineering | Loop Engineering |
+| --- | --- | --- |
+| 关注层级 | 任务流程编排 | 单次循环控制 |
+| 结构 | 图（节点+边） | 循环（推理→行动→观察） |
+| 适用 | 复杂多步骤任务 | ReAct类Agent |
+| 粒度 | 粗（步骤级） | 细（单次迭代级） |
+
+两者可以结合：Graph里每个节点可能内部就是一个Loop。
+
+---
+
+## 18\. 知识助手类项目的场景和难点？
+
+（这里原输入标号有点混乱，但内容是新项目RAG系统相关）
+
+**我的回答** ：
+
+**场景** ：企业内部知识问答，用户问政策文档、技术规范、产品手册相关的问题。
+
+**难点** ：
+
+1. **文档复杂** ：PDF有表格、图片、跨页段落，切分容易丢失语义
+2. **术语专业** ：企业内部术语多，通用检索效果差
+3. **时效性** ：文档有版本，需要区分新旧
+4. **合规要求** ：某些信息只能特定权限的用户看到
+
+---
+
+## 19\. PDF/表格/条款类文档怎么解析和切分？
+
+这道题和之前高德面过的PDF切分类似，但更聚焦在 **表格和条款** 上。
+
+**我的回答** ：
+
+**PDF解析** ：
+
+- 文本型PDF：用PyPDF2或pdfplumber提取文本+坐标
+- 扫描型PDF：用OCR识别
+
+**表格解析** ：
+
+- 检测表格边界，提取行列结构，保留表头
+- 对于复杂表格（合并单元格），用Camelot或Tabula
+
+**条款切分** ：
+
+- 按条款编号层级切分（1.1、1.1.1）
+- 每条条款保留完整上下文（上级条款的内容）
+- 元数据记录：文档名、章节路径、版本号
+
+切分原则： **保持语义完整性 > 固定字数切分** 。
+
+---
+
+## 20\. 检索怎么优化？向量检索/关键词检索/rerank/query rewrite怎么配合？
+
+这道题问的是检索pipeline。
+
+**我的回答** ：
+
+完整的检索流程：
+
+```
+用户Query → Query改写 → 多路检索 → 融合 → 重排
+```
+
+**Query改写** ：用LLM对问题做同义扩展和指代消解
+
+![图片](https://mmbiz.qpic.cn/mmbiz_png/DPz1Hc6WicpnnMrErIyiay8ico0cMoeg2yY3LUDV1cIYicdzT3ibia06DPcAyU3tEaibPShneItHxZhjkwAKTSibxYLkxVtxuiaZVI3zoJVzF11jEfqQ/640?wx_fmt=png&from=appmsg&watermark=1#imgIndex=8)
+
+配合方式：
+
+- Query Rewrite保召回（把一个问题扩成多个问法）
+- BM25 + 向量保全面（关键词+语义）
+- RRF融合保稳定
+- Rerank保精度
+
+---
+
+## 21\. 多轮对话下怎么解决上下文断裂和幻觉？
+
+**我的回答** ：
+
+**上下文断裂** ：
+
+- 每轮做Query改写，把指代和省略补全成完整问题
+- 会话状态管理：记录当前对话的主题和关键实体
+
+**幻觉** ：
+
+- 生成时强制引用检索结果
+- 对时间、地点、数字等关键事实做后校验
+
+两者的关系是： **上下文断裂往往是幻觉的诱因** ，理解错了自然会答错。
+
+---
+
+## 22\. 这个项目有哪些不足？和后面Agent项目比差在哪？
+
+这道题是让做项目对比。
+
+**我的回答** ：
+
+知识助手项目的不足：
+
+- 只能回答，不能行动（只读不写）
+- 无法处理需要跨文档推理的复杂问题
+- 多轮对话能力弱
+
+和Agent项目的差距：
+
+- Agent能调用工具，知识助手只能检索
+- Agent有记忆和规划能力，知识助手是Query-Response模式
+- 结论： **Agent是知识助手的超级版**
+
+---
+
+## 23\. 怎么平衡准确率和效率？混合检索/TOPN精排/控制上下文长度/模型路由？
+
+这道题问的是系统级的权衡。
+
+**我的回答** ：
+
+几个手段配合使用：
+
+**混合检索** ：BM25（快）+ 向量（准），RRF融合
+
+**TopN精排** ：粗排召回200条，精排只用前20条
+
+**控制上下文长度** ：
+
+- 检索TopN固定（比如10条）
+- 每条文档截断到500字
+- 动态计算，超出预算就降低N或缩短截断
+
+**模型路由** ：
+
+- 简单问题走小模型（快、便宜）
+- 复杂问题走大模型（准）
+```
+def route_model(query, intent):
+    if intent in ["简单问答", "天气查询"]:
+        return "qwen2.5-7b"
+    elif intent in ["复杂推理", "代码生成"]:
+        return "deepseek-v3"
+    else:
+        return "default"
+```
+
+准确率和效率本质上是trade-off，用技术手段在中间找平衡点。
+
+---
+
+## 24\. 大数据量高并发下怎么做成本和效率优化？架构怎么设计更合理？
+
+这道题问的是 **大规模部署** 。
+
+**我的回答** ：
+
+**成本优化** ：
+
+- 小模型处理大部分请求，大模型只处理复杂任务
+- Prompt缓存（相似Query复用上下文）
+- 向量索引量化（如HNSW + PQ压缩）
+
+**效率优化** ：
+
+- 异步处理：耗时任务走队列，不阻塞响应
+- 批量推理：多个请求合并成batch
+- 水平扩展：无状态服务加负载均衡
+
+**整体架构** ：
+
+![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/DPz1Hc6WicpnNBhktVNFHgwu8Cvbfn1J5DibYBLToboGEibj9blLfjv2UHBxo65kbyGXwxIPfcVxM7icVOjXia0yRNqCZCzsMbktNvzwQ68aQCDg/640?wx_fmt=png&from=appmsg&watermark=1#imgIndex=9)
+
+---
+
+## 25\. 两个字符串的最长公共子串
+
+手撕算法题。这道题是经典的动态规划。
+
+**我的答案** ：
+
+```
+def longest_common_substring(s1: str, s2: str) -> str:
+    m, n = len(s1), len(s2)
+    # dp[i][j] 表示 s1[:i] 和 s2[:j] 的最长公共子串长度
+    dp = [[0] * (n + 1) for _ in range(m + 1)]
+    max_len = 0
+    end_pos = 0
+    
+    for i in range(1, m + 1):
+        for j in range(1, n + 1):
+            if s1[i-1] == s2[j-1]:
+                dp[i][j] = dp[i-1][j-1] + 1
+                if dp[i][j] > max_len:
+                    max_len = dp[i][j]
+                    end_pos = i
+    
+    return s1[end_pos - max_len: end_pos]
+```
+
+状态转移方程：
+
+![公式](https://mmbiz.qpic.cn/mmbiz_svg/Q3auHgzwzM7iaUJCFdFdR8mGORfm3oK3XTrgZKvqVc49Bn1CYYITK9OF50p4v2jpStbG343k7BzdvlbQGfqvkPOJGhbvTUptYTu5fOiaDh7aibvxHNuAoNe1w/640?wx_fmt=svg&from=appmsg#imgIndex=10)
+
+时间复杂度，空间复杂度，可以优化到。
+
+面试官追问：能不能优化空间？我说可以只用一维数组，从后往前更新。
+
+---
+
+## 26\. 职级预期、换工作原因、意见不合怎么推进
+
+这部分是常规HR问题。
+
+**我的回答** ：
+
+- 职级预期：根据当前职级和面试表现，期望匹配合理职级
+- 换工作原因：希望在Agent开发方向有更深的技术积累
+- 意见不合：用数据和事实沟通，不情绪化
+
+---
+
+## 27\. 问了业务方向，偏AIGC创作
+
+反问环节。面试官说他们偏AIGC创作方向，包括AI写作、剧本生成等。
+
+我顺带问了一下技术和业务结合的挑战，面试官说目前最大的挑战是 **保证生成内容的连贯性和可控性** 。
+
+---
+
+## 最后说两句
+
+这一轮面下来，感受就是： **做的项目深度决定了你被问到什么层级的问题** 。
+
+如果你只是调过API、跑过Demo，面试官不会深挖到Loop Engineering和Graph Engineering。但我那个AI私人助理项目从0到1做了一年多，被问到的全都是"你遇到了什么问题、怎么解决的"——这些没法临时编。
+
+DeepSeek的面试官有个特点： **追问特别多** 。每个问题答完之后，他会根据你的回答继续往下挖，挖到你答不上来为止。这其实是在找你的能力边界。
+
+目前面完了二面，据说还有一轮。如果能过，离Offer就不远了。
+
+---
+
+**觉得有用的朋友点个在看支持一下吧。** 后面如果过了终面，我再来写一篇完整的面经和准备攻略。
+
+---
+
+*评论区欢迎交流面试经验，一起上岸。*
+
+**2026年求职群和升学群成立**
+
+![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/DPz1Hc6WicploYT4aNndEaN1Ftb7zuibwic7FsRrXgL6kyp3ZicxbYs6RhwNGsVBTPicRQ9CVt3qKWDOupK8evruW23SOFtUBvC2gdcPMPMJADic8/640?wx_fmt=png&from=appmsg&watermark=1#imgIndex=11)
+
+**价格：** ****50元（每天不到1分钱）** **立减25！特惠仅25元****
+
+**时长：一年（从你加入的时刻算起）**
+
+**加入方式：** **扫码下方二维码** **， **或者点击** **阅读原文** ，即可进入AIGC算法求职群（知识星球）**
+
+**建议：** 进群后，推荐下载 **知识星球APP** 使用，同时也可使用 **小程序或者知识星球公众号** 进行使用，可以 **发帖/提问/交流/回答** ，并可以快速访问群里的资源。
+
+**希望这个群可以让你少走一些弯路**
+
+**扫码进群**
+
+**微信扫一扫赞赏作者**
+
+闪记
+
+复制 LaTeX 公式
