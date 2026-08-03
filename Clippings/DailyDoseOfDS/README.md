@@ -1,0 +1,83 @@
+# 星标技术文章索引 (精简版)
+
+共去重、过滤未选及广告短文后，提炼并精简出唯一硬核技术文章 **77** 篇。
+
+| 序号 | 文章标题 | 发送人 | 日期 | 链接 |
+| --- | --- | --- | --- | --- |
+| 1 | Succeed in AI Engineering roles | Daily Dose of DS <avi@dailydoseofds.com> | Sat, 01 Aug 2026 19:38:29 +0000 | [查看文章](./2026-08-01_Succeed-in-AI-Engineering-roles_19fbed_part5.md) |
+| 2 | Free Observability Engineering Masterclass with Liz Fong-Jones & Honeycomb | Daily Dose of DS <avi@dailydoseofds.com> | Sat, 01 Aug 2026 19:38:29 +0000 | [查看文章](./2026-08-01_Free-Observability-Engineering-Masterclass-with-Liz-Fong-Jones-&-Honeycomb_19fbed_part1.md) |
+| 3 | Double Descent vs. Bias-Variance Trade-off | Daily Dose of DS <avi@dailydoseofds.com> | Sat, 01 Aug 2026 19:38:29 +0000 | [查看文章](./2026-08-01_Double-Descent-vs.-Bias-Variance-Trade-off_19fbed_part3.md) |
+| 4 | Data Version Control | Daily Dose of DS <avi@dailydoseofds.com> | Sat, 01 Aug 2026 19:38:29 +0000 | [查看文章](./2026-08-01_Data-Version-Control_19fbed_part4.md) |
+| 5 | Build a stock market research Agentic workflow | Daily Dose of DS <avi@dailydoseofds.com> | Sat, 01 Aug 2026 19:38:29 +0000 | [查看文章](./2026-08-01_Build-a-stock-market-research-Agentic-workflow_19fbed_part2.md) |
+| 6 | Subagents vs. Agent Teams | Daily Dose of DS <avi@dailydoseofds.com> | Fri, 31 Jul 2026 20:49:06 +0000 | [查看文章](./2026-07-31_Subagents-vs.-Agent-Teams_19fb9f.md) |
+| 7 | 6 automatic optimization methods for LLM systems | Daily Dose of DS <avi@dailydoseofds.com> | Fri, 31 Jul 2026 20:49:06 +0000 | [查看文章](./2026-07-31_6-automatic-optimization-methods-for-LLM-systems_19fb9f.md) |
+| 8 | Technical LLM interview question! | Daily Dose of DS <avi@dailydoseofds.com> | Tue, 28 Jul 2026 21:23:05 +0000 | [查看文章](./2026-07-28_Technical-LLM-interview-question!_19faa9.md) |
+| 9 | CPU vs GPU vs TPU vs NPU vs LPU | Daily Dose of DS <avi@dailydoseofds.com> | Tue, 28 Jul 2026 21:23:05 +0000 | [查看文章](./2026-07-28_CPU-vs-GPU-vs-TPU-vs-NPU-vs-LPU_19faa9.md) |
+| 10 | The anatomy of diffusion LLMs | Daily Dose of DS <avi@dailydoseofds.com> | Mon, 27 Jul 2026 21:22:34 +0000 | [查看文章](./2026-07-27_The-anatomy-of-diffusion-LLMs_19fa57.md) |
+| 11 | Graph engineering clearly explained | Daily Dose of DS <avi@dailydoseofds.com> | Mon, 27 Jul 2026 21:22:34 +0000 | [查看文章](./2026-07-27_Graph-engineering-clearly-explained_19fa57.md) |
+| 12 | Agent memory and state are not the same thing! | Daily Dose of DS <avi@dailydoseofds.com> | Mon, 27 Jul 2026 21:22:34 +0000 | [查看文章](./2026-07-27_Agent-memory-and-state-are-not-the-same-thing!_19fa57.md) |
+| 13 | Quantile regression | Daily Dose of DS <avi@dailydoseofds.com> | Fri, 24 Jul 2026 22:05:08 +0000 | [查看文章](./2026-07-24_Quantile-regression_19f962.md) |
+| 14 | Delta attention in Kimi K3 to fix growing KV cache | Daily Dose of DS <avi@dailydoseofds.com> | Fri, 24 Jul 2026 22:05:08 +0000 | [查看文章](./2026-07-24_Delta-attention-in-Kimi-K3-to-fix-growing-KV-cache_19f962.md) |
+| 15 | 11 LLM evaluation methods | Daily Dose of DS <avi@dailydoseofds.com> | Fri, 24 Jul 2026 22:05:08 +0000 | [查看文章](./2026-07-24_11-LLM-evaluation-methods_19f962.md) |
+| 16 | 5 LLM Quantization Techniques | Daily Dose of DS <avi@dailydoseofds.com> | Tue, 21 Jul 2026 22:13:47 +0000 | [查看文章](./2026-07-21_5-LLM-Quantization-Techniques_19f86b.md) |
+| 17 | The four types of agent loops | Daily Dose of DS <avi@dailydoseofds.com> | Tue, 14 Jul 2026 16:27:49 +0000 | [查看文章](./2026-07-14_The-four-types-of-agent-loops_19f617.md) |
+| 18 | NVIDIA researchers built a new transformer variant | Daily Dose of DS <avi@dailydoseofds.com> | Tue, 14 Jul 2026 16:27:49 +0000 | [查看文章](./2026-07-14_NVIDIA-researchers-built-a-new-transformer-variant_19f617.md) |
+| 19 | Rethinking KV caching for production inference | Daily Dose of DS <avi@dailydoseofds.com> | Tue, 07 Jul 2026 16:52:26 +0000 | [查看文章](./2026-07-07_Rethinking-KV-caching-for-production-inference_19f3d7.md) |
+| 20 | 4 LLM text generation strategies | Daily Dose of DS <avi@dailydoseofds.com> | Tue, 07 Jul 2026 16:52:26 +0000 | [查看文章](./2026-07-07_4-LLM-text-generation-strategies_19f3d7.md) |
+| 21 | Prompt, context, harness & loop engineering | Daily Dose of DS <avi@dailydoseofds.com> | Fri, 03 Jul 2026 21:51:22 +0000 | [查看文章](./2026-07-03_Prompt,-context,-harness-&-loop-engineering_19f29f.md) |
+| 22 | 11 most important plots in DS/ML | Daily Dose of DS <avi@dailydoseofds.com> | Fri, 03 Jul 2026 21:51:22 +0000 | [查看文章](./2026-07-03_11-most-important-plots-in-DSML_19f29f.md) |
+| 23 | The AI engineering master stack for 2026! | Daily Dose of DS <avi@dailydoseofds.com> | Thu, 25 Jun 2026 21:49:30 +0000 | [查看文章](./2026-06-25_The-AI-engineering-master-stack-for-2026!_19f00c.md) |
+| 24 | 6 components of context engineering | Daily Dose of DS <avi@dailydoseofds.com> | Thu, 25 Jun 2026 21:49:30 +0000 | [查看文章](./2026-06-25_6-components-of-context-engineering_19f00c.md) |
+| 25 | Recursive language models | Daily Dose of DS <avi@dailydoseofds.com> | Wed, 24 Jun 2026 00:59:02 +0000 | [查看文章](./2026-06-24_Recursive-language-models_19ef72.md) |
+| 26 | Loop engineering, clearly explained! | Daily Dose of DS <avi@dailydoseofds.com> | Wed, 24 Jun 2026 00:59:02 +0000 | [查看文章](./2026-06-24_Loop-engineering,-clearly-explained!_19ef72.md) |
+| 27 | Visual guide to Bi-encoders, Cross-encoders & ColBERT | Daily Dose of DS <avi@dailydoseofds.com> | Thu, 18 Jun 2026 22:03:23 +0000 | [查看文章](./2026-06-18_Visual-guide-to-Bi-encoders,-Cross-encoders-&-ColBERT_19edcc.md) |
+| 28 | 7 LLM generation parameters | Daily Dose of DS <avi@dailydoseofds.com> | Sun, 14 Jun 2026 21:01:42 +0000 | [查看文章](./2026-06-14_7-LLM-generation-parameters_19ec7f.md) |
+| 29 | An intuitive guide to non-linearity of ReLU | Daily Dose of DS <avi@dailydoseofds.com> | Mon, 08 Jun 2026 21:15:47 +0000 | [查看文章](./2026-06-08_An-intuitive-guide-to-non-linearity-of-ReLU_19ea91.md) |
+| 30 | Claude Code dynamic workflows, explained! | Daily Dose of DS <avi@dailydoseofds.com> | Mon, 01 Jun 2026 20:49:47 +0000 | [查看文章](./2026-06-01_Claude-Code-dynamic-workflows,-explained!_19e84f.md) |
+| 31 | Categorization of clustering algorithms | Daily Dose of DS <avi@dailydoseofds.com> | Mon, 01 Jun 2026 20:49:47 +0000 | [查看文章](./2026-06-01_Categorization-of-clustering-algorithms_19e84f.md) |
+| 32 | Build portable ML models with ONNX | Daily Dose of DS <avi@dailydoseofds.com> | Mon, 25 May 2026 20:09:08 +0000 | [查看文章](./2026-05-25_Build-portable-ML-models-with-ONNX_19e60c.md) |
+| 33 | Train classical ML models on large datasets | Daily Dose of DS <avi@dailydoseofds.com> | Tue, 05 May 2026 21:57:27 +0000 | [查看文章](./2026-05-05_Train-classical-ML-models-on-large-datasets_19dfa2.md) |
+| 34 | How does BM25 ranking algorithm work? | Daily Dose of DS <avi@dailydoseofds.com> | Tue, 05 May 2026 21:57:27 +0000 | [查看文章](./2026-05-05_How-does-BM25-ranking-algorithm-work_19dfa2.md) |
+| 35 | How LLM inference works internally | Daily Dose of DS <avi@dailydoseofds.com> | Sun, 03 May 2026 17:38:08 +0000 | [查看文章](./2026-05-03_How-LLM-inference-works-internally_19deee.md) |
+| 36 | How to beat GRPO without touching model weights | Daily Dose of DS <avi@dailydoseofds.com> | Fri, 01 May 2026 22:01:35 +0000 | [查看文章](./2026-05-01_How-to-beat-GRPO-without-touching-model-weights_19de58.md) |
+| 37 | A tricky LLM interview question for AI Engineers | Daily Dose of DS <avi@dailydoseofds.com> | Fri, 01 May 2026 22:01:35 +0000 | [查看文章](./2026-05-01_A-tricky-LLM-interview-question-for-AI-Engineers_19de58.md) |
+| 38 | LoRA/QLoRA explained from a business lens | Daily Dose of DS <avi@dailydoseofds.com> | Thu, 23 Apr 2026 23:20:49 +0000 | [查看文章](./2026-04-23_LoRAQLoRA-explained-from-a-business-lens_19dbca.md) |
+| 39 | Cyclical feature encoding | Daily Dose of DS <avi@dailydoseofds.com> | Thu, 23 Apr 2026 23:20:49 +0000 | [查看文章](./2026-04-23_Cyclical-feature-encoding_19dbca.md) |
+| 40 | 20 most common magic methods | Daily Dose of DS <avi@dailydoseofds.com> | Sun, 12 Apr 2026 21:10:55 +0000 | [查看文章](./2026-04-12_20-most-common-magic-methods_19d838.md) |
+| 41 | The Anatomy of an Agent Harness | Daily Dose of DS <avi@dailydoseofds.com> | Mon, 06 Apr 2026 21:10:29 +0000 | [查看文章](./2026-04-06_The-Anatomy-of-an-Agent-Harness_19d64a.md) |
+| 42 | Breathing KMeans vs KMeans | Daily Dose of DS <avi@dailydoseofds.com> | Thu, 26 Mar 2026 20:01:11 +0000 | [查看文章](./2026-03-26_Breathing-KMeans-vs-KMeans_19d2bb.md) |
+| 43 | RAG vs MetaAI's REFRAG | Daily Dose of DS <avi@dailydoseofds.com> | Tue, 24 Mar 2026 21:23:23 +0000 | [查看文章](./2026-03-24_RAG-vs-MetaAI's-REFRAG_19d21b.md) |
+| 44 | Anatomy of the .claude/ folder | Daily Dose of DS <avi@dailydoseofds.com> | Mon, 23 Mar 2026 19:38:14 +0000 | [查看文章](./2026-03-23_Anatomy-of-the-.claude-folder_19d1c3.md) |
+| 45 | What are RL environments, and how to build them | Daily Dose of DS <avi@dailydoseofds.com> | Fri, 13 Mar 2026 22:04:43 +0000 | [查看文章](./2026-03-13_What-are-RL-environments,-and-how-to-build-them_19ce93.md) |
+| 46 | How to actually use train, validation, and test sets | Daily Dose of DS <avi@dailydoseofds.com> | Fri, 13 Mar 2026 22:04:43 +0000 | [查看文章](./2026-03-13_How-to-actually-use-train,-validation,-and-test-sets_19ce93.md) |
+| 47 | 6 must-know MCP primitives for AI Engineers | Daily Dose of DS <avi@dailydoseofds.com> | Wed, 04 Mar 2026 20:16:17 +0000 | [查看文章](./2026-03-04_6-must-know-MCP-primitives-for-AI-Engineers_19cba7.md) |
+| 48 | 16 techniques to optimize neural network training | Daily Dose of DS <avi@dailydoseofds.com> | Wed, 04 Mar 2026 20:16:17 +0000 | [查看文章](./2026-03-04_16-techniques-to-optimize-neural-network-training_19cba7.md) |
+| 49 | Why ML models need calibration? | Daily Dose of DS <avi@dailydoseofds.com> | Wed, 04 Feb 2026 21:13:10 +0000 | [查看文章](./2026-02-04_Why-ML-models-need-calibration_19c2a8.md) |
+| 50 | 4 parallel processing techniques in Python | Daily Dose of DS <avi@dailydoseofds.com> | Wed, 04 Feb 2026 21:13:10 +0000 | [查看文章](./2026-02-04_4-parallel-processing-techniques-in-Python_19c2a8.md) |
+| 51 | Identify fuzzy duplicates at scale | Daily Dose of DS <avi@dailydoseofds.com> | Mon, 29 Dec 2025 21:22:53 +0000 | [查看文章](./2025-12-29_Identify-fuzzy-duplicates-at-scale_19b6bf.md) |
+| 52 | The right way to use multiple embedding models | Daily Dose of DS <avi@dailydoseofds.com> | Fri, 26 Dec 2025 21:00:07 +0000 | [查看文章](./2025-12-26_The-right-way-to-use-multiple-embedding-models_19b5c7.md) |
+| 53 | Loss Function of 16 ML Algos | Daily Dose of DS <avi@dailydoseofds.com> | Fri, 26 Dec 2025 21:00:07 +0000 | [查看文章](./2025-12-26_Loss-Function-of-16-ML-Algos_19b5c7.md) |
+| 54 | Platt Scaling for model calibration | Daily Dose of DS <avi@dailydoseofds.com> | Tue, 02 Dec 2025 20:34:54 +0000 | [查看文章](./2025-12-02_Platt-Scaling-for-model-calibration_19ae0c.md) |
+| 55 | 7 categorical data encoding techniques | Daily Dose of DS <avi@dailydoseofds.com> | Tue, 02 Dec 2025 20:34:54 +0000 | [查看文章](./2025-12-02_7-categorical-data-encoding-techniques_19ae0c.md) |
+| 56 | Two techniques to extend the context length of LLMs | Daily Dose of DS <avi@dailydoseofds.com> | Fri, 28 Nov 2025 20:46:01 +0000 | [查看文章](./2025-11-28_Two-techniques-to-extend-the-context-length-of-LLMs_19acc3.md) |
+| 57 | How to use kNNs for imbalanced datasets | Daily Dose of DS <avi@dailydoseofds.com> | Fri, 28 Nov 2025 20:46:01 +0000 | [查看文章](./2025-11-28_How-to-use-kNNs-for-imbalanced-datasets_19acc3.md) |
+| 58 | Should you gather more data? | Daily Dose of DS <avi@dailydoseofds.com> | Thu, 20 Nov 2025 19:55:54 +0000 | [查看文章](./2025-11-20_Should-you-gather-more-data_19aa2d.md) |
+| 59 | Descriptors in Python | Daily Dose of DS <avi@dailydoseofds.com> | Thu, 20 Nov 2025 19:55:54 +0000 | [查看文章](./2025-11-20_Descriptors-in-Python_19aa2d.md) |
+| 60 | 25 most important mathematical definitions in DS | Daily Dose of DS <avi@dailydoseofds.com> | Wed, 12 Nov 2025 20:39:44 +0000 | [查看文章](./2025-11-12_25-most-important-mathematical-definitions-in-DS_19a79c.md) |
+| 61 | ANN search using inverted file index | Daily Dose of DS <avi@dailydoseofds.com> | Mon, 27 Oct 2025 20:11:13 +0000 | [查看文章](./2025-10-27_ANN-search-using-inverted-file-index_19a274.md) |
+| 62 | Top Gradient Boosting Methods | Daily Dose of DS <avi@dailydoseofds.com> | Fri, 24 Oct 2025 18:23:08 +0000 | [查看文章](./2025-10-24_Top-Gradient-Boosting-Methods_19a177.md) |
+| 63 | Avoid Using PCA for Visualization Unless... | Daily Dose of DS <avi@dailydoseofds.com> | Sat, 18 Oct 2025 20:59:57 +0000 | [查看文章](./2025-10-18_Avoid-Using-PCA-for-Visualization-Unless..._199f91.md) |
+| 64 | A subtle neural network optimization technique | Daily Dose of DS <avi@dailydoseofds.com> | Sat, 18 Oct 2025 20:59:57 +0000 | [查看文章](./2025-10-18_A-subtle-neural-network-optimization-technique_199f91.md) |
+| 65 | Clustering evaluation without labels | Daily Dose of DS <avi@dailydoseofds.com> | Tue, 16 Sep 2025 20:26:12 +0000 | [查看文章](./2025-09-16_Clustering-evaluation-without-labels_199543.md) |
+| 66 | Simplify Python imports with explicit packaging | Daily Dose of DS <avi@dailydoseofds.com> | Sat, 30 Aug 2025 19:20:34 +0000 | [查看文章](./2025-08-30_Simplify-Python-imports-with-explicit-packaging_198fc6.md) |
+| 67 | PyTorch Dataloader has two terrible default settings | Daily Dose of DS <avi@dailydoseofds.com> | Mon, 25 Aug 2025 20:26:25 +0000 | [查看文章](./2025-08-25_PyTorch-Dataloader-has-two-terrible-default-settings_198e2e.md) |
+| 68 | Building pairwise sentence scoring systems | Daily Dose of DS <avi@dailydoseofds.com> | Mon, 25 Aug 2025 20:26:25 +0000 | [查看文章](./2025-08-25_Building-pairwise-sentence-scoring-systems_198e2e.md) |
+| 69 | Full global attention vs alternating attention | Daily Dose of DS <avi@dailydoseofds.com> | Tue, 01 Jul 2025 20:28:05 +0000 | [查看文章](./2025-07-01_Full-global-attention-vs-alternating-attention_197c7a.md) |
+| 70 | Accelerate tSNE with GPU | Daily Dose of DS <avi@dailydoseofds.com> | Tue, 01 Jul 2025 20:28:05 +0000 | [查看文章](./2025-07-01_Accelerate-tSNE-with-GPU_197c7a.md) |
+| 71 | 4 strategies for multi-GPU training | Daily Dose of DS <avi@dailydoseofds.com> | Mon, 30 Jun 2025 20:04:18 +0000 | [查看文章](./2025-06-30_4-strategies-for-multi-GPU-training_197c27.md) |
+| 72 | 15 techniques to optimize neural network training | Daily Dose of DS <avi@dailydoseofds.com> | Fri, 27 Jun 2025 20:16:02 +0000 | [查看文章](./2025-06-27_15-techniques-to-optimize-neural-network-training_197b30.md) |
+| 73 | 5 chunking strategies for RAG | Daily Dose of DS <avi@dailydoseofds.com> | Thu, 29 May 2025 20:47:19 +0000 | [查看文章](./2025-05-29_5-chunking-strategies-for-RAG_1971dc.md) |
+| 74 | Memory Pinning to accelerate model training | Daily Dose of DS <avi@dailydoseofds.com> | Wed, 07 May 2025 19:30:13 +0000 | [查看文章](./2025-05-07_Memory-Pinning-to-accelerate-model-training_196ac3.md) |
+| 75 | 11 Types of Variables in a Dataset | Daily Dose of DS <avi@dailydoseofds.com> | Wed, 23 Apr 2025 18:56:17 +0000 | [查看文章](./2025-04-23_11-Types-of-Variables-in-a-Dataset_196640.md) |
+| 76 | 4 ways to test ML models in production | Daily Dose of DS <avi@dailydoseofds.com> | Mon, 03 Feb 2025 19:22:45 +0000 | [查看文章](./2025-02-03_4-ways-to-test-ML-models-in-production_194cd4.md) |
+| 77 | 7 Uses of Underscore in Python | Daily Dose of DS <avi@dailydoseofds.com> | Fri, 31 Jan 2025 20:22:52 +0000 | [查看文章](./2025-01-31_7-Uses-of-Underscore-in-Python_194be0.md) |
