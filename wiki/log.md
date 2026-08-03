@@ -974,4 +974,8 @@
   - 为所有 25 篇实体规范化构建 YAML Frontmatter（title, type: entity, tags, summary, sources, created, updated, confidence），并完全继承或收敛到标准主题 Tag 分支下（包括 RAG/embedding, RAG/retrieval, RAG/chunking, AI-Agent/tools, DeepLearning, Life 等）。
 - 审计确认：当前 wiki/sources（191 篇）与 wiki/entities（137 篇）共 328 篇文档 100% 拥有标准合规的 YAML Frontmatter 与正确的层次化领域 Tag，实现全域检索互通无死角。
 
+## [2026-08-03] ingest | Clippings/DeepSeek Agent开发岗三面，再面一轮就offer啦！！！.md + Clippings/快手data agent一面，我裂开了！！！.md -> wiki/sources/（+ 更新上下文工程、Harness Engineering、Agent 三层记忆体系、Agent 完整轨迹评估）
 
+## [2026-08-03] ingest | Clippings/月之暗面 Agent开发岗，凉凉！！！.md + Clippings/高德地图AI应用开发岗一面，我跪了！！！.md -> wiki/sources/（+ 更新 Agent 三层记忆体系、渐进式披露、RRF、文档结构切分、重排序）
+
+## [2026-08-03] ingest | Clippings/美团AICoding面试，跪了！！！.md + Clippings/读：读代码前先跑的五个 git 命令 - 暗无天日.md -> wiki/sources/（+ 新建 Git 仓库历史诊断；更新 HITL、Agent 完整轨迹评估、Harness Engineering）

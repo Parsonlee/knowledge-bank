@@ -6,7 +6,7 @@ confidence: high
 type: concept
 summary: 重排序（Rerank）是检索后对候选文档按与查询的相关性进行精细排序的环节，传统方式为单塔模型输出相关性 logit 分数。
 created: '2026-07-06'
-updated: '2026-07-06'
+updated: '2026-08-03'
 sources:
 - wiki/sources/ES企业AI搜索实践.md
 - wiki/sources/Jina_AI创业复盘.md
@@ -20,6 +20,8 @@ sources:
 - wiki/sources/向量数据库原理与应用全解析.md
 - wiki/sources/大模型算法岗面试百问百答.md
 - wiki/sources/提升RAG问答质量的技术路线.md
+- wiki/sources/月之暗面 Agent开发岗，凉凉！！！.md
+- wiki/sources/高德地图AI应用开发岗一面，我跪了！！！.md
 ---
 
 # 概念_重排序Rerank
@@ -33,6 +35,7 @@ sources:
 
 - 单塔架构：`[CLS] Query [SEP] Document` 拼接后输入模型
 - 最后一层 linear 输出相关性 logit 分数
+- 两阶段检索中，BM25 或双塔向量模型负责从大规模索引快速召回候选，Cross-Encoder 只对少量候选精排；全量使用 Cross-Encoder 会带来不可接受的线上延迟。
 
 ## Qwen3 Reranker 新范式（LLM 化）
 

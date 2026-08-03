@@ -172,6 +172,12 @@
 - [[不用title你怎么介绍自己]] — 反思职业 Title 与 Ego 绑定，用动词定义自己与探索核心问题（Life）
 - [[代码强化学习的双刃剑_前沿模型为何集体走向作弊]] — 解析代码 RL 可验证奖励如何激活推理元能力，又因代理奖励漏洞导致模型集群发生 Reward Hacking 作弊现象及防范（LLM/training/RL, LLM/reasoning）
 - [[如何系统评价一个_Agent_Skill]] — 系统拆解 Agent Skill 的六大评估维度（触发、轨迹、产物、效率、安全、复用）与对比实验设计范式（AI-Agent/skill, AI-Agent/eval）
+- [[DeepSeek Agent开发岗三面，再面一轮就offer啦！！！]] — Agent 开发岗面试复盘：私人助理架构、幻觉与代码安全、记忆、评测闭环及 RAG 优化（AI-Agent/coding, AI-Agent/eval, 面试）
+- [[快手data agent一面，我裂开了！！！]] — Data Agent 面试复盘：工具、记忆、ReAct、权限重试、循环控制与 Subagent 设计（AI-Agent/coding, AI-Agent/context-engineering, 面试）
+- [[月之暗面 Agent开发岗，凉凉！！！]] — Agent 面试复盘：上下文摘要触发、长期记忆召回、工具渐进披露与 RAG 可观测性（AI-Agent/memory, AI-Agent/context-engineering, 面试）
+- [[高德地图AI应用开发岗一面，我跪了！！！]] — AI 应用面试复盘：多轮 RAG、RRF、粗排精排、结构切分、记忆冲突与 Agent Loop（RAG/retrieval, RAG/chunking, 面试）
+- [[美团AICoding面试，跪了！！！]] — AI Coding 面试复盘：将高风险评论审核拆为规则、输入输出、权限和测试四层系统（AI-Agent/coding, AI-Agent/eval, 面试）
+- [[读：读代码前先跑的五个 git 命令 - 暗无天日]] — 用 Git 历史识别变更热点、关键维护者、缺陷聚集、提交趋势和救火信号（Skill/linux, AI-Agent/coding）
 
 ## Concepts
 
@@ -237,6 +243,7 @@
 - [[概念_灾难性遗忘]] — 微调新任务时导致原有预训练通用知识与能力退化
 - [[概念_智能体能力金字塔]] — 工具/规划/适应/接地气/常识推理五层能力
 - [[概念_接地气Groundedness]] — 智能体紧贴上下文、不幻觉不捏造的能力
+- [[概念_Git仓库历史诊断]] — 用变更热点、维护者、缺陷聚集、提交趋势与救火信号建立陌生代码库阅读路径（Skill/linux, AI-Agent/coding）
 
 ### RAG
 - [[概念_RSE相关段落提取]] — Relevant Segment Extraction：定位并提取文档连续相关段落

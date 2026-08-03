@@ -1,13 +1,14 @@
 ---
-title: "DeepSeek Agent开发岗三面，再面一轮就offer啦！！！"
-source: "https://mp.weixin.qq.com/s/5jWTFwlMAr12q2y49KcCNw"
+title: DeepSeek Agent开发岗三面，再面一轮就offer啦！！！
+source: https://mp.weixin.qq.com/s/5jWTFwlMAr12q2y49KcCNw
 author:
   - "[[AIGC小白入门记]]"
 published: 2026-08-02
 created: 2026-08-02
 description:
 tags:
-  - "clippings"
+  - clippings
+  - 面试
 ---
 AIGC小白入门记 AIGC小白入门记 *2026年8月2日 00:00*
 
