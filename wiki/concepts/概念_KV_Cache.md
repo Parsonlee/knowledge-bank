@@ -7,6 +7,7 @@ summary: KV Cache 缓存 LLM 推理中 X@W_K 和 X@W_V 的已计算结果，空�
   的重复计算。几乎所有 LLM 推理框架（如 vLLM）均已支持。
 sources:
 - wiki/sources/2025年七大顶流大模型架构.md
+- wiki/sources/2026-05-03_How-LLM-inference-works-internally_19deee.md
 - wiki/sources/DeepSeek_MLA矩阵吸收原理.md
 - wiki/sources/KV_Cache原理图解.md
 - wiki/sources/LLM面试50题_MIT_CSAIL.md
@@ -21,7 +22,7 @@ sources:
 - wiki/sources/大模型显存计算公式与优化.md
 - wiki/sources/推测解码Speculative_Decoding综述.md
 created: '2026-06-29'
-updated: '2026-06-29'
+updated: '2026-08-04'
 confidence: high
 ---
 
@@ -37,6 +38,12 @@ KV Cache 是 LLM 推理优化的核心机制。LLM 自回归生成时，每次�
 - LLM 模型结构（因果注意力）使得历史 token 的 K/V 计算结果不变
 - 缓存 X@W_K 和 X@W_V 的结果上半部分（历史 token 部分）
 - 每步仅需计算当前新 token 的 K/V，与缓存拼接后执行注意力计算
+
+### Prefill 与 Decode 阶段的读写流转
+
+在推理的不同计算阶段，KV Cache 的读写流转有显著区别（参见 [[概念_LLM推理两阶段]]）：
+- **Prefill（预填充）阶段**：大模型并行处理 prompt 中所有的 tokens，并一次性计算它们的 Key 和 Value 矩阵，将其**写入** KV Cache 中（Populate KV Cache）。此阶段只写不读。
+- **Decode（解码）阶段**：自回归生成时，模型每步仅计算当前新生成 token 的 Query、Key 和 Value。此时，模型从 KV Cache 中**读取**（Retrieve）历史所有 tokens 的 K 和 V 矩阵，与新计算的 K/V 拼接，再进行注意力计算；计算完成后，再将新生成的 K 和 V **追加写入**到 KV Cache 中。此阶段既读又写，是典型的内存带宽瓶颈。
 
 ## 适用条件
 
@@ -67,3 +74,5 @@ $$\text{KV Cache} = 2 \times L \times H \times D \times S \times B \times \text{
 - [[MiniMax_vs_Kimi_注意力路线之争]]
 - [[实体_vLLM]]
 - [[概念_自注意力复杂度]]
+- [[概念_LLM推理两阶段]]
+- [[2026-05-03_How-LLM-inference-works-internally_19deee]]

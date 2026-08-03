@@ -220,6 +220,14 @@
 - [[2026-04-23_LoRAQLoRA-explained-from-a-business-lens_19dbca]] — 从多租户商业与工程架构视角剖析 LoRA/QLoRA 微调的内存、存储优势与适配器动态热插拔运行逻辑。（machine-learning, parameter-efficient-fine-tuning, lora, business-ml）
 - [[2026-05-01_A-tricky-LLM-interview-question-for-AI-Engineers_19de58]] — 探讨在微调/蒸馏小模型（如 3B/8B）时，使用顶级大模型作为教师生成合成数据，其效果反而可能比不上中等教师模型这一容量匹配法则。（llm, distillation, fine-tuning）
 - [[2026-05-01_How-to-beat-GRPO-without-touching-model-weights_19de58]] — 详细阐述 GEPA 无梯度提示词进化算法，并横向对比其与 GRPO 等强化学习算法的优劣与应用场景。（rl, grpo, gepa, prompt-tuning）
+- [[2026-05-03_How-LLM-inference-works-internally_19deee]] — 本文深入剖析了大模型推理内部的工作原理，详细对比了 Prefill（预填充）和 Decode（解码）两个不同的计算阶段及其硬件瓶颈，并讨论了 KV Cache、量化以及 Continuous Batching、Speculative Decoding 和 PagedAttention 等服务层优化技术。（LLM/inference, AI-Infra, KV-Cache）
+- [[2026-05-05_How-does-BM25-ranking-algorithm-work_19dfa2]] — 本文介绍了有 30 年历史的经典稀疏检索算法 BM25，通过拆解 IDF（逆文档频率）、TF 词频饱和度以及文档长度惩罚三项核心要素，分析了其在专有名词与错误码精确匹配中的优势，以及其在混合检索（Hybrid Search）架构中的核心价值。（RAG, search, BM25, sparse-retrieval）
+- [[2026-05-05_Train-classical-ML-models-on-large-datasets_19dfa2]] — 本文介绍了在处理无法完全载入内存的大规模数据集时，如何使用随机贴片法（Random Patches）来训练经典的集成学习模型（如随机森林）。（machine-learning, random-patches, ensemble-learning, bagging, big-data）
+- [[2026-05-25_Build-portable-ML-models-with-ONNX_19e60c]] — 本文探讨了在模型训练与生产伺服部署之间存在的分歧，分析了开放神经网络交换（ONNX）作为跨框架的中间表示的优势，详述了 ONNX Runtime（ORT）的各种执行引擎加速和图优化机制。（MLOps, ONNX, ONNX-Runtime, model-deployment）
+- [[2026-06-01_Categorization-of-clustering-algorithms_19e84f]] — 系统总结了 6 类主流聚类算法家族并探讨了其在不同形状和密度数据上的适用性。（machine-learning, clustering）
+- [[2026-06-01_Claude-Code-dynamic-workflows,-explained!_19e84f]] — 解析了 Claude Code 在 Opus 4.8 时代引入的 Dynamic Workflows（动态工作流）机制，对比了 Subagents、Agent Teams 与 Dynamic Workflows 在编排、规模、通信和灾备上的差异，探讨了其内部的 JS 脚本执行与对抗性验证原理。（claude-code, multi-agent, dynamic-workflows）
+- [[2026-06-08_An-intuitive-guide-to-non-linearity-of-ReLU_19ea91]] — 解析神经网络中 ReLU 激活函数如何通过分段线性插值拟合任意非线性函数，以及多神经元联合的光滑非线性感知本质。
+- [[2026-06-14_7-LLM-generation-parameters_19ec7f]] — 解构控制大语言模型（LLM）文本生成的 7 个核心解码参数的工作原理、数学逻辑与应用场景。
 
 ## Concepts
 
@@ -286,6 +294,9 @@
 - [[概念_智能体能力金字塔]] — 工具/规划/适应/接地气/常识推理五层能力
 - [[概念_接地气Groundedness]] — 智能体紧贴上下文、不幻觉不捏造的能力
 - [[概念_Git仓库历史诊断]] — 用变更热点、维护者、缺陷聚集、提交趋势与救火信号建立陌生代码库阅读路径（Skill/linux, AI-Agent/coding）
+- [[概念_Random_Patches大数据训练]] — 随机贴片在大数据集上训练经典集成模型的机制与方差降低原理
+- [[概念_ONNX模型跨平台部署]] — 模型开发框架与伺服生产环境解耦标准、ORT图优化与硬件子图分发机制
+- [[概念_聚类算法分类综述]] — 系统性梳理聚类算法的 6 大主流家族（基于质心、基于连通性、基于密度、基于图、基于分布和基于压缩/降维），对比硬聚类与软聚类的决策边界，并分析算法对聚类形状和密度的适应差异。（MachineLearning, Clustering）
 
 ### RAG
 - [[概念_RSE相关段落提取]] — Relevant Segment Extraction：定位并提取文档连续相关段落
@@ -312,6 +323,7 @@
 - [[概念_Fusion_Retrieval]] — 稀疏(BM25)+稠密(向量)双路检索融合
 - [[概念_Reciprocal_Rank_Fusion]] — RRF 排序融合多路检索结果
 - [[概念_BM25]] — 经典稀疏检索算法，词频+文档长度惩罚
+- [[概念_BM25检索算法]] — 定义 BM25 基石地位，数学公式拆解（IDF/TF饱和度/文档长度惩罚）与混合检索架构（RAG）
 - [[概念_检索后处理]] — 检索后重排/压缩/Long-text Reorder
 - [[概念_Contextual_Compression]] — LLM 提取检索文档中与查询相关的片段
 - [[概念_Long-text_Reorder]] — 长文本检索结果重排，重要文档置首尾
@@ -423,6 +435,7 @@
 - [[概念_LoRA与QLoRA显存]] — LoRA 2Φ、QLoRA 0.5Φ显存估算原理（LLM/inference, 面试）
 - [[概念_思维链CoT高级方法]] — CoT/CoT-SC/Decoding CoT/ToT+MCTS 及成本权衡（LLM/reasoning）
 - [[概念_自适应快慢思考]] — 三方案：Qwen3 SFT、AdaCoT Pareto、AdaThinking 约束优化（LLM/reasoning）
+- [[概念_LLM推理两阶段]] — 对比 Prefill 与 Decode 硬件瓶颈，详细介绍 Continuous Batching、Speculative Decoding、PagedAttention 三大优化方案。（LLM/inference）
 
 ### LLM/reasoning + training/RL（批次5）
 - [[概念_DeepSeek-R1训练管道]] — 冷启动SFT→推理RL→拒绝采样SFT→全场景RL四阶段，规则奖励无奖励黑客（LLM/training/RL）
@@ -480,6 +493,7 @@
 - [[概念_卡片盒笔记法]] — Zettelkasten 知识管理方法论，原子化卡片与网络化交叉引用（Skill/knowledge-bank）
 - [[概念_Ingest入库闭环]] — LLM Wiki 范式中的标准化入库 SOP 操作（阅读/摘要/实体概念联动/索引日志）（Skill/knowledge-bank, AI-Agent/coding）
 - [[概念_Wiki健康检查]] — LLM Wiki 范式中的 Lint 体检与图谱垃圾回收（Skill/knowledge-bank, AI-Agent/coding）
+- [[概念_Claude_Code多智能体协同机制]] — 拆解并对比 Claude Code 的三大协同原语（Subagents、Agent Teams、Dynamic Workflows），详述动态工作流在 JS 编排执行、并发扇出、上下文解耦和抗灾恢复力方面的机制，并阐述对抗性验证（Adversarial Verification）的收敛逻辑。（ClaudeCode, Multi-Agent, Orchestration）
 
 ## Entities
 
@@ -854,6 +868,8 @@
 ### 机器学习与数据科学基础（Batch Ingest）
 - [[概念_Breathing_KMeans算法]] — Breathing KMeans 是一种解决传统 KMeans 初始化敏感和重训高耗时的聚类算法。它通过动态的“吸气”（在误差大的质心附近分裂出新质心）和“呼气”（合并并删除低效用的紧邻质心）循环，实现速度和准确性的双重提升。（MachineLearning, Clustering, KMeans, BreathingKMeans）
 - [[概念_REFRAG_RAG压缩与过滤]] — REFRAG 是 Meta AI 提出的一种在向量层面进行压缩与过滤的 RAG 检索优化框架，能够显著提高首字生成时间（TTFT），并减少冗余 token 开销。（RAG, MetaAI, REFRAG, InformationRetrieval）
+- [[概念_ReLU激活函数非线性拟合本质]] — 详细推导单个神经元 ReLU(wx + b) 相当于平移折线基底，多神经元加权累加的本质是分段线性插值，以及宽/深网络对 “Army of ReLUs” 的必然要求。
+- [[概念_LLM文本生成解码参数]] — 系统定义并解构 Max tokens、Temperature、Top-k、Top-p、Frequency/Presence Penalty 以及 Stop Sequences 等 7 个关键解码参数的作用与原理。
 
 ## Comparisons
 

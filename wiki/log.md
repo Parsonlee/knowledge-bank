@@ -1,5 +1,33 @@
 # Wiki Log
 
+## [2026-08-04] ingest | raw/articles/2026-06-08_An-intuitive-guide-to-non-linearity-of-ReLU_19ea91.md & 2026-06-14_7-LLM-generation-parameters_19ec7f.md -> wiki/sources/ (+ affected pages)
+- **深度阅读与语法净化**：深度阅读 `Clippings/DailyDoseOfDS/` 下的 2 篇文章，进行行内伪 tag 和伪双链排查，确保语法纯净并兼容 Obsidian 双链图谱。
+- **物理文件归档与 Ingest 闭环 (Clippings -> raw/articles/)**：
+  - `Clippings/DailyDoseOfDS/2026-06-08_An-intuitive-guide-to-non-linearity-of-ReLU_19ea91.md` -> `raw/articles/2026-06-08_An-intuitive-guide-to-non-linearity-of-ReLU_19ea91.md` -> `wiki/sources/2026-06-08_An-intuitive-guide-to-non-linearity-of-ReLU_19ea91.md`（+ 新建概念 `[[wiki/concepts/概念_ReLU激活函数非线性拟合本质|概念_ReLU激活函数非线性拟合本质]]`）
+  - `Clippings/DailyDoseOfDS/2026-06-14_7-LLM-generation-parameters_19ec7f.md` -> `raw/articles/2026-06-14_7-LLM-generation-parameters_19ec7f.md` -> `wiki/sources/2026-06-14_7-LLM-generation-parameters_19ec7f.md`（+ 新建概念 `[[wiki/concepts/概念_LLM文本生成解码参数|概念_LLM文本生成解码参数]]`）
+- **索引更新**：将新建的 2 篇 Source 摘要页和 2 篇 Concept 概念页挂载到 `wiki/index.md` 对应列表分类中。
+
+## [2026-08-04] ingest | raw/articles/2026-06-01_Categorization-of-clustering-algorithms_19e84f.md & 2026-06-01_Claude-Code-dynamic-workflows,-explained!_19e84f.md -> wiki/sources/ (+ affected pages)
+- **深度阅读与语法净化**：深度阅读 `Clippings/DailyDoseOfDS/` 下的 2 篇文章，进行行内伪 tag 和伪双链排查，确保语法纯净并兼容 Obsidian 双链图谱。
+- **物理文件归档与 Ingest 闭环 (Clippings -> raw/articles/)**：
+  - `Clippings/DailyDoseOfDS/2026-06-01_Categorization-of-clustering-algorithms_19e84f.md` -> `raw/articles/2026-06-01_Categorization-of-clustering-algorithms_19e84f.md` -> `wiki/sources/2026-06-01_Categorization-of-clustering-algorithms_19e84f.md`（+ 新建概念 `[[wiki/concepts/概念_聚类算法分类综述|概念_聚类算法分类综述]]`）
+  - `Clippings/DailyDoseOfDS/2026-06-01_Claude-Code-dynamic-workflows,-explained!_19e84f.md` -> `raw/articles/2026-06-01_Claude-Code-dynamic-workflows,-explained!_19e84f.md` -> `wiki/sources/2026-06-01_Claude-Code-dynamic-workflows,-explained!_19e84f.md`（+ 新建概念 `[[wiki/concepts/概念_Claude_Code多智能体协同机制|概念_Claude_Code多智能体协同机制]]`）
+- **索引更新**：将新建的 2 篇 Source 摘要页和 2 篇 Concept 概念页挂载到 `wiki/index.md` 对应列表分类中。
+
+## [2026-08-04] ingest | raw/articles/2026-05-05_Train-classical-ML-models-on-large-datasets_19dfa2.md & 2026-05-25_Build-portable-ML-models-with-ONNX_19e60c.md -> wiki/sources/ (+ affected pages)
+- **深度阅读与语法净化**：深度阅读 `Clippings/DailyDoseOfDS/` 下的 2 篇文章，进行行内伪 tag 和伪双链排查，确保语法纯净并兼容 Obsidian 双链图谱。
+- **物理文件归档与 Ingest 闭环 (Clippings -> raw/articles/)**：
+  - `Clippings/DailyDoseOfDS/2026-05-05_Train-classical-ML-models-on-large-datasets_19dfa2.md` -> `raw/articles/2026-05-05_Train-classical-ML-models-on-large-datasets_19dfa2.md` -> `wiki/sources/2026-05-05_Train-classical-ML-models-on-large-datasets_19dfa2.md`（+ 新建概念 `[[wiki/concepts/概念_Random_Patches大数据训练|概念_Random_Patches大数据训练]]`）
+  - `Clippings/DailyDoseOfDS/2026-05-25_Build-portable-ML-models-with-ONNX_19e60c.md` -> `raw/articles/2026-05-25_Build-portable-ML-models-with-ONNX_19e60c.md` -> `wiki/sources/2026-05-25_Build-portable-ML-models-with-ONNX_19e60c.md`（+ 新建概念 `[[wiki/concepts/概念_ONNX模型跨平台部署|概念_ONNX模型跨平台部署]]`）
+- **索引更新**：将新建的 2 篇 Source 摘要页和 2 篇 Concept 页面挂载到 `wiki/index.md` 对应列表分类中。
+
+## [2026-08-04] ingest | raw/articles/2026-05-03_How-LLM-inference-works-internally_19deee.md & 2026-05-05_How-does-BM25-ranking-algorithm-work_19dfa2.md -> wiki/sources/ (+ affected pages)
+- **深度阅读与语法净化**：深度阅读 `Clippings/DailyDoseOfDS/` 下的 2 篇文章，进行行内伪 tag 和伪双链排查，确保语法纯净并兼容 Obsidian 双链图谱。
+- **物理文件归档与 Ingest 闭环 (Clippings -> raw/articles/)**：
+  - `Clippings/DailyDoseOfDS/2026-05-03_How-LLM-inference-works-internally_19deee.md` -> `raw/articles/2026-05-03_How-LLM-inference-works-internally_19deee.md` -> `wiki/sources/2026-05-03_How-LLM-inference-works-internally_19deee.md`（+ 新建概念 `[[wiki/concepts/概念_LLM推理两阶段|概念_LLM推理两阶段]]`；更新已有概念 `[[wiki/concepts/概念_KV_Cache|概念_KV_Cache]]`）
+  - `Clippings/DailyDoseOfDS/2026-05-05_How-does-BM25-ranking-algorithm-work_19dfa2.md` -> `raw/articles/2026-05-05_How-does-BM25-ranking-algorithm-work_19dfa2.md` -> `wiki/sources/2026-05-05_How-does-BM25-ranking-algorithm-work_19dfa2.md`（+ 新建概念 `[[wiki/concepts/概念_BM25检索算法|概念_BM25检索算法]]`）
+- **索引更新**：将新建的 2 篇 Source 摘要页和 2 篇 Concept 页面挂载到 `wiki/index.md` 对应列表分类中。
+
 ## [2026-08-04] ingest | raw/articles/2026-05-01_A-tricky-LLM-interview-question-for-AI-Engineers_19de58.md & 2026-05-01_How-to-beat-GRPO-without-touching-model-weights_19de58.md -> wiki/sources/ (+ affected pages)
 - **深度阅读与语法净化**：深度阅读 `Clippings/DailyDoseOfDS/` 下的 2 篇文章，进行行内伪 tag 和伪双链排查，确保语法纯净并兼容 Obsidian 双链图谱。
 - **物理文件归档与 Ingest 闭环 (Clippings -> raw/articles/)**：
