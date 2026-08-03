@@ -1,5 +1,152 @@
 # Wiki Log
 
+## [2026-08-04] ingest | raw/articles/2026-05-01_A-tricky-LLM-interview-question-for-AI-Engineers_19de58.md & 2026-05-01_How-to-beat-GRPO-without-touching-model-weights_19de58.md -> wiki/sources/ (+ affected pages)
+- **深度阅读与语法净化**：深度阅读 `Clippings/DailyDoseOfDS/` 下的 2 篇文章，进行行内伪 tag 和伪双链排查，确保语法纯净并兼容 Obsidian 双链图谱。
+- **物理文件归档与 Ingest 闭环 (Clippings -> raw/articles/)**：
+  - `Clippings/DailyDoseOfDS/2026-05-01_A-tricky-LLM-interview-question-for-AI-Engineers_19de58.md` -> `raw/articles/2026-05-01_A-tricky-LLM-interview-question-for-AI-Engineers_19de58.md` -> `wiki/sources/2026-05-01_A-tricky-LLM-interview-question-for-AI-Engineers_19de58.md`（+ 新建概念 `[[wiki/concepts/概念_大模型蒸馏的容量匹配法则|概念_大模型蒸馏的容量匹配法则]]`）
+  - `Clippings/DailyDoseOfDS/2026-05-01_How-to-beat-GRPO-without-touching-model-weights_19de58.md` -> `raw/articles/2026-05-01_How-to-beat-GRPO-without-touching-model-weights_19de58.md` -> `wiki/sources/2026-05-01_How-to-beat-GRPO-without-touching-model-weights_19de58.md`（+ 新建概念 `[[wiki/concepts/概念_GEPA提示词进化算法|概念_GEPA提示词进化算法]]`）
+- **索引更新**：将新建的 2 篇 Source 摘要页和 2 篇 Concept 页面挂载到 `wiki/index.md` 对应列表分类中。
+
+## [2026-08-04] ingest | raw/articles/2026-04-23_Cyclical-feature-encoding_19dbca.md & 2026-04-23_LoRAQLoRA-explained-from-a-business-lens_19dbca.md -> wiki/sources/ (+ affected pages)
+- **深度阅读与语法净化**：深度阅读 `Clippings/DailyDoseOfDS/` 下的 2 篇文章，对行内伪 tag 和伪双链进行排查，确认无需转义，保障 Obsidian 兼容。
+- **物理文件归档与 Ingest 闭环 (Clippings -> raw/articles/)**：
+  - `Clippings/DailyDoseOfDS/2026-04-23_Cyclical-feature-encoding_19dbca.md` -> `raw/articles/2026-04-23_Cyclical-feature-encoding_19dbca.md` -> `wiki/sources/2026-04-23_Cyclical-feature-encoding_19dbca.md`（+ 新建概念 `[[wiki/concepts/概念_周期性特征编码|概念_周期性特征编码]]`）
+  - `Clippings/DailyDoseOfDS/2026-04-23_LoRAQLoRA-explained-from-a-business-lens_19dbca.md` -> `raw/articles/2026-04-23_LoRAQLoRA-explained-from-a-business-lens_19dbca.md` -> `wiki/sources/2026-04-23_LoRAQLoRA-explained-from-a-business-lens_19dbca.md`（+ 新建概念 `[[wiki/concepts/概念_LoRA与QLoRA微调|概念_LoRA与QLoRA微调]]`）
+- **索引更新**：将新建的 2 篇 Source 摘要页和 2 篇 Concept 页面挂载到 `wiki/index.md` 对应列表分类中。
+
+## [2026-08-04] ingest | raw/articles/2026-04-06_The-Anatomy-of-an-Agent-Harness_19d64a.md & 2026-04-12_20-most-common-magic-methods_19d838.md -> wiki/sources/ (+ affected pages)
+- **深度阅读与语法净化**：深度阅读 `Clippings/DailyDoseOfDS/` 下的 2 篇文章，进行行内伪 tag 和伪双链排查，确认无需要转义的内容。
+- **物理文件归档与 Ingest 闭环 (Clippings -> raw/articles/)**：
+  - `Clippings/DailyDoseOfDS/2026-04-06_The-Anatomy-of-an-Agent-Harness_19d64a.md` -> `raw/articles/2026-04-06_The-Anatomy-of-an-Agent-Harness_19d64a.md` -> `wiki/sources/2026-04-06_The-Anatomy-of-an-Agent-Harness_19d64a.md`（+ 更新已有概念 `[[wiki/concepts/概念_Harness_Engineering|概念_Harness_Engineering]]` 和 `[[wiki/concepts/概念_Harness优化阶梯|概念_Harness优化阶梯]]`）
+  - `Clippings/DailyDoseOfDS/2026-04-12_20-most-common-magic-methods_19d838.md` -> `raw/articles/2026-04-12_20-most-common-magic-methods_19d838.md` -> `wiki/sources/2026-04-12_20-most-common-magic-methods_19d838.md`（+ 新建概念 `[[wiki/concepts/概念_Python魔术方法|概念_Python魔术方法]]`）
+- **索引更新**：将新建 the 2 篇 Source 摘要页和 1 篇 Concept 页面挂载到 `wiki/index.md` 对应列表分类中。
+
+## [2026-08-04] ingest | raw/articles/2026-03-24_RAG-vs-MetaAI's-REFRAG_19d21b.md & 2026-03-26_Breathing-KMeans-vs-KMeans_19d2bb.md -> wiki/sources/ (+ affected pages)
+- **深度阅读与语法净化**：深度阅读 `Clippings/DailyDoseOfDS/` 下的 2 篇文章，进行行内伪 tag 和伪双链排查，确认无需要转义的内容。
+- **物理文件归档与 Ingest 闭环 (Clippings -> raw/articles/)**：
+  - `Clippings/DailyDoseOfDS/2026-03-24_RAG-vs-MetaAI's-REFRAG_19d21b.md` -> `raw/articles/2026-03-24_RAG-vs-MetaAI's-REFRAG_19d21b.md` -> `wiki/sources/2026-03-24_RAG-vs-MetaAI's-REFRAG_19d21b.md`（+ 新建概念 `[[wiki/concepts/概念_REFRAG_RAG压缩与过滤|概念_REFRAG_RAG压缩与过滤]]`）
+  - `Clippings/DailyDoseOfDS/2026-03-26_Breathing-KMeans-vs-KMeans_19d2bb.md` -> `raw/articles/2026-03-26_Breathing-KMeans-vs-KMeans_19d2bb.md` -> `wiki/sources/2026-03-26_Breathing-KMeans-vs-KMeans_19d2bb.md`（+ 新建概念 `[[wiki/concepts/概念_Breathing_KMeans算法|概念_Breathing_KMeans算法]]`）
+- **索引更新**：将新建的 2 篇 Source 摘要页和 2 篇 Concept 页面挂载到 `wiki/index.md` 对应列表分类中。
+
+## [2026-08-03] ingest | raw/articles/2026-03-13_What-are-RL-environments,-and-how-to-build-them_19ce93.md & 2026-03-23_Anatomy-of-the-.claude-folder_19d1c3.md -> wiki/sources/ (+ affected pages)
+- **深度阅读与语法净化**：深度阅读 `Clippings/DailyDoseOfDS/` 下的 2 篇文章，进行行内伪 tag 和伪双链排查，确认无需要转义的内容。
+- **物理文件归档与 Ingest 闭环 (Clippings -> raw/articles/)**：
+  - `Clippings/DailyDoseOfDS/2026-03-13_What-are-RL-environments,-and-how-to-build-them_19ce93.md` -> `raw/articles/2026-03-13_What-are-RL-environments,-and-how-to-build-them_19ce93.md` -> `wiki/sources/2026-03-13_What-are-RL-environments,-and-how-to-build-them_19ce93.md`（+ 新建概念 `[[wiki/concepts/概念_Agentic_RL环境与GRPO|概念_Agentic_RL环境与GRPO]]`）
+  - `Clippings/DailyDoseOfDS/2026-03-23_Anatomy-of-the-.claude-folder_19d1c3.md` -> `raw/articles/2026-03-23_Anatomy-of-the-.claude-folder_19d1c3.md` -> `wiki/sources/2026-03-23_Anatomy-of-the-.claude-folder_19d1c3.md`（+ 新建概念 `[[wiki/concepts/概念_Claude_Code核心配置与原语|概念_Claude_Code核心配置与原语]]`）
+- **索引更新**：将新建的 2 篇 Source 摘要页和 2 篇 Concept 页面挂载到 `wiki/index.md` 对应列表分类中。
+
+## [2026-08-03] ingest | raw/articles/2026-03-04_6-must-know-MCP-primitives-for-AI-Engineers_19cba7.md & 2026-03-13_How-to-actually-use-train,-validation,-and-test-sets_19ce93.md -> wiki/sources/ (+ affected pages)
+- **深度阅读与语法净化**：深度阅读 `Clippings/DailyDoseOfDS/` 下的 2 篇文章，进行行内伪 tag 和伪双链排查，确认无冲突行内内容。
+- **物理文件归档与 Ingest 闭环 (Clippings -> raw/articles/)**：
+  - `Clippings/DailyDoseOfDS/2026-03-04_6-must-know-MCP-primitives-for-AI-Engineers_19cba7.md` -> `raw/articles/2026-03-04_6-must-know-MCP-primitives-for-AI-Engineers_19cba7.md` -> `wiki/sources/2026-03-04_6-must-know-MCP-primitives-for-AI-Engineers_19cba7.md`（+ 将已有的概念 `[[概念_MCP五大原语]]` 重命名为 `[[概念_MCP六大原语]]`，在正文中增加第 6 个核心原语 “Elicitations（启发/人工介入原语）”的原理机制与典型场景，并追加 sources 关联，更新相关页面对该概念的引用）
+  - `Clippings/DailyDoseOfDS/2026-03-13_How-to-actually-use-train,-validation,-and-test-sets_19ce93.md` -> `raw/articles/2026-03-13_How-to-actually-use-train,-validation,-and-test-sets_19ce93.md` -> `wiki/sources/2026-03-13_How-to-actually-use-train,-validation,-and-test-sets_19ce93.md`（+ 新建概念 `[[概念_训练验证测试集划分]]`，规范化定义 Train/Validation/Test 职责与验证集过拟合瓶颈，详述 K-Fold CV 与双重嵌套交叉验证（Nested CV）的底层流向，并系统总结时序、不平衡、分组数据场景下的特殊划分准则及预处理防泄漏规范，追加 sources 关联）
+- **索引更新**：在 `wiki/index.md` 中更新已有概念的挂载名称，并将新生成的 2 篇 Source 摘要页和 1 篇 Concept 页面挂载到对应列表分类中。
+
+## [2026-08-03] ingest | raw/articles/2026-02-04_Why-ML-models-need-calibration_19c2a8.md & 2026-03-04_16-techniques-to-optimize-neural-network-training_19cba7.md -> wiki/sources/ (+ affected pages)
+- **深度阅读与语法净化**：深度阅读 `Clippings/DailyDoseOfDS/` 下的 2 篇文章，进行行内伪 tag 和伪双链排查，确认无需要转义的内容。
+- **物理文件归档与 Ingest 闭环 (Clippings -> raw/articles/)**：
+  - `Clippings/DailyDoseOfDS/2026-02-04_Why-ML-models-need-calibration_19c2a8.md` -> `raw/articles/2026-02-04_Why-ML-models-need-calibration_19c2a8.md` -> `wiki/sources/2026-02-04_Why-ML-models-need-calibration_19c2a8.md`（+ 更新已有概念 `[[wiki/concepts/概念_分类模型校准|概念_分类模型校准]]`，强化未校准模型在高开支医疗诊断与政府资金配置决策中可能导致资源分配偏差或决策失效的严重危害，并追加 sources 关联）
+  - `Clippings/DailyDoseOfDS/2026-03-04_16-techniques-to-optimize-neural-network-training_19cba7.md` -> `raw/articles/2026-03-04_16-techniques-to-optimize-neural-network-training_19cba7.md` -> `wiki/sources/2026-03-04_16-techniques-to-optimize-neural-network-training_19cba7.md`（+ 更新已有概念 `[[wiki/concepts/概念_神经网络训练优化综述|概念_神经网络训练优化综述]]`，引入“动量 (Momentum)”这一新优化维度，阐述其指数加权平均平滑权重更新震荡、克服局部鞍点并加速收敛的物理机制，并追加 sources 关联）
+- **索引更新**：将新建的 2 篇 Source 摘要页全量挂载至 `wiki/index.md` 的 Sources 列表中。
+
+## [2026-08-03] ingest | raw/articles/2025-12-29_Identify-fuzzy-duplicates-at-scale_19b6bf.md & 2026-02-04_4-parallel-processing-techniques-in-Python_19c2a8.md -> wiki/sources/ (+ affected pages)
+- **深度阅读与语法净化**：深度阅读 `Clippings/DailyDoseOfDS/` 下的 2 篇文章，进行行内伪 tag 和伪双链排查，确认无冲突行内内容，保留原生 Markdown 兼容性。
+- **物理文件归档与 Ingest 闭环 (Clippings -> raw/articles/)**：
+  - `Clippings/DailyDoseOfDS/2025-12-29_Identify-fuzzy-duplicates-at-scale_19b6bf.md` -> `raw/articles/2025-12-29_Identify-fuzzy-duplicates-at-scale_19b6bf.md` -> `wiki/sources/2025-12-29_Identify-fuzzy-duplicates-at-scale_19b6bf.md`（+ 新建概念 `[[概念_分块阻断技术_Blocking]]`，详述大规模模糊重复数据清洗中分块阻断的物理原理，利用启发式规则减少 98% 以上冗余比对，并介绍在 NLP 与 RAG 中的应用）
+  - `Clippings/DailyDoseOfDS/2026-02-04_4-parallel-processing-techniques-in-Python_19c2a8.md` -> `raw/articles/2026-02-04_4-parallel-processing-techniques-in-Python_19c2a8.md` -> `wiki/sources/2026-02-04_4-parallel-processing-techniques-in-Python_19c2a8.md`（+ 新建概念 `[[概念_Python并发与并行机制]]`，详细对比线程、多进程、协程和子解释器的底层机制与选型决策，阐明 GIL 的物理约束以及无 GIL 自由线程的演进方向；同时更新已有概念 `[[概念_Python_async_await并发]]`，补充协程作为协作式多任务在 CPU 密集型任务中无法物理并行的差异并建立双向交叉链接）
+- **索引更新**：将新建的 2 篇 Source 摘要页和 2 篇新 Concept 概念页全量挂载至 `wiki/index.md`。
+
+## [2026-08-03] ingest | raw/articles/2025-12-26_Loss-Function-of-16-ML-Algos_19b5c7.md & 2025-12-26_The-right-way-to-use-multiple-embedding-models_19b5c7.md -> wiki/sources/ (+ affected pages)
+- **深度阅读与语法净化**：深度阅读 `Clippings/DailyDoseOfDS/` 下的 2 篇文章，检查并确认正文无需要转义的行内伪 tag 和伪双链，保障 Obsidian 兼容。
+- **物理文件归档与 Ingest 闭环 (Clippings -> raw/articles/)**：
+  - `Clippings/DailyDoseOfDS/2025-12-26_Loss-Function-of-16-ML-Algos_19b5c7.md` -> `raw/articles/2025-12-26_Loss-Function-of-16-ML-Algos_19b5c7.md` -> `wiki/sources/2025-12-26_Loss-Function-of-16-ML-Algos_19b5c7.md`（+ 新建概念 `[[wiki/concepts/概念_机器学习损失函数|概念_机器学习损失函数]]`，汇总常用 ML 算法与典型损失函数匹配，深度剖析 kNN 与 Naive Bayes 无损失函数的物理本质）
+  - `Clippings/DailyDoseOfDS/2025-12-26_The-right-way-to-use-multiple-embedding-models_19b5c7.md` -> `raw/articles/2025-12-26_The-right-way-to-use-multiple-embedding-models_19b5c7.md` -> `wiki/sources/2025-12-26_The-right-way-to-use-multiple-embedding-models_19b5c7.md`（+ 新建概念 `[[wiki/concepts/概念_跨模型嵌入对比局限|概念_跨模型嵌入对比局限]]`，深度探讨等维异构空间嵌入对比的物理限制与 3D 旋转夹角类比，并提出特征拼接与跨模型对齐训练两种标准方案）
+- **索引更新**：将新生成的 2 篇 Source 摘要页和 2 篇 Concept 页面挂载至 `wiki/index.md`。
+
+## [2026-08-03] ingest | raw/articles/ 2025-12-02_7-categorical-data-encoding-techniques_19ae0c.md & 2025-12-02_Platt-Scaling-for-model-calibration_19ae0c.md -> wiki/sources/ (+ affected pages)
+- **深度阅读与语法净化**：深度阅读 `Clippings/DailyDoseOfDS/` 下的 2 篇文章，进行行内伪 tag 与伪链接检查，确认无需转义，保障 Obsidian 双链与图谱兼容。
+- **物理文件归档与 Ingest 闭环 (Clippings -> raw/articles/)**：
+  - `Clippings/DailyDoseOfDS/2025-12-02_7-categorical-data-encoding-techniques_19ae0c.md` -> `raw/articles/2025-12-02_7-categorical-data-encoding-techniques_19ae0c.md` -> `wiki/sources/2025-12-02_7-categorical-data-encoding-techniques_19ae0c.md`（+ 新建概念 `[[概念_类别特征编码技术]]`，详尽阐述 7 种主要的编码机制，分析各自特征维度产出比例、基数适用性与潜在的工程陷阱）
+  - `Clippings/DailyDoseOfDS/2025-12-02_Platt-Scaling-for-model-calibration_19ae0c.md` -> `raw/articles/2025-12-02_Platt-Scaling-for-model-calibration_19ae0c.md` -> `wiki/sources/2025-12-02_Platt-Scaling-for-model-calibration_19ae0c.md`（+ 新建概念 `[[概念_分类模型校准]]`，阐明模型校准的物理定义与价值，论述深度模型过度自信现象，详尽剖析 Platt 缩放的四步法、物理机制与局限性）
+- **索引更新**：将新生成的 2 篇 Source 摘要页和 2 篇 Concept 页面挂载至 `wiki/index.md`。
+
+## [2026-08-03] ingest | raw/articles/ 2025-11-28_How-to-use-kNNs-for-imbalanced-datasets_19acc3.md & 2025-11-28_Two-techniques-to-extend-the-context-length-of-LLMs_19acc3.md -> wiki/sources/ (+ affected pages)
+- **深度阅读与语法净化**：对 `Clippings/DailyDoseOfDS/` 下的 2 篇文章进行深度阅读与净化。确认行内无伪 tag 且无非 Obsidian 伪双链，保障图谱纯净与双链兼容。
+- **物理文件归档与 Ingest 闭环 (Clippings -> raw/articles/)**：
+  - `Clippings/DailyDoseOfDS/2025-11-28_How-to-use-kNNs-for-imbalanced-datasets_19acc3.md` -> `raw/articles/2025-11-28_How-to-use-kNNs-for-imbalanced-datasets_19acc3.md` -> `wiki/sources/2025-11-28_How-to-use-kNNs-for-imbalanced-datasets_19acc3.md`（+ 新建概念 `[[概念_不平衡数据的kNN优化]]`，详细剖析传统 kNN 的大类支配瓶颈，对比距离权重 kNN 与动态调整 $k$ 算法的工作原理与防淹没优势）
+  - `Clippings/DailyDoseOfDS/2025-11-28_Two-techniques-to-extend-the-context-length-of-LLMs_19acc3.md` -> `raw/articles/2025-11-28_Two-techniques-to-extend-the-context-length-of-LLMs_19acc3.md` -> `wiki/sources/2025-11-28_Two-techniques-to-extend-the-context-length-of-LLMs_19acc3.md`（+ 新建概念 `[[概念_稀疏注意力]]`，阐明打破注意力二次方计算瓶颈的物理定位，详述局部窗口注意力与自适应学习注意力两种模式；并更新已有概念 `[[概念_FlashAttention]]` 与 `[[概念_自注意力复杂度]]`，在 `概念_FlashAttention.md` 中补充 SRAM 与 HBM 之间 I/O 搬运限制的硬件瓶颈背景）
+- **索引更新**：将新生成的 2 篇 Source 摘要页和 2 篇 Concept 页面挂载至 `wiki/index.md`。
+
+## [2026-08-03] ingest | raw/articles/ 2025-11-20_Descriptors-in-Python_19aa2d.md & 2025-11-20_Should-you-gather-more-data_19aa2d.md -> wiki/sources/ (+ affected pages)
+- **深度阅读与语法净化**：对 `Clippings/DailyDoseOfDS/` 下的 2 篇文章进行阅读与净化，行内无伪 tag 和伪双链，确认无需转义，保障图谱兼容。
+- **物理文件归档与 Ingest 闭环 (Clippings -> raw/articles/)**：
+  - `Clippings/DailyDoseOfDS/2025-11-20_Descriptors-in-Python_19aa2d.md` -> `raw/articles/2025-11-20_Descriptors-in-Python_19aa2d.md` -> `wiki/sources/2025-11-20_Descriptors-in-Python_19aa2d.md`（+ 新建概念 `[[概念_Python描述符]]`，详细剖析描述符 `__get__`、`__set__`、`__set_name__` 的生命周期，对比传统的 `@property` getter/setter 校验缺陷，并附带标准的正数值校验与 Product 类的使用代码示例）
+  - `Clippings/DailyDoseOfDS/2025-11-20_Should-you-gather-more-data_19aa2d.md` -> `raw/articles/2025-11-20_Should-you-gather-more-data_19aa2d.md` -> `wiki/sources/2025-11-20_Should-you-gather-more-data_19aa2d.md`（+ 新建概念 `[[概念_学习曲线]]`，定义机器学习诊断中学习曲线的测定方法，阐述等分累加训练集并测量验证集表现的过程，并详细对比 Line A（未饱和/高方差）与 Line B（已饱和/高偏差）的物理意义与决策建议）
+- **索引更新**：将新生成的 2 篇 Source 摘要页 and 2 篇 Concept 页面挂载至 `wiki/index.md`。
+
+## [2026-08-03] ingest | raw/articles/ 2025-10-27_ANN-search-using-inverted-file-index_19a274.md & 2025-11-12_25-most-important-mathematical-definitions-in-DS_19a79c.md -> wiki/sources/ (+ affected pages)
+- **深度阅读与语法净化**：深度阅读 `Clippings/DailyDoseOfDS/` 下的 2 篇文章，进行行内伪 tag 与伪链接检查，确认无需转义，保障 Obsidian 双链与图谱兼容。
+- **物理文件归档与 Ingest 闭环 (Clippings -> raw/articles/)**：
+  - `Clippings/DailyDoseOfDS/2025-10-27_ANN-search-using-inverted-file-index_19a274.md` -> `raw/articles/2025-10-27_ANN-search-using-inverted-file-index_19a274.md` -> `wiki/sources/2025-10-27_ANN-search-using-inverted-file-index_19a274.md`（+ 新建概念 `[[概念_倒排文件索引_IVF]]`，阐明其 K-Means 聚类和两阶段检索机制与复杂度推导，并客观分析边界点遗漏的精度折中；同时将此 Source 关联更新至已有概念 `[[概念_向量索引方法]]` 和 `[[概念_近似最近邻搜索]]` 中）
+  - `Clippings/DailyDoseOfDS/2025-11-12_25-most-important-mathematical-definitions-in-DS_19a79c.md` -> `raw/articles/2025-11-12_25-most-important-mathematical-definitions-in-DS_19a79c.md` -> `wiki/sources/2025-11-12_25-most-important-mathematical-definitions-in-DS_19a79c.md`（+ 新建概念 `[[概念_数据科学核心数学定义]]`，系统梳理 MLE、Z-score、OLS、信息熵、特征值与特征向量、R方系数、KL散度、SVD 和拉格朗日乘子法等数学工具与定义，并编织关联 `[[概念_t-SNE算法]]`、`[[概念_奇异值分解SVD]]` 和 `[[概念_主成分分析_PCA]]` 等丰富双链）
+- **索引更新**：将新生成的 2 篇 Source 摘要页和 2 篇 Concept 页面全量挂载至 `wiki/index.md`。
+
+## [2026-08-03] ingest | raw/articles/ 2025-10-18_Avoid-Using-PCA-for-Visualization-Unless..._199f91.md & 2025-10-24_Top-Gradient-Boosting-Methods_19a177.md -> wiki/sources/ (+ affected pages)
+- **深度阅读与语法净化**：深度阅读 `Clippings/DailyDoseOfDS/` 下的 2 篇文章，进行行内伪 tag 与伪链接检查，确认无需转义，保障 Obsidian 双链与图谱兼容。
+- **物理文件归档与 Ingest 闭环 (Clippings -> raw/articles/)**：
+  - `Clippings/DailyDoseOfDS/2025-10-18_Avoid-Using-PCA-for-Visualization-Unless..._199f91.md` -> `raw/articles/2025-10-18_Avoid-Using-PCA-for-Visualization-Unless..._199f91.md` -> `wiki/sources/2025-10-18_Avoid-Using-PCA-for-Visualization-Unless..._199f91.md`（+ 新建概念 `[[概念_主成分分析_PCA]]`，阐明数学原理、2D 可视化局限性及 CEV 曲线的工程应用，并以双向链接引出 `[[概念_t-SNE算法]]`）
+  - `Clippings/DailyDoseOfDS/2025-10-24_Top-Gradient-Boosting-Methods_19a177.md` -> `raw/articles/2025-10-24_Top-Gradient-Boosting-Methods_19a177.md` -> `wiki/sources/2025-10-24_Top-Gradient-Boosting-Methods_19a177.md`（+ 新建概念 `[[概念_梯度提升决策树_GBDT]]`，详细对比 XGBoost、LightGBM、CatBoost、NGBoost 四大框架在树生长、类别特征、采样机制及概率预测维度的异同与选型逻辑）
+- **索引更新**：将新生成的 2 篇 Source 摘要页和 2 篇 Concept 页面全量挂载至 `wiki/index.md`。
+
+## [2026-08-03] ingest | Clippings -> raw/articles/ 无标签聚类评估与 GPU 归一化优化 2 篇文章 Ingest 入库 (+ affected pages)
+- **深度阅读与语法净化**：对 `Clippings/DailyDoseOfDS/` 下的 2 篇文章进行阅读与语法净化（对行内伪 tag 与伪双链进行了检查和确认，无需要转义的内容，确保 Obsidian 兼容）。
+- **完成 2 篇文章 Ingest 闭环与物理文件归档 (Clippings -> raw/articles/)**：
+  - `Clippings/DailyDoseOfDS/2025-09-16_Clustering-evaluation-without-labels_199543.md` -> `raw/articles/2025-09-16_Clustering-evaluation-without-labels_199543.md` -> `wiki/sources/2025-09-16_Clustering-evaluation-without-labels_199543.md` (+ 新建概念 `[[概念_无标签聚类评估指标]]`，对比轮廓系数、CH指数、DBCV 指标）
+  - `Clippings/DailyDoseOfDS/2025-10-18_A-subtle-neural-network-optimization-technique_199f91.md` -> `raw/articles/2025-10-18_A-subtle-neural-network-optimization-technique_199f91.md` -> `wiki/sources/2025-10-18_A-subtle-neural-network-optimization-technique_199f91.md` (+ 更新已有概念 `[[概念_神经网络训练优化综述]]`，追加数据归一化时机以及 CPU-GPU I/O 搬运瓶颈说明，并将此摘要页关联到 sources 元数据中）
+- **全量同步索引**：将新建的 2 篇 Source 摘要页、1 篇新建 Concept 概念页全量挂载至 `wiki/index.md`。
+
+## [2026-08-03] ingest | Clippings -> raw/articles/ PyTorch DataLoader 与 Python 显式包管理 2 篇文章 Ingest 入库 (+ affected pages)
+- **深度阅读与语法净化**：深度阅读 `Clippings/DailyDoseOfDS/` 下的 2 篇文章，检查并确认无需要转义的行内伪 tag 和伪双链，保障 Obsidian 兼容。
+- **完成 2 篇文章 Ingest 闭环与物理文件归档 (Clippings -> raw/articles/)**：
+  - `Clippings/DailyDoseOfDS/2025-08-25_PyTorch-Dataloader-has-two-terrible-default-settings_198e2e.md` -> `raw/articles/2025-08-25_PyTorch-Dataloader-has-two-terrible-default-settings_198e2e.md` -> `wiki/sources/2025-08-25_PyTorch-Dataloader-has-two-terrible-default-settings_198e2e.md` (+ 更新已存在概念 `[[概念_固定内存_Memory_Pinning]]` 和 `[[概念_神经网络训练优化综述]]`，并在“固定内存”中补充 MNIST 43s 到 9s (4.7x 加速) 的实验对比数据，建立单向推导关联)
+  - `Clippings/DailyDoseOfDS/2025-08-30_Simplify-Python-imports-with-explicit-packaging_198fc6.md` -> `raw/articles/2025-08-30_Simplify-Python-imports-with-explicit-packaging_198fc6.md` -> `wiki/sources/2025-08-30_Simplify-Python-imports-with-explicit-packaging_198fc6.md` (+ 新建概念 `[[概念_Python模块与包管理]]`，阐述 Module/Package/Library 定义、隐式命名空间包特性以及显式 `__init__.py` 的工程设计优势与实践，建立单向推导关联)
+- **全量同步索引**：将新建的 2 篇 Source 摘要页、1 篇新建 Concept 概念页全量挂载至 `wiki/index.md`。
+
+## [2026-08-03] ingest | Clippings -> raw/articles/ 交替注意力与成对句子评分 2 篇文章 Ingest 入库 (+ affected pages)
+- **深度阅读与语法净化**：对 `Clippings/DailyDoseOfDS/` 下的 2 篇文章进行阅读与语法净化（伪 tag 与伪链接检查，确认无需转义，保障 Obsidian 图谱兼容）。
+- **完成 2 篇文章 Ingest 闭环与物理文件归档 (Clippings -> raw/articles/)**：
+  - `Clippings/DailyDoseOfDS/2025-07-01_Full-global-attention-vs-alternating-attention_197c7a.md` -> `raw/articles/2025-07-01_Full-global-attention-vs-alternating-attention_197c7a.md` -> `wiki/sources/2025-07-01_Full-global-attention-vs-alternating-attention_197c7a.md` (+ 新建概念 `[[概念_交替注意力_Alternating_Attention]]`，阐述其滑动窗口局部与全局注意力交替设计、突破二次方复杂度瓶颈并引用读书比喻，建立单向推导关联)
+  - `Clippings/DailyDoseOfDS/2025-08-25_Building-pairwise-sentence-scoring-systems_198e2e.md` -> `raw/articles/2025-08-25_Building-pairwise-sentence-scoring-systems_198e2e.md` -> `wiki/sources/2025-08-25_Building-pairwise-sentence-scoring-systems_198e2e.md` (+ 新建概念 `[[概念_双编码器与交叉编码器]]`，对比双编码器与交叉编码器的原理、效率、精度及应用场景，并简述 AugSBERT，建立单向推导关联)
+- **全量同步索引**：将新建的 2 篇 Source 摘要页、2 篇新建 Concept 概念页全量挂载至 `wiki/index.md`。
+
+## [2026-08-03] ingest | Clippings -> raw/articles/ 多GPU训练策略与GPU加速t-SNE 2 篇文章 Ingest 入库 (+ affected pages)
+- **深度阅读与语法净化**：深度阅读 `Clippings/DailyDoseOfDS/` 下的 2 篇文章，转义行内伪 tag 与非 Obsidian 伪链接，确保 Markdown 图谱兼容。
+- **完成 2 篇文章 Ingest 闭环与物理文件归档 (Clippings -> raw/articles/)**：
+  - `Clippings/DailyDoseOfDS/2025-06-30_4-strategies-for-multi-GPU-training_197c27.md` -> `raw/articles/2025-06-30_4-strategies-for-multi-GPU-training_197c27.md` -> `wiki/sources/2025-06-30_4-strategies-for-multi-GPU-training_197c27.md` (+ 更新已有概念 `[[概念_训练并行策略]]` 和 `[[概念_模型并行]]` 并追加此文中的流水线并行 micro-batch 重叠与通信瓶颈细节，建立单向推导关联)
+  - `Clippings/DailyDoseOfDS/2025-07-01_Accelerate-tSNE-with-GPU_197c7a.md` -> `raw/articles/2025-07-01_Accelerate-tSNE-with-GPU_197c7a.md` -> `wiki/sources/2025-07-01_Accelerate-tSNE-with-GPU_197c7a.md` (+ 新建概念 `[[概念_t-SNE算法]]` 并阐述其二次方复杂度瓶颈与 GPU 700x 速度提升及二维投影限制，建立单向推导关联)
+- **全量同步索引**：将新建的 2 篇 Source 摘要页、1 篇新建 Concept 概念页全量挂载至 `wiki/index.md`。
+
+## [2026-08-03] ingest | Clippings -> raw/articles/ RAG切分策略与网络训练优化 2 篇文章 Ingest 入库 (+ affected pages)
+- **深度阅读与语法净化**：深度阅读 `Clippings/DailyDoseOfDS/` 下的 2 篇文章，转义行内伪 tag，转义伪双链（此批次无直接受累行内 tag 或伪双链，但已确认兼容）。
+- **完成 2 篇文章 Ingest 闭环与物理文件归档 (Clippings -> raw/articles/)**：
+  - `Clippings/DailyDoseOfDS/2025-05-29_5-chunking-strategies-for-RAG_1971dc.md` -> `raw/articles/2025-05-29_5-chunking-strategies-for-RAG_1971dc.md` -> `wiki/sources/2025-05-29_5-chunking-strategies-for-RAG_1971dc.md` (+ 关联 `[[概念_文本切分五层级]]` 等 5 篇已有概念页，追加 sources 并微调其正文，其中在“文本切分五层级”中添加了结构化对比矩阵以及 LLM-based chunking 原理优缺点)
+  - `Clippings/DailyDoseOfDS/2025-06-27_15-techniques-to-optimize-neural-network-training_197b30.md` -> `raw/articles/2025-06-27_15-techniques-to-optimize-neural-network-training_197b30.md` -> `wiki/sources/2025-06-27_15-techniques-to-optimize-neural-network-training_197b30.md` (+ 新建 `[[概念_梯度累积_Gradient_Accumulation]]`、`[[概念_神经网络训练优化综述]]`；更新 `[[概念_固定内存_Memory_Pinning]]`、`[[概念_激活值重计算]]` 并追加此文中的性能数据点)
+- **全量同步索引**：将新建的 2 篇 Source 摘要页、2 篇新建 Concept 概念页全量挂载至 `wiki/index.md`。
+
+## [2026-08-03] ingest | Clippings -> raw/articles/ 2 篇新文章 Ingest 入库与归档 (+ affected pages)
+- **深度阅读与语法净化**：对 `Clippings/DailyDoseOfDS/` 下的 2 篇文章进行净化，确保行内伪 tag 和伪双链全部转义，保障图谱兼容。
+- **完成 2 篇文章 Ingest 闭环与物理文件归档 (Clippings -> raw/articles/)**：
+  - `Clippings/DailyDoseOfDS/2025-04-23_11-Types-of-Variables-in-a-Dataset_196640.md` -> `raw/articles/2025-04-23_11-Types-of-Variables-in-a-Dataset_196640.md` -> `wiki/sources/2025-04-23_11-Types-of-Variables-in-a-Dataset_196640.md` (+ 新建 `[[概念_数据集变量分类]]`)
+  - `Clippings/DailyDoseOfDS/2025-05-07_Memory-Pinning-to-accelerate-model-training_196ac3.md` -> `raw/articles/2025-05-07_Memory-Pinning-to-accelerate-model-training_196ac3.md` -> `wiki/sources/2025-05-07_Memory-Pinning-to-accelerate-model-training_196ac3.md` (+ 新建 `[[概念_固定内存_Memory_Pinning]]`)
+- **全量同步索引**：将新建的 2 篇 Source 摘要页、2 篇 Concept 概念页挂载至 `wiki/index.md`。
+
+## [2026-08-03] ingest | Clippings -> raw Batch 任务 2 篇新文章 Ingest 入库与归档 (+ affected pages)
+- **深度阅读与语法净化**：对 `Clippings/` 下 2 篇文章进行阅读与语法净化，转义行内伪 Tag 与非 Obsidian 伪链接，确保 Markdown 图谱兼容。
+- **完成 2 篇文章 Ingest 闭环与归档移动 (Clippings -> raw/articles/)**：
+  - `Clippings/DailyDoseOfDS/2025-01-31_7-Uses-of-Underscore-in-Python_194be0.md` -> `raw/articles/2025-01-31_7-Uses-of-Underscore-in-Python_194be0.md` -> `wiki/sources/2025-01-31_7-Uses-of-Underscore-in-Python_194be0.md`（因属语言基础内容，未创建对应概念页）
+  - `Clippings/DailyDoseOfDS/2025-02-03_4-ways-to-test-ML-models-in-production_194cd4.md` -> `raw/articles/2025-02-03_4-ways-to-test-ML-models-in-production_194cd4.md` -> `wiki/sources/2025-02-03_4-ways-to-test-ML-models-in-production_194cd4.md` (+ 新建 `[[概念_机器学习模型生产环境测试]]`)
+- **全量同步索引**：将新建的 2 篇 Source 摘要页、1 篇 Concept 概念页全量挂载至 `wiki/index.md`。
+
 ## [2026-07-22] lint/prune | 批复审批降级清理 30 篇低频/易过期概念 (含 Veo3 提示词等)，完成 22 处双链降级还原，剔除 Index 索引 30 行
 
 ## [2026-07-22] ingest | Clippings -> raw Batch 4 任务 2 篇新文章 Ingest 入库与归档 (+ affected pages)

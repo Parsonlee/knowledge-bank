@@ -51,7 +51,7 @@ confidence: high
 
 - [[概念_MCP协议]]
 - [[概念_MCP_CHS架构]]
-- [[概念_MCP五大原语]]
+- [[概念_MCP六大原语]]
 - [[概念_MCP传输方式]]
 - [[概念_HITL_MCP]]
 - [[概念_MCP_Proxy]]

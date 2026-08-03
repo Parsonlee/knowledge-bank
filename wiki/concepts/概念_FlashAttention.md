@@ -16,8 +16,9 @@ sources:
 - wiki/sources/从DeepSeek-V3到Kimi_K2_八种现代LLM架构大比较.md
 - wiki/sources/大模型显存计算公式与优化.md
 - wiki/sources/推测解码Speculative_Decoding综述.md
+- wiki/sources/2025-11-28_Two-techniques-to-extend-the-context-length-of-LLMs_19acc3.md
 created: '2026-06-26'
-updated: '2026-06-26'
+updated: '2026-08-03'
 confidence: high
 ---
 
@@ -27,6 +28,14 @@ confidence: high
 ## 定义
 
 FlashAttention（Tri Dao 等，2022）是一种 I/O 感知（I/O-aware）的注意力优化方法，核心是通过算法重组与硬件协同设计最大限度减少全局显存（HBM）访问，且不做任何近似、保持精度。
+
+## 硬件瓶颈背景 (SRAM 与 HBM)
+
+在现代 GPU 架构中，内存层级（Memory Hierarchy）是决定计算效率的关键因素：
+- **SRAM (Static Random-Access Memory)**：片上高速缓存，容量极其稀少，但速度极快。
+- **HBM (High Bandwidth Memory)**：全局显存，容量非常充沛，但访问速度相对较慢（通常比 SRAM 慢 8-15x）。
+
+传统的自注意力（Self-Attention）计算在计算 $QK^T$ 和 Softmax 时，需要频繁地在 SRAM 与 HBM 之间进行大矩阵（$N \times N$）的写回与读取（物化操作）。这种频繁的内存 I/O 搬运在长序列（大 $N$）情况下会彻底拖累 GPU 计算核心，引发极严重的物理读写限制，导致计算单元长期处于闲置等待状态。因此，内存 I/O 搬运而非计算本身成为了扩展 Transformer 上下文的最大瓶颈。
 
 ## 三大技术要点
 

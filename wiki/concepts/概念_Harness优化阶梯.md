@@ -6,8 +6,9 @@ tags:
 summary: Agent 系统优化对象的五级演进阶梯：Prompt -> 结构化上下文 -> 工作流 -> Harness 代码 -> 优化器代码。
 sources:
 - wiki/sources/OpenAI前VP_Lilian_Weng_AI自我改进的近路不是改权重.md
+- wiki/sources/2026-04-06_The-Anatomy-of-an-Agent-Harness_19d64a.md
 created: '2026-07-22'
-updated: '2026-07-22'
+updated: '2026-08-04'
 ---
 
 # 概念：Harness优化阶梯
@@ -32,3 +33,4 @@ Agent 系统的优化对象呈现由浅入深、自动化程度递增的五级�
 
 - [[OpenAI前VP_Lilian_Weng_AI自我改进的近路不是改权重]]
 - [[concepts/概念_Harness_Engineering]]
+- [[sources/2026-04-06_The-Anatomy-of-an-Agent-Harness_19d64a|The Anatomy of an Agent Harness]]

@@ -178,6 +178,48 @@
 - [[高德地图AI应用开发岗一面，我跪了！！！]] — AI 应用面试复盘：多轮 RAG、RRF、粗排精排、结构切分、记忆冲突与 Agent Loop（RAG/retrieval, RAG/chunking, 面试）
 - [[美团AICoding面试，跪了！！！]] — AI Coding 面试复盘：将高风险评论审核拆为规则、输入输出、权限和测试四层系统（AI-Agent/coding, AI-Agent/eval, 面试）
 - [[读：读代码前先跑的五个 git 命令 - 暗无天日]] — 用 Git 历史识别变更热点、关键维护者、缺陷聚集、提交趋势和救火信号（Skill/linux, AI-Agent/coding）
+- [[2025-01-31_7-Uses-of-Underscore-in-Python_194be0]] — 本文介绍了 Python 中下划线（_）的 7 种主要使用场景，包括获取最后计算值、循环占位符、大数字分隔符以及四种用于命名对象的下划线规范（单前导、单后缀、双前导和双前后导）。（python, python/syntax）
+- [[2025-02-03_4-ways-to-test-ML-models-in-production_194cd4]] — 本文介绍了在生产环境中测试机器学习模型的 4 种经典方法，即 A/B 测试、金丝雀测试、交叉测试（Interleaved）以及影子测试（Shadow），并在其扩展阅读中提及了多臂强盗部署（MAB）。（machinelearning, MLOps, modeltesting）
+- [[2025-04-23_11-Types-of-Variables-in-a-Dataset_196640]] — 介绍了数据集中常见的 11 种变量类型及其定义与应用场景，包括自变量、因变量、混杂变量、控制变量、潜变量、交互变量、平稳/非平稳变量、滞后变量和泄露变量。（data-science, statistics, variable-types）
+- [[2025-05-07_Memory-Pinning-to-accelerate-model-training_196ac3]] — 介绍了在 PyTorch 中使用固定内存（Memory Pinning）技术来加速 CPU-GPU 数据传输的原理和配置方法，通过 pin_memory=True 和 non_blocking=True 实现 CPU 和 GPU 的异步并行工作。（deep-learning, pytorch, performance-optimization, memory-management）
+- [[2025-05-29_5-chunking-strategies-for-RAG_1971dc]] — 本文介绍了在构建 RAG 系统时常用的五种文本切分（chunking）策略，包括固定大小切分、语义切分、递归切分、基于文档结构的切分以及基于 LLM 的切分，并对比了各自的优缺点和适用场景。（RAG, chunking, textsplitting）
+- [[2025-06-27_15-techniques-to-optimize-neural-network-training_197b30]] — 本文总结了15种神经网络训练优化技术，包括使用高效优化器、最大化Batch Size、贝叶斯超参搜索、混合精度训练、He/Xavier初始化、多GPU并行训练、大模型专用库、 activation checkpointing（激活值重计算）、在GPU上进行数据归一化、梯度累积以及DataLoader优化（max_workers和pin_memory）等。（deeplearning, neuralnetwork, optimization, training）
+- [[2025-06-30_4-strategies-for-multi-GPU-training_197c27]] — 介绍多 GPU 模型训练的四种核心并行化策略：模型并行、张量并行、数据并行和流水线并行，并说明其优势与局限。（LLM/training, GPU/parallelism）
+- [[2025-07-01_Accelerate-tSNE-with-GPU_197c7a]] — 讨论 t-SNE 降维算法在处理大规模数据集时的二次方复杂度瓶颈，并介绍 GPU 加送库 tSNE-CUDA 带来的巨大性能提升（达 700x 速度）及仅支持 2D 投影的限制。（ML/dimension-reduction, GPU/acceleration, t-SNE）
+- [[2025-07-01_Full-global-attention-vs-alternating-attention_197c7a]] — 介绍了 ModernBERT 如何通过交替注意力（Alternating Attention，每三层全局注意力，其余层 128 tokens 的滑动窗口局部注意力）来打破传统 BERT 全局注意力二次方复杂度瓶颈，提升内存效率与长序列处理能力。（modernbert, attentionmechanism, deeplearning）
+- [[2025-08-25_Building-pairwise-sentence-scoring-systems_198e2e]] — 探讨了成对句子评分（Pairwise Sentence Scoring）作为现实世界中 RAG 检索、问答系统、信息检索、去重引擎等应用的基础定位，引入了双编码器和交叉编码器等核心 SOTA 方法。（sentencesimilarity, biencoder, crossencoder, nlp）
+- [[2025-08-25_PyTorch-Dataloader-has-two-terrible-default-settings_198e2e]] — 介绍 PyTorch 中 DataLoader 的默认设置问题（导致 CPU 和 GPU 串行等待），并阐述如何通过启用固定内存 (pin_memory=True)、多进程加载以及非阻塞传输 (non_blocking=True) 来实现 CPU-GPU 的异步流水线优化，在 MNIST 数据集上实现 4.7 倍的加速。（deeplearning, pytorch, performancetuning, dataloader, memorypinning）
+- [[2025-08-30_Simplify-Python-imports-with-explicit-packaging_198fc6]] — 探讨 Python 项目中显式包管理机制。虽然 Python 3.3+ 引入了隐式命名空间包，但显式使用 __init__.py 能够明确包的导出接口、简化外部导入路径并避免冗余导入，是优化工程设计的最佳实践。（python, engineeringpractices, moduleandpackage）
+- [[2025-09-16_Clustering-evaluation-without-labels_199543]] — 介绍在无标签情况下评估聚类质量的三种常用指标：轮廓系数（Silhouette Coefficient）、CH指数（Calinski-Harabasz Index）以及基于密度的聚类验证（DBCV），并对比了它们各自的计算开销与适用场景。（machinelearning, clustering, evaluation, unsupervisedlearning）
+- [[2025-10-18_A-subtle-neural-network-optimization-technique_199f91]] — 讨论神经网络训练中的一个细微优化技巧：在图像分类等任务中，将数据归一化（如从 8-bit 整数转为 32-bit 浮点数）的时机放在数据传输到 GPU 之后，以减少 CPU 到 GPU 的数据搬运量，从而提高训练效率。（deeplearning, neuralnetwork, optimization, gpu, datatransfer）
+- [[2025-10-18_Avoid-Using-PCA-for-Visualization-Unless..._199f91]] — 探讨主成分分析（PCA）用于数据可视化时的局限性，并介绍如何通过累计解释方差（CEV）曲线来验证 2D PCA 可视化的可信度，最后指出 t-SNE、UMAP 等专用算法更适合高维数据的可视化任务。（machinelearning, dimensionalityreduction, datavisualization）
+- [[2025-10-24_Top-Gradient-Boosting-Methods_19a177]] — 全面梳理了四大主流梯度提升树模型（XGBoost、CatBoost、LightGBM、NGBoost）的原理、独特创新点（树生长策略、特征处理方式、分层采样机制、概率预测）及选型逻辑，并提供了相关的顶级学术论文引用。（machinelearning, ensemblelearning, gbdt）
+- [[2025-10-27_ANN-search-using-inverted-file-index_19a274]] — 介绍了在向量检索中使用倒排文件索引 (IVF) 进行近似最近邻 (ANN) 搜索的原理。相比暴力搜索 kNN 的 O(ND) 复杂度，IVF 通过 k-means 聚类建立质心到分区的映射，将搜索复杂度降低到 O(KD + ND/K)，大幅度缩减耗时（N=10M，K=100 时可实现近 100 倍加速），同时客观阐述了其以精度折中换取低延迟的机制。（vector-database, vector-search, approximate-nearest-neighbor, indexing）
+- [[2025-11-12_25-most-important-mathematical-definitions-in-DS_19a79c]] — 汇总了数据科学中 25 个最核心的数学定义与公式，并对极大似然估计 (MLE)、标准分数 (Z-score)、最小二乘法 (OLS)、熵 (Entropy)、特征值与特征向量、R方系数 (R-squared)、KL散度、奇异值分解 (SVD) 以及拉格朗日乘子法进行了重点释义和应用场景关联。（data-science, mathematics, statistics, machine-learning）
+- [[2025-11-20_Descriptors-in-Python_19aa2d]] — 探讨 Python 中的描述符（Descriptors）机制。介绍描述符如何解决传统 @property getter/setter 机制在多属性校验时的冗余以及无法在构造时拦截的问题，并对描述符的三个核心魔术方法进行了原理解析。（python, oop, descriptor）
+- [[2025-11-20_Should-you-gather-more-data_19aa2d]] — 探讨如何通过绘制学习曲线（Learning Curve）来评估是否需要收集更多训练数据。介绍了将数据集划分为多个等分并累加训练来测定模型表现的方法，并详细阐述了未饱和曲线与已饱和曲线的物理意义。（machinelearning, modeldiagnostics, learningcurve, datacollection）
+- [[2025-11-28_How-to-use-kNNs-for-imbalanced-datasets_19acc3]] — 探讨了 kNN 算法在不平衡数据集上的局限性，并详细介绍了两种改进方案：距离权重 kNN（在 sklearn 中配置 weights='distance'）和动态调整超参数 k 的算法。（machinelearning, knn, imbalanceddata）
+- [[2025-11-28_Two-techniques-to-extend-the-context-length-of-LLMs_19acc3]] — 探讨了扩展大语言模型（LLM）上下文长度面临的二次方复杂度瓶颈，并详细介绍了两种主流优化技术：近似计算的稀疏注意力（Sparse Attention）和优化 GPU 显存数据流搬运的 Flash Attention，同时指出选择合适位置编码（如 RoPE）在长上下文理解中的关键作用。（deeplearning, llm, attentionmechanism, flashattention, sparseattention）
+- [[2025-12-02_7-categorical-data-encoding-techniques_19ae0c]] — 介绍了 7 种常见的类别型数据编码技术（One-Hot、Dummy、Effect、Label、Ordinal、Count、Binary）的基本原理、特征输出维度及其适用场景。（machine-learning, feature-engineering, data-preprocessing, categorical-encoding）
+- [[2025-12-02_Platt-Scaling-for-model-calibration_19ae0c]] — 介绍了模型校准的定义和实际价值，阐述了现代深度学习模型过度自信的现象，并详细剖析了 Platt 缩放（Platt Scaling）的物理映射机制、算法步骤及局限性。（machine-learning, model-calibration, classification-models, probability-estimation）
+- [[2025-12-26_Loss-Function-of-16-ML-Algos_19b5c7]] — 汇总了16种常见机器学习算法所采用的典型损失函数，并分析了部分非参数/贝叶斯算法在训练中不需要损失函数的物理本质。（machinelearning, lossfunction, algorithm）
+- [[2025-12-26_The-right-way-to-use-multiple-embedding-models_19b5c7]] — 探讨在多模型流水线中混用多个 Embedding 模型时的局限性，阐述了等维异构空间无法直接度量相似度的物理原因，并提出了特征拼接与对齐训练等解决方案。（machinelearning, embedding, representationlearning）
+- [[2025-12-29_Identify-fuzzy-duplicates-at-scale_19b6bf]] — 介绍在大规模模糊重复数据检测中，由于 pairwise 两两比对所面临的 O(N^2) 复杂度瓶颈，通过引入分块阻断（Blocking / Bucketing）技术来减少 98% 以上的冗余计算，将原本需要数年的计算量压缩至数小时内完成。（datadeduplication, fuzzymatching, blockingtechnique, scale）
+- [[2026-02-04_4-parallel-processing-techniques-in-Python_19c2a8]] — 对比 Python 中实现并发与并行的四种技术：线程、多进程、协程和子解释器。分析了 GIL 的约束、各种技术的适用场景、性能优缺点，并探讨了 Python 3.13 自由线程（无 GIL）的未来演进趋势。（python, concurrency, parallelism, gil, multithreading, multiprocessing, coroutines, subinterpreters）
+- [[2026-02-04_Why-ML-models-need-calibration_19c2a8]] — 介绍现代神经网络存在过度自信（overconfidence）的问题，说明为什么机器学习模型需要进行校准（calibration），并提供了一个医疗与政府决策的实例来说明非校准模型的潜在危害。（classification, modelcalibration, machinelearning）
+- [[2026-03-04_16-techniques-to-optimize-neural-network-training_19cba7]] — 总结了16种神经网络训练优化技术，包括高效优化器、硬件加速器、增大Batch Size、使用动量（Momentum）、贝叶斯优化超参数搜索、混合精度训练、He/Xavier权重初始化、多GPU并行训练、大模型优化技术（DeepSpeed等）、DDP数据加载、激活检查点（Activation Checkpointing）、GPU端数据归一化、梯度累积以及DataLoader的线程与内存优化。（deeplearning, neuralnetworks, optimization, trainingtechniques）
+- [[2026-03-04_6-must-know-MCP-primitives-for-AI-Engineers_19cba7]] — 介绍了 AI 工程师必须掌握的 6 个 Model Context Protocol (MCP) 原语，包括客户端的 Sampling、Roots、Elicitations，以及服务端的 Tools、Resources、Prompts，阐述了其作为双向通信协议超越传统单向工具调用的特性。（AIAgent/MCP, AIAgent/toolcalling）
+- [[2026-03-13_How-to-actually-use-train,-validation,-and-test-sets_19ce93]] — 探讨了机器学习中训练集、验证集和测试集的标准划分职责，重点阐述了多次迭代调整导致“验证集过拟合与信息泄露”的隐性瓶颈，并提出了 K 折交叉验证与嵌套交叉验证（Nested CV）的机制流程，以及时序、不平衡、分组数据等复杂环境下的划分规范与预处理防泄露指南。（machinelearning/evaluation, machinelearning/methodology）
+- [[2026-03-13_What-are-RL-environments,-and-how-to-build-them_19ce93]] — 探讨在构建多步推理 AI Agent 时，强化学习环境（Environment）所面临的真正瓶颈与挑战，并介绍 NVIDIA NeMo Gym 与 Unsloth 结合 of 解耦架构设计。（ReinforcementLearning, AIAgents, NeMoGym, Unsloth）
+- [[2026-03-23_Anatomy-of-the-.claude-folder_19d1c3]] — 详细剖析 Claude Code 控制中心——`.claude/` 目录的结构 and 配置原语，涵盖 CLAUDE.md、规则系统、自定义命令、技能（skills）、智能体（agents）以及权限设置 settings.json 的机制。（ClaudeCode, AITools, Configuration）
+- [[2026-03-24_RAG-vs-MetaAI's-REFRAG_19d21b]] — 介绍 Meta AI 提出的 REFRAG 架构，该架构通过在向量层面压缩和过滤检索到的 Chunks，从而实现高效率 RAG 检索，大幅降低延迟与 token 消耗。（RAG, MetaAI, REFRAG, LLM）
+- [[2026-03-26_Breathing-KMeans-vs-KMeans_19d2bb]] — 介绍 Breathing KMeans 算法。该算法克服了传统 KMeans 对初始化敏感和多次随机重训耗时的问题，通过动态吸气（分裂）和呼气（合并）过程优化质心位置，提速达 50% 并能有效避免质心错位。（MachineLearning, Clustering, KMeans, BreathingKMeans）
+- [[2026-04-06_The-Anatomy-of-an-Agent-Harness_19d64a]] — 剖析生产级 Agent Harness 架构，定义 11 个核心模块并详解单步运行流程、长周期 Ralph Loop 协作模式及 7 个架构设计抉择。（AI-Agent/harness, AI-Agent/infrastructure）
+- [[2026-04-12_20-most-common-magic-methods_19d838]] — 介绍并分类 Python 面向对象编程中最常用的 20 个魔术方法（Dunder 方法），简述其功能与对 Descriptor 机制的引申。（python, oop, magic-methods）
+- [[2026-04-23_Cyclical-feature-encoding_19dbca]] — 机器学习中周期性特征的三角函数（Sine/Cosine）双通道编码方法与等距特征表示。（machine-learning, feature-engineering, cyclical-features）
+- [[2026-04-23_LoRAQLoRA-explained-from-a-business-lens_19dbca]] — 从多租户商业与工程架构视角剖析 LoRA/QLoRA 微调的内存、存储优势与适配器动态热插拔运行逻辑。（machine-learning, parameter-efficient-fine-tuning, lora, business-ml）
+- [[2026-05-01_A-tricky-LLM-interview-question-for-AI-Engineers_19de58]] — 探讨在微调/蒸馏小模型（如 3B/8B）时，使用顶级大模型作为教师生成合成数据，其效果反而可能比不上中等教师模型这一容量匹配法则。（llm, distillation, fine-tuning）
+- [[2026-05-01_How-to-beat-GRPO-without-touching-model-weights_19de58]] — 详细阐述 GEPA 无梯度提示词进化算法，并横向对比其与 GRPO 等强化学习算法的优劣与应用场景。（rl, grpo, gepa, prompt-tuning）
 
 ## Concepts
 
@@ -412,7 +454,7 @@
 - [[概念_CLAUDE.md最佳实践]] — 编写 CLAUDE.md 工程宪法以约束 Agent 行为的高级指南与规范范式 (AI-Agent/coding)
 - [[概念_MCP协议]] — MCP 定义、CHS 架构、五大原语、传输方式、与 Function Call 关系全景（AI-Agent/tool-calling）
 - [[概念_MCP_CHS架构]] — Client-Host-Server 三组件精确界定：Host 是 AI 智能唯一承载者，Server/Client 是模型无关 RPC 管道（AI-Agent/tool-calling）
-- [[概念_MCP五大原语]] — Tool/Prompt/Resource/Sampling/Roots 五类原语：触发方、用途、高阶玩法与 Web 化方向（AI-Agent/tool-calling）
+- [[概念_MCP六大原语]] — Tool/Prompt/Resource/Sampling/Roots/Elicitations 六类原语：触发方、用途、高阶玩法与 Web 化方向（AI-Agent/tool-calling）
 - [[概念_MCP传输方式]] — Stdio/SSE/Streamable HTTP 三种传输方式对比与选型（AI-Agent/tool-calling）
 - [[概念_MCP与Function_Call对比]] — 协议 vs 模型特性、静态 vs 动态、碎片化痛点与 MCP 解法（AI-Agent/tool-calling）
 - [[概念_MCP代码执行模式]] — CodeAgent 模式：按需加载工具定义，Token 消耗减少 98.7%，含隐私保护与 Skills 沉淀（AI-Agent/tool-calling）
@@ -569,6 +611,10 @@
 - [[概念_Python循环优化技巧]] — 12 种 for 循环优化方法与提速比，map/set/lru_cache/filterfalse（Skill/python）
 - [[概念_Python函数式工具]] — map/lru_cache/filterfalse/Generator，C 实现替代显式循环（Skill/python）
 - [[概念_Python进阶特性]] — suppress/setrecursionlimit/Literal/__missing__/__subclasshook__（Skill/python）
+- [[概念_Python并发与并行机制]] — 未分类概念摘要（python, concurrency, parallelism, gil, programming）
+- [[概念_Python描述符]] — Python 描述符（Descriptors）是实现底层属性代理的核心机制。通过控制属性的获取、修改和名称绑定，它能有效解决传统 @property getter/setter 机制在多属性校验时的代码冗余，并能在对象初始化时直接进行拦截校验。（python, oop, descriptor）
+- [[概念_Python模块与包管理]] — 未分类概念摘要（python, engineeringpractices, moduleandpackage）
+- [[概念_Python魔术方法]] — Python 魔术方法（Dunder 方法）是实现 Python 对象协议与重载内置行为的核心机制。本文整理分类了 20 种最常用魔术方法，详细解析了 __new__ 与 __init__ 的本质差异与调用时序，展示了利用 __new__ 实现单例模式，并关联了描述符机制。（python, oop）
 
 ### Skill/data-analysis（Phase 5 Batch 2）
 - [[概念_自动EDA工具]] — 10 个自动 EDA 包四类分类（报告/可视化/定制/ML 集成）与选型建议（Skill/data-analysis, Skill/python）
@@ -690,6 +736,10 @@
 ### Skill/python（Phase 5 Batch 1）
 - [[实体_FastAPI]] — Python 高性能 Web 框架，基于 Starlette/Pydantic，原生 async/await，性能与 Go 不相上下（Skill/python）
 - [[实体_uv]] — Astral 开发的 Rust 编写 Python 包管理器，pip 替代品，约 10x 速度提升（Skill/python）
+- [[概念_Python并发与并行机制]] — 未分类概念摘要（python, concurrency, parallelism, gil, programming）
+- [[概念_Python描述符]] — Python 描述符（Descriptors）是实现底层属性代理的核心机制。通过控制属性的获取、修改和名称绑定，它能有效解决传统 @property getter/setter 机制在多属性校验时的代码冗余，并能在对象初始化时直接进行拦截校验。（python, oop, descriptor）
+- [[概念_Python模块与包管理]] — 未分类概念摘要（python, engineeringpractices, moduleandpackage）
+- [[概念_Python魔术方法]] — Python 魔术方法（Dunder 方法）是实现 Python 对象协议与重载内置行为的核心机制。本文整理分类了 20 种最常用魔术方法，详细解析了 __new__ 与 __init__ 的本质差异与调用时序，展示了利用 __new__ 实现单例模式，并关联了描述符机制。（python, oop）
 
 ### Skill/data-analysis（Phase 5 Batch 2）
 - [[实体_Pandas]] — Python 数据分析核心库，基于 NumPy，Series/DataFrame + groupby/merge/pivot/plot（Skill/data-analysis, Skill/python）
@@ -768,6 +818,42 @@
 - [[实体_AI2_Tmax]] — AI2 小参数量模型，验证代码 RL 在终端训练后向数学 AIME 竞赛题的无缝能力迁移（LLM/arch, LLM/training/RL）
 - [[实体_Coggle]] — Coggle 数据科学社区，关注数据科学、算法竞赛与 Agent 能力工程化实战（AI-Agent/skill）
 - [[实体_Anthropic]] — 安全导向前沿 AI 研究实验室，研发 Claude 系列模型、Agent Skills 元工具架构与接种提示词（AI-Agent/skill, LLM/arch）
+
+### 机器学习与数据科学基础（Batch Ingest）
+- [[概念_t-SNE算法]] — t-SNE 是一种流形学习降维与二维可视化算法。其 CPU 计算具有 O(N²) 二次方复杂度瓶颈，大样本下极其缓慢。tSNE-CUDA 可提供高达 700 倍的 GPU 极速提升，但目前硬件上仅支持生成二维投影（n_components=2）。（ML/dimension-reduction, t-SNE, GPU/acceleration）
+- [[概念_不平衡数据的kNN优化]] — 未分类概念摘要（machinelearning, knn, imbalanceddata）
+- [[概念_主成分分析_PCA]] — 未分类概念摘要（machinelearning, dimensionalityreduction, mathematics）
+- [[概念_交替注意力_Alternating_Attention]] — 交替注意力（Alternating Attention）是 ModernBERT 采用的记忆体高效注意力机制，通过在每三层交替使用一层全局注意力与滑动窗口局部注意力（128个最近 token），打破了传统 BERT 全局注意力二次方复杂度的瓶颈。（attentionmechanism, modernbert, efficiency）
+- [[概念_倒排文件索引_IVF]] — 倒排文件索引 (Inverted File Index, IVF) 是一种常用的高维向量近似最近邻搜索 (ANNS) 索引方法。它通过聚类将空间划分为若干分区，使得检索时只需搜索最近质心所在的局部胞腔，从而极大降低计算复杂度并提高检索速度。（vector-database, vector-search, indexing, approximate-nearest-neighbor）
+- [[概念_分块阻断技术_Blocking]] — 未分类概念摘要（datadeduplication, computerscience, optimization, algorithm）
+- [[概念_分类模型校准]] — 未分类概念摘要（machine-learning, deep-learning, model-calibration, probability-estimation）
+- [[概念_双编码器与交叉编码器]] — 阐述了成对句子评分（Pairwise Sentence Scoring）中双编码器（Bi-encoders）与交叉编码器（Cross-encoders）的机制差异、优劣势及应用场景，并简要介绍了结合两者的 AugSBERT 架构。（sentencesimilarity, biencoder, crossencoder, nlp）
+- [[概念_固定内存_Memory_Pinning]] — 未分类概念摘要（deep-learning, pytorch, gpu, performance-tuning）
+- [[概念_学习曲线]] — 学习曲线（Learning Curve）是评估机器学习模型表现是否随数据量增加而提升的重要诊断工具。它能帮助开发者科学决策是否需要投入成本收集更多数据，诊断模型当前是处于高方差还是高偏差阶段。（machinelearning, modeldiagnostics, learningcurve）
+- [[概念_数据科学核心数学定义]] — 整理并阐述了数据科学与机器学习中常用的核心数学定义，包括极大似然估计 (MLE)、标准分数 (Z-score)、最小二乘法 (OLS)、熵 (Entropy)、特征值与特征向量、R方系数 (R-squared)、KL散度、奇异值分解 (SVD) 以及拉格朗日乘子法。（data-science, mathematics, statistics, linear-algebra）
+- [[概念_数据集变量分类]] — 未分类概念摘要（statistics, machine-learning, variable-types）
+- [[概念_无标签聚类评估指标]] — 系统总结和对比了三种无标签（无监督）聚类评估指标：轮廓系数（Silhouette Coefficient）、Calinski-Harabasz 指数（CH指数）以及基于密度的聚类验证（DBCV），分析了它们的物理含义、数学算式、计算复杂度及适用场景。（machinelearning, clustering, evaluation, unsupervisedlearning）
+- [[概念_机器学习损失函数]] — 未分类概念摘要（machinelearning, lossfunction, optimization）
+- [[概念_机器学习模型生产环境测试]] — 机器学习模型在生产环境中的五种主流测试与部署策略，包括 A/B 测试、金丝雀测试、交叉测试、影子测试以及多臂强盗（MAB）部署，旨在降低新模型上线风险并评估真实环境表现。（MLOps, machinelearning, modeltesting）
+- [[概念_梯度提升决策树_GBDT]] — 未分类概念摘要（machinelearning, ensemblelearning, gbdt, supervisedlearning）
+- [[概念_梯度累积_Gradient_Accumulation]] — 梯度累积（Gradient Accumulation）是一种在硬件显存受限时，通过多次前向和反向传播累积梯度，再统一执行一次参数更新，从而在逻辑上等效实现大 Batch Size 训练的优化技术。（deeplearning, pytorch, optimization, training）
+- [[概念_神经网络训练优化综述]] — 汇总并分类总结了神经网络训练中的16种常见优化技术，涵盖硬件加速、混合精度、并行策略、显存管理、动量优化及 I/O 加载等维度，旨在建立起神经网络优化的大图景。（deeplearning, neuralnetwork, optimization, training）
+- [[概念_稀疏注意力]] — 未分类概念摘要（deeplearning, llm, attentionmechanism, sparseattention）
+- [[概念_类别特征编码技术]] — 未分类概念摘要（machine-learning, feature-engineering, data-preprocessing, representation-learning）
+- [[概念_训练验证测试集划分]] — 规范化阐述机器学习中训练集、验证集和测试集的三阶段划分职责，分析验证集过拟合瓶颈，介绍 K 折交叉验证与嵌套交叉验证（Nested CV）的原理流向，并针对时序、不平衡、分组及数据预处理等复杂场景给出具体的防泄漏划分准则。（machinelearning/evaluation, machinelearning/methodology）
+- [[概念_跨模型嵌入对比局限]] — 未分类概念摘要（machinelearning, embedding, vectorspace, representationlearning）
+
+### 机器学习与数据科学基础（Batch Ingest）
+- [[概念_Agentic_RL环境与GRPO]] — 未分类概念摘要（ReinforcementLearning, AIAgents, Infrastructure, GRPO）
+- [[概念_Claude_Code核心配置与原语]] — 未分类概念摘要（ClaudeCode, AITools, ConfigArchitecture）
+- [[概念_周期性特征编码]] — 周期性特征在时序中的表现，传统线性编码的边界缺陷，Sine/Cosine 双通道单位圆投影映射及其等距几何优势推导。
+- [[概念_LoRA与QLoRA微调]] — LoRA 冻结 W 并更新 A/B 低秩分解矩阵的数学机制，多租户架构下共享底座大模型的存储与成本对比，及 Adapter 热插拔运行逻辑。
+- [[概念_大模型蒸馏的容量匹配法则]] — 在微调/蒸馏小模型时，使用顶级大模型作为教师生成合成数据，其效果反而可能比不上中等教师模型这一“反直觉”容量匹配法则。（distillation, knowledge-transfer, fine-tuning）
+- [[概念_GEPA提示词进化算法]] — 详细定义 GEPA 无梯度提示词进化算法，阐述其如何通过自然语言反思与 Pareto 采样避免强化学习的标量信号压缩瓶颈，并横向对比其他提示词优化技术。（gepa, prompt-tuning, rl, dspy）
+
+### 机器学习与数据科学基础（Batch Ingest）
+- [[概念_Breathing_KMeans算法]] — Breathing KMeans 是一种解决传统 KMeans 初始化敏感和重训高耗时的聚类算法。它通过动态的“吸气”（在误差大的质心附近分裂出新质心）和“呼气”（合并并删除低效用的紧邻质心）循环，实现速度和准确性的双重提升。（MachineLearning, Clustering, KMeans, BreathingKMeans）
+- [[概念_REFRAG_RAG压缩与过滤]] — REFRAG 是 Meta AI 提出的一种在向量层面进行压缩与过滤的 RAG 检索优化框架，能够显著提高首字生成时间（TTFT），并减少冗余 token 开销。（RAG, MetaAI, REFRAG, InformationRetrieval）
 
 ## Comparisons
 

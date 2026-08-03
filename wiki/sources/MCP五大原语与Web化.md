@@ -31,7 +31,7 @@ confidence: high
 
 ## 关联
 
-- [[概念_MCP五大原语]] — 本文核心：Prompt/Resource/Tool/Sampling/Roots
+- [[概念_MCP六大原语]] — 本文核心：Prompt/Resource/Tool/Sampling/Roots
 - [[概念_MCP协议]] — MCP 基础
 - [[概念_MCP传输方式]] — Streamable HTTP
 - MCP链式调用 — Sampling 实现的链式调用
