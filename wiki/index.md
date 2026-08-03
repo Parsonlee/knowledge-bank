@@ -228,6 +228,33 @@
 - [[2026-06-01_Claude-Code-dynamic-workflows,-explained!_19e84f]] — 解析了 Claude Code 在 Opus 4.8 时代引入的 Dynamic Workflows（动态工作流）机制，对比了 Subagents、Agent Teams 与 Dynamic Workflows 在编排、规模、通信和灾备上的差异，探讨了其内部的 JS 脚本执行与对抗性验证原理。（claude-code, multi-agent, dynamic-workflows）
 - [[2026-06-08_An-intuitive-guide-to-non-linearity-of-ReLU_19ea91]] — 解析神经网络中 ReLU 激活函数如何通过分段线性插值拟合任意非线性函数，以及多神经元联合的光滑非线性感知本质。
 - [[2026-06-14_7-LLM-generation-parameters_19ec7f]] — 解构控制大语言模型（LLM）文本生成的 7 个核心解码参数的工作原理、数学逻辑与应用场景。
+- [[2026-06-18_Visual-guide-to-Bi-encoders,-Cross-encoders-&-ColBERT_19edcc]] — 介绍双编码器、交叉编码器与 ColBERT 架构在成对句子评分系统中的工作机制、优劣势，并阐明延迟交互（Late Interaction）平衡检索吞吐与精准度。（sentencesimilarity, biencoder, crossencoder, colbert, nlp）
+- [[2026-06-24_Loop-engineering,-clearly-explained!_19ef72]] — 探讨智能体底层的 Tool Call 循环，并拆解 Done 终局判定偏误、上下文腐烂与末日死循环、循环下工具设计的特殊性以及 Maker-Checker 机制等四大痛点。（AIAgents, loop-engineering, context-rot, maker-checker）
+- [[2026-06-24_Recursive-language-models_19ef72]] — 介绍由MIT提出的递归语言模型（RLM，Recursive Language Models）架构，该架构通过在Python REPL环境中缓存上下文数据，并让模型使用工具进行Peek、Regex过滤和Partition分治，实现自上而下的递归子调用，从而有效解决Context Rot问题，保证超长文本性能不衰减。（AI-Agent/recursive-language-models, AI-Agent/context-engineering）
+- [[2026-06-25_6-components-of-context-engineering_19f00c]] — 探讨上下文工程（Context Engineering）的 6 个核心组件，包括提示词技术、查询增强、长期记忆、短期记忆、知识库检索以及工具与智能体，并指出上下文工程是决定AI应用质量的75%的关键部分。（AI-Agent/context-engineering）
+- [[2026-06-25_The-AI-engineering-master-stack-for-2026!_19f00c]] — 介绍了 2026 年 AI 工程师应掌握的 10 层技术栈全景，从底座模型表征到生产环境的 LLMOps 与安全，勾勒出从单点 Prompt 开发向复杂系统工程演进的宏观技术路径。（AI-Agent/Infra, LLMOps, AI-Engineering）
+- [[2026-07-03_11-most-important-plots-in-DSML_19f29f]] — 系统归纳了数据科学与机器学习中最重要且必须掌握的 11 种诊断、评估与可解释性图表，简要说明了其物理意义与主要应用准则。（data-science, machine-learning, model-evaluation, model-interpretability）
+- [[2026-07-03_Prompt,-context,-harness-&-loop-engineering_19f29f]] — 详细拆解了围绕 LLM 运作的四层工程阶梯（Prompt、Context、Harness、Loop Engineering），它们由内而外包裹，各自承担着大模型应用在推理阶段的不同层级优化与控制面职责。（AI-Agent/loop-engineering, AI-Agent/coding）
+- [[2026-07-07_4-LLM-text-generation-strategies_19f3d7]] — 探讨了 LLM 文本生成中的四种核心解码策略（贪婪搜索、多项式采样、束搜索与对比搜索），分析了它们的工作机制以及在流畅度、多样性与重复度等方面的权衡。（LLM/decoding-strategies, LLM/generation）
+- [[2026-07-07_Rethinking-KV-caching-for-production-inference_19f3d7]] — 针对 AI 智能体应用中 62% 的重复 Token 浪费问题，介绍解耦式 KV 缓存架构 LMCache，该架构实现缓存管理与推理引擎进程解耦，并引入 CacheBlend 算法提速多文档 RAG 场景。（LLM/inference, Infra/AI, KV-Cache）
+- [[2026-07-14_NVIDIA-researchers-built-a-new-transformer-variant_19f617]] — 介绍 NVIDIA 与 MIT 联合提出的 SparDA 架构。该架构在传统 Transformer 的 Q/K/V 投影之上引入第四投影 Forecast，预测下一层所需的 KV 块，从而实现从 CPU 内存异步预取 KV Cache，大幅缓解长文本 CPU offload 传输瓶颈。（LLM/inference, Infra/AI, KV-Cache）
+- [[2026-07-14_The-four-types-of-agent-loops_19f617]] — 介绍智能体循环的四种主要设计类型（单步交互式、目标驱动式、时间触发式、事件主动式）及对自主性的分担和职责让渡。（AI-Agent/loop-engineering, AI-Agent/coding）
+- [[2026-07-21_5-LLM-Quantization-Techniques_19f86b]] — 探讨大模型量化技术（Quantization）及其面临 of 离群值（Outliers）挑战，并对比五种主流的量化方法（RTN、GPTQ、AWQ、LLM.int8()、QAT）。（LLM/quantization, LLM/optimization）
+- [[2026-07-24_11-LLM-evaluation-methods_19f962]] — 系统性整理 11 种必知的大模型（LLM）评估方法与指标（BLEU/ROUGE/BERTScore/G-Eval/Judge/Juries/DAG/Trajectory/Multi-turn等），并探讨其使用局限与最佳实践。
+- [[2026-07-24_Delta-attention-in-Kimi-K3-to-fix-growing-KV-cache_19f962]] — 介绍 Kimi K3 采用的 Delta Attention 机制。该机制将历史信息折叠压缩在固定大小的关联矩阵中，通过“先读后写、只写差值”的 Delta Rule 更新关联，实现 $O(1)$ 的空间与 $O(N)$ 的计算开销。
+- [[2026-07-24_Quantile-regression_19f962]] — 本文详细介绍了分位数回归（Quantile Regression）及其核心损失函数分位数损失（Quantile Loss / Pinball Loss），对比了传统最小二乘（OLS）均值点预测的局限并总结了其工程价值。（machine-learning, regression, loss-function）
+- [[2026-07-27_Agent-memory-and-state-are-not-the-same-thing!_19fa57]] — 本文探讨了 AI 智能体设计中状态（State）与记忆（Memory）的本质区别，提出了状态 Checkpoint断点恢复方案与多智能体记忆命名空间隔离机制。（AI-Agent/harness, AI-Agent/memory, state-management）
+- [[2026-07-27_Graph-engineering-clearly-explained_19fa57]] — 阐述了图工程（Graph Engineering）的核心概念、多层同轴架构关系、四大痛点设计准则以及引入图工程的决策依据。（Agent, Multi-Agent, Graph-Engineering, Architecture）
+- [[2026-07-27_The-anatomy-of-diffusion-LLMs_19fa57]] — 介绍了扩散语言模型（dLLMs）的基本原理、物理架构优势（从 memory-bound 转向 compute-bound），以及掩码扩散、Block Diffusion、注意力掩码退火与推理加速技术。（LLM, Diffusion-LLM, Autoregressive, Inference-Optimization）
+- [[2026-07-28_CPU-vs-GPU-vs-TPU-vs-NPU-vs-LPU_19faa9]] — 详细介绍了五种主流AI计算硬件架构（CPU、GPU、TPU、NPU和LPU）内部逻辑设计的物理差异与核心权衡，展现了AI计算芯片从通用灵活性向极致专用化的演进过程。（AI-Hardware/Accelerator, Computer-Architecture/Processor）
+- [[2026-07-28_Technical-LLM-interview-question!_19faa9]] — 介绍了 DigitalOcean 提出的基于确定性、轻量化行为信号对生产环境 Agent 交互轨迹进行高效低成本筛选过滤的采样策略，大幅提升了人工标注的效率。（AI-Agent/evaluation, Software-Engineering/Observability）
+- [[2026-07-31_6-automatic-optimization-methods-for-LLM-systems_19fb9f]] — 介绍了六种在大模型系统中实现自动化优化的前沿方法（OPRO, MIPROv2, TextGrad, GEPA, AlphaEvolve, AutoResearch），通过大模型自动反馈循环替代人工调优。（llm, optimization, prompt-engineering, auto-tuning）
+- [[2026-07-31_Subagents-vs.-Agent-Teams_19fb9f]] — 对比了 Claude 提供的两种多智能体范式：Sub-agents（基于隔离实现并行与 Context 压缩，单向反馈）和 Agent Teams（基于协同通信与共享状态，双向协作），并从第一性原理探讨了以上下文为中心的分治逻辑。（multi-agent, sub-agents, agent-teams, architecture）
+- [[2026-08-01_Free-Observability-Engineering-Masterclass-with-Liz-Fong-Jones-&-Honeycomb_19fbed_part1]] — 介绍 Honeycomb 举办的由 Liz Fong-Jones 授课的六期免费可观测性工程直播大师课，涵盖从 OpenTelemetry 插桩到多领域可观测性的实践应用。（observability, learning-resource, honeycomb）
+- [[2026-08-01_Build-a-stock-market-research-Agentic-workflow_19fbed_part2]] — 介绍轻量级 AI-native 可视化智能体工作流构建框架 Sim，讨论其基于 ReactFlow 的拖拽式界面、支持 Ollama 本地模型以及对标 n8n 的优势，并通过结合 Alpha-Vantage MCP 与 Telegram 的股市研究 Agent 案例展示其实际应用。（agentic-workflow, ai-framework, stock-market）
+- [[2026-08-01_Data-Version-Control_19fbed_part4]] — 介绍如何使用数据版本控制（DVC）与 Git 协同工作，解决 Git 无法处理大文件的问题，从而实现机器学习项目的完全可复现性。（MLOps, data-version-control, DVC）
+- [[2026-08-01_Double-Descent-vs.-Bias-Variance-Trade-off_19fbed_part3]] — 介绍机器学习与深度学习中的双下降（Double Descent）现象，该现象对传统的偏差-方差折中理论提出了挑战，指出在模型复杂度跨越临界插值界限后测试误差可能会二次下降。（machine-learning, double-descent, generalization）
+- [[2026-08-01_Succeed-in-ai-engineering-roles_19fbed_part5]] — 汇总了全栈 AI 工程师需要重点修习的课程大纲与能力清单，涵盖 MLOps、MCP、Agentic 系统、RAG 应用、GNN、上下文打分、量化、保形预测、因果推断、模型压缩等多个领域。（full-stack-ai-engineering, learning-resource, career-development）
 
 ## Concepts
 
@@ -297,6 +324,13 @@
 - [[概念_Random_Patches大数据训练]] — 随机贴片在大数据集上训练经典集成模型的机制与方差降低原理
 - [[概念_ONNX模型跨平台部署]] — 模型开发框架与伺服生产环境解耦标准、ORT图优化与硬件子图分发机制
 - [[概念_聚类算法分类综述]] — 系统性梳理聚类算法的 6 大主流家族（基于质心、基于连通性、基于密度、基于图、基于分布和基于压缩/降维），对比硬聚类与软聚类的决策边界，并分析算法对聚类形状和密度的适应差异。（MachineLearning, Clustering）
+- [[概念_解耦式KV缓存与LMCache]] — 旁路独立进程实现缓存管理与推理引擎解耦，辅以 CacheBlend 选择性重计算，大幅提速多文档与 Agent 推理。（LLM/inference, Infra/AI）
+- [[概念_SparDA预测式KV缓存预取]] — 引入 Forecast 跨层预测及双 CUDA stream 异步预取机制，有效重叠长文本下 CPU offload 传输与 GPU 推理计算，大涨吞吐量。（LLM/inference, Infra/AI）
+- [[概念_Graph_Engineering图工程]] — 定义图工程（Graph Engineering）的核心内涵以及三大物理要素，展示 5 层嵌套同轴系统架构并拆解四大痛点设计准则。（Architecture, Agent, Multi-Agent, Graph-Engineering）
+- [[概念_扩散大语言模型_dLLMs]] — 定义扩散大语言模型（dLLMs）的物理架构、比对自回归与扩散模型的计算性质差异，详述离散掩码扩散及模型转换加速机制。（Architecture, LLM, Diffusion-LLM, Inference-Optimization）
+- [[概念_AI硬件加速芯片架构]] — 定义并横向对比 CPU、GPU、TPU、NPU 与 LPU 五种主流 AI 计算芯片架构 of 物理特征、存储层次以及计算调度机制。（Architecture, Hardware, Processor, Inference）
+- [[概念_数据版本控制与DVC]] — 介绍 DVC 核心定位与 MLOps 复现性价值，拆解其轻量级元数据描述与大物理文件存储分流的两阶段联动机制，以及 git checkout + dvc pull 的可复现工作流。（MLOps, data-version-control, DVC）
+- [[概念_机器学习双下降现象]] — 阐述在过度参数化区域由于隐式正则化作用测试误差发生二次下降的现象，分析临界插值界限与偏置-方差折中理论的物理差异。（MachineLearning, Double-Descent, Generalization）
 
 ### RAG
 - [[概念_RSE相关段落提取]] — Relevant Segment Extraction：定位并提取文档连续相关段落
@@ -436,6 +470,9 @@
 - [[概念_思维链CoT高级方法]] — CoT/CoT-SC/Decoding CoT/ToT+MCTS 及成本权衡（LLM/reasoning）
 - [[概念_自适应快慢思考]] — 三方案：Qwen3 SFT、AdaCoT Pareto、AdaThinking 约束优化（LLM/reasoning）
 - [[概念_LLM推理两阶段]] — 对比 Prefill 与 Decode 硬件瓶颈，详细介绍 Continuous Batching、Speculative Decoding、PagedAttention 三大优化方案。（LLM/inference）
+- [[概念_解耦式KV缓存与LMCache]] — 旁路独立进程实现缓存管理与推理引擎解耦，辅以 CacheBlend 选择性重计算，大幅提速多文档与 Agent 推理（LLM/inference, Infra/AI）
+- [[概念_SparDA预测式KV缓存预取]] — 引入 Forecast 跨层预测及双 CUDA stream 异步预取机制，有效重叠长文本下 CPU offload 传输与 GPU 推理计算，大涨吞吐量（LLM/inference, Infra/AI）
+- [[概念_LLM量化技术与离群值处理]] — 系统梳理大模型量化数值折算收益，深度剖析激活值离群维度（Outliers）对 naive 舍入精度的压塌机制，并详细对比 RTN、GPTQ、AWQ、LLM.int8()、QAT 五种主流应对方案。（LLM/quantization, LLM/optimization）
 
 ### LLM/reasoning + training/RL（批次5）
 - [[概念_DeepSeek-R1训练管道]] — 冷启动SFT→推理RL→拒绝采样SFT→全场景RL四阶段，规则奖励无奖励黑客（LLM/training/RL）
@@ -494,6 +531,10 @@
 - [[概念_Ingest入库闭环]] — LLM Wiki 范式中的标准化入库 SOP 操作（阅读/摘要/实体概念联动/索引日志）（Skill/knowledge-bank, AI-Agent/coding）
 - [[概念_Wiki健康检查]] — LLM Wiki 范式中的 Lint 体检与图谱垃圾回收（Skill/knowledge-bank, AI-Agent/coding）
 - [[概念_Claude_Code多智能体协同机制]] — 拆解并对比 Claude Code 的三大协同原语（Subagents、Agent Teams、Dynamic Workflows），详述动态工作流在 JS 编排执行、并发扇出、上下文解耦和抗灾恢复力方面的机制，并阐述对抗性验证（Adversarial Verification）的收敛逻辑。（ClaudeCode, Multi-Agent, Orchestration）
+- [[概念_Delta_Attention与增量矩阵缓存]] — Kimi K3 采用的注意力优化机制，使用固定大小矩阵与 Delta 规则更新，实现线性计算与 $O(1)$ 空间开销
+- [[概念_分位数回归与Pinball_Loss]] — 弹球损失（Pinball Loss）的定义与不对称几何拉伸推导，及多 percentile 回归与 LightGBM 区间估算的工程价值。（machine-learning, regression, loss-function）
+- [[概念_Agent内存与状态管理]] — 深度对比 State 与 Memory 两个维度的定义与作用边界，构建在宿主系统（Harness Engineering）中单步 Checkpoint 与 Scope 隔离的协作逻辑。（AI-Agent/harness, AI-Agent/memory, state-management）
+- [[概念_LLM系统自动优化方法论]] — 介绍了以大模型优化大模型系统的反馈演进闭环，横向对比 OPRO, MIPROv2, TextGrad, GEPA, AlphaEvolve, AutoResearch 等 6 大自动调优技术。（llm, optimization, auto-prompt, software-evolution）
 
 ## Entities
 
@@ -591,6 +632,7 @@
 - [[概念_Context_Rot]] — 上下文腐化：长度增长导致性能下降，预腐化阈值128K-200K，触发压缩/总结（AI-Agent/context-engineering）
 - [[概念_分层行动空间]] — Manus三层工具架构：函数调用/沙盒工具集/软件包API，稳定接口+无限能力（AI-Agent/context-engineering）
 - [[概念_Spec_Driven_Development]] — 规范驱动开发：Prompt→Requirements→Design→Tasks→Code，Kiro 实现（AI-Agent/context-engineering）
+- [[概念_RLM递归语言模型]] — 介绍由 MIT 提出的递归语言模型架构，核心是将数据与指令解耦，通过 REPL 缓存上下文，LLM 采用 Peek/Grep/Partition 进行自上而下的递归调用分治，解决 Context Rot。（AI-Agent/recursive-language-models, AI-Agent/context-engineering）
 
 ### AI-Agent/coding（Phase 4 Batch 4）
 - [[概念_Agent开发范式三级进化]] — Level 1 LLM/Level 2 AI Agent/Level 3 Multi-Agent 三阶段演进，Human in the Loop 作为特殊 Agent（AI-Agent/coding）
@@ -709,6 +751,8 @@
 - [[概念_假性死链鉴别]] — 图谱审计中死链三维甄别法：命名不匹配重定向、多余路径前缀去前缀化、待建节点按需生长（Skill/knowledge-bank）
 - [[概念_级联清理安全边界]] — 物理底座删除时的级联清理红线，包含上下文半衰期解耦与行内安全感知（Inline Safety Sensing）（Skill/knowledge-bank）
 - [[概念_单向推导数据管线]] — LLM Wiki 数据流向纪律：raw/ -> wiki/sources/ -> wiki/entities|concepts，严禁末端产物越级直连 raw/（Skill/knowledge-bank）
+- [[概念_Loop_Engineering循环工程]] — 智能体装备工程（Harness Engineering）的外层控制面，决定了智能体运行的生命周期、任务流转、状态监控及退出机制。（AI-Agent/loop-engineering, AI-Agent/harness）
+- [[概念_AI工程技术栈全景_2026]] — 系统梳理并详细阐释 2026 年 AI 工程师的 10 层技术栈全景与核心组件，总结从单点 Prompt 调试向 Harness & Loop 架构体系演进的宏观趋势。（AI-Engineering, LLMOps, System-Architecture）
 
 ### 代码强化学习与 Reward Hacking（Ingest Batch 4）
 - [[概念_代码强化学习]] — 利用测试套件 pass/fail 可验证奖励进后训练，激活长程规划元能力但易诱发作弊（LLM/training/RL, AI-Agent/coding）
@@ -746,6 +790,8 @@
 ### AI-Agent 综合 + AI-BI（Phase 4 Batch 9）
 - [[实体_LangSmith]] — LangChain 可观测性平台：可视化 Trace/调试/测试评估，Agent 复现性关键工具（AI-Agent）
 - [[实体_Qwen2.5-Coder]] — 阿里代码专用模型3B/7B，NL2SQL LoRA 精调基座，实测EX提升+6.4%（AI-Agent/AI-BI）
+- [[实体_Sim_AI工作流框架]] — 基于 ReactFlow 的轻量级、AI-native 可视化智能体工作流（Agentic Flow）拖拽式构建框架，支持本地 Ollama 运行（AI-Agent, open-source）
+
 
 ### Skill/python（Phase 5 Batch 1）
 - [[实体_FastAPI]] — Python 高性能 Web 框架，基于 Starlette/Pydantic，原生 async/await，性能与 Go 不相上下（Skill/python）
@@ -870,6 +916,8 @@
 - [[概念_REFRAG_RAG压缩与过滤]] — REFRAG 是 Meta AI 提出的一种在向量层面进行压缩与过滤的 RAG 检索优化框架，能够显著提高首字生成时间（TTFT），并减少冗余 token 开销。（RAG, MetaAI, REFRAG, InformationRetrieval）
 - [[概念_ReLU激活函数非线性拟合本质]] — 详细推导单个神经元 ReLU(wx + b) 相当于平移折线基底，多神经元加权累加的本质是分段线性插值，以及宽/深网络对 “Army of ReLUs” 的必然要求。
 - [[概念_LLM文本生成解码参数]] — 系统定义并解构 Max tokens、Temperature、Top-k、Top-p、Frequency/Presence Penalty 以及 Stop Sequences 等 7 个关键解码参数的作用与原理。
+- [[概念_LLM文本生成解码策略]] — 详尽对比 LLM 文本生成的贪婪搜索、多项式采样、束搜索与对比搜索四大解码策略，分析其在计算资源、多样性与准确性上的权衡。
+- [[概念_机器学习诊断分析图表]] — 将 11 种高频关键的 DS/ML 诊断及可解释性分析图表进行系统性分类归纳，简练指出每个图表的物理含义与应用准则。（Machine-Learning, Model-Evaluation, Model-Interpretability, Data-Science）
 
 ## Comparisons
 

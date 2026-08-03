@@ -3,13 +3,14 @@ type: concept
 tags:
 - AI-Agent/context-engineering
 created: '2026-06-29'
-updated: '2026-06-29'
+updated: '2026-08-04'
 summary: 随着Agent运行过程中上下文长度持续增长，模型性能在达到硬性上下文限制之前就已显著下降的现象。
 sources:
 - wiki/sources/Context_Engineering_LangChain_Manus_NotebookLM.md
 - wiki/sources/Manus创始人手把手拆解上下文工程.md
 - wiki/sources/也许当前最好的上下文工程讲解_LangChain联合Manus.md
 - wiki/sources/浅谈上下文工程_Claude_Code_Manus_Kiro.md
+- wiki/sources/2026-06-24_Recursive-language-models_19ef72.md
 ---
 
 
@@ -40,10 +41,12 @@ Manus 实践中通常在 **128K-200K token** 之间，通过大量评估确定�
 
 ## 解决策略
 
-见 [[概念_上下文工程]] 四类操作（Offload/Retrieve/Reduce/Isolate）
+- 见 [[概念_上下文工程]] 四类操作（Offload/Retrieve/Reduce/Isolate）
+- 采用 MIT 提出的 [[概念_RLM递归语言模型]] 架构，通过在外部 REPL 环境缓存上下文数据，并用工具进行 Peek/Grep/Partition 分治与递归调用，使模型在 10M+ 极端超长文本下避免上下文腐化。
 
 ## 来源
 
 - [[Context_Engineering_LangChain_Manus_NotebookLM]]
 - [[也许当前最好的上下文工程讲解_LangChain联合Manus]]
 - [[浅谈上下文工程_Claude_Code_Manus_Kiro]]
+- [[2026-06-24_Recursive-language-models_19ef72]]

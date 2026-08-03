@@ -8,6 +8,8 @@ summary: KV Cache 缓存 LLM 推理中 X@W_K 和 X@W_V 的已计算结果，空�
 sources:
 - wiki/sources/2025年七大顶流大模型架构.md
 - wiki/sources/2026-05-03_How-LLM-inference-works-internally_19deee.md
+- wiki/sources/2026-07-07_Rethinking-KV-caching-for-production-inference_19f3d7.md
+- wiki/sources/2026-07-14_NVIDIA-researchers-built-a-new-transformer-variant_19f617.md
 - wiki/sources/DeepSeek_MLA矩阵吸收原理.md
 - wiki/sources/KV_Cache原理图解.md
 - wiki/sources/LLM面试50题_MIT_CSAIL.md
@@ -21,6 +23,7 @@ sources:
 - wiki/sources/大模型显存占用单卡分析.md
 - wiki/sources/大模型显存计算公式与优化.md
 - wiki/sources/推测解码Speculative_Decoding综述.md
+- wiki/sources/2026-07-24_Delta-attention-in-Kimi-K3-to-fix-growing-KV-cache_19f962.md
 created: '2026-06-29'
 updated: '2026-08-04'
 confidence: high
@@ -66,6 +69,12 @@ $$\text{KV Cache} = 2 \times L \times H \times D \times S \times B \times \text{
 | 量化 | K/V 低精度存储 |
 | 滑动窗口 | 仅保留近邻 K/V |
 
+## 生产应用中的挑战与优化演进
+
+随着大模型在 Agent（智能体）与超长上下文（RAG）场景的落地，传统的 KV Cache 机制暴露出新的痛点：
+- **Agent 推理中的冗余传输与计算**：斯坦福大学调研表明，在多轮交互的智能体工作流中，由于每一步都是从头计算，导致每次发送给模型的 Token 有约 **62%** 是重复的系统 Prompt、工具定义和历史文档。这不仅浪费带宽，也造成了极大的 Token 推理开销。为了突破这一瓶颈，采用 `[[概念_解耦式KV缓存与LMCache]]` 的架构应运而生，其将缓存管理从推理引擎中剥离为旁路进程，并结合 CacheBlend 算法在合并多文档时执行选择性重计算以复用已有缓存，实现高效加速。
+- **长文本 CPU 卸载下的 I/O 延迟**：在超长上下文推理下，大体积的 KV Cache 需 Offload（卸载）到 CPU 内存。然而在解码时，GPU 等待所需块从 CPU 拷贝回显存的过程（I/O 传输延迟）会产生严重 stall。对此，NVIDIA 与 MIT 联合提出 `[[概念_SparDA预测式KV缓存预取]]` 架构，利用 Forecast 投影预测并异步预取下一层所需的 KV 块，实现数据传输与推理计算的重叠（Overlap）。
+
 ## 关联
 
 - [[入局AI_Infra系统设计与挑战]]（来源）
@@ -75,4 +84,7 @@ $$\text{KV Cache} = 2 \times L \times H \times D \times S \times B \times \text{
 - [[实体_vLLM]]
 - [[概念_自注意力复杂度]]
 - [[概念_LLM推理两阶段]]
+- [[概念_解耦式KV缓存与LMCache]]
+- [[概念_SparDA预测式KV缓存预取]]
 - [[2026-05-03_How-LLM-inference-works-internally_19deee]]
+- [[概念_Delta_Attention与增量矩阵缓存]]

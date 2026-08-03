@@ -10,6 +10,8 @@ sources:
 - wiki/sources/快手data agent一面，我裂开了！！！.md
 - wiki/sources/美团AICoding面试，跪了！！！.md
 - wiki/sources/2026-04-06_The-Anatomy-of-an-Agent-Harness_19d64a.md
+- wiki/sources/2026-07-03_Prompt,-context,-harness-&-loop-engineering_19f29f.md
+- wiki/sources/2026-07-27_Agent-memory-and-state-are-not-the-same-thing!_19fa57.md
 created: '2026-07-22'
 updated: '2026-08-04'
 ---
@@ -44,6 +46,8 @@ Beren Millidge 将其进行了精确的硬件系统类比：
 两篇 Agent 面试项目复盘补充了生产控制面的具体做法：权限默认最小化，写入与 Shell 执行分级授权；暂时性故障采用有上限的退避重试，权限不足等确定性错误直接返回；循环侧设置最大步数、重复工具调用与状态停滞检测；高风险代码则在限制资源、网络和系统调用的沙箱内运行。
 
 对内容删除等不可逆业务动作，Harness 还应把模型限制在“判断与建议”角色，由服务端依据置信度、风险级别和权限策略执行实际操作，并保留可追溯的决策证据与审计日志。
+
+此外，生产级 Harness 必须明确将**状态（State）与记忆（Memory）解耦管理**。状态绑定于当前 Run，通过在每个超级步骤（Superstep）后写入 Checkpoint 记录执行进度以防意外崩溃，支持中断恢复和新分支分叉（Fork）；而记忆则跨 Runs 留存，多智能体协同下需通过 Scope 机制进行隔离（如 `memory.scope("/agent")`）以防认知冲突。详见 [[概念_Agent内存与状态管理]]。
 
 ## 生产级 Harness 的 11 大核心组件
 
@@ -80,3 +84,4 @@ Beren Millidge 将其进行了精确的硬件系统类比：
 - [[concepts/概念_RSI递归自我改进]]
 - [[concepts/概念_Harness优化阶梯]]
 - [[sources/2026-04-06_The-Anatomy-of-an-Agent-Harness_19d64a|The Anatomy of an Agent Harness]]
+- [[sources/2026-07-27_Agent-memory-and-state-are-not-the-same-thing!_19fa57|Agent memory and state are not the same thing!]]

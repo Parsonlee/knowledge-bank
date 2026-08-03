@@ -1,0 +1,37 @@
+---
+type: concept
+tags:
+- AI-Agent/recursive-language-models
+- AI-Agent/context-engineering
+created: '2026-08-04'
+updated: '2026-08-04'
+summary: 由MIT提出的递归语言模型（RLM）架构，核心是将数据与指令解耦，通过Python REPL缓存上下文，并由LLM调用Peek、Grep、Partition等工具进行自上而下的分治递归调用，从而在10M+超长文本下保持性能不衰减。
+sources:
+- wiki/sources/2026-06-24_Recursive-language-models_19ef72.md
+---
+
+# 概念：RLM递归语言模型
+
+## 定义
+
+**RLM（Recursive Language Models，递归语言模型）** 是由 MIT 研究团队提出的一种应对超长文本和 [[concepts/概念_Context_Rot|Context Rot（上下文腐化）]] 的全新架构。该架构将上下文数据视为“可编程探索的外部数据”，而不是一次性塞入模型窗口的黑盒。
+
+## 核心机制
+
+RLM 的核心在于**数据与指令的解耦**，其主要运行流程和机制如下：
+1. **上下文分离缓存**：原始的超长上下文不直接输入给 LLM，而是作为变量保存在一个外部的 Python REPL 运行环境中。
+2. **工具化主动探索**：主 LLM 仅接收用户的查询，并被赋予一组在 Python REPL 沙箱中执行的特定工具，包括：
+   - **Peek（预览）**：查看上下文的结构或局部片段（例如前 2000 个字符）。
+   - **Grep（正则/关键词过滤）**：利用正则表达式或关键字提取相关行，如将 5000 条原始记录快速过滤降维至 50 条。
+   - **Partition（切分）**：将剩余的相关数据切分成更小的子块。
+3. **递归子调用（Recursive Calls）**：主 LLM 对切分后的各子块发起递归子调用（类似于程序设计中的函数递归），将子问题分治解决，最后自上而下汇总结果返回给主 LLM。
+4. **恒定的小上下文窗口**：通过这种方式，主 LLM 的上下文窗口在整个运行期间始终保持在极小规模，仅包含当前指令、当前生成的代码和子调用的返回结果。
+
+## 性能优势与工程价值
+
+- **超长文本的高性价比**：在 10M+ token 的极端超长文本基准测试中，RLM 的推理和召回性能几乎无衰减。同时，由于上下文极小，基于 GPT-5-mini 运行 of RLM 架构可以在性能上击败直接做长文本单次调用的 GPT-5，且查询成本大幅降低。
+- **与现代 Coding Agent 的共鸣**：RLM 这种按需检索、过滤和分治的思路，与现代 agentic 编码工具（例如 Claude Code）在处理大型代码库时的工程实践高度契合。Claude Code 不会将整个 repository 一次性塞入，而是通过分析文件结构、对特定代码库进行 grep 检索，最终仅将最相关的片段合入上下文。
+
+## 来源
+
+- [[2026-06-24_Recursive-language-models_19ef72]]

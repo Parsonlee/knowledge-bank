@@ -5,9 +5,10 @@ tags:
   - Multi-Agent
   - Orchestration
   - Dynamic-Workflows
-summary: "拆解并对比 Claude Code 的三大协同原语（Subagents、Agent Teams、Dynamic Workflows），详述动态工作流在 JS 编排执行、并发扇出、上下文解耦和抗灾恢复力方面的机制，并阐述对抗性验证（Adversarial Verification）的收敛逻辑。"
+summary: "拆解并对比 Claude Code 的三大协同原语（Subagents、Agent Teams、Dynamic Workflows），详述动态工作流在 JS 编排执行、并发扇出、上下文解耦和抗灾恢复力方面的机制，并从第一性原理探讨了以上下文为中心的分治逻辑与编排模式。"
 sources:
   - "wiki/sources/2026-06-01_Claude-Code-dynamic-workflows,-explained!_19e84f.md"
+  - "wiki/sources/2026-07-31_Subagents-vs.-Agent-Teams_19fb9f.md"
 updated: "2026-08-04"
 ---
 
@@ -21,13 +22,15 @@ updated: "2026-08-04"
 
 ### ① 轻量级子智能体 (Subagents)
 - **定义**：由主 Session 运行时按需派生出的临时轻量级 Worker 智能体（通常在 `.claude/agents/` 中定义）。
-- **运行逻辑**：主 Agent 将任务拆分并指派给某个 Subagent，Subagent 独立在单独的 Context Window 中执行任务，然后向主 Agent 汇报执行结果。
-- **缺点**：Subagent 之间是**彼此隔离且无状态**的，无法实现子智能体间的直接通信（Peer-to-Peer Communication）。主 Agent 充当中央编排器（Orchestrator），所有的子任务结果都必须回传到主 Agent 的上下文窗口中，这使得主 Agent 成为严重的上下文和推理瓶颈。
+- **运行逻辑**：主 Agent 将任务拆分并指派给某个 Subagent，Subagent 独立在单独的 Context Window 中执行任务，最后向主 Agent 汇报执行结果。
+- **核心特性**：其**核心是 context 压缩，隔离 Parent 干扰噪点**。主 Agent 不需要承受中间步骤的冗余 Token 干扰，子智能体在完全独立的 Context 中跑通工具并得出确切结论，返回给 Parent 的仅仅是高度精简的最终信号。
+- **缺点**：Subagent 之间是**彼此隔离且无状态**的，无法实现子智能体间的直接通信（Peer-to-Peer Communication）。虽然能够通过隔离过滤噪声，但在没有外部运行时编排时，主 Agent 作为中央编排器（Orchestrator）可能因频繁调度多路子智能体而面临推理和总上下文瓶颈。
 
 ### ② 智能体团队 (Agent Teams)
 - **定义**：伴随 Opus 4.6 推出的一套多智能体协作原语，允许多个相对平等的 Claude 实例协同完成任务。
 - **运行逻辑**：多个 Agent 实例通过一个**共享任务列表（Shared Task List）**和**直接消息（Direct Message）**机制进行双向自主协作。
-- **缺点**：虽然打破了 Subagent 的主上下文单点瓶颈，但是编排逻辑需要开发人员预先进行设计；其实际协作规模通常仅能支撑 3-5 个成员，超过该限制会导致协作混乱与信息冗余；此外，Agent Teams 是**内存态易失会话**，如果运行环境发生中断/崩溃，整个 Team 的上下文和进度将全部丢失。
+- **核心特性**：其设计精髓在于通过 **Shared Task List 看板以 `blockedBy` 依赖关系来驱动任务执行的生命周期**，实现去中心化的自适应调度；同时，团队成员之间支持 **peer-to-peer 协商与直接消息传递**，不必所有交互都通过 Team Lead 进行中转。
+- **缺点**：虽然打破了 Subagent 的单点分发瓶颈，但是编排逻辑需要开发人员预先进行设计；其实际协作规模通常仅能支撑 3-5 个成员，超过该限制会导致协作混乱与信息冗余；此外，Agent Teams 是**内存态易失会话**，如果运行环境发生中断/崩溃，整个 Team 的上下文和进度将全部丢失。
 
 ### ③ 动态工作流 (Dynamic Workflows)
 - **定义**：伴随 Opus 4.8 推出的高阶多智能体编排架构。
@@ -60,8 +63,33 @@ updated: "2026-08-04"
 4. **收敛共识 (Convergence)**：当对抗双方达成共识，且所有对抗测试用例均通过时，JS 运行时将此共识和最终代码回传。这避免了单智能体因“盲区”或“过度自信”导致的错误输出，极大地保证了代码的可靠性。
 
 ---
+
+## 4. 多智能体架构的第一性原理：以上下文为中心的分治 (Context-centric Decomposition)
+
+多智能体系统的设计并非愈复杂愈好，其本质在于如何进行高效的上下文管理与分治。
+
+### ① 划分边界：反模式 vs. 正模式
+- **反模式（Role-based Split）**：按照组织架构/角色分工（如 Planner 规划器、Implementer 执行器、Tester 测试器）来划分不同智能体。这会导致“传话游戏”（Telephone game）效应，前一步的上下文在手持传递（handoff）到下一步时严重降级，导致开发质量逐步退化。
+- **正模式（Context-centric Decomposition）**：上下文重合度边界划分。评估每个子任务实际需要的上下文。若两个任务所需上下文高度重合，必须将其合并（inline）在同一个智能体内执行。例如，编写功能代码和为该功能编写单元测试应该由同一个 Agent 承载，以防上下文丢失。
+
+### ② 研发警告（Git 并发冲突）
+在多智能体团队中，如果允许多个 Agent 并发地去修改/编写同一个项目的代码，它们会引入各自不兼容的 implicit 设计假设，合并代码时会在 Git 里引入极其复杂的冲突，调试成本极高。因此，面向 Coding 的 Sub-agents 宜限制为**只读模式（Read-only）**，仅做调研、探索与问题定位，而不宜多 Agent 并发写代码。
+
+### ③ 5 大经典编排模式
+1. **Chaining（链式模式）**：前后依赖的线性序列，后一步基于前一步的输出运行。
+2. **Routing（路由模式）**：分类器分流。将简单请求分流至更便宜/更快速的模型，复杂请求路由至高能力模型。
+3. **Parallelization（并行化模式）**：针对独立子任务的扇出。可分为同质任务的多模型投票（Voting），和异质任务的切片分工（Sectioning）。
+4. **Orchestrator-worker（编排-执行模式）**：中央智能体拆解任务、分发给多个 Worker 并汇总结果。这是绝大多数多智能体系统的首选主架构。
+5. **Evaluator-optimizer（评估-优化模式）**：一个生成，一个评估并提供反馈，在闭环中迭代直至达标。
+
+### ④ 3 大失败诱因
+1. **Vague 任务定义**：导致智能体职责不清，两个智能体重复做同样的事且彼此没有察觉。
+2. **Verifier 虚假确认**：验证智能体在缺乏明确、客观事实依据（如跑通测试套件、通过编译等）的前提下，仅凭自然语言感官“宣布胜利”，产生虚假通过。
+3. **Token compounding 复合膨胀**：多智能体交互的轮数和人数增加会导致 Token 消耗指数级膨胀。解决之道是智能分级（Tiering）使用模型，将例行工作交给小模型。
+
+---
 关联概念：
 - [[wiki/concepts/概念_Claude_Code核心配置与原语]]
 - [[wiki/concepts/概念_聚类算法分类综述]]
 
-> 📎 **来源摘要**：[[wiki/sources/2026-06-01_Claude-Code-dynamic-workflows,-explained!_19e84f.md]]
+> 📎 **来源摘要**：[[wiki/sources/2026-06-01_Claude-Code-dynamic-workflows,-explained!_19e84f.md]], [[wiki/sources/2026-07-31_Subagents-vs.-Agent-Teams_19fb9f.md]]

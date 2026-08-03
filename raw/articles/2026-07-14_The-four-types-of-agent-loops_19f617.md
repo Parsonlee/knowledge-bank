@@ -22,7 +22,7 @@ In a hand-run session, the human answers both, every single time. Each loop type
   
 Here’s each type, what triggers it, and when to reach for it.
 
-#1) Turn-based loops, triggered by a user prompt.
+\#1) Turn-based loops, triggered by a user prompt.
 
 The agent gathers context, acts, and checks its work inside a single turn. Then a human reviews the output and writes the next prompt.
 
@@ -31,7 +31,7 @@ The agent gathers context, acts, and checks its work inside a single turn. Then 
   
 Use this when requirements are still forming and every output changes what the next prompt should ask for.
 
-#2) Goal-based loops, triggered by a /goal command that carries success criteria and a budget, like “get the homepage Lighthouse score to 90, stop after 5 tries.”
+\#2) Goal-based loops, triggered by a /goal command that carries success criteria and a budget, like “get the homepage Lighthouse score to 90, stop after 5 tries.”
 
 When the agent tries to stop, an evaluator model checks whether the goal is met, and it sends it back to work.
 
@@ -40,7 +40,7 @@ When the agent tries to stop, an evaluator model checks whether the goal is met,
   
 Use this when the outcome is measurable but the path there doesn’t need human attention.
 
-#3) Time-based loops, triggered by a clock.
+\#3) Time-based loops, triggered by a clock.
 
 An interval fires, the agent runs a fixed prompt like “check the PR, fix CI,” then waits for the next tick. The /loop command runs on the local machine, and /schedule moves it to the cloud so it survives a closed laptop.
 
@@ -49,7 +49,7 @@ An interval fires, the agent runs a fixed prompt like “check the PR, fix CI,�
   
 Use this for recurring work where the task is known in advance and only the timing repeats.
 
-#4) Proactive loops, triggered by an event or schedule with no human present.
+\#4) Proactive loops, triggered by an event or schedule with no human present.
 
 A routine watches a channel and spawns a workflow when something needs handling. That workflow runs a triage agent, a fix agent, and a reviewer who adversarially judges the work before the task closes.
 

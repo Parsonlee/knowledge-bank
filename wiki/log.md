@@ -1,5 +1,102 @@
 # Wiki Log
 
+## [2026-08-04] ingest | raw/articles/2026-08-01_Succeed-in-ai-engineering-roles_19fbed_part5.md -> wiki/sources/2026-08-01_Succeed-in-ai-engineering-roles_19fbed_part5.md (+ affected pages)
+- **深度阅读与语法净化**：深度阅读 `Clippings/DailyDoseOfDS/` 下的 1 篇文章，进行行内伪 tag 和伪双链排查，确认无需转义，确保兼容 Obsidian 双链图谱。
+- **物理文件归档与 Ingest 闭环 (Clippings -> raw/articles/)**：
+  - `Clippings/DailyDoseOfDS/2026-08-01_Succeed-in-ai-engineering-roles_19fbed_part5.md` -> `raw/articles/2026-08-01_Succeed-in-ai-engineering-roles_19fbed_part5.md` -> `wiki/sources/2026-08-01_Succeed-in-ai-engineering-roles_19fbed_part5.md`（该文为会员推广，不创建任何新实体或概念，已生成 Source 摘要页并列出全栈 AI 工程师需要重点修习的课程大纲能力清单，已做好物理文献双链反向链接）
+- **索引更新**：将新建的 1 篇 Source 摘要页挂载到 `wiki/index.md`。
+
+## [2026-08-04] ingest | raw/articles/2026-08-01_Data-Version-Control_19fbed_part4.md & 2026-08-01_Double-Descent-vs.-Bias-Variance-Trade-off_19fbed_part3.md -> wiki/sources/ (+ affected pages)
+- **深度阅读与语法净化**：深度阅读 `Clippings/DailyDoseOfDS/` 下的 2 篇文章，进行行内伪 tag 和伪双链排查，确保语法纯净并兼容 Obsidian 双链图谱。
+- **物理文件归档与 Ingest 闭环 (Clippings -> raw/articles/)**：
+  - `Clippings/DailyDoseOfDS/2026-08-01_Data-Version-Control_19fbed_part4.md` -> `raw/articles/2026-08-01_Data-Version-Control_19fbed_part4.md` -> `wiki/sources/2026-08-01_Data-Version-Control_19fbed_part4.md`（+ 新建概念 `[[wiki/concepts/概念_数据版本控制与DVC|概念_数据版本控制与DVC]]`，定义其在 MLOps 中的定位，拆解大文件限制，阐述基于哈希的元数据指针描述和物理存储分流两阶段联动机制）
+  - `Clippings/DailyDoseOfDS/2026-08-01_Double-Descent-vs.-Bias-Variance-Trade-off_19fbed_part3.md` -> `raw/articles/2026-08-01_Double-Descent-vs.-Bias-Variance-Trade-off_19fbed_part3.md` -> `wiki/sources/2026-08-01_Double-Descent-vs.-Bias-Variance-Trade-off_19fbed_part3.md`（+ 新建概念 `[[wiki/concepts/概念_机器学习双下降现象|概念_机器学习双下降现象]]`，定义该现象对经典偏差-方差折中理论的挑战，阐明跨越插值界限后隐式正则化导致的二次下降，提供多项式回归重现步骤；+ 更新已有概念 `[[wiki/concepts/概念_机器学习诊断分析图表|概念_机器学习诊断分析图表]]`，在 Sources 挂载关联，并在偏差-方差折中曲线章节交叉链入新建的双下降现象概念）
+- **索引更新**：将新建的 2 篇 Source 摘要页和 2 篇新建 Concept 页挂载到 `wiki/index.md`。
+
+## [2026-08-04] ingest | raw/articles/2026-08-01_Free-Observability-Engineering-Masterclass-with-Liz-Fong-Jones-&-Honeycomb_19fbed_part1.md & 2026-08-01_Build-a-stock-market-research-Agentic-workflow_19fbed_part2.md -> wiki/sources/ (+ affected pages)
+- **深度阅读与语法净化**：深度阅读 `Clippings/DailyDoseOfDS/` 下的 2 篇文章，进行行内伪 tag 和伪双链排查，确认无冲突字符，确保语法纯净并兼容 Obsidian 双链图谱。
+- **物理文件归档与 Ingest 闭环 (Clippings -> raw/articles/)**：
+  - `Clippings/DailyDoseOfDS/2026-08-01_Free-Observability-Engineering-Masterclass-with-Liz-Fong-Jones-&-Honeycomb_19fbed_part1.md` -> `raw/articles/2026-08-01_Free-Observability-Engineering-Masterclass-with-Liz-Fong-Jones-&-Honeycomb_19fbed_part1.md` -> `wiki/sources/2026-08-01_Free-Observability-Engineering-Masterclass-with-Liz-Fong-Jones-&-Honeycomb_19fbed_part1.md`（大师课广告推广，按宁缺毋滥原则不创建任何概念/实体，生成 Source 摘要页并整理 6 大章节主题的轻量化摘要）
+  - `Clippings/DailyDoseOfDS/2026-08-01_Build-a-stock-market-research-Agentic-workflow_19fbed_part2.md` -> `raw/articles/2026-08-01_Build-a-stock-market-research-Agentic-workflow_19fbed_part2.md` -> `wiki/sources/2026-08-01_Build-a-stock-market-research-Agentic-workflow_19fbed_part2.md`（+ 新建实体 `[[wiki/entities/实体_Sim_AI工作流框架|实体_Sim_AI工作流框架]]`，定义可视化 AI 工作流拖拽构建框架并梳理核心特征与应用；更新已有概念 `[[wiki/concepts/概念_Graph_Engineering图工程|概念_Graph_Engineering图工程]]`，挂载 sources 关联，并链入相关实体）
+- **索引更新**：将新创建的 2 篇 Source 摘要页和 1 篇新建 Entity 实体页挂载到 `wiki/index.md`。
+
+## [2026-08-04] ingest | raw/articles/2026-07-31_6-automatic-optimization-methods-for-LLM-systems_19fb9f.md & 2026-07-31_Subagents-vs.-Agent-Teams_19fb9f.md -> wiki/sources/ (+ affected pages)
+- **深度阅读与语法净化**：深度阅读 `Clippings/DailyDoseOfDS/` 下的 2 篇文章，进行行内伪 tag 和伪双链排查，确保语法纯净并兼容 Obsidian 双链图谱。
+- **物理文件归档与 Ingest 闭环 (Clippings -> raw/articles/)**：
+  - `Clippings/DailyDoseOfDS/2026-07-31_6-automatic-optimization-methods-for-LLM-systems_19fb9f.md` -> `raw/articles/2026-07-31_6-automatic-optimization-methods-for-LLM-systems_19fb9f.md` -> `wiki/sources/2026-07-31_6-automatic-optimization-methods-for-LLM-systems_19fb9f.md`（+ 新建概念 `[[wiki/concepts/概念_LLM系统自动优化方法论|概念_LLM系统自动优化方法论]]`，定义以大模型优化大模型系统的反馈闭环，横向对比 OPRO、MIPROv2、TextGrad、GEPA、AlphaEvolve 与 AutoResearch 六大技术并整理对比表格，交叉链入 `[[wiki/concepts/概念_GEPA提示词进化算法|概念_GEPA提示词进化算法]]`）
+  - `Clippings/DailyDoseOfDS/2026-07-31_Subagents-vs.-Agent-Teams_19fb9f.md` -> `raw/articles/2026-07-31_Subagents-vs.-Agent-Teams_19fb9f.md` -> `wiki/sources/2026-07-31_Subagents-vs.-Agent-Teams_19fb9f.md`（+ 更新已有概念 `[[wiki/concepts/概念_Claude_Code多智能体协同机制|概念_Claude_Code多智能体协同机制]]`，在 Sources 挂载关联，补强了 Sub-agents 的 Context 压缩与隔离、Agent Teams 的 Shared Task List 看板依赖驱动与 P2P 协商机制；新增“以上下文为中心的分治（Context-centric Decomposition）”章节，详述角色分工与上下文划分、Git 并发冲突警告、5 大编排模式与 3 大失败诱因）
+- **索引更新**：将新建 the 2 篇 Source 摘要页和 1 篇新建 Concept 概念页挂载到 `wiki/index.md`。
+
+## [2026-08-04] ingest | raw/articles/2026-07-28_CPU-vs-GPU-vs-TPU-vs-NPU-vs-LPU_19faa9.md & 2026-07-28_Technical-LLM-interview-question!_19faa9.md -> wiki/sources/ (+ affected pages)
+- **深度阅读与语法净化**：深度阅读 `Clippings/DailyDoseOfDS/` 下的 2 篇文章，进行行内伪 tag 和伪双链排查，确认无行内伪 tag 和伪双链，确保语法纯净并兼容 Obsidian 双链图谱。
+- **物理文件归档与 Ingest 闭环 (Clippings -> raw/articles/)**：
+  - `Clippings/DailyDoseOfDS/2026-07-28_CPU-vs-GPU-vs-TPU-vs-NPU-vs-LPU_19faa9.md` -> `raw/articles/2026-07-28_CPU-vs-GPU-vs-TPU-vs-NPU-vs-LPU_19faa9.md` -> `wiki/sources/2026-07-28_CPU-vs-GPU-vs-TPU-vs-NPU-vs-LPU_19faa9.md`（+ 新建概念 `[[wiki/concepts/概念_AI硬件加速芯片架构|概念_AI硬件加速芯片架构]]`，定义五大硬件架构的物理特征与存储层级，对比其动态/静态调度机制，深入分析存储带宽瓶颈，并交叉链入 `[[wiki/concepts/概念_FlashAttention|概念_FlashAttention]]` 阐述软硬件协同优化）
+  - `Clippings/DailyDoseOfDS/2026-07-28_Technical-LLM-interview-question!_19faa9.md` -> `raw/articles/2026-07-28_Technical-LLM-interview-question!_19faa9.md` -> `wiki/sources/2026-07-28_Technical-LLM-interview-question!_19faa9.md`（+ 更新已有概念 `[[wiki/concepts/概念_LLM应用评估体系|概念_LLM应用评估体系]]`，在“Agent 完整交互轨迹评估”下追加“轨迹样本的轻量化过滤：基于轻量行为信号的采样策略”子小节，解构 DigitalOcean 的 3 类轻量行为信号以及隐性缺陷筛选的业务收益；追加 sources 关联）
+- **索引更新**：将新建的 2 篇 Source 摘要页和 1 篇新建 Concept 概念页挂载到 `wiki/index.md`。
+
+## [2026-08-04] ingest | raw/articles/2026-07-27_Graph-engineering-clearly-explained_19fa57.md & 2026-07-27_The-anatomy-of-diffusion-LLMs_19fa57.md -> wiki/sources/ (+ affected pages)
+- **深度阅读与语法净化**：深度阅读 `Clippings/DailyDoseOfDS/` 下的 2 篇文章，进行行内伪 tag 和伪双链排查，确认无冲突字符，确保兼容 Obsidian 双链图谱。
+- **物理文件归档与 Ingest 闭环 (Clippings -> raw/articles/)**：
+  - `Clippings/DailyDoseOfDS/2026-07-27_Graph-engineering-clearly-explained_19fa57.md` -> `raw/articles/2026-07-27_Graph-engineering-clearly-explained_19fa57.md` -> `wiki/sources/2026-07-27_Graph-engineering-clearly-explained_19fa57.md`（+ 新建概念 `[[wiki/concepts/概念_Graph_Engineering图工程|概念_Graph_Engineering图工程]]`，定义图工程内涵与物理三要素，展示嵌套同轴系统，系统拆解四大痛点设计准则，并交叉链入 `[[wiki/concepts/概念_Loop_Engineering循环工程|概念_Loop_Engineering循环工程]]` 与 `[[wiki/concepts/概念_Harness_Engineering|概念_Harness_Engineering]]`）
+  - `Clippings/DailyDoseOfDS/2026-07-27_The-anatomy-of-diffusion-LLMs_19fa57.md` -> `raw/articles/2026-07-27_The-anatomy-of-diffusion-LLMs_19fa57.md` -> `wiki/sources/2026-07-27_The-anatomy-of-diffusion-LLMs_19fa57.md`（+ 新建概念 `[[wiki/concepts/概念_扩散大语言模型_dLLMs|概念_扩散大语言模型_dLLMs]]`，定义其物理架构，对比自回归计算特征与 memory-bound/compute-bound，剖析离散掩码扩散机制、Block Diffusion、注意力掩码退火与推理加速技术，交叉链入 `[[wiki/concepts/概念_LLM推理两阶段|概念_LLM推理两阶段]]`）
+- **索引更新**：将新建的 2 篇 Source 摘要页和 2 篇 Concept 页面挂载到 `wiki/index.md` 对应列表分类中。
+
+## [2026-08-04] ingest | raw/articles/2026-07-24_Quantile-regression_19f962.md & 2026-07-27_Agent-memory-and-state-are-not-the-same-thing!_19fa57.md -> wiki/sources/ (+ affected pages)
+- **深度阅读与语法净化**：深度阅读 `Clippings/DailyDoseOfDS/` 下的 2 篇文章，进行行内伪 tag 和伪双链排查，确认无冲突字符，确保兼容 Obsidian 双链图谱。
+- **物理文件归档与 Ingest 闭环 (Clippings -> raw/articles/)**：
+  - `Clippings/DailyDoseOfDS/2026-07-24_Quantile-regression_19f962.md` -> `raw/articles/2026-07-24_Quantile-regression_19f962.md` -> `wiki/sources/2026-07-24_Quantile-regression_19f962.md`（+ 新建概念 `[[wiki/concepts/概念_分位数回归与Pinball_Loss.md|概念_分位数回归与Pinball_Loss]]`，详细推导 Pinball Loss 的不对称加权与几何拉伸逻辑；更新已有概念 `[[wiki/concepts/概念_机器学习损失函数.md|概念_机器学习损失函数]]`，在表格中新增分位数损失项）
+  - `Clippings/DailyDoseOfDS/2026-07-27_Agent-memory-and-state-are-not-the-same-thing!_19fa57.md` -> `raw/articles/2026-07-27_Agent-memory-and-state-are-not-the-same-thing!_19fa57.md` -> `wiki/sources/2026-07-27_Agent-memory-and-state-are-not-the-same-thing!_19fa57.md`（+ 新建概念 `[[wiki/concepts/概念_Agent内存与状态管理.md|概念_Agent内存与状态管理]]`，定义并深度对比状态（State）与记忆（Memory），阐述单步 Checkpoint 容灾恢复与多智能体内存隔离；更新已有概念 `[[wiki/concepts/概念_Harness_Engineering.md|概念_Harness_Engineering]]`，在可靠执行控制中补充状态与记忆的解耦管理）
+- **索引更新**：将新建的 2 篇 Source 摘要页和 2 篇新建 Concept 页面挂载到 `wiki/index.md` 对应列表中。
+
+## [2026-08-04] ingest | raw/articles/2026-07-24_11-LLM-evaluation-methods_19f962.md & 2026-07-24_Delta-attention-in-Kimi-K3-to-fix-growing-KV-cache_19f962.md -> wiki/sources/ (+ affected pages)
+- **深度阅读与语法净化**：深度阅读 `Clippings/DailyDoseOfDS/` 下的 2 篇文章，进行行内伪 tag 和伪双链排查，确认无冲突字符，确保兼容 Obsidian 双链图谱。
+- **物理文件归档与 Ingest 闭环 (Clippings -> raw/articles/)**：
+  - `Clippings/DailyDoseOfDS/2026-07-24_11-LLM-evaluation-methods_19f962.md` -> `raw/articles/2026-07-24_11-LLM-evaluation-methods_19f962.md` -> `wiki/sources/2026-07-24_11-LLM-evaluation-methods_19f962.md`（+ 更新已有概念 `[[wiki/concepts/概念_LLM应用评估体系.md|概念_LLM应用评估体系]]`，在正文追加“11 种核心评估指标与方法”章节，涵盖 BLEU/ROUGE/BERTScore 等 11 种指标的定义、局限与最佳实践，并同步更新 frontmatter 中的 sources 列表）
+  - `Clippings/DailyDoseOfDS/2026-07-24_Delta-attention-in-Kimi-K3-to-fix-growing-KV-cache_19f962.md` -> `raw/articles/2026-07-24_Delta-attention-in-Kimi-K3-to-fix-growing-KV-cache_19f962.md` -> `wiki/sources/2026-07-24_Delta-attention-in-Kimi-K3-to-fix-growing-KV-cache_19f962.md`（+ 新建概念 `[[wiki/concepts/概念_Delta_Attention与增量矩阵缓存.md|概念_Delta_Attention与增量矩阵缓存]]`，详细对比了固定大小矩阵增量注意力与传统自回归 KV Cache 的空间与计算复杂度差异，拆解了 Delta Rule 先读后写与只写差值的二步写机制，以及近似召回在生产落地中的 Interleaving 交替编织方案；更新了已有概念 `[[wiki/concepts/概念_KV_Cache.md|概念_KV_Cache]]`，追加关联与 sources）
+- **索引更新**：将新建的 2 篇 Source 摘要页和 1 篇新建 Concept 页面挂载到 `wiki/index.md` 对应列表中。
+
+## [2026-08-04] ingest | raw/articles/2026-07-14_The-four-types-of-agent-loops_19f617.md & 2026-07-21_5-LLM-Quantization-Techniques_19f86b.md -> wiki/sources/ (+ affected pages)
+- **深度阅读与语法净化**：深度阅读 `Clippings/DailyDoseOfDS/` 下的 2 篇文章。对 `2026-07-14_The-four-types-of-agent-loops_19f617.md` 中的行内伪 tag `#1)`,`#2)`,`#3)`,`#4)` 进行了转义净化（转义为 `\#1)`,`\#2)`,`\#3)`,`\#4)`），确保其语法纯净且不干扰 Obsidian 标签分类。
+- **物理文件归档与 Ingest 闭环 (Clippings -> raw/articles/)**：
+  - `Clippings/DailyDoseOfDS/2026-07-14_The-four-types-of-agent-loops_19f617.md` -> `raw/articles/2026-07-14_The-four-types-of-agent-loops_19f617.md` -> `wiki/sources/2026-07-14_The-four-types-of-agent-loops_19f617.md`（+ 更新已有概念 `[[wiki/concepts/概念_Loop_Engineering循环工程.md|概念_Loop_Engineering循环工程]]`，追加了“智能体循环的四种类型 (The Four Types of Agent Loops)”章节，深入对比了单步交互、目标驱动、时间触发和事件主动四种循环结构的机制、场景、规模化能力与容灾区别，并包含对比矩阵表格；同步追加 sources 元数据）
+  - `Clippings/DailyDoseOfDS/2026-07-21_5-LLM-Quantization-Techniques_19f86b.md` -> `raw/articles/2026-07-21_5-LLM-Quantization-Techniques_19f86b.md` -> `wiki/sources/2026-07-21_5-LLM-Quantization-Techniques_19f86b.md`（+ 新建概念 `[[wiki/concepts/概念_LLM量化技术与离群值处理.md|概念_LLM量化技术与离群值处理]]`，定义了量化数值折算收益，详细剖析大模型激活特征中 0.1% 离群值对 naive 舍入精度的压塌现象，深入对比 RTN、GPTQ、AWQ、LLM.int8()、QAT 五大方案应对离群值的机制，并交叉链入 `[[wiki/concepts/概念_LLM推理两阶段.md|LLM推理两阶段]]`）
+- **索引更新**：将新建的 2 篇 Source 摘要页和 1 篇新建 Concept 页面挂载到 `wiki/index.md` 对应列表中。
+
+## [2026-08-04] ingest | raw/articles/2026-07-07_Rethinking-KV-caching-for-production-inference_19f3d7.md & 2026-07-14_NVIDIA-researchers-built-a-new-transformer-variant_19f617.md -> wiki/sources/ (+ affected pages)
+- **深度阅读与语法净化**：深度阅读 `Clippings/DailyDoseOfDS/` 下的 2 篇文章，进行行内伪 tag 和伪双链排查，确认无冲突字符，确保兼容 Obsidian 双链图谱。
+- **物理文件归档与 Ingest 闭环 (Clippings -> raw/articles/)**：
+  - `Clippings/DailyDoseOfDS/2026-07-07_Rethinking-KV-caching-for-production-inference_19f3d7.md` -> `raw/articles/2026-07-07_Rethinking-KV-caching-for-production-inference_19f3d7.md` -> `wiki/sources/2026-07-07_Rethinking-KV-caching-for-production-inference_19f3d7.md`（+ 新建概念 `[[wiki/concepts/概念_解耦式KV缓存与LMCache|概念_解耦式KV缓存与LMCache]]`，深刻剖析 LMCache 的解耦独立旁路进程、多 GPU 零拷贝和多层并行异步加载机制，以及 CacheBlend 基于选择性重计算复用 KV Cache 提速 2-4x 的原理；更新已有概念 `[[wiki/concepts/概念_KV_Cache|概念_KV_Cache]]`，追加智能体推理 62% 重复 token 浪费的斯坦福调研背景与交叉引用）
+  - `Clippings/DailyDoseOfDS/2026-07-14_NVIDIA-researchers-built-a-new-transformer-variant_19f617.md` -> `raw/articles/2026-07-14_NVIDIA-researchers-built-a-new-transformer-variant_19f617.md` -> `wiki/sources/2026-07-14_NVIDIA-researchers-built-a-new-transformer-variant_19f617.md`（+ 新建概念 `[[wiki/concepts/概念_SparDA预测式KV缓存预取|概念_SparDA预测式KV缓存预取]]`，剖析 SparDA 利用 Forecast 投影异步预取下一层 KV 块从而实现数据传输与计算重叠（Overlap）的机制，及分组级廉价选择器提速原理，总结 1.7x 解码加速、5.3x 吞吐量增幅与 +6.5 长推理准确率物理收益，交叉链入 `[[概念_LLM推理两阶段]]`；更新已有概念 `[[wiki/concepts/概念_KV_Cache|概念_KV_Cache]]` 建立双向链入与 sources 关联）
+- **索引更新**：将新建的 2 篇 Source 摘要页和 2 篇 Concept 页面挂载到 `wiki/index.md` 对应列表中。
+
+## [2026-08-04] ingest | raw/articles/2026-07-03_Prompt,-context,-harness-&-loop-engineering_19f29f.md & 2026-07-07_4-LLM-text-generation-strategies_19f3d7.md -> wiki/sources/ (+ affected pages)
+- **深度阅读与语法净化**：深度阅读 `Clippings/DailyDoseOfDS/` 下的 2 篇文章，进行行内伪 tag 和伪双链排查，确保语法兼容 Obsidian 双链图谱。
+- **物理文件归档与 Ingest 闭环 (Clippings -> raw/articles/)**：
+  - `Clippings/DailyDoseOfDS/2026-07-03_Prompt,-context,-harness-&-loop-engineering_19f29f.md` -> `raw/articles/2026-07-03_Prompt,-context,-harness-&-loop-engineering_19f29f.md` -> `wiki/sources/2026-07-03_Prompt,-context,-harness-&-loop-engineering_19f29f.md`（+ 更新已有概念 `[[wiki/concepts/概念_Harness_Engineering|概念_Harness_Engineering]]`、`[[wiki/concepts/概念_Loop_Engineering循环工程|概念_Loop_Engineering循环工程]]` 与 `[[wiki/concepts/概念_上下文工程|概念_上下文工程]]`。其中在 `概念_上下文工程` 中新增四层工程抽象阶梯的由内而外嵌套 Mermaid 关系图）
+  - `Clippings/DailyDoseOfDS/2026-07-07_4-LLM-text-generation-strategies_19f3d7.md` -> `raw/articles/2026-07-07_4-LLM-text-generation-strategies_19f3d7.md` -> `wiki/sources/2026-07-07_4-LLM-text-generation-strategies_19f3d7.md`（+ 新建概念 `[[wiki/concepts/概念_LLM文本生成解码策略|概念_LLM文本生成解码策略]]`，详尽对比贪婪搜索、多项式采样、束搜索与对比搜索四大解码策略的特征与计算资源权衡，并交叉链接到 `[[概念_LLM文本生成解码参数]]`）
+- **索引更新**：将新建的 2 篇 Source 摘要页和 1 篇 Concept 页面挂载到 `wiki/index.md` 对应列表中。
+
+## [2026-08-04] ingest | raw/articles/2026-06-25_The-AI-engineering-master-stack-for-2026!_19f00c.md & 2026-07-03_11-most-important-plots-in-DSML_19f29f.md -> wiki/sources/ (+ affected pages)
+- **深度阅读与语法净化**：深度阅读 `Clippings/DailyDoseOfDS/` 下的 2 篇文章，进行行内伪 tag 和伪双链排查，确保语法纯净并兼容 Obsidian 双链图谱。
+- **物理文件归档与 Ingest 闭环 (Clippings -> raw/articles/)**：
+  - `Clippings/DailyDoseOfDS/2026-06-25_The-AI-engineering-master-stack-for-2026!_19f00c.md` -> `raw/articles/2026-06-25_The-AI-engineering-master-stack-for-2026!_19f00c.md` -> `wiki/sources/2026-06-25_The-AI-engineering-master-stack-for-2026!_19f00c.md`（+ 新建概念 `[[wiki/concepts/概念_AI工程技术栈全景_2026|概念_AI工程技术栈全景_2026]]`）
+  - `Clippings/DailyDoseOfDS/2026-07-03_11-most-important-plots-in-DSML_19f29f.md` -> `raw/articles/2026-07-03_11-most-important-plots-in-DSML_19f29f.md` -> `wiki/sources/2026-07-03_11-most-important-plots-in-DSML_19f29f.md`（+ 新建概念 `[[wiki/concepts/概念_机器学习诊断分析图表|概念_机器学习诊断分析图表]]`）
+- **索引更新**：将新建的 2 篇 Source 摘要页和 2 篇 Concept 页面挂载到 `wiki/index.md` 对应列表分类中。
+
+## [2026-08-04] ingest | raw/articles/2026-06-24_Recursive-language-models_19ef72.md & 2026-06-25_6-components-of-context-engineering_19f00c.md -> wiki/sources/ (+ affected pages)
+- **深度阅读与语法净化**：深度阅读 `Clippings/DailyDoseOfDS/` 下的 2 篇文章，进行行内伪 tag 和伪双链排查，确保语法纯净并兼容 Obsidian 双链图谱。
+- **物理文件归档与 Ingest 闭环 (Clippings -> raw/articles/)**：
+  - `Clippings/DailyDoseOfDS/2026-06-24_Recursive-language-models_19ef72.md` -> `raw/articles/2026-06-24_Recursive-language-models_19ef72.md` -> `wiki/sources/2026-06-24_Recursive-language-models_19ef72.md`（+ 新建概念 `[[wiki/concepts/概念_RLM递归语言模型|概念_RLM递归语言模型]]`；更新已有概念 `[[wiki/concepts/概念_Context_Rot|概念_Context_Rot]]`）
+  - `Clippings/DailyDoseOfDS/2026-06-25_6-components-of-context-engineering_19f00c.md` -> `raw/articles/2026-06-25_6-components-of-context-engineering_19f00c.md` -> `wiki/sources/2026-06-25_6-components-of-context-engineering_19f00c.md`（+ 更新已有概念 `[[wiki/concepts/概念_上下文工程|概念_上下文工程]]`）
+- **索引更新**：将新建的 2 篇 Source 摘要页和 1 篇 Concept 页面挂载到 `wiki/index.md` 对应列表分类中。
+
+## [2026-08-04] ingest | raw/articles/2026-06-18_Visual-guide-to-Bi-encoders,-Cross-encoders-&-ColBERT_19edcc.md & 2026-06-24_Loop-engineering,-clearly-explained!_19ef72.md -> wiki/sources/ (+ affected pages)
+- **深度阅读与语法净化**：深度阅读 `Clippings/DailyDoseOfDS/` 下的 2 篇文章，进行行内伪 tag 和伪双链排查，确保语法纯净并兼容 Obsidian 双链图谱。
+- **物理文件归档与 Ingest 闭环 (Clippings -> raw/articles/)**：
+  - `Clippings/DailyDoseOfDS/2026-06-18_Visual-guide-to-Bi-encoders,-Cross-encoders-&-ColBERT_19edcc.md` -> `raw/articles/2026-06-18_Visual-guide-to-Bi-encoders,-Cross-encoders-&-ColBERT_19edcc.md` -> `wiki/sources/2026-06-18_Visual-guide-to-Bi-encoders,-Cross-encoders-&-ColBERT_19edcc.md`（+ 更新已有概念 `[[wiki/concepts/概念_双编码器与交叉编码器|概念_双编码器与交叉编码器]]`，在其中新增 “延迟交互机制：ColBERT” 章节，增加 ColBERT 双重优势介绍及 MaxSim 算子原理）
+  - `Clippings/DailyDoseOfDS/2026-06-24_Loop-engineering,-clearly-explained!_19ef72.md` -> `raw/articles/2026-06-24_Loop-engineering,-clearly-explained!_19ef72.md` -> `wiki/sources/2026-06-24_Loop-engineering,-clearly-explained!_19ef72.md`（+ 新建概念 `[[wiki/concepts/概念_Loop_Engineering循环工程|概念_Loop_Engineering循环工程]]`）
+- **索引更新**：将新建的 2 篇 Source 摘要页和 1 篇 Concept 页面挂载到 `wiki/index.md` 对应列表分类中。
+
 ## [2026-08-04] ingest | raw/articles/2026-06-08_An-intuitive-guide-to-non-linearity-of-ReLU_19ea91.md & 2026-06-14_7-LLM-generation-parameters_19ec7f.md -> wiki/sources/ (+ affected pages)
 - **深度阅读与语法净化**：深度阅读 `Clippings/DailyDoseOfDS/` 下的 2 篇文章，进行行内伪 tag 和伪双链排查，确保语法纯净并兼容 Obsidian 双链图谱。
 - **物理文件归档与 Ingest 闭环 (Clippings -> raw/articles/)**：
