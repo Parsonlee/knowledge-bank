@@ -1,5 +1,7 @@
 # Wiki Log
 
+## [2026-08-04] lint/prune | prune raw/articles/2026-08-01_Succeed-in-ai-engineering-roles_19fbed_part5.md (+ Cascading cleanup source, index & gc)
+
 ## [2026-08-04] ingest | raw/articles/2026-08-01_Succeed-in-ai-engineering-roles_19fbed_part5.md -> wiki/sources/2026-08-01_Succeed-in-ai-engineering-roles_19fbed_part5.md (+ affected pages)
 - **深度阅读与语法净化**：深度阅读 `Clippings/DailyDoseOfDS/` 下的 1 篇文章，进行行内伪 tag 和伪双链排查，确认无需转义，确保兼容 Obsidian 双链图谱。
 - **物理文件归档与 Ingest 闭环 (Clippings -> raw/articles/)**：

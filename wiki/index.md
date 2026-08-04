@@ -254,7 +254,6 @@
 - [[2026-08-01_Build-a-stock-market-research-Agentic-workflow_19fbed_part2]] — 介绍轻量级 AI-native 可视化智能体工作流构建框架 Sim，讨论其基于 ReactFlow 的拖拽式界面、支持 Ollama 本地模型以及对标 n8n 的优势，并通过结合 Alpha-Vantage MCP 与 Telegram 的股市研究 Agent 案例展示其实际应用。（agentic-workflow, ai-framework, stock-market）
 - [[2026-08-01_Data-Version-Control_19fbed_part4]] — 介绍如何使用数据版本控制（DVC）与 Git 协同工作，解决 Git 无法处理大文件的问题，从而实现机器学习项目的完全可复现性。（MLOps, data-version-control, DVC）
 - [[2026-08-01_Double-Descent-vs.-Bias-Variance-Trade-off_19fbed_part3]] — 介绍机器学习与深度学习中的双下降（Double Descent）现象，该现象对传统的偏差-方差折中理论提出了挑战，指出在模型复杂度跨越临界插值界限后测试误差可能会二次下降。（machine-learning, double-descent, generalization）
-- [[2026-08-01_Succeed-in-ai-engineering-roles_19fbed_part5]] — 汇总了全栈 AI 工程师需要重点修习的课程大纲与能力清单，涵盖 MLOps、MCP、Agentic 系统、RAG 应用、GNN、上下文打分、量化、保形预测、因果推断、模型压缩等多个领域。（full-stack-ai-engineering, learning-resource, career-development）
 
 ## Concepts
 
