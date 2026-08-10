@@ -36,6 +36,8 @@ Pipeline 只负责 Gmail 同步、文章拆分和状态追踪，不得绕过仓�
   - 指向 `/membership` 的 H2 被识别为推广；
   - 有 H2 的邮件始终按有效 H2 分段，全为推广 H2 时返回零篇文章。
 - 保留 4 个简单测试，正式命令执行结果为 4/4 通过。
+- 2026-08-10 已复核本地入库关卡：`reconcile` 仅在 `ingest_progress.json` 标记完成且对应文件已存在于 `raw/articles/` 时更新账本，Pipeline 不会自行移动原文或写入 `wiki/`。
+- 2026-08-10 本地验证通过：4 个回归测试通过；状态为 59 封邮件（48 `ingested`、11 `ignored`），文章为 76 篇 `ingested`、0 篇 `review`、1 篇 `rejected`，当前没有待处理邮件或待审文章。
 
 ### 当前限制
 
@@ -111,6 +113,8 @@ git diff --check
 ```
 
 最近一次测试结果：4 tests passed。
+
+最近一次本地状态核验：2026-08-10；远程 Gmail 清单尚未重新发现，`last_discovery_at` 仍为 `null`。
 
 ## Key Files
 

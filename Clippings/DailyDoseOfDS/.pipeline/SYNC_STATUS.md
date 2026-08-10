@@ -1,6 +1,6 @@
 # Gmail 星标邮件同步状态
 
-> 此文件由 Pipeline 生成，请勿手工编辑。机器可读账本为 [`manifest.json`](./manifest.json)。更新时间：`2026-08-10T03:38:49+00:00`。
+> 此文件由 Pipeline 生成，请勿手工编辑。机器可读账本为 [`manifest.json`](./manifest.json)。更新时间：`2026-08-10T04:23:12+00:00`。
 
 ## 汇总
 
