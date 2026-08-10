@@ -1,0 +1,92 @@
+import base64
+import json
+import tempfile
+import unittest
+from pathlib import Path
+from unittest.mock import patch
+
+import mail_pipeline
+from mail_sources import dailydoseofds
+
+
+class MailPipelineTest(unittest.TestCase):
+    def test_remote_list_follows_all_pages(self):
+        calls = []
+
+        def fake_call(args):
+            params = json.loads(args[args.index("--params") + 1])
+            calls.append(params)
+            if "pageToken" not in params:
+                return {"messages": [{"id": "a"}], "nextPageToken": "next"}
+            return {"messages": [{"id": "b"}]}
+
+        self.assertEqual([item["id"] for item in mail_pipeline.list_starred_messages(fake_call)], ["a", "b"])
+        self.assertEqual(calls[1]["pageToken"], "next")
+
+    def test_sync_marks_unknown_sender_without_raw_fetch(self):
+        data = mail_pipeline.empty_manifest()
+        calls = []
+
+        def fake_call(args):
+            calls.append(args)
+            if args[3] == "list":
+                return {"messages": [{"id": "unknown"}]}
+            return {"payload": {"headers": [
+                {"name": "From", "value": "Other <news@example.com>"},
+                {"name": "Subject", "value": "Other"},
+                {"name": "Date", "value": "Mon, 10 Aug 2026 10:00:00 +0000"},
+            ]}}
+
+        self.assertEqual(mail_pipeline.sync(data, fake_call), (1, 1))
+        record = data["emails"]["unknown"]
+        self.assertEqual(record["lifecycle"], "unhandled")
+        self.assertIsNone(record["source_key"])
+        self.assertEqual(len(calls), 2)
+
+    def test_ddods_parser_filters_membership_footer(self):
+        membership = base64.urlsafe_b64encode(b"https://www.dailydoseofds.com/membership").decode().rstrip("=")
+        raw = (
+            "Subject: Weekly\nFrom: avi@dailydoseofds.com\nDate: Mon, 10 Aug 2026 10:00:00 +0000\n"
+            "MIME-Version: 1.0\nContent-Type: text/html; charset=utf-8\n\n"
+            "<html><body><h2>First</h2><p>A</p><h2>Second</h2><p>B</p>"
+            f'<h2><a href="https://click.kit-mail3.com/x/{membership}">Succeed in AI Engineering roles</a></h2>'
+            "<p>Master full-stack AI engineering</p></body></html>"
+        ).encode()
+        metadata, articles = dailydoseofds.parse("abcdef123456", {"raw": base64.urlsafe_b64encode(raw).decode().rstrip("=")})
+        self.assertEqual(metadata["formatted_date"], "2026-08-10")
+        self.assertEqual([article["title"] for article in articles], ["First", "Second"])
+
+    def test_reconcile_updates_only_archived_article(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            archive = root / "raw" / "articles"
+            archive.mkdir(parents=True)
+            record = mail_pipeline.new_email_record("mail")
+            record["source_key"] = "dailydoseofds"
+            record["articles"] = [
+                {"id": "mail:1", "file": "kept.md", "status": "review", "title": "Kept"},
+                {"id": "mail:2", "file": "skip.md", "status": "review", "title": "Skip"},
+            ]
+            data = mail_pipeline.empty_manifest()
+            data["emails"]["mail"] = record
+            (archive / "kept.md").write_text("# Kept\n", encoding="utf-8")
+            staging = root / "Clippings" / "emails"
+            (staging / "dailydoseofds").mkdir(parents=True)
+            (staging / "dailydoseofds" / "skip.md").write_text("# Skip\n", encoding="utf-8")
+            record["articles"][0]["staging_file"] = "dailydoseofds/kept.md"
+            record["articles"][1]["staging_file"] = "dailydoseofds/skip.md"
+            with patch.object(mail_pipeline, "ARCHIVE_DIR", archive), patch.object(mail_pipeline, "EMAILS_DIR", staging):
+                self.assertEqual(mail_pipeline.reconcile(data), 1)
+            self.assertEqual(record["articles"][0]["status"], "ingested")
+            self.assertEqual(record["articles"][1]["status"], "review")
+            self.assertEqual(record["lifecycle"], "review")
+
+            (staging / "dailydoseofds" / "skip.md").unlink()
+            with patch.object(mail_pipeline, "ARCHIVE_DIR", archive), patch.object(mail_pipeline, "EMAILS_DIR", staging):
+                self.assertEqual(mail_pipeline.reconcile(data), 0)
+            self.assertEqual(record["articles"][1]["status"], "rejected")
+            self.assertEqual(record["articles"][1]["reason"], "manual_delete")
+
+
+if __name__ == "__main__":
+    unittest.main()

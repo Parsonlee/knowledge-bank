@@ -27,7 +27,7 @@ wiki/{entities, concepts, comparisons, overview} (末端知识产物)
 | 目录/文件 | 角色定位 | 说明与规范 |
 | :--- | :--- | :--- |
 | **`raw/`** | **零级物理底座** | 外部原始资料归档（包含 `articles/`, `insights/`, `papers/`, `playbooks/`, `transcripts/`），**绝对只读不改**。 |
-| **`Clippings/`** | **网页剪藏缓冲区** | 官方插件暂存区。入库 (Ingest) 提炼完成后，物理文件必须归档至 `raw/` 对应子目录。 |
+| **`Clippings/`** | **外部资料暂存区** | 网页剪藏由官方插件暂存；邮件订阅暂存于 `emails/<来源>/`，由共享邮件管线发现、路由和拆分。两者均须在完成 Ingest 提炼后归档至 `raw/` 对应子目录。 |
 | **`wiki/sources/`** | **一级摘要层** | 单个文献的结构化摘要页，Frontmatter `sources:` 字段 100% 精确指向 `raw/` 物理文件。 |
 | **`wiki/entities/`** | **实体图谱页** | 人物、机构、开源项目等实体（如 `实体_xxx.md`），基于 `sources/` 提炼。 |
 | **`wiki/concepts/`** | **概念图谱页** | 算法、理论、模型架构等核心概念（如 `概念_xxx.md`），基于 `sources/` 提炼。 |

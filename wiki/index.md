@@ -4,6 +4,9 @@
 
 ## Sources
 
+- [[2026-08-05_How-to-serve-5-models-on-one-GPU_19fd38]] — 多模型 AI 流水线以统一服务层、共享 GPU 池、按需加载和成本感知分批降低闲置资源（Infra/AI, LLM/inference）
+- [[2026-08-07_8-LLM-precision-formats_19fddf]] — FP32/TF32/BF16/FP16/FP8/INT8/INT4/NF4 八种 LLM 精度格式的显存、数值范围与训练推理权衡（LLM/inference, LLM/training, Infra/gpu）
+
 - [[目标检测入门_经典模型]] — R-CNN/Fast/Faster R-CNN、YOLO、SSD 经典检测模型综述（CV/detection）
 - [[目标检测入门_评测与训练技巧]] — mAP/IoU 评测指标、VOC/COCO 数据集、训练 tricks（CV/detection）
 - [[目标检测入门_基础网络与分类定位权衡]] — ResNet/Xception/ResNeXt/SENet/NASNet backbone 演进与 R-FCN/DCN（CV/detection）
@@ -536,6 +539,8 @@
 - [[概念_LLM系统自动优化方法论]] — 介绍了以大模型优化大模型系统的反馈演进闭环，横向对比 OPRO, MIPROv2, TextGrad, GEPA, AlphaEvolve, AutoResearch 等 6 大自动调优技术。（llm, optimization, auto-prompt, software-evolution）
 
 ## Entities
+
+- [[实体_Superlinked_Inference_Engine]] — 面向多模型流水线的开源推理服务引擎，统一 API、共享 GPU 池与按需模型加载
 
 - [[实体_OpenAI]] — 全球顶尖人工智能实验室，GPT 系列大模型、ChatGPT、Sora 创造者与生成式 AI 时代引领者
 - [[实体_DeepMind]] — Google 旗下顶尖 AI 实验室，AlphaGo、AlphaFold 与 Gemini 多模态大模型研发者

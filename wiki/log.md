@@ -1,5 +1,9 @@
 # Wiki Log
 
+## [2026-08-10] ingest | raw/articles/2026-08-05_How-to-serve-5-models-on-one-GPU_19fd38.md -> wiki/sources/2026-08-05_How-to-serve-5-models-on-one-GPU_19fd38.md (+ 实体_Superlinked_Inference_Engine, 实体_vLLM)
+
+## [2026-08-10] ingest | raw/articles/2026-08-07_8-LLM-precision-formats_19fddf.md -> wiki/sources/2026-08-07_8-LLM-precision-formats_19fddf.md (+ 概念_量化, 概念_混合精度训练, 概念_LoRA与QLoRA显存, 实体_vLLM)
+
 ## [2026-08-04] lint/prune | prune raw/articles/2026-08-01_Succeed-in-ai-engineering-roles_19fbed_part5.md (+ Cascading cleanup source, index & gc)
 
 ## [2026-08-04] ingest | raw/articles/2026-08-01_Succeed-in-ai-engineering-roles_19fbed_part5.md -> wiki/sources/2026-08-01_Succeed-in-ai-engineering-roles_19fbed_part5.md (+ affected pages)

@@ -41,7 +41,7 @@ This file provides guidance to Claude Code/Codex/Antigravity and other AI Agents
 | `raw/papers/` | 学术论文与研究报告（带有明确学术格式的文献） | **只读不改** |
 | `raw/playbooks/` | 操作手册、教程与实战指南（步骤化 SOP 或 How-to 内容） | **只读不改** |
 | `raw/transcripts/` | 讲座、播客、视频的文字版本 | **只读不改** |
-| `Clippings/` | 网页剪藏缓冲区（Staging）——由官方剪藏插件自动保存，**完成 Ingest 入库后必须移动至 `raw/` 对应子目录归档** | **仅限归档移动** |
+| `Clippings/` | 外部资料缓冲区（Staging）——网页剪藏由官方插件保存；邮件订阅暂存于 `Clippings/emails/<source_key>/`，其发现、路由、逐篇筛选和对账规范以 [`Clippings/emails/.pipeline/README.md`](Clippings/emails/.pipeline/README.md) 为准。**完成 Ingest 入库后必须移动至 `raw/` 对应子目录归档** | **仅限归档移动** |
 
 ### 1.2 知识图谱维护层 (Wiki Layer) —— **由 LLM / Agent 核心生成与维护**
 整个 `wiki/` 目录是 LLM 结构化输出的核心图谱仓库，通过严密的网状双链建立起可复利的知识网络。
@@ -210,11 +210,20 @@ Vault 内运行了 **Local REST API with MCP** 插件。当桌面端 Obsidian �
 ## 4. 核心工作流（Operations）
 AI Agent 在处理日常任务时，必须遵守以下核心操作闭环：
 
+### 4.0 邮件同步与人工 Review 门槛
+
+`Clippings/emails/` 的详细目录、命令和状态定义以 [`Clippings/emails/.pipeline/README.md`](Clippings/emails/.pipeline/README.md) 为准，并严格区分两个阶段：
+
+1. **邮件 Sync（可自动执行）**：`sync`、`route`、`run` 仅发现星标邮件、更新共享账本、按已注册来源生成待审 Markdown；不得移动文件、创建 Wiki 页面或执行 Ingest。
+2. **人工 Review（用户职责）**：用户逐篇决定哪些邮件文章保留、哪些删除或拒绝。邮件是容器，文章是唯一的 Review 与 Ingest 原子要素。
+3. **Ingest（必须显式授权）**：即使文章处于 `review` 状态，Agent 也不得自行判断其保留价值或自动入库。只有在用户完成 Review 并明确要求对指定文章执行 Ingest 后，Agent 才可进入 §4.1 SOP；未获该指令时，必须停留在邮件 Sync / 状态报告范围内。
+
 ### 4.1 Ingest（新资料入库操作）
 当用户要求把新收藏、新文章或文档进行「入库 / Ingest」时，**必须完整执行以下闭环动作**：
 1. **深度阅读与原始净化**：阅读原始资料（如 `raw/articles/xxx.md` 或 `Clippings/xxx.md`），若正文不足则抓取 URL 全文。提炼 3-7 条核心要点与关键引文。同时顺带执行**语法净化**：
    - 行内伪 Tag 转义：正文中非标题的 `#word` → `\#word`（仅转义行内，行首标题 `#` 不动）
    - 伪双链转义：数学矩阵/张量等非 Obsidian 链接的 `[[...]]` → `\[\[...\]\]`
+   - **邮件暂存前置检查**：若原文位于 `Clippings/emails/<source_key>/`，必须先阅读 [`Clippings/emails/.pipeline/README.md`](Clippings/emails/.pipeline/README.md)，并确认用户已在 Review 后明确指令对该指定文章执行 Ingest。严禁自行选择文章、因同封邮件中其他文章入库而整体 Ingest，或仅因状态为 `review` 即启动本 SOP。
 2. **生成 Source 摘要页**：在 `wiki/sources/` 目录下创建对应的 `.md` 摘要页（严格遵守 Frontmatter 格式并在文末追加物理文献链接 `> 📎 **物理文献**：[[raw/articles/xxx.md]]`，子目录按实际分类调整）。
 3. **构建双向维基网络**：在 Source 摘要页正文中，凡提及重要技术概念、人物、机构或项目，一律使用 Obsidian 链接格式 `[[entities/实体_xxx]]` 或 `[[concepts/概念_yyy]]` 与知识库产生关联。
 4. **联动 Entities & Concepts**：检查被引用的 `wiki/entities/` 或 `wiki/concepts/` 页面是否存在：
