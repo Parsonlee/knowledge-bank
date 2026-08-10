@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 import shutil
 import subprocess
@@ -108,7 +109,7 @@ def new_email_record(message_id: str) -> dict[str, Any]:
 
 
 def run_gws(args: list[str], retries: int = 3) -> dict[str, Any]:
-    command = ["gws", *args]
+    command = [os.environ.get("GWS_BIN", "gws"), *args]
     last_error = ""
     for attempt in range(retries):
         result = subprocess.run(command, capture_output=True, text=True)
