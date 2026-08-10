@@ -1,139 +1,126 @@
-# HANDOFF.md — DailyDoseOfDS 方案 C 执行交接文档
+# HANDOFF.md - DailyDoseOfDS Gmail Pipeline 交接
 
-> 最后确认：2026-07-30 by Codex
+> 最后更新：2026-08-10 by Codex
 
----
+## Goal
 
-## 🎯 Goal (核心目标)
+在 Knowledge Bank 中维护一条可重复、可追踪、可自动化的 Daily Dose of DS 邮件管线：
 
-将 Gmail 中 `from:avi@dailydoseofds.com is:starred` 的 **77 封**星标邮件，全量转换为**100% 忠实于原文**的高质量中文 Obsidian Markdown 笔记，覆盖替换 `Clippings/DailyDoseOfDS/` 目录下旧模板生成的假内容文件。
+```text
+Gmail starred
+  -> Clippings/DailyDoseOfDS（发现、拆分、人工审阅）
+  -> Knowledge Bank Ingest SOP
+  -> raw/articles + wiki/sources + 图谱/索引/日志
+```
 
----
+Pipeline 只负责 Gmail 同步、文章拆分和状态追踪，不得绕过仓库 `AGENTS.md` 的 Ingest SOP 直接写入 `raw/` 或 `wiki/`。
 
-## 📈 Current Progress (当前进展)
+## Current Progress
 
-### 已完成的前置工程
+### 已完成
 
-1. **Gmail 星标邮件精确盘点**：确认实际为 **77 封**（非原来的 76 封），新增 1 封 `Serverless vs. On-prem vs. Edge Deployment`（2026-07-28，ID: `19faa9c1ec5cf9ba`）无对应旧文件。
-2. **全量质量审计**：对 207 个旧文件执行定量扫描，确认 **100% 正文为模板假内容**（`HighPerformanceModule` 假代码 96%、统一开头语 100%、KL 散度假公式 94%），**0% 正文可复用**。
-3. **邮件↔文件映射表构建**：
-   - 映射文件：`<artifacts>/scratch/email_file_mapping.json`（76 封已映射，1 封新建）
-   - 分批计划：`<artifacts>/scratch/batch_plan.json`（19 批，每批 4 封邮件）
-4. **方案评估与选型**：对比全量重做(A) / 审计修复(B) / 混合重生(C) 三方案，选定**方案 C（元数据复用 + 正文全量重生）**。
-5. **历史备份**：229 个旧文件已全量归档至 Google Drive `Obsidian_Clippings_Backup_20260730`（ID: `1eyVQvGTZUz3QVimvza2GWHKk6_IDDsFw`）。
+- Pipeline 已迁移到 `scripts/dailydose_pipeline.py`，使用 PEP 723 声明依赖，通过 `uv run` 执行。
+- Pipeline 元数据集中在 `Clippings/DailyDoseOfDS/.pipeline/`，避免根目录中的状态 Markdown 被 Ingest 扫描误认为文章。
+- `manifest.json` 是机器事实账本，保存邮件到文章的一对多关系、远程星标状态、错误、拒绝原因和生命周期。
+- `SYNC_STATUS.md` 是人类可读状态表；`ARCHIVE_INDEX.md` 索引已进入 `raw/articles/` 的历史文章。
+- 新文件统一命名为 `YYYY-MM-DD_<规范化标题>_<Gmail ID 前6位>.md`，不再混用 `_partN`。旧 `raw/` 文件名保持不变，避免破坏既有 Source 链接。
+- 当前账本包含 59 封已处理邮件：48 封 `ingested`，11 封 `ignored`。
+- 当前文章状态：76 篇 `ingested`、0 篇 `review`、1 篇 `rejected`。
+- `Succeed in AI Engineering roles` 已确认是邮件 footer 会员推广，不是文章：
+  - `ingest_progress.json` 已从 `true` 修正为 `false`；
+  - manifest 记录为 `rejected / footer_ad_parse_bug`；
+  - 不存在于 `raw/articles` 是正确状态。
+- Kit footer 误拆分 Bug 已修复：
+  - 支持解码 `click.kit-mail*.com` 与 ConvertKit 跟踪链接；
+  - 使用 URL-safe Base64 还原真实目标；
+  - 指向 `/membership` 的 H2 被识别为推广；
+  - 有 H2 的邮件始终按有效 H2 分段，全为推广 H2 时返回零篇文章。
+- 保留 4 个简单测试，正式命令执行结果为 4/4 通过。
 
-### 批次执行进度
+### 当前限制
 
-| 批次 | 状态 | 邮件主题 | 产出文件数 | 验收 |
-|------|------|------|------|------|
-| **Batch 1** | ✅ 完成 | Graph Engineering / 11 LLM Eval / 5 Quantization / RLHF-DPO-GRPO | 12 | ✅ 11 通过 + 1 广告标记 |
-| **Batch 2** | ✅ 完成 | Agents Web Search / Small Models / Four Agent Loops / KV Caching | 11 | ✅ 9 通过 + 2 广告标记 |
-| **Batch 3** | ✅ 完成 | Prompt/Context/Loop Eng / AI Master Stack / Loop Eng / Turn Website API | 12 | ✅ 9 通过 + 3 广告标记 |
-| **Batch 4** | ✅ 完成 | PPO in RL / 8 Layer Production AI / Agent Harness Repair / 3D Weather Globe | 11 | ✅ 10 通过 + 1 广告标记 |
-| **Batch 5** | ✅ 完成 | Hermes Agent / Deep Researcher / Bellman Eqs / Local AI Brain | 11 | ✅ 9 通过 + 2 广告标记 |
-| **Batch 6** | ✅ 完成 | Train Classical ML / MDP in RL / Beat GRPO / RL Agents 2026 | 8 | ✅ 8 通过 |
-| **Batch 7** | ✅ 完成 | Agent Memory Trick / LLM Opt Techniques / Claude Code Slash / Diffusion LLMs | 11 | ✅ 11 通过 |
-| **Batch 8** | ✅ 完成 | Agent Harness / GPU vs TPU / AI OS / .claude Folder | 10 | ✅ 7 通过 + 3 广告标记 |
-| **Batch 9** | ✅ 完成 | LLM Inference / Fine-tuning / ML Sets / NN Train Opt | 10 | ✅ 10 通过 |
-| **Batch 10** | ✅ 完成 | Error Monitoring Agent / Object Detection / Parallel Processing / ML Phases | 13 | ✅ 12 通过 + 1 广告标记 |
-| **Batch 11** | ✅ 完成 | Generative UI / Test Agents / Trace App / BM25 Algorithm | 13 | ✅ 12 通过 + 1 广告标记 |
-| **Batch 12** | ✅ 完成 | ML 6 Steps / RAG & Fine-tuning / LLM on Phone / 8 AI Architectures | 13 | ✅ 9 通过 + 4 广告标记 |
-| **Batch 13** | ✅ 完成 | Categorical Encoding / kNN Imbalanced / MiniMax vs Sonnet / Verbalized Sampling | 13 | ✅ 10 通过 + 3 广告标记 |
-| **Batch 14** | ✅ 完成 | Federated Data Engine / Anthropic MCP / Gradient Boosting / PCA | 10 | ✅ 10 通过 |
-| **Batch 15** | ✅ 完成 | 6 Types of Contexts / GIL in Python / Context Engineering / Clustering Evaluation | 12 | ✅ 12 通过；1 个历史映射异常已显式标注 |
-| **Batch 16** | ✅ 完成 | Data & Pipeline Engineering / Corrective RAG / 4 Layers of Agentic AI / Qwen 3 Coder vs. Sonnet 4 | 12 | ✅ 12 通过；1 个历史映射异常已显式标注 |
-| **Batch 17** | ✅ 完成 | MCP Integration / uv Guide / Component-level Evals / Neural-network Training Optimization | 11 | ✅ 11 通过 |
-| **Batch 18** | ✅ 完成 | MCP Sampling / Bi-encoder & ColBERT / RAG Chunking / Memory Pinning | 13 | ✅ 13 通过 |
-| **Batch 19** | ✅ 完成 | Variables / Active Learning / ML Production Testing / Python Underscore | 7 | ✅ 7 通过 |
-| **收尾补充** | ✅ 完成 | Serverless / Edge Deployment 邮件 | 4 | ✅ 4 通过，新建 4 篇 |
+- `last_discovery_at` 仍为 `null`，59 封邮件的 `remote_starred` 均为未知。
+- 2026-08-10 尝试访问 Google Gmail discovery API 时连接超时，因此没有把失败结果伪装成已核对状态。
+- knowledge-bank 工作树还有用户原有改动：`.obsidian/plugins/google-drive-mirror/*` 和已删除的 `download.html`。不要恢复、覆盖或混入 Pipeline 清理。
+- 本次 Pipeline 文件仍可能处于未提交状态；操作前先运行 `git status --short`。
 
-### 本次现场确认
+## What Worked
 
-- Batch 15 已按「每个子代理最多两封邮件」的串行限制拆为两段处理，并完成主验收：`verify_batch.py` 对 12 个文件均返回通过；未发现 `$s_!` 图片 URL 残留。
-- 历史映射存在一处异常：`2025-09-23-A-free-ML-course-that-requires-zero-technical.md` 并不在指定的 GIL 邮件中。页面已明确写为待回溯的映射异常，未填入无关主题内容。
-- Batch 16 已完成主验收：`verify_batch.py` 对 12 个文件均返回通过；其中 `2025-07-25-11-most-important-DS-plots.md` 不在其映射邮件中，已改为可审计异常说明。Beam 与 Factory 推广页已明确标注为广告内容。
-- Batch 17 已完成主验收：`verify_batch.py` 对 11 个文件均返回通过。Factory MCP 推广页已显式标注为广告；验收脚本必须接收绝对路径，传相对路径会误报文件不存在。
-- Batch 18 已完成主验收：`verify_batch.py` 对 13 个文件均返回通过。计划中缺失主题和日期的 ID `196ac3a283f20357` 可正常读取，实际主题为「Memory Pinning to Accelerate Model Training」，因此无需创建映射异常说明；Linkup、Browserbase 与 Rovo Dev CLI 推广页已显式标注。
-- Batch 19 已完成主验收：`verify_batch.py` 对 7 个文件均返回通过。曾中断的两篇旧模板文件已重新派发并通过验收；Maxim 页面被明确处理为同封邮件中的赞助主题，未混入邮件主文的无关内容。
-- 收尾补充已完成：ID `19faa9c1ec5cf9ba` 被拆分为 4 篇新笔记（Technical LLM interview question、Serverless vs. On-prem vs. Edge Deployment、CPU vs. GPU vs. TPU vs. NPU vs. LPU、MCP & Skills for AI agents），逐篇验收均通过。
-- **最终全量验收**：77 封目标星标邮件（19 个计划批次 + 1 封无映射新邮件）均已处理完毕。用户已授权删除 21 篇极短广告/推广页，并重写 2 篇历史模板残留文件；对现存全目录 198 篇文件运行 `verify_batch.py` 的结果为 **198 通过、0 失败**。
-- Obsidian Git 已将 Batch 1–15 的工作树自动备份为提交 `8c11987`（`vault backup: 2026-07-30 23:18:04`）。本次更新 HANDOFF 后会产生新的未提交文档改动；不要使用会覆盖工作树的 Git 恢复或重置操作。
-- **本任务与目录级验收均已完成**。
+- 用完整 Gmail message ID 作为邮件主键，用 manifest 明确表达一封邮件对应零到多篇文章。
+- 从现有 `ingest_progress.json + raw/articles` 初始化历史状态，不把已 Ingest 的 76 篇文章重新复制回 Clippings。
+- 将 Clippings 根目录限定为真正待 Ingest 的文章和 `ingest_progress.json`，其余元数据放入隐藏 `.pipeline/`。
+- Gmail `messages.list` 自动跟随 `nextPageToken`，避免只读取第一页。
+- 失败邮件记录为 `failed` 并允许下次 `fetch` 重试；取消远程星标不会删除本地文章。
+- 依据解码后的目标 URL `/membership` 判断 footer 推广，比按标题硬编码 `Succeed in AI Engineering roles` 更稳健。
+- 直接从 Git 历史恢复误拆分文件，确认其正文是会员课程 CTA，而不是凭标题猜测。
 
-### 新增/新建文件（Batch 1-2 产出中与旧文件名不同的）
+## What Didn't Work
 
-- `2026-07-24-11-LLM-evaluation-methods.md`（新切分）
-- `2026-07-21-Layers-of-observability-in-AI-systems.md`（新切分）
-- `2026-07-16-Knowledge-Distillation-using-Teacher-Assistant.md`（新切分）
+- 旧增量脚本依赖历史会话日志和 58 个硬编码 ID，无法可靠区分未同步、已过滤和本地删除。
+- 旧拆分器只用静态 H2 文本黑名单；`Succeed in AI Engineering roles` 未命中黑名单，因此被误判成第 5 篇文章。
+- 旧链接解码器只识别域名包含 `convertkit`，没有覆盖实际使用的 `click.kit-mail3.com`。
+- 旧逻辑只有在有效 H2 数量至少为 2 时才拆分；只有 1 个有效 H2 加 footer 时会回退整封邮件，把 footer 再次带入。
+- 将 README、状态表直接放在 Clippings 根目录存在被批量 Ingest 误扫的风险，因此已迁移到 `.pipeline/`。
+- `gws schema` 和远程 `discover` 曾因 Google discovery API DNS/连接超时失败。网络失败时不要手动填充 `last_discovery_at`。
 
-### 已处理的无映射新邮件
+## Next Steps
 
-- `19faa9c1ec5cf9ba`: **Serverless vs. On-prem vs. Edge Deployment**（2026-07-28）— 已拆分并新建 4 篇笔记。
+1. 网络恢复后，在 knowledge-bank 根目录执行远程核对：
 
----
+   ```bash
+   uv run scripts/dailydose_pipeline.py discover
+   uv run scripts/dailydose_pipeline.py status
+   ```
 
-## 💡 What Worked (成功经验)
+2. 若出现 `discovered` 邮件，下载并拆分到 Clippings：
 
-1. **方案 C 混合策略**：复用文件名骨架 + 正文全量重生，效率高于全量重做和审计修复。
-2. **`gws gmail +read --id <ID> --headers`**：纯文本模式高效获取邮件正文，HTML 模式补充提取 CDN 图片 URL。
-3. **Flash 3.5 Subagent 串行调度**：每批 4 封邮件，Subagent 约 2-3 分钟完成，主 Agent 验收后再派下一批。
-4. **验收脚本自动化**：`scratch/verify_batch.py` 自动检测模板标记残留、Frontmatter 完整性、文件大小异常。
-5. **CDN URL 修复**：`sed -i '' 's/\$s_![^!]*!,//g'` 批量清理损坏占位符，或在 Subagent 指令中预防。
+   ```bash
+   uv run scripts/dailydose_pipeline.py fetch
+   ```
 
----
+3. 查看 `Clippings/DailyDoseOfDS/.pipeline/SYNC_STATUS.md` 的待审文章。拒绝文章可执行：
 
-## ⚠️ What Didn't Work / 避坑指南
+   ```bash
+   uv run scripts/dailydose_pipeline.py reject '<完整邮件ID>:<文章序号>' --reason '<原因>'
+   ```
 
-1. **CDN 图片 URL 损坏占位符 `$s_!xxx!,`**：Batch 1 的 Subagent 从旧文件复用了带损坏参数的 URL，需要主 Agent 用 sed 后置修复。Batch 2 起在 Subagent 指令中追加了预防说明，问题已解决。
-2. **广告/赞助商文件过短**：极简广告标记页会因小于 500 bytes 被验收脚本判失败；本次按用户要求已删除此类 21 个页面，而非保留豁免。
-3. **`sync_status.json` 是 Word 文档**：本地文件实际是 `.docx` 格式（由 Google Drive 同步导出），无法直接作为 JSON 解析。真正的 sync_status 数据在 Google Docs（ID: `1OjelnvBu87dGq0E4Xn8QXJV3B4XDJSRuUM0enbQaC-s`）。
-4. **张冠李戴文件**：旧文件中曾存在标题与文件名不匹配问题；本次发现的两篇模板残留已按实际 Gmail 来源重写。
+4. 对保留文章严格执行 `AGENTS.md` 的 Ingest SOP。批量 Ingest 必须串行，每个 Subagent 最多 2 篇；完成摘要、图谱、索引、日志和事实核查后再移动到 `raw/articles`。
 
----
+5. Ingest 流程更新 `ingest_progress.json` 后对账：
 
-## 🚀 Next Steps (接手行动指南)
+   ```bash
+   uv run scripts/dailydose_pipeline.py reconcile
+   ```
 
-### 阶段一：本任务已完成
+6. 日常自动发现与抓取可运行：
 
-77 封目标星标邮件均已完成处理，现存目录已通过最终全量验收。
+   ```bash
+   uv run scripts/dailydose_pipeline.py run
+   ```
 
-### 阶段二：收尾清理
+   `run` 不会自动 Ingest，这是刻意保留的质量关卡。
 
-已完成无映射邮件新建、广告页清理、模板残留重写与全量验收。Google Drive 同步如有需要，可作为独立任务执行。
+7. 如果以后出现新的 footer 误拆分，优先从链接目标、DOM 位置或推广容器特征扩展过滤规则，不要只追加易误伤的标题关键词。
 
----
-
-## 📁 关键文件索引
-
-| 文件 | 路径 | 用途 |
-|------|------|------|
-| 邮件元数据 | `<artifacts>/scratch/email_metadata.json` | 77 封邮件的 ID / Subject / Date |
-| 邮件↔文件映射 | `<artifacts>/scratch/email_file_mapping.json` | 邮件到文件的精准映射 |
-| 分批计划 | `<artifacts>/scratch/batch_plan.json` | 19 批次的详细任务清单 |
-| 验收脚本 | `<artifacts>/scratch/verify_batch.py` | 批次验收自动化检查 |
-| 审计脚本 | `<artifacts>/scratch/audit_files.py` | 全量文件质量诊断 |
-| 方案对比 | `<artifacts>/plan_comparison.md` | 三方案评估文档 |
-| Handover 规范 | `Clippings/DailyDoseOfDS/Handover-spec.md` | 原始翻译格式规范（保留参考） |
-
-> `<artifacts>` = `/Users/ZHao/.gemini/antigravity-cli/brain/1a4ae592-f085-4deb-b656-ef8e1df2546e`
-
----
-
-## 🔧 快速启动命令参考
+## Verification
 
 ```bash
-# 读取邮件纯文本
-gws gmail +read --id <EMAIL_ID> --headers
-
-# 读取邮件 HTML（提取图片）
-gws gmail +read --id <EMAIL_ID> --html
-
-# 修复 CDN URL 损坏占位符
-sed -i '' 's/\$s_![^!]*!,//g' <file.md>
-
-# 验收特定文件
-python3 <artifacts>/scratch/verify_batch.py file1.md file2.md ...
-
-# 全量验收
-python3 <artifacts>/scratch/verify_batch.py
+uv run --with beautifulsoup4 --with html2text python scripts/test_dailydose_pipeline.py
+uv run scripts/dailydose_pipeline.py status
+git diff --check
 ```
+
+最近一次测试结果：4 tests passed。
+
+## Key Files
+
+| 路径 | 用途 |
+| --- | --- |
+| `scripts/dailydose_pipeline.py` | Pipeline 主程序 |
+| `scripts/test_dailydose_pipeline.py` | 4 个简单回归测试 |
+| `Clippings/DailyDoseOfDS/.pipeline/manifest.json` | 机器事实账本 |
+| `Clippings/DailyDoseOfDS/.pipeline/SYNC_STATUS.md` | 人类可读同步状态 |
+| `Clippings/DailyDoseOfDS/.pipeline/ARCHIVE_INDEX.md` | DailyDoseOfDS raw 历史索引 |
+| `Clippings/DailyDoseOfDS/.pipeline/README.md` | 使用说明 |
+| `Clippings/DailyDoseOfDS/ingest_progress.json` | Ingest 完成记录 |
+| `AGENTS.md` | Knowledge Bank 分层和 Ingest 权威规范 |
