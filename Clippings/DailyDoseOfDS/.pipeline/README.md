@@ -15,6 +15,15 @@
 
 历史上的 `Succeed in AI Engineering roles` 是拆分器误识别的 footer 广告，账本将其记录为 `rejected / footer_ad_parse_bug`，不会进入 `raw/articles/`。
 
+## 筛选与入库约束
+
+一封邮件可拆分为多篇独立文章。`fetch` 仅负责拉取、拆分和暂存，**绝不意味着该邮件中的所有文章都应入库**。
+
+1. 先在 `SYNC_STATUS.md` 查看每篇待审文章，逐篇阅读并判断是否有保留价值。
+2. 仅对明确选中的单篇文章执行仓库 `AGENTS.md` 规定的完整 Ingest SOP：提炼、生成 `wiki/sources/`、按需联动图谱、更新索引与日志、完成事实核查后，才移动到 `raw/articles/`。
+3. 未选中的文章不得因同封邮件中其他文章已入库而一并 Ingest；可继续保留在待审区，或使用 `reject '<完整邮件ID>:<文章序号>' --reason '<原因>'` 显式拒绝。
+4. 只有完成上述单篇 Ingest 且更新 `ingest_progress.json` 后，才运行 `reconcile` 回写该文章的账本状态。
+
 ## 使用方法
 
 在 Knowledge Bank 仓库根目录执行：
@@ -33,7 +42,7 @@ uv run scripts/dailydose_pipeline.py fetch
 uv run scripts/dailydose_pipeline.py status
 ```
 
-审阅后按照 `AGENTS.md` 的 Ingest SOP 处理文章。Ingest 完成并更新 `ingest_progress.json` 后执行：
+对每篇选中的文章分别完成 `AGENTS.md` 的 Ingest SOP，并更新 `ingest_progress.json` 后执行：
 
 ```bash
 uv run scripts/dailydose_pipeline.py reconcile
