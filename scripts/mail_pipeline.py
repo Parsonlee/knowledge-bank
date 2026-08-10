@@ -34,6 +34,7 @@ INDEX_PATH = PIPELINE_DIR / "ARCHIVE_INDEX.md"
 ARCHIVE_DIR = ROOT / "raw" / "articles"
 LEGACY_STAGE = ROOT / "Clippings" / "DailyDoseOfDS"
 SCHEMA_VERSION = 2
+GWS_TIMEOUT_SECONDS = max(int(os.environ.get("GWS_TIMEOUT_SECONDS", "45")), 1)
 
 
 class PipelineError(RuntimeError):
@@ -112,7 +113,13 @@ def run_gws(args: list[str], retries: int = 3) -> dict[str, Any]:
     command = [os.environ.get("GWS_BIN", "gws"), *args]
     last_error = ""
     for attempt in range(retries):
-        result = subprocess.run(command, capture_output=True, text=True)
+        try:
+            result = subprocess.run(command, capture_output=True, text=True, timeout=GWS_TIMEOUT_SECONDS)
+        except subprocess.TimeoutExpired:
+            last_error = f"gws 调用超时（{GWS_TIMEOUT_SECONDS} 秒）"
+            if attempt + 1 < retries:
+                time.sleep(1.5 * (attempt + 1))
+            continue
         if result.returncode == 0:
             output = result.stdout.strip()
             positions = [index for index in (output.find("{"), output.find("[")) if index >= 0]

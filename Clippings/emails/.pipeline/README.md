@@ -89,7 +89,7 @@ launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.parsonlee.knowledge-
 ```
 
 > [!warning] 前提与边界
-> 电脑休眠或关机时不会即时拉取；下次登录/唤醒后的下一次调度会补拉，`sync` 的差异账本会去重。`launchd` 环境没有交互式 shell 的 `PATH`，所以模板必须使用 `uv` 与 `gws` 的绝对路径。Gmail OAuth 凭据保留在本机，严禁提交到仓库或复制到 GitHub Actions Secret。
+> 电脑休眠或关机时不会即时拉取；下次登录/唤醒后的下一次调度会补拉，`sync` 的差异账本会去重。`launchd` 环境没有交互式 shell 的 `PATH`，所以模板必须使用 `uv` 与 `gws` 的绝对路径。每次 Gmail API 调用最多等待 45 秒，超时后会重试并将失败写入错误日志。Gmail OAuth 凭据保留在本机，严禁提交到仓库或复制到 GitHub Actions Secret。
 
 ### 事件触发的取舍
 

@@ -8,6 +8,7 @@
   <array>
     <string>__UV_PATH__</string>
     <string>run</string>
+    <string>--offline</string>
     <string>scripts/mail_pipeline.py</string>
     <string>run</string>
   </array>
@@ -19,6 +20,8 @@
     <string>/usr/local/bin:/opt/homebrew/bin:/usr/bin:/bin</string>
     <key>GWS_BIN</key>
     <string>__GWS_PATH__</string>
+    <key>GWS_TIMEOUT_SECONDS</key>
+    <string>45</string>
   </dict>
   <key>RunAtLoad</key>
   <true/>
