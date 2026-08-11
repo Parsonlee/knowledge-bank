@@ -11,6 +11,7 @@ tags:
 sources:
   - wiki/sources/2026-04-23_LoRAQLoRA-explained-from-a-business-lens_19dbca.md
 updated: 2026-08-04
+summary: "LoRA 通过冻结基座权重并只训练低秩矩阵，使每个用户仅需保存通常不超过 20 至 25 MB 的适配参数、共享同一基座模型，并可按需卸载和重载这些参数，从而降低多租户微调的存储与资源负担。"
 ---
 
 # 概念: LoRA与QLoRA微调

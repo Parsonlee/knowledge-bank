@@ -7,6 +7,7 @@ tags:
 sources:
   - wiki/sources/2026-08-01_Build-a-stock-market-research-Agentic-workflow_19fbed_part2.md
 updated: 2026-08-04
+summary: "Sim 是用于快速构建 AI Agent 工作流的轻量级可视化框架，支持实时执行、ReactFlow 拖拽界面、Ollama 本地模型、多种部署方式及外部工具连接。"
 ---
 
 # 实体定义

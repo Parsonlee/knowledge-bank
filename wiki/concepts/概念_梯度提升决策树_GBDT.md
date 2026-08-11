@@ -8,6 +8,7 @@ tags:
 sources:
   - "wiki/sources/2025-10-24_Top-Gradient-Boosting-Methods_19a177.md"
 updated: "2026-08-03"
+summary: "梯度提升通过沿损失函数最陡下降方向逐步加入弱学习器构建强模型，并衍生出面向扩展性、类别特征、大规模训练和概率预测的 XGBoost、CatBoost、LightGBM 与 NGBoost。"
 ---
 
 # 梯度提升决策树 (Gradient Boosting Decision Tree, GBDT)

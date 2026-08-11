@@ -8,6 +8,7 @@ tags:
 sources:
   - "wiki/sources/2026-06-14_7-LLM-generation-parameters_19ec7f.md"
 updated: 2026-08-04
+summary: "Max tokens、Temperature、Top-k、Top-p、Frequency Penalty、Presence Penalty 与 Stop Sequences 共同控制 LLM 输出的长度、随机性、候选范围、重复度、新颖性和停止边界。"
 ---
 
 # LLM 文本生成解码参数

@@ -3,6 +3,7 @@ type: concept
 tags: [llm, optimization, auto-prompt, software-evolution]
 sources: ["wiki/sources/2026-07-31_6-automatic-optimization-methods-for-LLM-systems_19fb9f.md"]
 updated: 2026-08-04
+summary: "LLM 系统自动优化以语言模型提出文本、提示词、代码或训练循环修改，由评估器打分并循环保留更优候选，不同方法主要区别在优化对象和反馈类型。"
 ---
 
 # 概念：LLM系统自动优化方法论

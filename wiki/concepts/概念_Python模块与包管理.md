@@ -7,6 +7,7 @@ tags:
 sources:
   - "wiki/sources/2025-08-30_Simplify-Python-imports-with-explicit-packaging_198fc6.md"
 updated: 2026-08-03
+summary: "Python 模块是单个 Python 文件、包是同目录模块集合、库是多个包集合；显式使用 __init__.py 可声明包的可导入接口并简化冗余导入。"
 ---
 
 # Python模块与包管理 (Python Modules and Package Management)

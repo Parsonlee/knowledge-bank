@@ -2,8 +2,8 @@
 
 > 最后更新：2026-08-11 by Codex
 
-> [!IMPORTANT] 当前优先实施任务
-> `AGENTS.md` 与 Obsidian Second Brain 的优化融合已形成可执行计划：[SECOND_BRAIN_INTEGRATION_PLAN](.agents/SECOND_BRAIN_INTEGRATION_PLAN.md)。后续 Agent 应严格按计划实施并停在验收门槛；本文件以下邮件管线交接继续有效，不得覆盖。
+> [!NOTE] Second Brain 重构状态
+> `AGENTS.md` 与 Obsidian Second Brain 的优化融合已经完成并通过验收，详细设计、实施偏差、测试结果与遗留风险见 [SECOND_BRAIN_INTEGRATION_PLAN](.agents/SECOND_BRAIN_INTEGRATION_PLAN.md)。本文件以下邮件管线交接继续有效，不得覆盖。
 
 ## Goal
 
