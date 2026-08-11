@@ -1257,3 +1257,5 @@
 ## [2026-08-03] ingest | Clippings/月之暗面 Agent开发岗，凉凉！！！.md + Clippings/高德地图AI应用开发岗一面，我跪了！！！.md -> wiki/sources/（+ 更新 Agent 三层记忆体系、渐进式披露、RRF、文档结构切分、重排序）
 
 ## [2026-08-03] ingest | Clippings/美团AICoding面试，跪了！！！.md + Clippings/读：读代码前先跑的五个 git 命令 - 暗无天日.md -> wiki/sources/（+ 新建 Git 仓库历史诊断；更新 HITL、Agent 完整轨迹评估、Harness Engineering）
+
+## [2026-08-11] ingest | Clippings/emails/dailydoseofds/2026-08-10_Cross-model-KV-cache-transfer-in-LLM-families_19febef2c6003814.md -> raw/articles/2026-08-10_Cross-model-KV-cache-transfer-in-LLM-families_19febef2c6003814.md -> wiki/sources/2026-08-10_Cross-model-KV-cache-transfer-in-LLM-families_19febef2c6003814.md (+ 新建 概念_跨模型KV缓存转换；更新 概念_KV_Cache)

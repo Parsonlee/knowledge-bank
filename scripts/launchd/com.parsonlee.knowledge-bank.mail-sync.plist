@@ -22,6 +22,18 @@
     <string>__GWS_PATH__</string>
     <key>GWS_TIMEOUT_SECONDS</key>
     <string>45</string>
+    <key>HTTP_PROXY</key>
+    <string>__HTTP_PROXY__</string>
+    <key>HTTPS_PROXY</key>
+    <string>__HTTPS_PROXY__</string>
+    <key>ALL_PROXY</key>
+    <string>__ALL_PROXY__</string>
+    <key>http_proxy</key>
+    <string>__HTTP_PROXY__</string>
+    <key>https_proxy</key>
+    <string>__HTTPS_PROXY__</string>
+    <key>all_proxy</key>
+    <string>__ALL_PROXY__</string>
   </dict>
   <key>RunAtLoad</key>
   <true/>

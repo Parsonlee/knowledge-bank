@@ -1,6 +1,6 @@
 # Gmail 星标邮件同步状态
 
-> 此文件由 Pipeline 生成，请勿手工编辑。机器事实来源为 [`manifest.json`](./manifest.json)。更新时间：`2026-08-10T06:34:32+00:00`。
+> 此文件由 Pipeline 生成，请勿手工编辑。机器事实来源为 [`manifest.json`](./manifest.json)。更新时间：`2026-08-11T07:37:16+00:00`。
 
 ## 汇总
 
@@ -9,16 +9,16 @@
 | 邮件 | discovered | 0 |
 | 邮件 | failed | 0 |
 | 邮件 | review | 0 |
-| 邮件 | ingested | 50 |
+| 邮件 | ingested | 51 |
 | 邮件 | ignored | 12 |
 | 邮件 | unhandled | 0 |
 | 路由 | pending | 11 |
-| 路由 | parsed | 51 |
+| 路由 | parsed | 52 |
 | 路由 | unhandled | 0 |
 | 路由 | failed | 0 |
 | 文章 | review | 0 |
-| 文章 | ingested | 78 |
-| 文章 | rejected | 8 |
+| 文章 | ingested | 79 |
+| 文章 | rejected | 10 |
 
 ## 待处理邮件
 

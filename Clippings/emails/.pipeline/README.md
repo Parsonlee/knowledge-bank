@@ -66,6 +66,7 @@ Gmail 新邮件或星标变更
 - `__VAULT_PATH__`：本仓库的绝对路径；
 - `__UV_PATH__`：执行 `command -v uv` 得到的路径；
 - `__GWS_PATH__`：执行 `command -v gws` 得到的路径。
+- `__HTTP_PROXY__` / `__HTTPS_PROXY__` / `__ALL_PROXY__`：本机代理地址；没有代理需求时，删除模板中的六个代理环境变量条目。`launchd` 只传递代理地址，不负责启动代理客户端。
 
 随后将文件复制到 `~/Library/LaunchAgents/`，并加载任务：
 
@@ -87,6 +88,8 @@ tail -n 100 Clippings/emails/.pipeline/logs/mail-sync.err.log
 launchctl bootout gui/$(id -u)/com.parsonlee.knowledge-bank.mail-sync
 launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.parsonlee.knowledge-bank.mail-sync.plist
 ```
+
+每次脚本运行均以 UTC ISO-8601 时间戳写入 `START` 与 `END` 区块边界；区块内的结果与汇总不重复标记时间。错误写入独立的 stderr 区块，便于按运行批次阅读和检索。
 
 > [!warning] 前提与边界
 > 电脑休眠或关机时不会即时拉取；下次登录/唤醒后的下一次调度会补拉，`sync` 的差异账本会去重。`launchd` 环境没有交互式 shell 的 `PATH`，所以模板必须使用 `uv` 与 `gws` 的绝对路径。每次 Gmail API 调用最多等待 45 秒，超时后会重试并将失败写入错误日志。Gmail OAuth 凭据保留在本机，严禁提交到仓库或复制到 GitHub Actions Secret。

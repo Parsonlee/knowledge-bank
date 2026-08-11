@@ -257,6 +257,7 @@
 - [[2026-08-01_Build-a-stock-market-research-Agentic-workflow_19fbed_part2]] — 介绍轻量级 AI-native 可视化智能体工作流构建框架 Sim，讨论其基于 ReactFlow 的拖拽式界面、支持 Ollama 本地模型以及对标 n8n 的优势，并通过结合 Alpha-Vantage MCP 与 Telegram 的股市研究 Agent 案例展示其实际应用。（agentic-workflow, ai-framework, stock-market）
 - [[2026-08-01_Data-Version-Control_19fbed_part4]] — 介绍如何使用数据版本控制（DVC）与 Git 协同工作，解决 Git 无法处理大文件的问题，从而实现机器学习项目的完全可复现性。（MLOps, data-version-control, DVC）
 - [[2026-08-01_Double-Descent-vs.-Bias-Variance-Trade-off_19fbed_part3]] — 介绍机器学习与深度学习中的双下降（Double Descent）现象，该现象对传统的偏差-方差折中理论提出了挑战，指出在模型复杂度跨越临界插值界限后测试误差可能会二次下降。（machine-learning, double-descent, generalization）
+- [[2026-08-10_Cross-model-KV-cache-transfer-in-LLM-families_19febef2c6003814]] — 介绍同一模型家族内的 KV Cache 跨模型转换：通过跨层线性映射复用既有 Prefill 计算，并明确其跨家族与异构 KV 配置尚未验证。（LLM/inference, Infra/AI）
 
 ## Concepts
 
@@ -301,6 +302,7 @@
 - [[概念_L0-L5能力成熟度模型]] — AI 从模仿人类到掌控 OS 的 L0-L5 演进
 - [[概念_Result-as-a-Service]] — 人类只表达需求验收结果、AI 负责全实现的终极形态
 - [[概念_KV_Cache]] — 缓存 K/V 已计算结果，空间换时间避免重复计算
+- [[概念_跨模型KV缓存转换]] — 以跨层表示映射在模型路由切换时复用 KV Cache；当前仅验证同家族模型
 - [[概念_CUDA_Graph]] — 多 GPU 操作转 DAG 一次性提交，减少 CPU-GPU 交互
 - [[概念_模型并行]] — 拆分大模型到多 GPU，解决单机存不下
 - [[概念_连续批处理]] — 动态批处理，短请求完成即释放、新请求随时加入

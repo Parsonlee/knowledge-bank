@@ -64,6 +64,22 @@ def now_iso() -> str:
     return datetime.now(timezone.utc).replace(microsecond=0).isoformat()
 
 
+def log_line(message: str, *, error: bool = False) -> None:
+    """Write a readable line inside the current launchd log block."""
+    stream = sys.stderr if error else sys.stdout
+    normalized = " | ".join(str(message).splitlines())
+    print(normalized, file=stream, flush=True)
+
+
+def log_block(command: str, event: str, *, error: bool = False) -> None:
+    """Mark one complete pipeline invocation in launchd's append-only logs."""
+    stream = sys.stderr if error else sys.stdout
+    marker = "=" * 72
+    print(f"\n{marker}", file=stream, flush=True)
+    print(f"[{now_iso()}] mail_pipeline command={command} event={event}", file=stream, flush=True)
+    print(marker, file=stream, flush=True)
+
+
 def empty_manifest() -> dict[str, Any]:
     return {
         "schema_version": SCHEMA_VERSION,
@@ -207,11 +223,16 @@ def clean_filename(title: str) -> str:
     return re.sub(r"\s+", "-", title) or "untitled"
 
 
-def article_filename(formatted_date: str, source_key: str, title: str, message_id: str) -> str:
-    return f"{formatted_date}_{source_key}_{clean_filename(title)}_{message_id}.md"
+def article_filename(formatted_date: str, title: str, message_id: str) -> str:
+    return f"{formatted_date}_{clean_filename(title)}_{message_id}.md"
 
 
 def update_email_lifecycle(record: dict[str, Any]) -> None:
+    # Routing failures must remain visible and eligible for a later retry.
+    if record.get("routing") == "failed":
+        record["lifecycle"] = "failed"
+        return
+
     articles = record.get("articles", [])
     if any(article.get("status") == "review" for article in articles):
         record["lifecycle"] = "review"
@@ -246,7 +267,7 @@ def route(data: dict[str, Any], call: Callable[[list[str]], dict[str, Any]] = ru
             source_dir.mkdir(parents=True, exist_ok=True)
             for index, article in enumerate(parsed_articles, 1):
                 article_id = f"{record['id']}:{index}"
-                filename = article_filename(metadata["formatted_date"], source.key, article["title"], record["id"])
+                filename = article_filename(metadata["formatted_date"], article["title"], record["id"])
                 staging_path = source_dir / filename
                 if staging_path.exists():
                     raise PipelineError(f"待审文章文件已存在: {staging_path}")
@@ -411,10 +432,10 @@ def migrate_ddods() -> dict[str, Any]:
 def print_summary(data: dict[str, Any]) -> None:
     lifecycle = Counter(record.get("lifecycle") for record in data["emails"].values())
     articles = Counter(article.get("status") for record in data["emails"].values() for article in record.get("articles", []))
-    print(f"邮件总数: {len(data['emails'])}")
-    print("邮件状态: " + ", ".join(f"{key}={lifecycle[key]}" for key in ("discovered", "review", "ingested", "ignored", "unhandled", "failed")))
-    print("文章状态: " + ", ".join(f"{key}={articles[key]}" for key in ("review", "ingested", "rejected")))
-    print(f"最近远程同步: {data.get('last_sync_at') or '从未'}")
+    log_line(f"summary emails_total={len(data['emails'])}")
+    log_line("summary email_lifecycle " + " ".join(f"{key}={lifecycle[key]}" for key in ("discovered", "review", "ingested", "ignored", "unhandled", "failed")))
+    log_line("summary article_status " + " ".join(f"{key}={articles[key]}" for key in ("review", "ingested", "rejected")))
+    log_line(f"summary last_sync_at={data.get('last_sync_at') or 'never'}")
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -435,32 +456,36 @@ def build_parser() -> argparse.ArgumentParser:
 def main(argv: list[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
     try:
+        log_block(args.command, "START")
         if args.command == "migrate-ddods":
             data = migrate_ddods()
-            print("DailyDoseOfDS 迁移完成。")
+            log_line("result migration=dailydoseofds_complete")
         else:
             data = load_manifest()
             if args.command == "sync":
                 total, added = sync(data)
-                print(f"远程星标邮件 {total} 封，新登记 {added} 封。")
+                log_line(f"result remote_emails={total} newly_registered={added}")
             elif args.command == "route":
                 emails, articles = route(data)
-                print(f"已路由邮件 {emails} 封，生成待审文章 {articles} 篇。")
+                log_line(f"result routed_emails={emails} review_articles={articles}")
             elif args.command == "reconcile":
-                print(f"对账完成，新确认已 Ingest 文章 {reconcile(data)} 篇。")
+                log_line(f"result reconciled_articles={reconcile(data)}")
             elif args.command == "reject":
                 reject_article(data, args.article_id, args.reason)
-                print(f"已拒绝 {args.article_id}。")
+                log_line(f"result rejected_article={args.article_id}")
             elif args.command == "run":
                 reconciled = reconcile(data)
                 total, added = sync(data)
                 emails, articles = route(data)
-                print(f"已对账 {reconciled} 篇；远程 {total} 封；新登记 {added} 封；已路由 {emails} 封；待审文章 {articles} 篇。")
+                log_line(f"result reconciled_articles={reconciled} remote_emails={total} newly_registered={added} routed_emails={emails} review_articles={articles}")
             refresh_outputs(data)
         print_summary(data)
+        log_block(args.command, "END status=ok")
         return 0
     except (PipelineError, OSError, json.JSONDecodeError, ValueError) as exc:
-        print(f"错误: {exc}", file=sys.stderr)
+        log_block(args.command, "ERROR", error=True)
+        log_line(f"error message={exc}", error=True)
+        log_block(args.command, "END status=error")
         return 1
 
 

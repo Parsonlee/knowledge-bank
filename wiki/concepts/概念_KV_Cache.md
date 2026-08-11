@@ -24,8 +24,9 @@ sources:
 - wiki/sources/大模型显存计算公式与优化.md
 - wiki/sources/推测解码Speculative_Decoding综述.md
 - wiki/sources/2026-07-24_Delta-attention-in-Kimi-K3-to-fix-growing-KV-cache_19f962.md
+- wiki/sources/2026-08-10_Cross-model-KV-cache-transfer-in-LLM-families_19febef2c6003814.md
 created: '2026-06-29'
-updated: '2026-08-04'
+updated: '2026-08-11'
 confidence: high
 ---
 
@@ -75,6 +76,10 @@ $$\text{KV Cache} = 2 \times L \times H \times D \times S \times B \times \text{
 - **Agent 推理中的冗余传输与计算**：斯坦福大学调研表明，在多轮交互的智能体工作流中，由于每一步都是从头计算，导致每次发送给模型的 Token 有约 **62%** 是重复的系统 Prompt、工具定义和历史文档。这不仅浪费带宽，也造成了极大的 Token 推理开销。为了突破这一瓶颈，采用 `[[概念_解耦式KV缓存与LMCache]]` 的架构应运而生，其将缓存管理从推理引擎中剥离为旁路进程，并结合 CacheBlend 算法在合并多文档时执行选择性重计算以复用已有缓存，实现高效加速。
 - **长文本 CPU 卸载下的 I/O 延迟**：在超长上下文推理下，大体积的 KV Cache 需 Offload（卸载）到 CPU 内存。然而在解码时，GPU 等待所需块从 CPU 拷贝回显存的过程（I/O 传输延迟）会产生严重 stall。对此，NVIDIA 与 MIT 联合提出 `[[概念_SparDA预测式KV缓存预取]]` 架构，利用 Forecast 投影预测并异步预取下一层所需的 KV 块，实现数据传输与推理计算的重叠（Overlap）。
 
+### 跨模型路由的缓存失效
+
+传统 KV Cache 由生成它的模型参数决定，模型路由切换后不能直接被另一模型读取。[[概念_跨模型KV缓存转换]] 记录了一种针对同家族稠密全注意力模型的表示映射方案：先在去除 RoPE 位置旋转的空间中拟合跨层线性映射，再恢复目标模型旋转。[原文陈述] 该方案尚未验证跨家族或不匹配 KV 头配置，不能视为通用跨模型缓存互操作方案。
+
 ## 关联
 
 - [[入局AI_Infra系统设计与挑战]]（来源）
@@ -88,3 +93,4 @@ $$\text{KV Cache} = 2 \times L \times H \times D \times S \times B \times \text{
 - [[概念_SparDA预测式KV缓存预取]]
 - [[2026-05-03_How-LLM-inference-works-internally_19deee]]
 - [[概念_Delta_Attention与增量矩阵缓存]]
+- [[概念_跨模型KV缓存转换]]

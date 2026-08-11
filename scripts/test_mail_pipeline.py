@@ -56,6 +56,16 @@ class MailPipelineTest(unittest.TestCase):
         self.assertEqual(metadata["formatted_date"], "2026-08-10")
         self.assertEqual([article["title"] for article in articles], ["First", "Second"])
 
+    def test_article_filename_excludes_source_key(self):
+        self.assertEqual(
+            mail_pipeline.article_filename(
+                "2026-08-10",
+                " How to query billion+ rows on postgres without overhead ",
+                "19febef2c6003814",
+            ),
+            "2026-08-10_How-to-query-billion+-rows-on-postgres-without-overhead_19febef2c6003814.md",
+        )
+
     def test_reconcile_updates_only_archived_article(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
@@ -86,6 +96,50 @@ class MailPipelineTest(unittest.TestCase):
                 self.assertEqual(mail_pipeline.reconcile(data), 0)
             self.assertEqual(record["articles"][1]["status"], "rejected")
             self.assertEqual(record["articles"][1]["reason"], "manual_delete")
+
+    def test_reconcile_preserves_routing_failure_for_retry(self):
+        data = mail_pipeline.empty_manifest()
+        record = mail_pipeline.new_email_record("mail")
+        record.update({
+            "source_key": "dailydoseofds",
+            "lifecycle": "failed",
+            "routing": "failed",
+            "last_error": "temporary network error",
+        })
+        data["emails"]["mail"] = record
+
+        self.assertEqual(mail_pipeline.reconcile(data), 0)
+        self.assertEqual(record["lifecycle"], "failed")
+        self.assertEqual(record["routing"], "failed")
+
+    def test_route_retries_a_failed_message(self):
+        data = mail_pipeline.empty_manifest()
+        record = mail_pipeline.new_email_record("mail")
+        record.update({
+            "source_key": "test",
+            "lifecycle": "failed",
+            "routing": "failed",
+            "attempts": 1,
+            "last_error": "temporary network error",
+        })
+        data["emails"]["mail"] = record
+
+        source = mail_pipeline.Source(
+            key="test",
+            addresses=(),
+            domains=(),
+            parser=lambda _message_id, _response: (
+                {"sender": "test@example.com", "subject": "Test", "date": "Mon", "formatted_date": "2026-08-11"},
+                [],
+            ),
+        )
+        with patch.object(mail_pipeline, "SOURCES_BY_KEY", {"test": source}):
+            self.assertEqual(mail_pipeline.route(data, lambda _args: {"raw": ""}), (1, 0))
+
+        self.assertEqual(record["attempts"], 2)
+        self.assertEqual(record["routing"], "parsed")
+        self.assertEqual(record["lifecycle"], "ignored")
+        self.assertIsNone(record["last_error"])
 
 
 if __name__ == "__main__":
