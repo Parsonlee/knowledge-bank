@@ -253,9 +253,6 @@
 - [[2026-07-28_Technical-LLM-interview-question!_19faa9]] — 介绍了 DigitalOcean 提出的基于确定性、轻量化行为信号对生产环境 Agent 交互轨迹进行高效低成本筛选过滤的采样策略，大幅提升了人工标注的效率。（AI-Agent/evaluation, Software-Engineering/Observability）
 - [[2026-07-31_6-automatic-optimization-methods-for-LLM-systems_19fb9f]] — 介绍了六种在大模型系统中实现自动化优化的前沿方法（OPRO, MIPROv2, TextGrad, GEPA, AlphaEvolve, AutoResearch），通过大模型自动反馈循环替代人工调优。（llm, optimization, prompt-engineering, auto-tuning）
 - [[2026-07-31_Subagents-vs.-Agent-Teams_19fb9f]] — 对比了 Claude 提供的两种多智能体范式：Sub-agents（基于隔离实现并行与 Context 压缩，单向反馈）和 Agent Teams（基于协同通信与共享状态，双向协作），并从第一性原理探讨了以上下文为中心的分治逻辑。（multi-agent, sub-agents, agent-teams, architecture）
-- [[2026-08-01_Free-Observability-Engineering-Masterclass-with-Liz-Fong-Jones-&-Honeycomb_19fbed_part1]] — 介绍 Honeycomb 举办的由 Liz Fong-Jones 授课的六期免费可观测性工程直播大师课，涵盖从 OpenTelemetry 插桩到多领域可观测性的实践应用。（observability, learning-resource, honeycomb）
-- [[2026-08-01_Build-a-stock-market-research-Agentic-workflow_19fbed_part2]] — 介绍轻量级 AI-native 可视化智能体工作流构建框架 Sim，讨论其基于 ReactFlow 的拖拽式界面、支持 Ollama 本地模型以及对标 n8n 的优势，并通过结合 Alpha-Vantage MCP 与 Telegram 的股市研究 Agent 案例展示其实际应用。（agentic-workflow, ai-framework, stock-market）
-- [[2026-08-01_Data-Version-Control_19fbed_part4]] — 介绍如何使用数据版本控制（DVC）与 Git 协同工作，解决 Git 无法处理大文件的问题，从而实现机器学习项目的完全可复现性。（MLOps, data-version-control, DVC）
 - [[2026-08-01_Double-Descent-vs.-Bias-Variance-Trade-off_19fbed_part3]] — 介绍机器学习与深度学习中的双下降（Double Descent）现象，该现象对传统的偏差-方差折中理论提出了挑战，指出在模型复杂度跨越临界插值界限后测试误差可能会二次下降。（machine-learning, double-descent, generalization）
 - [[2026-08-10_Cross-model-KV-cache-transfer-in-LLM-families_19febef2c6003814]] — 介绍同一模型家族内的 KV Cache 跨模型转换：通过跨层线性映射复用既有 Prefill 计算，并明确其跨家族与异构 KV 配置尚未验证。（LLM/inference, Infra/AI）
 
