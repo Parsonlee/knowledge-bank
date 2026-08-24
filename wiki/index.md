@@ -4,6 +4,12 @@
 
 ## Sources
 
+- [[搜索没有变便宜，但 Agent 把它拆成了新的供应链]] — 鸭哥深度剖析 Agent 时代 Web Search 供应链解耦为代理层、定向语义索引、上下文精炼与云端运行时四层，以及分发渠道向模型 API 运行时迁移（AI-Agent/deep-research, AI-Agent/infra, RAG/retrieval）
+- [[深度剖析 DeepSeek 最新的 Harness DSH：为了自进化这盘醋包了一整盘饺子]] — 鸭哥深度对比 DeepSeek DSH 命令式微内核与 Codex 声明式插件世界观，剖析 Agent Loop 插件化与自进化基础设施（AI-Agent/harness, AI-Agent/coding）
+
+- [[Firecrawl 新工具开源，anydoc，将各种输入转换为md]] — Firecrawl 开源纯 Rust 多格式文档转 Markdown 工具 anydoc，中间稿两阶段解析与 Agent Skill 集成（AI-Agent/tool-calling, RAG/chunking）
+- [[刚刚，DeepSeek Harness震撼开源：一切皆插件]] — DeepSeek 开源基于 Cordis 微内核的智能体框架 DeepSeek Harness，主张一切皆插件、权威 Session Log 事件源与生命周期调度管控（AI-Agent/harness, AI-Agent/coding）
+
 - [[2026-08-05_How-to-serve-5-models-on-one-GPU_19fd38]] — 多模型 AI 流水线以统一服务层、共享 GPU 池、按需加载和成本感知分批降低闲置资源（Infra/AI, LLM/inference）
 - [[2026-08-07_8-LLM-precision-formats_19fddf]] — FP32/TF32/BF16/FP16/FP8/INT8/INT4/NF4 八种 LLM 精度格式的显存、数值范围与训练推理权衡（LLM/inference, LLM/training, Infra/gpu）
 
@@ -257,6 +263,8 @@
 - [[2026-08-10_Cross-model-KV-cache-transfer-in-LLM-families_19febef2c6003814]] — 介绍同一模型家族内的 KV Cache 跨模型转换：通过跨层线性映射复用既有 Prefill 计算，并明确其跨家族与异构 KV 配置尚未验证。（LLM/inference, Infra/AI）
 
 ## Concepts
+
+- [[概念_Agentic_Web_Search]] — 面向大模型智能体的网络搜索架构与供应链解耦范式，将搜索 Stack 拆分为代理层、定向语义索引、上下文精炼与云端运行时四层，并重构排序反馈信号（AI-Agent/deep-research, AI-Agent/infra, RAG/retrieval）
 
 - [[概念_显存组成与估算]] — 显存消耗组成、各组件估算公式、估算误差
 - [[概念_激活值重计算]] — 重计算原理及不同并行组合的激活值公式
@@ -538,6 +546,14 @@
 - [[概念_LLM系统自动优化方法论]] — 介绍了以大模型优化大模型系统的反馈演进闭环，横向对比 OPRO, MIPROv2, TextGrad, GEPA, AlphaEvolve, AutoResearch 等 6 大自动调优技术。（llm, optimization, auto-prompt, software-evolution）
 
 ## Entities
+
+- [[实体_Tavily]] — 专注于面向 LLM 与 RAG 的 Web Search 搜索引擎供应商，主打网页降噪、正文抽取与高信息密度文本片段压缩（AI-Agent/deep-research, RAG/retrieval）
+- [[实体_Exa]] — 专注于面向 AI 与大模型的定向语义索引搜索引擎，聚焦 GitHub、ArXiv、Wikipedia 等高信息密度站点提供高质量神经搜索（AI-Agent/deep-research, RAG/retrieval）
+
+- [[实体_anydoc]] — Firecrawl 开源纯 Rust 多格式文档转 Markdown 工具，两阶段中间稿解析与 Agent Skill 集成（AI-Agent/tool-calling, RAG/chunking）
+- [[实体_Firecrawl]] — 专注于为 LLM 和 AI Agent 提取干净 Markdown 数据的开源数据管道团队（AI-Agent/tool-calling, RAG/chunking）
+- [[实体_DeepSeek_Harness]] — DeepSeek 开源基于 Cordis 微内核的智能体 SDK 与应用框架，采用“一切皆插件”架构、四大预设模式与权威 Session Log（AI-Agent/harness, AI-Agent/coding）
+- [[实体_Cordis]] — 支持时空可组合性的轻量级微内核框架，为 DeepSeek Harness 等智能体系统提供插件运行时底座（AI-Agent/harness, AI-Agent/coding）
 
 - [[实体_Superlinked_Inference_Engine]] — 面向多模型流水线的开源推理服务引擎，统一 API、共享 GPU 池与按需模型加载
 

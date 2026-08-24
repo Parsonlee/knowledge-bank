@@ -5,6 +5,7 @@ tags:
 - AI-Agent/coding
 summary: 围绕基础大模型构建的宿主与编排系统（Harness Engineering），负责编排执行、思考规划、工具行动、上下文感知管理、产物存储与评估。
 sources:
+- wiki/sources/刚刚，DeepSeek Harness震撼开源：一切皆插件.md
 - wiki/sources/OpenAI前VP_Lilian_Weng_AI自我改进的近路不是改权重.md
 - wiki/sources/DeepSeek Agent开发岗三面，再面一轮就offer啦！！！.md
 - wiki/sources/快手data agent一面，我裂开了！！！.md
@@ -12,8 +13,9 @@ sources:
 - wiki/sources/2026-04-06_The-Anatomy-of-an-Agent-Harness_19d64a.md
 - wiki/sources/2026-07-03_Prompt,-context,-harness-&-loop-engineering_19f29f.md
 - wiki/sources/2026-07-27_Agent-memory-and-state-are-not-the-same-thing!_19fa57.md
+- wiki/sources/深度剖析 DeepSeek 最新的 Harness DSH：为了自进化这盘醋包了一整盘饺子.md
 created: '2026-07-22'
-updated: '2026-08-04'
+updated: '2026-08-20'
 ---
 
 # 概念：Harness Engineering
@@ -73,15 +75,40 @@ Beren Millidge 将其进行了精确的硬件系统类比：
 
 该模式利用**物理文件系统（Filesystem）**作为跨上下文窗口的连续性载体，极大地增强了智能体长周期复杂任务的完成率。
 
+## 现代 Harness 架构演进：微内核、插件模型与权威事件流
+
+随着以 [[entities/实体_DeepSeek_Harness|DeepSeek Harness]] 与 [[entities/实体_Codex|Codex]] 为代表的现代生产级智能体框架开源，Harness Engineering 进一步确立了以下关键架构范式：
+
+1. **声明式 vs 命令式两种插件世界观**：
+   - **声明式模型（如 Codex）**：插件为磁盘静态资源（Markdown Skill、MCP JSON 配置、外部 Shell 脚本），由操作系统管理外部进程生命周期。门槛低且简单，但无法在 Harness 进程内注册带状态服务；
+   - **命令式微内核模型（如 DSH / Cordis）**：插件直接运行在 Harness 进程中，持有内部状态并支持跨插件直接函数调用与依赖注入。依托 [[entities/实体_Cordis|Cordis]] 运行时的副作用跟踪、撤销条（Disposer）与事务性 HMR（热模块替换），保障进程内热更新不留悬空引用。
+2. **一切皆插件与 Agent Loop 控制流解耦**：
+   - 将能力严格拆分为**接口（Interface）**、**实现（Implementation）**与**消费者（Model Tool）**三层；
+   - 传统 Harness（如 Codex）将 `run_turn()` 控制流硬编码在核心二进制中，仅提供固定 Hook 插槽；而现代微内核 Harness 将 Agent Loop 自身解耦为可插拔插件（如 DSH `ctx.agentLoop`），允许在运行时动态将控制流替换为多 Agent 协作循环或并行流式调度，为 [[concepts/概念_Self-Harness|Self-Harness（外壳自进化）]] 提供了物理插槽。
+3. **权威会话流（Session Log 即唯一事实源）**：
+   - 坚持“凡是模型看见的内容，都必须能从日志中重建”原则。系统提示词组装、环境变量、流式 Chunk、工具调用与结果、权限切换全量写入追加式事件流，作为界面回放、持久化（JSONL/SQLite）、Resume 和 Fork 的统一事实基础，彻底解决调试与审计黑盒难题。
+4. **运行时交通规则与单调安全守卫**：
+   - 交互严格拆解为 Turn 与 Step；
+   - 工具调用经过前置策略、单调不可逆守卫（被拒绝的操作不得被后续插件重新放行）、执行包装与后置处理；
+   - 调度器允许连续只读调用并行，写操作自动成为独占屏障（Barrier）；支持运行中消息排队与带回执的实时转向（Steering）。
+5. **PTC 模式（Programmatic Tool Calling）**：
+   - 通过 Code Mode SDK 向模型暴露代码运行环境，模型可编写 TypeScript/Python 脚本在单次 `run_code` 中批处理多步工具调用，显著削减多轮往返的 Token 与延迟开销。
+6. **Fail-Closed 默认安全原则**：
+   - 默认采用 `workspace-write` 沙箱并配合审批机制；当系统无法确认隔离策略完全生效时，主动拒绝执行（Fail-Closed）而非静默降级为无保护运行。
+
 ## 代表实践
 
 - [[entities/实体_Claude_Code|Claude Code]]：Anthropic CLI 编码智能体，高度集成了 Harness 工程哲学。
-- [[entities/实体_Codex|Codex]]：OpenAI 编码智能体系统。
+- [[entities/实体_Codex|Codex]]：OpenAI 编码智能体系统，代表了经典的声明式插件模型。
+- [[entities/实体_DeepSeek_Harness|DeepSeek Harness (DSH)]]：DeepSeek 开源的命令式微内核智能体框架。
 
 ## 来源与参考
 
+- [[sources/刚刚，DeepSeek Harness震撼开源：一切皆插件|刚刚，DeepSeek Harness震撼开源：一切皆插件]]
+- [[sources/深度剖析 DeepSeek 最新的 Harness DSH：为了自进化这盘醋包了一整盘饺子|深度剖析 DeepSeek 最新的 Harness DSH：为了自进化这盘醋包了一整盘饺子]]
 - [[OpenAI前VP_Lilian_Weng_AI自我改进的近路不是改权重]]
 - [[concepts/概念_RSI递归自我改进]]
 - [[concepts/概念_Harness优化阶梯]]
+- [[concepts/概念_Self-Harness|Self-Harness]]
 - [[sources/2026-04-06_The-Anatomy-of-an-Agent-Harness_19d64a|The Anatomy of an Agent Harness]]
 - [[sources/2026-07-27_Agent-memory-and-state-are-not-the-same-thing!_19fa57|Agent memory and state are not the same thing!]]

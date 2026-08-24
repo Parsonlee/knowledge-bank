@@ -1,5 +1,19 @@
 # Wiki Log
 
+## [2026-08-20] ingest | raw/articles/搜索没有变便宜，但 Agent 把它拆成了新的供应链.md & 深度剖析 DeepSeek 最新的 Harness DSH：为了自进化这盘醋包了一整盘饺子.md -> wiki/sources/ (+ 实体_Tavily, 实体_Exa, 概念_Agentic_Web_Search, 实体_DeepSeek_Harness, 实体_Cordis, 实体_Codex, 实体_鸭哥, 概念_Self-Harness, 概念_Harness_Engineering)
+- **深度阅读与语法净化**：深度阅读 `Clippings/` 下 Batch 2 的 2 篇剪藏文章，在 `tmp/sanitized/` 生成临时安全阅读视图，排查并确保语法纯净且无越级链接。
+- **物理文件归档与 Ingest 闭环 (Clippings -> raw/articles/)**：
+  - `Clippings/搜索没有变便宜，但 Agent 把它拆成了新的供应链.md` -> `raw/articles/搜索没有变便宜，但 Agent 把它拆成了新的供应链.md` -> `wiki/sources/搜索没有变便宜，但 Agent 把它拆成了新的供应链.md`（+ 新建概念 `[[wiki/concepts/概念_Agentic_Web_Search|概念_Agentic_Web_Search]]`，定义搜索 Stack 四层解耦与排序反馈信号重构；新建实体 `[[wiki/entities/实体_Tavily|实体_Tavily]]` 与 `[[wiki/entities/实体_Exa|实体_Exa]]`；更新已有实体 `[[wiki/entities/实体_鸭哥|实体_鸭哥]]`）
+  - `Clippings/深度剖析 DeepSeek 最新的 Harness DSH：为了自进化这盘醋包了一整盘饺子.md` -> `raw/articles/深度剖析 DeepSeek 最新的 Harness DSH：为了自进化这盘醋包了一整盘饺子.md` -> `wiki/sources/深度剖析 DeepSeek 最新的 Harness DSH：为了自进化这盘醋包了一整盘饺子.md`（+ 更新已有实体 `[[wiki/entities/实体_DeepSeek_Harness|实体_DeepSeek_Harness]]`、`[[wiki/entities/实体_Cordis|实体_Cordis]]` 与 `[[wiki/entities/实体_Codex|实体_Codex]]`，系统性对比 DSH 命令式微内核与 Codex 声明式插件架构；更新已有概念 `[[wiki/concepts/概念_Harness_Engineering|概念_Harness_Engineering]]` 与 `[[wiki/concepts/概念_Self-Harness|概念_Self-Harness]]`，深入解构 Agent Loop 插件化解耦对运行时自进化的底层支撑；更新已有实体 `[[wiki/entities/实体_鸭哥|实体_鸭哥]]`）
+- **索引更新**：将新建的 2 篇 Source 摘要页、1 篇 Concept 概念页和 2 篇 Entity 实体页全量注册挂载至 `wiki/index.md` 对应列表中。
+
+## [2026-08-20] ingest | raw/articles/Firecrawl 新工具开源，anydoc，将各种输入转换为md.md & 刚刚，DeepSeek Harness震撼开源：一切皆插件.md -> wiki/sources/ (+ 实体_anydoc, 实体_Firecrawl, 实体_DeepSeek_Harness, 实体_Cordis, 概念_Harness_Engineering, 概念_Self-Harness, 概念_文档结构切分)
+- **深度阅读与语法净化**：深度阅读 `Clippings/` 下的 2 篇剪藏文章，在 `tmp/sanitized/` 生成临时安全阅读视图，排查并确保语法纯净且无越级链接。
+- **物理文件归档与 Ingest 闭环 (Clippings -> raw/articles/)**：
+  - `Clippings/Firecrawl 新工具开源，anydoc，将各种输入转换为md.md` -> `raw/articles/Firecrawl 新工具开源，anydoc，将各种输入转换为md.md` -> `wiki/sources/Firecrawl 新工具开源，anydoc，将各种输入转换为md.md`（+ 新建实体 `[[wiki/entities/实体_anydoc|实体_anydoc]]`、`[[wiki/entities/实体_Firecrawl|实体_Firecrawl]]`；更新已有概念 `[[wiki/concepts/概念_文档结构切分|概念_文档结构切分]]`，补充中间稿两阶段解析与 Rust 高性能数据提取范式）
+  - `Clippings/刚刚，DeepSeek Harness震撼开源：一切皆插件.md` -> `raw/articles/刚刚，DeepSeek Harness震撼开源：一切皆插件.md` -> `wiki/sources/刚刚，DeepSeek Harness震撼开源：一切皆插件.md`（+ 新建实体 `[[wiki/entities/实体_DeepSeek_Harness|实体_DeepSeek_Harness]]`、`[[wiki/entities/实体_Cordis|实体_Cordis]]`；更新已有概念 `[[wiki/concepts/概念_Harness_Engineering|概念_Harness_Engineering]]`，补充微内核插件化、Session Log 权威事件源、生命周期交通规则与 PTC 模式；更新已有概念 `[[wiki/concepts/概念_Self-Harness|概念_Self-Harness]]`，补充自指 Cordis 运行时动态插件热插拔）
+- **索引更新**：将新建的 2 篇 Source 摘要页和 4 篇 Entity 实体页全量注册挂载至 `wiki/index.md` 对应列表中。
+
 ## [2026-08-10] ingest | raw/articles/2026-08-05_How-to-serve-5-models-on-one-GPU_19fd38.md -> wiki/sources/2026-08-05_How-to-serve-5-models-on-one-GPU_19fd38.md (+ 实体_Superlinked_Inference_Engine, 实体_vLLM)
 
 ## [2026-08-10] ingest | raw/articles/2026-08-07_8-LLM-precision-formats_19fddf.md -> wiki/sources/2026-08-07_8-LLM-precision-formats_19fddf.md (+ 概念_量化, 概念_混合精度训练, 概念_LoRA与QLoRA显存, 实体_vLLM)
