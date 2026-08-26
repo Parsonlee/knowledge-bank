@@ -148,6 +148,18 @@ def run_gws(args: list[str], retries: int = 3) -> dict[str, Any]:
                 last_error = "命令未返回 JSON"
         else:
             last_error = result.stderr.strip() or result.stdout.strip()
+            # token 过期时立即发送桌面通知，不等重试（重试也不会成功）
+            if "invalid_grant" in last_error or "Token has been expired" in last_error:
+                try:
+                    subprocess.run(
+                        ["osascript", "-e",
+                         'display notification "OAuth Token 已过期，请运行 gws auth login"'
+                         ' with title "⚠️ 邮件同步" subtitle "knowledge-bank"'],
+                        timeout=5, capture_output=True,
+                    )
+                except Exception:
+                    pass  # 通知失败不影响主流程
+                raise PipelineError(f"gws 调用失败: {last_error}")
         if attempt + 1 < retries:
             time.sleep(1.5 * (attempt + 1))
     raise PipelineError(f"gws 调用失败: {last_error}")
