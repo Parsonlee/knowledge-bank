@@ -352,10 +352,10 @@ AI Agent 在处理日常任务时，必须遵守以下核心操作闭环：
 
 Reconcile 可以自动发现和报告矛盾，但严禁无人值守选边。真正的冲突裁决永远属于 L3 高危操作。
 
-## 5. Tag 体系
-Tag 统一存放在 YAML frontmatter 的 `tags:` 数组中。严格沿用主库已有的分层 Tag 体系（使用 `/` 分隔），**不另起一套**。主要分支如下：
+## 5. Tag 体系与治理规范
+Tag 统一存放在 YAML frontmatter 的 `tags:` 数组中。根目录下的 [`tags.json`](file:///Users/ZHao/WorkSpace/knowledge-bank/tags.json) 是全库经用户审批的标准 Tag 白名单与唯一权威数据源（Single Source of Truth, SSOT）。主要分类分支与顶层标签由 `tags.json` 统一管理：
 
-- `LLM/` — arch, training, inference, reasoning, hallucination, tokenization
+- `LLM/` — arch (含 attention/Mamba/MoE), training (含 pre-train/post-train/RL), inference, reasoning, hallucination, tokenization
 - `AI-Agent/` — coding, tool-calling, context-engineering, deep-research, AI-BI, skill, prompt-engineering, multi-agent, memory, UI
 - `RAG/` — embedding, query, chunking, retrieval, eval
 - `Skill/` — python, data-analysis, claude-code, linux
@@ -373,6 +373,14 @@ Tag 统一存放在 YAML frontmatter 的 `tags:` 数组中。严格沿用主库�
 > 2. **细分叶子优先纪律（No Top-level Pooling）**：
 >    - 在 `RAG/`、`LLM/`、`AI-Agent/` 体系下，**必须优先精准锚定末端细分叶子分类**（如 `RAG/chunking`、`LLM/arch`）；
 >    - 严禁出于省事把垂直领域的文章笼统丢入顶层单分类（如 `RAG`、`LLM`），顶层分类仅供覆盖全局框架的宏观综述文使用。
+
+### 5.1 Tag 治理与 Agent CRUD 授权纪律
+为确保标签体系长期有序可控，AI Agent 必须严格通过 [`scripts/tag_manager.py`](file:///Users/ZHao/WorkSpace/knowledge-bank/scripts/tag_manager.py) 与 `tags.json` 进行交互：
+
+- **读取与校验 (Read/Validate - L0 只读)**：Ingest 与 Lint 时，一律动态读取 `tags.json` 进行校验与候选题词。
+- **申请新增标签 (Create - L1 需审批)**：遇到新前沿领域文献且当前无合适标签时，Agent **严禁擅自造词**；必须向用户提出申请（列明建议标签、分支归属与理由），在用户明确审批通过后，调用 `python3 scripts/tag_manager.py add <tag>` 写入 `tags.json`。
+- **级联重命名与迁移 (Update/Rename - L3 高危)**：重命名标签必须通过 `python3 scripts/tag_manager.py rename <old> <new>` 执行，强制先输出 Dry-run 受影响文件清单，经用户确认后带 `--apply` 原子级联更新全库 Frontmatter 及 `tags.json`。
+- **标签废弃与下线 (Delete - L3 高危)**：下线废弃标签必须通过 `python3 scripts/tag_manager.py delete <tag>` 执行，强制先输出 Dry-run 清单，经用户确认后带 `--apply` 级联清除。
 
 ## 6. 自动维护与定时任务
 Second Brain 类能力用于补充本库的主动检索、综合、冲突发现和周期性维护，但自动化权限必须按风险分级：

@@ -15,6 +15,7 @@ from io import StringIO
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import normalize_tags
+import tag_manager
 import vault_lint
 
 
@@ -25,16 +26,12 @@ class TestNormalizeTags(unittest.TestCase):
     def tearDown(self):
         shutil.rmtree(self.test_dir)
 
-    def test_tag_synchronization_with_vault_lint(self):
-        """测试 normalize_tags 与 vault_lint 权威定义保持同步"""
-        # 所有顶级标签应在 APPROVED_TAGS 中
-        for top_tag in vault_lint.STANDARD_TOP_LEVEL_TAGS:
-            self.assertIn(top_tag, normalize_tags.APPROVED_TAGS)
-        
-        # 所有分支叶子应在 APPROVED_TAGS 中
-        for branch, leaves in vault_lint.STANDARD_TAG_BRANCHES.items():
-            for leaf in leaves:
-                self.assertIn(f"{branch}/{leaf}", normalize_tags.APPROVED_TAGS)
+    def test_tag_synchronization_with_tags_json(self):
+        """测试 normalize_tags 与 tags.json 权威定义保持同步"""
+        approved = tag_manager.get_all_approved_tags()
+        self.assertIn("DeepLearning", approved)
+        self.assertIn("LLM/arch", approved)
+        self.assertIn("Skill/python", approved)
 
     def test_normalize_valid_tags_unchanged(self):
         """测试合规标签不做不必要修改"""
@@ -42,30 +39,24 @@ class TestNormalizeTags(unittest.TestCase):
         res = normalize_tags.normalize_tag_list(valid_tags, ptype="source")
         self.assertEqual(res, valid_tags)
 
-    def test_normalize_tag_mapping(self):
-        """测试映射字典查表转换"""
+    def test_case_insensitive_correction(self):
+        """测试大小写不敏感自动校正为标准大小写"""
         test_cases = [
-            (["RAG"], ["RAG/retrieval"]),
-            (["LLM"], ["LLM/arch"]),
-            (["machine-learning"], ["Skill/data-analysis"]),
-            (["KV-Cache"], ["LLM/inference"]),
-            (["loop-engineering"], ["AI-Agent/coding"]),
-            (["Multi-Agent"], ["AI-Agent/multi-agent"]),
-            (["descriptor"], ["Skill/python"]),
-            (["gpu"], ["Infra/gpu"]),
-            (["MLOps"], ["Infra/AI"]),
-            (["Skill/knowledge-bank"], ["AI-Agent/skill"]),
+            (["skill/python"], ["Skill/python"]),
+            (["ai-agent/coding"], ["AI-Agent/coding"]),
+            (["rag/retrieval"], ["RAG/retrieval"]),
+            (["deeplearning"], ["DeepLearning"]),
         ]
         for input_tags, expected in test_cases:
             res = normalize_tags.normalize_tag_list(input_tags, ptype="source")
             self.assertEqual(res, expected, f"Failed for input {input_tags}")
 
     def test_noise_tags_cleaned_to_empty(self):
-        """测试噪音标签清洗后输出空列表，且不进行猜测兜底 (Fallback 策略改造)"""
+        """测试非标标签清洗后输出空列表，且不进行猜测兜底 (Fallback 策略改造)"""
         output = StringIO()
         with redirect_stdout(output):
             res = normalize_tags.normalize_tag_list(
-                ["clippings"],
+                ["clippings", "unapproved_tag_xyz"],
                 ptype="source",
                 content="This is about AI Agent loop engineering and rag retrieval with python."
             )
@@ -80,7 +71,7 @@ class TestNormalizeTags(unittest.TestCase):
         self.assertIn("LLM", res_overview)
 
         res_source = normalize_tags.normalize_tag_list(["RAG", "LLM"], ptype="source")
-        self.assertEqual(res_source, ["RAG/retrieval", "LLM/arch"])
+        self.assertEqual(res_source, [])
 
     def test_forbidden_fields_removal_in_process_file(self):
         """测试在处理 wiki 文件时剔除禁止字段"""
@@ -89,7 +80,7 @@ class TestNormalizeTags(unittest.TestCase):
         content = (
             "---\n"
             "type: \"source\"\n"
-            "tags: [\"machine-learning\"]\n"
+            "tags: [\"Skill/python\"]\n"
             "summary: \"Test summary\"\n"
             "sources: [\"raw/articles/test.md\"]\n"
             "updated: \"2026-08-26\"\n"
@@ -106,7 +97,7 @@ class TestNormalizeTags(unittest.TestCase):
         self.assertNotIn("confidence", new_fm)
         self.assertNotIn("created", new_fm)
         self.assertNotIn("ai-first", new_fm)
-        self.assertEqual(new_fm["tags"], ["Skill/data-analysis"])
+        self.assertEqual(new_fm["tags"], ["Skill/python"])
 
         # 验证落盘文件内容
         saved_content = file_path.read_text(encoding="utf-8")

@@ -42,24 +42,34 @@ TIMELINE_FIELDS = (
     'sources',
 )
 
-STANDARD_TOP_LEVEL_TAGS = {
-    'DeepLearning', 'AIGC', '创业', '面试', 'Life', 'Recommendation', 'TTS'
-}
-
-STANDARD_TAG_BRANCHES = {
-    'LLM': {'arch', 'training', 'inference', 'reasoning', 'hallucination', 'tokenization'},
-    'AI-Agent': {'coding', 'tool-calling', 'context-engineering', 'deep-research', 'AI-BI', 'skill', 'prompt-engineering', 'multi-agent', 'memory', 'UI'},
-    'RAG': {'embedding', 'query', 'chunking', 'retrieval', 'eval'},
-    'Skill': {'python', 'data-analysis', 'claude-code', 'linux'},
-    'CV': {'detection', 'data-augmentation', 'arch'},
-    'Infra': {'AI', 'gpu'},
-}
+# 动态接入根目录 tags.json 单一事实来源
+try:
+    from tag_manager import load_tag_config, get_top_level_tags, get_tag_branches, validate_tag as tm_validate_tag
+    _TAG_CONFIG = load_tag_config()
+    STANDARD_TOP_LEVEL_TAGS = get_top_level_tags(_TAG_CONFIG)
+    STANDARD_TAG_BRANCHES = get_tag_branches(_TAG_CONFIG)
+except Exception:
+    STANDARD_TOP_LEVEL_TAGS = {
+        'DeepLearning', 'AIGC', '创业', '面试', 'Life', 'Recommendation', 'TTS'
+    }
+    STANDARD_TAG_BRANCHES = {
+        'LLM': {'arch', 'training', 'inference', 'reasoning', 'hallucination', 'tokenization'},
+        'AI-Agent': {'coding', 'tool-calling', 'context-engineering', 'deep-research', 'AI-BI', 'skill', 'prompt-engineering', 'multi-agent', 'memory', 'UI'},
+        'RAG': {'embedding', 'query', 'chunking', 'retrieval', 'eval'},
+        'Skill': {'python', 'data-analysis', 'claude-code', 'linux'},
+        'CV': {'detection', 'data-augmentation', 'arch'},
+        'Infra': {'AI', 'gpu'},
+    }
+    tm_validate_tag = None
 
 def validate_tag(tag, ptype='source'):
     """
-    校验 tag 是否符合 AGENTS.md 第 5 节规范。
+    校验 tag 是否符合 tags.json 与 AGENTS.md 第 5 节规范。
     返回 (is_valid, error_msg)
     """
+    if tm_validate_tag:
+        return tm_validate_tag(tag, ptype=ptype)
+
     if not isinstance(tag, str) or not tag.strip():
         return False, f"Tag 必须是非空字符串: {tag!r}"
     
