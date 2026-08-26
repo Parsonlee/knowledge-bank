@@ -1,5 +1,11 @@
 # Wiki Log
 
+## [2026-08-26] fix/lint | 修复不用title你怎么介绍自己出链与下游实体死链清理（4 实体解链注销）
+- **Source 页面死链清理**：`[[wiki/sources/不用title你怎么介绍自己.md]]` 作者与关联实体出链降级为普通文本 `Jiabin Lu`，彻底消除已删除实体的残余出链。
+- **下游概念页解链**：`[[wiki/concepts/概念_有限与无限的游戏.md]]` 正文作者出链降级为普通文本，清理已删除关联实体列表。
+- **总索引同步注销**：`[[wiki/index.md]]` 移除 `实体_陆甲彬_Jiabin_Lu`、`实体_伊凡·伊里奇之死`、`实体_托尔斯泰`、`实体_詹姆斯·卡斯_James_Carse` 4 个条目。
+- **全库健康门禁验证**：`uv run --with pyyaml python scripts/vault_lint.py lint` 验证通过，全库 0 errors，死链完全清零。
+
 ## [2026-08-26] prune/refactor | 边缘低频实体（In-degree <= 1）全量审阅、模型家族化整合与精准精简（清理 18 篇，聚合 3 篇，保留核心基建）
 - **模型家族化聚合 (Family Consolidation)**：
   - 聚合建立 `[[wiki/entities/实体_GLM系列|实体_GLM系列]]` 与 `[[wiki/entities/实体_GPT系列|实体_GPT系列]]`，吸收 GLM-5.2 与 GPT-5.6 的后训练作弊防御与长程评测经验；
