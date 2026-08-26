@@ -5,14 +5,12 @@ tags:
 summary: Meta AI 开源的高效海量向量相似度检索与聚类计算库。
 sources:
 - wiki/sources/ColBERTv2残差压缩演进.md
-- wiki/sources/RAG技巧与底层代码剖析.md
 - wiki/sources/RAG挑战赛冠军方案.md
 - wiki/sources/RAG高级优化_问题生成检索增强.md
 - wiki/sources/向量数据库原理与应用全解析.md
 - wiki/sources/美团搜索查询改写实践.md
 updated: '2026-07-01'
 ---
-
 ## 简介
 
 Faiss（Facebook AI Similarity Search）是由 Facebook AI Research 开源的向量相似检索库（C++ 实现）。更像库/工具包而非完整数据库。

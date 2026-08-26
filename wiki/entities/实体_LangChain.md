@@ -13,7 +13,6 @@ sources:
 - wiki/sources/RAGAS评估RAG系统.md
 - wiki/sources/RAG_12痛点与解决方案.md
 - wiki/sources/RAG基础_索引检索生成.md
-- wiki/sources/RAG技巧与底层代码剖析.md
 - wiki/sources/RAG文本切分_JSON文档切分.md
 - wiki/sources/RAG文本切分_Markdown切分.md
 - wiki/sources/RAG文本切分_token优化.md
@@ -30,12 +29,10 @@ sources:
 - wiki/sources/RAG高级优化_检索策略Fusion_HyDE.md
 - wiki/sources/RAG高级优化_问题生成检索增强.md
 - wiki/sources/也许当前最好的上下文工程讲解_LangChain联合Manus.md
-- wiki/sources/从提示员到系统架构师：Loop Engineering 的范式跃迁.md
 - wiki/sources/向量数据库原理与应用全解析.md
 - wiki/sources/浅谈上下文工程_Claude_Code_Manus_Kiro.md
 updated: '2026-07-01'
 ---
-
 > [!note] 说明
 > 注：全文围绕 LangChain 用法展开但未系统介绍框架本身，故标 medium。
 

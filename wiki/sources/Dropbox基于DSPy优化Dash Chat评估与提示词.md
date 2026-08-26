@@ -13,7 +13,7 @@ published: '2026-06-26'
 ## 来源信息
 
 - 原文：[How we used DSPy to turn AI evaluations into better responses in Dash Chat](https://dropbox.tech/machine-learning/how-we-turned-ai-evaluations-into-better-responses-in-dash-chat) / [中文翻译版](https://www.bestblogs.dev/article/c2a3404e)
-- 作者：[[实体_Simran_Jumani]] / Dropbox Tech Blog / 2026-06-26
+- 作者：Simran Jumani / Dropbox Tech Blog / 2026-06-26
 - 物理文献：`raw/articles/我们如何利用 DSPy 将 AI 评估转化为 Dash Chat 的更优回复.md`
 
 ## 核心要点与关键引文

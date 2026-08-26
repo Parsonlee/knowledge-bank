@@ -9,10 +9,8 @@ sources:
 - wiki/sources/LoRA微调实战_Qwen2.5全流程.md
 - wiki/sources/OpenAI_LLM应用最佳实践.md
 - wiki/sources/大模型算法岗面试百问百答.md
-- wiki/sources/美团搜索查询改写实践.md
 updated: '2026-07-06'
 ---
-
 # 概念_Fine-tuning
 
 

@@ -40,7 +40,6 @@ updated: '2026-07-01'
 - [[概念_alignment_tax]]
 - Forward_KL与Reverse_KL
 - [[概念_GRPO强化学习]]
-- [[实体_陈丹琦团队]]
 - Llama-3
 - [[实体_Qwen2.5-Coder]]
 

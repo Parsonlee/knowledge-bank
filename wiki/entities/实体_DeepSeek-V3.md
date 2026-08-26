@@ -8,10 +8,9 @@ sources:
 - wiki/sources/DeepSeek-R1工作原理.md
 - wiki/sources/RAGAS评估RAG系统.md
 - wiki/sources/从DeepSeek-V3到Kimi_K2_八种现代LLM架构大比较.md
-- wiki/sources/大模型面试面经_简单透彻理解MoE.md
+- wiki/sources/刚刚，DeepSeek Harness震撼开源：一切皆插件.md
 updated: '2026-06-29'
 ---
-
 # 实体_DeepSeek-V3
 
 DeepSeek 发布的旗舰密集 MoE 模型，架构创新（MLA + MoE）影响了后续多个顶级模型设计。

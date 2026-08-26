@@ -9,13 +9,11 @@ sources:
 - wiki/sources/AI时代如何做独立开发.md
 - wiki/sources/Context_Engineering_LangChain_Manus_NotebookLM.md
 - wiki/sources/Manus创始人手把手拆解上下文工程.md
-- wiki/sources/Tongyi DeepResearch的技术报告探秘.md
 - wiki/sources/九大主流AI_PPT横测.md
 - wiki/sources/也许当前最好的上下文工程讲解_LangChain联合Manus.md
 - wiki/sources/浅谈上下文工程_Claude_Code_Manus_Kiro.md
 updated: '2026-06-29'
 ---
-
 # 实体：Manus
 
 ## 基本信息

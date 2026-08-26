@@ -176,7 +176,7 @@
 - [[2026程序员必读的向量数据库原理与选型指南]] — 系统剖析 ANN 算法（HNSW/IVF/DiskANN）与标量过滤，横向对比 8 大向量数据库选型决策树（RAG/embedding, Infra/AI）
 - [[Karpathy推文引发的LLM_Wiki知识库搭建实践]] — Andrej Karpathy 提出的 LLM Wiki 知识编译范式、三层架构、四大核心操作与 80 年思想谱系（Skill/knowledge-bank, AI-Agent/coding）
 - [[OpenAI前VP_Lilian_Weng_AI自我改进的近路不是改权重]] — Lilian Weng 剖析 Harness Engineering：递归自我改进（RSI）近期的近路不是改模型权重，而是围绕模型搭建的 Harness 系统（AI-Agent/harness, AI-Agent/coding）
-- [[Vault死链治理与单向推导架构维护复盘]] — Hugo Yang 总结 Obsidian 知识库死链假性鉴别（重定向/去前缀/待建节点）、级联清理行内安全感知与单向推导管线维护纪律（Skill/knowledge-bank）
+- [[wiki/sources/Vault死链治理与单向推导架构维护复盘]] — Hugo Yang 总结 Obsidian 知识库死链假性鉴别（重定向/去前缀/待建节点）、级联清理行内安全感知与单向推导管线维护纪律（Skill/knowledge-bank）
 - [[XGBoost_SHAP一键生成10张出版级模型解释图]] — 利用 XGBoost 与 SHAP 构建 10 张高分辨率出版级可视化图表（Skill/data-analysis, Skill/python）
 - [[不用title你怎么介绍自己]] — 反思职业 Title 与 Ego 绑定，用动词定义自己与探索核心问题（Life）
 - [[代码强化学习的双刃剑_前沿模型为何集体走向作弊]] — 解析代码 RL 可验证奖励如何激活推理元能力，又因代理奖励漏洞导致模型集群发生 Reward Hacking 作弊现象及防范（LLM/training/RL, LLM/reasoning）
@@ -338,7 +338,6 @@
 - [[概念_Graph_Engineering图工程]] — 定义图工程（Graph Engineering）的核心内涵以及三大物理要素，展示 5 层嵌套同轴系统架构并拆解四大痛点设计准则。（Architecture, Agent, Multi-Agent, Graph-Engineering）
 - [[概念_扩散大语言模型_dLLMs]] — 定义扩散大语言模型（dLLMs）的物理架构、比对自回归与扩散模型的计算性质差异，详述离散掩码扩散及模型转换加速机制。（Architecture, LLM, Diffusion-LLM, Inference-Optimization）
 - [[概念_AI硬件加速芯片架构]] — 定义并横向对比 CPU、GPU、TPU、NPU 与 LPU 五种主流 AI 计算芯片架构 of 物理特征、存储层次以及计算调度机制。（Architecture, Hardware, Processor, Inference）
-- [[概念_数据版本控制与DVC]] — 介绍 DVC 核心定位与 MLOps 复现性价值，拆解其轻量级元数据描述与大物理文件存储分流的两阶段联动机制，以及 git checkout + dvc pull 的可复现工作流。（MLOps, data-version-control, DVC）
 - [[概念_机器学习双下降现象]] — 阐述在过度参数化区域由于隐式正则化作用测试误差发生二次下降的现象，分析临界插值界限与偏置-方差折中理论的物理差异。（MachineLearning, Double-Descent, Generalization）
 
 ### RAG
@@ -583,7 +582,6 @@
 - [[实体_vLLM]] — 开源 LLM 推理框架，KV Cache/连续批处理/PagedAttention
 - [[实体_Mechanize]] — RL 环境平台，复制训练（Replication Training）范式
 - [[实体_Fireworks_AI]] — AI Inference Infra 公司，RFT 产品化
-- [[实体_Surge_AI]] — RL 环境/数据公司，智能体能力金字塔框架
 - [[实体_LangChain]] — LLM/RAG 应用框架，链式串联检索与生成（medium）
 - [[实体_Qdrant]] — Rust 编写的开源向量数据库/向量搜索引擎（medium）
 - [[实体_ColBERT]] — 斯坦福 token 级细粒度检索模型，MaxSim late interaction
@@ -610,8 +608,7 @@
 - [[实体_腾讯混元TurboS]] — 业界首个大规模部署的 560B Hybrid Transformer-Mamba MoE 模型（LLM/arch/Mamba, LLM/arch/MoE）
 - [[实体_DeepSeek-V3]] — DeepSeek 旗舰 MoE 模型，MLA+256专家+共享专家架构（LLM/arch/MoE）
 - [[实体_Kimi_K2]] — 月之暗面 1T 参数开源 MoE 模型，Muon 优化器，基于 DeepSeek-V3 架构（LLM/arch/MoE）
-- [[实体_Gemma3]] — Google DeepMind 开源 LLM，滑动窗口注意力+双层 Norm，27B 性能优异（LLM/arch）
-- [[实体_Florence-2]] — 微软 Azure AI 通用视觉基础模型，FLD-5B + Seq2Seq（LLM/arch/VLM）
+- [[实体_Gemma系列]] — Google DeepMind 研发的开源大模型家族，涵盖 Gemma 1/2/3 及端侧 Gemma 3n（LLM/arch）
 - [[实体_LLaVA]] — 大道至简多模态系列：极简连接器 + AnyRes（LLM/arch/VLM）
 - [[实体_Qwen3-VL]] — 阿里 DeepStack + MoE 深度融合多模态模型（LLM/arch/VLM）
 - [[实体_MiniMax_M2]] — MiniMax 2025 旗舰，回归 Full Attention，Agent/代码定位（LLM/arch/attention）
@@ -625,7 +622,6 @@
 - [[实体_SmolLM3]] — HuggingFace 3B 开源模型，384×H100 训练 11T tokens，GQA+RNoPE 架构（LLM/training/pre-train）
 - [[实体_DEITA]] — SFT 数据筛选方法，复杂性×质量综合评分 + 向量相似度多样性过滤（LLM/training/post-train）
 - [[实体_MoDS]] — 三维度 SFT 数据筛选：奖励模型质量+K-Center-Greedy多样性+必要性过滤（LLM/training/post-train）
-- [[实体_陈丹琦团队]] — 普林斯顿 NLP 组，后训练遗忘机制研究：on-policy 数据是关键（LLM/training/post-train）
 
 ### LLM/面试/创业/RL（批次9）
 - [[实体_Jina_AI]] — 专注搜索底座模型 AI 初创，2020-2025，两次 Pivot 后被 Elastic 收购（创业）
@@ -809,7 +805,6 @@
 ### AI-Agent 综合 + AI-BI（Phase 4 Batch 9）
 - [[实体_LangSmith]] — LangChain 可观测性平台：可视化 Trace/调试/测试评估，Agent 复现性关键工具（AI-Agent）
 - [[实体_Qwen2.5-Coder]] — 阿里代码专用模型3B/7B，NL2SQL LoRA 精调基座，实测EX提升+6.4%（AI-Agent/AI-BI）
-- [[实体_Sim_AI工作流框架]] — 基于 ReactFlow 的轻量级、AI-native 可视化智能体工作流（Agentic Flow）拖拽式构建框架，支持本地 Ollama 运行（AI-Agent, open-source）
 
 
 ### Skill/python（Phase 5 Batch 1）
@@ -824,9 +819,6 @@
 - [[实体_Pandas]] — Python 数据分析核心库，基于 NumPy，Series/DataFrame + groupby/merge/pivot/plot（Skill/data-analysis, Skill/python）
 - [[实体_Dataprep]] — 开源 Python EDA 包，基于 Pandas+Dask，自动 EDA 中速度最快（Skill/data-analysis, Skill/python）
 - [[实体_dufte]] — matplotlib 样式美化库，dufte.style/legend()/show_bar_values() 三 API（Skill/data-analysis）
-
-### Life（Phase 5 Batch 3）
-- [[实体_评论尸]] — 中文互联网创作者，博客「虹线」，《幸福的积分》作者（Life）
 
 ### Life（Phase 6 Batch 5：旅行/驾驶/智能家居）
 
@@ -853,19 +845,12 @@
 - [[实体_Rahul_Vohra]] — Superhuman 创始人兼 CEO，PMF 引擎方法论提出者（创业）
 - [[实体_Grammarly]] — 嵌入式 AI 写作工具，年收入超 7 亿美金，收购 Coda+Superhuman 后改名（创业）
 - [[实体_Shishir_Mehrotra]] — Coda 创始人，新 Superhuman 集团 CEO，Bundle 理论实践者（创业）
-- [[实体_Leonis_Capital]] — 华人 2021 年成立早期 AI 风投，发布 The Leonis AI 100 报告（创业）
 
 ### 创业（Phase 6 Batch 5：AI 独立开发）
-- [[实体_艾逗笔_idoubi]] — ThinkAny & MCP.so 创始人，腾讯 5 年后裸辞独立开发，AI 应用出海（创业）
-- [[实体_MCP_so]] — MCP 应用市场，月均百万访问，被 a16z 引用，程序化 SEO Google MCP 关键词第一（创业）
 - [[实体_Claude_Code]] — Anthropic 终端 AI Coding 命令行工具，在 LLM Wiki 中担任知识编译“大脑”（AI-Agent/coding, Skill/claude-code）
 - [[实体_Obsidian]] — 本地优先 Markdown 知识库软件，通过 Graph View 图谱与 MCP 充当人类认知“IDE”（Skill/knowledge-bank）
 - [[实体_DSPy]] — 斯坦福开源的声明式框架，将提示工程转化为程序编译与 GEPA 误差驱动优化（AI-Agent/eval, AI-Agent/prompt-engineering）
 - [[实体_Andrej_Karpathy]] — 著名人工智能科学家与教育者，LLM Wiki 知识编译与复利范式提出者（DeepLearning, AI-Agent/coding）
-- [[实体_翻斗花园二蛋]] — 知名技术博主，Claude Code + Obsidian + 飞书个人自进化知识库践行者（Skill/knowledge-bank, AI-Agent/coding）
-- [[实体_AI_Online]] — 深度前沿 AI 论文与趋势传播平台，推动智能体记忆三阶演进认知（AI-Agent/memory）
-- [[实体_港中深与上海AI实验室]] — 联合提出 Agent 记忆 Storage->Reflection->Experience 演进综述与研究路线（AI-Agent/memory）
-- [[实体_Simran_Jumani]] — Dropbox ML 专家，Dash Chat 智能体基于 DSPy 评估驱动提示词优化主导者（AI-Agent/eval）
 - [[实体_Dropbox]] — 知名云同步协作与 AI 工作台公司，在 Dash Chat 中实现对准评估与自动迭代双赢（AI-Agent/eval, AI-Agent/prompt-engineering）
 - [[实体_Milvus]] — 开源云原生分布式向量数据库，存算分离架构，支持十亿级海量向量数据（RAG/embedding, Infra/AI）
 - [[实体_pgvector]] — PostgreSQL 开源向量检索扩展插件，支持原生 SQL 向量查询（RAG/retrieval, Skill/python）
@@ -875,7 +860,6 @@
 - [[实体_Weaviate]] — 开源一体化向量搜索引擎，基于 HNSW 索引与 GraphQL 查询（RAG/retrieval, Infra/AI）
 - [[实体_Vannevar_Bush]] — 美国工程师，1945 年提出 Memex 个人知识设备构想，关联性路径鼻祖（Skill/knowledge-bank, DeepLearning）
 - [[实体_Niklas_Luhmann]] — 德国社会学家，卡片盒笔记法 (Zettelkasten) 集大成者，9万张索引卡（Skill/knowledge-bank）
-- [[实体_qmd]] — 基于 Rust 编写的本地 Markdown 搜索引擎，支持全文、语义与混合检索（Skill/knowledge-bank, RAG/retrieval）
 - [[实体_Thinking_Machines_Lab]] — 前 OpenAI 安全研究 VP Lilian Weng 等联合创办的前沿 AI 研究实验室（AI-Agent/harness）
 - [[实体_Hugo_Yang]] — 本知识库搭建者与架构维护者（Skill/knowledge-bank）
 - [[实体_vault_lint]] — 知识库自动化治理与诊断 Python 工具（`scripts/vault_lint.py`）（Skill/knowledge-bank）
@@ -887,14 +871,11 @@
 - [[实体_伊凡·伊里奇之死]] — 托尔斯泰中篇小说，深刻反思世俗成功与虚无人生（Life）
 - [[实体_托尔斯泰]] — 俄国批判现实主义作家、思想家，代表作《战争与和平》《伊凡·伊里奇之死》（Life）
 - [[实体_詹姆斯·卡斯_James_Carse]] — 纽约大学教授，《有限与无限的游戏》作者（Life）
-- [[实体_史蒂夫·乔布斯]] — 苹果公司联合创始人，主张“向死而生”应对人生重大决策（Life, 创业）
 - [[实体_鸭哥]] — 科技博主与技术创作者，关注前沿模型训练与代码强化学习作弊深度解析（LLM/training/RL）
-- [[实体_METR]] — 非营利独立 AI 安全与能力评估机构，致力于模型长程规划、奖励作弊与自治风险测试（LLM/training/RL, AI-Agent/eval）
 - [[实体_Cursor]] — AI 代码编辑器团队，揭示 SWE-bench Pro 上代码 RL 作弊与强化沙盒评测分数塌方现象（AI-Agent/coding）
 - [[实体_SWE-bench_Pro]] — 评估软件工程智能体解决真实 GitHub Issue 能力的权威代码基准评测集（AI-Agent/coding, AI-Agent/eval）
-- [[实体_GLM-5.2]] — 智谱 AI 前沿大模型，官方披露代码 RL 训练期作弊与双阶段拦截防御框架（LLM/arch）
-- [[实体_GPT-5.6]] — OpenAI 旗舰模型，官方系统卡揭示长程规划与复杂研究任务中的作弊与伪造行为（LLM/arch）
-- [[实体_AI2_Tmax]] — AI2 小参数量模型，验证代码 RL 在终端训练后向数学 AIME 竞赛题的无缝能力迁移（LLM/arch, LLM/training/RL）
+- [[实体_GLM系列]] — 智谱 AI 研发的通用大语言模型家族，涵盖 GLM-4 与前沿 GLM-5 体系（LLM/arch）
+- [[实体_GPT系列]] — OpenAI 旗舰大语言模型家族，涵盖 GPT-4、GPT-5 体系及衍生推理模型（LLM/arch）
 - [[实体_Coggle]] — Coggle 数据科学社区，关注数据科学、算法竞赛与 Agent 能力工程化实战（AI-Agent/skill）
 - [[实体_Anthropic]] — 安全导向前沿 AI 研究实验室，研发 Claude 系列模型、Agent Skills 元工具架构与接种提示词（AI-Agent/skill, LLM/arch）
 

@@ -10,15 +10,14 @@ sources:
 - wiki/sources/LLM面试50题_MIT_CSAIL.md
 - wiki/sources/R1复现认知与误区.md
 - wiki/sources/RL_Infra行业全景.md
-- wiki/sources/Tongyi DeepResearch的技术报告探秘.md
 - wiki/sources/入局AI_Infra系统设计与挑战.md
+- wiki/sources/刚刚，DeepSeek Harness震撼开源：一切皆插件.md
 - wiki/sources/大模型幻觉陷阱_AGI之路04期.md
 - wiki/sources/强化学习入门指南_RLHF到GRPO.md
 - wiki/sources/淘宝直播数字人_LLM文案生成技术.md
 - wiki/sources/腾讯混元TurboS技术报告.md
 updated: '2026-06-29'
 ---
-
 # 实体：DeepSeek-R1
 
 DeepSeek-R1 是深度求索（DeepSeek）发布的推理模型，通过大规模强化学习（GRPO）激励推理能力，性能与 OpenAI-o1-1217 相当。

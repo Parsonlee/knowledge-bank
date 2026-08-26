@@ -4,11 +4,10 @@ tags:
 - AIGC
 summary: lencx 基于 Noi（Electron 应用）开发实践总结的 AI 辅助编程三个递进阶段。
 sources:
+- wiki/sources/一个半月高强度Claude_Code使用后感受.md
 - wiki/sources/关于Nano_Banana的一些浅思.md
 updated: '2026-07-06'
 ---
-
-
 # Vibe Coding 三阶段
 
 lencx 基于 Noi（Electron 应用）开发实践总结的 AI 辅助编程三个递进阶段。

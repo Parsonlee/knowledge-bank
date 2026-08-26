@@ -12,7 +12,7 @@ published: '2026-04-14'
 ## 来源信息
 
 - 原文：[Claude Code + Obsidian + 飞书，我搭了一套会自己长大的知识库](https://mp.weixin.qq.com/s/QTSqMJm4rXKHHzPLae5xKw)
-- 作者：[[实体_翻斗花园二蛋]] / 2026-04-14
+- 作者：翻斗花园二蛋 / 2026-04-14
 - 物理文献：`raw/articles/Claude Code + Obsidian + 飞书，我搭了一套会自己长大的知识库.md`
 
 ## 核心要点与关键引文

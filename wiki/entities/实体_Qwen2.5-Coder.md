@@ -5,9 +5,9 @@ tags:
 summary: Qwen2.5-Coder 是阿里巴巴通义团队发布的代码专用大模型系列，在 NL2SQL 等代码生成任务上表现优异。
 sources:
 - wiki/sources/企业落地NL2SQL_AI-ready_data与小模型.md
+- wiki/sources/后训练认知_SFT_vs_RL_记忆与遗忘机制.md
 updated: '2026-06-29'
 ---
-
 # 实体：Qwen2.5-Coder
 
 Qwen2.5-Coder 是阿里巴巴通义团队发布的代码专用大模型系列，在 NL2SQL 等代码生成任务上表现优异。

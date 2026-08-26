@@ -7,9 +7,10 @@ summary: t-SNE 是一种流形学习降维与二维可视化算法。其 CPU 计
   700 倍的 GPU 极速提升，但目前硬件上仅支持生成二维投影（n_components=2）。
 sources:
 - wiki/sources/2025-07-01_Accelerate-tSNE-with-GPU_197c7a.md
+- wiki/sources/2025-10-18_Avoid-Using-PCA-for-Visualization-Unless..._199f91.md
+- wiki/sources/2025-11-12_25-most-important-mathematical-definitions-in-DS_19a79c.md
 updated: '2026-08-03'
 ---
-
 # 概念：t-SNE算法
 
 ## 定义

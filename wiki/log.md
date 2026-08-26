@@ -1,5 +1,30 @@
 # Wiki Log
 
+## [2026-08-26] prune/refactor | 边缘低频实体（In-degree <= 1）全量审阅、模型家族化整合与精准精简（清理 18 篇，聚合 3 篇，保留核心基建）
+- **模型家族化聚合 (Family Consolidation)**：
+  - 聚合建立 `[[wiki/entities/实体_GLM系列|实体_GLM系列]]` 与 `[[wiki/entities/实体_GPT系列|实体_GPT系列]]`，吸收 GLM-5.2 与 GPT-5.6 的后训练作弊防御与长程评测经验；
+  - 聚合建立 `[[wiki/entities/实体_Gemma系列|实体_Gemma系列]]`，系统收录 Google DeepMind 开源大模型家族架构创新（滑动窗口注意力、双层 Norm 等）；`[[wiki/entities/实体_Gemini|实体_Gemini]]` 聚焦多模态助手与 AIGC 工具生态。
+- **低频与单篇实体精准清理 (Pruning)**：
+  - 依照用户审批裁决，物理清理 18 篇低频/单篇顺带提及/无跨篇复利价值的实体（包括 `史蒂夫·乔布斯`、`评论尸`、`翻斗花园二蛋`、`艾逗笔_idoubi`、`MCP_so`、`Simran_Jumani`、`qmd`、`METR`、`陈丹琦团队`、`港中深与上海AI实验室`、`Leonis_Capital`、`Surge_AI`、`Florence-2`、`AI2_Tmax`、`AI_Online` 等）；
+  - 全库 11 处相关 Source 摘要页与概念页面精准降级为普通文本提及，行内无损解耦。
+- **作者归档体系确立与基石实体保留**：
+  - 保留作者个人实体 `[[wiki/entities/实体_Hugo_Yang|实体_Hugo_Yang]]` 并确立 `raw/out-blogs/` 专属目录规范与 AGENTS.md §1.1 注册；
+  - 保留核心技术基石实体（`Thinking_Machines_Lab`、`uv`、`LangSmith`、`Unsloth`、`CherryStudio`、`Docling`、`DiT`、`DEITA`、`MoDS`、`Agent_TARS` 等 22 篇）。
+- **总索引与全库门禁通过**：
+  - 同步清理 `wiki/index.md` 对应条目；
+  - 运行 `uv run --with pyyaml python scripts/vault_lint.py lint`，全库 0 errors，死链与 Schema 校验 100% 绿灯。
+
+## [2026-08-26] refactor/lint | 实体与概念上游来源 (sources) 全量纠偏与规范化（修复 77 篇：28 实体 + 49 概念）
+- **虚假来源清洗 (Phantom Removal)**：严格比对全库双链与专名提及，剔除早期生成遗留的张冠李戴无关 Source（如 `实体_Gamma` 挂载 PyTorch 代码等）。
+- **真实双链补全**：全面对齐 Source 摘要页的物理出链与末端页面的反向引用，补齐合规 sources 列表。
+- **分层溯源纪律达成**：末端产物 100% 仅指向 `wiki/sources/`，彻底杜绝越级与断链。
+
+## [2026-08-26] lint/prune | 恢复 23 篇 raw/playbooks 物理文献，清理废弃概念/实体并消除全库 26 个来源死链 (Vault Lint 100% 绿灯)
+- **Playbooks 物理原稿捞回**：从 Git 历史提交 `4ce75bd~1` 中无损恢复误删的 23 篇 `raw/playbooks/` 物理文献，23 篇 `wiki/sources/` 结构化摘要的上游关联全部自愈。
+- **废弃概念与实体清理**：物理删除无上游支撑的废弃概念 `[[wiki/concepts/概念_数据版本控制与DVC|概念_数据版本控制与DVC]]` 与废弃实体 `[[wiki/entities/实体_Sim_AI工作流框架|实体_Sim_AI工作流框架]]`，并同步自 `wiki/index.md` 剔除对应索引。
+- **概念上游来源纠偏**：更新 `[[wiki/concepts/概念_Graph_Engineering图工程|概念_Graph_Engineering图工程]]`，剔除已删除的 `19fbed_part2` 上游来源并解耦废弃实体链接。
+- **全库健康门禁验证**：执行 `uv run --with pyyaml python scripts/vault_lint.py lint`，全库 0 errors，图谱死链、Schema 与索引挂载 100% 合规通过。
+
 ## [2026-08-26] chore/lint | 全库 Tag 体系合规性治理与管线加固 (Tag Normalization, Raw Backfill & Gatekeeper Upgrade)
 - **Tag 体系全局治理与映射修复**：运行 `scripts/normalize_tags.py` 对全库 1021 篇 Markdown 进行全量扫描与治理，将 216 处非法 Tag（包含 76 篇邮件拆分文献中的 180+ 英文自由词、顶层泛用池化词 `RAG`/`LLM`/`CV`、未注册分支及 `clippings` 脏数据）严格归一化映射为 `AGENTS.md` §5 标准白名单，全库违规 Tag 清零。
 - **Tag 规则单向同步与 Fallback 改造**：将 `scripts/normalize_tags.py` 的合规标签规则单向同步至 `scripts/vault_lint.py` 单一事实来源；改造 Fallback 策略，严禁基于正文关键词猜测分类，去噪后为空时置 `[]` 并输出明确告警。

@@ -10,15 +10,11 @@ sources:
 - wiki/sources/OpenAI_LLM应用最佳实践.md
 - wiki/sources/RAG_12痛点与解决方案.md
 - wiki/sources/RAG查询翻译_Query_Translation.md
-- wiki/sources/RAG高级优化_query转换之路.md
-- wiki/sources/RAG高级优化_检索后处理.md
 - wiki/sources/RAG高级优化_检索策略Fusion_HyDE.md
-- wiki/sources/RAG高级优化_问题生成检索增强.md
 - wiki/sources/提升RAG问答质量的技术路线.md
 - wiki/sources/腾讯查询优化四大类综述.md
 updated: '2026-07-06'
 ---
-
 # 概念_HyDE
 
 

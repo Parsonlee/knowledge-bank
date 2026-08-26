@@ -38,6 +38,7 @@ This file provides guidance to Claude Code/Codex/Antigravity and other AI Agents
 |------|------|------|
 | `raw/articles/` | 博客文章、技术分享、新闻报道（**默认归档目录**，Clippings 剪藏的网页文章均归入此处） | **只读不改** |
 | `raw/insights/` | 个人洞察与短篇思考（非完整长文的碎片化观点或短评） | **只读不改** |
+| `raw/out-blogs/` | 作者 Hugo Yang 原创对外发布的技术博客、深度复盘与系统设计文章 | **只读不改** |
 | `raw/papers/` | 学术论文与研究报告（带有明确学术格式的文献） | **只读不改** |
 | `raw/playbooks/` | 操作手册、教程与实战指南（步骤化 SOP 或 How-to 内容） | **只读不改** |
 | `raw/transcripts/` | 讲座、播客、视频的文字版本 | **只读不改** |
@@ -353,34 +354,33 @@ AI Agent 在处理日常任务时，必须遵守以下核心操作闭环：
 Reconcile 可以自动发现和报告矛盾，但严禁无人值守选边。真正的冲突裁决永远属于 L3 高危操作。
 
 ## 5. Tag 体系与治理规范
-Tag 统一存放在 YAML frontmatter 的 `tags:` 数组中。根目录下的 [`tags.json`](file:///Users/ZHao/WorkSpace/knowledge-bank/tags.json) 是全库经用户审批的标准 Tag 白名单与唯一权威数据源（Single Source of Truth, SSOT）。主要分类分支与顶层标签由 `tags.json` 统一管理：
 
-- `LLM/` — arch (含 attention/Mamba/MoE), training (含 pre-train/post-train/RL), inference, reasoning, hallucination, tokenization
-- `AI-Agent/` — coding, tool-calling, context-engineering, deep-research, AI-BI, skill, prompt-engineering, multi-agent, memory, UI
-- `RAG/` — embedding, query, chunking, retrieval, eval
-- `Skill/` — python, data-analysis, claude-code, linux
-- `CV/` — detection, data-augmentation, arch
-- `Infra/` — AI, gpu
-- 顶层独立 — `DeepLearning`, `AIGC`, `创业`, `面试`, `Life`, `Recommendation`, `TTS`
+所有笔记的 Tag 统一存放在 YAML frontmatter 的 `tags:` 数组中。根目录下的 [`tags.json`](file:///Users/ZHao/WorkSpace/knowledge-bank/tags.json) 是全库经用户审批的标准 Tag **唯一权威白名单**。
 
-> [!CAUTION] 🚨 Tag 排他性定界与消歧纪律（Disambiguation Rules）
-> 为杜绝 AI Agent 产生分类混淆与池化泛化，所有 Agent 在录入或校验文献及笔记时，务必严格遵守以下排他性边界铁律：
+- **标签树查阅**：AI Agent 在 Ingest 选词或执行校验前，**必须直接读取根目录 [`tags.json`](file:///Users/ZHao/WorkSpace/knowledge-bank/tags.json) 或调用 `python3 scripts/tag_manager.py list` 查看当前全量合规标签清单**，严禁凭先验知识臆测或自造标签。
+
+> [!CAUTION] 🚨 Tag 排他性定界与消歧纪律
+> 为杜绝 AI Agent 产生分类混淆与池化泛化，所有操作务必严格遵守以下排他性边界铁律：
 > 
-> 1. **`AI-Agent/skill` vs `Skill/*` 绝不混用（理论机制 vs 人类实操）**：
->    - **`AI-Agent/skill`**：仅限 **智能体原生能力扩展的底层工程规范与运行机制**（如 `SKILL.md` 双消息注入规范、动态工具发现机制、Claude Agent Skills 元工具源码剖析等理论/机制文献）。
->    - **`Skill/*`**：仅限 **人类开发者/业务日常使用中的实操 SOP 与技巧心得**（如 `Skill/claude-code` 专指人类使用 Claude Code CLI 的快捷键/配置指南，`Skill/python` 指日常开发笔记）。**严禁将人类工具实操笔记打入 `AI-Agent/skill`**。
+> 1. **`AI-Agent/skill` 与 `Skill/*` 绝不混用（理论机制 vs 人类实操）**：
+>    - **`AI-Agent/skill`**：仅限智能体原生能力扩展的底层工程规范与运行机制（如 `SKILL.md` 双消息规范、动态工具发现机制等理论/源码剖析）。
+>    - **`Skill/*`**：仅限人类开发者日常实操 SOP 与技巧心得（如 `Skill/claude-code` 快捷键指南、`Skill/python` 开发实操）。严禁将人类工具实操打入 `AI-Agent/skill`。
 > 
-> 2. **细分叶子优先纪律（No Top-level Pooling）**：
->    - 在 `RAG/`、`LLM/`、`AI-Agent/` 体系下，**必须优先精准锚定末端细分叶子分类**（如 `RAG/chunking`、`LLM/arch`）；
->    - 严禁出于省事把垂直领域的文章笼统丢入顶层单分类（如 `RAG`、`LLM`），顶层分类仅供覆盖全局框架的宏观综述文使用。
+> 2. **细分叶子优先纪律（禁止顶层池化）**：
+>    - 在 `RAG/`、`LLM/`、`AI-Agent/` 等分层体系下，**必须优先精准锚定末端细分叶子**（如 `RAG/chunking`、`LLM/arch`）；
+>    - 严禁出于省事笼统丢入顶层单分类（如 `RAG`、`LLM`），顶层主分支仅限 `wiki/overview/` 宏观综述页特权使用。
 
 ### 5.1 Tag 治理与 Agent CRUD 授权纪律
-为确保标签体系长期有序可控，AI Agent 必须严格通过 [`scripts/tag_manager.py`](file:///Users/ZHao/WorkSpace/knowledge-bank/scripts/tag_manager.py) 与 `tags.json` 进行交互：
+全库标签受 [`scripts/tag_manager.py`](file:///Users/ZHao/WorkSpace/knowledge-bank/scripts/tag_manager.py) 与 `tags.json` 强约束，AI Agent **严禁擅自造词**，具体操作流如下：
 
-- **读取与校验 (Read/Validate - L0 只读)**：Ingest 与 Lint 时，一律动态读取 `tags.json` 进行校验与候选题词。
-- **申请新增标签 (Create - L1 需审批)**：遇到新前沿领域文献且当前无合适标签时，Agent **严禁擅自造词**；必须向用户提出申请（列明建议标签、分支归属与理由），在用户明确审批通过后，调用 `python3 scripts/tag_manager.py add <tag>` 写入 `tags.json`。
-- **级联重命名与迁移 (Update/Rename - L3 高危)**：重命名标签必须通过 `python3 scripts/tag_manager.py rename <old> <new>` 执行，强制先输出 Dry-run 受影响文件清单，经用户确认后带 `--apply` 原子级联更新全库 Frontmatter 及 `tags.json`。
-- **标签废弃与下线 (Delete - L3 高危)**：下线废弃标签必须通过 `python3 scripts/tag_manager.py delete <tag>` 执行，强制先输出 Dry-run 清单，经用户确认后带 `--apply` 级联清除。
+- **读取与校验 (Read - L0 只读)**：
+  Ingest 选词与 Lint 扫描时，动态读取 `tags.json` 进行校验，合规标签直接放行。
+- **申请新增标签 (Create - L1 需用户审批)**：
+  遇到现有标签无法覆盖的新前沿领域时，Agent 必须向用户发起申请（列明建议 Tag、所属分支与文献依据）。**经用户明确批准后**，调用 `python3 scripts/tag_manager.py add <tag> --desc "..."` 写入 `tags.json`。
+- **级联重命名与迁移 (Update/Rename - L3 高危变更)**：
+  仅限用户指令发起。Agent 必须先执行 `python3 scripts/tag_manager.py rename <old> <new>` 进行 Dry-run 预演并输出受影响文件清单；**获批后追加 `--apply`** 原子级联更新全库 Frontmatter 与 `tags.json`。
+- **标签废弃与下线 (Delete - L3 高危变更)**：
+  仅限用户指令发起。Agent 必须先执行 `python3 scripts/tag_manager.py delete <tag>` 进行 Dry-run 预演；**获批后追加 `--apply`** 级联移除该标签并更新 `tags.json`。
 
 ## 6. 自动维护与定时任务
 Second Brain 类能力用于补充本库的主动检索、综合、冲突发现和周期性维护，但自动化权限必须按风险分级：

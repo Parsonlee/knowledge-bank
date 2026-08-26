@@ -10,18 +10,19 @@ sources:
 - wiki/sources/Anthropic多智能体研究系统构建.md
 - wiki/sources/Claude Code与Obsidian飞书知识库搭建实践.md
 - wiki/sources/Claude_Agent_Skills_从第一性原理深入剖析.md
-- wiki/sources/Context_Engineering_LangChain_Manus_NotebookLM.md
+- wiki/sources/Firecrawl 新工具开源，anydoc，将各种输入转换为md.md
+- wiki/sources/Karpathy推文引发的LLM_Wiki知识库搭建实践.md
 - wiki/sources/Manus创始人手把手拆解上下文工程.md
+- wiki/sources/OpenAI前VP_Lilian_Weng_AI自我改进的近路不是改权重.md
 - wiki/sources/一个半月高强度Claude_Code使用后感受.md
 - wiki/sources/也许当前最好的上下文工程讲解_LangChain联合Manus.md
-- wiki/sources/从提示员到系统架构师：Loop Engineering 的范式跃迁.md
 - wiki/sources/从第一性原理深度拆解_Claude_Agent_Skill_宝玉.md
 - wiki/sources/写好CLAUDE.md_HumanLayer最佳实践.md
+- wiki/sources/刚刚，DeepSeek Harness震撼开源：一切皆插件.md
 - wiki/sources/实测腾讯开源的 BrowserSkill：让 AI 直接用你登录好的浏览器.md
 - wiki/sources/浅谈上下文工程_Claude_Code_Manus_Kiro.md
 updated: '2026-07-06'
 ---
-
 # 实体：Claude Code
 
 ## 简介

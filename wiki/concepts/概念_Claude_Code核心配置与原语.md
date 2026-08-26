@@ -7,9 +7,9 @@ summary: Claude Code 通过项目级与全局 .claude 目录分别管理团队�
   及 settings.json 组织指令、工作流、子智能体和权限。
 sources:
 - wiki/sources/2026-03-23_Anatomy-of-the-.claude-folder_19d1c3.md
+- wiki/sources/2026-06-01_Claude-Code-dynamic-workflows,-explained!_19e84f.md
 updated: '2026-08-03'
 ---
-
 # Claude Code 核心配置与原语
 
 ## 项目级与全局配置的差异

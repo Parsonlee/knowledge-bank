@@ -6,9 +6,9 @@ tags:
 summary: Agent 状态记录单次运行的任务进度并通过逐步检查点支持恢复和分叉，记忆则跨运行保留事实与经验且应按 Agent 隔离作用域。
 sources:
 - wiki/sources/2026-07-27_Agent-memory-and-state-are-not-the-same-thing!_19fa57.md
+- wiki/sources/刚刚，DeepSeek Harness震撼开源：一切皆插件.md
 updated: 2026-08-04
 ---
-
 # Agent 内存与状态管理
 
 在设计和构建生产级的 AI 智能体宿主系统（[[概念_Harness_Engineering]]）时，**状态（State）**与**记忆（Memory）**是两个本质不同却常被混淆的核心维度。将两者清晰解耦并分别管理，是构建高可靠性、长生命周期智能体系统的基石。

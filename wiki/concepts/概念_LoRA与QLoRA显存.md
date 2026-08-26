@@ -4,12 +4,11 @@ tags:
 - LLM/inference
 summary: '- 在原权重矩阵旁路添加低秩可训练矩阵（A: d×r，B: r×d），参数量从 d² 降为 2dr'
 sources:
-- wiki/sources/大模型显存占用单卡分析.md
 - wiki/sources/2026-08-07_8-LLM-precision-formats_19fddf.md
+- wiki/sources/LLM后训练技术全景解读.md
+- wiki/sources/大模型显存占用单卡分析.md
 updated: '2026-08-10'
 ---
-
-
 # 概念：LoRA 与 QLoRA 显存分析
 
 ## LoRA（Low-Rank Adaptation）

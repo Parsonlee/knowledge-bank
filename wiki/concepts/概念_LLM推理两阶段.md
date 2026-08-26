@@ -7,9 +7,11 @@ summary: 大语言模型（LLM）推理过程可分为 Prefill（预填充）和
   KV Cache；Decode 阶段是内存带宽密集型（Memory-bound），自回归逐字生成 token。
 sources:
 - wiki/sources/2026-05-03_How-LLM-inference-works-internally_19deee.md
+- wiki/sources/2026-07-14_NVIDIA-researchers-built-a-new-transformer-variant_19f617.md
+- wiki/sources/2026-07-27_The-anatomy-of-diffusion-LLMs_19fa57.md
+- wiki/sources/2026-08-10_Cross-model-KV-cache-transfer-in-LLM-families_19febef2c6003814.md
 updated: '2026-08-04'
 ---
-
 # 概念：LLM 推理两阶段
 
 ## 定义

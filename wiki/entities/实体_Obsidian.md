@@ -6,9 +6,9 @@ summary: Obsidian 是一款基于本地文件系统的强大 Markdown 个人知�
   Links）与图谱可视化”为核心特色。
 sources:
 - wiki/sources/Claude Code与Obsidian飞书知识库搭建实践.md
+- wiki/sources/Karpathy推文引发的LLM_Wiki知识库搭建实践.md
 updated: '2026-07-06'
 ---
-
 # 实体：Obsidian
 
 ## 简介

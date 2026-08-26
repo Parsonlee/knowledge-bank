@@ -45,7 +45,7 @@ updated: '2026-07-01'
 
 ### 实体
 - [[实体_Qwen3-VL]] — 多模态LLM代表，Discrete Tokenization的应用场景
-- [[实体_Florence-2]] — 多模态视觉基础模型，统一Seq2Seq框架
+- Florence-2 — 微软多模态视觉基础模型，统一Seq2Seq框架
 
 ### 相关 Source
 - [[从LLaVA到Qwen3-VL_多模态架构演进]] — 多模态LLM架构演进视角

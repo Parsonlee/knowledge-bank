@@ -7,9 +7,11 @@ sources:
 - wiki/sources/2026-06-24_Loop-engineering,-clearly-explained!_19ef72.md
 - wiki/sources/2026-07-03_Prompt,-context,-harness-&-loop-engineering_19f29f.md
 - wiki/sources/2026-07-14_The-four-types-of-agent-loops_19f617.md
+- wiki/sources/2026-07-27_Graph-engineering-clearly-explained_19fa57.md
+- wiki/sources/刚刚，DeepSeek Harness震撼开源：一切皆插件.md
+- wiki/sources/深度剖析 DeepSeek 最新的 Harness DSH：为了自进化这盘醋包了一整盘饺子.md
 updated: 2026-08-04
 ---
-
 # 循环工程 (Loop Engineering)
 
 ## 定义与定位

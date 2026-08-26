@@ -6,7 +6,6 @@ tags:
 summary: 全球顶尖的人工智能研究机构，推出 GPT 系列大模型与 ChatGPT、Sora 等颠覆性生成式 AI 产品，引领大模型时代发展。
 sources:
 - wiki/sources/100家顶尖AI初创公司的7个真相.md
-- wiki/sources/Agent系统开发经验.md
 - wiki/sources/DeepResearch的概念、核心挑战与进化路径.md
 - wiki/sources/DeepSeek-R1工作原理.md
 - wiki/sources/ES企业AI搜索实践.md
@@ -19,9 +18,7 @@ sources:
 - wiki/sources/OpenAI_构建AI智能体实用指南.md
 - wiki/sources/RAGAS评估RAG系统.md
 - wiki/sources/RAG_12痛点与解决方案.md
-- wiki/sources/RAG技巧与底层代码剖析.md
 - wiki/sources/RAG文本切分_token优化.md
-- wiki/sources/RAG文本切分_语义切分.md
 - wiki/sources/RL_Infra行业全景.md
 - wiki/sources/Tongyi DeepResearch的技术报告探秘.md
 - wiki/sources/一篇95页最新80种Deep Research系统全面综述.md

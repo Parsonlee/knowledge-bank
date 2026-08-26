@@ -5,11 +5,9 @@ tags:
 - DeepLearning
 summary: '- 全称：Large Language and Vision Assistant'
 sources:
-- wiki/sources/Discrete_Tokenization多模态综述.md
 - wiki/sources/从LLaVA到Qwen3-VL_多模态架构演进.md
 updated: '2026-07-06'
 ---
-
 # 实体：LLaVA
 
 ## 基本信息

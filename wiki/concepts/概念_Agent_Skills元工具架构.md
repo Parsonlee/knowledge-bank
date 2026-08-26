@@ -6,12 +6,13 @@ summary: Agent Skills 元工具架构（Agent Skills Meta-Tool Architecture）�
   Agent 能力的一种设计模式：通过一个名为 Skill 的元工具（meta-tool）作为容器，动态加载和调度各个具体技能（skills），技能本质是领...
 sources:
 - wiki/sources/Claude_Agent_Skills_从第一性原理深入剖析.md
+- wiki/sources/Firecrawl 新工具开源，anydoc，将各种输入转换为md.md
 - wiki/sources/从第一性原理深度拆解_Claude_Agent_Skill_宝玉.md
 - wiki/sources/写好CLAUDE.md_HumanLayer最佳实践.md
+- wiki/sources/如何系统评价一个_Agent_Skill.md
+- wiki/sources/搜索没有变便宜，但 Agent 把它拆成了新的供应链.md
 updated: '2026-07-06'
 ---
-
-
 # 概念：Agent Skills 元工具架构
 
 ## 定义

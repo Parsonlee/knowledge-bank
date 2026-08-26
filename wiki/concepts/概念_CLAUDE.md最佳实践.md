@@ -5,10 +5,8 @@ tags:
 summary: 编写 CLAUDE.md 工程宪法以约束 Agent 行为的高级指南与规范范式
 sources:
 - wiki/sources/写好CLAUDE.md_HumanLayer最佳实践.md
-- wiki/sources/一个半月高强度Claude_Code使用后感受.md
 updated: '2026-07-22'
 ---
-
 # 概念：CLAUDE.md最佳实践
 
 ## 定义

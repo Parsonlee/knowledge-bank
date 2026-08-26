@@ -6,14 +6,11 @@ summary: 斯坦福提出的基于 BERT 后期交互（Late Interaction）的高�
 sources:
 - wiki/sources/ColBERTv2残差压缩演进.md
 - wiki/sources/ColBERT原理与延迟交互机制.md
-- wiki/sources/RAG技巧与底层代码剖析.md
-- wiki/sources/RAG系统设计_语义搜索与KG驱动选型.md
 - wiki/sources/RAG索引进阶_Indexing.md
 - wiki/sources/从BM25到Multi-Vector_6种Embedding演进路线.md
 - wiki/sources/提升RAG问答质量的技术路线.md
 updated: '2026-07-01'
 ---
-
 ## 简介
 
 ColBERT（Contextualized Late Interaction over BERT）是斯坦福 FutureData 实验室提出的基于 BERT 的细粒度检索模型，采用 token 级嵌入相似性计算（late interaction）实现高质量检索。

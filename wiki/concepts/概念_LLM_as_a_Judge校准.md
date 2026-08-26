@@ -8,10 +8,9 @@ sources:
 - wiki/sources/Anthropic多智能体研究系统构建.md
 - wiki/sources/Dropbox基于DSPy优化Dash Chat评估与提示词.md
 - wiki/sources/GPT5通用验证器与RL探索.md
+- wiki/sources/如何系统评价一个_Agent_Skill.md
 updated: '2026-07-06'
 ---
-
-
 # 概念：LLM-as-a-Judge 校准
 
 ## 定义

@@ -5,14 +5,13 @@ tags:
 summary: Agent 完整轨迹评估（Full Trajectory Evaluation） 是一种面向复杂大模型智能体的评估范式。对智能体从输入到输出的整个决策路径（包含
   Skill 加载、参考读取、工具选择、参数合规与环境清理）进行系统化评估。
 sources:
+- wiki/sources/DeepSeek Agent开发岗三面，再面一轮就offer啦！！！.md
 - wiki/sources/Dropbox基于DSPy优化Dash Chat评估与提示词.md
 - wiki/sources/如何系统评价一个_Agent_Skill.md
-- wiki/sources/DeepSeek Agent开发岗三面，再面一轮就offer啦！！！.md
+- wiki/sources/月之暗面 Agent开发岗，凉凉！！！.md
 - wiki/sources/美团AICoding面试，跪了！！！.md
 updated: '2026-08-03'
 ---
-
-
 # 概念：Agent 完整轨迹评估
 
 ## 定义

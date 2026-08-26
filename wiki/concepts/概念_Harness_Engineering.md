@@ -4,18 +4,20 @@ tags:
 - AI-Agent/coding
 summary: 围绕基础大模型构建的宿主与编排系统（Harness Engineering），负责编排执行、思考规划、工具行动、上下文感知管理、产物存储与评估。
 sources:
-- wiki/sources/刚刚，DeepSeek Harness震撼开源：一切皆插件.md
-- wiki/sources/OpenAI前VP_Lilian_Weng_AI自我改进的近路不是改权重.md
-- wiki/sources/DeepSeek Agent开发岗三面，再面一轮就offer啦！！！.md
-- wiki/sources/快手data agent一面，我裂开了！！！.md
-- wiki/sources/美团AICoding面试，跪了！！！.md
 - wiki/sources/2026-04-06_The-Anatomy-of-an-Agent-Harness_19d64a.md
 - wiki/sources/2026-07-03_Prompt,-context,-harness-&-loop-engineering_19f29f.md
 - wiki/sources/2026-07-27_Agent-memory-and-state-are-not-the-same-thing!_19fa57.md
+- wiki/sources/2026-07-27_Graph-engineering-clearly-explained_19fa57.md
+- wiki/sources/DeepSeek Agent开发岗三面，再面一轮就offer啦！！！.md
+- wiki/sources/OpenAI前VP_Lilian_Weng_AI自我改进的近路不是改权重.md
+- wiki/sources/刚刚，DeepSeek Harness震撼开源：一切皆插件.md
+- wiki/sources/快手data agent一面，我裂开了！！！.md
+- wiki/sources/搜索没有变便宜，但 Agent 把它拆成了新的供应链.md
 - wiki/sources/深度剖析 DeepSeek 最新的 Harness DSH：为了自进化这盘醋包了一整盘饺子.md
+- wiki/sources/美团AICoding面试，跪了！！！.md
+- wiki/sources/高德地图AI应用开发岗一面，我跪了！！！.md
 updated: '2026-08-20'
 ---
-
 # 概念：Harness Engineering
 
 ## 定义

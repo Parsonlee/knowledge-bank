@@ -7,11 +7,8 @@ summary: RL 环境是 AI Agent 在其中行动、实验并通过逼真多步骤�
 sources:
 - wiki/sources/RL_Infra行业全景.md
 - wiki/sources/RL环境与智能体能力金字塔.md
-- wiki/sources/Tongyi DeepResearch的技术报告探秘.md
 updated: '2026-06-29'
 ---
-
-
 # 概念：RL 环境
 
 ## 定义

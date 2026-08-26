@@ -8,17 +8,13 @@ summary: Query Translation（查询翻译）是 RAG 高阶技巧，针对用户 
 sources:
 - wiki/sources/DMQR-RAG_多样查询改写.md
 - wiki/sources/RAG_12痛点与解决方案.md
-- wiki/sources/RAG基础_索引检索生成.md
 - wiki/sources/RAG查询翻译_Query_Translation.md
-- wiki/sources/RAG检索_Retrieval入门到精通.md
-- wiki/sources/RAG路由_Routing.md
 - wiki/sources/RAG高级优化_query转换之路.md
 - wiki/sources/提升RAG问答质量的技术路线.md
 - wiki/sources/美团搜索查询改写实践.md
 - wiki/sources/腾讯查询优化四大类综述.md
 updated: '2026-07-06'
 ---
-
 # 概念_Query_Translation
 
 

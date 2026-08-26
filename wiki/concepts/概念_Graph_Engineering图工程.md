@@ -6,8 +6,7 @@ tags:
 summary: 图工程以节点、边和共享状态连接并治理多个 Agent 循环，协调执行顺序、并行分支、条件路由与相互检查，并应仅在确有专业分工或故障隔离需求时引入。
 sources:
 - wiki/sources/2026-07-27_Graph-engineering-clearly-explained_19fa57.md
-- wiki/sources/2026-08-01_Build-a-stock-market-research-Agentic-workflow_19fbed_part2.md
-updated: 2026-08-04
+updated: 2026-08-26
 ---
 
 # 概念定义
@@ -81,4 +80,4 @@ updated: 2026-08-04
 ---
 
 # 相关框架与生态
-- [[wiki/entities/实体_Sim_AI工作流框架|Sim AI工作流框架]]：基于 ReactFlow 的轻量级、AI-native 可视化智能体工作流（Agentic Flow）拖拽式构建框架，展示了图工程在可视化与实时编排方面的工程应用。
+- Sim AI工作流框架：基于 ReactFlow 的轻量级可视化智能体工作流（Agentic Flow）拖拽式构建框架，展示了图工程在可视化与实时编排方面的工程应用。

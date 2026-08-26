@@ -6,9 +6,9 @@ summary: 直接偏好优化，无需显式训练奖励模型，直接通过人�
 sources:
 - wiki/sources/375篇文献_推理大模型后训练技术综述.md
 - wiki/sources/LLM后训练技术全景解读.md
+- wiki/sources/淘宝直播数字人_LLM文案生成技术.md
 updated: '2026-07-22'
 ---
-
 # 概念：DPO (Direct Preference Optimization)
 
 ## 定义

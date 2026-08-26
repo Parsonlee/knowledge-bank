@@ -4,6 +4,7 @@ tags:
 - RAG/retrieval
 summary: 当前业界主流的基于分层导航图结构的近似最近邻搜索（ANN）算法。
 sources:
+- wiki/sources/2026程序员必读的向量数据库原理与选型指南.md
 - wiki/sources/ES企业AI搜索实践.md
 - wiki/sources/RAG挑战赛冠军方案.md
 - wiki/sources/RAG系统设计_语义搜索与KG驱动选型.md
@@ -12,7 +13,6 @@ sources:
 - wiki/sources/美团搜索查询改写实践.md
 updated: '2026-07-01'
 ---
-
 ## 简介
 
 HNSW（Hierarchical Navigable Small World）是当前业界最先进的基于图的近似最近邻搜索算法，被主流向量数据库广泛采用。

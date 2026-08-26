@@ -5,13 +5,10 @@ tags:
 - LLM/arch/MoE
 summary: 腾讯混元旗舰大语言模型，业界首个大规模部署的 Hybrid Transformer-Mamba MoE 模型。
 sources:
-- wiki/sources/从DeepSeek-V3到Kimi_K2_八种现代LLM架构大比较.md
-- wiki/sources/大模型面试面经_简单透彻理解MoE.md
 - wiki/sources/实测腾讯开源的 BrowserSkill：让 AI 直接用你登录好的浏览器.md
 - wiki/sources/腾讯混元TurboS技术报告.md
 updated: '2026-06-29'
 ---
-
 # 实体_腾讯混元TurboS
 
 腾讯混元旗舰大语言模型，业界首个大规模部署的 Hybrid Transformer-Mamba MoE 模型。

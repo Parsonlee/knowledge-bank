@@ -7,10 +7,11 @@ sources:
 - wiki/sources/Anthropic x ClaudeCode 官方插件：AI Agent 的领域知识插件——鸟窝.md
 - wiki/sources/Anthropic再发Agent神文_像人类工程师一样思考解决长程任务难题.md
 - wiki/sources/Anthropic多智能体研究系统构建.md
+- wiki/sources/MCP五大原语与Web化.md
+- wiki/sources/MCP遇上代码执行.md
 - wiki/sources/从提示员到系统架构师：Loop Engineering 的范式跃迁.md
 updated: '2026-06-29'
 ---
-
 # 实体_Anthropic_Research系统
 
 Anthropic 为 Claude 构建的多智能体研究功能（Claude Research），支持跨 Web、Google Workspace 和各类集成进行复杂任务研究。

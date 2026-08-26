@@ -5,12 +5,12 @@ tags:
 - AI-Agent/prompt-engineering
 summary: '- 来源：DeepMind Brain 团队 2022 年论文'
 sources:
+- wiki/sources/375篇文献_推理大模型后训练技术综述.md
 - wiki/sources/DeepSeek-R1工作原理.md
 - wiki/sources/LLM面试50题_MIT_CSAIL.md
+- wiki/sources/自适应快慢思考推理模型.md
 updated: '2026-06-29'
 ---
-
-
 # 概念：思维链 CoT 高级方法
 
 ## 基础 CoT

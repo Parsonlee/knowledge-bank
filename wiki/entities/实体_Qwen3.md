@@ -7,9 +7,7 @@ summary: 阿里巴巴通义实验室发布的大语言模型系列，在 Qwen3 �
   实现可控的快慢思考切换。
 sources:
 - wiki/sources/2025年七大顶流大模型架构.md
-- wiki/sources/Discrete_Tokenization多模态综述.md
 - wiki/sources/HuggingFace手把手训练大模型实战指南.md
-- wiki/sources/Jina_AI创业复盘.md
 - wiki/sources/LLM面试50题_MIT_CSAIL.md
 - wiki/sources/LoRA微调实战_Qwen2.5全流程.md
 - wiki/sources/RL环境与智能体能力金字塔.md
@@ -18,11 +16,9 @@ sources:
 - wiki/sources/从DeepSeek-V3到Kimi_K2_八种现代LLM架构大比较.md
 - wiki/sources/从LLaVA到Qwen3-VL_多模态架构演进.md
 - wiki/sources/入局AI_Infra系统设计与挑战.md
-- wiki/sources/大模型算法岗面试百问百答.md
 - wiki/sources/自适应快慢思考推理模型.md
 updated: '2026-06-29'
 ---
-
 # 实体：Qwen3
 
 ## 概述

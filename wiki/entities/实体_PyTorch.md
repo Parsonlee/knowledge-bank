@@ -6,21 +6,17 @@ tags:
 - Infra/AI
 summary: PyTorch 是深度学习框架的事实标准，核心特性为动态计算图、自动微分和丰富 Tensor 操作算子，设计哲学 Python 优先。
 sources:
-- wiki/sources/FastAPI架构指南_项目模板与实战经验.md
 - wiki/sources/PyTorch图像增强方法总结.md
 - wiki/sources/PyTorch常用代码段合集.md
 - wiki/sources/PyTorch训练代码模板.md
-- wiki/sources/RAG检索_Retrieval入门到精通.md
 - wiki/sources/Transformer大模型3D可视化_NanoGPT.md
 - wiki/sources/Transformer被挑战_Mamba解析与PyTorch复现.md
-- wiki/sources/五个鲜为人知的Python功能.md
 - wiki/sources/入局AI_Infra系统设计与挑战.md
 - wiki/sources/大模型显存计算公式与优化.md
 - wiki/sources/大模型面试面经_简单透彻理解MoE.md
 - wiki/sources/手把手教你实现稀疏MoE语言模型.md
 updated: '2026-06-29'
 ---
-
 # 实体：PyTorch
 
 ## 简介

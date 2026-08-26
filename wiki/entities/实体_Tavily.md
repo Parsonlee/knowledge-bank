@@ -1,13 +1,13 @@
 ---
-type: "entity"
-tags: ["AI-Agent/deep-research", "RAG/retrieval"]
-summary: "专注于面向 LLM 与 RAG 的 Web Search 搜索引擎供应商，主打网页降噪、正文抽取与高信息密度文本片段压缩。"
+type: entity
+tags:
+- AI-Agent/deep-research
+- RAG/retrieval
+summary: 专注于面向 LLM 与 RAG 的 Web Search 搜索引擎供应商，主打网页降噪、正文抽取与高信息密度文本片段压缩。
 sources:
-  - "wiki/sources/搜索没有变便宜，但 Agent 把它拆成了新的供应链.md"
-  - "wiki/sources/深度剖析 DeepSeek 最新的 Harness DSH：为了自进化这盘醋包了一整盘饺子.md"
-updated: "2026-08-20"
+- wiki/sources/搜索没有变便宜，但 Agent 把它拆成了新的供应链.md
+updated: '2026-08-20'
 ---
-
 # 实体：Tavily
 
 ## 简介

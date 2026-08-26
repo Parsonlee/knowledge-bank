@@ -5,8 +5,8 @@ tags:
 summary: 总结 Obsidian 知识库图谱死链的诊断与分类治理（重定向、去前缀化、容忍待建节点），阐明级联清理的安全边界与行内安全感知（Inline Safety
   Sensing）纪律，重申单向数据推导管线的维护原则。
 sources:
-- raw/articles/Vault死链治理与单向推导架构维护复盘.md
-updated: '2026-07-22'
+- raw/out-blogs/Vault死链治理与单向推导架构维护复盘.md
+updated: '2026-08-26'
 ---
 
 # Vault 死链治理与单向推导架构维护复盘
@@ -51,4 +51,4 @@ updated: '2026-07-22'
 
 ---
 
-> 📎 **物理文献**：[[raw/articles/Vault死链治理与单向推导架构维护复盘.md]]
+> 📎 **物理文献**：[[raw/out-blogs/Vault死链治理与单向推导架构维护复盘.md]]

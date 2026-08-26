@@ -5,9 +5,9 @@ tags:
 summary: PCA 通过主成分进行降维，但只有前两个主成分解释了大部分原始方差时才适合二维可视化，累计解释方差曲线可用于验证并选择保留维数。
 sources:
 - wiki/sources/2025-10-18_Avoid-Using-PCA-for-Visualization-Unless..._199f91.md
+- wiki/sources/2025-11-12_25-most-important-mathematical-definitions-in-DS_19a79c.md
 updated: '2026-08-03'
 ---
-
 # 主成分分析 (Principal Component Analysis, PCA)
 
 ## 定义与数学降维原理
