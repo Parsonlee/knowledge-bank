@@ -1,3 +1,17 @@
+---
+title: Identify fuzzy duplicates at scale
+source_key: dailydoseofds
+email_subject: 6 Steps to Build an ML Model
+email_sender: Daily Dose of DS <avi@dailydoseofds.com>
+email_date: Mon, 29 Dec 2025 21:22:53 +0000
+email_id: 19b6bfe2074ca987
+article_id: 19b6bfe2074ca987:1
+published: '2025-12-29'
+tags:
+- Skill/data-analysis
+- Infra/AI
+---
+
 # Identify fuzzy duplicates at scale
 
 - **原邮件主题**: 6 Steps to Build an ML Model

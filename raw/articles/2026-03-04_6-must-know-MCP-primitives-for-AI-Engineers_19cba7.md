@@ -1,3 +1,16 @@
+---
+title: 6 must-know MCP primitives for AI Engineers
+source_key: dailydoseofds
+email_subject: ​16 Techniques to Optimize Neural Network Training​
+email_sender: Daily Dose of DS <avi@dailydoseofds.com>
+email_date: Wed, 04 Mar 2026 20:16:17 +0000
+email_id: 19cba7e7c4fb570a
+article_id: 19cba7e7c4fb570a:1
+published: '2026-03-04'
+tags:
+- AI-Agent/tool-calling
+---
+
 # 6 must-know MCP primitives for AI Engineers
 
 - **原邮件主题**: ​16 Techniques to Optimize Neural Network Training​

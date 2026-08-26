@@ -1,3 +1,16 @@
+---
+title: Descriptors in Python
+source_key: dailydoseofds
+email_subject: ​MiniMax-M2 vs. Kimi-K2 vs. Sonnet 4.5 on Code Generation​
+email_sender: Daily Dose of DS <avi@dailydoseofds.com>
+email_date: Thu, 20 Nov 2025 19:55:54 +0000
+email_id: 19aa2d674dcfaef6
+article_id: 19aa2d674dcfaef6:1
+published: '2025-11-20'
+tags:
+- Skill/python
+---
+
 # Descriptors in Python
 
 - **原邮件主题**: ​MiniMax-M2 vs. Kimi-K2 vs. Sonnet 4.5 on Code Generation​

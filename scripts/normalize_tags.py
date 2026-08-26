@@ -18,26 +18,25 @@ import yaml
 from pathlib import Path
 from collections import defaultdict, Counter
 
-APPROVED_TAGS = {
-    # Top level (7 approved)
-    "DeepLearning", "AIGC", "创业", "面试", "Life", "Recommendation", "TTS",
-    # LLM
-    "LLM/arch", "LLM/arch/Mamba", "LLM/arch/MoE", "LLM/arch/attention",
-    "LLM/training", "LLM/training/RL", "LLM/training/post-train", "LLM/training/pre-train",
-    "LLM/inference", "LLM/reasoning", "LLM/hallucination", "LLM/tokenization",
-    # AI-Agent
-    "AI-Agent/coding", "AI-Agent/tool-calling", "AI-Agent/context-engineering",
-    "AI-Agent/deep-research", "AI-Agent/AI-BI", "AI-Agent/skill",
-    "AI-Agent/prompt-engineering", "AI-Agent/multi-agent", "AI-Agent/memory", "AI-Agent/UI",
-    # RAG
-    "RAG/embedding", "RAG/query", "RAG/chunking", "RAG/retrieval", "RAG/eval",
-    # Skill
-    "Skill/python", "Skill/data-analysis", "Skill/claude-code", "Skill/linux",
-    # CV
-    "CV/detection", "CV/data-augmentation", "CV/arch",
-    # Infra
-    "Infra/AI", "Infra/gpu"
+# 同步 vault_lint.py 单一事实来源，消除两套定义不同步的风险
+try:
+    from vault_lint import STANDARD_TOP_LEVEL_TAGS, STANDARD_TAG_BRANCHES, validate_tag
+except ImportError:
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    from vault_lint import STANDARD_TOP_LEVEL_TAGS, STANDARD_TAG_BRANCHES, validate_tag
+
+# 动态组装全量合规标签集合（单向同步自 vault_lint）
+APPROVED_TAGS = set(STANDARD_TOP_LEVEL_TAGS)
+for branch, leaves in STANDARD_TAG_BRANCHES.items():
+    for leaf in leaves:
+        APPROVED_TAGS.add(f"{branch}/{leaf}")
+
+# 常见合规三级细分叶子
+APPROVED_MULTI_LEVEL_TAGS = {
+    "LLM/arch/Mamba", "LLM/arch/MoE", "LLM/arch/attention",
+    "LLM/training/RL", "LLM/training/post-train", "LLM/training/pre-train",
 }
+APPROVED_TAGS.update(APPROVED_MULTI_LEVEL_TAGS)
 
 TAG_MAP = {
     # Top-level umbrella terms -> leaf mapping
@@ -289,13 +288,14 @@ def normalize_tag_list(tags, ptype="source", content=""):
         t_str = str(t).strip()
         
         # 针对 Overview 页面的顶层标签特殊保留
-        if ptype == "overview" and t_str in {"RAG", "LLM", "CV", "AI-Agent", "Infra", "Skill"}:
+        if ptype == "overview" and t_str in STANDARD_TAG_BRANCHES:
             if t_str not in normalized:
                 normalized.append(t_str)
             continue
         
-        # 如果已经完全合法
-        if t_str in APPROVED_TAGS:
+        # 优先使用权威门禁校验器进行校验
+        is_valid, _ = validate_tag(t_str, ptype)
+        if is_valid:
             if t_str not in normalized:
                 normalized.append(t_str)
             continue
@@ -303,16 +303,18 @@ def normalize_tag_list(tags, ptype="source", content=""):
         # 查表映射
         if t_str in TAG_MAP:
             target = TAG_MAP[t_str]
-            if target and target in APPROVED_TAGS:
-                if target not in normalized:
+            if target:
+                target_valid, _ = validate_tag(target, ptype)
+                if target_valid and target not in normalized:
                     normalized.append(target)
             continue
         
-        # 尝试大小写匹配
+        # 尝试大小写不敏感匹配合法标签
         matched = False
         for app in APPROVED_TAGS:
             if t_str.lower() == app.lower():
-                if app not in normalized:
+                is_valid, _ = validate_tag(app, ptype)
+                if is_valid and app not in normalized:
                     normalized.append(app)
                 matched = True
                 break
@@ -321,18 +323,9 @@ def normalize_tag_list(tags, ptype="source", content=""):
         
         print(f"  ⚠️ 未知 Tag 无法映射: {t_str}")
 
-    if not normalized:
-        # Fallback if original tags were non-empty but stripped (e.g. clippings)
-        if tags:
-            c_low = content.lower()
-            if "agent" in c_low or "agent" in str(tags).lower():
-                normalized = ["AI-Agent/coding"]
-            elif "rag" in c_low or "retrieval" in c_low:
-                normalized = ["RAG/retrieval"]
-            elif "python" in c_low:
-                normalized = ["Skill/python"]
-            else:
-                normalized = ["DeepLearning"]
+    # Fallback 策略改造：严禁基于正文关键词猜测分类，若原始 Tags 全被清除则置为 [] 并打印警告待人工介入
+    if not normalized and tags:
+        print(f"  ⚠️ 原始 Tags {tags} 经清理/去噪后为空，无法自动推断合法 Tag，置为 [] (待人工复核)")
 
     return normalized
 

@@ -1,3 +1,16 @@
+---
+title: ANN search using inverted file index
+source_key: dailydoseofds
+email_subject: Another MCP Moment by Anthropic?
+email_sender: Daily Dose of DS <avi@dailydoseofds.com>
+email_date: Mon, 27 Oct 2025 20:11:13 +0000
+email_id: 19a274be34a3e99c
+article_id: 19a274be34a3e99c:1
+published: '2025-10-27'
+tags:
+- RAG/retrieval
+---
+
 # ANN search using inverted file index
 
 - **原邮件主题**: Another MCP Moment by Anthropic?

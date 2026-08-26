@@ -1,3 +1,17 @@
+---
+title: The Anatomy of an Agent Harness
+source_key: dailydoseofds
+email_subject: The Anatomy of an Agent Harness
+email_sender: Daily Dose of DS <avi@dailydoseofds.com>
+email_date: Mon, 06 Apr 2026 21:10:29 +0000
+email_id: 19d64a1fd91e185f
+article_id: 19d64a1fd91e185f:1
+published: '2026-04-06'
+tags:
+- AI-Agent/coding
+- Infra/AI
+---
+
 # The Anatomy of an Agent Harness
 
 - **原邮件主题**: The Anatomy of an Agent Harness

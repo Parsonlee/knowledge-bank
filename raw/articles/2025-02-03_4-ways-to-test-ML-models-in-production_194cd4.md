@@ -1,3 +1,17 @@
+---
+title: 4 ways to test ML models in production
+source_key: dailydoseofds
+email_subject: 4 Ways to Test ML Models in Production
+email_sender: Daily Dose of DS <avi@dailydoseofds.com>
+email_date: Mon, 03 Feb 2025 19:22:45 +0000
+email_id: 194cd43e281f59cc
+article_id: 194cd43e281f59cc:1
+published: '2025-02-03'
+tags:
+- Skill/data-analysis
+- Infra/AI
+---
+
 # 4 ways to test ML models in production
 
 - **原邮件主题**: 4 Ways to Test ML Models in Production

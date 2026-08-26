@@ -1,3 +1,18 @@
+---
+title: What are RL environments, and how to build them
+source_key: dailydoseofds
+email_subject: How to Actually Use Train, Validation, and Test Sets in ML
+email_sender: Daily Dose of DS <avi@dailydoseofds.com>
+email_date: Fri, 13 Mar 2026 22:04:43 +0000
+email_id: 19ce93b00b8a14f0
+article_id: 19ce93b00b8a14f0:1
+published: '2026-03-13'
+tags:
+- LLM/training/RL
+- AI-Agent/coding
+- LLM/training
+---
+
 # What are RL environments, and how to build them
 
 - **原邮件主题**: How to Actually Use Train, Validation, and Test Sets in ML

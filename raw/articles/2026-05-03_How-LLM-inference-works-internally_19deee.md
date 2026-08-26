@@ -1,3 +1,17 @@
+---
+title: How LLM inference works internally
+source_key: dailydoseofds
+email_subject: Markov Decision Processes and Value Functions in RL
+email_sender: Daily Dose of DS <avi@dailydoseofds.com>
+email_date: Sun, 03 May 2026 17:38:08 +0000
+email_id: 19deeeb458239986
+article_id: 19deeeb458239986:1
+published: '2026-05-03'
+tags:
+- LLM/inference
+- Infra/AI
+---
+
 # How LLM inference works internally
 
 - **原邮件主题**: Markov Decision Processes and Value Functions in RL

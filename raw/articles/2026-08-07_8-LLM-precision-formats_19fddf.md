@@ -1,3 +1,19 @@
+---
+title: 8 LLM precision formats
+source_key: dailydoseofds
+email_subject: '[Hands-on] Build Semantic Search Inside Your Database Without an Embedding
+  Pipeline'
+email_sender: Daily Dose of DS <avi@dailydoseofds.com>
+email_date: Fri, 07 Aug 2026 20:42:13 +0000
+email_id: 19fddf64edb10546
+article_id: 19fddf64edb10546:1
+published: '2026-08-07'
+tags:
+- LLM/inference
+- LLM/training
+- Infra/gpu
+---
+
 #  8 LLM precision formats 
 
 - **原邮件主题**: [Hands-on] Build Semantic Search Inside Your Database Without an Embedding Pipeline

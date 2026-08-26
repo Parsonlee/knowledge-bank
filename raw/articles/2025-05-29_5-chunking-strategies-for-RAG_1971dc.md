@@ -1,3 +1,17 @@
+---
+title: 5 chunking strategies for RAG
+source_key: dailydoseofds
+email_subject: 5 Chunking Strategies For RAG
+email_sender: Daily Dose of DS <avi@dailydoseofds.com>
+email_date: Thu, 29 May 2025 20:47:19 +0000
+email_id: 1971dcca96aa74c3
+article_id: 1971dcca96aa74c3:1
+published: '2025-05-29'
+tags:
+- RAG/retrieval
+- RAG/chunking
+---
+
 # 5 chunking strategies for RAG
 
 - **原邮件主题**: 5 Chunking Strategies For RAG

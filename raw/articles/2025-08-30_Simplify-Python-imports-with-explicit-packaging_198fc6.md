@@ -1,3 +1,16 @@
+---
+title: Simplify Python imports with explicit packaging
+source_key: dailydoseofds
+email_subject: Data and Pipeline Engineering for ML Systems (With Implementation)
+email_sender: Daily Dose of DS <avi@dailydoseofds.com>
+email_date: Sat, 30 Aug 2025 19:20:34 +0000
+email_id: 198fc6ca70584770
+article_id: 198fc6ca70584770:1
+published: '2025-08-30'
+tags:
+- Skill/python
+---
+
 # Simplify Python imports with explicit packaging
 
 - **原邮件主题**: Data and Pipeline Engineering for ML Systems (With Implementation)

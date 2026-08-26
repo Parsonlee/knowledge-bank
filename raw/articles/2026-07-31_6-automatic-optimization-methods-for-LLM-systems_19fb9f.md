@@ -1,3 +1,18 @@
+---
+title: 6 automatic optimization methods for LLM systems
+source_key: dailydoseofds
+email_subject: 6 Automatic Optimization Methods for LLM Systems
+email_sender: Daily Dose of DS <avi@dailydoseofds.com>
+email_date: Fri, 31 Jul 2026 20:49:06 +0000
+email_id: 19fb9f018f6c5eda
+article_id: 19fb9f018f6c5eda:1
+published: '2026-07-31'
+tags:
+- LLM/arch
+- Skill/data-analysis
+- AI-Agent/prompt-engineering
+---
+
 # 6 automatic optimization methods for LLM systems
 
 - **原邮件主题**: 6 Automatic Optimization Methods for LLM Systems

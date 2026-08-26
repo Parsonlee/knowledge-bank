@@ -1,3 +1,16 @@
+---
+title: Technical LLM interview question!
+source_key: dailydoseofds
+email_subject: Serverless vs. On-prem vs. Edge Deployment
+email_sender: Daily Dose of DS <avi@dailydoseofds.com>
+email_date: Tue, 28 Jul 2026 21:23:05 +0000
+email_id: 19faa9c1ec5cf9ba
+article_id: 19faa9c1ec5cf9ba:1
+published: '2026-07-28'
+tags:
+- AI-Agent/coding
+---
+
 # Technical LLM interview question!
 
 - **原邮件主题**: Serverless vs. On-prem vs. Edge Deployment

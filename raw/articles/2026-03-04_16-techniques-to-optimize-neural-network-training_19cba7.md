@@ -1,3 +1,18 @@
+---
+title: 16 techniques to optimize neural network training
+source_key: dailydoseofds
+email_subject: ​16 Techniques to Optimize Neural Network Training​
+email_sender: Daily Dose of DS <avi@dailydoseofds.com>
+email_date: Wed, 04 Mar 2026 20:16:17 +0000
+email_id: 19cba7e7c4fb570a
+article_id: 19cba7e7c4fb570a:1
+published: '2026-03-04'
+tags:
+- DeepLearning
+- Skill/data-analysis
+- LLM/training
+---
+
 # 16 techniques to optimize neural network training
 
 - **原邮件主题**: ​16 Techniques to Optimize Neural Network Training​
@@ -84,7 +99,7 @@ Here are other methods with more context:
 ![](https://substackcdn.com/image/fetch/$s_!Auf6!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0a9cfbab-b599-43a6-ab38-4c15450f4525_1456x690.png)   
 ---  
   
-#15-16) Set `max_workers` and `pin_memory` in DataLoader.
+# 15-16) Set `max_workers` and `pin_memory` in DataLoader.
 
   * The typical neural network training procedure is as follows:
 

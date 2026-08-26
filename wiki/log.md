@@ -1,10 +1,12 @@
 # Wiki Log
 
-## [2026-08-26] chore/lint | 全库 Tag 体系合规性治理与管线加固 (Tag Normalization & Gatekeeper Upgrade)
+## [2026-08-26] chore/lint | 全库 Tag 体系合规性治理与管线加固 (Tag Normalization, Raw Backfill & Gatekeeper Upgrade)
 - **Tag 体系全局治理与映射修复**：运行 `scripts/normalize_tags.py` 对全库 1021 篇 Markdown 进行全量扫描与治理，将 216 处非法 Tag（包含 76 篇邮件拆分文献中的 180+ 英文自由词、顶层泛用池化词 `RAG`/`LLM`/`CV`、未注册分支及 `clippings` 脏数据）严格归一化映射为 `AGENTS.md` §5 标准白名单，全库违规 Tag 清零。
+- **Tag 规则单向同步与 Fallback 改造**：将 `scripts/normalize_tags.py` 的合规标签规则单向同步至 `scripts/vault_lint.py` 单一事实来源；改造 Fallback 策略，严禁基于正文关键词猜测分类，去噪后为空时置 `[]` 并输出明确告警。
+- **历史裸文本 100% 回溯补全**：编写并执行 `scripts/backfill_raw_frontmatter.py`，为 `raw/articles/` 下 76 篇早期邮件拆分生成的无 Frontmatter 裸文本批量回溯注入标准 YAML Frontmatter 骨架并继承对应 Source 标签，全库无元数据裸文本彻底清零。
 - **YAML Frontmatter 净化**：清理 `wiki/sources/` 中遗留的 `confidence`、`created` 等非标字段，规范属性结构。
 - **上游邮件管线加固**：修改 `scripts/mail_pipeline.py`，在拆分生成待审文章时默认注入标准 YAML Frontmatter，从源头杜绝裸文本 Ingest 导致的 Tag 失控。
-- **门禁防线升级**：升级 `scripts/vault_lint.py` Check 0，增加基于 `AGENTS.md` 的 Tag 白名单与顶层池化排他性硬性校验，并补充 30 组回归测试用例。
+- **门禁防线升级与测试全量覆盖**：升级 `scripts/vault_lint.py` Check 0，增加基于 `AGENTS.md` 的 Tag 白名单与顶层池化排他性硬性校验；新增 `scripts/test_normalize_tags.py`，全量 36 组单元测试通过率 100%。
 
 ## [2026-08-20] ingest | raw/articles/搜索没有变便宜，但 Agent 把它拆成了新的供应链.md & 深度剖析 DeepSeek 最新的 Harness DSH：为了自进化这盘醋包了一整盘饺子.md -> wiki/sources/ (+ 实体_Tavily, 实体_Exa, 概念_Agentic_Web_Search, 实体_DeepSeek_Harness, 实体_Cordis, 实体_Codex, 实体_鸭哥, 概念_Self-Harness, 概念_Harness_Engineering)
 - **深度阅读与语法净化**：深度阅读 `Clippings/` 下 Batch 2 的 2 篇剪藏文章，在 `tmp/sanitized/` 生成临时安全阅读视图，排查并确保语法纯净且无越级链接。

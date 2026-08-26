@@ -1,3 +1,16 @@
+---
+title: Avoid Using PCA for Visualization Unless...
+source_key: dailydoseofds
+email_subject: Avoid Using PCA for Visualization Unless...
+email_sender: Daily Dose of DS <avi@dailydoseofds.com>
+email_date: Sat, 18 Oct 2025 20:59:57 +0000
+email_id: 199f91f3eaa6509e
+article_id: 199f91f3eaa6509e:1
+published: '2025-10-18'
+tags:
+- Skill/data-analysis
+---
+
 # Avoid Using PCA for Visualization Unless...
 
 - **原邮件主题**: Avoid Using PCA for Visualization Unless...

@@ -1,3 +1,18 @@
+---
+title: 7 LLM generation parameters
+source_key: dailydoseofds
+email_subject: Deep dive on proximal policy optimization (PPO) in RL
+email_sender: Daily Dose of DS <avi@dailydoseofds.com>
+email_date: Sun, 14 Jun 2026 21:01:42 +0000
+email_id: 19ec7f0bdd27389b
+article_id: 19ec7f0bdd27389b:1
+published: '2026-06-14'
+tags:
+- LLM/arch
+- LLM/inference
+- DeepLearning
+---
+
 # 7 LLM generation parameters
 
 - **原邮件主题**: Deep dive on proximal policy optimization (PPO) in RL

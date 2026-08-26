@@ -1,3 +1,18 @@
+---
+title: How to serve 5 models on one GPU
+source_key: dailydoseofds
+email_subject: '[Hands-on] How to Serve 5 Models On One GPU'
+email_sender: Daily Dose of DS <avi@dailydoseofds.com>
+email_date: Wed, 05 Aug 2026 20:02:09 +0000
+email_id: 19fd384eaff45530
+article_id: 19fd384eaff45530:1
+published: '2026-08-05'
+tags:
+- Infra/AI
+- LLM/inference
+- AI-Agent/coding
+---
+
 #  How to serve 5 models on one GPU 
 
 - **原邮件主题**: [Hands-on] How to Serve 5 Models On One GPU

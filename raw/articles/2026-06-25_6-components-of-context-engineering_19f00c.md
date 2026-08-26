@@ -1,3 +1,16 @@
+---
+title: 6 components of context engineering
+source_key: dailydoseofds
+email_subject: The AI Engineering Master Stack for 2026!
+email_sender: Daily Dose of DS <avi@dailydoseofds.com>
+email_date: Thu, 25 Jun 2026 21:49:30 +0000
+email_id: 19f00c2716d4e27d
+article_id: 19f00c2716d4e27d:1
+published: '2026-06-25'
+tags:
+- AI-Agent/context-engineering
+---
+
 # 6 components of context engineering
 
 - **原邮件主题**: The AI Engineering Master Stack for 2026!

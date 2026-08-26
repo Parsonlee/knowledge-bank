@@ -1,3 +1,18 @@
+---
+title: 5 LLM Quantization Techniques
+source_key: dailydoseofds
+email_subject: 5 LLM Quantization Techniques
+email_sender: Daily Dose of DS <avi@dailydoseofds.com>
+email_date: Tue, 21 Jul 2026 22:13:47 +0000
+email_id: 19f86be0631f8e2c
+article_id: 19f86be0631f8e2c:1
+published: '2026-07-21'
+tags:
+- LLM/arch
+- LLM/inference
+- Skill/data-analysis
+---
+
 # 5 LLM Quantization Techniques
 
 - **原邮件主题**: 5 LLM Quantization Techniques

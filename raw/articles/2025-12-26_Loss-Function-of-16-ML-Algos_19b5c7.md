@@ -1,3 +1,17 @@
+---
+title: Loss Function of 16 ML Algos
+source_key: dailydoseofds
+email_subject: RAG & Fine-tuning in LLMs
+email_sender: Daily Dose of DS <avi@dailydoseofds.com>
+email_date: Fri, 26 Dec 2025 21:00:07 +0000
+email_id: 19b5c7637722a2ba
+article_id: 19b5c7637722a2ba:1
+published: '2025-12-26'
+tags:
+- Skill/data-analysis
+- DeepLearning
+---
+
 # Loss Function of 16 ML Algos
 
 - **原邮件主题**: RAG & Fine-tuning in LLMs

@@ -1,3 +1,16 @@
+---
+title: Breathing KMeans vs KMeans
+source_key: dailydoseofds
+email_subject: CPU vs GPU vs TPU vs NPU vs LPU
+email_sender: Daily Dose of DS <avi@dailydoseofds.com>
+email_date: Thu, 26 Mar 2026 20:01:11 +0000
+email_id: 19d2bbc9492d99c6
+article_id: 19d2bbc9492d99c6:1
+published: '2026-03-26'
+tags:
+- Skill/data-analysis
+---
+
 # Breathing KMeans vs KMeans
 
 - **原邮件主题**: CPU vs GPU vs TPU vs NPU vs LPU

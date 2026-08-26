@@ -1,3 +1,17 @@
+---
+title: Cross-model KV cache transfer in LLM families
+source_key: dailydoseofds
+email_subject: How to Query Billion+ Rows on Postgres Without Overhead
+email_sender: Daily Dose of DS <avi@dailydoseofds.com>
+email_date: Mon, 10 Aug 2026 13:49:07 +0000
+email_id: 19febef2c6003814
+article_id: 19febef2c6003814:2
+published: '2026-08-10'
+tags:
+- LLM/inference
+- Infra/AI
+---
+
 #  Cross-model KV cache transfer in LLM families 
 
 - **邮件来源**: dailydoseofds

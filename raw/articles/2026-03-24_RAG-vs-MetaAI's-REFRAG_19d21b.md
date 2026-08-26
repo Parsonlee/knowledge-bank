@@ -1,3 +1,18 @@
+---
+title: RAG vs MetaAI's REFRAG
+source_key: dailydoseofds
+email_subject: How to Build an OS for Your AI Workforce?
+email_sender: Daily Dose of DS <avi@dailydoseofds.com>
+email_date: Tue, 24 Mar 2026 21:23:23 +0000
+email_id: 19d21bb1fc294cac
+article_id: 19d21bb1fc294cac:1
+published: '2026-03-24'
+tags:
+- RAG/retrieval
+- AI-Agent/coding
+- LLM/arch
+---
+
 # RAG vs MetaAI's REFRAG
 
 - **原邮件主题**: How to Build an OS for Your AI Workforce?

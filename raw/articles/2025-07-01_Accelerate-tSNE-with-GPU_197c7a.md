@@ -1,3 +1,17 @@
+---
+title: Accelerate tSNE with GPU
+source_key: dailydoseofds
+email_subject: uv Cheatsheet and Hands-on Guide for Python Devs
+email_sender: Daily Dose of DS <avi@dailydoseofds.com>
+email_date: Tue, 01 Jul 2025 20:28:05 +0000
+email_id: 197c7ace7fc9ab0e
+article_id: 197c7ace7fc9ab0e:1
+published: '2025-07-01'
+tags:
+- Skill/data-analysis
+- Infra/gpu
+---
+
 # Accelerate tSNE with GPU
 
 - **原邮件主题**: uv Cheatsheet and Hands-on Guide for Python Devs

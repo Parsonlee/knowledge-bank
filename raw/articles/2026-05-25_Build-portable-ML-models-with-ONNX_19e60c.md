@@ -1,3 +1,17 @@
+---
+title: Build portable ML models with ONNX
+source_key: dailydoseofds
+email_subject: The No. 1 Deep Researcher Beats Claude and ChatGPT Using a Counterintuitive
+  Trick
+email_sender: Daily Dose of DS <avi@dailydoseofds.com>
+email_date: Mon, 25 May 2026 20:09:08 +0000
+email_id: 19e60c170373504b
+article_id: 19e60c170373504b:1
+published: '2026-05-25'
+tags:
+- Infra/AI
+---
+
 # Build portable ML models with ONNX
 
 - **原邮件主题**: The No. 1 Deep Researcher Beats Claude and ChatGPT Using a Counterintuitive Trick

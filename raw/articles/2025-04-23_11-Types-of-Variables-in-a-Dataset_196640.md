@@ -1,3 +1,16 @@
+---
+title: 11 Types of Variables in a Dataset
+source_key: dailydoseofds
+email_subject: 11 Types of Variables in a Dataset
+email_sender: Daily Dose of DS <avi@dailydoseofds.com>
+email_date: Wed, 23 Apr 2025 18:56:17 +0000
+email_id: 19664020d007efe2
+article_id: 19664020d007efe2:1
+published: '2025-04-23'
+tags:
+- Skill/data-analysis
+---
+
 # 11 Types of Variables in a Dataset
 
 - **原邮件主题**: 11 Types of Variables in a Dataset
@@ -18,7 +31,7 @@ However, there are so many variables that one may find/define in their dataset, 
   
 Let’s understand today!
 
-# **#1-2) Independent and dependent variables**
+# **# 1-2) Independent and dependent variables**
 
 Independent variables are the features that are used as input to predict the outcome. They are also referred to as predictors/features/explanatory variables.
 
@@ -27,7 +40,7 @@ Independent variables are the features that are used as input to predict the out
   
 The dependent variable is the outcome that is being predicted. It is also called the target, response, or output variable.
 
-# **#3-4) Confounding and correlated variables**
+# **#  3-4) Confounding and correlated variables**
 
 Confounding variables are usually found in a cause-and-effect study ([**causal inference**](<https://www.dailydoseofds.com/a-crash-course-on-causality-part-1/>)).
 
@@ -89,7 +102,7 @@ For instance, if you have two variables:
   
 You can multiply them to get interaction variables, which will produce 9 interaction variables. Studying them will likely produce better insights.
 
-# **#8-9) Stationary and Non-Stationary variables:**
+# **# 8-9) Stationary and Non-Stationary variables:**
 
 Stationary variables are those whose statistical properties (mean, variance) DO NOT change over time.
 

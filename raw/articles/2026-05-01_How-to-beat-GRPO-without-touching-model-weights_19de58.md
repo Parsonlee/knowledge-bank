@@ -1,3 +1,18 @@
+---
+title: How to beat GRPO without touching model weights
+source_key: dailydoseofds
+email_subject: How to Beat GRPO Without Touching Model Weights
+email_sender: Daily Dose of DS <avi@dailydoseofds.com>
+email_date: Fri, 01 May 2026 22:01:35 +0000
+email_id: 19de58fc0d126e4b
+article_id: 19de58fc0d126e4b:1
+published: '2026-05-01'
+tags:
+- LLM/training/RL
+- AI-Agent/prompt-engineering
+- LLM/training/post-train
+---
+
 # How to beat GRPO without touching model weights
 
 - **原邮件主题**: How to Beat GRPO Without Touching Model Weights

@@ -1,3 +1,16 @@
+---
+title: How does BM25 ranking algorithm work?
+source_key: dailydoseofds
+email_subject: Train Classical ML Models on Large Datasets
+email_sender: Daily Dose of DS <avi@dailydoseofds.com>
+email_date: Tue, 05 May 2026 21:57:27 +0000
+email_id: 19dfa25648e2f2cb
+article_id: 19dfa25648e2f2cb:1
+published: '2026-05-05'
+tags:
+- RAG/retrieval
+---
+
 # How does BM25 ranking algorithm work?
 
 - **原邮件主题**: Train Classical ML Models on Large Datasets

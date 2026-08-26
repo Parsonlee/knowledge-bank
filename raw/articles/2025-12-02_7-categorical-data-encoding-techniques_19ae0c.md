@@ -1,3 +1,16 @@
+---
+title: 7 categorical data encoding techniques
+source_key: dailydoseofds
+email_subject: 7 Categorical Data Encoding Techniques
+email_sender: Daily Dose of DS <avi@dailydoseofds.com>
+email_date: Tue, 02 Dec 2025 20:34:54 +0000
+email_id: 19ae0c67c504face
+article_id: 19ae0c67c504face:1
+published: '2025-12-02'
+tags:
+- Skill/data-analysis
+---
+
 # 7 categorical data encoding techniques
 
 - **原邮件主题**: 7 Categorical Data Encoding Techniques

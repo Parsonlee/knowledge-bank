@@ -1,3 +1,18 @@
+---
+title: Delta attention in Kimi K3 to fix growing KV cache
+source_key: dailydoseofds
+email_subject: 11 LLM Evaluation Methods
+email_sender: Daily Dose of DS <avi@dailydoseofds.com>
+email_date: Fri, 24 Jul 2026 22:05:08 +0000
+email_id: 19f962933027e3e6
+article_id: 19f962933027e3e6:1
+published: '2026-07-24'
+tags:
+- LLM/arch/attention
+- LLM/inference
+- LLM/arch
+---
+
 # Delta attention in Kimi K3 to fix growing KV cache
 
 - **原邮件主题**: 11 LLM Evaluation Methods

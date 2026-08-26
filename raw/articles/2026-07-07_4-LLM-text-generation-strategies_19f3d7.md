@@ -1,3 +1,18 @@
+---
+title: 4 LLM text generation strategies
+source_key: dailydoseofds
+email_subject: Rethinking KV Caching For Production Inference
+email_sender: Daily Dose of DS <avi@dailydoseofds.com>
+email_date: Tue, 07 Jul 2026 16:52:26 +0000
+email_id: 19f3d7ecdb9a83ee
+article_id: 19f3d7ecdb9a83ee:1
+published: '2026-07-07'
+tags:
+- LLM/arch
+- LLM/inference
+- DeepLearning
+---
+
 # 4 LLM text generation strategies
 
 - **原邮件主题**: Rethinking KV Caching For Production Inference

@@ -1,3 +1,17 @@
+---
+title: The AI engineering master stack for 2026!
+source_key: dailydoseofds
+email_subject: The AI Engineering Master Stack for 2026!
+email_sender: Daily Dose of DS <avi@dailydoseofds.com>
+email_date: Thu, 25 Jun 2026 21:49:30 +0000
+email_id: 19f00c2716d4e27d
+article_id: 19f00c2716d4e27d:1
+published: '2026-06-25'
+tags:
+- Infra/AI
+- AI-Agent/coding
+---
+
 # The AI engineering master stack for 2026!
 
 - **原邮件主题**: The AI Engineering Master Stack for 2026!

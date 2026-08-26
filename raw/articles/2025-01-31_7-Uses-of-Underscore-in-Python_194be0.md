@@ -1,3 +1,16 @@
+---
+title: 7 Uses of Underscore in Python
+source_key: dailydoseofds
+email_subject: 7 Uses of Underscore in Python
+email_sender: Daily Dose of DS <avi@dailydoseofds.com>
+email_date: Fri, 31 Jan 2025 20:22:52 +0000
+email_id: 194be07e12ab82bc
+article_id: 194be07e12ab82bc:1
+published: '2025-01-31'
+tags:
+- Skill/python
+---
+
 # 7 Uses of Underscore in Python
 
 - **原邮件主题**: 7 Uses of Underscore in Python
@@ -44,7 +57,7 @@ When declaring large numbers, it can be difficult to interpret them. Underscore 
   
 * * *
 
-# **#4-7) Declaring names**
+# **# 4-7) Declaring names**
 
 underscoresWe can also use underscore when naming objects.
 

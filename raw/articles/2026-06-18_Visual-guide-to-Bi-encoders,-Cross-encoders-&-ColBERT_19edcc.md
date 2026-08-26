@@ -1,3 +1,17 @@
+---
+title: Visual guide to Bi-encoders, Cross-encoders & ColBERT
+source_key: dailydoseofds
+email_subject: Turn Any Website Into a Custom API in Claude Code
+email_sender: Daily Dose of DS <avi@dailydoseofds.com>
+email_date: Thu, 18 Jun 2026 22:03:23 +0000
+email_id: 19edcc2a8ec8a790
+article_id: 19edcc2a8ec8a790:1
+published: '2026-06-18'
+tags:
+- RAG/embedding
+- DeepLearning
+---
+
 # Visual guide to Bi-encoders, Cross-encoders & ColBERT
 
 - **原邮件主题**: Turn Any Website Into a Custom API in Claude Code

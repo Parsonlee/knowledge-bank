@@ -1,3 +1,18 @@
+---
+title: Claude Code dynamic workflows, explained!
+source_key: dailydoseofds
+email_subject: '[Hands-on] Build a 3D Weather Globe with Claude Code'
+email_sender: Daily Dose of DS <avi@dailydoseofds.com>
+email_date: Mon, 01 Jun 2026 20:49:47 +0000
+email_id: 19e84f32570b4582
+article_id: 19e84f32570b4582:1
+published: '2026-06-01'
+tags:
+- Skill/claude-code
+- AI-Agent/multi-agent
+- AI-Agent/coding
+---
+
 # Claude Code dynamic workflows, explained!
 
 - **原邮件主题**: [Hands-on] Build a 3D Weather Globe with Claude Code

@@ -1,3 +1,16 @@
+---
+title: An intuitive guide to non-linearity of ReLU
+source_key: dailydoseofds
+email_subject: Your Agent Harness Should Repair Itself
+email_sender: Daily Dose of DS <avi@dailydoseofds.com>
+email_date: Mon, 08 Jun 2026 21:15:47 +0000
+email_id: 19ea91777352c092
+article_id: 19ea91777352c092:1
+published: '2026-06-08'
+tags:
+- DeepLearning
+---
+
 # An intuitive guide to non-linearity of ReLU
 
 - **原邮件主题**: Your Agent Harness Should Repair Itself

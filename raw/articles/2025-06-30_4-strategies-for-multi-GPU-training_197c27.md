@@ -1,3 +1,17 @@
+---
+title: 4 strategies for multi-GPU training
+source_key: dailydoseofds
+email_subject: Component-level Evals for LLM apps
+email_sender: Daily Dose of DS <avi@dailydoseofds.com>
+email_date: Mon, 30 Jun 2025 20:04:18 +0000
+email_id: 197c270c599ab371
+article_id: 197c270c599ab371:1
+published: '2025-06-30'
+tags:
+- LLM/training
+- Infra/gpu
+---
+
 # 4 strategies for multi-GPU training
 
 - **原邮件主题**: Component-level Evals for LLM apps

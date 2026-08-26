@@ -1,3 +1,16 @@
+---
+title: The four types of agent loops
+source_key: dailydoseofds
+email_subject: The Four Types of Agent Loops
+email_sender: Daily Dose of DS <avi@dailydoseofds.com>
+email_date: Tue, 14 Jul 2026 16:27:49 +0000
+email_id: 19f6174c7b5adc67
+article_id: 19f6174c7b5adc67:1
+published: '2026-07-14'
+tags:
+- AI-Agent/coding
+---
+
 # The four types of agent loops
 
 - **原邮件主题**: The Four Types of Agent Loops

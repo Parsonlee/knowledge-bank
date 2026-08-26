@@ -1,3 +1,17 @@
+---
+title: Anatomy of the .claude/ folder
+source_key: dailydoseofds
+email_subject: Anatomy of the .claude/ Folder
+email_sender: Daily Dose of DS <avi@dailydoseofds.com>
+email_date: Mon, 23 Mar 2026 19:38:14 +0000
+email_id: 19d1c347f366b9ac
+article_id: 19d1c347f366b9ac:1
+published: '2026-03-23'
+tags:
+- Skill/claude-code
+- AI-Agent/tool-calling
+---
+
 # Anatomy of the .claude/ folder
 
 - **原邮件主题**: Anatomy of the .claude/ Folder

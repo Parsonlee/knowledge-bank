@@ -1,3 +1,17 @@
+---
+title: The anatomy of diffusion LLMs
+source_key: dailydoseofds
+email_subject: Graph Engineering Clearly Explained
+email_sender: Daily Dose of DS <avi@dailydoseofds.com>
+email_date: Mon, 27 Jul 2026 21:22:34 +0000
+email_id: 19fa5754b2a0ee28
+article_id: 19fa5754b2a0ee28:1
+published: '2026-07-27'
+tags:
+- LLM/arch
+- LLM/inference
+---
+
 # The anatomy of diffusion LLMs
 
 - **原邮件主题**: Graph Engineering Clearly Explained

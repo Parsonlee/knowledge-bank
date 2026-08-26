@@ -1,3 +1,17 @@
+---
+title: Building pairwise sentence scoring systems
+source_key: dailydoseofds
+email_subject: 4 Layers of Agentic AI Systems
+email_sender: Daily Dose of DS <avi@dailydoseofds.com>
+email_date: Mon, 25 Aug 2025 20:26:25 +0000
+email_id: 198e2e9234d8b09f
+article_id: 198e2e9234d8b09f:1
+published: '2025-08-25'
+tags:
+- RAG/embedding
+- DeepLearning
+---
+
 # Building pairwise sentence scoring systems
 
 - **原邮件主题**: 4 Layers of Agentic AI Systems

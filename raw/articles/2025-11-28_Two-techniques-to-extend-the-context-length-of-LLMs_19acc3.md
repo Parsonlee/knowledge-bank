@@ -1,3 +1,18 @@
+---
+title: Two techniques to extend the context length of LLMs
+source_key: dailydoseofds
+email_subject: How to Use kNNs for Imbalanced Datasets
+email_sender: Daily Dose of DS <avi@dailydoseofds.com>
+email_date: Fri, 28 Nov 2025 20:46:01 +0000
+email_id: 19acc373a89bc8c4
+article_id: 19acc373a89bc8c4:1
+published: '2025-11-28'
+tags:
+- DeepLearning
+- LLM/arch
+- LLM/arch/attention
+---
+
 # Two techniques to extend the context length of LLMs
 
 - **原邮件主题**: How to Use kNNs for Imbalanced Datasets

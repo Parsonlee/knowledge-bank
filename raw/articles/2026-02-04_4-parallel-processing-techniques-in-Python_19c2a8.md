@@ -1,3 +1,16 @@
+---
+title: 4 parallel processing techniques in Python
+source_key: dailydoseofds
+email_subject: 4 Parallel Processing Techniques in Python
+email_sender: Daily Dose of DS <avi@dailydoseofds.com>
+email_date: Wed, 04 Feb 2026 21:13:10 +0000
+email_id: 19c2a80854fc31f8
+article_id: 19c2a80854fc31f8:1
+published: '2026-02-04'
+tags:
+- Skill/python
+---
+
 # 4 parallel processing techniques in Python
 
 - **原邮件主题**: 4 Parallel Processing Techniques in Python

@@ -1,3 +1,17 @@
+---
+title: Double Descent vs. Bias-Variance Trade-off
+source_key: dailydoseofds
+email_subject: ​Build a Stock Market Research Agentic Workflow​
+email_sender: Daily Dose of DS <avi@dailydoseofds.com>
+email_date: Sat, 01 Aug 2026 19:38:29 +0000
+email_id: 19fbed5d2cd155dd
+article_id: 19fbed5d2cd155dd:1
+published: '2026-08-01'
+tags:
+- Skill/data-analysis
+- DeepLearning
+---
+
 # Double Descent vs. Bias-Variance Trade-off
 
 - **原邮件主题**: ​Build a Stock Market Research Agentic Workflow​

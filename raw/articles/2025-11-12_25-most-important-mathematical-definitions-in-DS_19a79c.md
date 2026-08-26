@@ -1,3 +1,16 @@
+---
+title: 25 most important mathematical definitions in DS
+source_key: dailydoseofds
+email_subject: '[Hands-on] Build a Real-time Federated Data Engine for Agents'
+email_sender: Daily Dose of DS <avi@dailydoseofds.com>
+email_date: Wed, 12 Nov 2025 20:39:44 +0000
+email_id: 19a79cbb943dd0f0
+article_id: 19a79cbb943dd0f0:1
+published: '2025-11-12'
+tags:
+- Skill/data-analysis
+---
+
 # 25 most important mathematical definitions in DS
 
 - **原邮件主题**: [Hands-on] Build a Real-time Federated Data Engine for Agents

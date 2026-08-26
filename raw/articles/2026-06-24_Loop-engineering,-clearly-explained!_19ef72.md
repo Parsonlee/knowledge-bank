@@ -1,3 +1,18 @@
+---
+title: Loop engineering, clearly explained!
+source_key: dailydoseofds
+email_subject: Loop Engineering, Clearly Explained!
+email_sender: Daily Dose of DS <avi@dailydoseofds.com>
+email_date: Wed, 24 Jun 2026 00:59:02 +0000
+email_id: 19ef7234678feae5
+article_id: 19ef7234678feae5:1
+published: '2026-06-24'
+tags:
+- AI-Agent/coding
+- AI-Agent/context-engineering
+- AI-Agent/multi-agent
+---
+
 # Loop engineering, clearly explained!
 
 - **原邮件主题**: Loop Engineering, Clearly Explained!

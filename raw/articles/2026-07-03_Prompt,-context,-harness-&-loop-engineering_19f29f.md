@@ -1,3 +1,18 @@
+---
+title: Prompt, context, harness & loop engineering
+source_key: dailydoseofds
+email_subject: Prompt, Context, Harness & Loop Engineering
+email_sender: Daily Dose of DS <avi@dailydoseofds.com>
+email_date: Fri, 03 Jul 2026 21:51:22 +0000
+email_id: 19f29f70428b228f
+article_id: 19f29f70428b228f:1
+published: '2026-07-03'
+tags:
+- AI-Agent/prompt-engineering
+- AI-Agent/context-engineering
+- AI-Agent/coding
+---
+
 # Prompt, context, harness & loop engineering
 
 - **原邮件主题**: Prompt, Context, Harness & Loop Engineering

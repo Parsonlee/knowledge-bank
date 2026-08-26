@@ -1,3 +1,18 @@
+---
+title: LoRA/QLoRA explained from a business lens
+source_key: dailydoseofds
+email_subject: Top AI Labs Share an Agent Memory Trick Most Miss
+email_sender: Daily Dose of DS <avi@dailydoseofds.com>
+email_date: Thu, 23 Apr 2026 23:20:49 +0000
+email_id: 19dbca56ab454b95
+article_id: 19dbca56ab454b95:1
+published: '2026-04-23'
+tags:
+- Skill/data-analysis
+- LLM/arch
+- LLM/training/post-train
+---
+
 # LoRA/QLoRA explained from a business lens
 
 - **原邮件主题**: Top AI Labs Share an Agent Memory Trick Most Miss

@@ -1,3 +1,16 @@
+---
+title: 20 most common magic methods
+source_key: dailydoseofds
+email_subject: The Anatomy of Diffusion LLMs
+email_sender: Daily Dose of DS <avi@dailydoseofds.com>
+email_date: Sun, 12 Apr 2026 21:10:55 +0000
+email_id: 19d838888f466ecf
+article_id: 19d838888f466ecf:1
+published: '2026-04-12'
+tags:
+- Skill/python
+---
+
 # 20 most common magic methods
 
 - **原邮件主题**: The Anatomy of Diffusion LLMs

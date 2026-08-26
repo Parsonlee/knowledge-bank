@@ -1,3 +1,16 @@
+---
+title: Top Gradient Boosting Methods
+source_key: dailydoseofds
+email_subject: Top Gradient Boosting Methods
+email_sender: Daily Dose of DS <avi@dailydoseofds.com>
+email_date: Fri, 24 Oct 2025 18:23:08 +0000
+email_id: 19a1775d61893cb3
+article_id: 19a1775d61893cb3:1
+published: '2025-10-24'
+tags:
+- Skill/data-analysis
+---
+
 # Top Gradient Boosting Methods
 
 - **原邮件主题**: Top Gradient Boosting Methods
