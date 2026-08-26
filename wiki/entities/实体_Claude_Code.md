@@ -19,7 +19,6 @@ sources:
 - wiki/sources/写好CLAUDE.md_HumanLayer最佳实践.md
 - wiki/sources/实测腾讯开源的 BrowserSkill：让 AI 直接用你登录好的浏览器.md
 - wiki/sources/浅谈上下文工程_Claude_Code_Manus_Kiro.md
-created: '2026-07-06'
 updated: '2026-07-06'
 ---
 

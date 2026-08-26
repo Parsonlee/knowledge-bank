@@ -1,10 +1,9 @@
 ---
-id: "7362036978633673592"
+id: '7362036978633673592'
 cubox_url: https://cubox.pro/web/card/7362036978633673592
 url: https://mp.weixin.qq.com/s?__biz=MjM5MDE0Mjc4MA==&mid=2651254397&idx=2&sn=75ca687e144aeaab9d6b76ba65cd695e&poc_token=HEcQtWij6IHPhLy_HjN1wgXcJ4b8uuDukW4hO2FX
 tags:
-  - RAG
-
+- RAG/retrieval
 published: 2025-08-27
 ---
 # 基于 Elasticsearch 创建企业 AI 搜索应用实践

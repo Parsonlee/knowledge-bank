@@ -1,14 +1,12 @@
 ---
+type: concept
 tags:
 - RAG/embedding
 - DeepLearning
-confidence: high
-type: concept
 summary: BERT 各向异性（Anisotropy）指 BERT 等 Transformer 预训练模型产生的词向量在向量空间中占据一个狭窄的圆锥形体，导致余弦相似度不能很好地表达词间语义相关性。
-created: '2026-07-06'
-updated: '2026-07-06'
 sources:
 - wiki/sources/一文详尽之Embedding.md
+updated: '2026-07-06'
 ---
 
 # 概念_BERT各向异性

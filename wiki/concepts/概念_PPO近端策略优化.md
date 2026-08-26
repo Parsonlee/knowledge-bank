@@ -2,12 +2,11 @@
 type: concept
 tags:
 - LLM/training/RL
-created: '2026-06-29'
-updated: '2026-06-29'
 summary: PPO（Proximal Policy Optimization）是 OpenAI 提出的强化学习算法，是 RLHF 的核心实现方式，也是 GRPO
   的前身。
 sources:
 - wiki/sources/强化学习入门指南_RLHF到GRPO.md
+updated: '2026-06-29'
 ---
 
 

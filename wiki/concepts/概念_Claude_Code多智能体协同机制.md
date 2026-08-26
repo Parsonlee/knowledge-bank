@@ -1,15 +1,15 @@
 ---
-type: "concept"
+type: concept
 tags:
-  - Claude-Code
-  - Multi-Agent
-  - Orchestration
-  - Dynamic-Workflows
-summary: "拆解并对比 Claude Code 的三大协同原语（Subagents、Agent Teams、Dynamic Workflows），详述动态工作流在 JS 编排执行、并发扇出、上下文解耦和抗灾恢复力方面的机制，并从第一性原理探讨了以上下文为中心的分治逻辑与编排模式。"
+- Skill/claude-code
+- AI-Agent/multi-agent
+- AI-Agent/coding
+summary: 拆解并对比 Claude Code 的三大协同原语（Subagents、Agent Teams、Dynamic Workflows），详述动态工作流在
+  JS 编排执行、并发扇出、上下文解耦和抗灾恢复力方面的机制，并从第一性原理探讨了以上下文为中心的分治逻辑与编排模式。
 sources:
-  - "wiki/sources/2026-06-01_Claude-Code-dynamic-workflows,-explained!_19e84f.md"
-  - "wiki/sources/2026-07-31_Subagents-vs.-Agent-Teams_19fb9f.md"
-updated: "2026-08-04"
+- wiki/sources/2026-06-01_Claude-Code-dynamic-workflows,-explained!_19e84f.md
+- wiki/sources/2026-07-31_Subagents-vs.-Agent-Teams_19fb9f.md
+updated: '2026-08-04'
 ---
 
 # 概念: Claude Code 多智能体协同机制

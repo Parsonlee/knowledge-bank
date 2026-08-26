@@ -2,13 +2,11 @@
 type: entity
 tags:
 - LLM/arch/Mamba
+summary: Albert Gu 和 Tri Dao 于 2024 年提出，在 Mamba1 基础上引入 SSD（状态空间对偶）框架，ICML 2024 收录。
 sources:
 - wiki/sources/Mamba2_SSD_大一统.md
 - wiki/sources/腾讯混元TurboS技术报告.md
-created: '2026-06-29'
 updated: '2026-06-29'
-confidence: high
-summary: Albert Gu 和 Tri Dao 于 2024 年提出，在 Mamba1 基础上引入 SSD（状态空间对偶）框架，ICML 2024 收录。
 ---
 
 # Mamba2

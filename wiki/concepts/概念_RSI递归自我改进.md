@@ -1,12 +1,12 @@
 ---
 type: concept
 tags:
-- AI-Agent/harness
+- AI-Agent/coding
 - LLM/reasoning
-summary: Recursive Self-Improvement（递归自我改进），AI 系统自我迭代优化的机制。在现代 Agent 工程中，RSI 并非直接改写模型权重，而是通过迭代优化外层 Harness 与工作流实现。
+summary: Recursive Self-Improvement（递归自我改进），AI 系统自我迭代优化的机制。在现代 Agent 工程中，RSI 并非直接改写模型权重，而是通过迭代优化外层
+  Harness 与工作流实现。
 sources:
 - wiki/sources/OpenAI前VP_Lilian_Weng_AI自我改进的近路不是改权重.md
-created: '2026-07-22'
 updated: '2026-07-22'
 ---
 

@@ -1,18 +1,12 @@
 ---
 type: source
 tags:
-  - python
-  - concurrency
-  - parallelism
-  - gil
-  - multithreading
-  - multiprocessing
-  - coroutines
-  - subinterpreters
-summary: "对比 Python 中实现并发与并行的四种技术：线程、多进程、协程和子解释器。分析了 GIL 的约束、各种技术的适用场景、性能优缺点，并探讨了 Python 3.13 自由线程（无 GIL）的未来演进趋势。"
+- Skill/python
+summary: 对比 Python 中实现并发与并行的四种技术：线程、多进程、协程和子解释器。分析了 GIL 的约束、各种技术的适用场景、性能优缺点，并探讨了 Python
+  3.13 自由线程（无 GIL）的未来演进趋势。
 sources:
-  - "raw/articles/2026-02-04_4-parallel-processing-techniques-in-Python_19c2a8.md"
-updated: "2026-08-03"
+- raw/articles/2026-02-04_4-parallel-processing-techniques-in-Python_19c2a8.md
+updated: '2026-08-03'
 ---
 
 # 4 parallel processing techniques in Python

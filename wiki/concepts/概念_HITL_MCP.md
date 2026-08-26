@@ -4,13 +4,12 @@ tags:
 - AI-Agent/tool-calling
 summary: 利用 MCP Notification 机制实现服务端 Human-in-the-Loop：send_inquiry 工具挂起等待人类答复，HTTP
   接口接收回复，支持多端协同
-created: '2026-06-29'
-updated: '2026-08-03'
 sources:
 - wiki/sources/HumanInTheLoop用MCP实现.md
 - wiki/sources/OpenAI_构建AI智能体实用指南.md
 - wiki/sources/腾讯ABI工程架构探索与实践.md
 - wiki/sources/美团AICoding面试，跪了！！！.md
+updated: '2026-08-03'
 ---
 
 

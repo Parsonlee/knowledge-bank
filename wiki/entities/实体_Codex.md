@@ -1,11 +1,12 @@
 ---
-type: "entity"
-tags: ["AI-Agent/coding", "AI-Agent/harness"]
-summary: "OpenAI 推出的代码生成与编码智能体系统，代表了典型的声明式插件架构（静态文件/MCP配置/外部进程调度）与硬编码控制流设计。"
+type: entity
+tags:
+- AI-Agent/coding
+summary: OpenAI 推出的代码生成与编码智能体系统，代表了典型的声明式插件架构（静态文件/MCP配置/外部进程调度）与硬编码控制流设计。
 sources:
-  - "wiki/sources/OpenAI前VP_Lilian_Weng_AI自我改进的近路不是改权重.md"
-  - "wiki/sources/深度剖析 DeepSeek 最新的 Harness DSH：为了自进化这盘醋包了一整盘饺子.md"
-updated: "2026-08-20"
+- wiki/sources/OpenAI前VP_Lilian_Weng_AI自我改进的近路不是改权重.md
+- wiki/sources/深度剖析 DeepSeek 最新的 Harness DSH：为了自进化这盘醋包了一整盘饺子.md
+updated: '2026-08-20'
 ---
 
 # 实体：Codex

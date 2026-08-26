@@ -1,14 +1,14 @@
 ---
-type: "source"
+type: source
 tags:
-  - Reinforcement-Learning
-  - AI-Agents
-  - NeMo-Gym
-  - Unsloth
-summary: "探讨在构建多步推理 AI Agent 时，强化学习环境（Environment）所面临的真正瓶颈与挑战，并介绍 NVIDIA NeMo Gym 与 Unsloth 结合 of 解耦架构设计。"
+- LLM/training/RL
+- AI-Agent/coding
+- LLM/training
+summary: 探讨在构建多步推理 AI Agent 时，强化学习环境（Environment）所面临的真正瓶颈与挑战，并介绍 NVIDIA NeMo Gym 与
+  Unsloth 结合 of 解耦架构设计。
 sources:
-  - "raw/articles/2026-03-13_What-are-RL-environments,-and-how-to-build-them_19ce93.md"
-updated: "2026-08-03"
+- raw/articles/2026-03-13_What-are-RL-environments,-and-how-to-build-them_19ce93.md
+updated: '2026-08-03'
 ---
 
 # What are RL environments, and how to build them

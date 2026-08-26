@@ -1,14 +1,12 @@
 ---
-type: "concept"
+type: concept
 tags:
-  - "agent"
-  - "agent-harness"
-  - "state-management"
-  - "memory-system"
+- AI-Agent/coding
+- AI-Agent/memory
+summary: Agent 状态记录单次运行的任务进度并通过逐步检查点支持恢复和分叉，记忆则跨运行保留事实与经验且应按 Agent 隔离作用域。
 sources:
-  - "wiki/sources/2026-07-27_Agent-memory-and-state-are-not-the-same-thing!_19fa57.md"
+- wiki/sources/2026-07-27_Agent-memory-and-state-are-not-the-same-thing!_19fa57.md
 updated: 2026-08-04
-summary: "Agent 状态记录单次运行的任务进度并通过逐步检查点支持恢复和分叉，记忆则跨运行保留事实与经验且应按 Agent 隔离作用域。"
 ---
 
 # Agent 内存与状态管理

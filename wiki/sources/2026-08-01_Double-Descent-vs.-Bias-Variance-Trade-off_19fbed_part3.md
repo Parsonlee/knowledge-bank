@@ -1,14 +1,12 @@
 ---
-type: "source"
+type: source
 tags:
-  - Machine-Learning
-  - Deep-Learning
-  - Double-Descent
-  - Generalization
-summary: "介绍机器学习与深度学习中的双下降（Double Descent）现象，该现象对传统的偏差-方差折中理论提出了挑战，指出在模型复杂度跨越临界插值界限后测试误差可能会二次下降。"
+- Skill/data-analysis
+- DeepLearning
+summary: 介绍机器学习与深度学习中的双下降（Double Descent）现象，该现象对传统的偏差-方差折中理论提出了挑战，指出在模型复杂度跨越临界插值界限后测试误差可能会二次下降。
 sources:
-  - "raw/articles/2026-08-01_Double-Descent-vs.-Bias-Variance-Trade-off_19fbed_part3.md"
-updated: "2026-08-04"
+- raw/articles/2026-08-01_Double-Descent-vs.-Bias-Variance-Trade-off_19fbed_part3.md
+updated: '2026-08-04'
 ---
 
 # 来源信息

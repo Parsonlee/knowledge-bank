@@ -1,10 +1,10 @@
 ---
-id: "7250870008719344095"
+id: '7250870008719344095'
 cubox_url: https://cubox.pro/web/card/7250870008719344095
 url: https://mp.weixin.qq.com/s/UZV4ztL0j5k2qPV8U_wZVg
 tags:
-  - RAG
-  - RAG/query
+- RAG/retrieval
+- RAG/query
 published: 2024-09-10
 ---
 # RAG高级优化：一文看尽query的转换之路

@@ -1,10 +1,9 @@
 ---
-id: "7331633711617673240"
+id: '7331633711617673240'
 cubox_url: https://cubox.pro/web/card/7331633711617673240
 url: https://mp.weixin.qq.com/s?__biz=MzIyNjM2MzQyNg==&mid=2247707431&idx=1&sn=1e9243aa7868e0dce9d1b615eaa5c70f
 tags:
-  - RAG
-
+- RAG/retrieval
 published: 2025-05-29
 ---
 # RAG 挑战赛冠军方案解析：从数据解析到多路由器检索的工程实践，推荐阅读！

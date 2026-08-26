@@ -1,13 +1,13 @@
 ---
-type: "source"
+type: source
 tags:
-  - RAG
-  - chunking
-  - text-splitting
-summary: "本文介绍了在构建 RAG 系统时常用的五种文本切分（chunking）策略，包括固定大小切分、语义切分、递归切分、基于文档结构的切分以及基于 LLM 的切分，并对比了各自的优缺点和适用场景。"
+- RAG/retrieval
+- RAG/chunking
+summary: 本文介绍了在构建 RAG 系统时常用的五种文本切分（chunking）策略，包括固定大小切分、语义切分、递归切分、基于文档结构的切分以及基于 LLM
+  的切分，并对比了各自的优缺点和适用场景。
 sources:
-  - "raw/articles/2025-05-29_5-chunking-strategies-for-RAG_1971dc.md"
-updated: "2026-08-03"
+- raw/articles/2025-05-29_5-chunking-strategies-for-RAG_1971dc.md
+updated: '2026-08-03'
 ---
 
 # 5 chunking strategies for RAG

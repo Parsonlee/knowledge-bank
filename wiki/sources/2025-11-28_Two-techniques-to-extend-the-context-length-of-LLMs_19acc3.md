@@ -1,14 +1,13 @@
 ---
 type: source
 tags:
-  - deep-learning
-  - llm
-  - attention-mechanism
-  - flash-attention
-  - sparse-attention
-summary: 探讨了扩展大语言模型（LLM）上下文长度面临的二次方复杂度瓶颈，并详细介绍了两种主流优化技术：近似计算的稀疏注意力（Sparse Attention）和优化 GPU 显存数据流搬运的 Flash Attention，同时指出选择合适位置编码（如 RoPE）在长上下文理解中的关键作用。
+- DeepLearning
+- LLM/arch
+- LLM/arch/attention
+summary: 探讨了扩展大语言模型（LLM）上下文长度面临的二次方复杂度瓶颈，并详细介绍了两种主流优化技术：近似计算的稀疏注意力（Sparse Attention）和优化
+  GPU 显存数据流搬运的 Flash Attention，同时指出选择合适位置编码（如 RoPE）在长上下文理解中的关键作用。
 sources:
-  - raw/articles/2025-11-28_Two-techniques-to-extend-the-context-length-of-LLMs_19acc3.md
+- raw/articles/2025-11-28_Two-techniques-to-extend-the-context-length-of-LLMs_19acc3.md
 updated: 2026-08-03
 ---
 

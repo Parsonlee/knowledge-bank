@@ -2,11 +2,9 @@
 type: entity
 tags:
 - 创业
+summary: Character Capital — 实体JakeKnapp 与 John Zeratsky 离开 Google Ventures 后共同创立的风投公司。
 sources:
 - wiki/sources/Foundation_Sprint产品验证完全指南.md
-confidence: high
-summary: Character Capital — 实体JakeKnapp 与 John Zeratsky 离开 Google Ventures 后共同创立的风投公司。
-created: '2026-07-06'
 updated: '2026-07-06'
 ---
 

@@ -3,11 +3,11 @@ type: concept
 tags:
 - Infra/AI
 - LLM/inference
-summary: 解耦式 KV 缓存（Disaggregated KV Caching）将缓存管理从推理引擎主进程剥离为旁路独立进程，结合 CacheBlend 算法的选择性重计算，突破传统前缀缓存（Prefix Caching）的严格限制，解决资源抢占，大幅提速智能体与 RAG 推理。
+summary: 解耦式 KV 缓存（Disaggregated KV Caching）将缓存管理从推理引擎主进程剥离为旁路独立进程，结合 CacheBlend 算法的选择性重计算，突破传统前缀缓存（Prefix
+  Caching）的严格限制，解决资源抢占，大幅提速智能体与 RAG 推理。
 sources:
 - wiki/sources/2026-07-07_Rethinking-KV-caching-for-production-inference_19f3d7.md
 updated: '2026-08-04'
-created: '2026-08-04'
 ---
 
 # 概念：解耦式 KV 缓存与 LMCache

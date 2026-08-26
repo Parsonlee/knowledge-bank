@@ -1,13 +1,12 @@
 ---
 type: entity
 tags:
-- LLM
+- LLM/arch
 - DeepLearning
 summary: '- 全称：Large Language and Vision Assistant'
 sources:
 - wiki/sources/Discrete_Tokenization多模态综述.md
 - wiki/sources/从LLaVA到Qwen3-VL_多模态架构演进.md
-created: '2026-07-06'
 updated: '2026-07-06'
 ---
 

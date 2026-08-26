@@ -8,9 +8,7 @@ sources:
 - wiki/sources/Mamba2_SSD_大一统.md
 - wiki/sources/入局AI_Infra系统设计与挑战.md
 - wiki/sources/大规模神经网络优化_超参实践与规模律.md
-created: '2026-06-29'
 updated: '2026-06-29'
-confidence: medium
 ---
 
 # 实体：Megatron

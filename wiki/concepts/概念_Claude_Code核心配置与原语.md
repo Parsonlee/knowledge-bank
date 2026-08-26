@@ -1,13 +1,13 @@
 ---
-type: "concept"
+type: concept
 tags:
-  - Claude-Code
-  - AI-Tools
-  - Config-Architecture
+- Skill/claude-code
+- AI-Agent/tool-calling
+summary: Claude Code 通过项目级与全局 .claude 目录分别管理团队和个人配置，并以 CLAUDE.md、rules、commands、skills、agents
+  及 settings.json 组织指令、工作流、子智能体和权限。
 sources:
-  - "wiki/sources/2026-03-23_Anatomy-of-the-.claude-folder_19d1c3.md"
-updated: "2026-08-03"
-summary: "Claude Code 通过项目级与全局 .claude 目录分别管理团队和个人配置，并以 CLAUDE.md、rules、commands、skills、agents 及 settings.json 组织指令、工作流、子智能体和权限。"
+- wiki/sources/2026-03-23_Anatomy-of-the-.claude-folder_19d1c3.md
+updated: '2026-08-03'
 ---
 
 # Claude Code 核心配置与原语

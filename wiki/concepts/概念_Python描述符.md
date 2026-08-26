@@ -1,13 +1,11 @@
 ---
 type: concept
 tags:
-  - python
-  - oop
-  - descriptor
-summary: Python 描述符（Descriptors）是实现底层属性代理的核心机制。通过控制属性的获取、修改和名称绑定，它能有效解决传统 @property getter/setter 机制在多属性校验时的代码冗余，并能在对象初始化时直接进行拦截校验。
+- Skill/python
+summary: Python 描述符（Descriptors）是实现底层属性代理的核心机制。通过控制属性的获取、修改和名称绑定，它能有效解决传统 @property
+  getter/setter 机制在多属性校验时的代码冗余，并能在对象初始化时直接进行拦截校验。
 sources:
-  - wiki/sources/2025-11-20_Descriptors-in-Python_19aa2d.md
-created: '2026-08-03'
+- wiki/sources/2025-11-20_Descriptors-in-Python_19aa2d.md
 updated: '2026-08-03'
 ---
 

@@ -2,13 +2,11 @@
 type: concept
 tags:
 - AI-Agent/deep-research
-confidence: high
-created: '2026-06-29'
-updated: '2026-06-29'
 summary: 来源：浙大综述《A Comprehensive Survey of Deep Research》（arxiv:2506.12594），分析 80+
   个 DR 系统后归纳的四种架构模式。
 sources:
 - wiki/sources/一篇95页最新80种Deep Research系统全面综述.md
+updated: '2026-06-29'
 ---
 
 

@@ -5,9 +5,7 @@ tags:
 summary: MiniMax M2 回归 Full Attention，Kimi 发布开源混合注意力模型 Kimi Linear（KDA+MLA 3:1），两条技术路线的工程视角对比
 sources:
 - raw/articles/MiniMax和Kimi为了“注意力”，隔空交手.md
-created: '2026-06-29'
 updated: '2026-07-01'
-confidence: high
 ---
 ## 来源信息
 

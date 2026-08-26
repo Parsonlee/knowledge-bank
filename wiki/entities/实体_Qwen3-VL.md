@@ -1,12 +1,11 @@
 ---
 type: entity
 tags:
-- LLM/Multimodal
+- LLM/arch
 summary: 阿里巴巴 Qwen 团队的深度融合多模态大模型，核心创新为 DeepStack 多层视觉特征注入 + MoE + MRoPE-Interleave，支持超高分辨率图像和视频
 sources:
 - wiki/sources/Discrete_Tokenization多模态综述.md
 - wiki/sources/从LLaVA到Qwen3-VL_多模态架构演进.md
-created: '2026-06-29'
 updated: '2026-06-29'
 ---
 

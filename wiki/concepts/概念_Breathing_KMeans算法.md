@@ -1,13 +1,10 @@
 ---
-type: "concept"
+type: concept
 tags:
-  - MachineLearning
-  - Clustering
-  - KMeans
-  - BreathingKMeans
-summary: "Breathing KMeans 是一种解决传统 KMeans 初始化敏感和重训高耗时的聚类算法。它通过动态的“吸气”（在误差大的质心附近分裂出新质心）和“呼气”（合并并删除低效用的紧邻质心）循环，实现速度和准确性的双重提升。"
+- Skill/data-analysis
+summary: Breathing KMeans 是一种解决传统 KMeans 初始化敏感和重训高耗时的聚类算法。它通过动态的“吸气”（在误差大的质心附近分裂出新质心）和“呼气”（合并并删除低效用的紧邻质心）循环，实现速度和准确性的双重提升。
 sources:
-  - "wiki/sources/2026-03-26_Breathing-KMeans-vs-KMeans_19d2bb.md"
+- wiki/sources/2026-03-26_Breathing-KMeans-vs-KMeans_19d2bb.md
 updated: 2026-08-04
 ---
 

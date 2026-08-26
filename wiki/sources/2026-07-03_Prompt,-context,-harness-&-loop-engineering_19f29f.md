@@ -1,13 +1,12 @@
 ---
 type: source
 tags:
-  - prompt-engineering
-  - context-engineering
-  - harness-engineering
-  - loop-engineering
+- AI-Agent/prompt-engineering
+- AI-Agent/context-engineering
+- AI-Agent/coding
 summary: 详细拆解了围绕 LLM 运作的四层工程阶梯（Prompt、Context、Harness、Loop Engineering），它们由内而外包裹，各自承担着大模型应用在推理阶段的不同层级优化与控制面职责。
 sources:
-  - raw/articles/2026-07-03_Prompt,-context,-harness-&-loop-engineering_19f29f.md
+- raw/articles/2026-07-03_Prompt,-context,-harness-&-loop-engineering_19f29f.md
 updated: '2026-08-04'
 ---
 

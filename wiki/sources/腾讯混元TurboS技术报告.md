@@ -7,9 +7,7 @@ summary: 腾讯混元 TurboS：560B 参数 Hybrid Transformer-Mamba MoE 模型�
   CoT 融合
 sources:
 - raw/articles/腾讯混元TurboS技术报告首次全公开：560B参数混合Mamba架构，自适应长....md
-created: '2026-06-29'
 updated: '2026-07-01'
-confidence: high
 ---
 ## 来源信息
 

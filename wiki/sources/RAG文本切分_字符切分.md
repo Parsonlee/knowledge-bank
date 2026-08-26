@@ -1,14 +1,12 @@
 ---
 type: source
 tags:
-- RAG
+- RAG/retrieval
 - RAG/chunking
 summary: 文本切分系列第1篇，提出五层级切分框架并介绍最基础的字符切分（Level 1），涵盖 LangChain 和 LlamaIndex 实现。
 sources:
 - raw/articles/RAG文本切分的五个层次1：字符切分基础(实战).md
-created: '2026-06-29'
 updated: '2026-07-01'
-confidence: high
 ---
 # RAG文本切分的五个层次1：字符切分基础
 

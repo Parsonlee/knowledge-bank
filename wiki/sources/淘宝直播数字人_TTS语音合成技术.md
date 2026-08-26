@@ -5,9 +5,7 @@ tags:
 summary: '**TTS 在数字人直播中的定位**：连接 LLM 生成的播报文稿与口型驱动模块，要求低延迟、高相似度、强表现力。'
 sources:
 - raw/articles/淘宝直播数字人：TTS语音合成技术.md
-created: '2026-06-29'
 updated: '2026-07-01'
-confidence: high
 ---
 # 淘宝直播数字人：TTS语音合成技术
 

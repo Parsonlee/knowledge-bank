@@ -1,4 +1,16 @@
-#  5 context compaction strategies for LLM agents 
+---
+title: "5 context compaction strategies for LLM agents"
+source_key: "dailydoseofds"
+email_subject: "Build a Multi-Agent GTM Intelligence System"
+email_sender: "Daily Dose of DS <avi@dailydoseofds.com>"
+email_date: "Tue, 25 Aug 2026 20:27:32 +0000"
+email_id: "1a03a9b5c46e28a5"
+article_id: "1a03a9b5c46e28a5:2"
+published: "2026-08-25"
+tags: ["AI-Agent/context-engineering", "LLM/inference"]
+---
+
+# 5 context compaction strategies for LLM agents
 
 - **邮件来源**: dailydoseofds
 - **原邮件主题**: Build a Multi-Agent GTM Intelligence System

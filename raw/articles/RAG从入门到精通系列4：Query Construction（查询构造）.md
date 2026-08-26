@@ -1,10 +1,10 @@
 ---
-id: "7286690657786136595"
+id: '7286690657786136595'
 cubox_url: https://cubox.pro/web/card/7286690657786136595
 url: https://mp.weixin.qq.com/s/qG02XjSV9nuRIonGy_VOwQ
 tags:
-  - RAG
-  - RAG/query
+- RAG/retrieval
+- RAG/query
 published: 2025-01-26
 ---
 # RAG从入门到精通系列4：Query Construction（查询构造）

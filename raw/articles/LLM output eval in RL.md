@@ -1,10 +1,10 @@
 ---
-id: "7369614670128220840"
+id: '7369614670128220840'
 cubox_url: https://cubox.pro/web/card/7369614670128220840
 url: https://mp.weixin.qq.com/s?__biz=Mjc1NjM3MjY2MA==&mid=2691560834&idx=1&sn=200b13a34ec2f695fe20929963322555&poc_token=HLif0Gij86Dxa-9RuN5qbpR1WvrV4hg8SJ0VNgZ6
 tags:
-  - LLM
-  - LLM/training/RL
+- LLM/arch
+- LLM/training/RL
 published: 2025-09-16
 ---
 # 一文读懂GPT-5的绝招，这是决定AI未来的隐形武器

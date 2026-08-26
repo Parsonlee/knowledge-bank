@@ -8,7 +8,6 @@ sources:
 - wiki/sources/Anthropic再发Agent神文_像人类工程师一样思考解决长程任务难题.md
 - wiki/sources/Anthropic多智能体研究系统构建.md
 - wiki/sources/从提示员到系统架构师：Loop Engineering 的范式跃迁.md
-created: '2026-06-29'
 updated: '2026-06-29'
 ---
 

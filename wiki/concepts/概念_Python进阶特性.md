@@ -1,13 +1,11 @@
 ---
+type: concept
 tags:
 - Skill/python
-confidence: high
-type: concept
 summary: Python 标准库中鲜为人知但实用的进阶特性，教程中很少提及，能干净地解决实际工程问题。
-created: '2026-07-06'
-updated: '2026-07-06'
 sources:
 - wiki/sources/五个鲜为人知的Python功能.md
+updated: '2026-07-06'
 ---
 
 

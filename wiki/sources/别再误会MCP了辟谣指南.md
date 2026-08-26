@@ -6,9 +6,7 @@ summary: 阿里云工程师以架构师视角从 SDK 源码和开源项目剖析
   才是 AI 智能承载者
 sources:
 - raw/articles/别再误会MCP了！一篇写给AI工程师的硬核“辟谣”指南.md
-created: '2026-06-29'
 updated: '2026-07-01'
-confidence: high
 ---
 ## 来源信息
 

@@ -1,14 +1,14 @@
 ---
-type: "source"
+type: source
 tags:
-- Skill/knowledge-bank
+- AI-Agent/skill
 - AI-Agent/coding
-summary: "针对 RAG 分块断裂、无状态与维度爆炸痛点，阐述 Andrej Karpathy 提出的 LLM Wiki 知识编译范式、Raw/Wiki/Schema 三层架构与 Ingest/Query/Index/Lint 四大核心操作，并梳理从 Memex、卡片盒到 LLM 的 80 年知识管理思想谱系。"
+summary: 针对 RAG 分块断裂、无状态与维度爆炸痛点，阐述 Andrej Karpathy 提出的 LLM Wiki 知识编译范式、Raw/Wiki/Schema
+  三层架构与 Ingest/Query/Index/Lint 四大核心操作，并梳理从 Memex、卡片盒到 LLM 的 80 年知识管理思想谱系。
 sources:
 - raw/articles/Karpathy发了一条推文2000万人看了，我照着他的方法搭了个知识库.md
-updated: "2026-07-22"
-published: "2026-06-25"
-created: "2026-07-22"
+updated: '2026-07-22'
+published: '2026-06-25'
 ---
 ## 来源信息
 

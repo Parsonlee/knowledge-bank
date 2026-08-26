@@ -1,13 +1,13 @@
 ---
-title: "Anthropic 重磅发布：AI Native 软件开发方法论"
-source: "https://mp.weixin.qq.com/s/53lMkvVQyR8RPuYAf0USLw"
+title: Anthropic 重磅发布：AI Native 软件开发方法论
+source: https://mp.weixin.qq.com/s/53lMkvVQyR8RPuYAf0USLw
 author:
-  - "[[夕小瑶编辑部]]"
+- '[[夕小瑶编辑部]]'
 published: 2026-08-26
 created: 2026-08-26
-description:
+description: null
 tags:
-  - "clippings"
+- AI-Agent/coding
 ---
 夕小瑶编辑部 夕小瑶科技说 *2026年8月26日 09:56*
 

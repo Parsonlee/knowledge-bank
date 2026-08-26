@@ -1,13 +1,11 @@
 ---
-type: "source"
+type: source
 tags:
-  - machine-learning
-  - ensemble-learning
-  - gbdt
-summary: "全面梳理了四大主流梯度提升树模型（XGBoost、CatBoost、LightGBM、NGBoost）的原理、独特创新点（树生长策略、特征处理方式、分层采样机制、概率预测）及选型逻辑，并提供了相关的顶级学术论文引用。"
+- Skill/data-analysis
+summary: 全面梳理了四大主流梯度提升树模型（XGBoost、CatBoost、LightGBM、NGBoost）的原理、独特创新点（树生长策略、特征处理方式、分层采样机制、概率预测）及选型逻辑，并提供了相关的顶级学术论文引用。
 sources:
-  - "raw/articles/2025-10-24_Top-Gradient-Boosting-Methods_19a177.md"
-updated: "2026-08-03"
+- raw/articles/2025-10-24_Top-Gradient-Boosting-Methods_19a177.md
+updated: '2026-08-03'
 ---
 
 # Top Gradient Boosting Methods

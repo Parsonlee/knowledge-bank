@@ -1,12 +1,10 @@
 ---
 type: entity
 tags:
-- AI-Agent/harness
+- AI-Agent/coding
+summary: 由前 OpenAI 安全研究 VP Lilian Weng 等联合创办的前沿 AI 研究实验室，聚焦 Agent 架构与自我改进系统。
 sources:
 - wiki/sources/OpenAI前VP_Lilian_Weng_AI自我改进的近路不是改权重.md
-confidence: high
-summary: 由前 OpenAI 安全研究 VP Lilian Weng 等联合创办的前沿 AI 研究实验室，聚焦 Agent 架构与自我改进系统。
-created: '2026-07-22'
 updated: '2026-07-22'
 ---
 

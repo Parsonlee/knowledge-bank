@@ -7,7 +7,6 @@ summary: David Soria Parra 是 Anthropic 的工程师，MCP 协议联合创建�
 sources:
 - wiki/sources/MCP五大原语与Web化.md
 - wiki/sources/从第一性原理深度拆解_Claude_Agent_Skill_宝玉.md
-created: '2026-06-29'
 updated: '2026-06-29'
 ---
 

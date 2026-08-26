@@ -2,15 +2,14 @@
 type: concept
 tags:
 - LLM/arch/attention
-- LLM/inference/kv-cache
+- LLM/inference
 summary: MLA（Multi-head Latent Attention）：DeepSeek V2/V3 提出的低秩 KV 压缩方案，通过矩阵吸收使注意力计算时
   K/V 不含头信息，兼具 MQA 效率和 MHA 表达能力
-created: '2026-06-29'
-updated: '2026-06-29'
 sources:
 - wiki/sources/DeepSeek_MLA矩阵吸收原理.md
 - wiki/sources/KV_Cache原理图解.md
 - wiki/sources/MiniMax_vs_Kimi_注意力路线之争.md
+updated: '2026-06-29'
 ---
 
 

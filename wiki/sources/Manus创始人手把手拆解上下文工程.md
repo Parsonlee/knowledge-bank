@@ -5,9 +5,7 @@ tags:
 summary: Manus 联合创始人 Peak 亲写的上下文工程实战总结：KV缓存设计、工具掩码、文件系统记忆、注意力复述、错误保留、Few-Shot多样性六大原则
 sources:
 - raw/playbooks/Manus 创始人手把手拆解：如何系统性打造 AI Agent 的上下文工程？.md
-created: '2026-06-29'
 updated: '2026-07-01'
-confidence: high
 ---
 ## 来源信息
 

@@ -1,11 +1,10 @@
 ---
 type: entity
 tags:
-- Skill/knowledge-bank
+- AI-Agent/skill
 summary: 德国著名社会学家，卡片盒笔记法 (Zettelkasten) 的集大成者，一生积累 9 万张索引卡并产出 70 本学术专著。
 sources:
 - wiki/sources/Karpathy推文引发的LLM_Wiki知识库搭建实践.md
-created: '2026-07-22'
 updated: '2026-07-22'
 ---
 

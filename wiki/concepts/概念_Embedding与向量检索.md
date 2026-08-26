@@ -1,12 +1,9 @@
 ---
-tags:
-- RAG
-- RAG/embedding
-confidence: high
 type: concept
+tags:
+- RAG/retrieval
+- RAG/embedding
 summary: 将文本表示（Text Representation）转成数值表示（Numerical Representation），以便通过相似度（如余弦相似度）衡量相关性。
-created: '2026-07-06'
-updated: '2026-07-06'
 sources:
 - wiki/sources/AI智能体8种Memory策略与技术实现.md
 - wiki/sources/ES企业AI搜索实践.md
@@ -22,6 +19,7 @@ sources:
 - wiki/sources/从BM25到Multi-Vector_6种Embedding演进路线.md
 - wiki/sources/向量数据库原理与应用全解析.md
 - wiki/sources/大模型算法岗面试百问百答.md
+updated: '2026-07-06'
 ---
 
 # 概念_Embedding与向量检索

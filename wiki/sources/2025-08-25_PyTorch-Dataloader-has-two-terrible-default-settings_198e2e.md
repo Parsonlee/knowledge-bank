@@ -1,14 +1,13 @@
 ---
 type: source
 tags:
-  - deep-learning
-  - pytorch
-  - performance-tuning
-  - dataloader
-  - memory-pinning
-summary: "介绍 PyTorch 中 DataLoader 的默认设置问题（导致 CPU 和 GPU 串行等待），并阐述如何通过启用固定内存 (pin_memory=True)、多进程加载以及非阻塞传输 (non_blocking=True) 来实现 CPU-GPU 的异步流水线优化，在 MNIST 数据集上实现 4.7 倍的加速。"
+- DeepLearning
+- Skill/python
+- Infra/AI
+summary: 介绍 PyTorch 中 DataLoader 的默认设置问题（导致 CPU 和 GPU 串行等待），并阐述如何通过启用固定内存 (pin_memory=True)、多进程加载以及非阻塞传输
+  (non_blocking=True) 来实现 CPU-GPU 的异步流水线优化，在 MNIST 数据集上实现 4.7 倍的加速。
 sources:
-  - "raw/articles/2025-08-25_PyTorch-Dataloader-has-two-terrible-default-settings_198e2e.md"
+- raw/articles/2025-08-25_PyTorch-Dataloader-has-two-terrible-default-settings_198e2e.md
 updated: 2026-08-03
 ---
 

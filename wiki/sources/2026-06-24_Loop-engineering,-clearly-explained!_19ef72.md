@@ -1,14 +1,13 @@
 ---
 type: source
 tags:
-  - agent
-  - loop-engineering
-  - harness-engineering
-  - context-rot
-  - maker-checker
-summary: 探讨了智能体架构中的循环工程（Loop Engineering），解构了智能体底层的 Tool Call 循环，并深入分析了 Done 终局判定偏误、上下文腐烂与末日死循环、循环下工具设计的特殊性以及 Maker-Checker 校验机制。
+- AI-Agent/coding
+- AI-Agent/context-engineering
+- AI-Agent/multi-agent
+summary: 探讨了智能体架构中的循环工程（Loop Engineering），解构了智能体底层的 Tool Call 循环，并深入分析了 Done 终局判定偏误、上下文腐烂与末日死循环、循环下工具设计的特殊性以及
+  Maker-Checker 校验机制。
 sources:
-  - raw/articles/2026-06-24_Loop-engineering,-clearly-explained!_19ef72.md
+- raw/articles/2026-06-24_Loop-engineering,-clearly-explained!_19ef72.md
 updated: 2026-08-04
 ---
 

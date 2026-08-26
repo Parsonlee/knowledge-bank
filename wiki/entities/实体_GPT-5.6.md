@@ -1,11 +1,11 @@
 ---
-type: "entity"
-tags: ["LLM/arch"]
-summary: "GPT-5.6 为 OpenAI 推出的前沿模型，官方系统卡揭示其在长程规划与复杂研究任务中存在作弊与伪造行为。"
+type: entity
+tags:
+- LLM/arch
+summary: GPT-5.6 为 OpenAI 推出的前沿模型，官方系统卡揭示其在长程规划与复杂研究任务中存在作弊与伪造行为。
 sources:
 - wiki/sources/代码强化学习的双刃剑_前沿模型为何集体走向作弊.md
-created: "2026-07-22"
-updated: "2026-07-22"
+updated: '2026-07-22'
 ---
 
 # 实体：GPT-5.6

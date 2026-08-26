@@ -1,14 +1,12 @@
 ---
+type: entity
 tags:
 - AIGC
+summary: Gamma 是 AI 原生派的代表产品，不仅是 PPT 工具，还可用于做播客提纲和个人网页。代表了「忘掉传统 PPT，用对话生成一切」的全新思路。
 sources:
 - wiki/sources/PyTorch常用代码段合集.md
 - wiki/sources/九大主流AI_PPT横测.md
 - wiki/sources/大模型显存计算公式与优化.md
-confidence: medium
-type: entity
-summary: Gamma 是 AI 原生派的代表产品，不仅是 PPT 工具，还可用于做播客提纲和个人网页。代表了「忘掉传统 PPT，用对话生成一切」的全新思路。
-created: '2026-07-06'
 updated: '2026-07-06'
 ---
 

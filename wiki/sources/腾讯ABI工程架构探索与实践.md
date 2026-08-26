@@ -6,9 +6,7 @@ summary: 腾讯 OlaChat ABI 工程架构：原子 Agent + DAG 编排 + 统一协
   BI 指令转换三大挑战
 sources:
 - raw/articles/腾讯在 ABI 工程领域的探索与实践.md
-created: '2026-06-29'
 updated: '2026-07-01'
-confidence: high
 ---
 # 腾讯在 ABI 工程领域的探索与实践
 

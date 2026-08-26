@@ -2,8 +2,6 @@
 type: concept
 tags:
 - AI-Agent/context-engineering
-created: '2026-06-29'
-updated: '2026-08-04'
 summary: 随着Agent运行过程中上下文长度持续增长，模型性能在达到硬性上下文限制之前就已显著下降的现象。
 sources:
 - wiki/sources/Context_Engineering_LangChain_Manus_NotebookLM.md
@@ -11,6 +9,7 @@ sources:
 - wiki/sources/也许当前最好的上下文工程讲解_LangChain联合Manus.md
 - wiki/sources/浅谈上下文工程_Claude_Code_Manus_Kiro.md
 - wiki/sources/2026-06-24_Recursive-language-models_19ef72.md
+updated: '2026-08-04'
 ---
 
 

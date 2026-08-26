@@ -2,11 +2,9 @@
 type: entity
 tags:
 - 创业
+summary: Jake Knapp — Design Sprint 创造者，前 Google Ventures (GV) 设计合伙人。
 sources:
 - wiki/sources/Foundation_Sprint产品验证完全指南.md
-confidence: high
-summary: Jake Knapp — Design Sprint 创造者，前 Google Ventures (GV) 设计合伙人。
-created: '2026-07-06'
 updated: '2026-07-06'
 ---
 

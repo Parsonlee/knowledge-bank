@@ -10,9 +10,7 @@ sources:
 - wiki/sources/一文详尽之Embedding.md
 - wiki/sources/为什么用Qwen3_embedding和rerank.md
 - wiki/sources/美团搜索查询改写实践.md
-created: '2026-06-29'
 updated: '2026-07-01'
-confidence: high
 ---
 
 ## 简介

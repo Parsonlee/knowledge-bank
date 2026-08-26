@@ -2,13 +2,12 @@
 title: 美团AICoding面试，跪了！！！
 source: https://mp.weixin.qq.com/s/Lw-OLwzwn0mwfIQ_vNfOog
 author:
-  - "[[AIGC小白入门记]]"
+- '[[AIGC小白入门记]]'
 published: 2026-07-31
 created: 2026-07-31
-description:
+description: null
 tags:
-  - clippings
-  - 面试
+- 面试
 ---
 AIGC小白入门记 AIGC小白入门记 *2026年7月30日 20:00*
 

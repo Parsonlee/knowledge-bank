@@ -1,9 +1,12 @@
 ---
-type: "source"
-tags: ["LLM/training", "GPU/parallelism"]
-summary: "介绍多 GPU 模型训练的四种核心并行化策略：模型并行、张量并行、数据并行和流水线并行，并说明其优势与局限。"
-sources: ["raw/articles/2025-06-30_4-strategies-for-multi-GPU-training_197c27.md"]
-updated: "2026-08-03"
+type: source
+tags:
+- LLM/training
+- Infra/gpu
+summary: 介绍多 GPU 模型训练的四种核心并行化策略：模型并行、张量并行、数据并行和流水线并行，并说明其优势与局限。
+sources:
+- raw/articles/2025-06-30_4-strategies-for-multi-GPU-training_197c27.md
+updated: '2026-08-03'
 ---
 
 # 4 strategies for multi-GPU training

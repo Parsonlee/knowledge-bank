@@ -3,11 +3,9 @@ type: concept
 tags:
 - 创业
 summary: AI 初创公司在技术快速迭代环境中的团队规模与产出效率关系：小而精 vs 规模扩张的困境
-created: '2026-06-29'
-updated: '2026-06-29'
-confidence: medium
 sources:
 - wiki/sources/Jina_AI创业复盘.md
+updated: '2026-06-29'
 ---
 
 

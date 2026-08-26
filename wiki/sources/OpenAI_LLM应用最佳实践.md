@@ -1,17 +1,15 @@
 ---
 type: source
 tags:
-- LLM
-- RAG
+- LLM/arch
+- RAG/retrieval
 - AI-Agent/prompt-engineering
 summary: OpenAI DevDay 2023 演讲总结：LLM 应用性能优化路线——Prompt Engineering → RAG → Fine-tuning，两轴(Context
   Optimization / LLM Optimization)思考框架，附 RAG 45%→98% 案例与 Fine-tuning+RAG 结合 Text-to-SQL
   案例
 sources:
 - raw/articles/Prompt Engineering, Finetune, RAG？：OpenA....md
-created: '2026-06-29'
 updated: '2026-07-01'
-confidence: high
 ---
 # OpenAI_LLM应用最佳实践
 

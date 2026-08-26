@@ -1,16 +1,14 @@
 ---
-tags:
-- RAG
-confidence: high
 type: concept
+tags:
+- RAG/retrieval
 summary: Agentic RAG 将自主智能体与 RAG 技术结合，通过动态管理检索策略和优化推理过程，提升系统性能。
-created: '2026-07-06'
-updated: '2026-07-06'
 sources:
 - wiki/sources/Agent系统开发经验.md
 - wiki/sources/Anthropic多智能体研究系统构建.md
 - wiki/sources/ES企业AI搜索实践.md
 - wiki/sources/优图RAG技术详解.md
+updated: '2026-07-06'
 ---
 
 # 概念_Agentic_RAG

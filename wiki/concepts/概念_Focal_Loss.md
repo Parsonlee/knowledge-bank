@@ -1,13 +1,11 @@
 ---
 type: concept
 tags:
-- CV
+- CV/detection
 summary: Focal Loss 通过下调简单样本权重解决类别不平衡问题，由 RetinaNet 提出，SAM 训练中与 Dice Loss 组合使用。
 sources:
 - wiki/sources/SAM_Segment_Anything模型.md
-created: '2026-06-26'
 updated: '2026-06-26'
-confidence: high
 ---
 
 

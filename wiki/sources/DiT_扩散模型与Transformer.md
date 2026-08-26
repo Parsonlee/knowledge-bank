@@ -7,9 +7,7 @@ summary: 详解 DiT（Diffusion Transformers）：用 Transformer 替换扩散�
   在 ImageNet 256x256 达到 SOTA FID 2.27。
 sources:
 - raw/articles/Sora的幕后功臣？详解大火的DiT：拥抱Transformer的扩散模型.md
-created: '2026-06-26'
 updated: '2026-07-01'
-confidence: high
 ---
 # DiT：Transformer 构建扩散模型
 

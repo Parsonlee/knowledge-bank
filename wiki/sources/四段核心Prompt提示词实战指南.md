@@ -6,9 +6,7 @@ tags:
 summary: 收录并深度拆解四段极具实战价值的高阶结构化提示词（Prompt），涵盖 PPT 生成、前端网页设计、3D 动画规划等复杂输出场景。
 sources:
 - raw/articles/4 段 Prompt 提示词，生成PPT、生成3D动画，生成网站，生成万物....md
-created: '2026-07-02'
 updated: '2026-07-02'
-confidence: high
 ---
 # 四段核心Prompt提示词实战指南
 

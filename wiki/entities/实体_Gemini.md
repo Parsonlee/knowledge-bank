@@ -1,6 +1,9 @@
 ---
+type: entity
 tags:
 - AIGC
+summary: Gemini 是 Google 的 AI 助手 APP，在本批次文章中作为 AIGC 工具出现，具备 PPT 生成、深度研究、搜索、与谷歌其他产品打通等能力。Veo
+  3 视频生成也需要 Gemini Pro 账号。
 sources:
 - wiki/sources/2025年七大顶流大模型架构.md
 - wiki/sources/DeepResearch的概念、核心挑战与进化路径.md
@@ -11,11 +14,6 @@ sources:
 - wiki/sources/一篇95页最新80种Deep Research系统全面综述.md
 - wiki/sources/也许当前最好的上下文工程讲解_LangChain联合Manus.md
 - wiki/sources/关于Nano_Banana的一些浅思.md
-confidence: medium
-type: entity
-summary: Gemini 是 Google 的 AI 助手 APP，在本批次文章中作为 AIGC 工具出现，具备 PPT 生成、深度研究、搜索、与谷歌其他产品打通等能力。Veo
-  3 视频生成也需要 Gemini Pro 账号。
-created: '2026-07-06'
 updated: '2026-07-06'
 ---
 

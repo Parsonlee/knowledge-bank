@@ -2,12 +2,11 @@
 type: concept
 tags:
 - LLM/reasoning
-- AI-Agent
-created: '2026-06-29'
-updated: '2026-06-29'
+- AI-Agent/coding
 summary: 大模型 Agent 在完成任务的计划-决策-控制循环中，需要三种核心能力：感知、记忆、推理。CoT 从三个维度赋能 Agent。
 sources:
 - wiki/sources/Anthropic再发Agent神文_像人类工程师一样思考解决长程任务难题.md
+updated: '2026-06-29'
 ---
 
 

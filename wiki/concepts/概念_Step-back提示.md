@@ -1,12 +1,9 @@
 ---
-tags:
-- RAG
-- RAG/query
-confidence: high
 type: concept
+tags:
+- RAG/retrieval
+- RAG/query
 summary: Step-back 提示（退步提示 / Step-Back Prompting）是一种 Query Translation 方法，当问题太具体时退一步生成更广泛、更通用的查询，帮助检索相关的背景信息。通过考虑高层次概念和原则来解决复杂问题。
-created: '2026-07-06'
-updated: '2026-07-06'
 sources:
 - wiki/sources/RAG技巧与底层代码剖析.md
 - wiki/sources/RAG查询翻译_Query_Translation.md
@@ -14,6 +11,7 @@ sources:
 - wiki/sources/RAG高级优化_query转换之路.md
 - wiki/sources/提升RAG问答质量的技术路线.md
 - wiki/sources/腾讯查询优化四大类综述.md
+updated: '2026-07-06'
 ---
 
 # 概念_Step-back提示

@@ -8,9 +8,7 @@ summary: Batch Normalization 沿通道在 batch 维度（N,H,W）计算均值方
 sources:
 - wiki/sources/Normalization方法总结_BN_LN_IN_GN.md
 - wiki/sources/PyTorch常用代码段合集.md
-created: '2026-06-26'
 updated: '2026-06-26'
-confidence: high
 ---
 
 

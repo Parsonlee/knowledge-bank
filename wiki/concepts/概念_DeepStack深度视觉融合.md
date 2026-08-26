@@ -1,12 +1,11 @@
 ---
 type: concept
 tags:
-- LLM/Multimodal
+- LLM/arch
 summary: DeepStack：Qwen3-VL 的多层次视觉特征注入技术，从 ViT 多个中间层提取特征，注入 LLM 解码器前几层，实现深度视觉-语言融合
-created: '2026-06-29'
-updated: '2026-06-29'
 sources:
 - wiki/sources/从LLaVA到Qwen3-VL_多模态架构演进.md
+updated: '2026-06-29'
 ---
 
 

@@ -1,13 +1,12 @@
 ---
 type: concept
 tags:
-  - llm
-  - decoding-strategies
-  - natural-language-processing
+- LLM/arch
+- LLM/inference
+- DeepLearning
 summary: LLM 文本生成解码策略定义了在模型预测出每个 token 的概率分布后，如何选择最合适的 token 组合生成最终文本。本页对比分析了贪婪搜索、多项式采样、束搜索与对比搜索四大核心策略。
 sources:
-  - wiki/sources/2026-07-07_4-LLM-text-generation-strategies_19f3d7.md
-created: '2026-08-04'
+- wiki/sources/2026-07-07_4-LLM-text-generation-strategies_19f3d7.md
 updated: '2026-08-04'
 ---
 

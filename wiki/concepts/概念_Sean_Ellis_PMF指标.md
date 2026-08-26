@@ -3,11 +3,9 @@ type: concept
 tags:
 - 创业
 summary: Sean Ellis 提出的 PMF 领先指标：问'用不了会怎样'，回答'非常失望'比例超 40%
-created: '2026-06-30'
-updated: '2026-06-30'
-confidence: high
 sources:
 - wiki/sources/Superhuman_PMF引擎方法论.md
+updated: '2026-06-30'
 ---
 
 

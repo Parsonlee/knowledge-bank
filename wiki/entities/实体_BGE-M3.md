@@ -10,9 +10,7 @@ sources:
 - wiki/sources/RAGAS评估RAG系统.md
 - wiki/sources/RAG文本切分_token优化.md
 - wiki/sources/TableRAG_文本表格异构问答.md
-created: '2026-06-29'
 updated: '2026-07-01'
-confidence: high
 ---
 
 ## 简介

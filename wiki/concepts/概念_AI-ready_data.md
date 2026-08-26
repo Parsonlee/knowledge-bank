@@ -2,11 +2,10 @@
 type: concept
 tags:
 - AI-Agent/AI-BI
-created: '2026-06-29'
-updated: '2026-06-29'
 summary: AI-ready data 是指经过系统化整理、使 AI 模型（特别是 NL2SQL 场景）能够可靠使用的数据底座，是 NL2SQL 可靠落地的第一性问题。
 sources:
 - wiki/sources/企业落地NL2SQL_AI-ready_data与小模型.md
+updated: '2026-06-29'
 ---
 
 

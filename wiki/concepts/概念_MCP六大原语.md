@@ -1,15 +1,14 @@
 ---
 type: concept
 tags:
-  - AI-Agent/tool-calling
-  - AI-Agent/MCP
-summary: MCP 协议定义六大原语：Tool（模型主动）、Prompt（用户主动）、Resource（应用主动）、Sampling（服务器发起补全）、Roots（环境感知）、Elicitations（启发/人工介入原语），用于构建对称的双向 AI-Server 通信。
-created: '2026-06-29'
-updated: '2026-08-03'
+- AI-Agent/tool-calling
+summary: MCP 协议定义六大原语：Tool（模型主动）、Prompt（用户主动）、Resource（应用主动）、Sampling（服务器发起补全）、Roots（环境感知）、Elicitations（启发/人工介入原语），用于构建对称的双向
+  AI-Server 通信。
 sources:
-  - wiki/sources/HumanInTheLoop用MCP实现.md
-  - wiki/sources/MCP五大原语与Web化.md
-  - wiki/sources/2026-03-04_6-must-know-MCP-primitives-for-AI-Engineers_19cba7.md
+- wiki/sources/HumanInTheLoop用MCP实现.md
+- wiki/sources/MCP五大原语与Web化.md
+- wiki/sources/2026-03-04_6-must-know-MCP-primitives-for-AI-Engineers_19cba7.md
+updated: '2026-08-03'
 ---
 
 ## 定义

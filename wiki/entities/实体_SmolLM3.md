@@ -3,13 +3,12 @@ type: entity
 tags:
 - LLM/training/post-train
 - LLM/training/pre-train
+summary: '- 类型：开源 LLM'
 sources:
 - wiki/sources/2025年七大顶流大模型架构.md
 - wiki/sources/HuggingFace手把手训练大模型实战指南.md
 - wiki/sources/从DeepSeek-V3到Kimi_K2_八种现代LLM架构大比较.md
-created: '2026-06-29'
 updated: '2026-06-29'
-summary: '- 类型：开源 LLM'
 ---
 
 # 实体：SmolLM3

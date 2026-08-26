@@ -16,9 +16,7 @@ sources:
 - wiki/sources/从DeepSeek-V3到Kimi_K2_八种现代LLM架构大比较.md
 - wiki/sources/大模型显存计算公式与优化.md
 - wiki/sources/推测解码Speculative_Decoding综述.md
-created: '2026-06-26'
 updated: '2026-06-26'
-confidence: high
 ---
 
 # 实体：FlashAttention

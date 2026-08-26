@@ -2,13 +2,12 @@
 title: 月之暗面 Agent开发岗，凉凉！！！
 source: https://mp.weixin.qq.com/s/9WWhoZISGJE80gkYuYuyIA
 author:
-  - "[[AIGC小白入门记]]"
+- '[[AIGC小白入门记]]'
 published: 2026-07-22
 created: 2026-07-22
-description:
+description: null
 tags:
-  - clippings
-  - 面试
+- 面试
 ---
 AIGC小白入门记 AIGC小白入门记 *2026年7月21日 22:15*
 

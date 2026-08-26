@@ -2,7 +2,7 @@
 type: entity
 tags:
 - AI-Agent/tool-calling
-- RAG
+- RAG/retrieval
 summary: 业界主流的大模型应用流水线与 RAG 链式编排框架。
 sources:
 - wiki/sources/AI_Agent与AI_Workflow的区别和深度解析.md
@@ -33,9 +33,7 @@ sources:
 - wiki/sources/从提示员到系统架构师：Loop Engineering 的范式跃迁.md
 - wiki/sources/向量数据库原理与应用全解析.md
 - wiki/sources/浅谈上下文工程_Claude_Code_Manus_Kiro.md
-created: '2026-06-29'
 updated: '2026-07-01'
-confidence: medium
 ---
 
 > [!note] 说明

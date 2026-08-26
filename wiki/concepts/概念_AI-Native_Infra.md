@@ -7,9 +7,7 @@ summary: AI-Native Infra 是专为 AI（而非人类工程师）设计的基础�
 sources:
 - wiki/sources/AI-Native的Infra演化路线L0到L5.md
 - wiki/sources/入局AI_Infra系统设计与挑战.md
-created: '2026-06-29'
 updated: '2026-06-29'
-confidence: high
 ---
 
 

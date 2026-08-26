@@ -6,9 +6,7 @@ tags:
 summary: 微软开源的分布式训练框架，提出 ZeRO 系列显存优化策略（Zero1/2/3）。
 sources:
 - wiki/sources/企业落地NL2SQL_AI-ready_data与小模型.md
-created: '2026-06-29'
 updated: '2026-06-29'
-confidence: medium
 ---
 
 # 实体：DeepSpeed

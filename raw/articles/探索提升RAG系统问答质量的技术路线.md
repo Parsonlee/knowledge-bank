@@ -1,10 +1,9 @@
 ---
-id: "7286752879245790714"
+id: '7286752879245790714'
 cubox_url: https://cubox.pro/web/card/7286752879245790714
 url: https://mp.weixin.qq.com/s?__biz=MzI2ODUyMTQyNA==&mid=2247495664&idx=1&sn=2f7fa8ccdbe147b073b5516c00803461&chksm=eaecf54fdd9b7c592002a858b8e7b0d973f31eb69d3132e820b7e7518ba86b68d2c561df9441&cur_album_id=3689450339863740420&scene=189
 tags:
-  - RAG
-
+- RAG/retrieval
 published: 2025-02-02
 ---
 # 探索提升RAG系统问答质量的技术路线

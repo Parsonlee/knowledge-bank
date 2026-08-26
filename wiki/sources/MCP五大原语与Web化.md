@@ -6,9 +6,7 @@ summary: MCP 联合创建者 David 解构五大原语（Prompt/Resource/Tool/Sam
   2.1 + Streamable HTTP）的未来方向
 sources:
 - raw/articles/MCP不止工具调用！MCP联合创建者：绝大多数人用法都太初级！曝MCP五大原语、....md
-created: '2026-06-29'
 updated: '2026-07-01'
-confidence: high
 ---
 ## 来源信息
 

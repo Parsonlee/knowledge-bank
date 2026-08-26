@@ -1,11 +1,10 @@
 ---
 type: concept
 tags:
-- Skill/knowledge-bank
+- AI-Agent/skill
 summary: Vannevar Bush 于 1945 年提出的个人机电知识设备构想，以“关联性路径”为核心，是现代个人知识管理与超链接系统的思想鼻祖。
 sources:
 - wiki/sources/Karpathy推文引发的LLM_Wiki知识库搭建实践.md
-created: '2026-07-22'
 updated: '2026-07-22'
 ---
 

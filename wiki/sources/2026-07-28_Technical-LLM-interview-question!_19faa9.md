@@ -1,8 +1,7 @@
 ---
 type: source
 tags:
-- AI-Agent/evaluation
-- Software-Engineering/Observability
+- AI-Agent/coding
 summary: 本文介绍了 DigitalOcean 提出的基于确定性、轻量化行为信号对生产环境 Agent 交互轨迹进行高效低成本筛选过滤的采样策略，大幅提升了人工标注的效率。
 sources:
 - raw/articles/2026-07-28_Technical-LLM-interview-question!_19faa9.md

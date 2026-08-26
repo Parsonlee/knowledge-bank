@@ -2,11 +2,11 @@
 title: Claude Code + Obsidian + 飞书，我搭了一套会自己长大的知识库
 source: https://mp.weixin.qq.com/s/QTSqMJm4rXKHHzPLae5xKw
 author:
-  - "[[翻斗花园二蛋]]"
+- '[[翻斗花园二蛋]]'
 published: 2026-04-14
 description: LLM wiki
 tags:
-  - Skill/knowledge-bank
+- AI-Agent/skill
 ---
 翻斗花园二蛋 翻斗花园二蛋 *2026年4月14日 22:42*
 

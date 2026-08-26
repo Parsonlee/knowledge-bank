@@ -17,9 +17,7 @@ sources:
 - wiki/sources/大模型显存计算公式与优化.md
 - wiki/sources/推测解码Speculative_Decoding综述.md
 - wiki/sources/2025-11-28_Two-techniques-to-extend-the-context-length-of-LLMs_19acc3.md
-created: '2026-06-26'
 updated: '2026-08-03'
-confidence: high
 ---
 
 

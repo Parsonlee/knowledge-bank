@@ -1,14 +1,13 @@
 ---
 title: Vault 死链治理与单向推导架构维护复盘
-source:
+source: null
 author:
-  - "[[Hugo Yang]]"
+- '[[Hugo Yang]]'
 published: 2026-07-08
 created: 2026-07-08
 description: 知识库图谱死链深度诊断、分类治理与级联清理安全边界，针对假性死链鉴别、级联清理防损红线与单向推导管线架构维护提供防错警示指导。
 tags:
-  - clippings
-  - Skill/knowledge-bank
+- AI-Agent/skill
 ---
 # Vault 死链治理与单向推导架构维护复盘
 

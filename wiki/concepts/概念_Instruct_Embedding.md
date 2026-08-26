@@ -1,14 +1,12 @@
 ---
+type: concept
 tags:
 - RAG/embedding
-- RAG
-confidence: high
-type: concept
+- RAG/retrieval
 summary: Instruct Embedding 是一种在编码查询时附带任务指令（instruct）的嵌入方式，通过指令引导模型理解查询意图，使同一模型能适应不同检索/匹配任务。
-created: '2026-07-06'
-updated: '2026-07-06'
 sources:
 - wiki/sources/为什么用Qwen3_embedding和rerank.md
+updated: '2026-07-06'
 ---
 
 # 概念_Instruct_Embedding

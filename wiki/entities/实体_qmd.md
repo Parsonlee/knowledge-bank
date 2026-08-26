@@ -1,12 +1,11 @@
 ---
 type: entity
 tags:
-- Skill/knowledge-bank
+- AI-Agent/skill
 - RAG/retrieval
 summary: 基于 Rust 编写的本地 Markdown 搜索引擎，支持全文检索、语义搜索与混合搜索。
 sources:
 - wiki/sources/Karpathy推文引发的LLM_Wiki知识库搭建实践.md
-created: '2026-07-22'
 updated: '2026-07-22'
 ---
 

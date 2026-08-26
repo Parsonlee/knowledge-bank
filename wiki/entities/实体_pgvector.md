@@ -6,7 +6,6 @@ tags:
 summary: PostgreSQL 的开源向量检索扩展插件，支持原生 SQL 向量查询与事务复用。
 sources:
 - wiki/sources/2026程序员必读的向量数据库原理与选型指南.md
-created: '2026-07-22'
 updated: '2026-07-22'
 ---
 

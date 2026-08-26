@@ -1,16 +1,14 @@
 ---
+type: concept
 tags:
 - RAG/embedding
 - DeepLearning
-confidence: high
-type: concept
 summary: SimCSE 是基于对比学习的句向量优化方法，是缓解 概念BERT各向异性 的无监督优化代表。核心发现：利用预训练模型自带的 Dropout mask
   作为"增广手段"，得到的句向量质量远好于传统文本增广方法。
-created: '2026-07-06'
-updated: '2026-07-06'
 sources:
 - wiki/sources/一文详尽之Embedding.md
 - wiki/sources/美团搜索查询改写实践.md
+updated: '2026-07-06'
 ---
 
 # 概念_SimCSE

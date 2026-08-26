@@ -6,9 +6,7 @@ summary: '[[实体_Gemini]] APP 新上线 PPT 生成能力，作者实测后认�
   PPT 风格细节，作者评价「生成质量比 Anthropic 那一坨强多了」。该能力可与 Gemini 本身及谷歌其他产品打通。'
 sources:
 - raw/playbooks/Gemini 的 PPT 生成：使用技巧及模板提示词.md
-created: '2026-06-29'
 updated: '2026-07-01'
-confidence: high
 cubox_url: https://cubox.pro/web/card/7387387562941218975
 date_clipped: 2025-11-10
 ---

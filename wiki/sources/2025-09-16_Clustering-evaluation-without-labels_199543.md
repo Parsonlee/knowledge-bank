@@ -1,14 +1,12 @@
 ---
-type: "source"
+type: source
 tags:
-  - machine-learning
-  - clustering
-  - evaluation
-  - unsupervised-learning
-summary: "介绍在无标签情况下评估聚类质量的三种常用指标：轮廓系数（Silhouette Coefficient）、CH指数（Calinski-Harabasz Index）以及基于密度的聚类验证（DBCV），并对比了它们各自的计算开销与适用场景。"
+- Skill/data-analysis
+summary: 介绍在无标签情况下评估聚类质量的三种常用指标：轮廓系数（Silhouette Coefficient）、CH指数（Calinski-Harabasz
+  Index）以及基于密度的聚类验证（DBCV），并对比了它们各自的计算开销与适用场景。
 sources:
-  - "raw/articles/2025-09-16_Clustering-evaluation-without-labels_199543.md"
-updated: "2026-08-03"
+- raw/articles/2025-09-16_Clustering-evaluation-without-labels_199543.md
+updated: '2026-08-03'
 ---
 
 # 2025-09-16_Clustering-evaluation-without-labels_199543

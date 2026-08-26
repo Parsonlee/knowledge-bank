@@ -6,9 +6,7 @@ summary: 腾讯 OlaChat 智能 BI 平台实践：多任务对话系统 + 任务�
   + Text2SQL 微调+Agent 方案
 sources:
 - raw/articles/腾讯基于 LLM 的智能数据分析平台 OlaChat 的落地实践.md
-created: '2026-06-29'
 updated: '2026-07-01'
-confidence: high
 ---
 # 腾讯基于 LLM 的智能数据分析平台 OlaChat 的落地实践
 

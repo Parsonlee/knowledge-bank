@@ -1,15 +1,13 @@
 ---
-tags:
-- RAG
-confidence: high
 type: concept
+tags:
+- RAG/retrieval
 summary: GraphRAG 是以图结构组织知识的检索增强生成方法，通过将文本知识构建成实体-关系图谱或层次化树结构，实现细粒度知识推理和复杂多跳查询，突破传统向量检索的局限。
-created: '2026-07-06'
-updated: '2026-07-06'
 sources:
 - wiki/sources/RAG系统设计_语义搜索与KG驱动选型.md
 - wiki/sources/优图RAG技术详解.md
 - wiki/sources/跨模态知识联邦与统一语义推理RAG.md
+updated: '2026-07-06'
 ---
 
 # 概念_GraphRAG

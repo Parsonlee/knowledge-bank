@@ -5,9 +5,7 @@ tags:
 summary: 2011 武大核工程本科 → 自学平面设计+网页编程 → 取网名 idoubi 致敬 Adobe。
 sources:
 - raw/insights/一年上线超 10 款产品，AI 时代如何做独立开发.md
-created: '2026-06-29'
 updated: '2026-07-01'
-confidence: high
 cubox_url: https://cubox.pro/web/card/7348601856957875896
 ingested: 2026-06-30
 ---

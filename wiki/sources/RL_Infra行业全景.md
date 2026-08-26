@@ -8,9 +8,7 @@ summary: 海外独角兽 Cage 梳理 RL Infra 行业全景：RL 环境（应用�
   Training）范式。
 sources:
 - raw/insights/RL Infra 行业全景：环境和 RLaaS 如何加速 RL 的 GPT-3 ....md
-created: '2026-06-29'
 updated: '2026-07-01'
-confidence: high
 ---
 # RL Infra 行业全景：环境和 RLaaS 如何加速 RL 的 GPT-3 时刻
 

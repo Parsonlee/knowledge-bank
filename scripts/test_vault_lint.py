@@ -50,7 +50,7 @@ class TestVaultLint(unittest.TestCase):
     def frontmatter(self, page_type, sources, **overrides):
         fields = {
             'type': f'"{page_type}"',
-            'tags': '["Test"]',
+            'tags': '["LLM/arch"]',
             'summary': '"A summary"',
             'sources': sources,
             'updated': '"2026-08-11"',
@@ -158,8 +158,12 @@ class TestVaultLint(unittest.TestCase):
         raw_path = 'raw/articles/raw_a.md'
         self.write_file(raw_path, '# Raw')
         cases = {
-            'tags_scalar': {'tags': '"Test"'},
-            'tags_item_type': {'tags': '["Test", 1]'},
+            'tags_scalar': {'tags': '"LLM/arch"'},
+            'tags_item_type': {'tags': '["LLM/arch", 1]'},
+            'tags_unapproved': {'tags': '["random-tag"]'},
+            'tags_top_level_pooling': {'tags': '["RAG"]'},
+            'forbidden_confidence': {'confidence': '"high"'},
+            'forbidden_created': {'created': '"2026-08-01"'},
             'summary_empty': {'summary': '"   "'},
             'summary_type': {'summary': '["summary"]'},
             'invalid_calendar_date': {'updated': '"2026-02-30"'},
@@ -174,6 +178,23 @@ class TestVaultLint(unittest.TestCase):
                 self.append_to_index(path.relative_to(self.test_dir).as_posix())
                 self.assert_lint_fails()
                 path.unlink()
+
+    def test_tag_whitelist_and_disambiguation(self):
+        raw_path = 'raw/articles/raw_a.md'
+        self.write_file(raw_path, '# Raw')
+        # Valid tags on source page
+        valid_source = self.write_file(
+            'wiki/sources/valid_source.md',
+            self.frontmatter('source', f'["{raw_path}"]', tags='["LLM/arch", "Skill/python", "DeepLearning"]'),
+        )
+        self.append_to_index('wiki/sources/valid_source.md')
+        # Valid top-level tag on overview page
+        valid_overview = self.write_file(
+            'wiki/overview/valid_overview.md',
+            self.frontmatter('overview', '["wiki/sources/valid_source.md"]', tags='["RAG"]'),
+        )
+        self.append_to_index('wiki/overview/valid_overview.md')
+        self.run_lint()
 
     def test_page_type_must_match_directory(self):
         source_path = self.add_valid_source()

@@ -1,13 +1,11 @@
 ---
-type: "concept"
+type: concept
 tags:
-  - machine-learning
-  - dimensionality-reduction
-  - mathematics
+- Skill/data-analysis
+summary: PCA 通过主成分进行降维，但只有前两个主成分解释了大部分原始方差时才适合二维可视化，累计解释方差曲线可用于验证并选择保留维数。
 sources:
-  - "wiki/sources/2025-10-18_Avoid-Using-PCA-for-Visualization-Unless..._199f91.md"
-updated: "2026-08-03"
-summary: "PCA 通过主成分进行降维，但只有前两个主成分解释了大部分原始方差时才适合二维可视化，累计解释方差曲线可用于验证并选择保留维数。"
+- wiki/sources/2025-10-18_Avoid-Using-PCA-for-Visualization-Unless..._199f91.md
+updated: '2026-08-03'
 ---
 
 # 主成分分析 (Principal Component Analysis, PCA)

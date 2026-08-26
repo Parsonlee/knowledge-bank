@@ -1,11 +1,13 @@
 ---
-type: "concept"
-tags: ["AI-Agent/skill", "AI-Agent/eval"]
-summary: "Skill 触发评价必须同时评估漏触发（False Negative）与误触发（False Positive），结合 Precision 与 Recall 指向高风险或关键业务场景。"
+type: concept
+tags:
+- AI-Agent/skill
+- AI-Agent/coding
+summary: Skill 触发评价必须同时评估漏触发（False Negative）与误触发（False Positive），结合 Precision 与 Recall
+  指向高风险或关键业务场景。
 sources:
 - wiki/sources/如何系统评价一个_Agent_Skill.md
-created: "2026-07-22"
-updated: "2026-07-22"
+updated: '2026-07-22'
 ---
 
 # 概念：Skill 误触发与漏触发评价

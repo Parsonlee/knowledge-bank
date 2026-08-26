@@ -2,11 +2,10 @@
 type: entity
 tags:
 - LLM/training/post-train
+summary: '- 全称：Model-oriented Data Selection'
 sources:
 - wiki/sources/SFT数据挑选方法_质量多样性必要性.md
-created: '2026-06-29'
 updated: '2026-06-29'
-summary: '- 全称：Model-oriented Data Selection'
 ---
 
 # 实体：MoDS

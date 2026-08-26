@@ -6,9 +6,7 @@ summary: 生产环境下部署 FastAPI 高并发服务的实践指南，深入�
   环境稳定调优配置。
 sources:
 - raw/playbooks/Uvicorn、Gunicorn 傻傻分不清？FastAPI 生产部署避坑指南.md
-created: '2026-07-02'
 updated: '2026-07-02'
-confidence: high
 ---
 # FastAPI生产部署ASGI_WSGI避坑指南
 

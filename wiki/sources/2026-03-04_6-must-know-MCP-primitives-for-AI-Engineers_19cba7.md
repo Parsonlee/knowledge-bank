@@ -1,11 +1,11 @@
 ---
 type: source
 tags:
-  - AI-Agent/MCP
-  - AI-Agent/tool-calling
-summary: 介绍了 AI 工程师必须掌握的 6 个 Model Context Protocol (MCP) 原语，包括客户端的 Sampling、Roots、Elicitations，以及服务端的 Tools、Resources、Prompts，阐述了其作为双向通信协议超越传统单向工具调用的特性。
+- AI-Agent/tool-calling
+summary: 介绍了 AI 工程师必须掌握的 6 个 Model Context Protocol (MCP) 原语，包括客户端的 Sampling、Roots、Elicitations，以及服务端的
+  Tools、Resources、Prompts，阐述了其作为双向通信协议超越传统单向工具调用的特性。
 sources:
-  - raw/articles/2026-03-04_6-must-know-MCP-primitives-for-AI-Engineers_19cba7.md
+- raw/articles/2026-03-04_6-must-know-MCP-primitives-for-AI-Engineers_19cba7.md
 updated: '2026-08-03'
 ---
 

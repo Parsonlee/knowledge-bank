@@ -5,9 +5,7 @@ tags:
 summary: IBM 开源的高精度复杂文档与多模态 PDF 解析切分工具库。
 sources:
 - wiki/sources/RAG挑战赛冠军方案.md
-created: '2026-06-29'
 updated: '2026-07-01'
-confidence: high
 ---
 
 ## 简介

@@ -1,12 +1,11 @@
 ---
 type: entity
 tags:
-- Skill/knowledge-bank
+- AI-Agent/skill
 - DeepLearning
 summary: 美国著名工程师与科学管理者，1945 年提出 Memex 个人知识设备构想，被公认为现代个人知识管理与超链接鼻祖。
 sources:
 - wiki/sources/Karpathy推文引发的LLM_Wiki知识库搭建实践.md
-created: '2026-07-22'
 updated: '2026-07-22'
 ---
 

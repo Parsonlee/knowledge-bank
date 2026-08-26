@@ -1,13 +1,13 @@
 ---
 type: source
 tags:
-  - Attention-Mechanism
-  - KV-Cache
-  - Kimi-K3
-  - LLM-Serving
-summary: 本文介绍了 Kimi K3 采用的 Delta Attention 机制。该机制摒弃了传统随序列无限增长的 KV 缓存，将历史关联压缩在固定大小的矩阵中，实现了 $O(1)$ 空间与 $O(N)$ 计算的线性开销，并通过先读后写、只写差值（Delta Rule）来更新关联，结合混合交替方案以保证召回精度。
+- LLM/arch/attention
+- LLM/inference
+- LLM/arch
+summary: 本文介绍了 Kimi K3 采用的 Delta Attention 机制。该机制摒弃了传统随序列无限增长的 KV 缓存，将历史关联压缩在固定大小的矩阵中，实现了
+  $O(1)$ 空间与 $O(N)$ 计算的线性开销，并通过先读后写、只写差值（Delta Rule）来更新关联，结合混合交替方案以保证召回精度。
 sources:
-  - raw/articles/2026-07-24_Delta-attention-in-Kimi-K3-to-fix-growing-KV-cache_19f962.md
+- raw/articles/2026-07-24_Delta-attention-in-Kimi-K3-to-fix-growing-KV-cache_19f962.md
 updated: '2026-08-04'
 ---
 

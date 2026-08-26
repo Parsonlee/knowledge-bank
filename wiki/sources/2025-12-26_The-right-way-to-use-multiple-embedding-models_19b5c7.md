@@ -1,12 +1,11 @@
 ---
-type: "source"
+type: source
 tags:
-  - "machine-learning"
-  - "embedding"
-  - "representation-learning"
-summary: "探讨在多模型流水线中混用多个 Embedding 模型时的局限性，阐述了等维异构空间无法直接度量相似度的物理原因，并提出了特征拼接与对齐训练等解决方案。"
+- Skill/data-analysis
+- RAG/embedding
+summary: 探讨在多模型流水线中混用多个 Embedding 模型时的局限性，阐述了等维异构空间无法直接度量相似度的物理原因，并提出了特征拼接与对齐训练等解决方案。
 sources:
-  - "raw/articles/2025-12-26_The-right-way-to-use-multiple-embedding-models_19b5c7.md"
+- raw/articles/2025-12-26_The-right-way-to-use-multiple-embedding-models_19b5c7.md
 updated: 2026-08-03
 ---
 

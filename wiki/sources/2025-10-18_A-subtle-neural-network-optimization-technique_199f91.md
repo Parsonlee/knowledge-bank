@@ -1,15 +1,15 @@
 ---
-type: "source"
+type: source
 tags:
-  - deep-learning
-  - neural-network
-  - optimization
-  - gpu
-  - data-transfer
-summary: "讨论神经网络训练中的一个细微优化技巧：在图像分类等任务中，将数据归一化（如从 8-bit 整数转为 32-bit 浮点数）的时机放在数据传输到 GPU 之后，以减少 CPU 到 GPU 的数据搬运量，从而提高训练效率。"
+- DeepLearning
+- Skill/data-analysis
+- Infra/gpu
+- Infra/AI
+summary: 讨论神经网络训练中的一个细微优化技巧：在图像分类等任务中，将数据归一化（如从 8-bit 整数转为 32-bit 浮点数）的时机放在数据传输到 GPU
+  之后，以减少 CPU 到 GPU 的数据搬运量，从而提高训练效率。
 sources:
-  - "raw/articles/2025-10-18_A-subtle-neural-network-optimization-technique_199f91.md"
-updated: "2026-08-03"
+- raw/articles/2025-10-18_A-subtle-neural-network-optimization-technique_199f91.md
+updated: '2026-08-03'
 ---
 
 # 2025-10-18_A-subtle-neural-network-optimization-technique_199f91

@@ -7,9 +7,7 @@ sources:
 - wiki/sources/Jina_AI创业复盘.md
 - wiki/sources/为什么用Qwen3_embedding和rerank.md
 - wiki/sources/大模型算法岗面试百问百答.md
-created: '2026-06-29'
 updated: '2026-07-01'
-confidence: high
 ---
 
 ## 简介

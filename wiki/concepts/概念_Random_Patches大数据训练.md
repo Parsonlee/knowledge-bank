@@ -1,16 +1,12 @@
 ---
 type: concept
 tags:
-- machine-learning
-- random-patches
-- ensemble-learning
-- bagging
-summary: 随机贴片大数据训练（Random Patches）是一种用于克服经典树集成模型内存瓶颈的技术。它通过在样本（行）和特征（列）两个维度上同时进行随机采样构建子空间，降低决策树之间的重合度与相关性，以最大化 Bagging 的方差降低效应（Variance Reduction），从而实现内存友好且稳健的模型训练。
+- Skill/data-analysis
+summary: 随机贴片大数据训练（Random Patches）是一种用于克服经典树集成模型内存瓶颈的技术。它通过在样本（行）和特征（列）两个维度上同时进行随机采样构建子空间，降低决策树之间的重合度与相关性，以最大化
+  Bagging 的方差降低效应（Variance Reduction），从而实现内存友好且稳健的模型训练。
 sources:
 - wiki/sources/2026-05-05_Train-classical-ML-models-on-large-datasets_19dfa2.md
-created: '2026-08-04'
 updated: '2026-08-04'
-confidence: high
 ---
 
 # 概念：Random Patches 大数据训练

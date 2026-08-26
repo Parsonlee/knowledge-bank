@@ -6,9 +6,7 @@ summary: Grammarly：年收入超 7 亿美金嵌入式 AI 写作工具，收购 
 sources:
 - wiki/sources/Bundle_Unbundle视角看AI时代机会.md
 - wiki/sources/Superhuman_PMF引擎方法论.md
-created: '2026-06-30'
 updated: '2026-06-30'
-confidence: high
 ---
 
 # 实体：Grammarly

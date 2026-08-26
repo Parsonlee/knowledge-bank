@@ -1,13 +1,12 @@
 ---
-type: "source"
+type: source
 tags:
-  - "llm"
-  - "distillation"
-  - "fine-tuning"
-summary: "探讨在微调和蒸馏小模型时，使用过于强大的教师模型反而导致性能下降的容量匹配法则。"
+- LLM/arch
+- LLM/training/post-train
+summary: 探讨在微调和蒸馏小模型时，使用过于强大的教师模型反而导致性能下降的容量匹配法则。
 sources:
-  - "raw/articles/2026-05-01_A-tricky-LLM-interview-question-for-AI-Engineers_19de58.md"
-updated: "2026-08-04"
+- raw/articles/2026-05-01_A-tricky-LLM-interview-question-for-AI-Engineers_19de58.md
+updated: '2026-08-04'
 ---
 
 # A tricky LLM interview question for AI Engineers

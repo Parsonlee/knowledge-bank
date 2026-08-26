@@ -1,13 +1,14 @@
 ---
-title: "深度剖析 DeepSeek 最新的 Harness DSH：为了自进化这盘醋包了一整盘饺子"
-source: "https://yage.ai/share/dsh-deep-analysis-20260813.html?utm_source=convertkit&utm_medium=email&utm_campaign=%5B%E9%B8%AD%E5%93%A5%20AI%20%E6%89%8B%E8%AE%B0%5D%202026-08-13%3A%20650%20%E4%B8%AA%E6%83%B3%E6%B3%95%E5%85%A8%E5%A4%B1%E8%B4%A5%EF%BC%8C%E4%BD%86%E4%B8%80%E6%9D%A1%E9%83%BD%E6%B2%A1%E7%99%BD%E6%AD%BB%20-%2022904205"
+title: 深度剖析 DeepSeek 最新的 Harness DSH：为了自进化这盘醋包了一整盘饺子
+source: https://yage.ai/share/dsh-deep-analysis-20260813.html?utm_source=convertkit&utm_medium=email&utm_campaign=%5B%E9%B8%AD%E5%93%A5%20AI%20%E6%89%8B%E8%AE%B0%5D%202026-08-13%3A%20650%20%E4%B8%AA%E6%83%B3%E6%B3%95%E5%85%A8%E5%A4%B1%E8%B4%A5%EF%BC%8C%E4%BD%86%E4%B8%80%E6%9D%A1%E9%83%BD%E6%B2%A1%E7%99%BD%E6%AD%BB%20-%2022904205
 author:
-  - "[[鸭哥]]"
+- '[[鸭哥]]'
 published: 2026-08-13
 created: 2026-08-17
-description: "DeepSeek 的 DSH 把 agent loop 本身做成插件，用 Cordis 运行时管理副作用撤销和依赖响应。跟 Codex 的声明式插件模型对照后发现：上限相同，下限不同，对大多数日常开发没用。唯一的结构性优势是让 harness 自进化。"
+description: DeepSeek 的 DSH 把 agent loop 本身做成插件，用 Cordis 运行时管理副作用撤销和依赖响应。跟 Codex 的声明式插件模型对照后发现：上限相同，下限不同，对大多数日常开发没用。唯一的结构性优势是让
+  harness 自进化。
 tags:
-  - "clippings"
+- AI-Agent/coding
 ---
 Codex 有自己的 harness，Claude Code 有自己的 harness，OpenCode 有自己的 harness，连 Kimi 都有了自己的 harness。DeepSeek 一直保持沉默。8 月 13 日，它终于发布了第一个版本的 harness，叫 DSH（DeepSeek Harness）， [代码开源在 GitHub 上](https://github.com/deepseek-ai/deepseek-harness) 。如果你去看它配套的 [论文](https://github.com/cordiverse/paper) ，标题叫 *A Programming Paradigm for Spatiotemporal Composability* ，满是范畴论符号，∂Γ、twisted composition、monoid homomorphism 一个接一个。刚看到这些的时候，很难不让人产生警惕：这会不会又是研究员在真空里搞出来的球形鸡？理论上堆得很优美，真到了工程里根本没人用？
 

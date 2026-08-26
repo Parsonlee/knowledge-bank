@@ -7,7 +7,6 @@ summary: 开源云原生分布式向量数据库，采用存算分离架构，�
 sources:
 - wiki/sources/2026程序员必读的向量数据库原理与选型指南.md
 - wiki/sources/向量数据库原理与应用全解析.md
-created: '2026-07-22'
 updated: '2026-07-22'
 ---
 

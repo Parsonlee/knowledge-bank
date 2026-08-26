@@ -1,15 +1,12 @@
 ---
 type: source
 tags:
-  - machine-learning
-  - MLOps
-  - model-testing
+- Skill/data-analysis
+- Infra/AI
 summary: 本文介绍了在生产环境中测试机器学习模型的 4 种经典方法，即 A/B 测试、金丝雀测试、交叉测试（Interleaved）以及影子测试（Shadow），并在其扩展阅读中提及了多臂强盗部署（MAB）。
 sources:
-  - raw/articles/2025-02-03_4-ways-to-test-ML-models-in-production_194cd4.md
-created: '2026-08-03'
+- raw/articles/2025-02-03_4-ways-to-test-ML-models-in-production_194cd4.md
 updated: '2026-08-03'
-confidence: high
 ---
 # 4 ways to test ML models in production
 

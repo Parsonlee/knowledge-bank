@@ -1,8 +1,10 @@
 ---
 type: source
-tags: [machine-learning, feature-engineering, data-preprocessing, categorical-encoding]
+tags:
+- Skill/data-analysis
 summary: 介绍了 7 种常见的类别型数据编码技术（One-Hot、Dummy、Effect、Label、Ordinal、Count、Binary）的基本原理、特征输出维度及其适用场景。
-sources: ["raw/articles/2025-12-02_7-categorical-data-encoding-techniques_19ae0c.md"]
+sources:
+- raw/articles/2025-12-02_7-categorical-data-encoding-techniques_19ae0c.md
 updated: 2026-08-03
 ---
 

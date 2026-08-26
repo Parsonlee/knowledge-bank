@@ -1,14 +1,12 @@
 ---
-tags:
-- LLM
-- RAG
-confidence: high
 type: concept
+tags:
+- LLM/arch
+- RAG/retrieval
 summary: OpenAI DevDay 2023 提出的 LLM 应用优化思考框架：不沿线性路径(Prompt→RAG→Finetune)单向推进，而是沿两个正交轴并行迭代优化。
-created: '2026-07-06'
-updated: '2026-07-06'
 sources:
 - wiki/sources/OpenAI_LLM应用最佳实践.md
+updated: '2026-07-06'
 ---
 
 # 概念_LLM应用优化两轴

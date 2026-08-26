@@ -283,7 +283,21 @@ def route(data: dict[str, Any], call: Callable[[list[str]], dict[str, Any]] = ru
                 staging_path = source_dir / filename
                 if staging_path.exists():
                     raise PipelineError(f"待审文章文件已存在: {staging_path}")
+                safe_title = article['title'].replace('"', '\\"')
+                safe_subject = metadata['subject'].replace('"', '\\"')
+                safe_sender = metadata['sender'].replace('"', '\\"')
                 header = (
+                    "---\n"
+                    f"title: \"{safe_title}\"\n"
+                    f"source_key: \"{source.key}\"\n"
+                    f"email_subject: \"{safe_subject}\"\n"
+                    f"email_sender: \"{safe_sender}\"\n"
+                    f"email_date: \"{metadata['date']}\"\n"
+                    f"email_id: \"{record['id']}\"\n"
+                    f"article_id: \"{article_id}\"\n"
+                    f"published: \"{metadata['formatted_date']}\"\n"
+                    "tags: []\n"
+                    "---\n\n"
                     f"# {article['title']}\n\n"
                     f"- **邮件来源**: {source.key}\n"
                     f"- **原邮件主题**: {metadata['subject']}\n"

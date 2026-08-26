@@ -1,7 +1,7 @@
 ---
 type: entity
 tags:
-- LLM
+- LLM/arch
 - AIGC
 summary: 全球顶尖的人工智能研究机构，推出 GPT 系列大模型与 ChatGPT、Sora 等颠覆性生成式 AI 产品，引领大模型时代发展。
 sources:
@@ -27,7 +27,6 @@ sources:
 - wiki/sources/一篇95页最新80种Deep Research系统全面综述.md
 - wiki/sources/强化学习入门指南_RLHF到GRPO.md
 - wiki/sources/翁荔_LLM外在幻觉_原因检测抵抗.md
-created: '2026-07-06'
 updated: '2026-07-06'
 ---
 # 实体_OpenAI

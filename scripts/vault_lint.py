@@ -42,6 +42,52 @@ TIMELINE_FIELDS = (
     'sources',
 )
 
+STANDARD_TOP_LEVEL_TAGS = {
+    'DeepLearning', 'AIGC', '创业', '面试', 'Life', 'Recommendation', 'TTS'
+}
+
+STANDARD_TAG_BRANCHES = {
+    'LLM': {'arch', 'training', 'inference', 'reasoning', 'hallucination', 'tokenization'},
+    'AI-Agent': {'coding', 'tool-calling', 'context-engineering', 'deep-research', 'AI-BI', 'skill', 'prompt-engineering', 'multi-agent', 'memory', 'UI'},
+    'RAG': {'embedding', 'query', 'chunking', 'retrieval', 'eval'},
+    'Skill': {'python', 'data-analysis', 'claude-code', 'linux'},
+    'CV': {'detection', 'data-augmentation', 'arch'},
+    'Infra': {'AI', 'gpu'},
+}
+
+def validate_tag(tag, ptype='source'):
+    """
+    校验 tag 是否符合 AGENTS.md 第 5 节规范。
+    返回 (is_valid, error_msg)
+    """
+    if not isinstance(tag, str) or not tag.strip():
+        return False, f"Tag 必须是非空字符串: {tag!r}"
+    
+    tag = tag.strip()
+    
+    if tag in STANDARD_TOP_LEVEL_TAGS:
+        return True, ""
+    
+    # 宏观综述页允许特定顶层分类
+    if ptype == 'overview' and tag in STANDARD_TAG_BRANCHES:
+        return True, ""
+    
+    if '/' not in tag:
+        if tag in STANDARD_TAG_BRANCHES:
+            return False, f"违反细分叶子优先纪律（禁止顶层池化）: '{tag}' 必须精准锚定细分叶子（如 '{tag}/...'）"
+        return False, f"未批准的非标 Tag: '{tag}'"
+    
+    branch, rest = tag.split('/', 1)
+    if branch not in STANDARD_TAG_BRANCHES:
+        return False, f"未批准的 Tag 主分支: '{branch}' (完整 Tag: '{tag}')"
+    
+    leaf = rest.split('/')[0]
+    if leaf not in STANDARD_TAG_BRANCHES[branch]:
+        allowed = ", ".join(sorted(STANDARD_TAG_BRANCHES[branch]))
+        return False, f"未批准的 Tag 细分叶子: '{leaf}' (分支 '{branch}' 仅允许: {allowed})"
+    
+    return True, ""
+
 class UniqueKeyLoader(yaml.SafeLoader):
     def construct_mapping(self, node, deep=False):
         self.flatten_mapping(node)
@@ -190,21 +236,34 @@ def cmd_lint(workspace):
                 print(f"  ❌ [Schema 错误] {rel}: 缺少必填字段 '{rf}'")
                 has_fatal_errors = True
 
-        tags = fm.get('tags')
-        if not is_string_list(tags, allow_empty=True):
-            print(f"  ❌ [Schema 错误] {rel}: tags 必须是字符串数组")
-            has_fatal_errors = True
-
-        summary = fm.get('summary')
-        if not is_non_empty_string(summary):
-            print(f"  ❌ [Schema 错误] {rel}: summary 必须是非空字符串")
-            has_fatal_errors = True
-
         # Check type
         valid_types = ['source', 'entity', 'concept', 'comparison', 'overview']
         ptype = fm.get('type')
         if ptype not in valid_types:
             print(f"  ❌ [Schema 错误] {rel}: type '{ptype}' 不合法")
+            has_fatal_errors = True
+
+        tags = fm.get('tags')
+        if not is_string_list(tags, allow_empty=True):
+            print(f"  ❌ [Schema 错误] {rel}: tags 必须是字符串数组")
+            has_fatal_errors = True
+        elif tags:
+            for tag in tags:
+                ok, err_msg = validate_tag(tag, ptype)
+                if not ok:
+                    print(f"  ❌ [Tag 错误] {rel}: {err_msg}")
+                    has_fatal_errors = True
+
+        # Check forbidden fields (confidence, created, etc.)
+        forbidden_fields = ['confidence', 'created', 'ai-first']
+        for ff in forbidden_fields:
+            if ff in fm:
+                print(f"  ❌ [Schema 错误] {rel}: 包含禁止的非标字段 '{ff}' (参见 AGENTS.md §2.6)")
+                has_fatal_errors = True
+
+        summary = fm.get('summary')
+        if not is_non_empty_string(summary):
+            print(f"  ❌ [Schema 错误] {rel}: summary 必须是非空字符串")
             has_fatal_errors = True
 
         # Check folder vs type

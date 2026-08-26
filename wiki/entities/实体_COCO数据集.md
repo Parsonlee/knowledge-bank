@@ -1,14 +1,11 @@
 ---
 type: entity
 tags:
-- CV
 - CV/detection
 summary: MS COCO（Common Objects in Context），80 类像素级实例标注数据集，目标检测/分割主流基准。
 sources:
 - wiki/sources/目标检测入门_评测与训练技巧.md
-created: '2026-06-26'
 updated: '2026-06-26'
-confidence: high
 ---
 
 # 实体：COCO 数据集

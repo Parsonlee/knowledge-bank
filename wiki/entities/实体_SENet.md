@@ -1,14 +1,11 @@
 ---
 type: entity
 tags:
-- CV
 - CV/detection
 summary: SENet（Squeeze-and-Excitation Network），通道注意力机制，ILSVRC 最后一届冠军。
 sources:
 - wiki/sources/目标检测入门_基础网络与分类定位权衡.md
-created: '2026-06-26'
 updated: '2026-06-26'
-confidence: high
 ---
 
 # 实体：SENet

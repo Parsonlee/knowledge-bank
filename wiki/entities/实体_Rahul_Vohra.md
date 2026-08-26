@@ -5,9 +5,7 @@ tags:
 summary: Superhuman 创始人兼 CEO，PMF 引擎方法论提出者，前 Rapportive 创始人
 sources:
 - wiki/sources/Superhuman_PMF引擎方法论.md
-created: '2026-06-30'
 updated: '2026-06-30'
-confidence: high
 ---
 
 # 实体：Rahul Vohra

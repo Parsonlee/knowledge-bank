@@ -1,11 +1,11 @@
 ---
 type: source
 tags:
-  - machine-learning/evaluation
-  - machine-learning/methodology
-summary: 探讨了机器学习中训练集、验证集和测试集的标准划分职责，重点阐述了多次迭代调整导致“验证集过拟合与信息泄露”的隐性瓶颈，并提出了 K 折交叉验证与嵌套交叉验证（Nested CV）的机制流程，以及时序、不平衡、分组数据等复杂环境下的划分规范与预处理防泄露指南。
+- Skill/data-analysis
+summary: 探讨了机器学习中训练集、验证集和测试集的标准划分职责，重点阐述了多次迭代调整导致“验证集过拟合与信息泄露”的隐性瓶颈，并提出了 K 折交叉验证与嵌套交叉验证（Nested
+  CV）的机制流程，以及时序、不平衡、分组数据等复杂环境下的划分规范与预处理防泄露指南。
 sources:
-  - raw/articles/2026-03-13_How-to-actually-use-train,-validation,-and-test-sets_19ce93.md
+- raw/articles/2026-03-13_How-to-actually-use-train,-validation,-and-test-sets_19ce93.md
 updated: '2026-08-03'
 ---
 

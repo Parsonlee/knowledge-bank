@@ -2,12 +2,11 @@
 type: concept
 tags:
 - LLM/arch
-created: '2026-06-29'
-updated: '2026-06-29'
 summary: NoPE（No Positional Encoding）是一种不使用任何显式位置嵌入的 Transformer 变体，由因果注意力掩码隐式编码序列顺序信息。
 sources:
 - wiki/sources/2025年七大顶流大模型架构.md
 - wiki/sources/从DeepSeek-V3到Kimi_K2_八种现代LLM架构大比较.md
+updated: '2026-06-29'
 ---
 
 

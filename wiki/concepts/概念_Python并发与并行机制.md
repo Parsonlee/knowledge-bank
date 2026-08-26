@@ -1,15 +1,11 @@
 ---
 type: concept
 tags:
-  - python
-  - concurrency
-  - parallelism
-  - gil
-  - programming
+- Skill/python
+summary: Python 受 GIL 约束时，线程适合 I/O、多进程适合 CPU 并行、协程适合高并发 I/O，子解释器则以独立内存和 GIL 在单进程内提供实验性的并行方案。
 sources:
-  - "wiki/sources/2026-02-04_4-parallel-processing-techniques-in-Python_19c2a8.md"
-updated: "2026-08-03"
-summary: "Python 受 GIL 约束时，线程适合 I/O、多进程适合 CPU 并行、协程适合高并发 I/O，子解释器则以独立内存和 GIL 在单进程内提供实验性的并行方案。"
+- wiki/sources/2026-02-04_4-parallel-processing-techniques-in-Python_19c2a8.md
+updated: '2026-08-03'
 ---
 
 # Python 并发与并行机制

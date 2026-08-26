@@ -1,13 +1,11 @@
 ---
+type: concept
 tags:
 - TTS
-confidence: high
-type: concept
 summary: 实体淘天AIGC团队 为数字人直播 TTS 搭建的完整数据处理流程，从直播回放数据中提取高质量训练语料。
-created: '2026-07-06'
-updated: '2026-07-06'
 sources:
 - wiki/sources/淘宝直播数字人_TTS语音合成技术.md
+updated: '2026-07-06'
 ---
 
 

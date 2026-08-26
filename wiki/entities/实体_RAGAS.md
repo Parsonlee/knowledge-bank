@@ -7,9 +7,7 @@ sources:
 - wiki/sources/Agent Loop使用语义早停比max_iterations硬截断节省38% Token 且质量不降.md
 - wiki/sources/OpenAI_LLM应用最佳实践.md
 - wiki/sources/RAGAS评估RAG系统.md
-created: '2026-06-29'
 updated: '2026-07-01'
-confidence: high
 ---
 
 ## 简介

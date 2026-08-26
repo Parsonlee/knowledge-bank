@@ -1,10 +1,10 @@
 ---
-id: "7323966019880355256"
+id: '7323966019880355256'
 cubox_url: https://cubox.pro/web/card/7323966019880355256
 url: https://mp.weixin.qq.com/s?__biz=MzU1NDA4NjU2MA==&mid=2247639036&idx=2&sn=374549b625d449cf9d137783ae038dd0
 tags:
-  - RAG/embedding
-  - RAG
+- RAG/embedding
+- RAG/retrieval
 published: 2025-05-14
 ---
 # RAG系统设计：揭秘语义搜索被低估的核心价值与KG驱动的架构选型策略

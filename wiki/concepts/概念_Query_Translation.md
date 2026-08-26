@@ -1,13 +1,10 @@
 ---
-tags:
-- RAG
-- RAG/query
-confidence: high
 type: concept
+tags:
+- RAG/retrieval
+- RAG/query
 summary: Query Translation（查询翻译）是 RAG 高阶技巧，针对用户 Query 模糊或复杂导致检索不准的问题（"Garbage in,
   Garbage out"），通过改写/优化/分解原始查询提升检索和生成效果。
-created: '2026-07-06'
-updated: '2026-07-06'
 sources:
 - wiki/sources/DMQR-RAG_多样查询改写.md
 - wiki/sources/RAG_12痛点与解决方案.md
@@ -19,6 +16,7 @@ sources:
 - wiki/sources/提升RAG问答质量的技术路线.md
 - wiki/sources/美团搜索查询改写实践.md
 - wiki/sources/腾讯查询优化四大类综述.md
+updated: '2026-07-06'
 ---
 
 # 概念_Query_Translation

@@ -1,14 +1,13 @@
 ---
-type: "source"
+type: source
 tags:
-  - "rl"
-  - "grpo"
-  - "gepa"
-  - "prompt-tuning"
-summary: "详细阐述 GEPA 无梯度提示词进化算法，并横向对比其与 GRPO 等强化学习算法的优劣与应用场景。"
+- LLM/training/RL
+- AI-Agent/prompt-engineering
+- LLM/training/post-train
+summary: 详细阐述 GEPA 无梯度提示词进化算法，并横向对比其与 GRPO 等强化学习算法的优劣与应用场景。
 sources:
-  - "raw/articles/2026-05-01_How-to-beat-GRPO-without-touching-model-weights_19de58.md"
-updated: "2026-08-04"
+- raw/articles/2026-05-01_How-to-beat-GRPO-without-touching-model-weights_19de58.md
+updated: '2026-08-04'
 ---
 
 # How to beat GRPO without touching model weights

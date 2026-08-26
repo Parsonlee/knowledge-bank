@@ -1,13 +1,11 @@
 ---
 type: concept
-confidence: high
 tags:
 - Skill/linux
 summary: 将 Linux 命令按功能场景（系统/文件/网络/软件包等）分类组织的速查体系，便于按需快速定位命令，而非按字母或学习顺序排列。
-created: '2026-07-06'
-updated: '2026-07-06'
 sources:
 - wiki/sources/600条Linux命令速查手册.md
+updated: '2026-07-06'
 ---
 
 

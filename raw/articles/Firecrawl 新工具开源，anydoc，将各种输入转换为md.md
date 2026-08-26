@@ -1,13 +1,13 @@
 ---
-title: "10 天暴涨 1.5 万 Star，Firecrawl 新工具开源。"
-source: "https://mp.weixin.qq.com/s/pnpdXkzyFUn5fNv6CCnRYg"
+title: 10 天暴涨 1.5 万 Star，Firecrawl 新工具开源。
+source: https://mp.weixin.qq.com/s/pnpdXkzyFUn5fNv6CCnRYg
 author:
-  - "[[小 G]]"
+- '[[小 G]]'
 published: 2026-08-13
 created: 2026-08-14
-description: "anydoc，将各种输入转化为md"
+description: anydoc，将各种输入转化为md
 tags:
-  - "clippings"
+- AI-Agent/coding
 ---
 小 G GitHubDaily *2026年8月13日 17:05*
 

@@ -2,13 +2,12 @@
 title: 高德地图AI应用开发岗一面，我跪了！！！
 source: https://mp.weixin.qq.com/s/TecnfQNZv8jv0uAQd-x3xw
 author:
-  - "[[AIGC小白入门记]]"
+- '[[AIGC小白入门记]]'
 published: 2026-08-01
 created: 2026-08-01
-description:
+description: null
 tags:
-  - clippings
-  - 面试
+- 面试
 ---
 AIGC小白入门记 AIGC小白入门记 *2026年8月1日 00:00*
 

@@ -8,9 +8,7 @@ sources:
 - wiki/sources/RL_Infra行业全景.md
 - wiki/sources/RL环境与智能体能力金字塔.md
 - wiki/sources/Tongyi DeepResearch的技术报告探秘.md
-created: '2026-06-29'
 updated: '2026-06-29'
-confidence: high
 ---
 
 

@@ -1,14 +1,13 @@
 ---
-type: "concept"
+type: concept
 tags:
-  - "gepa"
-  - "prompt-tuning"
-  - "rl"
-  - "dspy"
-summary: "详细定义 GEPA 无梯度提示词进化算法，阐述其如何通过自然语言反思与 Pareto 采样避免强化学习的标量信号压缩瓶颈，并横向对比其他提示词优化技术。"
+- AI-Agent/prompt-engineering
+- LLM/training/post-train
+- LLM/training/RL
+summary: 详细定义 GEPA 无梯度提示词进化算法，阐述其如何通过自然语言反思与 Pareto 采样避免强化学习的标量信号压缩瓶颈，并横向对比其他提示词优化技术。
 sources:
-  - "wiki/sources/2026-05-01_How-to-beat-GRPO-without-touching-model-weights_19de58.md"
-updated: "2026-08-04"
+- wiki/sources/2026-05-01_How-to-beat-GRPO-without-touching-model-weights_19de58.md
+updated: '2026-08-04'
 ---
 
 # GEPA 提示词进化算法

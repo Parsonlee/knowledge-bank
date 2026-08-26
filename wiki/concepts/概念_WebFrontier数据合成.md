@@ -2,14 +2,12 @@
 type: concept
 tags:
 - AI-Agent/deep-research
-confidence: high
-created: '2026-06-29'
-updated: '2026-06-29'
 summary: WebFrontier 是通义 DeepResearch 提出的端到端合成数据生成方案，用于为 Agent SFT 冷启动阶段构建高质量 Web
   问答数据。核心思路是"种子—扩展—评估"经典套路与 Deep Research 工具集深度绑定。
 sources:
 - wiki/sources/Tongyi DeepResearch的技术报告探秘.md
 - wiki/sources/通义 DeepResearch：开源 AI 智能体的新纪元.md
+updated: '2026-06-29'
 ---
 
 

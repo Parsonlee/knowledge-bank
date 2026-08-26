@@ -1,8 +1,11 @@
 ---
 type: source
-tags: [data-science, mathematics, statistics, machine-learning]
-summary: 汇总了数据科学中 25 个最核心的数学定义与公式，并对极大似然估计 (MLE)、标准分数 (Z-score)、最小二乘法 (OLS)、熵 (Entropy)、特征值与特征向量、R方系数 (R-squared)、KL散度、奇异值分解 (SVD) 以及拉格朗日乘子法进行了重点释义和应用场景关联。
-sources: ["raw/articles/2025-11-12_25-most-important-mathematical-definitions-in-DS_19a79c.md"]
+tags:
+- Skill/data-analysis
+summary: 汇总了数据科学中 25 个最核心的数学定义与公式，并对极大似然估计 (MLE)、标准分数 (Z-score)、最小二乘法 (OLS)、熵 (Entropy)、特征值与特征向量、R方系数
+  (R-squared)、KL散度、奇异值分解 (SVD) 以及拉格朗日乘子法进行了重点释义和应用场景关联。
+sources:
+- raw/articles/2025-11-12_25-most-important-mathematical-definitions-in-DS_19a79c.md
 updated: 2026-08-03
 ---
 

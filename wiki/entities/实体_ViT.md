@@ -1,7 +1,7 @@
 ---
 type: entity
 tags:
-- CV
+- CV/detection
 summary: ViT（Vision Transformer），将图像分 patch 序列输入 Transformer 的视觉 Backbone；SAM 用 ViT-H
   作图像编码器。
 sources:
@@ -9,9 +9,7 @@ sources:
 - wiki/sources/SAM_Segment_Anything模型.md
 - wiki/sources/从LLaVA到Qwen3-VL_多模态架构演进.md
 - wiki/sources/向量数据库原理与应用全解析.md
-created: '2026-06-26'
 updated: '2026-06-26'
-confidence: medium
 ---
 
 # 实体：ViT

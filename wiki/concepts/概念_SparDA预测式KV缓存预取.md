@@ -3,11 +3,11 @@ type: concept
 tags:
 - Infra/AI
 - LLM/inference
-summary: NVIDIA 与 MIT 提出的 SparDA 架构，通过引入 Forecast（第四投影）预测并异步预取下一层所需的 KV 块，实现长上下文下 CPU offload 的计算与传输重叠，并利用分组选择器跳过 Softmax，显著提升长文本推理的解码速度和吞吐量。
+summary: NVIDIA 与 MIT 提出的 SparDA 架构，通过引入 Forecast（第四投影）预测并异步预取下一层所需的 KV 块，实现长上下文下
+  CPU offload 的计算与传输重叠，并利用分组选择器跳过 Softmax，显著提升长文本推理的解码速度和吞吐量。
 sources:
 - wiki/sources/2026-07-14_NVIDIA-researchers-built-a-new-transformer-variant_19f617.md
 updated: '2026-08-04'
-created: '2026-08-04'
 ---
 
 # 概念：SparDA 预测式 KV 缓存预取

@@ -1,7 +1,7 @@
 ---
 type: entity
 tags:
-- RAG
+- RAG/retrieval
 - AI-Agent/tool-calling
 summary: 专注于大模型数据连接、索引构建与检索增强的应用开发框架。
 sources:
@@ -9,9 +9,7 @@ sources:
 - wiki/sources/RAG文本切分_JSON文档切分.md
 - wiki/sources/RAG文本切分_token优化.md
 - wiki/sources/RAG文本切分_字符切分.md
-created: '2026-06-29'
 updated: '2026-07-01'
-confidence: medium
 ---
 
 > [!note] 说明

@@ -1,13 +1,10 @@
 ---
-tags:
-- RAG
-- RAG/query
-confidence: high
 type: concept
+tags:
+- RAG/retrieval
+- RAG/query
 summary: RAG Fusion 是一种在生成阶段融合检索结果的策略，关注如何从多个检索到的文档中综合信息生成高质量回答。过程与 Multi-Query 相似，但对检索到的多篇文档进行筛选过滤之后再输入
   LLM。
-created: '2026-07-06'
-updated: '2026-07-06'
 sources:
 - wiki/sources/DMQR-RAG_多样查询改写.md
 - wiki/sources/ES企业AI搜索实践.md
@@ -15,6 +12,7 @@ sources:
 - wiki/sources/RAG检索_Retrieval入门到精通.md
 - wiki/sources/RAG高级优化_检索策略Fusion_HyDE.md
 - wiki/sources/提升RAG问答质量的技术路线.md
+updated: '2026-07-06'
 ---
 
 # 概念_RAG_Fusion

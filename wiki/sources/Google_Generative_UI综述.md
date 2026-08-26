@@ -6,9 +6,7 @@ tags:
 summary: Google Research 官方博客发布关于生成式用户界面（Generative UI）的架构阐述，探讨如何按提示词动态生成丰富的定制化交互组件。
 sources:
 - raw/articles/Generative UI_ A rich, custom, visual in....md
-created: '2026-07-02'
 updated: '2026-07-02'
-confidence: high
 ---
 # Google Generative UI 综述
 

@@ -1,13 +1,11 @@
 ---
 type: concept
-confidence: high
 tags:
 - Life
 summary: 一份本身就能带来快乐的工作，是找到幸福生活的关键任务，甚至是唯一任务。从事天职时，"我们是在娱乐而不是工作"，且这种娱乐的价格是负数——社会会为此付你报酬。
-created: '2026-07-06'
-updated: '2026-07-06'
 sources:
 - wiki/sources/现代打工人如何获得幸福.md
+updated: '2026-07-06'
 ---
 
 

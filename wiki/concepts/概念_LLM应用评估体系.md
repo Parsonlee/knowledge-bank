@@ -3,12 +3,11 @@ type: concept
 tags:
 - AI-Agent/coding
 summary: LLM 应用评估体系是指在大模型应用开发全生命周期中，对 Prompt/RAG/Agent 输出质量进行系统性、可重复评估的方法论与工具集合。
-created: '2026-07-06'
-updated: '2026-08-04'
 sources:
 - wiki/sources/Dropbox基于DSPy优化Dash Chat评估与提示词.md
 - wiki/sources/2026-07-24_11-LLM-evaluation-methods_19f962.md
 - wiki/sources/2026-07-28_Technical-LLM-interview-question!_19faa9.md
+updated: '2026-08-04'
 ---
 
 

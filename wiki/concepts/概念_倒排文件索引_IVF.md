@@ -1,12 +1,11 @@
 ---
-tags: [vector-database, vector-search, indexing, approximate-nearest-neighbor]
-confidence: high
 type: concept
+tags:
+- RAG/retrieval
 summary: 倒排文件索引 (Inverted File Index, IVF) 是一种常用的高维向量近似最近邻搜索 (ANNS) 索引方法。它通过聚类将空间划分为若干分区，使得检索时只需搜索最近质心所在的局部胞腔，从而极大降低计算复杂度并提高检索速度。
-created: '2026-08-03'
-updated: '2026-08-03'
 sources:
 - wiki/sources/2025-10-27_ANN-search-using-inverted-file-index_19a274.md
+updated: '2026-08-03'
 ---
 
 # 概念_倒排文件索引_IVF

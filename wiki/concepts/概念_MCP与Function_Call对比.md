@@ -4,10 +4,9 @@ tags:
 - AI-Agent/tool-calling
 summary: MCP 与 Function Call 的本质区别：MCP 是模型无关的 JSON-RPC 动态协议（支持双向通信+能力发现），Function
   Call 是与特定模型绑定的 JSON Schema 静态调用
-created: '2026-06-29'
-updated: '2026-06-29'
 sources:
 - wiki/sources/别再误会MCP了辟谣指南.md
+updated: '2026-06-29'
 ---
 
 

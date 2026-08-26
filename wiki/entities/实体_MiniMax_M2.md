@@ -6,7 +6,6 @@ summary: MiniMax 2025年发布的旗舰模型，回归 Full Attention 架构，�
   4.5 的 8%
 sources:
 - wiki/sources/MiniMax_vs_Kimi_注意力路线之争.md
-created: '2026-06-29'
 updated: '2026-06-29'
 ---
 

@@ -2,14 +2,12 @@
 type: source
 tags:
 - RAG/embedding
-- RAG
+- RAG/retrieval
 summary: ColBERT 原理与延迟交互（Late Interaction）机制——多向量表示、MaxSim 计算流程，及其与稠密向量（Sentence-BERT）的对比与
   BGE-M3 实验
 sources:
 - raw/articles/RAG：ColBERT原理、延迟交互机制与稠密向量的对比分析.md
-created: '2026-06-26'
 updated: '2026-07-01'
-confidence: high
 ---
 # ColBERT原理与延迟交互机制
 

@@ -1,11 +1,12 @@
 ---
-type: "concept"
-tags: ["AI-Agent/skill", "AI-Agent/eval"]
-summary: "Skill 增量收益评估强调评估 Skill 的核心在于对比加载 Skill 与不加载 Skill（With Skill vs Without Skill）的相对提升，而非单看绝对成功率。"
+type: concept
+tags:
+- AI-Agent/skill
+- AI-Agent/coding
+summary: Skill 增量收益评估强调评估 Skill 的核心在于对比加载 Skill 与不加载 Skill（With Skill vs Without Skill）的相对提升，而非单看绝对成功率。
 sources:
 - wiki/sources/如何系统评价一个_Agent_Skill.md
-created: "2026-07-22"
-updated: "2026-07-22"
+updated: '2026-07-22'
 ---
 
 # 概念：Skill 增量收益评估 (With vs Without Skill Experimentation)

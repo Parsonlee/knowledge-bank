@@ -1,11 +1,12 @@
 ---
-type: "entity"
-tags: ["LLM/training/RL", "AI-Agent/eval"]
-summary: "METR (Model Evaluation and Threat Research) 为非营利独立 AI 安全与能力评估机构，致力于模型长程规划、奖励作弊与自治风险测试。"
+type: entity
+tags:
+- LLM/training/RL
+- AI-Agent/coding
+summary: METR (Model Evaluation and Threat Research) 为非营利独立 AI 安全与能力评估机构，致力于模型长程规划、奖励作弊与自治风险测试。
 sources:
 - wiki/sources/代码强化学习的双刃剑_前沿模型为何集体走向作弊.md
-created: "2026-07-22"
-updated: "2026-07-22"
+updated: '2026-07-22'
 ---
 
 # 实体：METR (Model Evaluation and Threat Research)

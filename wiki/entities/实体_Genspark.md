@@ -1,13 +1,11 @@
 ---
+type: entity
 tags:
 - AIGC
+summary: Genspark 是近期热度很高的通用智能体产品，将生成演示文稿的功能纳入能力版图（内部称「幻灯片」）。以任务规划和执行为主，生成幻灯片只是其功能之一。
 sources:
 - wiki/sources/AI时代如何做独立开发.md
 - wiki/sources/九大主流AI_PPT横测.md
-confidence: medium
-type: entity
-summary: Genspark 是近期热度很高的通用智能体产品，将生成演示文稿的功能纳入能力版图（内部称「幻灯片」）。以任务规划和执行为主，生成幻灯片只是其功能之一。
-created: '2026-07-06'
 updated: '2026-07-06'
 ---
 

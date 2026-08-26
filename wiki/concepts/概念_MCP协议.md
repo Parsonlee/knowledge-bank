@@ -4,14 +4,13 @@ tags:
 - AI-Agent/tool-calling
 summary: MCP（Model Context Protocol）是 Anthropic 制定的模型无关可互操作 AI 应用工程协议，标准化工具调用格式，将工具层从
   Agent 解耦
-created: '2026-06-29'
-updated: '2026-06-29'
 sources:
 - wiki/sources/AI时代如何做独立开发.md
 - wiki/sources/HumanInTheLoop用MCP实现.md
 - wiki/sources/MCP五大原语与Web化.md
 - wiki/sources/MCP遇上代码执行.md
 - wiki/sources/别再误会MCP了辟谣指南.md
+updated: '2026-06-29'
 ---
 
 

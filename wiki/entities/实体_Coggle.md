@@ -1,11 +1,11 @@
 ---
-type: "entity"
-tags: ["AI-Agent/skill"]
-summary: "Coggle 数据科学，专注于数据科学、算法竞赛与大模型 Agent 能力工程化的技术社区。"
+type: entity
+tags:
+- AI-Agent/skill
+summary: Coggle 数据科学，专注于数据科学、算法竞赛与大模型 Agent 能力工程化的技术社区。
 sources:
 - wiki/sources/如何系统评价一个_Agent_Skill.md
-created: "2026-07-22"
-updated: "2026-07-22"
+updated: '2026-07-22'
 ---
 
 # 实体：Coggle 数据科学

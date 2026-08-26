@@ -1,10 +1,10 @@
 ---
-id: "7304396878924220280"
+id: '7304396878924220280'
 cubox_url: https://cubox.pro/web/card/7304396878924220280
 url: https://zhuanlan.zhihu.com/p/30201040247
 tags:
-  - LLM
-  - LLM/training/post-train
+- LLM/arch
+- LLM/training/post-train
 published: 2025-03-14
 ---
 # LLM 后训练技术 - 知乎

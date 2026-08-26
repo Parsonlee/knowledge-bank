@@ -1,13 +1,11 @@
 ---
+type: concept
 tags:
 - Skill/python
-confidence: high
-type: concept
 summary: uv 是 Astral 开发的 Rust 编写的 Python 包管理器，作为 pip 的替代品，实测在多个项目中带来约 10x 速度提升。
-created: '2026-07-06'
-updated: '2026-07-06'
 sources:
 - wiki/sources/Docker化Flask_Django应用从pip切换到uv.md
+updated: '2026-07-06'
 ---
 
 

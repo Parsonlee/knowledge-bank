@@ -1,10 +1,9 @@
 ---
-id: "7334831577177784401"
+id: '7334831577177784401'
 cubox_url: https://cubox.pro/web/card/7334831577177784401
 url: https://mp.weixin.qq.com/s/synQYJYw6B8b8QAkofitaw
 tags:
-  - RAG
-
+- RAG/retrieval
 published: 2025-06-17
 ---
 # TableRAG: 处理文本+表格异构数据

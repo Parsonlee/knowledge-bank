@@ -1,13 +1,13 @@
 ---
 type: concept
 tags:
-  - llm
-  - quantization
-  - optimization
-  - model-compression
-summary: LLM量化技术是降低大模型显存占用、提升推理吞吐的关键手段。在模型规模扩大时，激活值中出现的极端离群值（Outliers）会严重破坏 naive 舍入的精度。本文详细介绍了量化收益、离群值阻碍机制以及 RTN、GPTQ、AWQ、LLM.int8()、QAT 五种量化技术在应对离群值时的具体机制。
+- LLM/arch
+- LLM/inference
+- Skill/data-analysis
+summary: LLM量化技术是降低大模型显存占用、提升推理吞吐的关键手段。在模型规模扩大时，激活值中出现的极端离群值（Outliers）会严重破坏 naive
+  舍入的精度。本文详细介绍了量化收益、离群值阻碍机制以及 RTN、GPTQ、AWQ、LLM.int8()、QAT 五种量化技术在应对离群值时的具体机制。
 sources:
-  - wiki/sources/2026-07-21_5-LLM-Quantization-Techniques_19f86b.md
+- wiki/sources/2026-07-21_5-LLM-Quantization-Techniques_19f86b.md
 updated: 2026-08-04
 ---
 

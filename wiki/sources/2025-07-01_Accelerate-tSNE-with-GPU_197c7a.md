@@ -1,9 +1,13 @@
 ---
-type: "source"
-tags: ["ML/dimension-reduction", "GPU/acceleration", "t-SNE"]
-summary: "讨论 t-SNE 降维算法在处理大规模数据集时的二次方复杂度瓶颈，并介绍 GPU 加送库 tSNE-CUDA 带来的巨大性能提升（达 700x 速度）及仅支持 2D 投影的限制。"
-sources: ["raw/articles/2025-07-01_Accelerate-tSNE-with-GPU_197c7a.md"]
-updated: "2026-08-03"
+type: source
+tags:
+- Skill/data-analysis
+- Infra/gpu
+summary: 讨论 t-SNE 降维算法在处理大规模数据集时的二次方复杂度瓶颈，并介绍 GPU 加送库 tSNE-CUDA 带来的巨大性能提升（达 700x 速度）及仅支持
+  2D 投影的限制。
+sources:
+- raw/articles/2025-07-01_Accelerate-tSNE-with-GPU_197c7a.md
+updated: '2026-08-03'
 ---
 
 # Accelerate tSNE with GPU

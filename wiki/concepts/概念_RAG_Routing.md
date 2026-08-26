@@ -1,16 +1,14 @@
 ---
-tags:
-- RAG
-confidence: high
 type: concept
+tags:
+- RAG/retrieval
 summary: Routing（路由）是 RAG 中根据用户查询内容智能选择最适合的检索路径或推理逻辑的过程。在多数据源、多检索器或多任务场景下显著提升系统性能和准确性。
-created: '2026-07-06'
-updated: '2026-07-06'
 sources:
 - wiki/sources/RAG_12痛点与解决方案.md
 - wiki/sources/RAG挑战赛冠军方案.md
 - wiki/sources/RAG路由_Routing.md
 - wiki/sources/提升RAG问答质量的技术路线.md
+updated: '2026-07-06'
 ---
 
 # 概念_RAG_Routing

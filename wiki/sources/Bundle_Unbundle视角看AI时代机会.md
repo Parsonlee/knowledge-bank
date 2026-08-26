@@ -5,9 +5,7 @@ tags:
 summary: '**Grammarly 逆袭案例**："有护城河，但没有城堡"的产品'
 sources:
 - raw/articles/把世界拆成最小单元，然后重新拼装 _ 42章经 AI Newsletter.md
-created: '2026-06-29'
 updated: '2026-07-01'
-confidence: high
 ---
 # Bundle/Unbundle 视角看 AI 时代机会
 

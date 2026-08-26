@@ -2,14 +2,12 @@
 type: source
 tags:
 - 创业
-- LLM
+- LLM/arch
 summary: Jina AI 创始人肖涵六年创业复盘：两次 Pivot 路线、AI 团队 Scaling Law 困惑、聚焦搜索底座模型最终被 Elastic
   收购
 sources:
 - raw/insights/Jina AI创业复盘：AI团队的Scaling Law是什么.md
-created: '2026-06-29'
 updated: '2026-07-01'
-confidence: high
 ---
 ## 来源信息
 

@@ -6,9 +6,7 @@ summary: AI 邮件客户端，PMF 引擎方法论标杆，2025 ARR 3500 万美�
 sources:
 - wiki/sources/Bundle_Unbundle视角看AI时代机会.md
 - wiki/sources/Superhuman_PMF引擎方法论.md
-created: '2026-06-30'
 updated: '2026-06-30'
-confidence: high
 ---
 
 # 实体：Superhuman

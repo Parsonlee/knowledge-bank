@@ -1,15 +1,12 @@
 ---
 type: concept
 tags:
-  - agent
-  - loop-engineering
-  - harness-engineering
-  - system-design
+- AI-Agent/coding
 summary: 循环工程（Loop Engineering）是智能体装备工程（Harness Engineering）的外层控制面，决定了智能体运行的生命周期、任务流转、状态监控及退出机制。
 sources:
-  - wiki/sources/2026-06-24_Loop-engineering,-clearly-explained!_19ef72.md
-  - wiki/sources/2026-07-03_Prompt,-context,-harness-&-loop-engineering_19f29f.md
-  - wiki/sources/2026-07-14_The-four-types-of-agent-loops_19f617.md
+- wiki/sources/2026-06-24_Loop-engineering,-clearly-explained!_19ef72.md
+- wiki/sources/2026-07-03_Prompt,-context,-harness-&-loop-engineering_19f29f.md
+- wiki/sources/2026-07-14_The-four-types-of-agent-loops_19f617.md
 updated: 2026-08-04
 ---
 

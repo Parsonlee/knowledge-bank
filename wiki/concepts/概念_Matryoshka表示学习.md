@@ -1,17 +1,15 @@
 ---
-tags:
-- RAG
-- RAG/embedding
-confidence: high
 type: concept
+tags:
+- RAG/retrieval
+- RAG/embedding
 summary: Matryoshka Representation Learning (MRL) 是一种嵌入训练方法，通过以嵌套方式对 O(log(d)) 低维向量进行显式优化，在同一个高维向量中学习不同容量的表征。名称来源于"俄罗斯套娃"——嵌入的前
   m 维本身就是一个信息丰富的低维表征。
-created: '2026-07-06'
-updated: '2026-07-06'
 sources:
 - wiki/sources/MRL_俄罗斯套娃表示学习.md
 - wiki/sources/Matryoshka嵌入模型概述_HuggingFace.md
 - wiki/sources/从BM25到Multi-Vector_6种Embedding演进路线.md
+updated: '2026-07-06'
 ---
 
 # 概念_Matryoshka表示学习

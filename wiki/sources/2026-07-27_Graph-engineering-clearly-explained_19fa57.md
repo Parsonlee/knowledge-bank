@@ -1,13 +1,11 @@
 ---
 type: source
 tags:
-  - Agent
-  - Multi-Agent
-  - Graph-Engineering
-  - Architecture
+- AI-Agent/coding
+- AI-Agent/multi-agent
 summary: 阐述了图工程（Graph Engineering）的核心概念、多层同轴架构关系、四大痛点设计准则以及引入图工程的决策依据。
 sources:
-  - raw/articles/2026-07-27_Graph-engineering-clearly-explained_19fa57.md
+- raw/articles/2026-07-27_Graph-engineering-clearly-explained_19fa57.md
 updated: 2026-08-04
 ---
 

@@ -1,10 +1,12 @@
 ---
-type: "source"
-tags: ["AI-Agent/skill", "AI-Agent/eval"]
-summary: "系统拆解 Agent Skill 的六大评估维度（触发、执行轨迹、产物质量、效率成本、安全权限、可复用性）与对比实验设计范式"
-sources: ["raw/articles/如何系统评价一个 Agent Skill？.md"]
-created: "2026-07-14"
-updated: "2026-07-22"
+type: source
+tags:
+- AI-Agent/skill
+- AI-Agent/coding
+summary: 系统拆解 Agent Skill 的六大评估维度（触发、执行轨迹、产物质量、效率成本、安全权限、可复用性）与对比实验设计范式
+sources:
+- raw/articles/如何系统评价一个 Agent Skill？.md
+updated: '2026-07-22'
 ---
 
 ## 来源信息

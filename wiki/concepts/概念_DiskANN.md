@@ -6,7 +6,6 @@ tags:
 summary: 微软开源的基于 SSD 磁盘的高性能近似最近邻 (ANN) 检索算法，突破内存容量限制，实现十亿级向量检索。
 sources:
 - wiki/sources/2026程序员必读的向量数据库原理与选型指南.md
-created: '2026-07-22'
 updated: '2026-07-22'
 ---
 

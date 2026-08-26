@@ -2,14 +2,13 @@
 type: entity
 tags:
 - AI-Agent/context-engineering
+summary: '- 身份：Manus 联合创始人、首席科学家'
 sources:
 - wiki/sources/Context_Engineering_LangChain_Manus_NotebookLM.md
 - wiki/sources/Manus创始人手把手拆解上下文工程.md
 - wiki/sources/也许当前最好的上下文工程讲解_LangChain联合Manus.md
 - wiki/sources/浅谈上下文工程_Claude_Code_Manus_Kiro.md
-created: '2026-06-29'
 updated: '2026-06-29'
-summary: '- 身份：Manus 联合创始人、首席科学家'
 ---
 
 # 实体：Peak Ji 季逸超

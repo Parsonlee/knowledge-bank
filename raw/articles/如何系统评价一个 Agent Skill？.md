@@ -2,13 +2,12 @@
 title: 如何系统评价一个 Agent Skill？
 source: https://mp.weixin.qq.com/s/y2px6sE2N57xrzbQwiHNVQ
 author:
-  - "[[Coggle]]"
+- '[[Coggle]]'
 published: 2026-07-14
 created: 2026-07-22
 description: 随着大模型 Agent 从简单问答拓展到复杂工作流，Skill 成为智能体能力工程化的核心载体。本文提出覆盖触发、执行、结果、效率、鲁棒性与安全性的系统化评价框架。
 tags:
-  - clippings
-  - AI-Agent/skill
+- AI-Agent/skill
 ---
 Coggle Coggle数据科学 *2026年7月14日 17:42*
 

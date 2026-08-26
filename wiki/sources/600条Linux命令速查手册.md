@@ -6,9 +6,7 @@ summary: 本文将日常运维中常用的 Linux 命令按功能分为 28 大类
   条命令，号称"能用到退休"，可解决日常 99% 的问题。
 sources:
 - raw/playbooks/能用到“退休”的 600条 Linux 命令，可以解决日常99%的问题~.md
-created: '2026-06-29'
 updated: '2026-07-01'
-confidence: high
 cubox_url: https://cubox.pro/web/card/7159452574557406140
 date_collected: 2024-02-20
 ---

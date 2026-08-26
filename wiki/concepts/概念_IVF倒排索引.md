@@ -6,7 +6,6 @@ tags:
 summary: 基于聚类空间划分的倒排文件向量索引算法（Inverted File Index），通过簇中心分组大幅缩小检索范围与内存占用。
 sources:
 - wiki/sources/2026程序员必读的向量数据库原理与选型指南.md
-created: '2026-07-22'
 updated: '2026-07-22'
 ---
 

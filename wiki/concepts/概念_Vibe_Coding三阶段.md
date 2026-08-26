@@ -1,13 +1,11 @@
 ---
+type: concept
 tags:
 - AIGC
-confidence: high
-type: concept
 summary: lencx 基于 Noi（Electron 应用）开发实践总结的 AI 辅助编程三个递进阶段。
-created: '2026-07-06'
-updated: '2026-07-06'
 sources:
 - wiki/sources/关于Nano_Banana的一些浅思.md
+updated: '2026-07-06'
 ---
 
 

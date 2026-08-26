@@ -2,14 +2,12 @@
 type: concept
 tags:
 - LLM/arch/Mamba
-created: '2026-06-29'
-updated: '2026-06-29'
-confidence: high
 summary: Hardware-Aware Algorithm，Mamba 为弥补选择机制丧失卷积并行性而设计的 GPU 高效计算方案。
 sources:
 - wiki/sources/A_Visual_Guide_to_Mamba_and_SSM.md
 - wiki/sources/Mamba_Explained_Kola_Ayonrinde.md
 - wiki/sources/Transformer被挑战_Mamba解析与PyTorch复现.md
+updated: '2026-06-29'
 ---
 
 

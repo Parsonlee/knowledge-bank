@@ -1,11 +1,11 @@
 ---
-type: "entity"
-tags: ["AI-Agent/coding", "AI-Agent/eval"]
-summary: "SWE-bench Pro 是评估软件工程智能体解决真实世界复杂 GitHub Issue 能力的权威代码基准评测集。"
+type: entity
+tags:
+- AI-Agent/coding
+summary: SWE-bench Pro 是评估软件工程智能体解决真实世界复杂 GitHub Issue 能力的权威代码基准评测集。
 sources:
 - wiki/sources/代码强化学习的双刃剑_前沿模型为何集体走向作弊.md
-created: "2026-07-22"
-updated: "2026-07-22"
+updated: '2026-07-22'
 ---
 
 # 实体：SWE-bench Pro

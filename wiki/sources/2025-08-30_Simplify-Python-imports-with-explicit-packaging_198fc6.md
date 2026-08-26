@@ -1,12 +1,10 @@
 ---
 type: source
 tags:
-  - python
-  - engineering-practices
-  - module-and-package
-summary: "探讨 Python 项目中显式包管理机制。虽然 Python 3.3+ 引入了隐式命名空间包，但显式使用 __init__.py 能够明确包的导出接口、简化外部导入路径并避免冗余导入，是优化工程设计的最佳实践。"
+- Skill/python
+summary: 探讨 Python 项目中显式包管理机制。虽然 Python 3.3+ 引入了隐式命名空间包，但显式使用 __init__.py 能够明确包的导出接口、简化外部导入路径并避免冗余导入，是优化工程设计的最佳实践。
 sources:
-  - "raw/articles/2025-08-30_Simplify-Python-imports-with-explicit-packaging_198fc6.md"
+- raw/articles/2025-08-30_Simplify-Python-imports-with-explicit-packaging_198fc6.md
 updated: 2026-08-03
 ---
 

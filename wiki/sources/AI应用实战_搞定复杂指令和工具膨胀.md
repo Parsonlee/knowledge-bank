@@ -5,9 +5,7 @@ tags:
 summary: 阿里云联调造数场景：单Agent→多Agent演进，意图识别+工具引擎+推理执行三模块解决复杂指令和工具膨胀问题
 sources:
 - raw/playbooks/AI应用实战：搞定复杂指令和工具膨胀.md
-created: '2026-06-29'
 updated: '2026-07-01'
-confidence: high
 ---
 ## 来源信息
 

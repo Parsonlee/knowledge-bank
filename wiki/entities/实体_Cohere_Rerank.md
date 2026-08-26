@@ -5,9 +5,7 @@ tags:
 summary: Cohere 提供的重排序（Rerank）API 服务，用于向量检索后的候选文档精排。
 sources:
 - wiki/sources/RAG_12痛点与解决方案.md
-created: '2026-06-29'
 updated: '2026-07-01'
-confidence: medium
 ---
 
 > [!note] 说明

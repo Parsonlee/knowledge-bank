@@ -1,13 +1,11 @@
 ---
 type: concept
 tags:
-- AI-Agent/recursive-language-models
 - AI-Agent/context-engineering
-created: '2026-08-04'
-updated: '2026-08-04'
 summary: 由MIT提出的递归语言模型（RLM）架构，核心是将数据与指令解耦，通过Python REPL缓存上下文，并由LLM调用Peek、Grep、Partition等工具进行自上而下的分治递归调用，从而在10M+超长文本下保持性能不衰减。
 sources:
 - wiki/sources/2026-06-24_Recursive-language-models_19ef72.md
+updated: '2026-08-04'
 ---
 
 # 概念：RLM递归语言模型

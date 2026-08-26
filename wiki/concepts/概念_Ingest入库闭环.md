@@ -1,14 +1,13 @@
 ---
 type: concept
 tags:
-- Skill/knowledge-bank
+- AI-Agent/skill
 - AI-Agent/coding
 summary: LLM Wiki 范式中的核心入库操作 SOP，包含阅读原文、提炼要点、生成 Source 摘要、更新/新建 Entities & Concepts、检查矛盾与同步索引日志等标准动作。
 sources:
 - wiki/sources/Karpathy推文引发的LLM_Wiki知识库搭建实践.md
 - wiki/sources/Claude Code与Obsidian飞书知识库搭建实践.md
 - wiki/sources/Vault死链治理与单向推导架构维护复盘.md
-created: '2026-07-22'
 updated: '2026-07-22'
 ---
 

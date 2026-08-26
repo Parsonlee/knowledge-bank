@@ -1,7 +1,7 @@
 ---
 type: entity
 tags:
-- CV
+- CV/detection
 summary: CLIP（Contrastive Language-Image Pre-training），OpenAI 视觉-语言对齐模型，为 SAM 提供文本
   Prompt 能力。
 sources:
@@ -11,9 +11,7 @@ sources:
 - wiki/sources/SAM_Segment_Anything模型.md
 - wiki/sources/从LLaVA到Qwen3-VL_多模态架构演进.md
 - wiki/sources/向量数据库原理与应用全解析.md
-created: '2026-06-26'
 updated: '2026-06-26'
-confidence: medium
 ---
 
 # 实体：CLIP

@@ -1,13 +1,11 @@
 ---
 type: concept
-confidence: high
 tags:
 - Skill/data-analysis
 summary: 通过第三方主题库或自定义样式配置，以极少代码量改造 matplotlib 默认的简陋图表外观，使其具备简洁商务风格。
-created: '2026-07-06'
-updated: '2026-07-06'
 sources:
 - wiki/sources/一行代码让matplotlib图表变高大上.md
+updated: '2026-07-06'
 ---
 
 

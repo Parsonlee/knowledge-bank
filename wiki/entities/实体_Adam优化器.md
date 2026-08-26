@@ -5,9 +5,7 @@ tags:
 summary: 深度学习中常用的自适应梯度下降优化器，兼顾 Momentum 与 RMSProp 优点。
 sources:
 - wiki/sources/梯度下降优化器可视化解释.md
-created: '2026-06-29'
 updated: '2026-07-01'
-confidence: high
 ---
 
 ## 简介

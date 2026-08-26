@@ -25,9 +25,7 @@ sources:
 - wiki/sources/推测解码Speculative_Decoding综述.md
 - wiki/sources/2026-07-24_Delta-attention-in-Kimi-K3-to-fix-growing-KV-cache_19f962.md
 - wiki/sources/2026-08-10_Cross-model-KV-cache-transfer-in-LLM-families_19febef2c6003814.md
-created: '2026-06-29'
 updated: '2026-08-11'
-confidence: high
 ---
 
 

@@ -1,13 +1,12 @@
 ---
 type: source
 tags:
-  - sentence-similarity
-  - bi-encoder
-  - cross-encoder
-  - nlp
-summary: 探讨了成对句子评分（Pairwise Sentence Scoring）作为现实世界中 RAG 检索、问答系统、信息检索、去重引擎等应用的基础定位，引入了双编码器和交叉编码器等核心 SOTA 方法。
+- RAG/embedding
+- DeepLearning
+summary: 探讨了成对句子评分（Pairwise Sentence Scoring）作为现实世界中 RAG 检索、问答系统、信息检索、去重引擎等应用的基础定位，引入了双编码器和交叉编码器等核心
+  SOTA 方法。
 sources:
-  - raw/articles/2025-08-25_Building-pairwise-sentence-scoring-systems_198e2e.md
+- raw/articles/2025-08-25_Building-pairwise-sentence-scoring-systems_198e2e.md
 updated: 2026-08-03
 ---
 

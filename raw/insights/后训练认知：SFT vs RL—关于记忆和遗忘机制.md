@@ -1,12 +1,12 @@
 ---
-id: "7382731199472471519"
+id: '7382731199472471519'
 cubox_url: https://cubox.pro/web/card/7382731199472471519
 url: https://mp.weixin.qq.com/s/Vg0HUgIgOujLBClDXSDslQ
 tags:
-  - LLM
-  - LLM/training/post-train
-  - LLM/training/RL
-  - LLM/training
+- LLM/arch
+- LLM/training/post-train
+- LLM/training/RL
+- LLM/training
 published: 2025-10-27
 ---
 # 后训练认知：SFT vs RL—关于记忆和遗忘机制

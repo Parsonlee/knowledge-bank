@@ -1,17 +1,15 @@
 ---
-confidence: high
 type: concept
 tags:
-- LLM
+- LLM/arch
 - DeepLearning
 summary: 训练中监控验证集 loss，当其连续多次不再下降时提前停止训练，避免过拟合并保存最优模型。
-created: '2026-07-06'
-updated: '2026-07-06'
 sources:
 - wiki/sources/Agent Loop使用语义早停比max_iterations硬截断节省38% Token 且质量不降.md
 - wiki/sources/PyTorch常用代码段合集.md
 - wiki/sources/PyTorch训练代码模板.md
 - wiki/sources/从提示员到系统架构师：Loop Engineering 的范式跃迁.md
+updated: '2026-07-06'
 ---
 
 # 概念：早停（EarlyStopping）

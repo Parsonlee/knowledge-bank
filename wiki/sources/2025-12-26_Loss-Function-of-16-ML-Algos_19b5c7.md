@@ -1,12 +1,11 @@
 ---
-type: "source"
+type: source
 tags:
-  - "machine-learning"
-  - "loss-function"
-  - "algorithm"
-summary: "汇总了16种常见机器学习算法所采用的典型损失函数，并分析了部分非参数/贝叶斯算法在训练中不需要损失函数的物理本质。"
+- Skill/data-analysis
+- DeepLearning
+summary: 汇总了16种常见机器学习算法所采用的典型损失函数，并分析了部分非参数/贝叶斯算法在训练中不需要损失函数的物理本质。
 sources:
-  - "raw/articles/2025-12-26_Loss-Function-of-16-ML-Algos_19b5c7.md"
+- raw/articles/2025-12-26_Loss-Function-of-16-ML-Algos_19b5c7.md
 updated: 2026-08-03
 ---
 

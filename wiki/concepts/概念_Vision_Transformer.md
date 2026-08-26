@@ -1,16 +1,14 @@
 ---
 type: concept
 tags:
-- CV
+- CV/detection
 summary: Vision Transformer 将图像分为 patch 序列输入 Transformer 编码器，替代 CNN 作为视觉 Backbone。SAM
   使用 ViT-H 作为图像编码器。
 sources:
 - wiki/sources/DiT_扩散模型与Transformer.md
 - wiki/sources/SAM_Segment_Anything模型.md
 - wiki/sources/从LLaVA到Qwen3-VL_多模态架构演进.md
-created: '2026-06-26'
 updated: '2026-06-26'
-confidence: high
 ---
 
 

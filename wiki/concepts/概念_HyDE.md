@@ -1,12 +1,9 @@
 ---
-tags:
-- RAG
-- RAG/query
-confidence: high
 type: concept
+tags:
+- RAG/retrieval
+- RAG/query
 summary: HyDE（Hypothetical Document Embedding，假设文档嵌入）是一种 Query Translation 方法，核心思想是通过生成"假设文档"，将查询从抽象的自然语言问题转化为检索系统能高效处理的表示。特别适用于复杂问题处理。
-created: '2026-07-06'
-updated: '2026-07-06'
 sources:
 - wiki/sources/DMQR-RAG_多样查询改写.md
 - wiki/sources/ES企业AI搜索实践.md
@@ -19,6 +16,7 @@ sources:
 - wiki/sources/RAG高级优化_问题生成检索增强.md
 - wiki/sources/提升RAG问答质量的技术路线.md
 - wiki/sources/腾讯查询优化四大类综述.md
+updated: '2026-07-06'
 ---
 
 # 概念_HyDE

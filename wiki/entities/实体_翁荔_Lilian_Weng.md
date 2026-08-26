@@ -2,14 +2,13 @@
 type: entity
 tags:
 - LLM/hallucination
-- AI-Agent/harness
+- AI-Agent/coding
+summary: OpenAI 前 VP、安全研究负责人，Thinking Machines Lab 联合创始人，Lil'Log 作者，提出 Agent 架构公式与
+  Harness Engineering 理论。
 sources:
 - wiki/sources/大模型幻觉陷阱_AGI之路04期.md
 - wiki/sources/翁荔_LLM外在幻觉_原因检测抵抗.md
 - wiki/sources/OpenAI前VP_Lilian_Weng_AI自我改进的近路不是改权重.md
-confidence: high
-summary: OpenAI 前 VP、安全研究负责人，Thinking Machines Lab 联合创始人，Lil'Log 作者，提出 Agent 架构公式与 Harness Engineering 理论。
-created: '2026-07-06'
 updated: '2026-07-22'
 ---
 

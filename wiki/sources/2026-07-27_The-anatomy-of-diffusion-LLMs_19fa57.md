@@ -1,13 +1,12 @@
 ---
 type: source
 tags:
-  - LLM
-  - Diffusion-LLM
-  - Autoregressive
-  - Inference-Optimization
-summary: 介绍了扩散语言模型（dLLMs）的基本原理、物理架构优势（从 memory-bound 转向 compute-bound），以及掩码扩散、Block Diffusion、注意力掩码退火与推理加速技术。
+- LLM/arch
+- LLM/inference
+summary: 介绍了扩散语言模型（dLLMs）的基本原理、物理架构优势（从 memory-bound 转向 compute-bound），以及掩码扩散、Block
+  Diffusion、注意力掩码退火与推理加速技术。
 sources:
-  - raw/articles/2026-07-27_The-anatomy-of-diffusion-LLMs_19fa57.md
+- raw/articles/2026-07-27_The-anatomy-of-diffusion-LLMs_19fa57.md
 updated: 2026-08-04
 ---
 

@@ -6,9 +6,7 @@ summary: torchvision.transforms 提供的图像增强 API，包括 Resize、Gray
   等内置操作。
 sources:
 - wiki/sources/PyTorch图像增强方法总结.md
-created: '2026-06-26'
 updated: '2026-06-26'
-confidence: high
 ---
 
 # 概念：torchvision 图像增强

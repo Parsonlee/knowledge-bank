@@ -3,12 +3,11 @@ type: concept
 tags:
 - LLM/reasoning
 - AI-Agent/prompt-engineering
-created: '2026-06-29'
-updated: '2026-06-29'
 summary: '- 来源：DeepMind Brain 团队 2022 年论文'
 sources:
 - wiki/sources/DeepSeek-R1工作原理.md
 - wiki/sources/LLM面试50题_MIT_CSAIL.md
+updated: '2026-06-29'
 ---
 
 

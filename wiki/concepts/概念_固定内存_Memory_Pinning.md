@@ -1,9 +1,16 @@
 ---
 type: concept
-tags: [deep-learning, pytorch, gpu, performance-tuning]
-sources: ["wiki/sources/2025-05-07_Memory-Pinning-to-accelerate-model-training_196ac3.md", "wiki/sources/2025-06-27_15-techniques-to-optimize-neural-network-training_197b30.md", "wiki/sources/2025-08-25_PyTorch-Dataloader-has-two-terrible-default-settings_198e2e.md"]
+tags:
+- DeepLearning
+- Skill/python
+- Infra/gpu
+- Infra/AI
+summary: 固定内存配合非阻塞传输，使 CPU 在 GPU 训练当前批次时异步传送下一批数据，从而减少 GPU 等待，但会占用额外 RAM 且对小张量收益有限。
+sources:
+- wiki/sources/2025-05-07_Memory-Pinning-to-accelerate-model-training_196ac3.md
+- wiki/sources/2025-06-27_15-techniques-to-optimize-neural-network-training_197b30.md
+- wiki/sources/2025-08-25_PyTorch-Dataloader-has-two-terrible-default-settings_198e2e.md
 updated: 2026-08-03
-summary: "固定内存配合非阻塞传输，使 CPU 在 GPU 训练当前批次时异步传送下一批数据，从而减少 GPU 等待，但会占用额外 RAM 且对小张量收益有限。"
 ---
 
 # 固定内存 (Memory Pinning)

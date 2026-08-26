@@ -2,9 +2,6 @@
 type: concept
 tags:
 - LLM/arch/Mamba
-created: '2026-06-29'
-updated: '2026-06-29'
-confidence: high
 summary: State Space Model，用于对序列数据建模的数学框架，源自控制理论（Kalman 1960）。
 sources:
 - wiki/sources/A_Visual_Guide_to_Mamba_and_SSM.md
@@ -12,6 +9,7 @@ sources:
 - wiki/sources/Mamba_Explained_Kola_Ayonrinde.md
 - wiki/sources/Transformer被挑战_Mamba解析与PyTorch复现.md
 - wiki/sources/一文读懂Mamba_知乎.md
+updated: '2026-06-29'
 ---
 
 

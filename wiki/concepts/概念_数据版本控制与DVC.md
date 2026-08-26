@@ -1,14 +1,12 @@
 ---
-type: "concept"
+type: concept
 tags:
-  - MLOps
-  - Data-Version-Control
-  - DVC
-  - Reproducibility
+- Infra/AI
+- Skill/data-analysis
+summary: DVC 与 Git 协同管理 Git 不适合直接存储的大型数据文件，使机器学习项目能够对数据集进行版本控制并提高实验的可复现性与可追踪性。
 sources:
-  - "wiki/sources/2026-08-01_Data-Version-Control_19fbed_part4.md"
-updated: "2026-08-04"
-summary: "DVC 与 Git 协同管理 Git 不适合直接存储的大型数据文件，使机器学习项目能够对数据集进行版本控制并提高实验的可复现性与可追踪性。"
+- wiki/sources/2026-08-01_Data-Version-Control_19fbed_part4.md
+updated: '2026-08-04'
 ---
 
 # 数据版本控制与 DVC

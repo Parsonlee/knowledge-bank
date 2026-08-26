@@ -6,7 +6,6 @@ summary: Agent TARS 是字节跳动开源的多模态 AI Agent，内置 MCP Serv
   MCP Server 扩展（Stdio/SSE），是 MCP 工程实践的参考实现
 sources:
 - wiki/sources/HumanInTheLoop用MCP实现.md
-created: '2026-06-29'
 updated: '2026-06-29'
 ---
 

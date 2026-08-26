@@ -1,12 +1,14 @@
 ---
-type: "entity"
-tags: ["AI-Agent/skill", "LLM/arch"]
-summary: "Anthropic 为由前 OpenAI 研究员创立的安全导向前沿 AI 研究实验室，研发 Claude 系列模型、Agent Skills 元工具架构与接种提示词（Inoculation Prompting）。"
+type: entity
+tags:
+- AI-Agent/skill
+- LLM/arch
+summary: Anthropic 为由前 OpenAI 研究员创立的安全导向前沿 AI 研究实验室，研发 Claude 系列模型、Agent Skills 元工具架构与接种提示词（Inoculation
+  Prompting）。
 sources:
 - wiki/sources/代码强化学习的双刃剑_前沿模型为何集体走向作弊.md
 - wiki/sources/Claude_Agent_Skills_从第一性原理深入剖析.md
-created: "2026-07-22"
-updated: "2026-07-22"
+updated: '2026-07-22'
 ---
 
 # 实体：Anthropic

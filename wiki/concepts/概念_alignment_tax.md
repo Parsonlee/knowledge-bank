@@ -2,11 +2,10 @@
 type: concept
 tags:
 - LLM/training/post-train
-created: '2026-06-29'
-updated: '2026-06-29'
 summary: 对 LLM 进行对齐训练（SFT/RLHF）后，模型在原有推理与知识任务上出现性能下降的代价，也称灾难性遗忘在对齐场景下的具体表现。
 sources:
 - wiki/sources/后训练认知_SFT_vs_RL_记忆与遗忘机制.md
+updated: '2026-06-29'
 ---
 
 

@@ -1,12 +1,11 @@
 ---
-type: "source"
+type: source
 tags:
-  - machine-learning
-  - clustering
-summary: "系统总结了 6 类主流聚类算法家族（质心、连通性、密度、图、分布、压缩），并探讨了其在不同形状和密度数据上的适用性。"
+- Skill/data-analysis
+summary: 系统总结了 6 类主流聚类算法家族（质心、连通性、密度、图、分布、压缩），并探讨了其在不同形状和密度数据上的适用性。
 sources:
-  - "raw/articles/2026-06-01_Categorization-of-clustering-algorithms_19e84f.md"
-updated: "2026-08-04"
+- raw/articles/2026-06-01_Categorization-of-clustering-algorithms_19e84f.md
+updated: '2026-08-04'
 ---
 
 # Categorization of clustering algorithms

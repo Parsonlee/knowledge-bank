@@ -15,9 +15,7 @@ sources:
 - wiki/sources/淘宝直播数字人_TTS语音合成技术.md
 - wiki/sources/2026-08-05_How-to-serve-5-models-on-one-GPU_19fd38.md
 - wiki/sources/2026-08-07_8-LLM-precision-formats_19fddf.md
-created: '2026-06-29'
 updated: '2026-08-10'
-confidence: high
 ---
 
 # 实体：vLLM

@@ -6,9 +6,7 @@ tags:
 summary: 深入解析 Anthropic 构建 Claude 生产级多智能体研究系统（Research feature）的工程挑战与经验，涵盖编排器-工作者架构、提示词工程、并行推理及长时间跨度状态管理。
 sources:
 - raw/articles/How we built our multi-agent research system.md
-created: '2026-07-06'
 updated: '2026-07-06'
-confidence: high
 ---
 # Anthropic 多智能体研究系统构建实践
 

@@ -3,11 +3,11 @@ type: source
 tags:
 - Infra/AI
 - LLM/inference
-summary: 介绍 NVIDIA 与 MIT 联合提出的 SparDA 架构。该架构在传统 Transformer 的 Q/K/V 投影之上引入第四投影 Forecast，预测下一层所需的 KV 块，从而实现从 CPU 内存异步预取 KV Cache，大幅缓解长文本 CPU offload 传输瓶颈。
+summary: 介绍 NVIDIA 与 MIT 联合提出的 SparDA 架构。该架构在传统 Transformer 的 Q/K/V 投影之上引入第四投影 Forecast，预测下一层所需的
+  KV 块，从而实现从 CPU 内存异步预取 KV Cache，大幅缓解长文本 CPU offload 传输瓶颈。
 sources:
 - raw/articles/2026-07-14_NVIDIA-researchers-built-a-new-transformer-variant_19f617.md
 updated: '2026-08-04'
-created: '2026-08-04'
 ---
 
 # 来源摘要：NVIDIA researchers built a new transformer variant (SparDA)

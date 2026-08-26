@@ -1,16 +1,13 @@
 ---
 type: source
 tags:
-  - machine-learning
-  - large-language-models
-  - parameter-efficient-fine-tuning
-  - peft
-  - lora
-  - qlora
-  - business-ml
-summary: 本文从商业与多租户架构设计的视角探讨了 LoRA/QLoRA 微调的经济学与工程学优势。传统全参数微调会对每个客户生成一份完整的大模型权重备份（例如 GPT-3 需 350GB），导致存储和动态挂载成本极其高昂。LoRA 通过冻结基座模型并使用低秩分解矩阵（通常仅 20-25MB）进行微调，实现了单基座模型共享、适配器热插拔以及按需冷启动加载，极大降低了推理和运维成本。
+- Skill/data-analysis
+- LLM/arch
+- LLM/training/post-train
+summary: 本文从商业与多租户架构设计的视角探讨了 LoRA/QLoRA 微调的经济学与工程学优势。传统全参数微调会对每个客户生成一份完整的大模型权重备份（例如
+  GPT-3 需 350GB），导致存储和动态挂载成本极其高昂。LoRA 通过冻结基座模型并使用低秩分解矩阵（通常仅 20-25MB）进行微调，实现了单基座模型共享、适配器热插拔以及按需冷启动加载，极大降低了推理和运维成本。
 sources:
-  - raw/articles/2026-04-23_LoRAQLoRA-explained-from-a-business-lens_19dbca.md
+- raw/articles/2026-04-23_LoRAQLoRA-explained-from-a-business-lens_19dbca.md
 updated: 2026-08-04
 ---
 

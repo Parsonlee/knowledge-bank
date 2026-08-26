@@ -1,10 +1,13 @@
 ---
-type: "concept"
-tags: ["ML/dimension-reduction", "t-SNE", "GPU/acceleration"]
-summary: "t-SNE 是一种流形学习降维与二维可视化算法。其 CPU 计算具有 O(N²) 二次方复杂度瓶颈，大样本下极其缓慢。tSNE-CUDA 可提供高达 700 倍的 GPU 极速提升，但目前硬件上仅支持生成二维投影（n_components=2）。"
-sources: ["wiki/sources/2025-07-01_Accelerate-tSNE-with-GPU_197c7a.md"]
-created: "2026-08-03"
-updated: "2026-08-03"
+type: concept
+tags:
+- Skill/data-analysis
+- Infra/gpu
+summary: t-SNE 是一种流形学习降维与二维可视化算法。其 CPU 计算具有 O(N²) 二次方复杂度瓶颈，大样本下极其缓慢。tSNE-CUDA 可提供高达
+  700 倍的 GPU 极速提升，但目前硬件上仅支持生成二维投影（n_components=2）。
+sources:
+- wiki/sources/2025-07-01_Accelerate-tSNE-with-GPU_197c7a.md
+updated: '2026-08-03'
 ---
 
 # 概念：t-SNE算法

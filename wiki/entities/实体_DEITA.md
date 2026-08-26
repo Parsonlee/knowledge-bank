@@ -2,11 +2,10 @@
 type: entity
 tags:
 - LLM/training/post-train
+summary: '- 全称：Data-Efficient Instruction Tuning for Alignment'
 sources:
 - wiki/sources/SFT数据挑选方法_质量多样性必要性.md
-created: '2026-06-29'
 updated: '2026-06-29'
-summary: '- 全称：Data-Efficient Instruction Tuning for Alignment'
 ---
 
 # 实体：DEITA

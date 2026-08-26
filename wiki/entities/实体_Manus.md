@@ -2,6 +2,7 @@
 type: entity
 tags:
 - AI-Agent/context-engineering
+summary: '- 类型：通用 AI Agent 产品'
 sources:
 - wiki/sources/100家顶尖AI初创公司的7个真相.md
 - wiki/sources/AI应用实战_搞定复杂指令和工具膨胀.md
@@ -12,9 +13,7 @@ sources:
 - wiki/sources/九大主流AI_PPT横测.md
 - wiki/sources/也许当前最好的上下文工程讲解_LangChain联合Manus.md
 - wiki/sources/浅谈上下文工程_Claude_Code_Manus_Kiro.md
-created: '2026-06-29'
 updated: '2026-06-29'
-summary: '- 类型：通用 AI Agent 产品'
 ---
 
 # 实体：Manus

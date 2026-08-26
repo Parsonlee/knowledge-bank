@@ -6,9 +6,7 @@ summary: '`matplotlib` 是 Python 生态中最流行的数据可视化框架，�
   [[实体_dufte]] 库——通过简短代码自动改造默认 matplotlib 图表样式。`pip install dufte` 安装后，将'
 sources:
 - raw/playbooks/一行代码让 matplotlib 图表变高大上.md
-created: '2026-06-29'
 updated: '2026-07-01'
-confidence: high
 cubox_url: https://cubox.pro/web/card/7128377660480160628
 date_collected: 2023-11-26
 ---

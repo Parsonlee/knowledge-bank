@@ -2,13 +2,11 @@
 type: entity
 tags:
 - AI-Agent/deep-research
+summary: '- 发布方：阿里巴巴通义实验室（Tongyi Lab）'
 sources:
 - wiki/sources/Tongyi DeepResearch的技术报告探秘.md
 - wiki/sources/通义 DeepResearch：开源 AI 智能体的新纪元.md
-confidence: high
-created: '2026-06-29'
 updated: '2026-06-29'
-summary: '- 发布方：阿里巴巴通义实验室（Tongyi Lab）'
 ---
 
 # 实体：通义 DeepResearch

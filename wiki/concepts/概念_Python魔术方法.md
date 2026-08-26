@@ -1,12 +1,11 @@
 ---
 type: concept
 tags:
-  - python
-  - oop
-summary: Python 魔术方法（Dunder 方法）是实现 Python 对象协议与重载内置行为的核心机制。本文整理分类了 20 种最常用魔术方法，详细解析了 __new__ 与 __init__ 的本质差异与调用时序，展示了利用 __new__ 实现单例模式，并关联了描述符机制。
+- Skill/python
+summary: Python 魔术方法（Dunder 方法）是实现 Python 对象协议与重载内置行为的核心机制。本文整理分类了 20 种最常用魔术方法，详细解析了
+  __new__ 与 __init__ 的本质差异与调用时序，展示了利用 __new__ 实现单例模式，并关联了描述符机制。
 sources:
-  - wiki/sources/2026-04-12_20-most-common-magic-methods_19d838.md
-created: '2026-08-04'
+- wiki/sources/2026-04-12_20-most-common-magic-methods_19d838.md
 updated: '2026-08-04'
 ---
 

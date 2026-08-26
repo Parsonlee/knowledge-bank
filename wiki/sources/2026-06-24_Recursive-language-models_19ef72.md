@@ -1,9 +1,9 @@
 ---
 type: source
 tags:
-- AI-Agent/recursive-language-models
 - AI-Agent/context-engineering
-summary: 介绍由MIT提出的递归语言模型（RLM，Recursive Language Models）架构，该架构通过在Python REPL环境中缓存上下文数据，并让模型使用工具进行Peek、Regex过滤和Partition分治，实现自上而下的递归子调用，从而有效解决Context Rot问题，保证超长文本性能不衰减。
+summary: 介绍由MIT提出的递归语言模型（RLM，Recursive Language Models）架构，该架构通过在Python REPL环境中缓存上下文数据，并让模型使用工具进行Peek、Regex过滤和Partition分治，实现自上而下的递归子调用，从而有效解决Context
+  Rot问题，保证超长文本性能不衰减。
 sources:
 - raw/articles/2026-06-24_Recursive-language-models_19ef72.md
 updated: '2026-08-04'

@@ -10,7 +10,6 @@ sources:
 - wiki/sources/Karpathy推文引发的LLM_Wiki知识库搭建实践.md
 - wiki/sources/Transformer大模型3D可视化_NanoGPT.md
 - wiki/sources/手把手教你实现稀疏MoE语言模型.md
-created: '2026-07-06'
 updated: '2026-07-22'
 ---
 

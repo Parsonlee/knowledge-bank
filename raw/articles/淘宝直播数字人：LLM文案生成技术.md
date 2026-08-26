@@ -1,11 +1,10 @@
 ---
-id: "7340743485936373722"
+id: '7340743485936373722'
 cubox_url: https://cubox.pro/web/card/7340743485936373722
 url: https://mp.weixin.qq.com/s?__biz=MzAxNDEwNjk5OQ==&mid=2650540709&idx=1&sn=af29bb9831d31a6f1a0f1c1fe80b2926
 tags:
-  - LLM
-  - LLM/Multimodal
-  - AIGC
+- LLM/arch
+- AIGC
 published: 2025-06-23
 ---
 # 淘宝直播数字人：LLM文案生成技术

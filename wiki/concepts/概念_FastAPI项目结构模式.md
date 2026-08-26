@@ -1,15 +1,13 @@
 ---
+type: concept
 tags:
 - Skill/python
-confidence: high
-type: concept
 summary: 一套生产可用的 FastAPI 标准项目组织模式，核心思想是 Routers / Schemas / Services 三层分离，按业务组件一一对应。
-created: '2026-07-06'
-updated: '2026-07-06'
 sources:
 - wiki/sources/Docker化Flask_Django应用从pip切换到uv.md
 - wiki/sources/FastAPI架构指南_项目模板与实战经验.md
 - wiki/sources/Python并发_async_await与FastAPI.md
+updated: '2026-07-06'
 ---
 
 

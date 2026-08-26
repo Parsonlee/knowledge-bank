@@ -1,14 +1,11 @@
 ---
-type: "concept"
+type: concept
 tags:
-  - deep-learning
-  - activation-functions
-  - neural-networks
-  - relu
+- DeepLearning
+summary: 神经网络通过加权叠加不同平移的 ReLU 形成含多个折点的分段线性函数，ReLU 单元越多，对线性或非线性目标函数的逼近通常越精细。
 sources:
-  - "wiki/sources/2026-06-08_An-intuitive-guide-to-non-linearity-of-ReLU_19ea91.md"
+- wiki/sources/2026-06-08_An-intuitive-guide-to-non-linearity-of-ReLU_19ea91.md
 updated: 2026-08-04
-summary: "神经网络通过加权叠加不同平移的 ReLU 形成含多个折点的分段线性函数，ReLU 单元越多，对线性或非线性目标函数的逼近通常越精细。"
 ---
 
 # ReLU 激活函数非线性拟合本质

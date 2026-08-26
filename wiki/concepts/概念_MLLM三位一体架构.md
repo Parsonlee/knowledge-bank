@@ -1,13 +1,12 @@
 ---
 type: concept
 tags:
-- LLM/Multimodal
+- LLM/arch
 - CV/arch
 summary: 多模态大模型通用架构蓝图：视觉编码器（眼睛）+ 连接器（灵魂之桥）+ LLM（大脑）三部分协同工作
-created: '2026-06-29'
-updated: '2026-06-29'
 sources:
 - wiki/sources/从LLaVA到Qwen3-VL_多模态架构演进.md
+updated: '2026-06-29'
 ---
 
 

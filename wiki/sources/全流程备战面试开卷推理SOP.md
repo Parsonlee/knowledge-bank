@@ -6,9 +6,7 @@ tags:
 summary: 少数派精选文章，提出将职场面试视为基于样本积累与反向推导的“开卷推理游戏”，构建结构化面试备战与复盘标准流程。
 sources:
 - raw/insights/把面试变成一场「开卷推理」：我的全流程备战与复盘 SOP - 少数派.md
-created: '2026-07-02'
 updated: '2026-07-02'
-confidence: high
 ---
 # 全流程备战面试开卷推理SOP
 

@@ -4,12 +4,11 @@ tags:
 - AI-Agent/skill
 summary: Agent Skills 元工具架构（Agent Skills Meta-Tool Architecture）是 Claude Code 中扩展
   Agent 能力的一种设计模式：通过一个名为 Skill 的元工具（meta-tool）作为容器，动态加载和调度各个具体技能（skills），技能本质是领...
-created: '2026-07-06'
-updated: '2026-07-06'
 sources:
 - wiki/sources/Claude_Agent_Skills_从第一性原理深入剖析.md
 - wiki/sources/从第一性原理深度拆解_Claude_Agent_Skill_宝玉.md
 - wiki/sources/写好CLAUDE.md_HumanLayer最佳实践.md
+updated: '2026-07-06'
 ---
 
 

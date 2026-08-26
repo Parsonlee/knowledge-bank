@@ -1,12 +1,10 @@
 ---
 type: source
 tags:
-  - agent
-  - loop-engineering
-  - system-design
+- AI-Agent/coding
 summary: 介绍智能体循环（Agent Loops）的四种主要设计类型（单步交互式、目标驱动式、时间触发式、事件主动式），分析每种类型的触发机制、适用场景以及对自主性的分担。
 sources:
-  - raw/articles/2026-07-14_The-four-types-of-agent-loops_19f617.md
+- raw/articles/2026-07-14_The-four-types-of-agent-loops_19f617.md
 updated: 2026-08-04
 ---
 

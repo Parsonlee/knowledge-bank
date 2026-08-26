@@ -8,9 +8,7 @@ summary: 通过可视化图解讲解 Pandas 核心操作：sort_values 排序、
   索引操作，每个操作配图解释执行步骤。
 sources:
 - raw/playbooks/超强图解 Pandas，建议收藏.md
-created: '2026-06-30'
 updated: '2026-07-01'
-confidence: high
 ---
 # 超强图解 Pandas 操作大全
 

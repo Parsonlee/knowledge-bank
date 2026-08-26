@@ -1,15 +1,12 @@
 ---
 type: entity
 tags:
-- CV
 - CV/detection
 summary: Mask R-CNN，在 Faster R-CNN 基础上增加 mask 分支实现实例分割，提出 RoIAlign。
 sources:
 - wiki/sources/目标检测入门_基础网络与分类定位权衡.md
 - wiki/sources/目标检测入门_评测与训练技巧.md
-created: '2026-06-26'
 updated: '2026-06-26'
-confidence: medium
 ---
 
 # 实体：Mask R-CNN

@@ -1,14 +1,12 @@
 ---
-type: "source"
+type: source
 tags:
-  - RAG
-  - search
-  - BM25
-  - sparse-retrieval
-summary: "本文介绍了有 30 年历史的经典稀疏检索算法 BM25，通过拆解 IDF（逆文档频率）、TF 词频饱和度以及文档长度惩罚三项核心要素，分析了其在专有名词与错误码精确匹配中的优势，以及其在混合检索（Hybrid Search）架构中的核心价值。"
+- RAG/retrieval
+summary: 本文介绍了有 30 年历史的经典稀疏检索算法 BM25，通过拆解 IDF（逆文档频率）、TF 词频饱和度以及文档长度惩罚三项核心要素，分析了其在专有名词与错误码精确匹配中的优势，以及其在混合检索（Hybrid
+  Search）架构中的核心价值。
 sources:
-  - "raw/articles/2026-05-05_How-does-BM25-ranking-algorithm-work_19dfa2.md"
-updated: "2026-08-04"
+- raw/articles/2026-05-05_How-does-BM25-ranking-algorithm-work_19dfa2.md
+updated: '2026-08-04'
 ---
 
 # How does BM25 ranking algorithm work?

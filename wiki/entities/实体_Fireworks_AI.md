@@ -7,9 +7,7 @@ summary: Fireworks AI 是创立三年的 AI Inference Infra 公司，近期将�
   GPU 资源/训练循环/实验管理。客户用其微调开源模型效果追平闭源顶尖模型且推理快 10-40 倍。
 sources:
 - wiki/sources/RL_Infra行业全景.md
-created: '2026-06-29'
 updated: '2026-06-29'
-confidence: high
 ---
 
 # 实体：Fireworks AI

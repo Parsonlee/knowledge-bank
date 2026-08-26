@@ -5,9 +5,7 @@ tags:
 summary: 5 个教程很少提及但能干净解决实际问题的 Python 功能。
 sources:
 - raw/articles/写了十年 Python，我竟然现在才知道这5个功能！.md
-created: '2026-06-29'
 updated: '2026-07-01'
-confidence: high
 date: 2025-07-31
 ---
 # 五个鲜为人知的 Python 功能

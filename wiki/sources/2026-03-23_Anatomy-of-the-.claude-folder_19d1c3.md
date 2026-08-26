@@ -1,13 +1,13 @@
 ---
-type: "source"
+type: source
 tags:
-  - Claude-Code
-  - AI-Tools
-  - Configuration
-summary: "详细剖析 Claude Code 控制中心——`.claude/` 目录的结构和配置原语，涵盖 CLAUDE.md、规则系统、自定义命令、技能（skills）、智能体（agents）以及权限设置 settings.json 的机制。"
+- Skill/claude-code
+- AI-Agent/tool-calling
+summary: 详细剖析 Claude Code 控制中心——`.claude/` 目录的结构和配置原语，涵盖 CLAUDE.md、规则系统、自定义命令、技能（skills）、智能体（agents）以及权限设置
+  settings.json 的机制。
 sources:
-  - "raw/articles/2026-03-23_Anatomy-of-the-.claude-folder_19d1c3.md"
-updated: "2026-08-03"
+- raw/articles/2026-03-23_Anatomy-of-the-.claude-folder_19d1c3.md
+updated: '2026-08-03'
 ---
 
 # Anatomy of the .claude/ folder

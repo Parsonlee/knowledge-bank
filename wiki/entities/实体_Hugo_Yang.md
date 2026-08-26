@@ -1,12 +1,10 @@
 ---
 type: entity
 tags:
-- Skill/knowledge-bank
+- AI-Agent/skill
+summary: 本知识库（Parsonlee/knowledge-bank）的搭建者与系统架构维护者，提出了 Vault 死链治理鉴别分类与单向推导数据管线维护规范。
 sources:
 - wiki/sources/Vault死链治理与单向推导架构维护复盘.md
-confidence: high
-summary: 本知识库（Parsonlee/knowledge-bank）的搭建者与系统架构维护者，提出了 Vault 死链治理鉴别分类与单向推导数据管线维护规范。
-created: '2026-07-22'
 updated: '2026-07-22'
 ---
 

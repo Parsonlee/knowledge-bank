@@ -6,9 +6,7 @@ tags:
 summary: 宝玉翻译 Han Lee 深度文章：从源码层面解构 Claude Agent Skill 元工具架构，含双消息注入机制与执行上下文修改全生命周期
 sources:
 - raw/articles/从第一性原理深度拆解 Claude Agent Skill _ 宝玉的分享.md
-created: '2026-06-29'
 updated: '2026-07-01'
-confidence: high
 ---
 ## 来源信息
 

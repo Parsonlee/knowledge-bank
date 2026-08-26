@@ -2,13 +2,12 @@
 title: 不用 title，你怎么介绍自己？
 source: https://www.jiabinlu.com/blog/introduce-yourself-without-title
 author:
-  - "[[Jiabin Lu]]"
+- '[[Jiabin Lu]]'
 published: 2026-07-07
 created: 2026-07-13
-description:
+description: null
 tags:
-  - clippings
-  - Life
+- Life
 ---
 前几天参加课代表立正在 SF 的火锅局。开场有个规则：每个人介绍自己，但不许用职位和 title。结果很有意思——聊着聊着，大家还是或多或少地绕回了身份上。明确禁止了，都藏不住。
 

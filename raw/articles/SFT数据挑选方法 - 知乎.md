@@ -1,12 +1,12 @@
 ---
-id: "7311391596988074687"
+id: '7311391596988074687'
 cubox_url: https://cubox.pro/web/card/7311391596988074687
 url: https://zhuanlan.zhihu.com/p/22529462474
 tags:
-  - Skill/data-analysis
-  - LLM
-  - LLM/training/post-train
-  - LLM/training
+- Skill/data-analysis
+- LLM/arch
+- LLM/training/post-train
+- LLM/training
 published: 2025-02-09
 ---
 # SFT数据挑选方法 - 知乎

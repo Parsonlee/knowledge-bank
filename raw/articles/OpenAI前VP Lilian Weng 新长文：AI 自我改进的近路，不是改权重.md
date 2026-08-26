@@ -2,13 +2,12 @@
 title: OpenAI前VP Lilian Weng 新长文：AI 自我改进的近路，不是改权重
 source: https://mp.weixin.qq.com/s/-ovpNjFsUYrLuKUpZusObA
 author:
-  - "[[Mountain Gu]]"
+- '[[Mountain Gu]]'
 published: 2026-07-07
 created: 2026-07-13
 description: 今天下午，很多 AI 从业者的时间线闪了一下。Lilian Weng 更新了。博文落款是 7 月 4 日，推文是几个小时前发的。
 tags:
-  - clippings
-  - AI-Agent/harness
+- AI-Agent/coding
 ---
 Mountain Gu AgenticAI *2026年7月7日 17:51*
 

@@ -9,9 +9,7 @@ sources:
 - wiki/sources/ES企业AI搜索实践.md
 - wiki/sources/Jina_AI创业复盘.md
 - wiki/sources/跨模态知识联邦与统一语义推理RAG.md
-created: '2026-06-29'
 updated: '2026-07-22'
-confidence: high
 ---
 
 ## 简介

@@ -7,9 +7,7 @@ summary: 介绍 10 个用于自动探索性数据分析（EDA）的 Python 包�
   Dataprep 最常用，AutoViz 和 D-Tale 也不错。
 sources:
 - raw/articles/区区几行Python代码，就能实现全面自动探索性数据分析！.md
-created: '2026-06-30'
 updated: '2026-07-01'
-confidence: high
 ---
 # 自动探索性数据分析 EDA：10 个 Python 包
 

@@ -7,9 +7,7 @@ summary: 阿里云 OpenLM 实践：利用 MCP Notification + HTTP 接口实现�
   工具、MCP Proxy 代理、YOLO 模式三方案
 sources:
 - raw/articles/Human In the Loop竟然可以是个MCP_.md
-created: '2026-06-29'
 updated: '2026-07-01'
-confidence: high
 ---
 ## 来源信息
 

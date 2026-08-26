@@ -1,14 +1,12 @@
 ---
 type: source
 tags:
-- CV
+- CV/detection
 summary: 系统介绍 Meta AI 的 Segment Anything Model（SAM）：架构（ViT 图像编码器 + Prompt 编码器 + 轻量
   Mask 解码器）、训练方法（Focal Loss + Dice Loss、SA-1B 数据集三阶段标注）、多模态 CLIP 集成、交互/自动分割模式。
 sources:
 - raw/articles/分割一切(Segment Anything)不是梦，SAM模型引领图像分割新时代....md
-created: '2026-06-26'
 updated: '2026-07-01'
-confidence: high
 ---
 # SAM：Segment Anything Model
 

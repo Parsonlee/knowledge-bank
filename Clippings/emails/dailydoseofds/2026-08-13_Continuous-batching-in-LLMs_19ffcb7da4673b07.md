@@ -1,4 +1,16 @@
-#  Continuous batching in LLMs 
+---
+title: "Continuous batching in LLMs"
+source_key: "dailydoseofds"
+email_subject: "Continuous Batching in LLMs"
+email_sender: "Daily Dose of DS <avi@dailydoseofds.com>"
+email_date: "Thu, 13 Aug 2026 20:02:13 +0000"
+email_id: "19ffcb7da4673b07"
+article_id: "19ffcb7da4673b07:2"
+published: "2026-08-13"
+tags: ["LLM/inference", "Infra/AI"]
+---
+
+# Continuous batching in LLMs
 
 - **邮件来源**: dailydoseofds
 - **原邮件主题**: Continuous Batching in LLMs

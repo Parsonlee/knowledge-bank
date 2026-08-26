@@ -1,13 +1,11 @@
 ---
+type: concept
 tags:
 - AIGC
-confidence: high
-type: concept
 summary: 九大主流AIPPT横测 将市面 AI PPT 工具归纳为两条主流路径。
-created: '2026-07-06'
-updated: '2026-07-06'
 sources:
 - wiki/sources/九大主流AI_PPT横测.md
+updated: '2026-07-06'
 ---
 
 

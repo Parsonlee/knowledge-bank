@@ -6,9 +6,7 @@ summary: 针对 OCR（手写金额识别）的数据增强实战：用 OpenCV + 
   OneOf 随机组合；附完整 augment_img 代码。
 sources:
 - raw/playbooks/OCR的有效数据增强.md
-created: '2026-06-26'
 updated: '2026-07-01'
-confidence: high
 ---
 # OCR 的有效数据增强
 

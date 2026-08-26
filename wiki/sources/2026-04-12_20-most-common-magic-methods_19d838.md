@@ -1,11 +1,10 @@
 ---
 type: source
 tags:
-  - python
-  - oop
+- Skill/python
 summary: 本文列举并简要介绍了 Python 面向对象编程（OOP）中 20 个最常用的魔术方法（Dunder 方法），包括对象创建与初始化、表示转换、容器操作、算术与逻辑运算、逻辑比较等。
 sources:
-  - raw/articles/2026-04-12_20-most-common-magic-methods_19d838.md
+- raw/articles/2026-04-12_20-most-common-magic-methods_19d838.md
 updated: '2026-08-04'
 ---
 

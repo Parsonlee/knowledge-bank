@@ -1,12 +1,11 @@
 ---
 type: source
 tags:
-  - machine-learning
-  - knn
-  - imbalanced-data
-summary: 探讨了 kNN 算法在不平衡数据集上的局限性，并详细介绍了两种改进方案：距离权重 kNN（在 sklearn 中配置 weights='distance'）和动态调整超参数 k 的算法。
+- Skill/data-analysis
+summary: 探讨了 kNN 算法在不平衡数据集上的局限性，并详细介绍了两种改进方案：距离权重 kNN（在 sklearn 中配置 weights='distance'）和动态调整超参数
+  k 的算法。
 sources:
-  - raw/articles/2025-11-28_How-to-use-kNNs-for-imbalanced-datasets_19acc3.md
+- raw/articles/2025-11-28_How-to-use-kNNs-for-imbalanced-datasets_19acc3.md
 updated: 2026-08-03
 ---
 

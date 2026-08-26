@@ -1,12 +1,10 @@
 ---
 type: entity
 tags:
-- Skill/knowledge-bank
+- AI-Agent/skill
+summary: 知识库自动化治理与静态图谱诊断 Python 工具（`scripts/vault_lint.py`），支持语法污染扫描、死链审计与级联清理。
 sources:
 - wiki/sources/Vault死链治理与单向推导架构维护复盘.md
-confidence: high
-summary: 知识库自动化治理与静态图谱诊断 Python 工具（`scripts/vault_lint.py`），支持语法污染扫描、死链审计与级联清理。
-created: '2026-07-22'
 updated: '2026-07-22'
 ---
 

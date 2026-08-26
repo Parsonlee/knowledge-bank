@@ -2,11 +2,10 @@
 type: entity
 tags:
 - LLM/inference
+summary: Medusa 是一个 LLM 推理加速框架，属于推测解码（Speculative Decoding）的 Self-Drafting 方案。
 sources:
 - wiki/sources/推测解码Speculative_Decoding综述.md
-created: '2026-06-29'
 updated: '2026-06-29'
-summary: Medusa 是一个 LLM 推理加速框架，属于推测解码（Speculative Decoding）的 Self-Drafting 方案。
 ---
 
 # 实体：Medusa

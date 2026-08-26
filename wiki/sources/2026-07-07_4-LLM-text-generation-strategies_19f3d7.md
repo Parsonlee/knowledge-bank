@@ -1,12 +1,12 @@
 ---
 type: source
 tags:
-  - llm
-  - decoding-strategies
-  - natural-language-processing
+- LLM/arch
+- LLM/inference
+- DeepLearning
 summary: 介绍了 LLM 文本生成中的四种核心解码策略（贪婪搜索、多项式采样、束搜索与对比搜索），分析了它们的工作机制以及在流畅度、多样性与重复度等方面的权衡。
 sources:
-  - raw/articles/2026-07-07_4-LLM-text-generation-strategies_19f3d7.md
+- raw/articles/2026-07-07_4-LLM-text-generation-strategies_19f3d7.md
 updated: '2026-08-04'
 ---
 

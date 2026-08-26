@@ -1,15 +1,13 @@
 ---
+type: concept
 tags:
 - RAG/eval
-confidence: high
-type: concept
 summary: RAGAS 是专为检索增强生成（RAG）系统设计的开源评估框架，提供一套全面的多维度指标，衡量 RAG 系统在检索准确性、生成内容与检索上下文一致性等方面的表现。
-created: '2026-07-06'
-updated: '2026-07-06'
 sources:
 - wiki/sources/Agent Loop使用语义早停比max_iterations硬截断节省38% Token 且质量不降.md
 - wiki/sources/OpenAI_LLM应用最佳实践.md
 - wiki/sources/RAGAS评估RAG系统.md
+updated: '2026-07-06'
 ---
 
 # 概念_RAG评估框架RAGAS

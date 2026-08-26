@@ -1,10 +1,12 @@
 ---
-type: "concept"
-tags: ["LLM/training/post-train"]
-summary: "直接偏好优化，无需显式训练奖励模型，直接通过人类偏好数据优化策略模型"
-sources: ["wiki/sources/375篇文献_推理大模型后训练技术综述.md", "wiki/sources/LLM后训练技术全景解读.md"]
-created: "2026-07-22"
-updated: "2026-07-22"
+type: concept
+tags:
+- LLM/training/post-train
+summary: 直接偏好优化，无需显式训练奖励模型，直接通过人类偏好数据优化策略模型
+sources:
+- wiki/sources/375篇文献_推理大模型后训练技术综述.md
+- wiki/sources/LLM后训练技术全景解读.md
+updated: '2026-07-22'
 ---
 
 # 概念：DPO (Direct Preference Optimization)

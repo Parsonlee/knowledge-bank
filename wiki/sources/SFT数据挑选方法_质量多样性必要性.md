@@ -6,9 +6,7 @@ summary: SFT 数据清洗三维度：质量（奖励模型打分）、多样性�
   三类方法
 sources:
 - raw/articles/SFT数据挑选方法 - 知乎.md
-created: '2026-06-29'
 updated: '2026-07-01'
-confidence: high
 ---
 ## 来源信息
 

@@ -5,9 +5,7 @@ tags:
 summary: 系统梳理 AI 智能体 8 种记忆策略：全量记忆、滑动窗口、相关性过滤、摘要压缩、向量数据库、知识图谱、分层记忆、类OS内存管理，附模拟代码。
 sources:
 - raw/articles/AI 智能体 8 种常见的记忆（Memory）策略与技术实现.md
-created: '2026-06-29'
 updated: '2026-07-01'
-confidence: high
 ---
 ## 来源信息
 

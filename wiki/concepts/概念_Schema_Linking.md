@@ -2,13 +2,12 @@
 type: concept
 tags:
 - AI-Agent/AI-BI
-created: '2026-06-29'
-updated: '2026-06-29'
 summary: Schema Linking（Schema 联接）是 NL2SQL 流程中的关键预处理步骤，将用户自然语言查询与数据库表/列建立映射关系，从大型
   Schema 中筛选出与查询最相关的表和列。
 sources:
 - wiki/sources/企业落地NL2SQL_AI-ready_data与小模型.md
 - wiki/sources/优图RAG技术详解.md
+updated: '2026-06-29'
 ---
 
 

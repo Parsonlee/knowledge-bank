@@ -1,13 +1,11 @@
 ---
 type: source
 tags:
-- RAG
+- RAG/retrieval
 summary: 12 个 RAG 痛点及对应解决方案：涵盖内容缺失、排名遗漏、上下文不足、未提取、格式错误、粒度不当、不完整、数据摄取扩展性、结构化数据QA、复杂PDF提取、后备模型、LLM安全
 sources:
 - raw/articles/12 RAG 痛点和拟议解决方案.md
-created: '2026-06-26'
 updated: '2026-07-01'
-confidence: high
 ---
 # RAG_12痛点与解决方案
 

@@ -7,7 +7,6 @@ summary: 解析 Anthropic 官方为 Claude Code 开发的 13 个第一方领域�
 sources:
 - raw/articles/Anthropic x ClaudeCode 官方插件：AI Agent 的领域知识插件——鸟窝.md
 updated: '2026-07-02'
-created: '2026-07-02'
 ---
 
 # Anthropic x ClaudeCode 官方插件：AI Agent 的领域知识插件——鸟窝

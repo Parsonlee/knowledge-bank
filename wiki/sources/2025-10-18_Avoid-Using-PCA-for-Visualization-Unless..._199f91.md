@@ -1,13 +1,12 @@
 ---
-type: "source"
+type: source
 tags:
-  - machine-learning
-  - dimensionality-reduction
-  - data-visualization
-summary: "探讨主成分分析（PCA）用于数据可视化时的局限性，并介绍如何通过累计解释方差（CEV）曲线来验证 2D PCA 可视化的可信度，最后指出 t-SNE、UMAP 等专用算法更适合高维数据的可视化任务。"
+- Skill/data-analysis
+summary: 探讨主成分分析（PCA）用于数据可视化时的局限性，并介绍如何通过累计解释方差（CEV）曲线来验证 2D PCA 可视化的可信度，最后指出 t-SNE、UMAP
+  等专用算法更适合高维数据的可视化任务。
 sources:
-  - "raw/articles/2025-10-18_Avoid-Using-PCA-for-Visualization-Unless..._199f91.md"
-updated: "2026-08-03"
+- raw/articles/2025-10-18_Avoid-Using-PCA-for-Visualization-Unless..._199f91.md
+updated: '2026-08-03'
 ---
 
 # Avoid Using PCA for Visualization Unless...

@@ -1,14 +1,13 @@
 ---
 type: source
 tags:
-- Skill/knowledge-bank
+- AI-Agent/skill
 - AI-Agent/coding
 summary: 基于 Karpathy 的 LLM Wiki 理念，结合 Claude Code（大脑）、Obsidian（可视化图谱眼睛）与飞书机器人（移动端手），实现自动化知识入库与复利积累。
 sources:
 - raw/articles/Claude Code + Obsidian + 飞书，我搭了一套会自己长大的知识库.md
 updated: '2026-07-06'
 published: '2026-04-14'
-created: '2026-07-06'
 ---
 ## 来源信息
 

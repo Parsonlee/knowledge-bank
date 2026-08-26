@@ -1,8 +1,11 @@
 ---
 type: source
-tags: [multi-agent, sub-agents, agent-teams, architecture]
+tags:
+- AI-Agent/multi-agent
+- AI-Agent/coding
 summary: 对比了 Claude 提供的两种多智能体范式：Sub-agents（基于隔离实现并行与 Context 压缩，单向反馈）和 Agent Teams（基于协同通信与共享状态，双向协作），并从第一性原理探讨了以上下文为中心的分治逻辑。
-sources: ["raw/articles/2026-07-31_Subagents-vs.-Agent-Teams_19fb9f.md"]
+sources:
+- raw/articles/2026-07-31_Subagents-vs.-Agent-Teams_19fb9f.md
 updated: 2026-08-04
 ---
 

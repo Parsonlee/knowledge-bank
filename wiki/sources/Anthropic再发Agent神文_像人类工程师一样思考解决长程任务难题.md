@@ -6,9 +6,7 @@ summary: Anthropic 为 Claude Agent SDK 开发双 Agent 架构（初始化 Agent
   任务的跨会话状态管理难题。
 sources:
 - raw/articles/Anthropic再发Agent神文：像人类工程师一样思考，解决「长程任务」难题.md
-created: '2026-06-29'
 updated: '2026-07-01'
-confidence: high
 ---
 ## 来源信息
 

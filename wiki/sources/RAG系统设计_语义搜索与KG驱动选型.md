@@ -2,13 +2,11 @@
 type: source
 tags:
 - RAG/embedding
-- RAG
+- RAG/retrieval
 summary: RAG 的本质是提示工程（Prompt Engineering）：通过改变条件调整概率分布，不改变模型参数 θ
 sources:
 - raw/articles/RAG系统设计：揭秘语义搜索被低估的核心价值与KG驱动的架构选型策略.md
-created: '2026-06-29'
 updated: '2026-07-01'
-confidence: high
 ---
 # RAG系统设计_语义搜索与KG驱动选型
 

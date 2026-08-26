@@ -1,13 +1,13 @@
 ---
-type: "source"
+type: source
 tags:
-  - llm
-  - generation-parameters
-  - decoding-strategies
-  - nlp
-summary: "解构控制大语言模型（LLM）文本生成的 7 个核心解码参数：Max tokens、Temperature、Top-k、Top-p (Nucleus Sampling)、Frequency Penalty、Presence Penalty 以及 Stop Sequences 的工作原理与应用场景。"
+- LLM/arch
+- LLM/inference
+- DeepLearning
+summary: 解构控制大语言模型（LLM）文本生成的 7 个核心解码参数：Max tokens、Temperature、Top-k、Top-p (Nucleus
+  Sampling)、Frequency Penalty、Presence Penalty 以及 Stop Sequences 的工作原理与应用场景。
 sources:
-  - "raw/articles/2026-06-14_7-LLM-generation-parameters_19ec7f.md"
+- raw/articles/2026-06-14_7-LLM-generation-parameters_19ec7f.md
 updated: 2026-08-04
 ---
 

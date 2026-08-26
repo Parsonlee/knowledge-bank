@@ -6,9 +6,7 @@ summary: 腾讯 QQ 基础架构团队从传统后台工程师视角系统拆解 
   Graph/KV Cache/流式响应/连续批处理），强调传统 Infra 方法论可无缝迁移到 AI Infra。
 sources:
 - raw/articles/入局AI Infra：程序员必须了解的AI系统设计与挑战知识.md
-created: '2026-06-29'
 updated: '2026-07-01'
-confidence: high
 ---
 # 入局AI Infra：程序员必须了解的AI系统设计与挑战知识
 

@@ -2,12 +2,11 @@
 type: concept
 tags:
 - LLM/training
-created: '2026-06-29'
-updated: '2026-06-29'
 summary: Muon 是一种相对较新的深度学习优化器，Kimi K2 首次在生产级大规模 LLM 训练中使用（1 万亿参数），取代了此前业界标准的 AdamW。
 sources:
 - wiki/sources/2025年七大顶流大模型架构.md
 - wiki/sources/从DeepSeek-V3到Kimi_K2_八种现代LLM架构大比较.md
+updated: '2026-06-29'
 ---
 
 

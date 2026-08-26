@@ -6,7 +6,6 @@ summary: 香港中文大学（深圳）（CUHK-Shenzhen） 与 上海人工智�
   InternLM）、多模态理解与智能体系统（Agentic Systems）方面卓有...
 sources:
 - wiki/sources/LLM Agent记忆进化路径三阶段研究综述.md
-created: '2026-07-06'
 updated: '2026-07-06'
 ---
 

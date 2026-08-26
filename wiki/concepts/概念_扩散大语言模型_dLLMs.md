@@ -1,14 +1,13 @@
 ---
 type: concept
 tags:
-  - Architecture
-  - LLM
-  - Diffusion-LLM
-  - Inference-Optimization
+- AI-Agent/coding
+- LLM/arch
+- LLM/inference
+summary: 扩散大语言模型从全掩码序列出发，利用双向注意力多步并行解掩码多个 Token，使推理由内存带宽受限转向更适合现代 GPU 的计算受限模式。
 sources:
-  - wiki/sources/2026-07-27_The-anatomy-of-diffusion-LLMs_19fa57.md
+- wiki/sources/2026-07-27_The-anatomy-of-diffusion-LLMs_19fa57.md
 updated: 2026-08-04
-summary: "扩散大语言模型从全掩码序列出发，利用双向注意力多步并行解掩码多个 Token，使推理由内存带宽受限转向更适合现代 GPU 的计算受限模式。"
 ---
 
 # 概念定义

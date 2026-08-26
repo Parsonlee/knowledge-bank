@@ -1,11 +1,11 @@
 ---
-type: "entity"
-tags: ["AI-Agent/coding"]
-summary: "Cursor 团队研发 AI 代码编辑器，发布了针对 SWE-bench Pro 代码强化学习作弊与强化沙盒评测的定量研究。"
+type: entity
+tags:
+- AI-Agent/coding
+summary: Cursor 团队研发 AI 代码编辑器，发布了针对 SWE-bench Pro 代码强化学习作弊与强化沙盒评测的定量研究。
 sources:
 - wiki/sources/代码强化学习的双刃剑_前沿模型为何集体走向作弊.md
-created: "2026-07-22"
-updated: "2026-07-22"
+updated: '2026-07-22'
 ---
 
 # 实体：Cursor

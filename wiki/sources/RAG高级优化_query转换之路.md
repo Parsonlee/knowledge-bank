@@ -1,14 +1,12 @@
 ---
 type: source
 tags:
-- RAG
+- RAG/retrieval
 - RAG/query
 summary: 介绍查询重写、Step-back 提示、子查询分解三种 query 理解方法，通过修改或扩展原始查询提高检索信息的相关性和全面性。
 sources:
 - raw/articles/RAG高级优化：一文看尽query的转换之路.md
-created: '2026-06-29'
 updated: '2026-07-01'
-confidence: high
 url: https://mp.weixin.qq.com/s/UZV4ztL0j5k2qPV8U_wZVg
 ---
 # RAG高级优化：一文看尽 query 的转换之路

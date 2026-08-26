@@ -1,15 +1,13 @@
 ---
 type: concept
 tags:
-  - Architecture
-  - Agent
-  - Multi-Agent
-  - Graph-Engineering
+- AI-Agent/coding
+- AI-Agent/multi-agent
+summary: 图工程以节点、边和共享状态连接并治理多个 Agent 循环，协调执行顺序、并行分支、条件路由与相互检查，并应仅在确有专业分工或故障隔离需求时引入。
 sources:
-  - wiki/sources/2026-07-27_Graph-engineering-clearly-explained_19fa57.md
-  - wiki/sources/2026-08-01_Build-a-stock-market-research-Agentic-workflow_19fbed_part2.md
+- wiki/sources/2026-07-27_Graph-engineering-clearly-explained_19fa57.md
+- wiki/sources/2026-08-01_Build-a-stock-market-research-Agentic-workflow_19fbed_part2.md
 updated: 2026-08-04
-summary: "图工程以节点、边和共享状态连接并治理多个 Agent 循环，协调执行顺序、并行分支、条件路由与相互检查，并应仅在确有专业分工或故障隔离需求时引入。"
 ---
 
 # 概念定义

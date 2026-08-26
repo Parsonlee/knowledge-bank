@@ -5,9 +5,7 @@ tags:
 summary: LangChain Lance Martin × Manus Peak Ji 对话详细实录：上下文压缩两种模式、Agent上下文隔离两种模式、三层行动空间、避免过度工程化等实战策略
 sources:
 - raw/articles/也许当前最好的「上下文工程」讲解_LangChain联合Manus季逸超最新分享....md
-created: '2026-06-29'
 updated: '2026-07-01'
-confidence: high
 ---
 ## 来源信息
 

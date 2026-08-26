@@ -1,13 +1,13 @@
 ---
 type: source
 tags:
-  - deep-learning
-  - neural-networks
-  - optimization
-  - training-techniques
-summary: 总结了16种神经网络训练优化技术，包括高效优化器、硬件加速器、增大Batch Size、使用动量（Momentum）、贝叶斯优化超参数搜索、混合精度训练、He/Xavier权重初始化、多GPU并行训练、大模型优化技术（DeepSpeed等）、DDP数据加载、激活检查点（Activation Checkpointing）、GPU端数据归一化、梯度累积以及DataLoader的线程与内存优化。
+- DeepLearning
+- Skill/data-analysis
+- LLM/training
+summary: 总结了16种神经网络训练优化技术，包括高效优化器、硬件加速器、增大Batch Size、使用动量（Momentum）、贝叶斯优化超参数搜索、混合精度训练、He/Xavier权重初始化、多GPU并行训练、大模型优化技术（DeepSpeed等）、DDP数据加载、激活检查点（Activation
+  Checkpointing）、GPU端数据归一化、梯度累积以及DataLoader的线程与内存优化。
 sources:
-  - raw/articles/2026-03-04_16-techniques-to-optimize-neural-network-training_19cba7.md
+- raw/articles/2026-03-04_16-techniques-to-optimize-neural-network-training_19cba7.md
 updated: 2026-08-03
 ---
 

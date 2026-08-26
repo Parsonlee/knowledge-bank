@@ -6,9 +6,7 @@ tags:
 summary: Python BM25 关键词匹配相关性打分算法库，常用于多路召回融合。
 sources:
 - wiki/sources/RAG高级优化_检索策略Fusion_HyDE.md
-created: '2026-06-29'
 updated: '2026-07-01'
-confidence: medium
 ---
 
 ## 简介

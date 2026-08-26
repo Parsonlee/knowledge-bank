@@ -5,9 +5,7 @@ tags:
 summary: 首个面向多模态LLM的离散化Tokenization系统化综述，梳理8类VQ方法与跨模态应用全景
 sources:
 - raw/insights/从离散token到多模态统一：Discrete Tokenization全景综述....md
-created: '2026-06-29'
 updated: '2026-07-01'
-confidence: high
 ---
 # 从离散token到多模态统一：Discrete Tokenization全景综述
 

@@ -1,13 +1,12 @@
 ---
 type: concept
 tags:
-- Skill/knowledge-bank
+- AI-Agent/skill
 - AI-Agent/coding
 summary: LLM Wiki 是由 Andrej Karpathy 提出的一种全新知识管理范式，旨在颠覆传统 RAG “临时抱佛脚”模式，强调在知识摄入（Ingest）阶段即完成信息的结构化与编译。
 sources:
 - wiki/sources/Claude Code与Obsidian飞书知识库搭建实践.md
 - wiki/sources/Karpathy推文引发的LLM_Wiki知识库搭建实践.md
-created: '2026-07-06'
 updated: '2026-07-22'
 ---
 

@@ -1,10 +1,10 @@
 ---
-id: "7249427872513786838"
+id: '7249427872513786838'
 cubox_url: https://cubox.pro/web/card/7249427872513786838
 url: https://mp.weixin.qq.com/s?__biz=Mzk0NTcyNTMzNw==&mid=2247484125&idx=1&sn=0490793590a7061bf0593749f1a58474&chksm=c310482bf467c13dc718c0601c3b2ec0072e8d376cfa0c3b5d0d71406dbfa39bb1b09c684cfc&scene=21
 tags:
-  - RAG
-  - RAG/query
+- RAG/retrieval
+- RAG/query
 published: 2024-09-04
 ---
 # RAG高级优化：基于问题生成的文档检索增强

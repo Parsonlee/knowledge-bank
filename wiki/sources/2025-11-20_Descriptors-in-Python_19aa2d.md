@@ -1,12 +1,10 @@
 ---
-type: "source"
+type: source
 tags:
-  - python
-  - oop
-  - descriptor
-summary: "探讨 Python 中的描述符（Descriptors）机制。介绍描述符如何解决传统 @property getter/setter 机制在多属性校验时的冗余以及无法在构造时拦截的问题，并对描述符的三个核心魔术方法进行了原理解析。"
+- Skill/python
+summary: 探讨 Python 中的描述符（Descriptors）机制。介绍描述符如何解决传统 @property getter/setter 机制在多属性校验时的冗余以及无法在构造时拦截的问题，并对描述符的三个核心魔术方法进行了原理解析。
 sources:
-  - "raw/articles/2025-11-20_Descriptors-in-Python_19aa2d.md"
+- raw/articles/2025-11-20_Descriptors-in-Python_19aa2d.md
 updated: 2026-08-03
 ---
 

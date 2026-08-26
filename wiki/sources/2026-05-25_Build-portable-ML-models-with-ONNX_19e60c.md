@@ -1,14 +1,12 @@
 ---
-type: "source"
+type: source
 tags:
-  - MLOps
-  - ONNX
-  - ONNX-Runtime
-  - model-deployment
-summary: "本文探讨了在模型训练与生产伺服部署之间存在的分歧，分析了开放神经网络交换（ONNX）作为跨框架的中间表示的优势，详述了 ONNX Runtime（ORT）的各种执行引擎加速和图优化机制，并客观归纳了在使用 ONNX 时面临的算子转换不全、混合精度漂移等挑战。"
+- Infra/AI
+summary: 本文探讨了在模型训练与生产伺服部署之间存在的分歧，分析了开放神经网络交换（ONNX）作为跨框架的中间表示的优势，详述了 ONNX Runtime（ORT）的各种执行引擎加速和图优化机制，并客观归纳了在使用
+  ONNX 时面临的算子转换不全、混合精度漂移等挑战。
 sources:
-  - "raw/articles/2026-05-25_Build-portable-ML-models-with-ONNX_19e60c.md"
-updated: "2026-08-04"
+- raw/articles/2026-05-25_Build-portable-ML-models-with-ONNX_19e60c.md
+updated: '2026-08-04'
 ---
 
 # Build portable ML models with ONNX

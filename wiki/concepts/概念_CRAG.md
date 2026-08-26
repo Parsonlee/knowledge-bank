@@ -1,16 +1,14 @@
 ---
-tags:
-- RAG
-confidence: medium
 type: concept
+tags:
+- RAG/retrieval
 summary: CRAG（Corrective RAG，纠正型 RAG）是一种让 LLM 评估检索到的文档是否与查询相关，并根据需要触发额外检索来补充数据的 RAG
   生成策略。
-created: '2026-07-06'
-updated: '2026-07-06'
 sources:
 - wiki/sources/LLM_32种消除幻觉技术综述.md
 - wiki/sources/RAG检索_Retrieval入门到精通.md
 - wiki/sources/提升RAG问答质量的技术路线.md
+updated: '2026-07-06'
 ---
 
 # 概念_CRAG

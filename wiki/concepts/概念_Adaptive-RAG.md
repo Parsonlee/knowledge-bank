@@ -1,13 +1,11 @@
 ---
-tags:
-- RAG
-confidence: medium
 type: concept
+tags:
+- RAG/retrieval
 summary: Adaptive-RAG（自适应 RAG）是根据查询复杂度和要求自适应地选择检索和生成策略的 RAG 方法，避免对所有查询使用统一流程。
-created: '2026-07-06'
-updated: '2026-07-06'
 sources:
 - wiki/sources/提升RAG问答质量的技术路线.md
+updated: '2026-07-06'
 ---
 
 # 概念_Adaptive-RAG

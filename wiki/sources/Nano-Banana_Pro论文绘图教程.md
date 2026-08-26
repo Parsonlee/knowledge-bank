@@ -5,9 +5,7 @@ tags:
 summary: '**核心理念**：将复杂绘图任务拆解为"逻辑构建（The Architect）"与"视觉渲染（The Renderer）"两个独立互补环节'
 sources:
 - raw/articles/Nano-Banana Pro 论文绘图最全教程发布.md
-created: '2026-06-29'
 updated: '2026-07-01'
-confidence: high
 ---
 # Nano-Banana Pro 论文绘图教程
 

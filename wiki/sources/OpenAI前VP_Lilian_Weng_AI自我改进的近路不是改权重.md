@@ -1,9 +1,12 @@
 ---
-type: "source"
-tags: ["AI-Agent/harness", "AI-Agent/coding"]
-summary: "Lilian Weng 新文剖析 Harness Engineering（外壳工程）：指出递归自我改进（RSI）近期的近路不是改模型权重，而是围绕模型搭建的 Harness 系统，总结了三大设计模式、五级优化阶梯与自我改进工程闭环。"
-sources: ["raw/articles/OpenAI前VP Lilian Weng 新长文：AI 自我改进的近路，不是改权重.md"]
-updated: "2026-07-22"
+type: source
+tags:
+- AI-Agent/coding
+summary: Lilian Weng 新文剖析 Harness Engineering（外壳工程）：指出递归自我改进（RSI）近期的近路不是改模型权重，而是围绕模型搭建的
+  Harness 系统，总结了三大设计模式、五级优化阶梯与自我改进工程闭环。
+sources:
+- raw/articles/OpenAI前VP Lilian Weng 新长文：AI 自我改进的近路，不是改权重.md
+updated: '2026-07-22'
 ---
 
 # OpenAI前VP Lilian Weng 新长文：AI 自我改进的近路，不是改权重

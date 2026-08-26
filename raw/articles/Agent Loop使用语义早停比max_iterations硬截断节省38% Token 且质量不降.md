@@ -2,10 +2,10 @@
 title: Agent Loop使用语义早停比max_iterations硬截断节省38% Token 且质量不降
 source: https://mp.weixin.qq.com/s/QUhztozEmydtvUDUXK8jsA
 author:
-  - "[[南七技校]]"
+- '[[南七技校]]'
 description: Loop engineering之语义早停法
 tags:
-  - AI-Agent/loop-engineering
+- AI-Agent/coding
 published: 2026-06-29
 ---
 南七技校 AgenticHub *2026年6月29日 08:46*

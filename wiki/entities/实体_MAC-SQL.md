@@ -2,13 +2,11 @@
 type: entity
 tags:
 - AI-Agent/multi-agent
-- RAG
+- RAG/retrieval
 summary: 腾讯优图实验室提出的面向复杂数据查询的 Text-to-SQL 多智能体协作框架。
 sources:
 - wiki/sources/优图RAG技术详解.md
-created: '2026-06-29'
 updated: '2026-07-01'
-confidence: high
 ---
 
 ## 简介

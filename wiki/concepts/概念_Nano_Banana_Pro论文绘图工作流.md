@@ -1,13 +1,11 @@
 ---
+type: concept
 tags:
 - AIGC
-confidence: high
-type: concept
 summary: 以「架构师→渲染器→编辑器」三步标准化工作流，将复杂学术绘图任务拆解为逻辑构建与视觉渲染两阶段。
-created: '2026-07-06'
-updated: '2026-07-06'
 sources:
 - wiki/sources/Nano-Banana_Pro论文绘图教程.md
+updated: '2026-07-06'
 ---
 
 

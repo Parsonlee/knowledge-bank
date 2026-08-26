@@ -1,14 +1,12 @@
 ---
 type: source
 tags:
-  - sentence-similarity
-  - bi-encoder
-  - cross-encoder
-  - colbert
-  - nlp
-summary: 介绍了双编码器（Bi-encoders）、交叉编码器（Cross-encoders）与 ColBERT 架构在成对句子评分系统中的工作机制、优劣势，并重点阐述了 ColBERT 如何通过延迟交互（Late Interaction）平衡检索吞吐与精准度。
+- RAG/embedding
+- DeepLearning
+summary: 介绍了双编码器（Bi-encoders）、交叉编码器（Cross-encoders）与 ColBERT 架构在成对句子评分系统中的工作机制、优劣势，并重点阐述了
+  ColBERT 如何通过延迟交互（Late Interaction）平衡检索吞吐与精准度。
 sources:
-  - raw/articles/2026-06-18_Visual-guide-to-Bi-encoders,-Cross-encoders-&-ColBERT_19edcc.md
+- raw/articles/2026-06-18_Visual-guide-to-Bi-encoders,-Cross-encoders-&-ColBERT_19edcc.md
 updated: 2026-08-04
 ---
 

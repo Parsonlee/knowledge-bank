@@ -8,7 +8,6 @@ sources:
 - wiki/sources/PyTorch常用代码段合集.md
 - wiki/sources/入局AI_Infra系统设计与挑战.md
 - wiki/sources/大模型显存计算公式与优化.md
-created: '2026-07-06'
 updated: '2026-07-06'
 ---
 # 实体_NVIDIA

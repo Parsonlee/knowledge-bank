@@ -1,14 +1,15 @@
 ---
-type: "concept"
+type: concept
 tags:
-  - deep-learning
-  - pytorch
-  - optimization
-  - training
-summary: "梯度累积（Gradient Accumulation）是一种在硬件显存受限时，通过多次前向和反向传播累积梯度，再统一执行一次参数更新，从而在逻辑上等效实现大 Batch Size 训练的优化技术。"
+- DeepLearning
+- Skill/python
+- Skill/data-analysis
+- LLM/training
+summary: 梯度累积（Gradient Accumulation）是一种在硬件显存受限时，通过多次前向和反向传播累积梯度，再统一执行一次参数更新，从而在逻辑上等效实现大
+  Batch Size 训练的优化技术。
 sources:
-  - "wiki/sources/2025-06-27_15-techniques-to-optimize-neural-network-training_197b30.md"
-updated: "2026-08-03"
+- wiki/sources/2025-06-27_15-techniques-to-optimize-neural-network-training_197b30.md
+updated: '2026-08-03'
 ---
 
 # 梯度累积 (Gradient Accumulation)

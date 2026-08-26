@@ -1,12 +1,8 @@
 ---
-tags:
-- RAG
-- RAG/retrieval
-confidence: high
 type: concept
+tags:
+- RAG/retrieval
 summary: 互易秩融合（Reciprocal Rank Fusion, RRF）是一种排序融合算法，将多个排序结果合并为一个综合排序。核心思想是对每个文档在各排序中的排名取倒数并累加，排名靠前的文档获得更高分数。
-created: '2026-07-06'
-updated: '2026-08-03'
 sources:
 - wiki/sources/ES企业AI搜索实践.md
 - wiki/sources/RAG查询翻译_Query_Translation.md
@@ -14,6 +10,7 @@ sources:
 - wiki/sources/RAG高级优化_检索策略Fusion_HyDE.md
 - wiki/sources/提升RAG问答质量的技术路线.md
 - wiki/sources/高德地图AI应用开发岗一面，我跪了！！！.md
+updated: '2026-08-03'
 ---
 
 # 概念_Reciprocal_Rank_Fusion

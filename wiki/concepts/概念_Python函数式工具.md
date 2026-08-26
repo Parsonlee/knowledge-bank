@@ -1,13 +1,11 @@
 ---
+type: concept
 tags:
 - Skill/python
-confidence: high
-type: concept
 summary: Python 内置和标准库中的函数式编程工具，用于替代显式 for 循环，通常由 C 实现，性能远优于纯 Python 循环。
-created: '2026-07-06'
-updated: '2026-07-06'
 sources:
 - wiki/sources/加速Python循环的12种方法.md
+updated: '2026-07-06'
 ---
 
 

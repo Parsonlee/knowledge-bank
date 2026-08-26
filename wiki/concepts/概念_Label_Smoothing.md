@@ -6,9 +6,7 @@ summary: 标签平滑（Label Smoothing）将硬标签（one-hot）软化，正�
   中可用自定义 LSR 类或直接构造 smoothed_labels 实现。
 sources:
 - wiki/sources/PyTorch常用代码段合集.md
-created: '2026-06-29'
 updated: '2026-06-29'
-confidence: medium
 ---
 
 

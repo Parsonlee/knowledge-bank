@@ -1,14 +1,11 @@
 ---
-tags:
-- RAG
-- RAG/retrieval
-confidence: high
 type: concept
+tags:
+- RAG/retrieval
 summary: 融合检索（Fusion Retrieval）是一种文档搜索方法，结合基于向量的语义检索和基于 BM25 的关键字匹配检索。通过加权组合两种方法的得分，在概念相似性和关键字相关性之间取得平衡。
-created: '2026-07-06'
-updated: '2026-07-06'
 sources:
 - wiki/sources/RAG高级优化_检索策略Fusion_HyDE.md
+updated: '2026-07-06'
 ---
 
 # 概念_Fusion_Retrieval

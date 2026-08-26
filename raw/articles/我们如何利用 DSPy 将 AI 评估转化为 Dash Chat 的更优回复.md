@@ -2,11 +2,12 @@
 title: 我们如何利用 DSPy 将 AI 评估转化为 Dash Chat 的更优回复
 source: https://www.bestblogs.dev/article/c2a3404e
 author:
-  - "[[Simran Jumani]]"
+- '[[Simran Jumani]]'
 published: 2026-06-26
-description: Dropbox 使用 DSPy 校准 LLM-as-judge 评估体系，进而自动优化 Dash Chat 智能体的系统提示词，实现了不完整回答减少 26%、token 使用量降低 5.4% 的效果。
+description: Dropbox 使用 DSPy 校准 LLM-as-judge 评估体系，进而自动优化 Dash Chat 智能体的系统提示词，实现了不完整回答减少
+  26%、token 使用量降低 5.4% 的效果。
 tags:
-  - AI-Agent/eval
+- AI-Agent/coding
 ---
 ## How we used DSPy to turn AI evaluations into better responses in Dash Chat
 

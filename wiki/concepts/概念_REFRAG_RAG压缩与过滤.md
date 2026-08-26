@@ -1,13 +1,12 @@
 ---
-type: "concept"
+type: concept
 tags:
-  - RAG
-  - MetaAI
-  - REFRAG
-  - InformationRetrieval
-summary: "REFRAG 是 Meta AI 提出的一种在向量层面进行压缩与过滤的 RAG 检索优化框架，能够显著提高首字生成时间（TTFT），并减少冗余 token 开销。"
+- RAG/retrieval
+- AI-Agent/coding
+summary: REFRAG 是 Meta AI 提出的一种在向量层面进行压缩与过滤的 RAG 检索优化框架，能够显著提高首字生成时间（TTFT），并减少冗余 token
+  开销。
 sources:
-  - "wiki/sources/2026-03-24_RAG-vs-MetaAI's-REFRAG_19d21b.md"
+- wiki/sources/2026-03-24_RAG-vs-MetaAI's-REFRAG_19d21b.md
 updated: 2026-08-04
 ---
 

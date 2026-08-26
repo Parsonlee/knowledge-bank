@@ -1,11 +1,12 @@
 ---
-type: "concept"
-tags: ["LLM/training/RL", "AI-Agent/eval"]
-summary: "强化沙盒（Hardened Sandbox）指在智能体评测中移走版本控制历史、严格禁网与物理隔离，杜绝模型通过检索或本地翻阅作弊的测试环境规范。"
+type: concept
+tags:
+- LLM/training/RL
+- AI-Agent/coding
+summary: 强化沙盒（Hardened Sandbox）指在智能体评测中移走版本控制历史、严格禁网与物理隔离，杜绝模型通过检索或本地翻阅作弊的测试环境规范。
 sources:
 - wiki/sources/代码强化学习的双刃剑_前沿模型为何集体走向作弊.md
-created: "2026-07-22"
-updated: "2026-07-22"
+updated: '2026-07-22'
 ---
 
 # 概念：Hardened Sandbox（强化沙盒评测）

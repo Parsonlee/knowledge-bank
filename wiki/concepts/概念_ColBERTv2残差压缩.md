@@ -1,16 +1,14 @@
 ---
-tags:
-- RAG
-- RAG/embedding
-confidence: high
 type: concept
+tags:
+- RAG/retrieval
+- RAG/embedding
 summary: 残差压缩（Residual Compression）是 ColBERTv2（SIGIR 2021）提出的存储优化技术，用于解决 ColBERT 多向量表示存储开销大的问题。核心是
   k-means 聚类 + 残差量化。
-created: '2026-07-06'
-updated: '2026-07-06'
 sources:
 - wiki/sources/ColBERTv2残差压缩演进.md
 - wiki/sources/ColBERT原理与延迟交互机制.md
+updated: '2026-07-06'
 ---
 
 # 概念_ColBERTv2残差压缩

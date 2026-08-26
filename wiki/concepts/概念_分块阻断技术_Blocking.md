@@ -1,14 +1,12 @@
 ---
 type: concept
 tags:
-  - data-deduplication
-  - computer-science
-  - optimization
-  - algorithm
+- Skill/data-analysis
+- Skill/python
+summary: 分块阻断按规则将记录划入小桶，仅在桶内比较模糊重复候选，从而避开大规模数据中平方级两两比对并显著减少无效计算。
 sources:
-  - "wiki/sources/2025-12-29_Identify-fuzzy-duplicates-at-scale_19b6bf.md"
-updated: "2026-08-03"
-summary: "分块阻断按规则将记录划入小桶，仅在桶内比较模糊重复候选，从而避开大规模数据中平方级两两比对并显著减少无效计算。"
+- wiki/sources/2025-12-29_Identify-fuzzy-duplicates-at-scale_19b6bf.md
+updated: '2026-08-03'
 ---
 
 # 分块阻断技术 (Blocking / Bucketing)

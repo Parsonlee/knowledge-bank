@@ -7,9 +7,7 @@ summary: RLaaS（Reinforcement Learning as a Service）是为缺乏 RL 人才的
   Palantir 式方案：奖励建模→自动化评分→模型定制与 RFT，通过专有数据飞轮形成行业护城河。
 sources:
 - wiki/sources/RL_Infra行业全景.md
-created: '2026-06-29'
 updated: '2026-06-29'
-confidence: high
 ---
 
 

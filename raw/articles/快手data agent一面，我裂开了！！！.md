@@ -2,13 +2,12 @@
 title: 快手data agent一面，我裂开了！！！
 source: https://mp.weixin.qq.com/s/TAx39Oxk9BvV-ZWSqDZbGw
 author:
-  - "[[AIGC小白入门记]]"
+- '[[AIGC小白入门记]]'
 published: 2026-07-14
 created: 2026-07-14
-description:
+description: null
 tags:
-  - clippings
-  - 面试
+- 面试
 ---
 AIGC小白入门记 AIGC小白入门记 *2026年7月13日 21:52*
 

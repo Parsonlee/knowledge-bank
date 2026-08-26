@@ -1,11 +1,12 @@
 ---
-type: "concept"
-tags: ["AI-Agent/skill", "AI-Agent/eval"]
-summary: "Agent Skill 系统化评价框架覆盖触发与路由准确性、执行过程轨迹、产物质量、效率成本、安全权限控制与可复用性六大维度的完整评估体系。"
+type: concept
+tags:
+- AI-Agent/skill
+- AI-Agent/coding
+summary: Agent Skill 系统化评价框架覆盖触发与路由准确性、执行过程轨迹、产物质量、效率成本、安全权限控制与可复用性六大维度的完整评估体系。
 sources:
 - wiki/sources/如何系统评价一个_Agent_Skill.md
-created: "2026-07-22"
-updated: "2026-07-22"
+updated: '2026-07-22'
 ---
 
 # 概念：Agent Skill 系统化评价框架

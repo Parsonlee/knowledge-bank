@@ -5,9 +5,7 @@ tags:
 summary: Shishir Mehrotra：Coda 创始人，新 Superhuman 集团 CEO，Bundle 理论实践者
 sources:
 - wiki/sources/Bundle_Unbundle视角看AI时代机会.md
-created: '2026-06-30'
 updated: '2026-06-30'
-confidence: high
 ---
 
 # 实体：Shishir Mehrotra

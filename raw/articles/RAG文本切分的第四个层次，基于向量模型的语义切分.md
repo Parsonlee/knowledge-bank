@@ -1,10 +1,10 @@
 ---
-id: "7249425525721008430"
+id: '7249425525721008430'
 cubox_url: https://cubox.pro/web/card/7249425525721008430
 url: https://mp.weixin.qq.com/s/gUyFlIzToUT-fcs8t67j1Q
 tags:
-  - RAG
-  - RAG/chunking
+- RAG/retrieval
+- RAG/chunking
 published: 2024-08-30
 ---
 # RAG文本切分的第四个层次，基于向量模型的语义切分

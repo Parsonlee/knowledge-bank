@@ -4,11 +4,10 @@ tags:
 - AI-Agent/tool-calling
 - AI-Agent/prompt-engineering
 summary: 将'思考'封装为 MCP 工具强制模型在每次工具调用前结构化规划，比纯 Prompt 指令遵循更稳定
-created: '2026-06-29'
-updated: '2026-06-29'
 sources:
 - wiki/sources/HumanInTheLoop用MCP实现.md
 - wiki/sources/从第一性原理深度拆解_Claude_Agent_Skill_宝玉.md
+updated: '2026-06-29'
 ---
 
 

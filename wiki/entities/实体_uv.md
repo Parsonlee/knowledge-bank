@@ -1,12 +1,10 @@
 ---
+type: entity
 tags:
 - Skill/python
+summary: '- 类型：Python 包管理器'
 sources:
 - wiki/sources/Docker化Flask_Django应用从pip切换到uv.md
-confidence: high
-type: entity
-summary: '- 类型：Python 包管理器'
-created: '2026-07-06'
 updated: '2026-07-06'
 ---
 

@@ -1,12 +1,12 @@
 ---
 type: source
 tags:
-  - llm
-  - quantization
-  - optimization
+- LLM/arch
+- LLM/inference
+- Skill/data-analysis
 summary: 探讨大模型量化技术（Quantization）及其面临的离群值（Outliers）挑战，并详细对比五种主流的量化方法（RTN、GPTQ、AWQ、LLM.int8()、QAT）的实现机制与应用场景。
 sources:
-  - raw/articles/2026-07-21_5-LLM-Quantization-Techniques_19f86b.md
+- raw/articles/2026-07-21_5-LLM-Quantization-Techniques_19f86b.md
 updated: 2026-08-04
 ---
 

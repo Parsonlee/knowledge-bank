@@ -2,12 +2,10 @@
 type: concept
 tags:
 - LLM/arch/Mamba
-created: '2026-06-29'
-updated: '2026-06-29'
-confidence: high
 summary: High-order Polynomial Projection Operators，一种特殊的矩阵 A 构造方法，使 SSM 的隐状态能够高效压缩和记忆历史。
 sources:
 - wiki/sources/A_Visual_Guide_to_Mamba_and_SSM.md
+updated: '2026-06-29'
 ---
 
 

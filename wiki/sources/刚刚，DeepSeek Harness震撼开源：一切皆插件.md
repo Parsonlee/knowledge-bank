@@ -1,9 +1,11 @@
 ---
-type: "source"
-tags: ["AI-Agent/harness", "AI-Agent/coding"]
-summary: "DeepSeek 开源基于 Cordis 微内核的智能体框架 DeepSeek Harness，主张一切皆插件、权威 Session Log 事件源与严格生命周期调度管控。"
-sources: ["raw/articles/刚刚，DeepSeek Harness震撼开源：一切皆插件.md"]
-updated: "2026-08-20"
+type: source
+tags:
+- AI-Agent/coding
+summary: DeepSeek 开源基于 Cordis 微内核的智能体框架 DeepSeek Harness，主张一切皆插件、权威 Session Log 事件源与严格生命周期调度管控。
+sources:
+- raw/articles/刚刚，DeepSeek Harness震撼开源：一切皆插件.md
+updated: '2026-08-20'
 ---
 
 # 来源摘要：刚刚，DeepSeek Harness震撼开源：一切皆插件

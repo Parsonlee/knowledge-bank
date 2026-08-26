@@ -5,9 +5,7 @@ tags:
 summary: PPT 应用场景广阔（职场汇报、教育学习、创业融资路演），是现代信息社会核心表达方式之一。作者将市面上 AI PPT 工具归为两条主流路径。
 sources:
 - raw/articles/九大主流AI PPT横测，能打的Agent只有3个半.md
-created: '2026-06-29'
 updated: '2026-07-01'
-confidence: high
 cubox_url: https://cubox.pro/web/card/7342143926301623873
 date_clipped: 2025-07-08
 ---

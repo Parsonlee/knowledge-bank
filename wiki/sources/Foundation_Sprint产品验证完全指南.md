@@ -5,9 +5,7 @@ tags:
 summary: '**从 Design Sprint 到 Foundation Sprint**（详见 [[概念_Design_Sprint]]、[[概念_Foundation_Sprint]]）'
 sources:
 - raw/articles/7天验证产品思路、10小时找到基础共识：来自谷歌的“Foundation Spr....md
-created: '2026-06-29'
 updated: '2026-07-01'
-confidence: high
 ---
 # Foundation Sprint 产品验证完全指南
 

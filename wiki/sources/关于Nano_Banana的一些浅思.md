@@ -5,9 +5,7 @@ tags:
 summary: '**Nano Banana 定位**：Gemini 2.5 Flash Image 的别名，原生多模态快速高效模型，单步同时处理文字与图像'
 sources:
 - raw/articles/关于 Nano Banana 的一些浅思.md
-created: '2026-06-29'
 updated: '2026-07-01'
-confidence: high
 ---
 # 关于 Nano Banana 的一些浅思
 

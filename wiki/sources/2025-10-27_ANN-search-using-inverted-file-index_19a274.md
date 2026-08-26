@@ -1,8 +1,11 @@
 ---
 type: source
-tags: [vector-database, vector-search, approximate-nearest-neighbor, indexing]
-summary: 介绍了在向量检索中使用倒排文件索引 (IVF) 进行近似最近邻 (ANN) 搜索的原理。相比暴力搜索 kNN 的 O(ND) 复杂度，IVF 通过 k-means 聚类建立质心到分区的映射，将搜索复杂度降低到 O(KD + ND/K)，大幅度缩减耗时（N=10M，K=100 时可实现近 100 倍加速），同时客观阐述了其以精度折中换取低延迟的机制。
-sources: ["raw/articles/2025-10-27_ANN-search-using-inverted-file-index_19a274.md"]
+tags:
+- RAG/retrieval
+summary: 介绍了在向量检索中使用倒排文件索引 (IVF) 进行近似最近邻 (ANN) 搜索的原理。相比暴力搜索 kNN 的 O(ND) 复杂度，IVF 通过
+  k-means 聚类建立质心到分区的映射，将搜索复杂度降低到 O(KD + ND/K)，大幅度缩减耗时（N=10M，K=100 时可实现近 100 倍加速），同时客观阐述了其以精度折中换取低延迟的机制。
+sources:
+- raw/articles/2025-10-27_ANN-search-using-inverted-file-index_19a274.md
 updated: 2026-08-03
 ---
 

@@ -1,14 +1,11 @@
 ---
 type: source
 tags:
-  - python
-  - python/syntax
+- Skill/python
 summary: 本文介绍了 Python 中下划线（_）的 7 种主要使用场景，包括获取最后计算值、循环占位符、大数字分隔符以及四种用于命名对象的下划线规范（单前导、单后缀、双前导和双前后导）。
 sources:
-  - raw/articles/2025-01-31_7-Uses-of-Underscore-in-Python_194be0.md
-created: '2026-08-03'
+- raw/articles/2025-01-31_7-Uses-of-Underscore-in-Python_194be0.md
 updated: '2026-08-03'
-confidence: high
 ---
 # 7 Uses of Underscore in Python
 

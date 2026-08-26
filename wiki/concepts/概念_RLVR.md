@@ -10,9 +10,7 @@ sources:
 - wiki/sources/R1复现认知与误区.md
 - wiki/sources/RL_Infra行业全景.md
 - wiki/sources/强化学习入门指南_RLHF到GRPO.md
-created: '2026-06-29'
 updated: '2026-06-29'
-confidence: high
 ---
 
 

@@ -2,8 +2,6 @@
 type: concept
 tags:
 - LLM/training/RL
-created: '2026-06-29'
-updated: '2026-06-29'
 summary: GRPO（Group Relative Policy Optimization，组相对策略优化）是 DeepSeek 提出的强化学习算法，被混元
   TurboS 等模型用于后训练阶段。
 sources:
@@ -13,6 +11,7 @@ sources:
 - wiki/sources/强化学习入门指南_RLHF到GRPO.md
 - wiki/sources/腾讯混元TurboS技术报告.md
 - wiki/sources/自适应快慢思考推理模型.md
+updated: '2026-06-29'
 ---
 
 

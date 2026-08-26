@@ -3,11 +3,9 @@ type: concept
 tags:
 - 创业
 summary: Unbundle 提供切入市场机会，rebundle 提供捕获价值机会；以集装箱历史类比 AI
-created: '2026-06-30'
-updated: '2026-06-30'
-confidence: high
 sources:
 - wiki/sources/Bundle_Unbundle视角看AI时代机会.md
+updated: '2026-06-30'
 ---
 
 

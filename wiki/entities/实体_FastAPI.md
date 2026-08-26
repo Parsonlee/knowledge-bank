@@ -1,16 +1,14 @@
 ---
+type: entity
 tags:
 - Skill/python
+summary: '- 类型：Python Web 框架'
 sources:
 - wiki/sources/Docker化Flask_Django应用从pip切换到uv.md
 - wiki/sources/FastAPI架构指南_项目模板与实战经验.md
 - wiki/sources/FastAPI生产部署ASGI_WSGI避坑指南.md
 - wiki/sources/Python并发_async_await与FastAPI.md
 - wiki/sources/五个鲜为人知的Python功能.md
-confidence: high
-type: entity
-summary: '- 类型：Python Web 框架'
-created: '2026-07-06'
 updated: '2026-07-06'
 ---
 

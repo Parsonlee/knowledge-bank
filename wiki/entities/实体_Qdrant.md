@@ -9,9 +9,7 @@ sources:
 - wiki/sources/RAG基础_索引检索生成.md
 - wiki/sources/RAG检索_Retrieval入门到精通.md
 - wiki/sources/向量数据库原理与应用全解析.md
-created: '2026-06-29'
 updated: '2026-07-22'
-confidence: high
 ---
 
 ## 简介

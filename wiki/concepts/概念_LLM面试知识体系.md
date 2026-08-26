@@ -1,15 +1,13 @@
 ---
 type: concept
 tags:
-- LLM
+- LLM/arch
 - 面试
 summary: LLM 面试高频知识点体系：架构基础/微调方法/推理技术/数学原理五大模块
-created: '2026-06-29'
-updated: '2026-06-29'
-confidence: high
 sources:
 - wiki/sources/LLM面试50题_MIT_CSAIL.md
 - wiki/sources/大模型算法岗面试百问百答.md
+updated: '2026-06-29'
 ---
 
 

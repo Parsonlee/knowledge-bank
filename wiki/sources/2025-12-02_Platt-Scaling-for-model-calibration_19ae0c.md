@@ -1,8 +1,10 @@
 ---
 type: source
-tags: [machine-learning, model-calibration, classification-models, probability-estimation]
+tags:
+- Skill/data-analysis
 summary: 介绍了模型校准的定义和实际价值，阐述了现代深度学习模型过度自信的现象，并详细剖析了 Platt 缩放（Platt Scaling）的物理映射机制、算法步骤及局限性。
-sources: ["raw/articles/2025-12-02_Platt-Scaling-for-model-calibration_19ae0c.md"]
+sources:
+- raw/articles/2025-12-02_Platt-Scaling-for-model-calibration_19ae0c.md
 updated: 2026-08-03
 ---
 

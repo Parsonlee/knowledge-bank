@@ -1,17 +1,15 @@
 ---
-tags:
-- RAG
-confidence: medium
 type: concept
+tags:
+- RAG/retrieval
 summary: Self-RAG（Self-Reflective RAG，自我反思 RAG）是一种让 LLM 生成初步答案后进行自我检查，并决定是否需要额外检索或调整答案结构的
   RAG 生成策略。
-created: '2026-07-06'
-updated: '2026-07-06'
 sources:
 - wiki/sources/LLM_32种消除幻觉技术综述.md
 - wiki/sources/RAG检索_Retrieval入门到精通.md
 - wiki/sources/提升RAG问答质量的技术路线.md
 - wiki/sources/翁荔_LLM外在幻觉_原因检测抵抗.md
+updated: '2026-07-06'
 ---
 
 # 概念_Self-RAG

@@ -1,9 +1,7 @@
 ---
+type: concept
 tags:
 - AI-Agent/coding
-created: '2026-06-29'
-updated: '2026-08-03'
-type: concept
 summary: 来源：从代码生成到自主决策Coding驱动的自我编程Agent
 sources:
 - wiki/sources/AI智能体8种Memory策略与技术实现.md
@@ -12,6 +10,7 @@ sources:
 - wiki/sources/快手data agent一面，我裂开了！！！.md
 - wiki/sources/月之暗面 Agent开发岗，凉凉！！！.md
 - wiki/sources/高德地图AI应用开发岗一面，我跪了！！！.md
+updated: '2026-08-03'
 ---
 
 

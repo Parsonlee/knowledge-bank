@@ -1,13 +1,12 @@
 ---
-type: "concept"
+type: concept
 tags:
-  - "machine-learning"
-  - "regression"
-  - "loss-function"
+- Skill/data-analysis
+- DeepLearning
+summary: 分位数回归使用对预测线两侧误差施加不同权重的 Pinball Loss，估计给定输入下响应变量的不同条件分位数，而非仅预测条件均值。
 sources:
-  - "wiki/sources/2026-07-24_Quantile-regression_19f962.md"
+- wiki/sources/2026-07-24_Quantile-regression_19f962.md
 updated: 2026-08-04
-summary: "分位数回归使用对预测线两侧误差施加不同权重的 Pinball Loss，估计给定输入下响应变量的不同条件分位数，而非仅预测条件均值。"
 ---
 
 # 分位数回归与 Pinball Loss

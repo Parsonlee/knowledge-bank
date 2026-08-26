@@ -1,13 +1,11 @@
 ---
 type: source
 tags:
-- RAG
+- RAG/retrieval
 summary: 介绍 RAG 基础流程：索引（Indexing）、检索（Retrieval）、生成（Generation）三步骤，使用 LangChain + 向量数据库实现完整管道。
 sources:
 - raw/articles/RAG从入门到精通系列1：基础RAG.md
-created: '2026-06-29'
 updated: '2026-07-01'
-confidence: high
 ---
 # RAG基础：索引、检索与生成
 

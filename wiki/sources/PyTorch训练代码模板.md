@@ -2,13 +2,11 @@
 type: source
 tags:
 - DeepLearning
-- Skill/python/pytorch
+- Skill/python
 summary: 一套完整的 PyTorch 深度学习训练代码模板，涵盖超参定义、数据集、模型、早停、训练验证测试九个步骤。
 sources:
 - raw/playbooks/实操教程 _ 深度学习pytorch训练代码模板(个人习惯).md
-created: '2026-06-29'
 updated: '2026-07-01'
-confidence: high
 ---
 # PyTorch 训练代码模板
 

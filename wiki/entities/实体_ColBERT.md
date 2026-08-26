@@ -11,9 +11,7 @@ sources:
 - wiki/sources/RAG索引进阶_Indexing.md
 - wiki/sources/从BM25到Multi-Vector_6种Embedding演进路线.md
 - wiki/sources/提升RAG问答质量的技术路线.md
-created: '2026-06-29'
 updated: '2026-07-01'
-confidence: high
 ---
 
 ## 简介

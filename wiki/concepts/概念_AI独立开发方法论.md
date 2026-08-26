@@ -1,12 +1,10 @@
 ---
-confidence: high）
-sources:
-- wiki/sources/AI时代如何做独立开发.md
 type: concept
 tags:
 - 创业
 summary: 艾逗笔（idoubi）一年半独立开发经验总结的方法论框架。
-created: '2026-07-06'
+sources:
+- wiki/sources/AI时代如何做独立开发.md
 updated: '2026-07-06'
 ---
 # 概念_AI独立开发方法论

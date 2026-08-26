@@ -1,15 +1,12 @@
 ---
-type: "source"
+type: source
 tags:
-  - machine-learning
-  - random-patches
-  - ensemble-learning
-  - bagging
-  - big-data
-summary: "本文介绍了在处理无法完全载入内存的大规模数据集时，如何使用随机贴片法（Random Patches）来训练经典的集成学习模型（如随机森林）。分析了该方法通过在样本和特征两个维度上同时采样，降低决策树之间的相关性，从而提升方差降低效应（Variance Reduction）并显著减少内存占用的原理。"
+- Skill/data-analysis
+summary: 本文介绍了在处理无法完全载入内存的大规模数据集时，如何使用随机贴片法（Random Patches）来训练经典的集成学习模型（如随机森林）。分析了该方法通过在样本和特征两个维度上同时采样，降低决策树之间的相关性，从而提升方差降低效应（Variance
+  Reduction）并显著减少内存占用的原理。
 sources:
-  - "raw/articles/2026-05-05_Train-classical-ML-models-on-large-datasets_19dfa2.md"
-updated: "2026-08-04"
+- raw/articles/2026-05-05_Train-classical-ML-models-on-large-datasets_19dfa2.md
+updated: '2026-08-04'
 ---
 
 # Train classical ML models on large datasets

@@ -1,13 +1,11 @@
 ---
 type: source
 tags:
-- RAG
+- RAG/retrieval
 summary: '> 融合知识库它主要是将左边散落的各种多元异构数据，包括指标、结构化数据、文档、图片等信息，通过知识融合技术整合到一个统一的融合知识库中。知识融合的过程涉及多种常用技术手段。'
 sources:
 - raw/articles/复杂场景下的 RAG 架构演进：跨模态知识联邦与统一语义推理实践.md
-created: '2026-06-29'
 updated: '2026-07-01'
-confidence: high
 ---
 # 跨模态知识联邦与统一语义推理RAG
 

@@ -1,13 +1,13 @@
 ---
-type: "source"
+type: source
 tags:
-  - RAG
-  - MetaAI
-  - REFRAG
-  - LLM
-summary: "介绍 Meta AI 提出的 REFRAG 架构，该架构通过在向量层面压缩和过滤检索到的 Chunks，从而实现高效率的 RAG 检索，大幅降低延迟与 token 消耗。"
+- RAG/retrieval
+- AI-Agent/coding
+- LLM/arch
+summary: 介绍 Meta AI 提出的 REFRAG 架构，该架构通过在向量层面压缩和过滤检索到的 Chunks，从而实现高效率的 RAG 检索，大幅降低延迟与
+  token 消耗。
 sources:
-  - "raw/articles/2026-03-24_RAG-vs-MetaAI's-REFRAG_19d21b.md"
+- raw/articles/2026-03-24_RAG-vs-MetaAI's-REFRAG_19d21b.md
 updated: 2026-08-04
 ---
 

@@ -1,14 +1,13 @@
 ---
 type: source
 tags:
-  - data-deduplication
-  - fuzzy-matching
-  - blocking-technique
-  - scale
-summary: "介绍在大规模模糊重复数据检测中，由于 pairwise 两两比对所面临的 O(N^2) 复杂度瓶颈，通过引入分块阻断（Blocking / Bucketing）技术来减少 98% 以上的冗余计算，将原本需要数年的计算量压缩至数小时内完成。"
+- Skill/data-analysis
+- Infra/AI
+summary: 介绍在大规模模糊重复数据检测中，由于 pairwise 两两比对所面临的 O(N^2) 复杂度瓶颈，通过引入分块阻断（Blocking / Bucketing）技术来减少
+  98% 以上的冗余计算，将原本需要数年的计算量压缩至数小时内完成。
 sources:
-  - "raw/articles/2025-12-29_Identify-fuzzy-duplicates-at-scale_19b6bf.md"
-updated: "2026-08-03"
+- raw/articles/2025-12-29_Identify-fuzzy-duplicates-at-scale_19b6bf.md
+updated: '2026-08-03'
 ---
 
 # Identify fuzzy duplicates at scale

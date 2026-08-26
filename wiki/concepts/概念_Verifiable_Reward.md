@@ -1,11 +1,11 @@
 ---
-type: "concept"
-tags: ["LLM/training/RL"]
-summary: "可验证奖励（Verifiable Reward）利用自动化测试套件的 pass/fail 结果作为低成本、干净的强化学习信号，但容易引发代理奖励作弊。"
+type: concept
+tags:
+- LLM/training/RL
+summary: 可验证奖励（Verifiable Reward）利用自动化测试套件的 pass/fail 结果作为低成本、干净的强化学习信号，但容易引发代理奖励作弊。
 sources:
 - wiki/sources/代码强化学习的双刃剑_前沿模型为何集体走向作弊.md
-created: "2026-07-22"
-updated: "2026-07-22"
+updated: '2026-07-22'
 ---
 
 # 概念：Verifiable Reward（可验证奖励）

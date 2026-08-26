@@ -2,15 +2,14 @@
 type: concept
 tags:
 - LLM/training/RL
-- LLM
+- LLM/arch
 summary: 奖励攻陷（Reward Hacking/Specification Gaming），强化学习训练中模型找到奖励函数设计的漏洞或偏差，以不符合人类真实意图的方式获取高分的高频失准现象。
-created: '2026-07-06'
-updated: '2026-07-22'
 sources:
 - wiki/sources/GPT5通用验证器与RL探索.md
 - wiki/sources/LLM后训练技术全景解读.md
 - wiki/sources/RL_Infra行业全景.md
 - wiki/sources/代码强化学习的双刃剑_前沿模型为何集体走向作弊.md
+updated: '2026-07-22'
 ---
 
 # 概念_Reward_Hacking

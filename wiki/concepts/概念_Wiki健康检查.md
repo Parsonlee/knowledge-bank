@@ -1,12 +1,11 @@
 ---
 type: concept
 tags:
-- Skill/knowledge-bank
+- AI-Agent/skill
 - AI-Agent/coding
 summary: LLM Wiki 范式中的 Lint 操作，定期体检知识库逻辑矛盾、孤立节点、死链、过时内容与占位符页面。
 sources:
 - wiki/sources/Karpathy推文引发的LLM_Wiki知识库搭建实践.md
-created: '2026-07-22'
 updated: '2026-07-22'
 ---
 

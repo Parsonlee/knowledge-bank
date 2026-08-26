@@ -5,9 +5,7 @@ tags:
 summary: 推测解码（Speculative Decoding）综述：Draft-then-Verify 范式通过并行推测+验证实现无损推理加速
 sources:
 - raw/articles/LLM推理加速新范式！推测解码（Speculative Decoding）最新综....md
-created: '2026-06-29'
 updated: '2026-07-01'
-confidence: high
 ---
 ## 来源信息
 

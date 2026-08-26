@@ -6,7 +6,6 @@ summary: Kimi Linear 的核心注意力机制，基于 Gated DeltaNet 改进，�
   gate，计算效率比 DPLR 提升约 100%
 sources:
 - wiki/sources/MiniMax_vs_Kimi_注意力路线之争.md
-created: '2026-06-29'
 updated: '2026-06-29'
 ---
 

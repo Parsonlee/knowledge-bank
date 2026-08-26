@@ -1,13 +1,11 @@
 ---
 type: source
 tags:
-- AI-Agent/loop-engineering
 - AI-Agent/coding
 summary: 系统剖析 AI 工程从 Prompt 工程到 Loop 工程的四层抽象跃迁，阐明工程师将从与 AI 逐轮对话的操作员转变为设计自主迭代循环的系统架构师。
 sources:
 - raw/articles/从提示员到系统架构师：Loop Engineering 的范式跃迁.md
 updated: '2026-07-02'
-created: '2026-07-02'
 ---
 
 # 从提示员到系统架构师：Loop Engineering 的范式跃迁

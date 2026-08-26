@@ -6,9 +6,7 @@ tags:
 summary: ZeRO 的三种策略（Zero1/2/3）通过在多卡间切分优化器状态、梯度、模型参数来降低单卡显存的方法及计算公式。
 sources:
 - wiki/sources/大模型显存计算公式与优化.md
-created: '2026-06-29'
 updated: '2026-06-29'
-confidence: high
 ---
 
 

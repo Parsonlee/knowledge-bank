@@ -7,9 +7,7 @@ summary: 总结四种 Normalization 方法 BN/LN/IN/GN 的区别——基于 [N,
   的动机/作用/问题、LN 适配 RNN、IN 用于风格迁移、GN 解决小 batch 问题。
 sources:
 - raw/playbooks/常用 Normalization 方法的总结与思考：BN、LN、IN、GN.md
-created: '2026-06-26'
 updated: '2026-07-01'
-confidence: high
 ---
 # 常用 Normalization 方法总结：BN、LN、IN、GN
 

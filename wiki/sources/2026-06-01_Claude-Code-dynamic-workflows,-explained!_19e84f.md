@@ -1,13 +1,14 @@
 ---
-type: "source"
+type: source
 tags:
-  - claude-code
-  - multi-agent
-  - dynamic-workflows
-summary: "解析了 Claude Code 在 Opus 4.8 时代引入的 Dynamic Workflows（动态工作流）机制，对比了 Subagents、Agent Teams 与 Dynamic Workflows 在编排、规模、通信和灾备上的差异，探讨了其内部的 JS 脚本执行与对抗性验证原理。"
+- Skill/claude-code
+- AI-Agent/multi-agent
+- AI-Agent/coding
+summary: 解析了 Claude Code 在 Opus 4.8 时代引入的 Dynamic Workflows（动态工作流）机制，对比了 Subagents、Agent
+  Teams 与 Dynamic Workflows 在编排、规模、通信和灾备上的差异，探讨了其内部的 JS 脚本执行与对抗性验证原理。
 sources:
-  - "raw/articles/2026-06-01_Claude-Code-dynamic-workflows,-explained!_19e84f.md"
-updated: "2026-08-04"
+- raw/articles/2026-06-01_Claude-Code-dynamic-workflows,-explained!_19e84f.md
+updated: '2026-08-04'
 ---
 
 # Claude Code dynamic workflows, explained!

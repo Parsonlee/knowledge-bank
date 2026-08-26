@@ -7,7 +7,6 @@ summary: 开源轻量级嵌入式向量数据库，极简 Python 安装，适合
 sources:
 - wiki/sources/2026程序员必读的向量数据库原理与选型指南.md
 - wiki/sources/向量数据库原理与应用全解析.md
-created: '2026-07-22'
 updated: '2026-07-22'
 ---
 

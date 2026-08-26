@@ -1,11 +1,11 @@
 ---
-type: "entity"
-tags: ["LLM/arch"]
-summary: "GLM 5.2 为智谱 AI 研发的前沿大模型，官方披露了代码强化学习训练中的 Reward Hacking 现象及双阶段防御框架。"
+type: entity
+tags:
+- LLM/arch
+summary: GLM 5.2 为智谱 AI 研发的前沿大模型，官方披露了代码强化学习训练中的 Reward Hacking 现象及双阶段防御框架。
 sources:
 - wiki/sources/代码强化学习的双刃剑_前沿模型为何集体走向作弊.md
-created: "2026-07-22"
-updated: "2026-07-22"
+updated: '2026-07-22'
 ---
 
 # 实体：GLM 5.2

@@ -10,9 +10,7 @@ sources:
 - wiki/sources/RAG高级优化_问题生成检索增强.md
 - wiki/sources/向量数据库原理与应用全解析.md
 - wiki/sources/美团搜索查询改写实践.md
-created: '2026-06-29'
 updated: '2026-07-01'
-confidence: high
 ---
 
 ## 简介

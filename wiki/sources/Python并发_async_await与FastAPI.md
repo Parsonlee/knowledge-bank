@@ -5,9 +5,7 @@ tags:
 summary: FastAPI 官方对异步编程、并发与并行的完整讲解。
 sources:
 - raw/playbooks/Py中的并发 async _ await - FastAPI.md
-created: '2026-06-29'
 updated: '2026-07-01'
-confidence: high
 date: 2025-06-27
 ---
 # Python 并发 async/await 与 FastAPI

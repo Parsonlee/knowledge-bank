@@ -1,13 +1,13 @@
 ---
-title: "刚刚，DeepSeek Harness震撼开源：一切皆插件"
-source: "https://mp.weixin.qq.com/s/mcVfdDVUVlEYJj61sJWKZA"
+title: 刚刚，DeepSeek Harness震撼开源：一切皆插件
+source: https://mp.weixin.qq.com/s/mcVfdDVUVlEYJj61sJWKZA
 author:
-  - "[[机器之心]]"
+- '[[机器之心]]'
 published: 2026-08-13
 created: 2026-08-14
-description: "deepseek harness 简述"
+description: deepseek harness 简述
 tags:
-  - "clippings"
+- AI-Agent/coding
 ---
 关注DSH的 机器之心 *2026年8月13日 20:58*
 

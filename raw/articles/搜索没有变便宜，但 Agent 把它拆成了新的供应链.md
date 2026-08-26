@@ -1,13 +1,13 @@
 ---
-title: "搜索没有变便宜，但 Agent 把它拆成了新的供应链"
-source: "https://yage.ai/share/agentic-web-search-supply-chain-20260810.html?utm_source=convertkit&utm_medium=email&utm_campaign=%5B%E9%B8%AD%E5%93%A5%20AI%20%E6%89%8B%E8%AE%B0%5D%202026-08-10%3A%20%E6%90%9C%E7%B4%A2%E6%B2%A1%E5%8F%98%E4%BE%BF%E5%AE%9C%EF%BC%8C%E4%BD%86%E8%A2%AB%E6%8B%86%E6%88%90%E4%BA%86%E5%8F%AF%E5%8D%95%E5%8D%96%E7%9A%84%E5%B1%82%20-%2022863515"
+title: 搜索没有变便宜，但 Agent 把它拆成了新的供应链
+source: https://yage.ai/share/agentic-web-search-supply-chain-20260810.html?utm_source=convertkit&utm_medium=email&utm_campaign=%5B%E9%B8%AD%E5%93%A5%20AI%20%E6%89%8B%E8%AE%B0%5D%202026-08-10%3A%20%E6%90%9C%E7%B4%A2%E6%B2%A1%E5%8F%98%E4%BE%BF%E5%AE%9C%EF%BC%8C%E4%BD%86%E8%A2%AB%E6%8B%86%E6%88%90%E4%BA%86%E5%8F%AF%E5%8D%95%E5%8D%96%E7%9A%84%E5%B1%82%20-%2022863515
 author:
-  - "[[鸭哥]]"
+- '[[鸭哥]]'
 published: 2026-08-10
 created: 2026-08-11
-description: "为什么 Agent 时代突然到处都是 Web Search API？底层抓网页、做索引的重活一点没变轻，真正发生的是搜索供应链被拆成了可分别购买的层。"
+description: 为什么 Agent 时代突然到处都是 Web Search API？底层抓网页、做索引的重活一点没变轻，真正发生的是搜索供应链被拆成了可分别购买的层。
 tags:
-  - "clippings"
+- AI-Agent/coding
 ---
 ## 引言：为什么 Agent 时代突然到处都是 Web Search API？
 

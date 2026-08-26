@@ -1,13 +1,11 @@
 ---
 type: source
 tags:
-- RAG
+- RAG/retrieval
 summary: 传统 RAG 处理含表格文档的缺陷：
 sources:
 - raw/articles/TableRAG_ 处理文本+表格异构数据.md
-created: '2026-06-29'
 updated: '2026-07-01'
-confidence: high
 ---
 # TableRAG_文本表格异构问答
 

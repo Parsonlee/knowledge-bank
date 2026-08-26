@@ -5,9 +5,7 @@ tags:
 summary: '**三套 Prompt 公式**（详见 [[概念_文生视频提示词公式]]）'
 sources:
 - raw/articles/超详细提示词教程｜玩转Wan2.2.md
-created: '2026-06-29'
 updated: '2026-07-01'
-confidence: high
 ---
 # 超详细提示词教程：玩转 Wan2.2
 

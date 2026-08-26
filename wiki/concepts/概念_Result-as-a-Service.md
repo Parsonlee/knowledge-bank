@@ -6,9 +6,7 @@ summary: Result-as-a-Service（结果即服务）是 AI-Native Infra 演化的�
   QA。
 sources:
 - wiki/sources/AI-Native的Infra演化路线L0到L5.md
-created: '2026-06-29'
 updated: '2026-06-29'
-confidence: high
 ---
 
 

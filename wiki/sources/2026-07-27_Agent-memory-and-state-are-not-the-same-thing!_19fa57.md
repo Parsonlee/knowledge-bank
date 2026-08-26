@@ -1,12 +1,12 @@
 ---
 type: source
 tags:
-  - Agent
-  - Agent-Harness
-  - Software-Engineering
-summary: 本文探讨了 AI 智能体设计中“状态（State）”与“记忆（Memory）”的本质区别。分析了状态丢失导致任务中断需从头运行的问题，提出了通过每步 Checkpoint 进行容灾恢复的方案；阐述了记忆在跨会话留存以及在多智能体系统下的隔离作用，定义了 Agent Harness 的基础架构。
+- AI-Agent/coding
+- Skill/python
+summary: 本文探讨了 AI 智能体设计中“状态（State）”与“记忆（Memory）”的本质区别。分析了状态丢失导致任务中断需从头运行的问题，提出了通过每步
+  Checkpoint 进行容灾恢复的方案；阐述了记忆在跨会话留存以及在多智能体系统下的隔离作用，定义了 Agent Harness 的基础架构。
 sources:
-  - raw/articles/2026-07-27_Agent-memory-and-state-are-not-the-same-thing!_19fa57.md
+- raw/articles/2026-07-27_Agent-memory-and-state-are-not-the-same-thing!_19fa57.md
 updated: '2026-08-04'
 ---
 

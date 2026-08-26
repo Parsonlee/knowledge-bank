@@ -1,7 +1,6 @@
 ---
 type: concept
 tags:
-- AI-Agent/harness
 - AI-Agent/coding
 summary: 围绕基础大模型构建的宿主与编排系统（Harness Engineering），负责编排执行、思考规划、工具行动、上下文感知管理、产物存储与评估。
 sources:
@@ -14,7 +13,6 @@ sources:
 - wiki/sources/2026-07-03_Prompt,-context,-harness-&-loop-engineering_19f29f.md
 - wiki/sources/2026-07-27_Agent-memory-and-state-are-not-the-same-thing!_19fa57.md
 - wiki/sources/深度剖析 DeepSeek 最新的 Harness DSH：为了自进化这盘醋包了一整盘饺子.md
-created: '2026-07-22'
 updated: '2026-08-20'
 ---
 

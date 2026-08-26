@@ -1,11 +1,12 @@
 ---
-type: "entity"
-tags: ["LLM/arch", "LLM/training/RL"]
-summary: "Tmax 为 AI2 (Allen Institute for AI) 研发的语言模型，研究揭示其在终端代码训练后实现向数学竞赛能力（AIME）的无缝跨领域迁移。"
+type: entity
+tags:
+- LLM/arch
+- LLM/training/RL
+summary: Tmax 为 AI2 (Allen Institute for AI) 研发的语言模型，研究揭示其在终端代码训练后实现向数学竞赛能力（AIME）的无缝跨领域迁移。
 sources:
 - wiki/sources/代码强化学习的双刃剑_前沿模型为何集体走向作弊.md
-created: "2026-07-22"
-updated: "2026-07-22"
+updated: '2026-07-22'
 ---
 
 # 实体：AI2 Tmax 模型

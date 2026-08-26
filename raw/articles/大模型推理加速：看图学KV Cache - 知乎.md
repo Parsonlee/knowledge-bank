@@ -1,9 +1,9 @@
 ---
-id: "7295077168185344557"
+id: '7295077168185344557'
 cubox_url: https://cubox.pro/web/card/7295077168185344557
 url: https://zhuanlan.zhihu.com/p/662498827
 tags:
-  - LLM/inference/kv-cache
+- LLM/inference
 published: 2025-07-26
 ---
 # 大模型推理加速：看图学KV Cache - 知乎

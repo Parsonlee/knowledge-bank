@@ -7,7 +7,6 @@ sources:
 - raw/articles/LLM Agent 的记忆进化路径研究综述.md
 updated: '2026-07-06'
 published: '2026-05-11'
-created: '2026-07-06'
 ---
 ## 来源信息
 

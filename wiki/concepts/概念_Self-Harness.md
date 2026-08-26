@@ -1,14 +1,14 @@
 ---
-type: "concept"
+type: concept
 tags:
-  - "AI-Agent/harness"
-  - "AI-Agent/coding"
-summary: "将 AI 自我改进做成工程闭环的范式，通过“弱点挖掘—修改提议—保留集验证”或基于微内核的运行时热插拔（如 DSH Agent Loop 插件化）确保 Harness 代码持续进化且无性能回归。"
+- AI-Agent/coding
+summary: 将 AI 自我改进做成工程闭环的范式，通过“弱点挖掘—修改提议—保留集验证”或基于微内核的运行时热插拔（如 DSH Agent Loop 插件化）确保
+  Harness 代码持续进化且无性能回归。
 sources:
-  - "wiki/sources/刚刚，DeepSeek Harness震撼开源：一切皆插件.md"
-  - "wiki/sources/OpenAI前VP_Lilian_Weng_AI自我改进的近路不是改权重.md"
-  - "wiki/sources/深度剖析 DeepSeek 最新的 Harness DSH：为了自进化这盘醋包了一整盘饺子.md"
-updated: "2026-08-20"
+- wiki/sources/刚刚，DeepSeek Harness震撼开源：一切皆插件.md
+- wiki/sources/OpenAI前VP_Lilian_Weng_AI自我改进的近路不是改权重.md
+- wiki/sources/深度剖析 DeepSeek 最新的 Harness DSH：为了自进化这盘醋包了一整盘饺子.md
+updated: '2026-08-20'
 ---
 
 # 概念：Self-Harness

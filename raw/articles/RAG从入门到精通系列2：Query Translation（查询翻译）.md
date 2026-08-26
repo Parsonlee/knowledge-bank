@@ -1,10 +1,10 @@
 ---
-id: "7281569961389065093"
+id: '7281569961389065093'
 cubox_url: https://cubox.pro/web/card/7281569961389065093
 url: https://mp.weixin.qq.com/s/8aUzRjpO5ve0C5ndhgI6ng
 tags:
-  - RAG
-  - RAG/query
+- RAG/retrieval
+- RAG/query
 published: 2025-01-17
 ---
 # RAG从入门到精通系列2：Query Translation（查询翻译）

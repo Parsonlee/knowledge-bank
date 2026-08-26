@@ -1,10 +1,9 @@
 ---
-id: "7281570011020266757"
+id: '7281570011020266757'
 cubox_url: https://cubox.pro/web/card/7281570011020266757
 url: https://mp.weixin.qq.com/s/4IOMT5JaL9flv6dbZjif4g
 tags:
-  - RAG
-
+- RAG/retrieval
 published: 2025-01-21
 ---
 # RAG从入门到精通系列3：Routing（路由）

@@ -6,9 +6,7 @@ summary: 通义官方博客：通义 DeepResearch 全开源 Web Agent 的技术�
   范式、数据合成与基础设施
 sources:
 - raw/articles/通义 DeepResearch：开源 AI 智能体的新纪元 _ Tongyi D....md
-created: '2026-06-29'
 updated: '2026-07-01'
-confidence: high
 ---
 # 通义 DeepResearch：开源 AI 智能体的新纪元
 

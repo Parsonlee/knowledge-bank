@@ -6,7 +6,6 @@ summary: 机器学习研究者、技术博主，《Build a Large Language Model 
 sources:
 - wiki/sources/2025年七大顶流大模型架构.md
 - wiki/sources/从DeepSeek-V3到Kimi_K2_八种现代LLM架构大比较.md
-created: '2026-07-06'
 updated: '2026-07-06'
 ---
 

@@ -1,10 +1,9 @@
 ---
-id: "7281569901410518002"
+id: '7281569901410518002'
 cubox_url: https://cubox.pro/web/card/7281569901410518002
 url: https://mp.weixin.qq.com/s/TlFNOw7_3Q8qywKLpVUmfg
 tags:
-  - RAG
-
+- RAG/retrieval
 published: 2025-01-16
 ---
 # RAG从入门到精通系列1：基础RAG

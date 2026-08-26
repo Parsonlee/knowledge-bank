@@ -1,12 +1,12 @@
 ---
 type: source
 tags:
-  - modernbert
-  - attention-mechanism
-  - deep-learning
-summary: 介绍了 ModernBERT 如何通过交替注意力（Alternating Attention，每三层全局注意力，其余层 128 tokens 的滑动窗口局部注意力）来打破传统 BERT 全局注意力二次方复杂度瓶颈，提升内存效率与长序列处理能力。
+- DeepLearning
+- LLM/arch/attention
+summary: 介绍了 ModernBERT 如何通过交替注意力（Alternating Attention，每三层全局注意力，其余层 128 tokens 的滑动窗口局部注意力）来打破传统
+  BERT 全局注意力二次方复杂度瓶颈，提升内存效率与长序列处理能力。
 sources:
-  - raw/articles/2025-07-01_Full-global-attention-vs-alternating-attention_197c7a.md
+- raw/articles/2025-07-01_Full-global-attention-vs-alternating-attention_197c7a.md
 updated: 2026-08-03
 ---
 

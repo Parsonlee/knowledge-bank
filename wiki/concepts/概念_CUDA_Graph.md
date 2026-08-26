@@ -7,9 +7,7 @@ summary: CUDA Graph 将多个 GPU 操作（内核启动、内存拷贝、计算�
   CPU-GPU 交互开销，降低模型推理延时。
 sources:
 - wiki/sources/入局AI_Infra系统设计与挑战.md
-created: '2026-06-29'
 updated: '2026-06-29'
-confidence: high
 ---
 
 

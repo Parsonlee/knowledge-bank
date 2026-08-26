@@ -1,9 +1,9 @@
 ---
 type: concept
 tags:
-- AI-Hardware/Accelerator
-- Computer-Architecture/Processor
-summary: 本概念定义并横向对比了 CPU、GPU、TPU、NPU 与 LPU 五种主流 AI 计算芯片架构的物理特征、存储层次以及计算调度机制，并分析其在 AI 训练与推理场景中的物理限制与权衡。
+- Infra/AI
+summary: 本概念定义并横向对比了 CPU、GPU、TPU、NPU 与 LPU 五种主流 AI 计算芯片架构的物理特征、存储层次以及计算调度机制，并分析其在
+  AI 训练与推理场景中的物理限制与权衡。
 sources:
 - wiki/sources/2026-07-28_CPU-vs-GPU-vs-TPU-vs-NPU-vs-LPU_19faa9.md
 updated: '2026-08-04'

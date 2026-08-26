@@ -8,7 +8,6 @@ sources:
 - wiki/sources/DeepSeek_MLA矩阵吸收原理.md
 - wiki/sources/MiniMax_vs_Kimi_注意力路线之争.md
 - wiki/sources/从DeepSeek-V3到Kimi_K2_八种现代LLM架构大比较.md
-created: '2026-06-29'
 updated: '2026-06-29'
 ---
 

@@ -3,6 +3,8 @@ type: entity
 tags:
 - LLM/reasoning
 - LLM/training/RL
+summary: 阿里巴巴通义实验室发布的大语言模型系列，在 Qwen3 中引入了混合思考（Thinking Mode Fusion）能力，通过 SFT + RL
+  实现可控的快慢思考切换。
 sources:
 - wiki/sources/2025年七大顶流大模型架构.md
 - wiki/sources/Discrete_Tokenization多模态综述.md
@@ -18,10 +20,7 @@ sources:
 - wiki/sources/入局AI_Infra系统设计与挑战.md
 - wiki/sources/大模型算法岗面试百问百答.md
 - wiki/sources/自适应快慢思考推理模型.md
-created: '2026-06-29'
 updated: '2026-06-29'
-summary: 阿里巴巴通义实验室发布的大语言模型系列，在 Qwen3 中引入了混合思考（Thinking Mode Fusion）能力，通过 SFT + RL
-  实现可控的快慢思考切换。
 ---
 
 # 实体：Qwen3

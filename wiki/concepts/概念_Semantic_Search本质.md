@@ -1,15 +1,13 @@
 ---
-tags:
-- RAG
-- RAG/embedding
-confidence: high
 type: concept
+tags:
+- RAG/retrieval
+- RAG/embedding
 summary: 语义搜索（Semantic Search）的核心是 metric embedding——将文件映射到一个高维测度空间（metric space），使向量间距离能有意义地反映文件之间的语义关系。其本质是"document
   as index"（文件本身作为索引）。
-created: '2026-07-06'
-updated: '2026-07-06'
 sources:
 - wiki/sources/RAG系统设计_语义搜索与KG驱动选型.md
+updated: '2026-07-06'
 ---
 
 # 概念_Semantic_Search本质

@@ -1,13 +1,11 @@
 ---
-type: "source"
+type: source
 tags:
-  - deep-learning
-  - activation-functions
-  - neural-networks
-  - relu
-summary: "解析神经网络中 ReLU 激活函数如何通过分段线性插值（Piecewise Linear Interpolation）来拟合任意非线性函数，以及多神经元联合（Army of ReLUs）在细粒度分段线性下形成光滑非线性感知的本质。"
+- DeepLearning
+summary: 解析神经网络中 ReLU 激活函数如何通过分段线性插值（Piecewise Linear Interpolation）来拟合任意非线性函数，以及多神经元联合（Army
+  of ReLUs）在细粒度分段线性下形成光滑非线性感知的本质。
 sources:
-  - "raw/articles/2026-06-08_An-intuitive-guide-to-non-linearity-of-ReLU_19ea91.md"
+- raw/articles/2026-06-08_An-intuitive-guide-to-non-linearity-of-ReLU_19ea91.md
 updated: 2026-08-04
 ---
 

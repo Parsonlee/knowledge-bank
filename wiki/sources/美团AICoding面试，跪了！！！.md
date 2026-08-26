@@ -1,9 +1,13 @@
 ---
-type: "source"
-tags: ["AI-Agent/coding", "AI-Agent/eval", "AI-Agent/prompt-engineering", "面试"]
-summary: "一篇 AI Coding 面试题复盘，以评论违规检测为例说明如何把模糊高风险需求拆为规则、输入输出、权限和测试四层系统。"
-sources: ["raw/articles/美团AICoding面试，跪了！！！.md"]
-updated: "2026-08-03"
+type: source
+tags:
+- AI-Agent/coding
+- AI-Agent/prompt-engineering
+- 面试
+summary: 一篇 AI Coding 面试题复盘，以评论违规检测为例说明如何把模糊高风险需求拆为规则、输入输出、权限和测试四层系统。
+sources:
+- raw/articles/美团AICoding面试，跪了！！！.md
+updated: '2026-08-03'
 ---
 
 # 美团 AI Coding 面试复盘

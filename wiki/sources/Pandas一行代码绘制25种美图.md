@@ -6,9 +6,7 @@ summary: 使用 Pandas 的 DataFrame.plot 和 Series.plot 两个核心函数，�
   kind 参数 area/bar/barh/box/density/hexbin/hist/kde/line/pie/scatter。
 sources:
 - raw/playbooks/Pandas一行代码绘制25种美图.md
-created: '2026-06-30'
 updated: '2026-07-01'
-confidence: high
 ---
 # Pandas 一行代码绘制 25 种美图
 

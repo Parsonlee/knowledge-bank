@@ -1,11 +1,8 @@
 ---
-tags:
-- LLM
-confidence: high
 type: concept
+tags:
+- LLM/arch
 summary: Fine-tuning（微调）通过在特定领域/任务数据上继续训练大模型，增强 LLM 本身的能力，使其在目标场景上产出更准确/更符合格式的输出。
-created: '2026-07-06'
-updated: '2026-07-06'
 sources:
 - wiki/sources/375篇文献_推理大模型后训练技术综述.md
 - wiki/sources/LLM面试50题_MIT_CSAIL.md
@@ -13,6 +10,7 @@ sources:
 - wiki/sources/OpenAI_LLM应用最佳实践.md
 - wiki/sources/大模型算法岗面试百问百答.md
 - wiki/sources/美团搜索查询改写实践.md
+updated: '2026-07-06'
 ---
 
 # 概念_Fine-tuning

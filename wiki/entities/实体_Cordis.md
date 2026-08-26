@@ -1,11 +1,13 @@
 ---
-type: "entity"
-tags: ["AI-Agent/harness", "AI-Agent/coding"]
-summary: "支持时空可组合性（Spatiotemporal Composability）的轻量级微内核框架，通过副作用跟踪、撤销条（Disposer）、依赖变动通知与事务性 HMR 为 DeepSeek Harness 等系统提供进程内带状态组件的生命周期与热替换管理。"
+type: entity
+tags:
+- AI-Agent/coding
+summary: 支持时空可组合性（Spatiotemporal Composability）的轻量级微内核框架，通过副作用跟踪、撤销条（Disposer）、依赖变动通知与事务性
+  HMR 为 DeepSeek Harness 等系统提供进程内带状态组件的生命周期与热替换管理。
 sources:
-  - "wiki/sources/刚刚，DeepSeek Harness震撼开源：一切皆插件.md"
-  - "wiki/sources/深度剖析 DeepSeek 最新的 Harness DSH：为了自进化这盘醋包了一整盘饺子.md"
-updated: "2026-08-20"
+- wiki/sources/刚刚，DeepSeek Harness震撼开源：一切皆插件.md
+- wiki/sources/深度剖析 DeepSeek 最新的 Harness DSH：为了自进化这盘醋包了一整盘饺子.md
+updated: '2026-08-20'
 ---
 
 # 实体：Cordis

@@ -1,12 +1,11 @@
 ---
 type: entity
 tags:
-- LLM/Multimodal
+- LLM/arch
 - CV/arch
 summary: 微软 Azure AI 团队提出的通用视觉基础模型，基于 FLD-5B 数据集和 Seq2Seq 框架，统一处理图像理解/检测/定位/分割等任务
 sources:
 - wiki/sources/Discrete_Tokenization多模态综述.md
-created: '2026-06-29'
 updated: '2026-06-29'
 ---
 

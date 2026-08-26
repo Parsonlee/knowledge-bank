@@ -1,13 +1,13 @@
 ---
-type: "source"
+type: source
 tags:
-  - LLM/inference
-  - AI-Infra
-  - KV-Cache
-summary: "本文深入剖析了大模型推理内部的工作原理，详细对比了 Prefill（预填充）和 Decode（解码）两个不同的计算阶段及其硬件瓶颈，并讨论了 KV Cache、量化以及 Continuous Batching、Speculative Decoding 和 PagedAttention 等服务层优化技术。"
+- LLM/inference
+- Infra/AI
+summary: 本文深入剖析了大模型推理内部的工作原理，详细对比了 Prefill（预填充）和 Decode（解码）两个不同的计算阶段及其硬件瓶颈，并讨论了 KV
+  Cache、量化以及 Continuous Batching、Speculative Decoding 和 PagedAttention 等服务层优化技术。
 sources:
-  - "raw/articles/2026-05-03_How-LLM-inference-works-internally_19deee.md"
-updated: "2026-08-04"
+- raw/articles/2026-05-03_How-LLM-inference-works-internally_19deee.md
+updated: '2026-08-04'
 ---
 
 # How LLM inference works internally
