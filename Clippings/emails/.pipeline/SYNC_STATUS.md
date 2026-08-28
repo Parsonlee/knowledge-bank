@@ -1,6 +1,6 @@
 # Gmail 星标邮件同步状态
 
-> 此文件由 Pipeline 生成，请勿手工编辑。机器事实来源为 [`manifest.json`](./manifest.json)。更新时间：`2026-08-26T06:42:19+00:00`。
+> 此文件由 Pipeline 生成，请勿手工编辑。机器事实来源为 [`manifest.json`](./manifest.json)。更新时间：`2026-08-28T13:02:38+00:00`。
 
 ## 汇总
 
@@ -8,15 +8,15 @@
 | --- | --- | ---: |
 | 邮件 | discovered | 0 |
 | 邮件 | failed | 0 |
-| 邮件 | review | 2 |
+| 邮件 | review | 3 |
 | 邮件 | ingested | 51 |
 | 邮件 | ignored | 12 |
 | 邮件 | unhandled | 1 |
 | 路由 | pending | 11 |
-| 路由 | parsed | 54 |
+| 路由 | parsed | 55 |
 | 路由 | unhandled | 1 |
 | 路由 | failed | 0 |
-| 文章 | review | 2 |
+| 文章 | review | 5 |
 | 文章 | ingested | 79 |
 | 文章 | rejected | 13 |
 
@@ -27,6 +27,7 @@
 | `19ffcb7da4673b07` | dailydoseofds | review | Continuous Batching in LLMs |  |
 | `1a033f03133d8651` | - | unhandled | [鸭哥 AI 手记] 2026-08-23: Skill 起效靠检查单，不靠知识 | no_registered_parser |
 | `1a03a9b5c46e28a5` | dailydoseofds | review | Build a Multi-Agent GTM Intelligence System |  |
+| `1a044d0b132124de` | dailydoseofds | review | KV vs Prefix vs Prompt vs Semantic Caching |  |
 
 ## 待审文章
 
@@ -34,3 +35,6 @@
 | --- | --- | --- | --- | --- |
 | `19ffcb7da4673b07:2` | `19ffcb7da4673b07` | dailydoseofds |  Continuous batching in LLMs  | [`2026-08-13_Continuous-batching-in-LLMs_19ffcb7da4673b07.md`](../dailydoseofds/2026-08-13_Continuous-batching-in-LLMs_19ffcb7da4673b07.md) |
 | `1a03a9b5c46e28a5:2` | `1a03a9b5c46e28a5` | dailydoseofds |  5 context compaction strategies for LLM agents  | [`2026-08-25_5-context-compaction-strategies-for-LLM-agents_1a03a9b5c46e28a5.md`](../dailydoseofds/2026-08-25_5-context-compaction-strategies-for-LLM-agents_1a03a9b5c46e28a5.md) |
+| `1a044d0b132124de:1` | `1a044d0b132124de` | dailydoseofds |  Why per-user memory graphs break normal graph DBs  | [`2026-08-27_Why-per-user-memory-graphs-break-normal-graph-DBs_1a044d0b132124de.md`](../dailydoseofds/2026-08-27_Why-per-user-memory-graphs-break-normal-graph-DBs_1a044d0b132124de.md) |
+| `1a044d0b132124de:2` | `1a044d0b132124de` | dailydoseofds |  KV vs Prefix vs Prompt vs Semantic Caching  | [`2026-08-27_KV-vs-Prefix-vs-Prompt-vs-Semantic-Caching_1a044d0b132124de.md`](../dailydoseofds/2026-08-27_KV-vs-Prefix-vs-Prompt-vs-Semantic-Caching_1a044d0b132124de.md) |
+| `1a044d0b132124de:3` | `1a044d0b132124de` | dailydoseofds |  What is Temperature in LLMs?  | [`2026-08-27_What-is-Temperature-in-LLMs_1a044d0b132124de.md`](../dailydoseofds/2026-08-27_What-is-Temperature-in-LLMs_1a044d0b132124de.md) |
