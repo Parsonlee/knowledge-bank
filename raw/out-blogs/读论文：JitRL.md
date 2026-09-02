@@ -1,11 +1,28 @@
-**ICML26-Just-In-Time Reinforcement Learning: Continual Learning in LLM Agents Without Gradient Updates**
-https://arxiv.org/abs/2601.18510
+---
+title: 读论文：JitRL - 免梯度更新的 LLM Agent 测试时强化学习
+published: 2026-09-01
+draft: true
+description: ICML 2026 Spotlight 论文 JitRL 研读笔记：基于经验记忆检索与非参数优势估计，在冻结模型权重下实现测试时策略优化。
+tags:
+---
+# 读论文：JitRL - 免梯度更新的 LLM Agent 测试时强化学习
+
+> **论文信息**：
+> - 标题：**Just-In-Time Reinforcement Learning: Continual Learning in LLM Agents Without Gradient Updates**
+> - 会议：ICML 2026 Spotlight
+> - 链接：https://arxiv.org/abs/2601.18510
+
+---
+
 ## 1. 论文核心
 JitRL是新加坡国立大学团队的 ICML 2026 Spotlight 论文，提出免训练的测试时策略优化：全程冻结模型权重，检索经验记忆估计动作优势值，直接调制模型输出 logits，不做任何梯度更新。
+
 ## 2. 问题背景
 LLM Agent 部署后权重冻结，难以持续适应新环境；传统强化学习算力贵、有灾难性遗忘风险；把经验写进提示词的上下文学习受长度限制，且表达不了难以文字化的技能。 
+
 ## 3. 方法闭环
 推理时检索相似历史轨迹、估计优势值、调整 logits 后选动作；每轮任务结束由评估器模型给轨迹做步级奖励归因，折扣累加成回报，把（状态, 动作, 回报）三元组存进记忆库，形成闭环。 
+
 ## 4. 优势值估计
 状态价值是相似邻居回报的平均，动作价值是同动作邻居回报的平均，两者相减得优势值；没见过的动作按不确定就乐观的原则给探索加成，记忆越充足加成越小，自动从探索转向利用。  
 
